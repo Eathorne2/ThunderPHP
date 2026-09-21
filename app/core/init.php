@@ -601,7 +601,7 @@ spl_autoload_register(function($classname){
  * SET LOCAL OR REMOTE CONSTANTS
  *---------------------------------------------------------------
  */
-if((empty($_SERVER['SERVER_NAME']) && strpos(PHP_SAPI, 'cgi') !== 0) || (!empty($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'localhost'))
+if((empty($_SERVER['SERVER_NAME']) && strpos(PHP_SAPI, 'cgi') !== 0) || (!empty($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == '127.0.0.1')))
 {
     define( 'DB_NAME', LOCAL_DB_NAME );
     define( 'DB_USER', LOCAL_DB_USER );
