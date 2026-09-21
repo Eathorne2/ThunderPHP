@@ -1,0 +1,55 @@
+.social-share-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 58rem;
+    padding: 1rem;
+    border: 1px solid var(--thv-theme-border, #dce3ec);
+    border-radius: 0.9rem;
+    color: var(--thv-theme-text, #172033);
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.social-share-bar__label strong,
+.social-share-bar__label span {
+    display: block;
+}
+
+.social-share-bar__label span {
+    margin-top: 0.15rem;
+    color: var(--thv-theme-muted, #667085);
+    font-size: 0.75rem;
+}
+
+.social-share-bar__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.social-share-bar__actions a,
+.social-share-bar__actions button {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--thv-theme-border, #dce3ec);
+    border-radius: 0.65rem;
+    color: inherit;
+    background: transparent;
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.social-share-bar__actions a:hover,
+.social-share-bar__actions button:hover {
+    border-color: var(--thv-theme-primary, #4f46e5);
+    color: var(--thv-theme-primary, #4f46e5);
+}
+
+@media (max-width: 620px) {
+    .social-share-bar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

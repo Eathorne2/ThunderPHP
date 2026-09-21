@@ -1,0 +1,20 @@
+{
+  "id": "comparison-matrix-table",
+  "name": "Comparison Matrix Table",
+  "description": "A horizontally scrollable feature comparison table with highlighted plan.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Tables",
+  "order": 2720,
+  "tags": [
+    "table",
+    "comparison",
+    "pricing",
+    "features"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

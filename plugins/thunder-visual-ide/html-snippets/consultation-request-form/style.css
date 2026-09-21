@@ -1,0 +1,193 @@
+.crf-section {
+    display: grid;
+    grid-template-columns: minmax(17rem, .78fr) minmax(0, 1.22fr);
+    overflow: hidden;
+    border: 1px solid var(--thv-theme-border, #d8e0e8);
+    border-radius: 1.4rem;
+    color: var(--thv-theme-text, #152238);
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.crf-section aside {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.5rem, 5vw, 3.5rem);
+    color: #ffffff;
+    background:
+        linear-gradient(160deg, rgba(19, 59, 96, .95), rgba(17, 43, 72, .98)),
+        url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=80') center / cover;
+}
+
+.crf-section aside > span {
+    color: #a8c8e8;
+    font-size: .7rem;
+    font-weight: 850;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.crf-section h2 {
+    margin: .7rem 0 1rem;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.8rem);
+    font-weight: 500;
+    line-height: 1.03;
+}
+
+.crf-section aside > p {
+    margin: 0;
+    color: #c7d5e4;
+    line-height: 1.7;
+}
+
+.crf-section__steps {
+    display: grid;
+    gap: 1rem;
+    margin: 2.2rem 0;
+}
+
+.crf-section__steps div {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: .7rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+.crf-section__steps b {
+    color: #91b8df;
+    font-size: .68rem;
+}
+
+.crf-section__steps span {
+    font-size: .78rem;
+    font-weight: 750;
+}
+
+.crf-section aside small {
+    margin-top: auto;
+    color: #91a5bb;
+}
+
+.crf-section form {
+    display: grid;
+    gap: 1rem;
+    padding: clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.crf-section__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.crf-section form label,
+.crf-section fieldset {
+    display: grid;
+    gap: .42rem;
+    color: var(--thv-theme-text, #152238);
+    font-size: .75rem;
+    font-weight: 750;
+}
+
+.crf-section fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.crf-section legend {
+    margin-bottom: .55rem;
+}
+
+.crf-section :where(input:not([type=radio]):not([type=checkbox]), textarea) {
+    width: 100%;
+    padding: .82rem .85rem;
+    border: 1px solid var(--thv-theme-border, #d8e0e8);
+    border-radius: .4rem;
+    color: var(--thv-theme-text, #152238);
+    background: var(--thv-theme-surface-alt, #f6f8fa);
+}
+
+.crf-section textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+.crf-section__choices {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .55rem;
+}
+
+.crf-section__choices label {
+    position: relative;
+}
+
+.crf-section__choices input {
+    position: absolute;
+    opacity: 0;
+}
+
+.crf-section__choices span {
+    display: block;
+    padding: .72rem .55rem;
+    border: 1px solid var(--thv-theme-border, #d8e0e8);
+    border-radius: .4rem;
+    text-align: center;
+}
+
+.crf-section__choices input:checked + span {
+    border-color: var(--thv-theme-primary, #285c91);
+    color: var(--thv-theme-primary, #285c91);
+    background: color-mix(in srgb, var(--thv-theme-primary, #285c91) 8%, transparent);
+}
+
+.crf-section__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.crf-section__consent {
+    display: flex !important;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    color: var(--thv-theme-muted, #667386) !important;
+    font-weight: 500 !important;
+}
+
+.crf-section button {
+    padding: .84rem 1rem;
+    border: 0;
+    border-radius: .35rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #285c91);
+    font-weight: 850;
+}
+
+.crf-section__message {
+    min-height: 1rem;
+    margin: 0;
+    color: var(--thv-theme-success, #15803d);
+    font-size: .75rem;
+}
+
+@media (max-width: 800px) {
+    .crf-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .crf-section__grid,
+    .crf-section__choices {
+        grid-template-columns: 1fr;
+    }
+
+    .crf-section__footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

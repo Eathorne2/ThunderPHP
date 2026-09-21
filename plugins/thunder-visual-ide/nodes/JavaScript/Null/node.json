@@ -1,0 +1,38 @@
+{
+  "type": "javascript.null",
+  "label": "JS Null",
+  "category": "JavaScript Values",
+  "kind": "expression",
+  "icon": "NULL",
+  "color": "#2563eb",
+  "description": "Outputs a browser-side null value.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "JS Null"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Null",
+        "type": "js-value",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\NullCompiler",
+    "file": "Compiler.php"
+  }
+}

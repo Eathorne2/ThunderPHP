@@ -1,0 +1,220 @@
+.ompg-market {
+    padding: clamp(1.2rem, 4vw, 3.5rem);
+    color: var(--thv-theme-text, #263126);
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.ompg-market > header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.ompg-market > header span {
+    color: var(--thv-theme-primary, #4e7b48);
+    font-size: .7rem;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.ompg-market h2 {
+    margin: .55rem 0 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 4.7rem);
+    font-weight: 500;
+    letter-spacing: -.05em;
+}
+
+.ompg-market > header a,
+.ompg-market article a {
+    color: inherit;
+    font-size: .78rem;
+    font-weight: 850;
+    text-decoration: none;
+}
+
+.ompg-market__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: minmax(13rem, auto);
+    gap: .8rem;
+}
+
+.ompg-market__grid article,
+.ompg-market__newsletter {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.ompg-market__feature {
+    grid-column: span 2;
+    grid-row: span 2;
+    min-height: 30rem;
+}
+
+.ompg-market__feature img,
+.ompg-market__category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ompg-market__feature > div,
+.ompg-market__category > div {
+    position: absolute;
+    right: .8rem;
+    bottom: .8rem;
+    left: .8rem;
+    display: grid;
+    gap: .4rem;
+    padding: 1rem;
+    color: #ffffff;
+    background: rgba(26, 39, 26, .7);
+    backdrop-filter: blur(12px);
+}
+
+.ompg-market__feature span,
+.ompg-market__category span,
+.ompg-market__offer > span,
+.ompg-market__newsletter > span {
+    font-size: .66rem;
+    font-weight: 850;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+}
+
+.ompg-market__feature h3 {
+    max-width: 13ch;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.ompg-market__offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.4rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #4e7b48);
+}
+
+.ompg-market__offer > strong {
+    margin-top: .8rem;
+    font-family: Georgia, serif;
+    font-size: 2.6rem;
+}
+
+.ompg-market__offer h3 {
+    margin: .5rem 0;
+    font-family: Georgia, serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+.ompg-market__offer p {
+    color: rgba(255, 255, 255, .72);
+    line-height: 1.55;
+}
+
+.ompg-market__offer a {
+    margin-top: auto;
+    color: inherit;
+}
+
+.ompg-market__category {
+    min-height: 13rem;
+}
+
+.ompg-market__category strong {
+    font-family: Georgia, serif;
+    font-size: 1.05rem;
+}
+
+.ompg-market__newsletter {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(1.4rem, 4vw, 3rem);
+    background: color-mix(in srgb, var(--thv-theme-secondary, #d9bd73) 30%, var(--thv-theme-background, #f5f0dd));
+}
+
+.ompg-market__newsletter > span {
+    color: var(--thv-theme-primary, #4e7b48);
+}
+
+.ompg-market__newsletter h3 {
+    max-width: 16ch;
+    margin: .6rem 0 1rem;
+    font-family: Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.ompg-market__newsletter label {
+    display: grid;
+    gap: .45rem;
+}
+
+.ompg-market__newsletter label span {
+    font-size: .7rem;
+    font-weight: 800;
+}
+
+.ompg-market__newsletter input {
+    min-height: 3rem;
+    padding: 0 .9rem;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-text, #263126) 22%, transparent);
+    background: rgba(255, 255, 255, .7);
+    font: inherit;
+}
+
+.ompg-market__newsletter button {
+    align-self: flex-start;
+    min-height: 2.8rem;
+    margin-top: .7rem;
+    padding: 0 1rem;
+    border: 0;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #4e7b48);
+    font: inherit;
+    font-weight: 850;
+    cursor: pointer;
+}
+
+.ompg-market__newsletter output {
+    min-height: 1.2rem;
+    margin-top: .5rem;
+    color: var(--thv-theme-primary, #4e7b48);
+    font-size: .75rem;
+}
+
+@media (max-width: 900px) {
+    .ompg-market__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .ompg-market > header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .ompg-market__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ompg-market__feature,
+    .ompg-market__newsletter {
+        grid-column: span 1;
+    }
+}

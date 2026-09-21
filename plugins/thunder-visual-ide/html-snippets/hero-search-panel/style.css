@@ -1,0 +1,131 @@
+.hsp-pan {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.hsp-pan *, .hsp-pan *::before, .hsp-pan *::after {
+    box-sizing: border-box;
+}
+
+.hsp-pan button, .hsp-pan input, .hsp-pan select, .hsp-pan textarea {
+    font: inherit;
+}
+
+.hsp-pan a {
+    color: inherit;
+}
+
+.hsp-pan {
+    max-width: 68rem;
+    padding: clamp(1.5rem, 5vw, 3rem);
+    border-radius: 1.5rem;
+    background: color-mix(in srgb, var(--thv-theme-primary) 10%, var(--thv-theme-background));
+}
+
+.hsp-pan__copy {
+    max-width: 46rem;
+}
+
+.hsp-pan__copy span {
+    color: var(--thv-theme-primary);
+    font-size: 0.7rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hsp-pan__copy h2 {
+    margin: 0.4rem 0;
+    font-size: clamp(2rem, 5vw, 3.7rem);
+}
+
+.hsp-pan__copy p {
+    color: var(--thv-theme-muted);
+    line-height: 1.6;
+}
+
+.hsp-pan form {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    margin-top: 1.4rem;
+    padding: 0.35rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.9rem;
+    background: var(--thv-theme-surface);
+}
+
+.hsp-pan form select, .hsp-pan form input {
+    min-width: 0;
+    padding: 0.8rem;
+    border: 0;
+    background: transparent;
+    color: var(--thv-theme-text);
+    outline: none;
+}
+
+.hsp-pan form select {
+    border-right: 1px solid var(--thv-theme-border);
+}
+
+.hsp-pan form button {
+    padding: 0.75rem 1rem;
+    border: 0;
+    border-radius: 0.65rem;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+    font-weight: 850;
+    cursor: pointer;
+}
+
+.hsp-pan__suggestions {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.55rem;
+    margin-top: 0.65rem;
+    padding: 0.65rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.9rem;
+    background: var(--thv-theme-surface);
+}
+
+.hsp-pan__suggestions.is-open {
+    display: grid;
+}
+
+.hsp-pan__suggestions button {
+    text-align: left;
+    padding: 0.75rem;
+    border: 0;
+    border-radius: 0.65rem;
+    background: var(--thv-theme-surface-alt);
+    color: var(--thv-theme-text);
+    cursor: pointer;
+}
+
+.hsp-pan__suggestions small {
+    display: block;
+    margin-top: 0.15rem;
+    color: var(--thv-theme-muted);
+}
+
+.hsp-pan [data-status] {
+    color: var(--thv-theme-primary);
+    font-weight: 750;
+}
+
+@media (max-width: 620px) {
+    .hsp-pan form {
+        grid-template-columns: 1fr;
+    }
+
+    .hsp-pan form select {
+        border-right: 0;
+        border-bottom: 1px solid var(--thv-theme-border);
+    }
+
+    .hsp-pan__suggestions {
+        grid-template-columns: 1fr;
+    }
+
+}

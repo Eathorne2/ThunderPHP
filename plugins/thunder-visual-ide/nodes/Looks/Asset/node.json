@@ -1,0 +1,51 @@
+{
+  "type": "looks.asset",
+  "label": "Asset",
+  "category": "Looks",
+  "kind": "architecture",
+  "icon": "A",
+  "color": "#0d9488",
+  "description": "Stores an uploaded CSS, JavaScript, image, or general asset in a connected look.",
+  "allowed_graphs": [
+    "architecture"
+  ],
+  "defaults": {
+    "title": "Asset",
+    "filename": "assets/css/main.css",
+    "original_name": "",
+    "content_base64": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "filename",
+      "label": "Destination path",
+      "type": "text"
+    },
+    {
+      "name": "upload",
+      "label": "Upload file",
+      "type": "file"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "look",
+        "label": "Look",
+        "type": "asset",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Looks\\AssetCompiler",
+    "file": "Compiler.php"
+  }
+}

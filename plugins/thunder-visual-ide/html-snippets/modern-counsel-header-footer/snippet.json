@@ -1,0 +1,19 @@
+{
+  "id": "modern-counsel-header-footer",
+  "name": "Modern Counsel Header and Footer",
+  "description": "Commercial legal advice designed for businesses moving quickly.",
+  "category": "Business & Law",
+  "order": 5401,
+  "tags": [
+    "header",
+    "footer",
+    "business",
+    "law",
+    "navigation",
+    "modern law firm"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

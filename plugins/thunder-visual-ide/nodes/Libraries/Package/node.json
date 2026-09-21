@@ -1,0 +1,68 @@
+{
+  "type": "libraries.package",
+  "label": "Library Package",
+  "category": "Libraries",
+  "kind": "architecture",
+  "icon": "LIB",
+  "color": "#b45309",
+  "description": "Bundles a ZIP-based PHP library folder into the generated plugin and can load its autoloader.",
+  "allowed_graphs": [
+    "architecture"
+  ],
+  "defaults": {
+    "title": "PHP Library",
+    "destination": "libraries/package",
+    "original_name": "",
+    "content_base64": "",
+    "strip_root_folder": true,
+    "autoload_file": "vendor/autoload.php",
+    "load_autoloader": true,
+    "archive_id": "",
+    "archive_size": 0
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Library name",
+      "type": "text"
+    },
+    {
+      "name": "destination",
+      "label": "Destination folder",
+      "type": "text",
+      "help": "Path inside the generated plugin, for example libraries/mpdf."
+    },
+    {
+      "name": "archive",
+      "label": "Library ZIP archive",
+      "type": "file",
+      "accept": ".zip,application/zip",
+      "help": "ZIP the complete library folder before selecting it."
+    },
+    {
+      "name": "strip_root_folder",
+      "label": "Remove ZIP root folder",
+      "type": "checkbox",
+      "help": "Useful when the archive contains one wrapper folder such as mpdf-8.2.5/."
+    },
+    {
+      "name": "load_autoloader",
+      "label": "Load an autoloader in plugin.php",
+      "type": "checkbox"
+    },
+    {
+      "name": "autoload_file",
+      "label": "Autoloader path",
+      "type": "text",
+      "help": "Path relative to the destination folder, for example vendor/autoload.php or autoload.php."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Libraries\\PackageCompiler",
+    "file": "Compiler.php"
+  }
+}

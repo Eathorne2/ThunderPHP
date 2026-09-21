@@ -1,0 +1,18 @@
+{
+  "id": "portrait-quote-spread",
+  "name": "Portrait Quote Spread",
+  "description": "A refined two-page-style interview spread with a dramatic portrait, pull quote and editorial metadata.",
+  "category": "Magazine & Editorial",
+  "order": 3206,
+  "tags": [
+    "magazine",
+    "interview",
+    "quote",
+    "portrait",
+    "feature"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

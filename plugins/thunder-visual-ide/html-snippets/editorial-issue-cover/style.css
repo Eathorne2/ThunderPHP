@@ -1,0 +1,222 @@
+.issue-cover {
+    --issue-cover-ink: var(--thv-theme-text, #111111);
+    --issue-cover-paper: var(--thv-theme-surface, #f5f0e8);
+    position: relative;
+    overflow: hidden;
+    padding: clamp(1rem, 3vw, 2rem);
+    color: var(--issue-cover-ink);
+    background: var(--issue-cover-paper);
+}
+
+.issue-cover::before {
+    content: "";
+    position: absolute;
+    top: 7rem;
+    left: -8rem;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--thv-theme-secondary, #ff5f45) 28%, transparent);
+    filter: blur(1px);
+}
+
+.issue-cover__masthead {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--thv-theme-border, #bbb4aa);
+}
+
+.issue-cover__brand {
+    color: inherit;
+    font-size: clamp(1.15rem, 2vw, 1.7rem);
+    font-weight: 950;
+    letter-spacing: -0.06em;
+    text-decoration: none;
+}
+
+.issue-cover__nav {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 3vw, 2.5rem);
+}
+
+.issue-cover__nav a {
+    color: var(--thv-theme-muted, #655f57);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.issue-cover__edition {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.issue-cover__layout {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(16rem, 0.85fr) minmax(21rem, 1.3fr) minmax(15rem, 0.72fr);
+    gap: clamp(1.5rem, 4vw, 4rem);
+    align-items: end;
+    padding-top: clamp(2rem, 7vw, 6rem);
+}
+
+.issue-cover__eyebrow {
+    max-width: 18rem;
+    margin: 0 0 1.5rem;
+    color: var(--thv-theme-primary, #ef3f28);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.issue-cover h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(4.4rem, 10vw, 9.5rem);
+    font-weight: 500;
+    letter-spacing: -0.09em;
+    line-height: 0.72;
+}
+
+.issue-cover__summary {
+    max-width: 23rem;
+    margin: 2rem 0 1.5rem;
+    color: var(--thv-theme-muted, #655f57);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.issue-cover__button {
+    display: inline-flex;
+    padding: 0.85rem 1.1rem;
+    border: 1px solid currentColor;
+    color: inherit;
+    font-size: 0.78rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.issue-cover__visual {
+    position: relative;
+    margin: 0;
+}
+
+.issue-cover__visual img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    filter: saturate(0.86) contrast(1.06);
+}
+
+.issue-cover__visual figcaption {
+    margin-top: 0.6rem;
+    color: var(--thv-theme-muted, #655f57);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.issue-cover__stamp {
+    position: absolute;
+    right: -1rem;
+    bottom: 2.4rem;
+    display: grid;
+    width: 5.5rem;
+    height: 5.5rem;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #ef3f28);
+    font-size: 1.8rem;
+    font-weight: 950;
+}
+
+.issue-cover__story-rail {
+    display: grid;
+    align-self: stretch;
+    align-content: end;
+}
+
+.issue-cover__story-rail article {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 1rem;
+    padding: 1.3rem 0;
+    border-top: 1px solid var(--thv-theme-border, #bbb4aa);
+}
+
+.issue-cover__story-rail article > span {
+    color: var(--thv-theme-primary, #ef3f28);
+    font-size: 0.72rem;
+    font-weight: 900;
+}
+
+.issue-cover__story-rail small {
+    color: var(--thv-theme-muted, #655f57);
+    font-size: 0.64rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.issue-cover__story-rail h2 {
+    margin: 0.4rem 0 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.15rem, 2vw, 1.6rem);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+@media (max-width: 920px) {
+    .issue-cover__layout {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .issue-cover__story-rail {
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .issue-cover__story-rail article {
+        align-content: start;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .issue-cover__masthead {
+        grid-template-columns: 1fr auto;
+    }
+
+    .issue-cover__nav {
+        display: none;
+    }
+
+    .issue-cover__layout {
+        grid-template-columns: 1fr;
+    }
+
+    .issue-cover__visual {
+        order: -1;
+    }
+
+    .issue-cover__story-rail {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+    }
+}

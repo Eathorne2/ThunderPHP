@@ -1,0 +1,20 @@
+{
+  "id": "project-completion-tracker",
+  "name": "Project Completion Tracker",
+  "description": "A project tracker with milestone labels and an animated completion bar.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Progress Bars",
+  "order": 8052,
+  "tags": [
+    "progress",
+    "project",
+    "milestones",
+    "tracker"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

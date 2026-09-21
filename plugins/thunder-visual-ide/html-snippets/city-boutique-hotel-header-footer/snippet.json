@@ -1,0 +1,18 @@
+{
+  "id": "city-boutique-hotel-header-footer",
+  "name": "City Boutique Hotel Header and Footer",
+  "description": "A refined urban hotel shell with neighbourhood links, room booking and an editorial city-guide footer.",
+  "category": "Travel & Hotels",
+  "order": 5030,
+  "tags": [
+    "travel",
+    "hotel",
+    "header",
+    "footer",
+    "boutique city hotel"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

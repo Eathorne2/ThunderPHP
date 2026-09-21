@@ -1,0 +1,17 @@
+{
+  "id": "professional-user-card",
+  "name": "Professional User Card",
+  "description": "A profile card with role, skills, availability and direct contact actions.",
+  "category": "User Cards",
+  "order": 1020,
+  "tags": [
+    "user",
+    "profile",
+    "team",
+    "contact"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

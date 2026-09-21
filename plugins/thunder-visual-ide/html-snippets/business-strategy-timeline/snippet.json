@@ -1,0 +1,17 @@
+{
+  "id": "business-strategy-timeline",
+  "name": "Business Strategy Timeline",
+  "description": "A four-stage transformation timeline for strategy and consulting services.",
+  "category": "Business & Law",
+  "order": 5300,
+  "tags": [
+    "business",
+    "strategy",
+    "timeline",
+    "consulting"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

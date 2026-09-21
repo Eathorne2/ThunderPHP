@@ -1,0 +1,17 @@
+{
+  "id": "editorial-lookbook-collage",
+  "name": "Editorial Lookbook Collage",
+  "description": "An asymmetric fashion lookbook with numbered photographs and collection labels.",
+  "category": "Fashion & Beauty",
+  "order": 3910,
+  "tags": [
+    "fashion",
+    "beauty",
+    "grid",
+    "gallery"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

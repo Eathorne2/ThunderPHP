@@ -1,0 +1,18 @@
+{
+  "id": "enterprise-pricing-table",
+  "name": "Enterprise Pricing Table",
+  "description": "A corporate pricing comparison with contract toggle, detailed plan features and enterprise emphasis.",
+  "category": "Commerce",
+  "order": 3540,
+  "tags": [
+    "pricing",
+    "enterprise",
+    "corporate",
+    "plans",
+    "comparison"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

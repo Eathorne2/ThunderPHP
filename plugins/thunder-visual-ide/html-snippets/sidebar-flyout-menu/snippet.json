@@ -1,0 +1,20 @@
+{
+  "id": "sidebar-flyout-menu",
+  "name": "Sidebar Flyout Menu",
+  "description": "A collapsible vertical navigation menu for applications and dashboards.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Menus",
+  "order": 8042,
+  "tags": [
+    "menu",
+    "sidebar",
+    "flyout",
+    "navigation"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

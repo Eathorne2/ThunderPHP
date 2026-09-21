@@ -1,0 +1,20 @@
+{
+  "id": "before-after-gallery",
+  "name": "Before and After Gallery",
+  "description": "A gallery of draggable before-and-after image comparisons for renovations, retouching and case studies.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9008,
+  "tags": [
+    "gallery",
+    "before after",
+    "comparison",
+    "case study"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "legal-trust-credentials-strip",
+  "name": "Legal Trust Credentials Strip",
+  "description": "A compact credentials, rankings and professional-association strip.",
+  "category": "Business & Law",
+  "order": 5390,
+  "tags": [
+    "law",
+    "trust",
+    "credentials",
+    "awards"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

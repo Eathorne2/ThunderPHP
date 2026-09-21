@@ -1,0 +1,17 @@
+{
+  "format": "thunder-visual-ide-html-snippet",
+  "format_version": 1,
+  "id": "my-content-card",
+  "name": "My Content Card",
+  "description": "A distributable reusable HTML component snippet.",
+  "version": "1.0.0",
+  "author": "Your Name",
+  "website": "https://example.com",
+  "license": "Commercial",
+  "category": "Cards",
+  "order": 100,
+  "tags": ["card", "responsive"],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js"
+}

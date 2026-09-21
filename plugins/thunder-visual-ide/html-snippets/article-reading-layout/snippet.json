@@ -1,0 +1,17 @@
+{
+  "id": "article-reading-layout",
+  "name": "Article Reading Layout",
+  "description": "A complete long-form blog article with author block, lead image, body styles and share rail.",
+  "category": "Single Blog Posts",
+  "order": 1200,
+  "tags": [
+    "blog",
+    "article",
+    "single post",
+    "reading"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

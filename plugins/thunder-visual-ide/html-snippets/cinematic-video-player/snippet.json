@@ -1,0 +1,17 @@
+{
+  "id": "cinematic-video-player",
+  "name": "Cinematic Video Player",
+  "description": "A dark, cinematic video player with poster image, custom timeline, time display, and mute control.",
+  "category": "Video Players",
+  "order": 3180,
+  "tags": [
+    "video",
+    "player",
+    "media",
+    "cinematic"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

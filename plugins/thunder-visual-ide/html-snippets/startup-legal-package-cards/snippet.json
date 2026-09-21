@@ -1,0 +1,17 @@
+{
+  "id": "startup-legal-package-cards",
+  "name": "Startup Legal Package Cards",
+  "description": "Three startup-focused legal service packages for founder and venture websites.",
+  "category": "Business & Law",
+  "order": 5380,
+  "tags": [
+    "startup",
+    "law",
+    "packages",
+    "pricing"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

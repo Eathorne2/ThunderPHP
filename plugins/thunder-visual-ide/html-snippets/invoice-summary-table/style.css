@@ -1,0 +1,63 @@
+.ist-table {
+    overflow: auto;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: .85rem;
+    background: var(--thv-theme-surface, #fff);
+    font-family: system-ui, sans-serif
+}
+
+.ist-table table {
+    width: 100%;
+    min-width: 42rem;
+    border-collapse: collapse;
+    color: var(--thv-theme-text, #0f172a)
+}
+
+.ist-table th, .ist-table td {
+    padding: .75rem .9rem;
+    border-bottom: 1px solid var(--thv-theme-border, #dbe4ef);
+    font-size: .78rem;
+    text-align: left
+}
+
+.ist-table th {
+    background: var(--thv-theme-surface-alt, #f8fafc);
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .68rem;
+    text-transform: uppercase;
+    letter-spacing: .06em
+}
+
+.ist-table .is-number {
+    text-align: right;
+    font-variant-numeric: tabular-nums
+}
+
+.ist-table td span {
+    display: inline-block;
+    padding: .23rem .45rem;
+    border-radius: 999px;
+    font-size: .68rem;
+    font-weight: 800
+}
+
+.ist-table .is-paid {
+    background: #dcfce7;
+    color: #166534
+}
+
+.ist-table .is-pending {
+    background: #fef3c7;
+    color: #92400e
+}
+
+.ist-table .is-overdue {
+    background: #fee2e2;
+    color: #991b1b
+}
+
+.ist-table tfoot td {
+    border-bottom: 0;
+    background: var(--thv-theme-surface-alt, #f8fafc);
+    font-weight: 900
+}

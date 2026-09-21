@@ -1,0 +1,18 @@
+{
+  "id": "limited-drop-product-card",
+  "name": "Limited Drop Product Card",
+  "description": "An editorial product card for a limited release with issue numbering, image treatment and save interaction.",
+  "category": "Product Cards",
+  "order": 2260,
+  "tags": [
+    "product",
+    "card",
+    "editorial",
+    "limited edition",
+    "commerce"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

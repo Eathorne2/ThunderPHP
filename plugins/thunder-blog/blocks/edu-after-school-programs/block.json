@@ -1,0 +1,192 @@
+{
+  "slug": "edu-after-school-programs",
+  "name": "After School Programs",
+  "category": "Education",
+  "description": "Program cards with schedule labels for clubs and activities",
+  "keywords": [
+    "education",
+    "after school",
+    "clubs",
+    "programs"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-edu-after-school\"><div class=\"tb-edu-after-school__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-edu-after-school__grid\">{{elements:programs}}</div></div>",
+  "css": ".tb-edu-after-school{padding:clamp(34px,6vw,78px);background:var(--tb-color-background)}.tb-edu-after-school__head{max-width:720px;margin-bottom:28px}.tb-edu-after-school__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.15em}.tb-edu-after-school__title{margin:8px 0;color:var(--tb-color-secondary);font-size:clamp(40px,5vw,60px)}.tb-edu-after-school__text{color:var(--tb-color-muted);line-height:1.7}.tb-edu-after-school__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tb-edu-after-school__card{padding:26px;border:1px solid var(--tb-color-border);background:var(--tb-color-surface)}.tb-edu-after-school__day{display:inline-block;padding:6px 9px;background:color-mix(in srgb,var(--tb-color-primary) 10%,var(--tb-color-surface));color:var(--tb-color-primary);font-size:11px;font-weight:900;text-transform:uppercase}.tb-edu-after-school__card-title{margin:32px 0 8px;color:var(--tb-color-secondary);font-size:25px}.tb-edu-after-school__card-text{margin:0;color:var(--tb-color-muted);line-height:1.65}@media(max-width:760px){.tb-edu-after-school__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "After the bell"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-edu-after-school__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Programs that keep curiosity moving"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-edu-after-school__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Show clubs, tutoring, sports, creative activities or enrichment programs."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-edu-after-school__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "programs",
+      "label": "Program",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "title": "Coding Club",
+        "day": "Tuesdays",
+        "text": "Build small games, websites and creative digital projects."
+      },
+      "schema": [
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-edu-after-school__card-title"
+        },
+        {
+          "key": "day",
+          "label": "Schedule",
+          "type": "text",
+          "selector": ".tb-edu-after-school__day"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-edu-after-school__card-text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-edu-after-school__card\"><span class=\"tb-edu-after-school__day\">{{day}}</span><h3 class=\"tb-edu-after-school__card-title\">{{title}}</h3><p class=\"tb-edu-after-school__card-text\">{{text}}</p></article>",
+      "min": 1,
+      "max": 10,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "title": "Coding Club",
+          "day": "Tuesdays",
+          "text": "Build small games, websites and creative digital projects."
+        },
+        {
+          "title": "Debate Society",
+          "day": "Thursdays",
+          "text": "Practice research, public speaking and respectful argument."
+        },
+        {
+          "title": "Art Studio",
+          "day": "Fridays",
+          "text": "Explore drawing, painting, craft and mixed media."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

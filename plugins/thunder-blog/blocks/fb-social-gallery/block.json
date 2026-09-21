@@ -1,0 +1,193 @@
+{
+  "slug": "fb-social-gallery",
+  "name": "Fashion Social Gallery",
+  "category": "Fashion & Beauty",
+  "description": "Six-tile social-style gallery for campaign, beauty and fashion imagery.",
+  "keywords": [
+    "fashion",
+    "beauty",
+    "social",
+    "gallery",
+    "instagram"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-fb-social\"><div class=\"tb-fb-social__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-fb-social__grid\">{{elements:images}}</div></div>",
+  "css": ".tb-fb-social{padding:clamp(26px,5vw,64px);background:var(--tb-color-surface)}.tb-fb-social__head{text-align:center;max-width:720px;margin:0 auto 26px}.tb-fb-social__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-fb-social__title{margin:8px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(36px,5vw,58px);font-weight:500}.tb-fb-social__text{margin:0;color:var(--tb-color-muted);line-height:1.65}.tb-fb-social__grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}.tb-fb-social__item{margin:0;overflow:hidden}.tb-fb-social__image{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;transition:transform .3s ease}.tb-fb-social__item:hover .tb-fb-social__image{transform:scale(1.04)}@media(max-width:800px){.tb-fb-social__grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:480px){.tb-fb-social__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "From the studio"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-fb-social__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "The latest in pictures"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-fb-social__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A simple visual feed for campaign images, client work or social content."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-fb-social__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "images",
+      "label": "Gallery image",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Fashion and beauty social image"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-fb-social__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<figure class=\"tb-fb-social__item\"><img class=\"tb-fb-social__image\" src=\"{{url}}\" alt=\"{{alt}}\"></figure>",
+      "min": 1,
+      "max": 24,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "url": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Fashion and beauty social image 1"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Fashion and beauty social image 2"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Fashion and beauty social image 3"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Fashion and beauty social image 4"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Fashion and beauty social image 5"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Fashion and beauty social image 6"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

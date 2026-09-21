@@ -1,0 +1,17 @@
+{
+  "id": "polaroid-story-gallery",
+  "name": "Polaroid Story Gallery",
+  "description": "A playful overlapping photo wall with captions and click-to-focus behaviour.",
+  "category": "Image Galleries",
+  "order": 1040,
+  "tags": [
+    "gallery",
+    "photos",
+    "polaroid",
+    "creative"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "layered-portfolio-gallery",
+  "name": "Layered Portfolio Gallery",
+  "description": "An overlapping portfolio gallery with asymmetric image cards.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 8031,
+  "tags": [
+    "gallery",
+    "portfolio",
+    "layered",
+    "creative"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

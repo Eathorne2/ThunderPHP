@@ -1,0 +1,20 @@
+{
+  "id": "process-steps-section",
+  "name": "Process Steps Section",
+  "description": "A numbered process section for explaining a clear four-stage workflow.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Content",
+  "order": 8019,
+  "tags": [
+    "content",
+    "process",
+    "steps",
+    "workflow"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

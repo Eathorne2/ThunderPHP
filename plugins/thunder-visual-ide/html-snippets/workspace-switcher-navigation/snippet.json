@@ -1,0 +1,20 @@
+{
+  "id": "workspace-switcher-navigation",
+  "name": "Workspace Switcher Navigation",
+  "description": "A workspace switcher with account context and navigation shortcuts.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Navigation",
+  "order": 8046,
+  "tags": [
+    "navigation",
+    "workspace",
+    "switcher",
+    "app"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

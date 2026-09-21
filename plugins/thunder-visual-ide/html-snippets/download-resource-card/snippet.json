@@ -1,0 +1,20 @@
+{
+  "id": "download-resource-card",
+  "name": "Download Resource Card",
+  "description": "A resource download card with file metadata and supporting summary.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Cards",
+  "order": 8011,
+  "tags": [
+    "card",
+    "download",
+    "resource",
+    "document"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,56 @@
+{
+  "type": "javascript.if",
+  "label": "JS If / Else",
+  "category": "JavaScript Flow",
+  "kind": "flow",
+  "icon": "?",
+  "color": "#ca8a04",
+  "description": "Branches JavaScript execution using a browser-side condition.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "JS If / Else"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "js-exec",
+        "direction": "in"
+      },
+      {
+        "id": "condition",
+        "label": "Condition",
+        "type": "js-boolean",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "true",
+        "label": "True",
+        "type": "js-exec",
+        "direction": "out"
+      },
+      {
+        "id": "false",
+        "label": "False",
+        "type": "js-exec",
+        "direction": "out"
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\IfCompiler",
+    "file": "Compiler.php"
+  }
+}

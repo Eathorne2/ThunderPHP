@@ -1,0 +1,20 @@
+{
+  "id": "checkout-sticky-summary",
+  "name": "Checkout Sticky Summary",
+  "description": "A sticky order summary for checkout and booking pages.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Sticky Sidebars",
+  "order": 8067,
+  "tags": [
+    "sidebar",
+    "sticky",
+    "checkout",
+    "summary"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

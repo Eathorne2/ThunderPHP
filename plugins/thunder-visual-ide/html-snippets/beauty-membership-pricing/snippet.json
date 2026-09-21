@@ -1,0 +1,17 @@
+{
+  "id": "beauty-membership-pricing",
+  "name": "Beauty Membership Pricing",
+  "description": "A salon and spa membership comparison with monthly and annual price switching.",
+  "category": "Fashion & Beauty",
+  "order": 4030,
+  "tags": [
+    "beauty",
+    "pricing",
+    "membership",
+    "salon"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

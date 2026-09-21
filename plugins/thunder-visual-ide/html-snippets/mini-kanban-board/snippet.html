@@ -1,0 +1,55 @@
+<section class="kanban-board">
+    <header>
+        <div>
+            <span>Work board</span>
+            <h2>Current sprint</h2>
+        </div>
+        <button type="button" data-add-task>＋ Add task</button>
+    </header>
+    <div class="kanban-columns">
+        <section data-column>
+            <h3>
+                To do
+                <b data-count>2</b>
+            </h3>
+            <div class="kanban-drop" data-drop>
+                <article draggable="true">
+                    <small>Design</small>
+                    <strong>Review onboarding flow</strong>
+                    <p>Today</p>
+                </article>
+                <article draggable="true">
+                    <small>Content</small>
+                    <strong>Write release notes</strong>
+                    <p>Tomorrow</p>
+                </article>
+            </div>
+        </section>
+        <section data-column>
+            <h3>
+                In progress
+                <b data-count>1</b>
+            </h3>
+            <div class="kanban-drop" data-drop>
+                <article draggable="true">
+                    <small>Engineering</small>
+                    <strong>Connect billing API</strong>
+                    <p>Friday</p>
+                </article>
+            </div>
+        </section>
+        <section data-column>
+            <h3>
+                Complete
+                <b data-count>1</b>
+            </h3>
+            <div class="kanban-drop" data-drop>
+                <article draggable="true">
+                    <small>Research</small>
+                    <strong>Confirm user requirements</strong>
+                    <p>Done</p>
+                </article>
+            </div>
+        </section>
+    </div>
+</section>

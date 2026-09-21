@@ -1,0 +1,63 @@
+{
+  "type": "javascript.console_log",
+  "label": "Console Log",
+  "category": "JavaScript Flow",
+  "kind": "flow",
+  "icon": "LOG",
+  "color": "#7c3aed",
+  "description": "Writes a value to the browser developer console.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "Console Log",
+    "level": "log"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "level",
+      "label": "Console level",
+      "type": "select",
+      "options": [
+        "log",
+        "info",
+        "warn",
+        "error",
+        "debug"
+      ]
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "js-exec",
+        "direction": "in"
+      },
+      {
+        "id": "value",
+        "label": "Value",
+        "type": "js-value",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "js-exec",
+        "direction": "out"
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\ConsoleLogCompiler",
+    "file": "Compiler.php"
+  }
+}

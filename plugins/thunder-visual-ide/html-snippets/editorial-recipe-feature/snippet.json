@@ -1,0 +1,18 @@
+{
+  "id": "editorial-recipe-feature",
+  "name": "Editorial Recipe Feature",
+  "description": "A magazine-style recipe spread with a large image, ingredient list, preparation steps and servings control.",
+  "category": "Food & Restaurant",
+  "order": 3680,
+  "tags": [
+    "recipe",
+    "editorial",
+    "food blog",
+    "cooking",
+    "magazine"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

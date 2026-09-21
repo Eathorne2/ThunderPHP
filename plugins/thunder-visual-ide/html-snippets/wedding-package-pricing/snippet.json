@@ -1,0 +1,18 @@
+{
+  "id": "wedding-package-pricing",
+  "name": "Wedding Package Pricing",
+  "description": "A three-tier pricing comparison for wedding planners, venues or photography businesses.",
+  "category": "Wedding",
+  "order": 4670,
+  "tags": [
+    "wedding",
+    "pricing",
+    "packages",
+    "planner",
+    "venue"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

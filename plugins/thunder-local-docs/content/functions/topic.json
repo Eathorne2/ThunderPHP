@@ -1,0 +1,11 @@
+{
+    "id": 6,
+    "title": "Functions",
+    "slug": "functions",
+    "description": "List of all built in ThunderPHP functions and how to use them. These are functions used in plugin development",
+    "icon": "",
+    "type": "reference",
+    "featured": false,
+    "published": true,
+    "order": 2
+}

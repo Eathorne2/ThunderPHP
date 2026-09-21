@@ -1,0 +1,211 @@
+{
+  "slug": "cars-model-comparison",
+  "name": "Vehicle Model Comparison",
+  "category": "Cars & Transportation",
+  "description": "Side-by-side model cards for quick comparison",
+  "keywords": [
+    "cars",
+    "transportation",
+    "cards",
+    "services"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-auto-model-comparison\"><header class=\"tb-auto-model-comparison__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</header><div class=\"tb-auto-model-comparison__grid\">{{elements:items}}</div></section>",
+  "css": ".tb-auto-model-comparison{padding:clamp(34px,6vw,82px);background:var(--tb-color-background)}.tb-auto-model-comparison__head{max-width:780px;margin-bottom:30px}.tb-auto-model-comparison__eyebrow{color:var(--tb-color-primary);font-size:11px;font-weight:950;letter-spacing:.15em;text-transform:uppercase}.tb-auto-model-comparison__title{margin:9px 0 12px;color:var(--tb-color-secondary);font-size:clamp(38px,5vw,64px);line-height:1.02}.tb-auto-model-comparison__text{margin:0;color:var(--tb-color-muted);font-size:16px;line-height:1.7}.tb-auto-model-comparison__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.tb-auto-model-comparison__card{overflow:hidden;border:1px solid var(--tb-color-border);border-radius:0;background:var(--tb-color-surface)}.tb-auto-model-comparison__card-body{padding:22px}.tb-auto-model-comparison__card-title{margin:0 0 8px;color:var(--tb-color-secondary);font-size:23px}.tb-auto-model-comparison__card-text{margin:0;color:var(--tb-color-muted);line-height:1.65}.tb-auto-model-comparison__meta{display:block;margin-top:13px;color:var(--tb-color-primary);font-weight:900}.tb-auto-model-comparison__image{width:100%;height:230px;object-fit:cover;display:block}@media(max-width:760px){.tb-auto-model-comparison__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Compare the range"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-auto-model-comparison__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Different roads. Different strengths."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-auto-model-comparison__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Give buyers a simple visual comparison before they move into detailed specifications."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-auto-model-comparison__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "items",
+      "label": "Card",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "title": "Performance model",
+        "text": "Designed for confident everyday driving.",
+        "meta": "Explore vehicle",
+        "url": "https://images.unsplash.com/photo-1519003300449-424ad0405076?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Vehicle"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-auto-model-comparison__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-auto-model-comparison__card-title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-auto-model-comparison__card-text",
+          "rows": 3
+        },
+        {
+          "key": "meta",
+          "label": "Meta",
+          "type": "text",
+          "selector": ".tb-auto-model-comparison__meta"
+        }
+      ],
+      "template": "<article class=\"tb-auto-model-comparison__card\"><img class=\"tb-auto-model-comparison__image\" src=\"{{url}}\" alt=\"{{alt}}\"><div class=\"tb-auto-model-comparison__card-body\"><h3 class=\"tb-auto-model-comparison__card-title\">{{title}}</h3><p class=\"tb-auto-model-comparison__card-text\">{{text}}</p><span class=\"tb-auto-model-comparison__meta\">{{meta}}</span></div></article>",
+      "min": 1,
+      "max": 18,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "title": "City",
+          "text": "Efficient, compact and easy to park.",
+          "meta": "From K420k",
+          "url": "https://images.unsplash.com/photo-1519003300449-424ad0405076?auto=format&fit=crop&w=1600&q=82",
+          "alt": "Vehicle"
+        },
+        {
+          "title": "Touring",
+          "text": "More room and long-distance comfort.",
+          "meta": "From K610k",
+          "url": "https://images.unsplash.com/photo-1519003300449-424ad0405076?auto=format&fit=crop&w=1600&q=82",
+          "alt": "Vehicle"
+        },
+        {
+          "title": "Performance",
+          "text": "Sharper response and upgraded power.",
+          "meta": "From K780k",
+          "url": "https://images.unsplash.com/photo-1519003300449-424ad0405076?auto=format&fit=crop&w=1600&q=82",
+          "alt": "Vehicle"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "my-tutorial",
+  "title": "My Tutorial",
+  "summary": "Describe what the user will build or learn.",
+  "category": "getting-started",
+  "order": 100,
+  "level": "Beginner",
+  "duration": "10 min",
+  "tags": ["example"],
+  "thumbnail": "thumbnail.svg",
+  "content": "content.html",
+  "video": {
+    "type": "youtube",
+    "id": ""
+  },
+  "published": true
+}

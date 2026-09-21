@@ -1,0 +1,63 @@
+<section class="playlist-video" data-media-player>
+    <div class="playlist-video__stage">
+        <video
+            preload="metadata"
+            poster="https://picsum.photos/id/48/1280/720"
+            src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+        ></video>
+
+        <div class="playlist-video__controls">
+            <button type="button" data-media-play>Play</button>
+            <input type="range" min="0" max="100" value="0" step="0.1" aria-label="Video progress" data-media-progress>
+            <span data-media-time>0:00 / 0:00</span>
+            <button type="button" data-media-mute>Mute</button>
+        </div>
+    </div>
+
+    <aside class="playlist-video__list">
+        <header>
+            <div>
+                <p>Frontend foundations</p>
+                <h2>Course playlist</h2>
+            </div>
+            <span>3 lessons</span>
+        </header>
+
+        <button
+            class="is-active"
+            type="button"
+            data-video-source="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+            data-video-title="Designing the page shell"
+        >
+            <span>01</span>
+            <div>
+                <strong>Designing the page shell</strong>
+                <small>08:42</small>
+            </div>
+        </button>
+
+        <button
+            type="button"
+            data-video-source="https://media.w3.org/2010/05/sintel/trailer.mp4"
+            data-video-title="Reusable component placement"
+        >
+            <span>02</span>
+            <div>
+                <strong>Reusable component placement</strong>
+                <small>12:18</small>
+            </div>
+        </button>
+
+        <button
+            type="button"
+            data-video-source="https://media.w3.org/2010/05/bunny/trailer.mp4"
+            data-video-title="Loading code assets"
+        >
+            <span>03</span>
+            <div>
+                <strong>Loading code assets</strong>
+                <small>09:07</small>
+            </div>
+        </button>
+    </aside>
+</section>

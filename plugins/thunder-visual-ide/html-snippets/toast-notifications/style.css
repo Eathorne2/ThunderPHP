@@ -1,0 +1,105 @@
+.toast-demo {
+    position: relative;
+    min-height: 17rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    border: 1px solid var(--thv-theme-border, #e2e8f0);
+    border-radius: 1.2rem;
+    background: linear-gradient(135deg, var(--thv-theme-surface-alt, #f8fafc), color-mix(in srgb,
+        var(--thv-theme-primary, #4f46e5) 9%, var(--thv-theme-surface, #ffffff)));
+    color: var(--thv-theme-text, #0f172a);
+}
+
+.toast-demo > div:first-child {
+    max-width: 36rem;
+}
+
+.toast-demo span {
+    color: var(--thv-theme-primary, #7c3aed);
+    font-size: .72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.toast-demo h2 {
+    margin: .3rem 0;
+}
+
+.toast-demo p {
+    color: var(--thv-theme-muted, #64748b);
+    line-height: 1.6;
+}
+
+.toast-demo__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin-top: 1.2rem;
+}
+
+.toast-demo__actions button {
+    padding: .65rem .85rem;
+    border: 1px solid var(--thv-theme-border, #cbd5e1);
+    border-radius: .65rem;
+    background: var(--thv-theme-surface, #ffffff);
+    font-weight: 750;
+    cursor: pointer;
+}
+
+.toast-stack {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: grid;
+    width: min(22rem, calc(100% - 2rem));
+    gap: .55rem;
+}
+
+.toast-message {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: start;
+    gap: .65rem;
+    padding: .85rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-left: 4px solid var(--thv-theme-secondary, #2563eb);
+    border-radius: .75rem;
+    background: var(--thv-theme-surface, #ffffff);
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .15);
+    animation: toast-in .2s ease;
+}
+
+.toast-message--success {
+    border-left-color: var(--thv-theme-success, #16a34a);
+}
+
+.toast-message--warning {
+    border-left-color: var(--thv-theme-warning, #d97706);
+}
+
+.toast-message--error {
+    border-left-color: var(--thv-theme-danger, #dc2626);
+}
+
+.toast-message strong {
+    display: block;
+    font-size: .86rem;
+}
+
+.toast-message small {
+    color: var(--thv-theme-muted, #64748b);
+}
+
+.toast-message button {
+    border: 0;
+    background: transparent;
+    color: var(--thv-theme-muted, #64748b);
+    cursor: pointer;
+}
+
+@keyframes toast-in {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+}

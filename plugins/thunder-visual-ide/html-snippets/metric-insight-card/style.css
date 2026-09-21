@@ -1,0 +1,95 @@
+.mic-car {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.mic-car *, .mic-car *::before, .mic-car *::after {
+    box-sizing: border-box;
+}
+
+.mic-car button, .mic-car input, .mic-car select, .mic-car textarea {
+    font: inherit;
+}
+
+.mic-car a {
+    color: inherit;
+}
+
+.mic-car {
+    position: relative;
+    max-width: 24rem;
+    padding: 1.35rem;
+    overflow: hidden;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.2rem;
+    background: var(--thv-theme-surface);
+}
+
+.mic-car::after {
+    content: '';
+    position: absolute;
+    right: -3rem;
+    bottom: -3rem;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--thv-theme-primary) 14%, transparent);
+}
+
+.mic-car__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.mic-car__icon {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    background: color-mix(in srgb, var(--thv-theme-primary) 16%, var(--thv-theme-surface));
+    color: var(--thv-theme-primary);
+    font-size: 1.35rem;
+}
+
+.mic-car__label {
+    color: var(--thv-theme-muted);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.mic-car h3 {
+    margin: 1.15rem 0 0.55rem;
+    font-size: 1.35rem;
+}
+
+.mic-car p {
+    color: var(--thv-theme-muted);
+    line-height: 1.6;
+}
+
+.mic-car ul {
+    display: grid;
+    gap: 0.45rem;
+    padding-left: 1.1rem;
+}
+
+.mic-car li::marker {
+    color: var(--thv-theme-primary);
+}
+
+.mic-car__link {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+    color: var(--thv-theme-primary);
+    font-weight: 850;
+    text-decoration: none;
+}

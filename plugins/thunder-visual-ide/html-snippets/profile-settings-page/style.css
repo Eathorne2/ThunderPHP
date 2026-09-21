@@ -1,0 +1,187 @@
+.profile-settings {
+    display: grid;
+    grid-template-columns: minmax(14rem, 0.55fr) minmax(0, 1.45fr);
+    gap: clamp(1.5rem, 5vw, 4rem);
+    max-width: 76rem;
+    margin: 0 auto;
+    padding: clamp(1rem, 4vw, 3rem);
+    color: var(--thv-theme-text, #182235);
+    background: var(--thv-theme-surface-alt, #f6f8fb);
+}
+
+.profile-settings__sidebar {
+    position: sticky;
+    top: 1.5rem;
+    align-self: start;
+}
+
+.profile-settings__sidebar h1 {
+    margin: 0.35rem 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.profile-settings__sidebar > p {
+    color: var(--thv-theme-muted, #667085);
+    line-height: 1.6;
+}
+
+.profile-settings__eyebrow {
+    color: var(--thv-theme-primary, #4f46e5) !important;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.profile-settings__sidebar nav {
+    display: grid;
+    gap: 0.35rem;
+    margin-top: 2rem;
+}
+
+.profile-settings__sidebar nav a {
+    padding: 0.75rem 0.9rem;
+    border-radius: 0.7rem;
+    color: var(--thv-theme-muted, #667085);
+    text-decoration: none;
+}
+
+.profile-settings__sidebar nav a.is-active {
+    color: var(--thv-theme-primary, #4f46e5);
+    background: color-mix(in srgb, var(--thv-theme-primary, #4f46e5) 10%, transparent);
+    font-weight: 700;
+}
+
+.profile-settings__form {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.profile-settings__panel {
+    padding: clamp(1.2rem, 4vw, 2rem);
+    border: 1px solid var(--thv-theme-border, #dfe5ec);
+    border-radius: 1.1rem;
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.profile-settings__heading,
+.profile-settings__avatar-row,
+.profile-settings__inline-actions,
+.profile-settings__footer {
+    display: flex;
+    align-items: center;
+}
+
+.profile-settings__heading {
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1.3rem;
+    border-bottom: 1px solid var(--thv-theme-border, #dfe5ec);
+}
+
+.profile-settings__heading h2,
+.profile-settings__heading p {
+    margin: 0;
+}
+
+.profile-settings__heading p,
+.profile-settings__avatar-row p {
+    margin-top: 0.3rem;
+    color: var(--thv-theme-muted, #667085);
+}
+
+.profile-settings button {
+    padding: 0.7rem 0.95rem;
+    border: 1px solid var(--thv-theme-border, #dfe5ec);
+    border-radius: 0.7rem;
+    color: inherit;
+    background: var(--thv-theme-surface, #ffffff);
+    font-weight: 700;
+}
+
+.profile-settings__avatar-row {
+    gap: 1rem;
+    padding-block: 1.5rem;
+}
+
+.profile-settings__avatar-row img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.profile-settings__inline-actions {
+    gap: 0.55rem;
+}
+
+.profile-settings__inline-actions .is-subtle {
+    border-color: transparent;
+    color: var(--thv-theme-muted, #667085);
+}
+
+.profile-settings__fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.1rem;
+}
+
+.profile-settings__fields label {
+    display: grid;
+    gap: 0.45rem;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.profile-settings__fields .is-wide {
+    grid-column: 1 / -1;
+}
+
+.profile-settings__fields input,
+.profile-settings__fields textarea,
+.profile-settings__fields select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8rem 0.9rem;
+    border: 1px solid var(--thv-theme-border, #cfd7e2);
+    border-radius: 0.7rem;
+    color: inherit;
+    background: var(--thv-theme-surface, #ffffff);
+    font: inherit;
+    font-weight: 400;
+}
+
+.profile-settings__footer {
+    justify-content: flex-end;
+    gap: 0.7rem;
+}
+
+.profile-settings__footer .is-primary {
+    border-color: var(--thv-theme-primary, #4f46e5);
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #4f46e5);
+}
+
+@media (max-width: 760px) {
+    .profile-settings {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-settings__sidebar {
+        position: static;
+    }
+
+    .profile-settings__sidebar nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 540px) {
+    .profile-settings__fields {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-settings__fields .is-wide {
+        grid-column: auto;
+    }
+}

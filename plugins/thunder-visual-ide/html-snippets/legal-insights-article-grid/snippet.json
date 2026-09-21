@@ -1,0 +1,17 @@
+{
+  "id": "legal-insights-article-grid",
+  "name": "Legal Insights Article Grid",
+  "description": "A professional legal insight and analysis grid with topic filters.",
+  "category": "Business & Law",
+  "order": 5350,
+  "tags": [
+    "law",
+    "articles",
+    "insights",
+    "grid"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

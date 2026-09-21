@@ -1,0 +1,151 @@
+{
+  "slug": "arch-awards-recognition",
+  "name": "Architecture Awards",
+  "category": "Architecture & Building",
+  "description": "Architecture/building statistics section",
+  "keywords": [
+    "architecture",
+    "awards",
+    "statistics"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-arch-awards-recognition\"><div class=\"tb-arch-awards-recognition__intro\">{{elements:kicker}}{{elements:title}}</div><div class=\"tb-arch-awards-recognition__stats\">{{elements:stats}}</div></section>",
+  "css": ".tb-arch-awards-recognition{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:end;padding:clamp(40px,7vw,86px);background:var(--tb-color-surface)}.tb-arch-awards-recognition__kicker{font-size:12px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:var(--tb-color-primary)}.tb-arch-awards-recognition__title{font-size:clamp(38px,5vw,62px);line-height:1;margin:12px 0;color:var(--tb-color-secondary)}.tb-arch-awards-recognition__stats{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--tb-color-border)}.tb-arch-awards-recognition__stat{padding:24px 10px;border-bottom:1px solid var(--tb-color-border)}.tb-arch-awards-recognition__value{display:block;font-size:clamp(38px,5vw,62px);font-weight:950;color:var(--tb-color-primary);letter-spacing:-.05em}.tb-arch-awards-recognition__label{display:block;margin-top:6px;color:var(--tb-color-muted)}@media(max-width:760px){.tb-arch-awards-recognition{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "kicker",
+      "label": "Kicker",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Recognition"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-arch-awards-recognition__kicker\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "title",
+      "label": "Heading",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Work recognized by clients and peers"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-arch-awards-recognition__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "stats",
+      "label": "Statistics",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "value": "14",
+        "label": "Design awards"
+      },
+      "schema": [
+        {
+          "key": "value",
+          "label": "Value",
+          "type": "text",
+          "selector": ".tb-arch-awards-recognition__value"
+        },
+        {
+          "key": "label",
+          "label": "Label",
+          "type": "text",
+          "selector": ".tb-arch-awards-recognition__label"
+        }
+      ],
+      "template": "<div class=\"tb-arch-awards-recognition__stat\"><strong class=\"tb-arch-awards-recognition__value\">{{value}}</strong><span class=\"tb-arch-awards-recognition__label\">{{label}}</span></div>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8,
+      "default_items": [
+        {
+          "value": "14",
+          "label": "Design awards"
+        },
+        {
+          "value": "9",
+          "label": "Published projects"
+        },
+        {
+          "value": "6",
+          "label": "Competition wins"
+        },
+        {
+          "value": "22",
+          "label": "Industry features"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

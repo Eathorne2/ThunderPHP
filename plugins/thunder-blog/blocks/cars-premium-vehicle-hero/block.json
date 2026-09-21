@@ -1,0 +1,206 @@
+{
+  "slug": "cars-premium-vehicle-hero",
+  "name": "Premium Vehicle Hero",
+  "category": "Cars & Transportation",
+  "description": "Large luxury vehicle hero with bold product positioning",
+  "keywords": [
+    "cars",
+    "transportation",
+    "hero",
+    "image",
+    "cta"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-auto-premium-vehicle-hero\"><div class=\"tb-auto-premium-vehicle-hero__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}{{elements:cta}}</div><div class=\"tb-auto-premium-vehicle-hero__visual\">{{elements:image}}</div></section>",
+  "css": ".tb-auto-premium-vehicle-hero{display:grid;grid-template-columns:minmax(0,.92fr) minmax(360px,1.08fr);min-height:600px;background:var(--tb-color-surface);overflow:hidden}.tb-auto-premium-vehicle-hero__copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(36px,7vw,90px)}.tb-auto-premium-vehicle-hero__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:950;letter-spacing:.16em;text-transform:uppercase}.tb-auto-premium-vehicle-hero__title{margin:12px 0 18px;color:var(--tb-color-secondary);font-size:clamp(46px,6.5vw,82px);line-height:.98}.tb-auto-premium-vehicle-hero__text{max-width:580px;color:var(--tb-color-muted);font-size:17px;line-height:1.75}.tb-auto-premium-vehicle-hero__cta{align-self:flex-start;margin-top:24px;padding:13px 19px;background:var(--tb-color-primary);color:var(--tb-color-surface);font-weight:900;text-decoration:none}.tb-auto-premium-vehicle-hero__image{width:100%;height:100%;min-height:600px;object-fit:cover;display:block}@media(max-width:780px){.tb-auto-premium-vehicle-hero{grid-template-columns:1fr}.tb-auto-premium-vehicle-hero__image{min-height:400px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Performance refined"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-auto-premium-vehicle-hero__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Designed to move you"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-auto-premium-vehicle-hero__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A cinematic introduction for a flagship vehicle, dealership or automotive campaign."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-auto-premium-vehicle-hero__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Action",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Discover the model",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-auto-premium-vehicle-hero__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "image",
+      "label": "Image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Premium Vehicle Hero"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-auto-premium-vehicle-hero__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-auto-premium-vehicle-hero__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "savannah-safari-camp-header-footer",
+  "name": "Savannah Safari Camp Header and Footer",
+  "description": "A nature-led safari camp shell with journey planning, conservation stories and an expedition footer.",
+  "category": "Travel & Hotels",
+  "order": 5040,
+  "tags": [
+    "travel",
+    "hotel",
+    "header",
+    "footer",
+    "riverside safari camp"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

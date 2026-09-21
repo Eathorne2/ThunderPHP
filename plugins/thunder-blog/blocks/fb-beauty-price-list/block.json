@@ -1,0 +1,196 @@
+{
+  "slug": "fb-beauty-price-list",
+  "name": "Beauty Service Price List",
+  "category": "Fashion & Beauty",
+  "description": "Minimal salon pricing table with service, duration and price.",
+  "keywords": [
+    "beauty",
+    "price",
+    "services",
+    "salon"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-fb-price\"><div class=\"tb-fb-price__intro\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-fb-price__list\">{{elements:prices}}</div></div>",
+  "css": ".tb-fb-price{display:grid;grid-template-columns:minmax(260px,.7fr) minmax(0,1.3fr);gap:clamp(30px,7vw,94px);padding:clamp(30px,6vw,78px);background:var(--tb-color-surface)}.tb-fb-price__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.17em;text-transform:uppercase}.tb-fb-price__title{margin:10px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(38px,5vw,62px);font-weight:500}.tb-fb-price__text{color:var(--tb-color-muted);line-height:1.7}.tb-fb-price__list{border-top:1px solid var(--tb-color-border)}.tb-fb-price__item{display:grid;grid-template-columns:1fr auto auto;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid var(--tb-color-border)}.tb-fb-price__service{color:var(--tb-color-secondary);font-weight:800}.tb-fb-price__duration{color:var(--tb-color-muted);font-size:13px}.tb-fb-price__amount{color:var(--tb-color-primary);font-family:Georgia,serif;font-size:24px}@media(max-width:760px){.tb-fb-price{grid-template-columns:1fr}}@media(max-width:480px){.tb-fb-price__item{grid-template-columns:1fr auto}.tb-fb-price__duration{grid-column:1/2}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Service menu"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-fb-price__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Simple beauty pricing"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-fb-price__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A clear service list for salons, skin studios and independent beauty professionals."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-fb-price__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "prices",
+      "label": "Price item",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "service": "Signature facial",
+        "duration": "60 min",
+        "price": "$85"
+      },
+      "schema": [
+        {
+          "key": "service",
+          "label": "Service",
+          "type": "text",
+          "selector": ".tb-fb-price__service"
+        },
+        {
+          "key": "duration",
+          "label": "Duration",
+          "type": "text",
+          "selector": ".tb-fb-price__duration"
+        },
+        {
+          "key": "price",
+          "label": "Price",
+          "type": "text",
+          "selector": ".tb-fb-price__amount"
+        }
+      ],
+      "template": "<div class=\"tb-fb-price__item\"><span class=\"tb-fb-price__service\">{{service}}</span><span class=\"tb-fb-price__duration\">{{duration}}</span><span class=\"tb-fb-price__amount\">{{price}}</span></div>",
+      "min": 1,
+      "max": 24,
+      "default_items": [
+        {
+          "service": "Signature facial",
+          "duration": "60 min",
+          "price": "$85"
+        },
+        {
+          "service": "Glow peel",
+          "duration": "45 min",
+          "price": "$70"
+        },
+        {
+          "service": "Brow shape",
+          "duration": "30 min",
+          "price": "$35"
+        },
+        {
+          "service": "Express hydration",
+          "duration": "30 min",
+          "price": "$48"
+        }
+      ],
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

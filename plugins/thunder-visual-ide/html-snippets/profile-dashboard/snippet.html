@@ -1,0 +1,68 @@
+<section class="profile-dashboard">
+    <header class="profile-dashboard__cover">
+        <div class="profile-dashboard__identity">
+            <div class="profile-dashboard__avatar">EC</div>
+            <div>
+                <span>Administrator</span>
+                <h2>Eathorne Choongo</h2>
+                <p>Lusaka, Zambia • Joined March 2024</p>
+            </div>
+        </div>
+        <button type="button">Edit profile</button>
+    </header>
+    <div class="profile-dashboard__stats">
+        <div>
+            <strong>42</strong>
+            <span>Projects</span>
+        </div>
+        <div>
+            <strong>1,284</strong>
+            <span>Followers</span>
+        </div>
+        <div>
+            <strong>97%</strong>
+            <span>Completion</span>
+        </div>
+        <div>
+            <strong>4.9</strong>
+            <span>Rating</span>
+        </div>
+    </div>
+    <nav class="profile-dashboard__tabs" aria-label="Profile sections">
+        <button type="button" class="is-active" data-profile-tab="about">About</button>
+        <button type="button" data-profile-tab="activity">Activity</button>
+        <button type="button" data-profile-tab="projects">Projects</button>
+    </nav>
+    <div class="profile-dashboard__panel is-active" data-profile-panel="about">
+        <h3>About</h3>
+        <p>Experienced software developer building practical education and business systems with ThunderPHP.</p>
+        <dl>
+            <div>
+                <dt>Email</dt>
+                <dd>hello@example.com</dd>
+            </div>
+            <div>
+                <dt>Phone</dt>
+                <dd>+260 97 000 0000</dd>
+            </div>
+            <div>
+                <dt>Website</dt>
+                <dd>thunderphp.com</dd>
+            </div>
+        </dl>
+    </div>
+    <div class="profile-dashboard__panel" data-profile-panel="activity" hidden>
+        <h3>Recent activity</h3>
+        <ul>
+            <li>Published a new plugin template</li>
+            <li>Updated account security</li>
+            <li>Completed the visual forms tutorial</li>
+        </ul>
+    </div>
+    <div class="profile-dashboard__panel" data-profile-panel="projects" hidden>
+        <h3>Featured projects</h3>
+        <div class="project-chip">School Management</div>
+        <div class="project-chip">Billing Toolkit</div>
+        <div class="project-chip">Visual IDE</div>
+    </div>
+</section>

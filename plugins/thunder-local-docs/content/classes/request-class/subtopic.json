@@ -1,0 +1,14 @@
+{
+    "id": 6,
+    "title": "Request Class",
+    "slug": "request-class",
+    "description": "The Request Class is a wrapper for arrays usually used in user requests like $_GET, $_POST, $_FILES. It makes it easier to handle user requests and file uploads",
+    "type": "reference",
+    "featured": false,
+    "published": true,
+    "order": 2,
+    "meta_title": "",
+    "meta_description": "",
+    "image": "",
+    "video_url": ""
+}

@@ -1,0 +1,110 @@
+{
+  "settings": {
+    "defaults": {
+      "menu_id": "0",
+      "width": "1200",
+      "search_placeholder": "Search the blog"
+    },
+    "schema": [
+      {
+        "key": "menu_id",
+        "label": "Saved menu",
+        "type": "menu",
+        "default": "0"
+      },
+      {
+        "key": "width",
+        "label": "Content width",
+        "type": "select",
+        "options": {
+          "1040": "Compact",
+          "1200": "Standard",
+          "1360": "Wide",
+          "1480": "Extra wide"
+        },
+        "default": "1200"
+      },
+      {
+        "key": "search_placeholder",
+        "label": "Search placeholder",
+        "type": "text",
+        "default": "Search the blog"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "key": "brand",
+      "label": "Brand",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "name": "{{app_name}}",
+        "logo": "{{app_logo}}",
+        "url": "{{root}}/"
+      },
+      "schema": [
+        {
+          "key": "name",
+          "label": "Brand name",
+          "type": "text",
+          "selector": ".tb-h-search-first__brand-name"
+        },
+        {
+          "key": "logo",
+          "label": "Logo",
+          "type": "image",
+          "selector": ".tb-h-search-first__logo"
+        },
+        {
+          "key": "url",
+          "label": "Home URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-h-search-first__brand\" href=\"{{url}}\"><img class=\"tb-h-search-first__logo\" src=\"{{logo}}\" alt=\"\"><span class=\"tb-h-search-first__brand-name\">{{name}}</span></a>",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "secondary"
+        }
+      }
+    }
+  ],
+  "menu_sources": [
+    {
+      "setting": "menu_id",
+      "token": "primary",
+      "empty": "",
+      "container": "<nav class=\"tb-h-search-first__nav\" aria-label=\"{{menu_name}}\">{{items}}</nav>",
+      "item": "<a class=\"tb-h-search-first__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}}</a>",
+      "parent": "<div class=\"tb-h-search-first__parent\"><a class=\"tb-h-search-first__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}}<span class=\"tb-h-search-first__chevron\">⌄</span></a><div class=\"tb-h-search-first__submenu\">{{children}}</div></div>",
+      "empty_preview": "<nav class=\"tb-h-search-first__nav tb-menu-empty\">Select a menu</nav>"
+    }
+  ],
+  "html": "<header class=\"tb-block tb-h-search-first\"><div class=\"tb-h-search-first__inner\" style=\"--tb-h-search-first-width:{{width}}px\"><div class=\"tb-h-search-first__row\">{{elements:brand}}<form class=\"tb-h-search-first__search\" action=\"{{root}}/blog/search\" method=\"get\"><input class=\"tb-h-search-first__search-input\" name=\"q\" placeholder=\"{{search_placeholder}}\"><button class=\"tb-h-search-first__search-button\" type=\"submit\">Search</button></form></div><div class=\"tb-h-search-first__menu-row\">{{menu:primary}}</div></div></header>",
+  "css": ".tb-h-search-first{position:relative;background:var(--tb-color-surface);color:var(--tb-color-text)}.tb-h-search-first__inner{max-width:var(--tb-h-search-first-width);margin:auto;padding:0 24px}.tb-h-search-first__brand{display:flex;align-items:center;gap:10px;color:var(--tb-color-secondary);text-decoration:none;font-weight:900}.tb-h-search-first__logo{width:38px;height:38px;object-fit:contain}.tb-h-search-first__brand-name{letter-spacing:-.025em}.tb-h-search-first__nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.tb-h-search-first__link{display:inline-flex;align-items:center;gap:5px;padding:9px 11px;color:inherit;text-decoration:none;font-weight:750}.tb-h-search-first__link:hover{color:var(--tb-color-primary)}.tb-h-search-first__parent{position:relative}.tb-h-search-first__submenu{position:absolute;z-index:20;top:100%;left:0;min-width:190px;padding:8px;border:1px solid var(--tb-color-border);border-radius:12px;background:var(--tb-color-surface);display:none;box-shadow:0 16px 38px color-mix(in srgb,var(--tb-color-secondary) 14%,transparent)}.tb-h-search-first__submenu .tb-h-search-first__link{display:flex}.tb-h-search-first__parent:hover>.tb-h-search-first__submenu,.tb-h-search-first__parent:focus-within>.tb-h-search-first__submenu{display:grid}.tb-h-search-first__chevron{font-size:10px;opacity:.65}.tb-h-search-first__row{padding:16px 0;display:grid;grid-template-columns:auto minmax(260px,560px);justify-content:space-between;align-items:center;gap:24px}.tb-h-search-first__search{height:42px;border:1px solid var(--tb-color-border);border-radius:10px;display:flex;overflow:hidden}.tb-h-search-first__search-input{min-width:0;flex:1;padding:0 13px;border:0;background:transparent;color:var(--tb-color-text);outline:none}.tb-h-search-first__search-button{padding:0 16px;border:0;background:var(--tb-color-primary);color:var(--tb-color-background);font-weight:800}.tb-h-search-first__menu-row{padding:8px 0;border-top:1px solid var(--tb-color-border)}@media(max-width:820px){.tb-h-search-first__row,.tb-h-search-first__top,.tb-h-search-first__glass,.tb-h-search-first__frame,.tb-h-search-first__pill{flex-wrap:wrap;height:auto;padding-top:14px;padding-bottom:14px}.tb-h-search-first__nav{width:100%;order:5}.tb-h-search-first__submenu{position:static;box-shadow:none}}@media(max-width:560px){.tb-h-search-first__inner{padding-left:16px;padding-right:16px}.tb-h-search-first__row{grid-template-columns:1fr!important}.tb-h-search-first__search{width:100%!important}}",
+  "js": "",
+  "slug": "header-search-first",
+  "name": "Search First Header",
+  "category": "Headers",
+  "description": "A search-forward header with navigation and an always-visible blog search field.",
+  "keywords": [
+    "header",
+    "navigation",
+    "menu",
+    "search"
+  ],
+  "contexts": [
+    "header"
+  ],
+  "version": "1.0.0"
+}

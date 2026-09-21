@@ -1,0 +1,17 @@
+{
+  "id": "fashion-beauty-store-locator",
+  "name": "Fashion and Beauty Store Locator",
+  "description": "An interactive location panel for boutiques, salons and beauty counters.",
+  "category": "Fashion & Beauty",
+  "order": 4080,
+  "tags": [
+    "fashion",
+    "beauty",
+    "store locator",
+    "contact"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

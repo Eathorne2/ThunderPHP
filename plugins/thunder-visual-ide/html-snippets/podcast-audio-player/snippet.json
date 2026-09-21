@@ -1,0 +1,17 @@
+{
+  "id": "podcast-audio-player",
+  "name": "Podcast Audio Player",
+  "description": "A podcast episode player with show details, episode notes, playback timeline, and follow action.",
+  "category": "Audio Players",
+  "order": 3220,
+  "tags": [
+    "audio",
+    "player",
+    "podcast",
+    "episode"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

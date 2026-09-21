@@ -1,0 +1,86 @@
+{
+  "type": "lifecycle.view",
+  "label": "View",
+  "category": "Lifecycle",
+  "kind": "architecture",
+  "icon": "V",
+  "color": "#db2777",
+  "description": "Creates an HTML/PHP view file and action hook. Connect a Route to scope it, or leave it unconnected for global/custom-hook use It can also own a separate browser-side JavaScript Flow.",
+  "allowed_graphs": [
+    "architecture"
+  ],
+  "defaults": {
+    "title": "View",
+    "filename": "frontend/page.php",
+    "hook_name": "view",
+    "priority": 10,
+    "content": "<h1>Page</h1>\n",
+    "javascript_graph_id": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "View name",
+      "type": "text"
+    },
+    {
+      "name": "filename",
+      "label": "View path",
+      "type": "text"
+    },
+    {
+      "name": "hook_name",
+      "label": "Hook name",
+      "type": "editable_select",
+      "suggestions": [
+        "before_controller",
+        "controller",
+        "after_controller",
+        "before_view",
+        "view",
+        "before_404_redirect",
+        "after_view"
+      ],
+      "help": "Select a standard framework hook or type any custom hook name.",
+      "include_project_action_hooks": true
+    },
+    {
+      "name": "priority",
+      "label": "Fallback priority",
+      "type": "number",
+      "help": "Used directly for unscoped hooks. When connected to a Route, top-to-bottom order generates route-specific priorities."
+    },
+    {
+      "name": "content",
+      "label": "HTML / PHP",
+      "type": "code",
+      "help": "Use <tvi-component name=\"component-name\" /> to place visual components. Template syntax supports variables, dot paths, PHP constants such as {{ ROOT }}, raw values, if blocks and foreach blocks."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "route",
+        "label": "Route",
+        "type": "view",
+        "direction": "out",
+        "multiple": true
+      },
+      {
+        "id": "look",
+        "label": "Look",
+        "type": "view",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Lifecycle\\ViewCompiler",
+    "file": "Compiler.php"
+  },
+  "nested_graph": true,
+  "nested_graph_kind": "view",
+  "nested_graph_label": "View Builder"
+}

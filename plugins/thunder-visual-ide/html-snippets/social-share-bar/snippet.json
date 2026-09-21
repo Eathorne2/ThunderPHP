@@ -1,0 +1,17 @@
+{
+  "id": "social-share-bar",
+  "name": "Social Share Bar",
+  "description": "A responsive article sharing bar with platform buttons, copy-link feedback, and share count.",
+  "category": "Socials",
+  "order": 3280,
+  "tags": [
+    "social",
+    "share",
+    "article",
+    "copy"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

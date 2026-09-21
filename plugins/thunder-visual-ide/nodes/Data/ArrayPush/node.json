@@ -1,0 +1,53 @@
+{
+  "type": "data.array_push",
+  "label": "Array Push",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "[]+",
+  "color": "#0e7490",
+  "description": "Appends one connected result or variable value to a connected array and outputs the updated array.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Array Push"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "array",
+        "label": "Array",
+        "type": "array",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "value",
+        "label": "Value",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "result",
+        "label": "Updated Array",
+        "type": "array",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\ArrayPushCompiler",
+    "file": "Compiler.php"
+  }
+}

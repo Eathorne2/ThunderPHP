@@ -1,0 +1,205 @@
+{
+  "slug": "medicine-dental-before-after",
+  "name": "Dental Before & After",
+  "category": "Medicine & Science",
+  "description": "Two-image cosmetic dentistry comparison",
+  "keywords": [
+    "dental",
+    "before after",
+    "treatment"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-med-dental-before-after\"><div class=\"tb-med-dental-before-after__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-med-dental-before-after__compare\"><figure>{{elements:before}}<figcaption>Before</figcaption></figure><figure>{{elements:after}}<figcaption>After</figcaption></figure></div></section>",
+  "css": ".tb-med-dental-before-after{padding:clamp(42px,7vw,88px);background:var(--tb-color-background)}.tb-med-dental-before-after__copy{max-width:780px;margin-bottom:30px}.tb-med-dental-before-after__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.14em}.tb-med-dental-before-after__title{font-size:clamp(36px,5vw,60px);margin:10px 0 14px;color:var(--tb-color-secondary)}.tb-med-dental-before-after__text{color:var(--tb-color-muted);font-size:17px;line-height:1.7}.tb-med-dental-before-after__compare{display:grid;grid-template-columns:1fr 1fr;gap:18px}.tb-med-dental-before-after figure{margin:0;position:relative}.tb-med-dental-before-after__before,.tb-med-dental-before-after__after{width:100%;height:420px;object-fit:cover;border-radius:20px}.tb-med-dental-before-after figcaption{position:absolute;left:16px;bottom:16px;padding:8px 12px;border-radius:999px;background:var(--tb-color-surface);color:var(--tb-color-secondary);font-weight:900}@media(max-width:650px){.tb-med-dental-before-after__compare{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Smile transformation"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-med-dental-before-after__eyebrow\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "See the difference thoughtful care can make"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-med-dental-before-after__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "A simple comparison layout for cosmetic dentistry, dermatology or other visual treatment outcomes."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-med-dental-before-after__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "before",
+      "label": "Before image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Before treatment"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-med-dental-before-after__before"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-med-dental-before-after__before\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "after",
+      "label": "After image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1600&q=82",
+        "alt": "After treatment"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-med-dental-before-after__after"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-med-dental-before-after__after\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

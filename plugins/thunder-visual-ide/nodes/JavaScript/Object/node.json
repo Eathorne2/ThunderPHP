@@ -1,0 +1,52 @@
+{
+  "type": "javascript.object",
+  "label": "JS Object",
+  "category": "JavaScript Values",
+  "kind": "expression",
+  "icon": "{}",
+  "color": "#2563eb",
+  "description": "Builds a JavaScript object from named dynamic inputs.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "dynamic_ports": "js_object",
+  "defaults": {
+    "title": "JS Object",
+    "property_count": 3,
+    "keys": "name,email,status"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "property_count",
+      "label": "Property count",
+      "type": "number"
+    },
+    {
+      "name": "keys",
+      "label": "Property names",
+      "type": "textarea",
+      "help": "Comma-separated or one per line."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Object",
+        "type": "js-object",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\ObjectCompiler",
+    "file": "Compiler.php"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "authorization.all_roles",
+  "label": "All Roles",
+  "category": "Authorization",
+  "kind": "architecture",
+  "icon": "ROLE",
+  "color": "#6d28d9",
+  "description": "Registers every available role through the top-level roles filter.",
+  "allowed_graphs": ["architecture"],
+  "singleton": true,
+  "defaults": {
+    "title": "Plugin Roles",
+    "roles_json": "[]"
+  },
+  "properties": [
+    {"name": "title", "label": "Node title", "type": "text"},
+    {
+      "name": "roles_json",
+      "label": "Role catalog",
+      "type": "role_list",
+      "help": "These definitions are added to the associative array received by the roles filter and populate Has Role dropdowns."
+    }
+  ],
+  "ports": {"inputs": [], "outputs": []},
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Authorization\\AllRolesCompiler",
+    "file": "Compiler.php"
+  }
+}

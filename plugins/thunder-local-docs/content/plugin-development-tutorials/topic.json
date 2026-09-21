@@ -1,0 +1,11 @@
+{
+    "id": 9,
+    "title": "Plugin Dev Tutorials",
+    "slug": "plugin-development-tutorials",
+    "description": "Learn how to make plugins for the ThunderPHP framework with step by step instructions. You'll learn the basic concepts of how the framework operates",
+    "icon": "",
+    "type": "guide",
+    "featured": false,
+    "published": true,
+    "order": 1
+}

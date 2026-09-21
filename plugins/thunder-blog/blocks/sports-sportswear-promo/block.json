@@ -1,0 +1,206 @@
+{
+  "slug": "sports-sportswear-promo",
+  "name": "Sportswear Collection Promo",
+  "category": "Sports",
+  "description": "Image-led sportswear promotion",
+  "keywords": [
+    "sportswear",
+    "apparel",
+    "training",
+    "shop"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-sport-sportswear-promo\"><div class=\"tb-sport-sportswear-promo__media\">{{elements:image}}</div><div class=\"tb-sport-sportswear-promo__copy\">{{elements:kicker}}{{elements:heading}}{{elements:text}}{{elements:cta}}</div></section>",
+  "css": ".tb-sport-sportswear-promo{display:grid;grid-template-columns:1.15fr .85fr;background:var(--tb-color-secondary);color:var(--tb-color-surface);overflow:hidden}.tb-sport-sportswear-promo__media{min-height:580px}.tb-sport-sportswear-promo__image{width:100%;height:100%;min-height:580px;object-fit:cover}.tb-sport-sportswear-promo__copy{padding:clamp(40px,7vw,88px);display:flex;flex-direction:column;justify-content:center}.tb-sport-sportswear-promo__kicker{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.14em;color:var(--tb-color-primary)}.tb-sport-sportswear-promo__heading{font-size:clamp(40px,6vw,72px);line-height:1;margin:12px 0 20px}.tb-sport-sportswear-promo__text{font-size:18px;line-height:1.7;color:color-mix(in srgb,var(--tb-color-surface) 76%,transparent)}.tb-sport-sportswear-promo__cta{align-self:flex-start;margin-top:22px;padding:14px 20px;border:1px solid var(--tb-color-surface);border-radius:999px;color:var(--tb-color-surface);text-decoration:none;font-weight:900}@media(max-width:760px){.tb-sport-sportswear-promo{grid-template-columns:1fr}.tb-sport-sportswear-promo__media,.tb-sport-sportswear-promo__image{min-height:380px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "image",
+      "label": "Campaign image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Athlete wearing performance sportswear"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-sport-sportswear-promo__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-sport-sportswear-promo__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "kicker",
+      "label": "Kicker",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "New training collection"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-sport-sportswear-promo__kicker\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "heading",
+      "label": "Heading",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Made to move"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-sport-sportswear-promo__heading\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "A clean campaign section for sportswear, club merchandise or a performance apparel launch."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-sport-sportswear-promo__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "cta",
+      "label": "Action",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Shop collection",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-sport-sportswear-promo__cta\" href=\"{{url}}\">{{text}}</a>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

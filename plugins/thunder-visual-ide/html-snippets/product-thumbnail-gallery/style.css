@@ -1,0 +1,38 @@
+.ig-product-thumbs {
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.ig-product-thumbs *,
+.ig-product-thumbs *::before,
+.ig-product-thumbs *::after {
+    box-sizing: border-box;
+}
+
+.ig-product-thumbs button,
+.ig-product-thumbs input,
+.ig-product-thumbs select,
+.ig-product-thumbs textarea {
+    font: inherit;
+}
+
+.ig-product-thumbs a {
+    color: inherit;
+}
+
+.ig-product-thumbs img {
+    display: block;
+    max-width: 100%;
+}
+.ig-product-thumbs { display: grid; grid-template-columns: 6rem minmax(0, 1fr); gap: 1rem; max-width: 68rem; }
+.ig-product-thumbs__thumbs { display: flex; flex-direction: column; gap: .65rem; }
+.ig-product-thumbs__thumbs button { padding: .25rem; overflow: hidden; border: 1px solid var(--thv-theme-border); border-radius: .65rem; background: var(--thv-theme-surface); cursor: pointer; }
+.ig-product-thumbs__thumbs button.is-active { border-color: var(--thv-theme-primary); box-shadow: 0 0 0 2px color-mix(in srgb, var(--thv-theme-primary) 28%, transparent); }
+.ig-product-thumbs__thumbs img { width: 100%; aspect-ratio: 1; border-radius: .4rem; object-fit: cover; }
+.ig-product-thumbs__stage { position: relative; margin: 0; overflow: hidden; border: 1px solid var(--thv-theme-border); border-radius: 1.2rem; background: var(--thv-theme-surface-alt); }
+.ig-product-thumbs__stage > span { position: absolute; top: 1rem; left: 1rem; z-index: 1; padding: .5rem .65rem; border-radius: 999px; color: var(--thv-theme-on-primary); background: var(--thv-theme-primary); font-size: .68rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+.ig-product-thumbs__stage img { width: 100%; min-height: 34rem; object-fit: cover; }
+.ig-product-thumbs__stage figcaption { padding: .9rem 1rem; border-top: 1px solid var(--thv-theme-border); color: var(--thv-theme-muted); background: var(--thv-theme-surface); font-size: .85rem; }
+@media (max-width: 620px) { .ig-product-thumbs { grid-template-columns: 1fr; } .ig-product-thumbs__thumbs { order: 2; flex-direction: row; overflow-x: auto; } .ig-product-thumbs__thumbs button { flex: 0 0 4.5rem; } .ig-product-thumbs__stage img { min-height: 24rem; } }

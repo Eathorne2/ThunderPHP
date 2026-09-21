@@ -1,0 +1,22 @@
+Thunder Blog 1.12.0 - Validation Report
+
+Release scope
+- Widened `.thunder-blog__article-content` to 1120px in all six frontend looks.
+- Added 30 original Architecture & Building blocks.
+- No database migration changes are required.
+
+Architecture & Building blocks
+- 30 block manifests in the Architecture & Building category.
+- All 30 support both post and page contexts.
+- Architecture block CSS uses tb-arch-* namespacing.
+- Category browser total: Architecture & Building (30).
+- Total block library: 320 manifests.
+
+Validation
+- PHP lint: PASS (92 PHP files).
+- JavaScript syntax: PASS (12 JavaScript files).
+- JSON parse: PASS (328 JSON files).
+- Architecture renderer: PASS (30 blocks / 60 post+page compile cases).
+- Architecture category count: PASS (30).
+- Article content max-width: PASS (1120px in all six looks).
+- ZIP integrity: PASS.

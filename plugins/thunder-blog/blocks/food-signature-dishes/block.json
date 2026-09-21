@@ -1,0 +1,167 @@
+{
+  "slug": "food-signature-dishes",
+  "name": "Signature Dishes Grid",
+  "category": "Food & Restaurant",
+  "description": "Three-column image cards for featured plates and restaurant favorites",
+  "keywords": [
+    "food",
+    "restaurant",
+    "dishes",
+    "cards",
+    "menu"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-food-signature\"><header class=\"tb-food-signature__head\">{{elements:eyebrow}}{{elements:title}}</header><div class=\"tb-food-signature__grid\">{{elements:cards}}</div></div>",
+  "css": ".tb-food-signature{padding:clamp(34px,6vw,80px);background:var(--tb-color-surface)}.tb-food-signature__head{max-width:760px;margin-bottom:28px}.tb-food-signature__eyebrow{color:var(--tb-color-primary);font-weight:900;letter-spacing:.16em;text-transform:uppercase;font-size:12px}.tb-food-signature__title{margin:8px 0 0;color:var(--tb-color-secondary);font-size:clamp(38px,5vw,60px)}.tb-food-signature__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.tb-food-signature__card{background:var(--tb-color-background);border:1px solid var(--tb-color-border);overflow:hidden}.tb-food-signature__photo{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}.tb-food-signature__copy{padding:22px}.tb-food-signature__copy h3{margin:0 0 8px;color:var(--tb-color-secondary);font-size:24px}.tb-food-signature__copy p{margin:0;color:var(--tb-color-muted);line-height:1.6}@media(max-width:760px){.tb-food-signature__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Made in our kitchen"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-food-signature__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Signature dishes"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<h2 class=\"tb-food-signature__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cards",
+      "label": "Dish card",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Vegetable dish",
+        "title": "Garden Plate",
+        "text": "Charred greens, citrus and toasted grains"
+      },
+      "schema": [
+        {
+          "key": "image",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-food-signature__photo"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Dish name",
+          "type": "text",
+          "selector": ".tb-food-signature__copy h3"
+        },
+        {
+          "key": "text",
+          "label": "Description",
+          "type": "textarea",
+          "selector": ".tb-food-signature__copy p",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-food-signature__card\"><img class=\"tb-food-signature__photo\" src=\"{{image}}\" alt=\"{{alt}}\"><div class=\"tb-food-signature__copy\"><h3>{{title}}</h3><p>{{text}}</p></div></article>",
+      "min": 1,
+      "max": 12,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Vegetable dish",
+          "title": "Garden Plate",
+          "text": "Charred greens, citrus and toasted grains"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Pizza",
+          "title": "Wood-Fired Pizza",
+          "text": "Slow-fermented dough and seasonal toppings"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Dessert",
+          "title": "House Dessert",
+          "text": "Small-batch sweets finished to order"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

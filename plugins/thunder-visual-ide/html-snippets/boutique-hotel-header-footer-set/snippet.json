@@ -1,0 +1,19 @@
+{
+  "id": "boutique-hotel-header-footer-set",
+  "name": "Boutique Hotel Header and Footer Set",
+  "description": "An elegant hospitality header with reservation controls and a refined destination-focused footer.",
+  "category": "Header and Footer Sets",
+  "order": 3008,
+  "tags": [
+    "header",
+    "footer",
+    "hotel",
+    "hospitality",
+    "travel",
+    "booking"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "brutalist-contents-index",
+  "name": "Brutalist Contents Index",
+  "description": "A bold black-and-paper magazine contents list with oversized numbering and hover-led story emphasis.",
+  "category": "Magazine & Editorial",
+  "order": 3204,
+  "tags": [
+    "magazine",
+    "contents",
+    "brutalist",
+    "index",
+    "stories"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

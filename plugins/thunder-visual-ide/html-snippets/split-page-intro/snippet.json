@@ -1,0 +1,17 @@
+{
+  "id": "split-page-intro",
+  "name": "Split Page Intro",
+  "description": "A clean editorial heading with category label, title, supporting copy and metadata.",
+  "category": "Page Title Headings",
+  "order": 1110,
+  "tags": [
+    "heading",
+    "page intro",
+    "editorial",
+    "title"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

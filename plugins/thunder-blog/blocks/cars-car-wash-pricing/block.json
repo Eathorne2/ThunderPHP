@@ -1,0 +1,192 @@
+{
+  "slug": "cars-car-wash-pricing",
+  "name": "Car Wash Pricing",
+  "category": "Cars & Transportation",
+  "description": "Pricing cards for wash and detailing packages",
+  "keywords": [
+    "cars",
+    "transportation",
+    "pricing",
+    "services"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-auto-car-wash-pricing\"><header class=\"tb-auto-car-wash-pricing__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</header><div class=\"tb-auto-car-wash-pricing__list\">{{elements:items}}</div></section>",
+  "css": ".tb-auto-car-wash-pricing{padding:clamp(34px,6vw,84px);background:var(--tb-color-secondary)}.tb-auto-car-wash-pricing__head{max-width:760px;margin-bottom:28px}.tb-auto-car-wash-pricing__eyebrow{color:var(--tb-color-primary);font-size:11px;font-weight:950;letter-spacing:.15em;text-transform:uppercase}.tb-auto-car-wash-pricing__title{margin:9px 0;color:var(--tb-color-surface);font-size:clamp(40px,5vw,66px)}.tb-auto-car-wash-pricing__text{color:color-mix(in srgb,var(--tb-color-surface) 75%,transparent);line-height:1.7}.tb-auto-car-wash-pricing__list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tb-auto-car-wash-pricing__item{padding:25px;border:1px solid color-mix(in srgb,var(--tb-color-surface) 20%,transparent);background:color-mix(in srgb,var(--tb-color-surface) 7%,transparent)}.tb-auto-car-wash-pricing__row{display:flex;justify-content:space-between;gap:14px;align-items:baseline}.tb-auto-car-wash-pricing__name{margin:0;color:var(--tb-color-surface);font-size:22px}.tb-auto-car-wash-pricing__price{color:var(--tb-color-primary);font-size:22px;font-weight:950}.tb-auto-car-wash-pricing__item-text{margin:14px 0 0;color:color-mix(in srgb,var(--tb-color-surface) 70%,transparent);line-height:1.6}@media(max-width:760px){.tb-auto-car-wash-pricing__list{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Wash packages"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-auto-car-wash-pricing__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Choose the level of care"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-auto-car-wash-pricing__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Give customers an easy way to compare wash, interior and detailing options."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-auto-car-wash-pricing__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "items",
+      "label": "Price item",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "name": "Essential",
+        "price": "From K350",
+        "text": "Clear service package description."
+      },
+      "schema": [
+        {
+          "key": "name",
+          "label": "Name",
+          "type": "text",
+          "selector": ".tb-auto-car-wash-pricing__name"
+        },
+        {
+          "key": "price",
+          "label": "Price",
+          "type": "text",
+          "selector": ".tb-auto-car-wash-pricing__price"
+        },
+        {
+          "key": "text",
+          "label": "Description",
+          "type": "textarea",
+          "selector": ".tb-auto-car-wash-pricing__item-text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-auto-car-wash-pricing__item\"><div class=\"tb-auto-car-wash-pricing__row\"><h3 class=\"tb-auto-car-wash-pricing__name\">{{name}}</h3><span class=\"tb-auto-car-wash-pricing__price\">{{price}}</span></div><p class=\"tb-auto-car-wash-pricing__item-text\">{{text}}</p></article>",
+      "min": 1,
+      "max": 12,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "name": "Express",
+          "price": "K120",
+          "text": "Exterior wash, wheels and hand dry."
+        },
+        {
+          "name": "Complete",
+          "price": "K280",
+          "text": "Exterior, interior vacuum and dashboard clean."
+        },
+        {
+          "name": "Detail",
+          "price": "K650",
+          "text": "Deep interior care plus paint finish treatment."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

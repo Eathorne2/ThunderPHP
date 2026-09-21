@@ -1,0 +1,18 @@
+{
+  "id": "concert-tour-dates",
+  "name": "Concert Tour Dates",
+  "description": "A bold upcoming-tour list with location filtering, availability states and ticket actions.",
+  "category": "Music & Entertainment",
+  "order": 4230,
+  "tags": [
+    "music",
+    "concert",
+    "tour",
+    "dates",
+    "tickets"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "culture-journal-header-footer-set",
+  "name": "Culture Journal Header and Footer Set",
+  "description": "A refined culture-publication header and footer with issue navigation, mobile menu and newsletter block.",
+  "category": "Header and Footer Sets",
+  "order": 3080,
+  "tags": [
+    "header",
+    "footer",
+    "magazine",
+    "culture",
+    "editorial"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

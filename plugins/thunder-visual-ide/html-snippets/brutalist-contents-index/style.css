@@ -1,0 +1,102 @@
+.contents-index {
+    padding: clamp(1.2rem, 4vw, 3.5rem);
+    border: 2px solid var(--thv-theme-text, #0b0b0b);
+    color: var(--thv-theme-text, #0b0b0b);
+    background: var(--thv-theme-surface, #f8f3e8);
+}
+
+.contents-index__header {
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    gap: 2rem;
+    align-items: end;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid currentColor;
+}
+
+.contents-index__header span,
+.contents-index__row small,
+.contents-index__footer {
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.contents-index__header h2 {
+    margin: 0.3rem 0 -0.08em;
+    font-size: clamp(4rem, 12vw, 11rem);
+    letter-spacing: -0.1em;
+    line-height: 0.75;
+}
+
+.contents-index__header p {
+    max-width: 25rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contents-index__row {
+    display: grid;
+    grid-template-columns: minmax(4.5rem, 0.25fr) minmax(0, 1fr) auto;
+    gap: 1.5rem;
+    align-items: center;
+    min-height: 9rem;
+    padding: 1.2rem 0;
+    border-bottom: 2px solid currentColor;
+    color: inherit;
+    text-decoration: none;
+    transition: padding 180ms ease, color 180ms ease, background 180ms ease;
+}
+
+.contents-index__row:hover,
+.contents-index__row.is-active {
+    padding-inline: 1rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #ff3d00);
+}
+
+.contents-index__number {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.8rem, 7vw, 6rem);
+    line-height: 1;
+}
+
+.contents-index__row h3 {
+    max-width: 58rem;
+    margin: 0.45rem 0 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.45rem, 3vw, 2.7rem);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.contents-index__arrow {
+    font-size: 2rem;
+}
+
+.contents-index__footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+@media (max-width: 700px) {
+    .contents-index__header {
+        grid-template-columns: 1fr;
+    }
+
+    .contents-index__row {
+        grid-template-columns: 4rem 1fr;
+    }
+
+    .contents-index__arrow {
+        display: none;
+    }
+
+    .contents-index__footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "glass-frost",
+  "name": "Glass Frost",
+  "description": "Translucent glass controls and layered surfaces for modern landing pages and account screens.",
+  "order": 60,
+  "palettes": {
+    "default": {
+      "name": "Aurora",
+      "colors": {
+        "primary": "#2563eb",
+        "secondary": "#8b5cf6",
+        "surface": "#ffffff",
+        "surface_alt": "#eef2ff",
+        "text": "#172033",
+        "muted": "#526077",
+        "border": "#cbd5e1",
+        "danger": "#dc2626",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    },
+    "mint": {
+      "name": "Mint Glass",
+      "colors": {
+        "primary": "#059669",
+        "secondary": "#14b8a6",
+        "surface": "#ffffff",
+        "surface_alt": "#ecfdf5",
+        "text": "#064e3b",
+        "muted": "#47796b",
+        "border": "#a7f3d0",
+        "danger": "#dc2626",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    },
+    "smoke": {
+      "name": "Smoke Glass",
+      "colors": {
+        "primary": "#38bdf8",
+        "secondary": "#818cf8",
+        "surface": "#0f172a",
+        "surface_alt": "#1e293b",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "border": "#475569",
+        "danger": "#fb7185",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    }
+  },
+  "default_palette": "default",
+  "preview": "preview.html",
+  "css": "style.css",
+  "js": "script.js",
+  "components": {
+    "text_input": "field.html.tpl",
+    "email_input": "field.html.tpl",
+    "password_input": "field.html.tpl",
+    "number_input": "field.html.tpl",
+    "date_input": "field.html.tpl",
+    "file_input": "field.html.tpl",
+    "textarea": "textarea.html.tpl",
+    "select": "select.html.tpl",
+    "checkbox": "checkbox.html.tpl",
+    "button": "button.html.tpl",
+    "form": "form.html.tpl"
+  }
+}

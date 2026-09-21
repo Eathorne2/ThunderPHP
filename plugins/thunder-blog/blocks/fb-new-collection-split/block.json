@@ -1,0 +1,205 @@
+{
+  "slug": "fb-new-collection-split",
+  "name": "New Collection Split",
+  "category": "Fashion & Beauty",
+  "description": "Minimal collection announcement with layered image framing.",
+  "keywords": [
+    "fashion",
+    "collection",
+    "split",
+    "editorial"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-fb-collection\"><div class=\"tb-fb-collection__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}{{elements:cta}}</div><div class=\"tb-fb-collection__visual\"><span class=\"tb-fb-collection__shape\"></span>{{elements:image}}</div></div>",
+  "css": ".tb-fb-collection{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,1fr);align-items:center;gap:clamp(28px,6vw,80px);padding:clamp(30px,6vw,80px);background:var(--tb-color-surface)}.tb-fb-collection__copy{padding-left:clamp(0px,4vw,56px)}.tb-fb-collection__eyebrow{display:block;margin-bottom:16px;color:var(--tb-color-primary);font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}.tb-fb-collection__title{margin:0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(44px,7vw,80px);font-weight:500;line-height:1}.tb-fb-collection__text{margin:22px 0;max-width:500px;color:var(--tb-color-muted);line-height:1.75}.tb-fb-collection__cta{display:inline-flex;padding:12px 18px;background:var(--tb-color-secondary);color:var(--tb-color-surface);text-decoration:none;font-weight:800}.tb-fb-collection__visual{position:relative;padding:28px 28px 0 0}.tb-fb-collection__shape{position:absolute;right:0;top:0;width:72%;height:74%;background:color-mix(in srgb,var(--tb-color-primary) 18%,var(--tb-color-surface))}.tb-fb-collection__image{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;display:block}@media(max-width:760px){.tb-fb-collection{grid-template-columns:1fr}.tb-fb-collection__copy{padding-left:0}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "New collection"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-fb-collection__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Soft structure, strong point of view"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-fb-collection__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Introduce a new season with clean typography, calm spacing and a single editorial image."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-fb-collection__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Button",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "View collection",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-fb-collection__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "image",
+      "label": "Collection image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Model wearing seasonal fashion"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-fb-collection__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-fb-collection__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

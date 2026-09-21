@@ -1,0 +1,17 @@
+{
+  "id": "compact-contact-user-card",
+  "name": "Compact Contact User Card",
+  "description": "A concise contact card with avatar, role, status, and quick communication actions.",
+  "category": "User Cards",
+  "order": 3060,
+  "tags": [
+    "user",
+    "card",
+    "contact",
+    "avatar"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

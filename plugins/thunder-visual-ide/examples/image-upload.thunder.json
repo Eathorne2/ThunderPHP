@@ -1,0 +1,489 @@
+{
+  "schema_version": 4,
+  "generated_by": "Thunder Visual IDE 0.12.36",
+  "active_graph_id": "main",
+  "sample": {
+    "id": "image-upload",
+    "name": "Image Upload Pipeline",
+    "order": 4,
+    "level": "Intermediate",
+    "description": "Demonstrates Request Service/Method nodes, the Core Image processor and method calls, multipart forms, public action hooks, messages, and redirects.",
+    "focus": [
+      "Request Class",
+      "Image Class",
+      "File Uploads",
+      "Hooks"
+    ]
+  },
+  "graphs": {
+    "main": {
+      "id": "main",
+      "name": "Plugin Architecture",
+      "kind": "architecture",
+      "nodes": [
+        {
+          "id": "plugin",
+          "type": "project.plugin",
+          "x": 40,
+          "y": 40,
+          "data": {
+            "name": "Image Upload",
+            "id": "image-upload-sample",
+            "namespace": "ImageUploadSample",
+            "type": "Companion",
+            "version": "1.0.0",
+            "core_requires": "^1.0.0",
+            "description": "Request and Image service nodes working together with a multipart visual form.",
+            "author": "",
+            "website": "",
+            "thumbnail": "",
+            "active": true,
+            "look": "main",
+            "index": 10,
+            "dependencies": "{}"
+          }
+        },
+        {
+          "id": "look",
+          "type": "looks.look",
+          "x": 40,
+          "y": 250,
+          "data": {
+            "title": "Main Look",
+            "folder": "main",
+            "name": "Upload Look",
+            "version": "1.0.0",
+            "plugin_requires": "^1.0.0",
+            "author": "",
+            "thumbnail": "",
+            "description": "Image upload form"
+          }
+        },
+        {
+          "id": "route-get",
+          "type": "routing.route",
+          "x": 400,
+          "y": 40,
+          "data": {
+            "title": "image.upload",
+            "method": "GET",
+            "path": "/sample-image-upload",
+            "route_name": "image.upload"
+          }
+        },
+        {
+          "id": "view-get",
+          "type": "lifecycle.view",
+          "x": 700,
+          "y": 40,
+          "data": {
+            "title": "Image Upload Page",
+            "filename": "frontend/upload.php",
+            "hook_name": "view",
+            "priority": 10,
+            "content": "<div class=\"upload-page\">\n    <h1>Upload an image</h1>\n    <?= message(\"success\") ?>\n    <?= message(\"fail\") ?>\n    <tvi-component name=\"image-upload-form\" />\n</div>\n",
+            "graph_id": "view-upload"
+          }
+        },
+        {
+          "id": "route-post",
+          "type": "routing.route",
+          "x": 400,
+          "y": 280,
+          "data": {
+            "title": "image.store",
+            "method": "POST",
+            "path": "/sample-image-upload",
+            "route_name": "image.store"
+          }
+        },
+        {
+          "id": "controller-post",
+          "type": "lifecycle.controller",
+          "x": 700,
+          "y": 280,
+          "data": {
+            "title": "Process Image Upload",
+            "hook_name": "controller",
+            "priority": 10,
+            "graph_id": "flow-upload"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "i1",
+          "from": "view-get",
+          "from_port": "route",
+          "to": "route-get",
+          "to_port": "view",
+          "port_type": "view"
+        },
+        {
+          "id": "i2",
+          "from": "view-get",
+          "from_port": "look",
+          "to": "look",
+          "to_port": "view",
+          "port_type": "view"
+        },
+        {
+          "id": "i3",
+          "from": "controller-post",
+          "from_port": "route",
+          "to": "route-post",
+          "to_port": "controller",
+          "port_type": "controller"
+        }
+      ],
+      "viewport": {
+        "x": 70,
+        "y": 60,
+        "zoom": 0.9
+      }
+    },
+    "view-upload": {
+      "id": "view-upload",
+      "name": "Image Upload View Builder",
+      "kind": "view",
+      "nodes": [
+        {
+          "id": "form",
+          "type": "view.form",
+          "x": 70,
+          "y": 100,
+          "data": {
+            "title": "Image Upload Form",
+            "component_name": "image-upload-form",
+            "schema_name": "image-upload-form",
+            "action": "/sample-image-upload",
+            "method": "POST",
+            "enctype": "multipart/form-data",
+            "css_class": "",
+            "gap": "1rem",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            }
+          }
+        },
+        {
+          "id": "csrf",
+          "type": "view.csrf",
+          "x": 390,
+          "y": 50,
+          "data": {
+            "title": "CSRF",
+            "session_key": "image_upload",
+            "hours": 1
+          }
+        },
+        {
+          "id": "file",
+          "type": "view.file_input",
+          "x": 390,
+          "y": 180,
+          "data": {
+            "title": "Photo",
+            "name": "photo",
+            "label": "Choose photo",
+            "placeholder": "",
+            "value_path": "",
+            "required": true,
+            "autocomplete": "",
+            "css_class": "",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            },
+            "accept": "image/jpeg,image/png,image/webp",
+            "multiple": false,
+            "validation_rules": "image"
+          }
+        },
+        {
+          "id": "button",
+          "type": "view.button",
+          "x": 390,
+          "y": 330,
+          "data": {
+            "title": "Upload",
+            "text": "Upload image",
+            "button_type": "submit",
+            "style": "primary",
+            "name": "",
+            "value": "",
+            "css_class": "",
+            "widths": {
+              "mobile": 12,
+              "small": 6,
+              "medium": 4,
+              "large": 3
+            }
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "iv1",
+          "from": "form",
+          "from_port": "children",
+          "to": "csrf",
+          "to_port": "parent",
+          "port_type": "view-child"
+        },
+        {
+          "id": "iv2",
+          "from": "form",
+          "from_port": "children",
+          "to": "file",
+          "to_port": "parent",
+          "port_type": "view-child"
+        },
+        {
+          "id": "iv3",
+          "from": "form",
+          "from_port": "children",
+          "to": "button",
+          "to_port": "parent",
+          "port_type": "view-child"
+        }
+      ],
+      "viewport": {
+        "x": 80,
+        "y": 60,
+        "zoom": 0.9
+      },
+      "owner_node_id": "view-get"
+    },
+    "flow-upload": {
+      "id": "flow-upload",
+      "name": "Process Image Upload Flow",
+      "kind": "flow",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "flow.start",
+          "x": 30,
+          "y": 180,
+          "data": {
+            "title": "Start"
+          }
+        },
+        {
+          "id": "request",
+          "type": "request.request",
+          "x": 220,
+          "y": 180,
+          "data": {
+            "title": "Request Service"
+          }
+        },
+        {
+          "id": "field",
+          "type": "data.string",
+          "x": 230,
+          "y": 390,
+          "data": {
+            "title": "Upload Field",
+            "value": "photo"
+          }
+        },
+        {
+          "id": "files",
+          "type": "request.method",
+          "x": 470,
+          "y": 180,
+          "data": {
+            "title": "Read Uploaded Photo",
+            "method": "files",
+            "result_variable": "uploaded_files"
+          }
+        },
+        {
+          "id": "image",
+          "type": "images.image",
+          "x": 730,
+          "y": 180,
+          "data": {
+            "title": "Image Processor",
+            "jpeg_quality": 85,
+            "png_compression": 7,
+            "webp_quality": 82,
+            "allow_upscale": false,
+            "use_hashed_names": true,
+            "thumbnail_dir": "uploads/thumbnails"
+          }
+        },
+        {
+          "id": "destination",
+          "type": "data.string",
+          "x": 730,
+          "y": 430,
+          "data": {
+            "title": "Upload Destination",
+            "value": "uploads/photos"
+          }
+        },
+        {
+          "id": "store",
+          "type": "images.method",
+          "x": 1000,
+          "y": 180,
+          "data": {
+            "title": "Store Uploaded Image",
+            "method": "from_upload",
+            "result_variable": "stored_image"
+          }
+        },
+        {
+          "id": "hook",
+          "type": "hooks.action",
+          "x": 1270,
+          "y": 180,
+          "data": {
+            "title": "Image Stored Hook",
+            "hook_name": "sample_image.stored"
+          }
+        },
+        {
+          "id": "message",
+          "type": "response.message",
+          "x": 1510,
+          "y": 180,
+          "data": {
+            "title": "Success Message",
+            "message_type": "success",
+            "message": "Image uploaded successfully."
+          }
+        },
+        {
+          "id": "redirect",
+          "type": "response.redirect",
+          "x": 1760,
+          "y": 180,
+          "data": {
+            "title": "Back to Upload",
+            "url": "/sample-image-upload"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "if1",
+          "from": "start",
+          "from_port": "exec",
+          "to": "request",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "if2",
+          "from": "request",
+          "from_port": "exec",
+          "to": "files",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "if3",
+          "from": "request",
+          "from_port": "request",
+          "to": "files",
+          "to_port": "request",
+          "port_type": "object"
+        },
+        {
+          "id": "if4",
+          "from": "field",
+          "from_port": "value",
+          "to": "files",
+          "to_port": "param_key",
+          "port_type": "string"
+        },
+        {
+          "id": "if5",
+          "from": "files",
+          "from_port": "exec",
+          "to": "image",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "if6",
+          "from": "image",
+          "from_port": "exec",
+          "to": "store",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "if7",
+          "from": "image",
+          "from_port": "image",
+          "to": "store",
+          "to_port": "image",
+          "port_type": "object"
+        },
+        {
+          "id": "if8",
+          "from": "files",
+          "from_port": "result",
+          "to": "store",
+          "to_port": "param_file",
+          "port_type": "mixed"
+        },
+        {
+          "id": "if9",
+          "from": "destination",
+          "from_port": "value",
+          "to": "store",
+          "to_port": "param_dest",
+          "port_type": "string"
+        },
+        {
+          "id": "if10",
+          "from": "store",
+          "from_port": "exec",
+          "to": "hook",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "if11",
+          "from": "store",
+          "from_port": "result",
+          "to": "hook",
+          "to_port": "data",
+          "port_type": "mixed"
+        },
+        {
+          "id": "if12",
+          "from": "hook",
+          "from_port": "exec",
+          "to": "message",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "if13",
+          "from": "message",
+          "from_port": "exec",
+          "to": "redirect",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        }
+      ],
+      "viewport": {
+        "x": 50,
+        "y": 70,
+        "zoom": 0.75
+      },
+      "owner_node_id": "controller-post"
+    }
+  }
+}

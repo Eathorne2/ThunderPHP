@@ -1,0 +1,223 @@
+{
+  "slug": "wed-photographer-portfolio",
+  "name": "Wedding Photographer Portfolio",
+  "category": "Wedding",
+  "description": "Editorial image portfolio for wedding photographers and photo stories",
+  "keywords": [
+    "wedding",
+    "photographer",
+    "portfolio",
+    "gallery"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-wed-photo-portfolio\"><div class=\"tb-wed-photo-portfolio__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}{{elements:cta}}</div><div class=\"tb-wed-photo-portfolio__grid\">{{elements:photos}}</div></div>",
+  "css": ".tb-wed-photo-portfolio{display:grid;grid-template-columns:minmax(240px,.55fr) minmax(0,1.45fr);gap:28px;padding:clamp(30px,5vw,68px);background:var(--tb-color-background)}.tb-wed-photo-portfolio__copy{position:sticky;top:24px;align-self:start}.tb-wed-photo-portfolio__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-wed-photo-portfolio__title{margin:8px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(38px,5vw,58px);font-weight:400}.tb-wed-photo-portfolio__text{color:var(--tb-color-muted);line-height:1.7}.tb-wed-photo-portfolio__cta{display:inline-block;margin-top:16px;color:var(--tb-color-primary);font-weight:900;text-decoration:none}.tb-wed-photo-portfolio__grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.tb-wed-photo-portfolio__photo{width:100%;aspect-ratio:4/5;object-fit:cover}.tb-wed-photo-portfolio__item:nth-child(even){margin-top:64px}@media(max-width:760px){.tb-wed-photo-portfolio{grid-template-columns:1fr}.tb-wed-photo-portfolio__copy{position:static}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Photography"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-wed-photo-portfolio__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Honest moments, beautifully kept"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-wed-photo-portfolio__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Text",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A quiet, documentary approach to the moments you will want to remember forever."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-wed-photo-portfolio__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Portfolio link",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "View full portfolio",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-wed-photo-portfolio__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "photos",
+      "label": "Portfolio photo",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Wedding couple portrait"
+      },
+      "schema": [
+        {
+          "key": "image",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-wed-photo-portfolio__photo"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<figure class=\"tb-wed-photo-portfolio__item\"><img class=\"tb-wed-photo-portfolio__photo\" src=\"{{image}}\" alt=\"{{alt}}\"></figure>",
+      "min": 1,
+      "max": 10,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Wedding couple portrait"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Wedding rings detail"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Bride portrait"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Reception table"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

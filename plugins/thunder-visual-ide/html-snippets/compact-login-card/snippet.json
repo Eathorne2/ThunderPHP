@@ -1,0 +1,17 @@
+{
+  "id": "compact-login-card",
+  "name": "Compact Login Card",
+  "description": "A clean centered login card suitable for admin panels and compact account pages.",
+  "category": "Authentication",
+  "order": 210,
+  "tags": [
+    "login",
+    "form",
+    "compact",
+    "admin"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

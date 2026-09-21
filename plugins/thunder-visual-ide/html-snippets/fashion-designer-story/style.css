@@ -1,0 +1,101 @@
+.fds-story {
+    color:var(--thv-theme-text, #211b1e);
+    background:var(--thv-theme-background, #fbf7f4);
+}
+.fds-story a {
+    color:inherit;
+}
+.fds-story img {
+    display:block;
+    max-width:100%;
+}
+.fds-story__eyebrow {
+    color:var(--thv-theme-primary, #92536a);
+    font-size:.68rem;
+    font-weight:900;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+}
+.fds-story__muted {
+    color:var(--thv-theme-muted, #71656a);
+}
+.fds-story {
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:clamp(1.5rem, 5vw, 5rem);
+    padding:clamp(1.25rem, 4vw, 3.5rem)
+}
+.fds-story figure {
+    position:relative;
+    margin:0;
+    min-height:42rem;
+    overflow:hidden
+}
+.fds-story figure img {
+    width:100%;
+    height:100%;
+    object-fit:cover
+}
+.fds-story figcaption {
+    position:absolute;
+    right:1rem;
+    bottom:1rem;
+    left:1rem;
+    color:#fff;
+    font-size:.65rem;
+    font-weight:900;
+    text-transform:uppercase
+}
+.fds-story__copy {
+    display:flex;
+    flex-direction:column;
+    justify-content:center
+}
+.fds-story h2 {
+    max-width:11ch;
+    margin:.7rem 0 1rem;
+    font-family:Georgia, serif;
+    font-size:clamp(3.2rem, 7vw, 6.7rem);
+    font-weight:500;
+    letter-spacing:-.075em;
+    line-height:.88
+}
+.fds-story__copy>p {
+    max-width:38rem;
+    color:var(--thv-theme-muted, #71656a);
+    line-height:1.75
+}
+.fds-story__stats {
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1rem;
+    margin:1.5rem 0;
+    padding-block:1rem;
+    border-block:1px solid var(--thv-theme-border, #ddd1d5)
+}
+.fds-story__stats div {
+    display:grid;
+    gap:.25rem
+}
+.fds-story__stats strong {
+    font-family:Georgia, serif;
+    font-size:2rem;
+    font-weight:500
+}
+.fds-story__stats span {
+    color:var(--thv-theme-muted, #71656a);
+    font-size:.7rem
+}
+.fds-story__copy>a {
+    font-size:.72rem;
+    font-weight:900;
+    text-transform:uppercase
+}
+@media(max-width:780px) {
+    .fds-story {
+        grid-template-columns:1fr
+    }
+    .fds-story figure {
+        min-height:30rem
+    }
+}

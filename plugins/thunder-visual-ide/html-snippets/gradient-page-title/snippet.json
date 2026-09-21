@@ -1,0 +1,17 @@
+{
+  "id": "gradient-page-title",
+  "name": "Gradient Page Title",
+  "description": "A bold page title banner with breadcrumb, description and optional action buttons.",
+  "category": "Page Title Headings",
+  "order": 1100,
+  "tags": [
+    "page title",
+    "heading",
+    "breadcrumb",
+    "hero"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

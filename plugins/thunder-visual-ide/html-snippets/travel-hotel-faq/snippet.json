@@ -1,0 +1,18 @@
+{
+  "id": "travel-hotel-faq",
+  "name": "Travel and Hotel FAQ",
+  "description": "A two-column FAQ section for booking policies, transfers, families, meals and accessibility.",
+  "category": "Travel & Hotels",
+  "order": 4950,
+  "tags": [
+    "travel",
+    "hotel",
+    "faq",
+    "accordion",
+    "booking"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

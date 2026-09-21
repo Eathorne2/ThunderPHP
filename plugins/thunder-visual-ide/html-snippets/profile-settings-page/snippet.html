@@ -1,0 +1,96 @@
+<section class="profile-settings">
+    <aside class="profile-settings__sidebar">
+        <p class="profile-settings__eyebrow">Account</p>
+        <h1>Profile settings</h1>
+        <p>Manage the information shown across your workspace.</p>
+        <nav aria-label="Settings sections">
+            <a class="is-active" href="#personal">Personal details</a>
+            <a href="#preferences">Preferences</a>
+            <a href="#security">Security</a>
+            <a href="#notifications">Notifications</a>
+        </nav>
+    </aside>
+
+    <form class="profile-settings__form">
+        <section id="personal" class="profile-settings__panel">
+            <div class="profile-settings__heading">
+                <div>
+                    <h2>Personal details</h2>
+                    <p>Update your photo and public profile information.</p>
+                </div>
+                <button type="button">Preview profile</button>
+            </div>
+
+            <div class="profile-settings__avatar-row">
+                <img src="https://i.pravatar.cc/160?img=47" alt="Current profile photo">
+                <div>
+                    <strong>Profile photo</strong>
+                    <p>PNG or JPG, up to 2 MB.</p>
+                    <div class="profile-settings__inline-actions">
+                        <button type="button">Upload new</button>
+                        <button class="is-subtle" type="button">Remove</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-settings__fields">
+                <label>
+                    <span>First name</span>
+                    <input type="text" value="Maya">
+                </label>
+                <label>
+                    <span>Last name</span>
+                    <input type="text" value="Phiri">
+                </label>
+                <label class="is-wide">
+                    <span>Job title</span>
+                    <input type="text" value="Operations Lead">
+                </label>
+                <label class="is-wide">
+                    <span>Biography</span>
+                    <textarea rows="5">I help growing teams build reliable systems and healthy working rhythms.</textarea>
+                </label>
+                <label>
+                    <span>Location</span>
+                    <input type="text" value="Ndola, Zambia">
+                </label>
+                <label>
+                    <span>Website</span>
+                    <input type="url" value="https://example.com">
+                </label>
+            </div>
+        </section>
+
+        <section id="preferences" class="profile-settings__panel">
+            <div class="profile-settings__heading">
+                <div>
+                    <h2>Preferences</h2>
+                    <p>Choose the defaults used for your account.</p>
+                </div>
+            </div>
+
+            <div class="profile-settings__fields">
+                <label>
+                    <span>Language</span>
+                    <select>
+                        <option>English</option>
+                        <option>Bemba</option>
+                        <option>Nyanja</option>
+                    </select>
+                </label>
+                <label>
+                    <span>Time zone</span>
+                    <select>
+                        <option>Africa/Lusaka</option>
+                        <option>Africa/Johannesburg</option>
+                    </select>
+                </label>
+            </div>
+        </section>
+
+        <footer class="profile-settings__footer">
+            <button type="reset">Discard changes</button>
+            <button class="is-primary" type="submit">Save profile</button>
+        </footer>
+    </form>
+</section>

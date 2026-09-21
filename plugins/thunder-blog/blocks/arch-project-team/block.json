@@ -1,0 +1,193 @@
+{
+  "slug": "arch-project-team",
+  "name": "Architecture Project Team",
+  "category": "Architecture & Building",
+  "description": "Responsive architecture/building card section",
+  "keywords": [
+    "architecture",
+    "project",
+    "team",
+    "cards"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-arch-project-team\"><div class=\"tb-arch-project-team__head\">{{elements:kicker}}{{elements:title}}{{elements:intro}}</div><div class=\"tb-arch-project-team__grid\">{{elements:cards}}</div></section>",
+  "css": ".tb-arch-project-team{padding:clamp(40px,7vw,86px);background:var(--tb-color-background)}.tb-arch-project-team__head{max-width:760px;margin-bottom:36px}.tb-arch-project-team__kicker{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--tb-color-primary)}.tb-arch-project-team__title{font-size:clamp(38px,5vw,64px);line-height:1;margin:12px 0;color:var(--tb-color-secondary)}.tb-arch-project-team__intro{font-size:17px;line-height:1.7;color:var(--tb-color-muted)}.tb-arch-project-team__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.tb-arch-project-team__card{padding:28px;border-top:3px solid var(--tb-color-primary);background:var(--tb-color-surface)}.tb-arch-project-team__index{display:block;color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.12em;margin-bottom:32px}.tb-arch-project-team__card-title{font-size:23px;margin:0 0 10px;color:var(--tb-color-secondary)}.tb-arch-project-team__card-text{margin:0;color:var(--tb-color-muted);line-height:1.65}@media(max-width:860px){.tb-arch-project-team__grid{grid-template-columns:1fr 1fr}}@media(max-width:580px){.tb-arch-project-team__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "kicker",
+      "label": "Kicker",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "People"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-arch-project-team__kicker\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "title",
+      "label": "Heading",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "The team behind the drawings"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-arch-project-team__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "intro",
+      "label": "Introduction",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Introduce architects, designers, engineers and project leaders."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-arch-project-team__intro\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "cards",
+      "label": "Cards",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "number": "Lead architect",
+        "title": "Maya Chen",
+        "text": "Design direction and client strategy."
+      },
+      "schema": [
+        {
+          "key": "number",
+          "label": "Number / label",
+          "type": "text",
+          "selector": ".tb-arch-project-team__index"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-arch-project-team__card-title"
+        },
+        {
+          "key": "text",
+          "label": "Description",
+          "type": "textarea",
+          "selector": ".tb-arch-project-team__card-text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-arch-project-team__card\"><span class=\"tb-arch-project-team__index\">{{number}}</span><h3 class=\"tb-arch-project-team__card-title\">{{title}}</h3><p class=\"tb-arch-project-team__card-text\">{{text}}</p></article>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 12,
+      "default_items": [
+        {
+          "number": "Lead architect",
+          "title": "Maya Chen",
+          "text": "Design direction and client strategy."
+        },
+        {
+          "number": "Project architect",
+          "title": "Noah Reed",
+          "text": "Documentation, coordination and delivery."
+        },
+        {
+          "number": "Interior lead",
+          "title": "Amara Cole",
+          "text": "Materials, furniture and interior atmosphere."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

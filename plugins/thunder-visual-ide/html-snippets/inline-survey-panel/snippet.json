@@ -1,0 +1,20 @@
+{
+  "id": "inline-survey-panel",
+  "name": "Inline Survey Panel",
+  "description": "A single-question survey with quick choices and response feedback.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Feedback",
+  "order": 8026,
+  "tags": [
+    "feedback",
+    "survey",
+    "poll",
+    "inline"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

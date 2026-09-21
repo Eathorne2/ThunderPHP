@@ -1,0 +1,18 @@
+{
+  "id": "radio-show-schedule",
+  "name": "Radio Show Schedule",
+  "description": "A broadcast schedule with weekday tabs, live indicators and programme details.",
+  "category": "Music & Entertainment",
+  "order": 4290,
+  "tags": [
+    "radio",
+    "schedule",
+    "broadcast",
+    "shows",
+    "tabs"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

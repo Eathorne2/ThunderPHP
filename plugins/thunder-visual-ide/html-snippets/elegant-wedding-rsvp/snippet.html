@@ -1,0 +1,59 @@
+<section class="ewrs">
+    <div class="ewrs__intro">
+        <p class="ewrs__eyebrow">Kindly reply by October 10</p>
+        <h2>Will you join us?</h2>
+        <p>
+            Your presence would mean the world to us. Please complete one response for each invited household.
+        </p>
+        <div class="ewrs__note">
+            <strong>Need help?</strong>
+            <span>Contact our wedding team at hello@example.com</span>
+        </div>
+    </div>
+
+    <form class="ewrs__form" data-rsvp-form>
+        <div class="ewrs__field ewrs__field--wide">
+            <label for="ewrs-name">Full name</label>
+            <input id="ewrs-name" name="name" placeholder="Your name" required type="text" />
+        </div>
+
+        <fieldset class="ewrs__field ewrs__field--wide">
+            <legend>Will you attend?</legend>
+            <label class="ewrs__choice">
+                <input checked name="attendance" type="radio" value="yes" />
+                <span>Joyfully accepts</span>
+            </label>
+            <label class="ewrs__choice">
+                <input name="attendance" type="radio" value="no" />
+                <span>Regretfully declines</span>
+            </label>
+        </fieldset>
+
+        <div class="ewrs__field">
+            <label for="ewrs-guests">Number of guests</label>
+            <select id="ewrs-guests" name="guests">
+                <option>1 guest</option>
+                <option>2 guests</option>
+                <option>3 guests</option>
+                <option>4 guests</option>
+            </select>
+        </div>
+
+        <div class="ewrs__field">
+            <label for="ewrs-meal">Meal preference</label>
+            <select id="ewrs-meal" name="meal">
+                <option>Herb-roasted chicken</option>
+                <option>Slow-cooked beef</option>
+                <option>Garden vegetable plate</option>
+            </select>
+        </div>
+
+        <div class="ewrs__field ewrs__field--wide">
+            <label for="ewrs-song">A song that will get you dancing</label>
+            <input id="ewrs-song" name="song" placeholder="Artist and song title" type="text" />
+        </div>
+
+        <button type="submit">Send RSVP</button>
+        <p class="ewrs__feedback" data-feedback aria-live="polite"></p>
+    </form>
+</section>

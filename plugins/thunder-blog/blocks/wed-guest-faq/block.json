@@ -1,0 +1,182 @@
+{
+  "slug": "wed-guest-faq",
+  "name": "Wedding Guest FAQ",
+  "category": "Wedding",
+  "description": "Clean wedding guest FAQ list for practical information",
+  "keywords": [
+    "wedding",
+    "faq",
+    "guests",
+    "information"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-wed-faq\"><div class=\"tb-wed-faq__intro\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-wed-faq__list\">{{elements:faqs}}</div></div>",
+  "css": ".tb-wed-faq{display:grid;grid-template-columns:.7fr 1.3fr;gap:42px;padding:clamp(32px,6vw,78px);background:var(--tb-color-background)}.tb-wed-faq__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-wed-faq__title{margin:8px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(40px,5vw,60px);font-weight:400}.tb-wed-faq__text{color:var(--tb-color-muted);line-height:1.7}.tb-wed-faq__faq{padding:20px 0;border-top:1px solid var(--tb-color-border)}.tb-wed-faq__question{margin:0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:27px;font-weight:400}.tb-wed-faq__answer{margin:9px 0 0;color:var(--tb-color-muted);line-height:1.65}@media(max-width:700px){.tb-wed-faq{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Good to know"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-wed-faq__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Questions from our guests"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-wed-faq__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Intro",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A few useful details before you join us for the day."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-wed-faq__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "faqs",
+      "label": "FAQ",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "question": "What should I wear?",
+        "answer": "Garden formal. Think polished, comfortable and ready for an evening outdoors."
+      },
+      "schema": [
+        {
+          "key": "question",
+          "label": "Question",
+          "type": "text",
+          "selector": ".tb-wed-faq__question"
+        },
+        {
+          "key": "answer",
+          "label": "Answer",
+          "type": "textarea",
+          "selector": ".tb-wed-faq__answer",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-wed-faq__faq\"><h3 class=\"tb-wed-faq__question\">{{question}}</h3><p class=\"tb-wed-faq__answer\">{{answer}}</p></article>",
+      "min": 1,
+      "max": 12,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "question": "What should I wear?",
+          "answer": "Garden formal. Think polished, comfortable and ready for an evening outdoors."
+        },
+        {
+          "question": "Can I bring a plus one?",
+          "answer": "Please use the names shown on your invitation when responding."
+        },
+        {
+          "question": "Will transport be provided?",
+          "answer": "A shuttle will run between the recommended hotels and the venue."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

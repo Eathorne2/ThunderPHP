@@ -1,0 +1,138 @@
+.lfdc-drop {
+    color:var(--thv-theme-text, #211b1e);
+    background:var(--thv-theme-background, #17131a);
+}
+.lfdc-drop a {
+    color:inherit;
+}
+.lfdc-drop img {
+    display:block;
+    max-width:100%;
+}
+.lfdc-drop__eyebrow {
+    color:var(--thv-theme-primary, #a54d72);
+    font-size:.68rem;
+    font-weight:900;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+}
+.lfdc-drop__muted {
+    color:var(--thv-theme-muted, #b8aeb4);
+}
+.lfdc-drop {
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    min-height:42rem;
+    overflow:hidden;
+    color:#fff;
+    background:#17131a
+}
+.lfdc-drop__copy {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:clamp(2rem, 6vw, 5rem)
+}
+.lfdc-drop h2 {
+    margin:.7rem 0;
+    font-family:Georgia, serif;
+    font-size:clamp(4rem, 8vw, 8rem);
+    font-weight:500;
+    letter-spacing:-.08em;
+    line-height:.85
+}
+.lfdc-drop__copy>p {
+    color:rgba(255, 255, 255, .68);
+    line-height:1.7
+}
+.lfdc-drop__count {
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    margin:2rem 0;
+    border-block:1px solid rgba(255, 255, 255, .2)
+}
+.lfdc-drop__count div {
+    display:grid;
+    gap:.3rem;
+    padding:1rem 0;
+    border-right:1px solid rgba(255, 255, 255, .2)
+}
+.lfdc-drop__count div:last-child {
+    border-right:0
+}
+.lfdc-drop__count strong {
+    font-family:Georgia, serif;
+    font-size:2.4rem;
+    font-weight:500
+}
+.lfdc-drop__count span {
+    font-size:.6rem;
+    text-transform:uppercase;
+    opacity:.6
+}
+.lfdc-drop form {
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:.6rem
+}
+.lfdc-drop input {
+    padding:.9rem;
+    border:1px solid rgba(255, 255, 255, .3);
+    color:#fff;
+    background:transparent;
+    font:inherit
+}
+.lfdc-drop button {
+    padding:.9rem 1rem;
+    border:0;
+    color:#fff;
+    background:var(--thv-theme-primary, #a54d72);
+    font:inherit;
+    font-weight:900;
+    cursor:pointer
+}
+.lfdc-drop__copy>p[data-message] {
+    font-size:.72rem
+}
+.lfdc-drop figure {
+    position:relative;
+    margin:0
+}
+.lfdc-drop figure:after {
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, .65))
+}
+.lfdc-drop figure img {
+    width:100%;
+    height:100%;
+    object-fit:cover
+}
+.lfdc-drop figcaption {
+    position:absolute;
+    z-index:1;
+    right:1.3rem;
+    bottom:1.3rem;
+    left:1.3rem;
+    color:#fff;
+    font-size:.65rem;
+    font-weight:900;
+    text-transform:uppercase
+}
+@media(max-width:760px) {
+    .lfdc-drop {
+        grid-template-columns:1fr
+    }
+    .lfdc-drop figure {
+        min-height:30rem
+    }
+}
+@media(max-width:520px) {
+    .lfdc-drop__count {
+        grid-template-columns:1fr 1fr
+    }
+    .lfdc-drop form {
+        grid-template-columns:1fr
+    }
+}

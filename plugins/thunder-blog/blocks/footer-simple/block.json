@@ -1,0 +1,89 @@
+{
+  "settings": {
+    "defaults": {
+      "width": "1200",
+      "menu_id": "0"
+    },
+    "schema": [
+      {
+        "key": "menu_id",
+        "label": "Footer menu",
+        "type": "menu",
+        "default": "0",
+        "help": "Create and arrange menus under Blog → Menus."
+      },
+      {
+        "key": "width",
+        "label": "Content width",
+        "type": "select",
+        "options": {
+          "1000": "Compact",
+          "1200": "Standard",
+          "1440": "Wide"
+        },
+        "default": "1200"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "key": "copyright",
+      "label": "Copyright",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "© {{year}} {{app_name}}. All rights reserved."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Copyright text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<p class=\"tb-simple-footer__copyright\">{{text}}</p>",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "muted"
+        }
+      }
+    }
+  ],
+  "html": "<footer class=\"tb-block tb-simple-footer\"><div class=\"tb-simple-footer__inner\" style=\"--tb-footer-width:{{width}}px\">{{elements:copyright}}{{menu:footer}}</div></footer>",
+  "css": ".tb-simple-footer{border-top:1px solid var(--tb-color-border);background:var(--tb-color-surface)}.tb-simple-footer__inner{max-width:var(--tb-footer-width);margin:auto;padding:28px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}.tb-simple-footer__copyright{margin:0;color:var(--tb-color-muted);font-size:14px}.tb-simple-footer__links{display:flex;gap:6px;flex-wrap:wrap}.tb-simple-footer__link{padding:7px 9px;border-radius:7px;color:var(--tb-color-muted);text-decoration:none;font-size:14px}.tb-simple-footer__link:hover{color:var(--tb-color-primary);background:var(--tb-color-background)}@media(max-width:680px){.tb-simple-footer__inner{align-items:flex-start;flex-direction:column}}.tb-simple-footer__group{display:flex;gap:4px}.tb-simple-footer__children{display:flex;gap:4px;padding-left:4px;border-left:1px solid var(--tb-color-border)}.tb-menu-empty{color:var(--tb-color-muted);font-size:13px}",
+  "js": "",
+  "slug": "footer-simple",
+  "name": "Simple Site Footer",
+  "category": "Footers",
+  "description": "A compact footer whose links come from a saved menu.",
+  "keywords": [
+    "footer",
+    "copyright",
+    "links"
+  ],
+  "contexts": [
+    "footer"
+  ],
+  "version": "1.2.0",
+  "menu_sources": [
+    {
+      "setting": "menu_id",
+      "token": "footer",
+      "empty": "",
+      "container": "<nav class=\"tb-simple-footer__links\" aria-label=\"{{menu_name}}\">{{items}}</nav>",
+      "item": "<a class=\"tb-simple-footer__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}}</a>",
+      "parent": "<div class=\"tb-simple-footer__group\"><a class=\"tb-simple-footer__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}}</a><div class=\"tb-simple-footer__children\">{{children}}</div></div>",
+      "empty_preview": "<nav class=\"tb-simple-footer__links tb-menu-empty\">Select a menu in block settings</nav>"
+    }
+  ]
+}

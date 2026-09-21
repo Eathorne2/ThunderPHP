@@ -1,0 +1,18 @@
+{
+  "id": "talent-agency-roster",
+  "name": "Talent Agency Roster",
+  "description": "A searchable talent roster with category filtering, availability badges and profile actions.",
+  "category": "Music & Entertainment",
+  "order": 4350,
+  "tags": [
+    "talent",
+    "agency",
+    "artists",
+    "actors",
+    "roster"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

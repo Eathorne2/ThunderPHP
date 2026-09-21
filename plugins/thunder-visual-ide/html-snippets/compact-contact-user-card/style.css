@@ -1,0 +1,111 @@
+.contact-user-card {
+    width: min(100%, 25rem);
+    padding: 1.25rem;
+    border: 1px solid var(--thv-theme-border, #dfe5ec);
+    border-radius: 1rem;
+    color: var(--thv-theme-text, #172033);
+    background: var(--thv-theme-surface, #ffffff);
+    box-shadow: 0 1rem 2.5rem rgba(23, 32, 51, 0.08);
+}
+
+.contact-user-card__identity,
+.contact-user-card__actions {
+    display: flex;
+    align-items: center;
+}
+
+.contact-user-card__identity {
+    gap: 0.9rem;
+}
+
+.contact-user-card__avatar-wrap {
+    position: relative;
+}
+
+.contact-user-card__avatar-wrap img {
+    display: block;
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.contact-user-card__avatar-wrap span {
+    position: absolute;
+    right: -0.1rem;
+    bottom: -0.1rem;
+    width: 0.85rem;
+    height: 0.85rem;
+    border: 3px solid var(--thv-theme-surface, #ffffff);
+    border-radius: 50%;
+    background: var(--thv-theme-success, #16a34a);
+}
+
+.contact-user-card h2,
+.contact-user-card p {
+    margin: 0;
+}
+
+.contact-user-card h2 {
+    font-size: 1.05rem;
+}
+
+.contact-user-card p {
+    margin-top: 0.25rem;
+    color: var(--thv-theme-muted, #667085);
+    font-size: 0.86rem;
+}
+
+.contact-user-card__details {
+    display: grid;
+    gap: 0.8rem;
+    margin: 1.2rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid var(--thv-theme-border, #dfe5ec);
+    border-bottom: 1px solid var(--thv-theme-border, #dfe5ec);
+}
+
+.contact-user-card__details div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.contact-user-card__details dt {
+    color: var(--thv-theme-muted, #667085);
+}
+
+.contact-user-card__details dd {
+    margin: 0;
+    font-weight: 700;
+    text-align: right;
+}
+
+.contact-user-card__details a {
+    color: var(--thv-theme-primary, #4f46e5);
+    text-decoration: none;
+}
+
+.contact-user-card__actions {
+    gap: 0.65rem;
+}
+
+.contact-user-card__actions a,
+.contact-user-card__actions button {
+    flex: 1;
+    padding: 0.72rem 0.8rem;
+    border: 1px solid var(--thv-theme-border, #dfe5ec);
+    border-radius: 0.7rem;
+    color: inherit;
+    background: transparent;
+    font: inherit;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+.contact-user-card__actions a {
+    border-color: var(--thv-theme-primary, #4f46e5);
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #4f46e5);
+}

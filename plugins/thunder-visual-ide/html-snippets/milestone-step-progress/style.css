@@ -1,0 +1,85 @@
+.msp-progress {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: system-ui, sans-serif
+}
+
+.msp-progress li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .75rem;
+    color: var(--thv-theme-muted, #64748b)
+}
+
+.msp-progress li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: calc(100% - .8rem);
+    top: 50%;
+    width: 1.6rem;
+    height: 2px;
+    background: #cbd5e1
+}
+
+.msp-progress li>span {
+    display: grid;
+    place-items: center;
+    flex: 0 0 2rem;
+    height: 2rem;
+    border: 2px solid #cbd5e1;
+    border-radius: 50%;
+    background: var(--thv-theme-surface, #fff);
+    font-size: .78rem;
+    font-weight: 900
+}
+
+.msp-progress strong, .msp-progress small {
+    display: block
+}
+
+.msp-progress strong {
+    font-size: .8rem
+}
+
+.msp-progress small {
+    margin-top: .1rem;
+    font-size: .7rem
+}
+
+.msp-progress .is-complete {
+    color: #047857
+}
+
+.msp-progress .is-complete>span {
+    border-color: #10b981;
+    background: #10b981;
+    color: #fff
+}
+
+.msp-progress .is-active {
+    color: #1d4ed8
+}
+
+.msp-progress .is-active>span {
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #1d4ed8
+}
+
+@media(max-width:700px) {
+    .msp-progress {
+        grid-template-columns: 1fr
+    }
+    .msp-progress li:not(:last-child)::after {
+        left: 1.72rem;
+        top: calc(100% - .3rem);
+        width: 2px;
+        height: .6rem
+    }
+}

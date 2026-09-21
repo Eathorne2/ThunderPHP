@@ -1,0 +1,69 @@
+{
+  "type": "view.html",
+  "label": "HTML Block",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "HTML",
+  "color": "#0891b2",
+  "description": "Adds custom HTML/PHP and supports the compact template syntax.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "HTML Block",
+    "content": "<p>Content</p>",
+    "css_class": "",
+    "widths": {
+      "mobile": 12,
+      "small": 12,
+      "medium": 12,
+      "large": 12
+    },
+    "inline_style": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "content",
+      "label": "HTML / template code",
+      "type": "code"
+    },
+    {
+      "name": "css_class",
+      "label": "Wrapper CSS classes",
+      "type": "text",
+      "help": "Optional. When both wrapper classes and inline styles are empty, the HTML is emitted directly without a generated wrapper."
+    },
+    {
+      "name": "inline_style",
+      "label": "Wrapper inline styles",
+      "type": "textarea",
+      "help": "Optional. When both wrapper fields are empty, the HTML is emitted directly without a generated wrapper."
+    },
+    {
+      "name": "widths",
+      "label": "Responsive width",
+      "type": "breakpoints",
+      "help": "Applied only when wrapper classes or wrapper inline styles are provided."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\HtmlCompiler",
+    "file": "Compiler.php"
+  }
+}

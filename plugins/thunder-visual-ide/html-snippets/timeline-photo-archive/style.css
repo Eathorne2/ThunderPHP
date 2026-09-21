@@ -1,0 +1,45 @@
+.ig-timeline-archive {
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.ig-timeline-archive *,
+.ig-timeline-archive *::before,
+.ig-timeline-archive *::after {
+    box-sizing: border-box;
+}
+
+.ig-timeline-archive button,
+.ig-timeline-archive input,
+.ig-timeline-archive select,
+.ig-timeline-archive textarea {
+    font: inherit;
+}
+
+.ig-timeline-archive a {
+    color: inherit;
+}
+
+.ig-timeline-archive img {
+    display: block;
+    max-width: 100%;
+}
+.ig-timeline-archive { padding: clamp(1.5rem, 5vw, 4rem); background: var(--thv-theme-background); }
+.ig-timeline-archive header { max-width: 50rem; margin-bottom: 3rem; }
+.ig-timeline-archive header p { margin: 0; color: var(--thv-theme-primary); font-size: .7rem; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; }
+.ig-timeline-archive h2 { margin: .5rem 0 0; font-family: Georgia, serif; font-size: clamp(2.5rem, 7vw, 5.5rem); font-weight: 400; letter-spacing: -.055em; }
+.ig-timeline-archive__timeline { position: relative; display: grid; gap: 3rem; }
+.ig-timeline-archive__timeline::before { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: var(--thv-theme-border); }
+.ig-timeline-archive article { position: relative; display: grid; grid-template-columns: 1fr 5rem 1fr; align-items: center; }
+.ig-timeline-archive article time { grid-column: 2; justify-self: center; z-index: 1; padding: .55rem .45rem; border: 1px solid var(--thv-theme-border); border-radius: 999px; color: var(--thv-theme-primary); background: var(--thv-theme-surface); font-size: .72rem; font-weight: 900; }
+.ig-timeline-archive figure { grid-column: 1; grid-row: 1; margin: 0; overflow: hidden; border-radius: 1rem; background: var(--thv-theme-surface); }
+.ig-timeline-archive article:nth-child(even) figure { grid-column: 3; }
+.ig-timeline-archive figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.ig-timeline-archive figcaption { padding: 1rem; }
+.ig-timeline-archive figcaption strong,
+.ig-timeline-archive figcaption span { display: block; }
+.ig-timeline-archive figcaption span { margin-top: .25rem; color: var(--thv-theme-muted); font-size: .86rem; }
+@media (max-width: 720px) { .ig-timeline-archive__timeline::before { left: 1.3rem; } .ig-timeline-archive article { grid-template-columns: 2.6rem 1fr; } .ig-timeline-archive article time { grid-column: 1; } .ig-timeline-archive figure,
+.ig-timeline-archive article:nth-child(even) figure { grid-column: 2; } }

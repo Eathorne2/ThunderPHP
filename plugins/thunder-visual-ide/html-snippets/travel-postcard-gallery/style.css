@@ -1,0 +1,44 @@
+.ig-postcards {
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.ig-postcards *,
+.ig-postcards *::before,
+.ig-postcards *::after {
+    box-sizing: border-box;
+}
+
+.ig-postcards button,
+.ig-postcards input,
+.ig-postcards select,
+.ig-postcards textarea {
+    font: inherit;
+}
+
+.ig-postcards a {
+    color: inherit;
+}
+
+.ig-postcards img {
+    display: block;
+    max-width: 100%;
+}
+.ig-postcards { padding: clamp(1.5rem, 5vw, 4rem); border-radius: 1.5rem; background: var(--thv-theme-surface-alt); }
+.ig-postcards header { max-width: 50rem; margin-bottom: 2.2rem; }
+.ig-postcards header p { margin: 0; color: var(--thv-theme-primary); font-size: .72rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
+.ig-postcards h2 { margin: .55rem 0 0; font-family: Georgia, serif; font-size: clamp(2.4rem, 6vw, 5rem); font-weight: 400; letter-spacing: -.05em; }
+.ig-postcards__board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem 1.2rem; }
+.ig-postcards figure { position: relative; margin: 0; padding: .75rem .75rem 1.3rem; border: 1px solid var(--thv-theme-border); background: var(--thv-theme-surface); box-shadow: 0 1rem 2rem color-mix(in srgb, var(--thv-theme-text) 12%, transparent); transform: rotate(-1.2deg); transition: transform .25s ease; }
+.ig-postcards figure:nth-child(even) { transform: rotate(1.3deg); }
+.ig-postcards figure:nth-child(3n) { transform: rotate(-.35deg); }
+.ig-postcards figure:hover { z-index: 2; transform: rotate(0) translateY(-.3rem); }
+.ig-postcards figure::after { content: 'AIR MAIL'; position: absolute; top: 1rem; right: 1rem; padding: .3rem .45rem; border: 1px solid var(--thv-theme-primary); color: var(--thv-theme-primary); font-size: .55rem; font-weight: 900; letter-spacing: .12em; }
+.ig-postcards figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.ig-postcards figcaption { padding: .9rem .2rem 0; }
+.ig-postcards figcaption strong { display: block; font-family: Georgia, serif; font-size: 1.4rem; font-weight: 400; }
+.ig-postcards figcaption span { display: block; margin-top: .2rem; color: var(--thv-theme-muted); font-size: .82rem; }
+@media (max-width: 800px) { .ig-postcards__board { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .ig-postcards__board { grid-template-columns: 1fr; } }

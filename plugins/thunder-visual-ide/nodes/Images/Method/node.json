@@ -1,0 +1,664 @@
+{
+  "type": "images.method",
+  "label": "Image Method",
+  "category": "Images",
+  "kind": "flow",
+  "icon": "IMG()",
+  "color": "#0d9488",
+  "description": "Calls a documented method on a ThunderPHP Core\\Image object.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "dynamic_ports": "image_method",
+  "defaults": {
+    "title": "Image Method",
+    "method": "resize",
+    "result_variable": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "result_variable",
+      "label": "Result variable",
+      "type": "text",
+      "help": "Optional PHP variable name. Omit the $ sign. Leave blank to use the automatic node-specific name."
+    },
+    {
+      "name": "method",
+      "label": "Method",
+      "type": "select",
+      "options": [
+        "resize",
+        "crop",
+        "fit_contain",
+        "save_as",
+        "convert_to_webp",
+        "get_thumbnail",
+        "make_thumbnail",
+        "make_thumbnail_as",
+        "smart_thumbnail",
+        "from_upload",
+        "from_string",
+        "process",
+        "get_size",
+        "output",
+        "delete_thumbnails",
+        "set_jpeg_quality",
+        "set_png_compression",
+        "set_webp_quality",
+        "allow_upscale",
+        "set_thumbnail_dir",
+        "use_hashed_names"
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "name": "resize",
+      "label": "Resize",
+      "return_type": "string",
+      "params": [
+        {
+          "name": "filename",
+          "label": "Filename",
+          "type": "string",
+          "default": "null"
+        },
+        {
+          "name": "max_size",
+          "label": "Max Size",
+          "type": "int",
+          "default": "700"
+        },
+        {
+          "name": "dest",
+          "label": "Destination",
+          "type": "?string",
+          "default": "null"
+        }
+      ],
+      "group": "Image Transformation",
+      "description": "Resizes an image proportionally so its longest side fits within the requested maximum size.",
+      "help": "Resizes an image proportionally so its longest side fits within the requested maximum size.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n$image->resize(ROOTPATH . 'public/uploads/photo.jpg', 1200);\n```\n\n### Notes\n\n- The original aspect ratio is preserved; the image is not stretched.\n- When `dest` is omitted, the original file is overwritten.\n- Use `crop()` or `fit_contain()` when exact outer dimensions are required.",
+      "chainable": false
+    },
+    {
+      "name": "crop",
+      "label": "Crop",
+      "return_type": "string",
+      "params": [
+        {
+          "name": "filename",
+          "label": "Filename",
+          "type": "string",
+          "default": "null"
+        },
+        {
+          "name": "max_width",
+          "label": "Width",
+          "type": "int",
+          "default": "700"
+        },
+        {
+          "name": "max_height",
+          "label": "Height",
+          "type": "int",
+          "default": "700"
+        },
+        {
+          "name": "dest",
+          "label": "Destination",
+          "type": "?string",
+          "default": "null"
+        },
+        {
+          "name": "position",
+          "label": "Position",
+          "type": "string",
+          "default": "'center'"
+        }
+      ],
+      "group": "Image Transformation",
+      "description": "Creates an image with exact dimensions by cropping the source to the requested aspect ratio.",
+      "help": "Creates an image with exact dimensions by cropping the source to the requested aspect ratio.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n$image->crop(ROOTPATH . 'public/uploads/photo.jpg', 300, 300);\n```\n\n### Notes\n\n- Supported alignment values include `center`, `top`, `bottom`, `left`, and `right`.\n- Cropping is appropriate for uniform cards, avatars, and product grids where every output must have identical dimensions.",
+      "chainable": false
+    },
+    {
+      "name": "fit_contain",
+      "label": "Fit Contain",
+      "return_type": "string",
+      "params": [
+        {
+          "name": "filename",
+          "label": "Filename",
+          "type": "string",
+          "default": "null"
+        },
+        {
+          "name": "max_width",
+          "label": "Width",
+          "type": "int",
+          "default": "700"
+        },
+        {
+          "name": "max_height",
+          "label": "Height",
+          "type": "int",
+          "default": "700"
+        },
+        {
+          "name": "dest",
+          "label": "Destination",
+          "type": "?string",
+          "default": "null"
+        },
+        {
+          "name": "bg_color",
+          "label": "Background Color",
+          "type": "array",
+          "default": "[255, 255, 255]"
+        }
+      ],
+      "group": "Image Transformation",
+      "description": "Fits the complete image inside a fixed box without cropping and fills any unused area with a background color.",
+      "help": "Fits the complete image inside a fixed box without cropping and fills any unused area with a background color.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n\n$image->fit_contain(\n    ROOTPATH . 'public/uploads/logo.png',\n    400,\n    300,\n    ROOTPATH . 'public/uploads/logo_preview.png'\n);\n```\n\n### Notes\n\n- The whole source remains visible.\n- Use RGB backgrounds such as `[255,255,255]`, or an alpha value for transparent-capable PNG/WEBP output.",
+      "chainable": false
+    },
+    {
+      "name": "save_as",
+      "label": "Save As",
+      "return_type": "string",
+      "params": [
+        {
+          "name": "filename",
+          "label": "Filename",
+          "type": "string",
+          "default": "null"
+        },
+        {
+          "name": "dest",
+          "label": "Destination",
+          "type": "string",
+          "default": "null"
+        }
+      ],
+      "group": "Image Transformation",
+      "description": "Reads an existing image and writes it to a destination whose extension determines the output format.",
+      "help": "Reads an existing image and writes it to a destination whose extension determines the output format.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n\n$image->save_as(\n    ROOTPATH . 'public/uploads/photo.jpg',\n    ROOTPATH . 'public/uploads/photo.webp'\n);\n```\n\n### Notes\n\n- The destination extension selects JPEG, PNG, GIF, or WEBP output.\n- This method is useful for format conversion while preserving the original source file.",
+      "chainable": false
+    },
+    {
+      "name": "convert_to_webp",
+      "label": "Convert to WEBP",
+      "return_type": "string",
+      "params": [
+        {
+          "name": "filename",
+          "label": "Filename",
+          "type": "string",
+          "default": "null"
+        },
+        {
+          "name": "dest",
+          "label": "Destination",
+          "type": "?string",
+          "default": "null"
+        }
+      ],
+      "group": "Image Transformation",
+      "description": "Convenience method that saves an existing image as WEBP.",
+      "help": "Convenience method that saves an existing image as WEBP.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n$image->convert_to_webp(ROOTPATH . 'public/uploads/photo.jpg');\n```\n\n### Notes\n\n- When `dest` is omitted, a path with the same base filename and a `.webp` extension is created.\n- Configure compression with `set_webp_quality()` before conversion.",
+      "chainable": false
+    },
+    {
+      "name": "get_thumbnail",
+      "label": "Get Thumbnail",
+      "return_type": "string",
+      "params": [
+        {
+          "name": "filename",
+          "label": "Filename",
+          "type": "string",
+          "default": "null"
+        },
+        {
+          "name": "width",
+          "label": "Width",
+          "type": "int",
+          "default": "700"
+        },
+        {
+          "name": "height",
+          "label": "Height",
+          "type": "int",
+          "default": "700"
+        },
+        {
+          "name": "replace",
+          "label": "Replace",
+          "type": "bool",
+          "default": "false"
+        },
+        {
+          "name": "mode",
+          "label": "Mode",
+          "type": "string",
+          "default": "'crop'"
+        },
+        {
+          "name": "bg_color",
+          "label": "Background Color",
+          "type": "array",
+          "default": "[255, 255, 255]"
+        },
+        {
+          "name": "output_ext",
+          "label": "Output Extension",
+          "type": "?string",
+          "default": "null"
+        }
+      ],
+      "group": "Thumbnail Generation",
+      "description": "Creates or reuses a thumbnail using the class naming rules and the selected crop, resize, or contain mode.",
+      "help": "Creates or reuses a thumbnail using the class naming rules and the selected crop, resize, or contain mode.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n$thumb = $image->get_thumbnail(\n    ROOTPATH . 'public/uploads/photo.jpg',\n    300,\n    300\n);\n```\n\n### Notes\n\n- If the thumbnail already exists and `replace` is false, the existing path is returned.\n- Supported modes are `crop`, `resize`, and `contain`.\n- `output_ext` can force a format such as `webp`.",
+      "chainable": false
+    },
+    {
+      "name": "make_thumbnail",
+      "label": "Make Thumbnail",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "filename",
+          "label": "Filename",
+          "type": "string",
+          "default": "null"
+        },
+        {
+          "name": "dest",
+          "label": "Destination",
+          "type": "string",
+          "default": "null"
+        },
+        {
+          "name": "width",
+          "label": "Width",
+          "type": "int",
+          "default": "700"
+        },
+        {
+          "name": "height",
+          "label": "Height",
+          "type": "int",
+          "default": "700"
+        },
+        {
+          "name": "mode",
+          "label": "Mode",
+          "type": "string",
+          "default": "'crop'"
+        }
+      ],
+      "group": "Thumbnail Generation",
+      "description": "Creates a thumbnail at an explicit destination path, giving the caller full control over the filename.",
+      "help": "Creates a thumbnail at an explicit destination path, giving the caller full control over the filename.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n\n$image->make_thumbnail(\n    ROOTPATH . 'public/uploads/photo.jpg',\n    ROOTPATH . 'public/uploads/thumbs/photo_small.jpg',\n    300,\n    300,\n    'crop'\n);\n```\n\n### Notes\n\n- Use this when you need an exact destination path rather than automatic thumbnail naming.\n- Missing destination directories are created where possible.",
+      "chainable": false
+    },
+    {
+      "name": "make_thumbnail_as",
+      "label": "Make Thumbnail As",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "filename",
+          "label": "Filename",
+          "type": "string",
+          "default": "null"
+        },
+        {
+          "name": "dest",
+          "label": "Destination",
+          "type": "string",
+          "default": "null"
+        },
+        {
+          "name": "width",
+          "label": "Width",
+          "type": "int",
+          "default": "700"
+        },
+        {
+          "name": "height",
+          "label": "Height",
+          "type": "int",
+          "default": "700"
+        },
+        {
+          "name": "mode",
+          "label": "Mode",
+          "type": "string",
+          "default": "'crop'"
+        }
+      ],
+      "group": "Thumbnail Generation",
+      "description": "Creates a thumbnail at an explicit destination and allows its format to differ from the source image.",
+      "help": "Creates a thumbnail at an explicit destination and allows its format to differ from the source image.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n\n$image->make_thumbnail_as(\n    ROOTPATH . 'public/uploads/photo.jpg',\n    ROOTPATH . 'public/uploads/thumbs/photo_small.webp',\n    300,\n    300,\n    'crop'\n);\n```\n\n### Notes\n\n- The destination extension controls the output format.\n- This is useful for generating WEBP thumbnails from JPEG or PNG originals.",
+      "chainable": false
+    },
+    {
+      "name": "smart_thumbnail",
+      "label": "Smart Thumbnail",
+      "return_type": "array",
+      "params": [
+        {
+          "name": "filename",
+          "label": "Filename",
+          "type": "string",
+          "default": "null"
+        },
+        {
+          "name": "specs",
+          "label": "Thumbnail Specs",
+          "type": "array",
+          "default": "[]"
+        }
+      ],
+      "group": "Thumbnail Generation",
+      "description": "Generates several thumbnail specifications in one call and returns structured information for every generated asset.",
+      "help": "Generates several thumbnail specifications in one call and returns structured information for every generated asset.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n\n$versions = $image->smart_thumbnail($original, [\n    ['width' => 150, 'height' => 150, 'mode' => 'crop', 'ext' => 'webp'],\n    ['width' => 400, 'height' => 250, 'mode' => 'crop', 'ext' => 'webp'],\n    ['width' => 1200, 'height' => 630, 'mode' => 'crop', 'ext' => 'webp'],\n]);\n```\n\n### Notes\n\n- Each specification may define `width`, `height`, `mode`, `ext`, `bg_color`, `position`, `replace`, and `dest`.\n- The result contains top-level `success`, `items`, and `error`; every item includes path and image metadata.",
+      "chainable": false
+    },
+    {
+      "name": "from_upload",
+      "label": "Store Uploaded Image",
+      "return_type": "array",
+      "params": [
+        {
+          "name": "file",
+          "label": "Uploaded File",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "dest",
+          "label": "Destination",
+          "type": "string",
+          "default": "null"
+        },
+        {
+          "name": "move",
+          "label": "Move File",
+          "type": "bool",
+          "default": "true"
+        }
+      ],
+      "group": "Input and Processing",
+      "description": "Stores an uploaded image from a PHP file array and returns a structured success or error result.",
+      "help": "Stores an uploaded image from a PHP file array and returns a structured success or error result.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n\n$result = $image->from_upload(\n    $_FILES['photo'],\n    ROOTPATH . 'public/uploads/originals/photo.jpg'\n);\n\nif (!$result['success']) {\n    echo $result['error'];\n}\n```\n\n### Notes\n\n- The input should have the same shape as `$_FILES['field']`.\n- The method checks the upload error, temporary file, and destination directory before moving or copying the file.\n- File policy such as allowed MIME types and size limits should normally be enforced by the Request/upload layer.",
+      "chainable": false
+    },
+    {
+      "name": "from_string",
+      "label": "Create from Binary String",
+      "return_type": "array",
+      "params": [
+        {
+          "name": "data",
+          "label": "Binary Data",
+          "type": "string",
+          "default": "''"
+        },
+        {
+          "name": "dest",
+          "label": "Destination",
+          "type": "string",
+          "default": "null"
+        }
+      ],
+      "group": "Input and Processing",
+      "description": "Writes raw binary image data to a file and verifies that the resulting file is a valid image.",
+      "help": "Writes raw binary image data to a file and verifies that the resulting file is a valid image.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n$data = file_get_contents(ROOTPATH . 'temp/example.jpg');\n\n$result = $image->from_string(\n    $data,\n    ROOTPATH . 'public/uploads/imported/example.jpg'\n);\n```\n\n### Notes\n\n- Useful for base64-decoded data, downloaded remote bytes, or stored binary data.\n- The written file is checked to confirm that it behaves like a real image.",
+      "chainable": false
+    },
+    {
+      "name": "process",
+      "label": "Generic Process",
+      "return_type": "array",
+      "params": [
+        {
+          "name": "filename",
+          "label": "Filename",
+          "type": "string",
+          "default": "null"
+        },
+        {
+          "name": "mode",
+          "label": "Mode",
+          "type": "string",
+          "default": "'resize'"
+        },
+        {
+          "name": "options",
+          "label": "Options",
+          "type": "array",
+          "default": "[]"
+        }
+      ],
+      "group": "Input and Processing",
+      "description": "Runs resize, crop, or contain mode through one generic method and returns a structured result array.",
+      "help": "Runs resize, crop, or contain mode through one generic method and returns a structured result array.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n\n$result = $image->process(\n    ROOTPATH . 'public/uploads/photo.jpg',\n    'crop',\n    [\n        'width' => 300,\n        'height' => 300,\n        'position' => 'top',\n        'dest' => ROOTPATH . 'public/uploads/photo_square.jpg',\n    ]\n);\n```\n\n### Notes\n\n- Supported modes are `resize`, `crop`, and `contain`.\n- The returned array includes `success`, `path`, `mime`, `width`, `height`, `size`, and `error`.",
+      "chainable": false
+    },
+    {
+      "name": "get_size",
+      "label": "Get Size",
+      "return_type": "object|false",
+      "params": [
+        {
+          "name": "filename",
+          "label": "Filename",
+          "type": "string",
+          "default": "null"
+        }
+      ],
+      "group": "Input and Processing",
+      "description": "Reads image metadata and returns width, height, and MIME type, or false when the file cannot be read.",
+      "help": "Reads image metadata and returns width, height, and MIME type, or false when the file cannot be read.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n$info = $image->get_size(ROOTPATH . 'public/uploads/photo.jpg');\n\nif ($info) {\n    echo $info->width;\n    echo $info->height;\n    echo $info->mime;\n}\n```\n\n### Notes\n\n- The returned object exposes `width`, `height`, and `mime`.\n- Test the result before reading properties because invalid files return `false`.",
+      "chainable": false
+    },
+    {
+      "name": "output",
+      "label": "Output to Browser",
+      "return_type": "bool",
+      "params": [
+        {
+          "name": "filename",
+          "label": "Filename",
+          "type": "string",
+          "default": "null"
+        },
+        {
+          "name": "exit_after",
+          "label": "Exit After",
+          "type": "bool",
+          "default": "true"
+        },
+        {
+          "name": "download_name",
+          "label": "Download Name",
+          "type": "?string",
+          "default": "null"
+        }
+      ],
+      "group": "Input and Processing",
+      "description": "Sends an image file directly to the browser with the appropriate headers.",
+      "help": "Sends an image file directly to the browser with the appropriate headers.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n$image->output(ROOTPATH . 'public/uploads/thumbs/photo.webp');\n```\n\n### Notes\n\n- Call this before any HTML or other output because sent headers cause it to fail.\n- Supply `download_name` to force a download; `exit_after` controls whether execution ends after output.",
+      "chainable": false
+    },
+    {
+      "name": "delete_thumbnails",
+      "label": "Delete Thumbnails",
+      "return_type": "void",
+      "params": [
+        {
+          "name": "filename",
+          "label": "Filename",
+          "type": "string",
+          "default": "null"
+        }
+      ],
+      "group": "Thumbnail Generation",
+      "description": "Removes generated thumbnails that match the class naming pattern for a source image.",
+      "help": "Removes generated thumbnails that match the class naming pattern for a source image.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n$image->delete_thumbnails(ROOTPATH . 'public/uploads/photo.jpg');\n```\n\n### Notes\n\n- Useful when an original image is replaced and stale generated versions must be removed.",
+      "chainable": false
+    },
+    {
+      "name": "set_jpeg_quality",
+      "label": "Set JPEG Quality",
+      "return_type": "object",
+      "params": [
+        {
+          "name": "quality",
+          "label": "Quality",
+          "type": "int",
+          "default": "85"
+        }
+      ],
+      "group": "Configuration",
+      "description": "Sets JPEG output quality from 0 to 100 and returns the Image object for chaining.",
+      "help": "Sets JPEG output quality from 0 to 100 and returns the Image object for chaining.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n$image->set_jpeg_quality(85);\n```\n\n### Notes\n\n- The documentation recommends roughly 80–88 for many web uploads; higher values create larger files.",
+      "chainable": true
+    },
+    {
+      "name": "set_png_compression",
+      "label": "Set PNG Compression",
+      "return_type": "object",
+      "params": [
+        {
+          "name": "compression",
+          "label": "Compression",
+          "type": "int",
+          "default": "7"
+        }
+      ],
+      "group": "Configuration",
+      "description": "Sets PNG compression from 0 to 9 and returns the Image object for chaining.",
+      "help": "Sets PNG compression from 0 to 9 and returns the Image object for chaining.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n$image->set_png_compression(7);\n```\n\n### Notes\n\n- Higher compression can reduce file size but may use more CPU time.",
+      "chainable": true
+    },
+    {
+      "name": "set_webp_quality",
+      "label": "Set WEBP Quality",
+      "return_type": "object",
+      "params": [
+        {
+          "name": "quality",
+          "label": "Quality",
+          "type": "int",
+          "default": "80"
+        }
+      ],
+      "group": "Configuration",
+      "description": "Sets WEBP output quality from 0 to 100 and returns the Image object for chaining.",
+      "help": "Sets WEBP output quality from 0 to 100 and returns the Image object for chaining.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n$image->set_webp_quality(80);\n```\n\n### Notes\n\n- The documentation recommends roughly 75–85 for general web thumbnails.",
+      "chainable": true
+    },
+    {
+      "name": "allow_upscale",
+      "label": "Allow Upscale",
+      "return_type": "object",
+      "params": [
+        {
+          "name": "upscale",
+          "label": "Allow",
+          "type": "bool",
+          "default": "true"
+        }
+      ],
+      "group": "Configuration",
+      "description": "Controls whether resize and contain operations may enlarge images beyond their original dimensions.",
+      "help": "Controls whether resize and contain operations may enlarge images beyond their original dimensions.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n$image->allow_upscale(false);\n```\n\n### Notes\n\n- Disable upscaling to avoid enlarging small images into blurry output.",
+      "chainable": true
+    },
+    {
+      "name": "set_thumbnail_dir",
+      "label": "Set Thumbnail Directory",
+      "return_type": "object",
+      "params": [
+        {
+          "name": "dir",
+          "label": "Directory",
+          "type": "string",
+          "default": "null"
+        }
+      ],
+      "group": "Configuration",
+      "description": "Stores generated thumbnails in a separate directory instead of beside the original image.",
+      "help": "Stores generated thumbnails in a separate directory instead of beside the original image.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n$image->set_thumbnail_dir(ROOTPATH . 'public/uploads/thumbs/');\n```\n\n### Notes\n\n- The class creates missing destination directories where possible.",
+      "chainable": true
+    },
+    {
+      "name": "use_hashed_names",
+      "label": "Use Hashed Names",
+      "return_type": "object",
+      "params": [
+        {
+          "name": "use_hashed_names",
+          "label": "Use Hashed Names",
+          "type": "bool",
+          "default": "true"
+        }
+      ],
+      "group": "Configuration",
+      "description": "Switches generated thumbnail filenames between readable names and hashed names.",
+      "help": "Switches generated thumbnail filenames between readable names and hashed names.\n\n### Example\n\n```php\n$image = new \\Core\\Image();\n$image->use_hashed_names(true);\n```\n\n### Notes\n\n- Readable names are convenient during development. Hashed names are less predictable and can be useful in dedicated thumbnail storage.",
+      "chainable": true
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in"
+      },
+      {
+        "id": "image",
+        "label": "Image",
+        "type": "object",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out"
+      },
+      {
+        "id": "result",
+        "label": "Result",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": true
+      },
+      {
+        "id": "image",
+        "label": "Image",
+        "type": "object",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Images\\ImageMethodCompiler",
+    "file": "Compiler.php"
+  }
+}

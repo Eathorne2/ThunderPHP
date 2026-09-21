@@ -1,0 +1,18 @@
+{
+  "id": "entertainment-news-grid",
+  "name": "Entertainment News Grid",
+  "description": "A modern culture-news layout with a lead story, supporting articles and topic labels.",
+  "category": "Music & Entertainment",
+  "order": 4330,
+  "tags": [
+    "news",
+    "magazine",
+    "entertainment",
+    "articles",
+    "culture"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

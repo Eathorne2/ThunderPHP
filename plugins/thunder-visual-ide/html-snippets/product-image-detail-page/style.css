@@ -1,0 +1,47 @@
+.ig-product-detail {
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.ig-product-detail *,
+.ig-product-detail *::before,
+.ig-product-detail *::after {
+    box-sizing: border-box;
+}
+
+.ig-product-detail button,
+.ig-product-detail input,
+.ig-product-detail select,
+.ig-product-detail textarea {
+    font: inherit;
+}
+
+.ig-product-detail a {
+    color: inherit;
+}
+
+.ig-product-detail img {
+    display: block;
+    max-width: 100%;
+}
+.ig-product-detail { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(20rem, .8fr); min-height: 42rem; border: 1px solid var(--thv-theme-border); border-radius: 1.3rem; overflow: hidden; background: var(--thv-theme-surface); }
+.ig-product-detail > figure { position: relative; display: grid; margin: 0; padding: clamp(1rem, 4vw, 3rem); background: var(--thv-theme-surface-alt); place-items: center; }
+.ig-product-detail > figure > span { position: absolute; top: 1rem; left: 1rem; padding: .45rem .6rem; border-radius: 999px; color: var(--thv-theme-on-primary); background: var(--thv-theme-primary); font-size: .65rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.ig-product-detail > figure img { width: 100%; max-height: 37rem; object-fit: cover; }
+.ig-product-detail > figure button { position: absolute; right: 1rem; bottom: 1rem; padding: .65rem .8rem; border: 1px solid var(--thv-theme-border); border-radius: .6rem; color: var(--thv-theme-text); background: var(--thv-theme-surface); cursor: zoom-in; }
+.ig-product-detail > section { padding: clamp(1.5rem, 4vw, 3rem); }
+.ig-product-detail nav { display: flex; gap: .35rem; color: var(--thv-theme-muted); font-size: .76rem; } .ig-product-detail nav a { color: var(--thv-theme-primary); text-decoration: none; }
+.ig-product-detail section > p:first-of-type { margin: 2.5rem 0 0; color: var(--thv-theme-primary); font-size: .68rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+.ig-product-detail h1 { margin: .45rem 0; font-family: Georgia, serif; font-size: clamp(2.6rem, 6vw, 5rem); font-weight: 400; letter-spacing: -.055em; }
+.ig-product-detail__price { font-size: 1.25rem; font-weight: 850; } .ig-product-detail__price span { display: block; margin-top: .2rem; color: var(--thv-theme-muted); font-size: .75rem; font-weight: 400; }
+.ig-product-detail__copy { color: var(--thv-theme-muted); line-height: 1.7; }
+.ig-product-detail fieldset { display: flex; align-items: center; gap: .55rem; margin: 1.5rem 0; padding: 0; border: 0; } .ig-product-detail legend { margin-bottom: .7rem; font-weight: 800; }
+.ig-product-detail fieldset button { width: 1.8rem; height: 1.8rem; border: 2px solid var(--thv-theme-surface); border-radius: 50%; background: var(--thv-theme-primary); box-shadow: 0 0 0 1px var(--thv-theme-border); cursor: pointer; }
+.ig-product-detail fieldset button:nth-of-type(2) { background: var(--thv-theme-text); } .ig-product-detail fieldset button:nth-of-type(3) { background: var(--thv-theme-secondary); } .ig-product-detail fieldset button.is-active { box-shadow: 0 0 0 2px var(--thv-theme-primary); }
+.ig-product-detail fieldset span { margin-left: .3rem; color: var(--thv-theme-muted); font-size: .8rem; }
+.ig-product-detail__buy { width: 100%; padding: .9rem 1rem; border: 0; border-radius: .7rem; color: var(--thv-theme-on-primary); background: var(--thv-theme-primary); font-weight: 850; cursor: pointer; }
+.ig-product-detail dl { margin: 1.5rem 0 0; border-top: 1px solid var(--thv-theme-border); } .ig-product-detail dl div { display: grid; grid-template-columns: 5rem 1fr; gap: 1rem; padding: .7rem 0; border-bottom: 1px solid var(--thv-theme-border); } .ig-product-detail dt { color: var(--thv-theme-muted); } .ig-product-detail dd { margin: 0; }
+.ig-product-detail dialog { width: min(92vw, 76rem); padding: 0; overflow: visible; border: 0; background: transparent; } .ig-product-detail dialog::backdrop { background: color-mix(in srgb, var(--thv-theme-text) 86%, transparent); } .ig-product-detail dialog img { width: 100%; max-height: 84vh; border-radius: .8rem; object-fit: contain; } .ig-product-detail dialog button { position: absolute; top: -2.5rem; right: 0; border: 0; color: var(--thv-theme-on-primary); background: transparent; font-size: 1.7rem; cursor: pointer; }
+@media (max-width: 800px) { .ig-product-detail { grid-template-columns: 1fr; } }

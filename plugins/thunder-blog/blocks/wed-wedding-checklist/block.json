@@ -1,0 +1,163 @@
+{
+  "slug": "wed-wedding-checklist",
+  "name": "Wedding Planning Checklist",
+  "category": "Wedding",
+  "description": "Four-step wedding planning checklist with editorial numbering",
+  "keywords": [
+    "wedding",
+    "checklist",
+    "planning",
+    "tips"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-wed-checklist\"><div class=\"tb-wed-checklist__head\">{{elements:eyebrow}}{{elements:title}}</div><div class=\"tb-wed-checklist__list\">{{elements:steps}}</div></div>",
+  "css": ".tb-wed-checklist{padding:clamp(32px,6vw,76px);background:var(--tb-color-surface)}.tb-wed-checklist__head{margin-bottom:24px}.tb-wed-checklist__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-wed-checklist__title{margin:8px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(40px,5vw,62px);font-weight:400}.tb-wed-checklist__step{display:grid;grid-template-columns:80px minmax(180px,.6fr) minmax(0,1fr);gap:24px;padding:24px 0;border-top:1px solid var(--tb-color-border);align-items:start}.tb-wed-checklist__number{font-size:13px;font-weight:900;color:var(--tb-color-primary)}.tb-wed-checklist__step-title{margin:0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:28px;font-weight:400}.tb-wed-checklist__text{margin:0;color:var(--tb-color-muted);line-height:1.65}@media(max-width:620px){.tb-wed-checklist__step{grid-template-columns:1fr;gap:6px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Planning guide"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-wed-checklist__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A simpler way to plan"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-wed-checklist__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "steps",
+      "label": "Checklist step",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "number": "01",
+        "title": "Set the vision",
+        "text": "Choose the mood, priorities and approximate guest count."
+      },
+      "schema": [
+        {
+          "key": "number",
+          "label": "Number",
+          "type": "text",
+          "selector": ".tb-wed-checklist__number"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-wed-checklist__step-title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-wed-checklist__text",
+          "rows": 2
+        }
+      ],
+      "template": "<article class=\"tb-wed-checklist__step\"><span class=\"tb-wed-checklist__number\">{{number}}</span><h3 class=\"tb-wed-checklist__step-title\">{{title}}</h3><p class=\"tb-wed-checklist__text\">{{text}}</p></article>",
+      "min": 1,
+      "max": 10,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "number": "01",
+          "title": "Set the vision",
+          "text": "Choose the mood, priorities and approximate guest count."
+        },
+        {
+          "number": "02",
+          "title": "Book the anchors",
+          "text": "Secure venue, planner, photographer and core suppliers."
+        },
+        {
+          "number": "03",
+          "title": "Shape the details",
+          "text": "Design stationery, florals, styling and the guest experience."
+        },
+        {
+          "number": "04",
+          "title": "Enjoy the week",
+          "text": "Confirm the timeline, then make space to celebrate."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

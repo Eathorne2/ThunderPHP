@@ -1,0 +1,220 @@
+.bas-str {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.bas-str *, .bas-str *::before, .bas-str *::after {
+    box-sizing: border-box;
+}
+
+.bas-str button, .bas-str input, .bas-str select, .bas-str textarea {
+    font: inherit;
+}
+
+.bas-str a {
+    color: inherit;
+}
+
+.bas-str {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.8fr);
+    gap: 2rem;
+    align-items: center;
+    max-width: 72rem;
+    padding: clamp(1.5rem, 5vw, 3.5rem);
+    overflow: hidden;
+    border-radius: 1.5rem;
+    background: color-mix(in srgb, var(--thv-theme-primary) 12%, var(--thv-theme-background));
+}
+
+.bas-str::after {
+    content: '';
+    position: absolute;
+    right: -8rem;
+    top: -8rem;
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--thv-theme-secondary) 22%, transparent);
+}
+
+.bas-str > * {
+    position: relative;
+    z-index: 1;
+}
+
+.bas-str__copy > span, .bas-str__guide > span {
+    color: var(--thv-theme-primary);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.bas-str__copy h2 {
+    margin: 0.45rem 0;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 0.98;
+}
+
+.bas-str__copy p, .bas-str__guide p {
+    color: var(--thv-theme-muted);
+    line-height: 1.65;
+}
+
+.bas-str form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.bas-str input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.8rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.7rem;
+    background: var(--thv-theme-surface);
+    color: var(--thv-theme-text);
+}
+
+.bas-str button {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: 0.7rem;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+    font-weight: 850;
+    cursor: pointer;
+}
+
+.bas-str__guide {
+    padding: 1.2rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface);
+}
+
+.bas-str__guide h3 {
+    margin: 0.35rem 0;
+}
+
+.bas-str__timer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.bas-str__timer div {
+    padding: 0.8rem 0.5rem;
+    text-align: center;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.8rem;
+    background: var(--thv-theme-surface);
+}
+
+.bas-str__timer strong, .bas-str__timer span {
+    display: block;
+}
+
+.bas-str__timer strong {
+    font-size: 1.5rem;
+}
+
+.bas-str__timer span {
+    color: var(--thv-theme-muted);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+}
+
+.bas-str__timer + form {
+    margin-top: 0.8rem;
+}
+
+.bas-str__referral {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 0.8rem;
+    align-items: end;
+}
+
+.bas-str__referral label {
+    display: grid;
+    gap: 0.35rem;
+    color: var(--thv-theme-muted);
+}
+
+.bas-str__referral label span {
+    display: flex;
+}
+
+.bas-str__referral label input {
+    border-radius: 0.7rem 0 0 0.7rem;
+}
+
+.bas-str__referral label button {
+    border-radius: 0 0.7rem 0.7rem 0;
+}
+
+.bas-str__referral > div {
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 0.8rem;
+    background: var(--thv-theme-surface);
+}
+
+.bas-str__referral strong, .bas-str__referral small {
+    display: block;
+}
+
+.bas-str__referral small {
+    color: var(--thv-theme-muted);
+}
+
+.bas-str__announcements p {
+    display: none;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.8rem;
+    background: var(--thv-theme-surface);
+}
+
+.bas-str__announcements p.is-active {
+    display: block;
+}
+
+.bas-str__announcements + button {
+    margin-top: 0.7rem;
+}
+
+.bas-str [data-status] {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: var(--thv-theme-success);
+    font-weight: 750;
+}
+
+@media (max-width: 760px) {
+    .bas-str {
+        grid-template-columns: 1fr;
+    }
+
+    .bas-str form {
+        flex-direction: column;
+    }
+
+    .bas-str__timer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bas-str__referral {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bas-str__referral label {
+        grid-column: 1 / -1;
+    }
+
+}

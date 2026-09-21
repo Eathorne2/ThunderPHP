@@ -1,0 +1,249 @@
+{
+  "slug": "edu-career-forward",
+  "name": "Drive Your Career Forward",
+  "category": "Education",
+  "description": "Career-focused education split with outcomes and CTA",
+  "keywords": [
+    "education",
+    "career",
+    "training",
+    "professional"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-edu-career\"><div class=\"tb-edu-career__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}<div class=\"tb-edu-career__points\">{{elements:points}}</div>{{elements:cta}}</div><div class=\"tb-edu-career__media\">{{elements:image}}</div></div>",
+  "css": ".tb-edu-career{display:grid;grid-template-columns:1fr .9fr;background:var(--tb-color-surface)}.tb-edu-career__copy{padding:clamp(36px,7vw,86px)}.tb-edu-career__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.15em}.tb-edu-career__title{margin:8px 0;color:var(--tb-color-secondary);font-size:clamp(42px,6vw,68px);line-height:1}.tb-edu-career__text{color:var(--tb-color-muted);line-height:1.7}.tb-edu-career__point{padding:12px 0;border-top:1px solid var(--tb-color-border);color:var(--tb-color-text);font-weight:800}.tb-edu-career__cta{display:inline-flex;margin-top:20px;padding:12px 18px;background:var(--tb-color-primary);color:#fff;text-decoration:none;font-weight:900}.tb-edu-career__media{min-height:600px}.tb-edu-career__image{width:100%;height:100%;min-height:600px;object-fit:cover}@media(max-width:760px){.tb-edu-career{grid-template-columns:1fr}.tb-edu-career__media,.tb-edu-career__image{min-height:380px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Professional learning"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-edu-career__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Drive your career forward"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-edu-career__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A career-oriented section for bootcamps, professional certificates and continuing education."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-edu-career__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "points",
+      "label": "Outcome",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Build portfolio-ready work"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Outcome",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<div class=\"tb-edu-career__point\">{{text}}</div>",
+      "min": 1,
+      "max": 8,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "text": "Build portfolio-ready work"
+        },
+        {
+          "text": "Learn from working professionals"
+        },
+        {
+          "text": "Practice real workplace scenarios"
+        }
+      ]
+    },
+    {
+      "key": "cta",
+      "label": "CTA",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Explore career programs",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-edu-career__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "image",
+      "label": "Career image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Graduate student"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-edu-career__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-edu-career__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

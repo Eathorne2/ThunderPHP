@@ -1,0 +1,18 @@
+{
+  "id": "food-delivery-menu-grid",
+  "name": "Food Delivery Menu Grid",
+  "description": "A modern delivery menu with category filters, item cards, dietary badges and quick-add interactions.",
+  "category": "Food & Restaurant",
+  "order": 3670,
+  "tags": [
+    "delivery",
+    "food cards",
+    "menu",
+    "ordering",
+    "filter"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

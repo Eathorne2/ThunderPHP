@@ -1,0 +1,108 @@
+<section class="mshbf">
+    <aside>
+        <p>Direct booking</p>
+        <h2>Reserve your stay in three simple steps.</h2>
+        <ol>
+            <li class="is-active" data-step-label="1">
+                <span>1</span>
+                Dates and guests
+            </li>
+            <li data-step-label="2">
+                <span>2</span>
+                Choose a room
+            </li>
+            <li data-step-label="3">
+                <span>3</span>
+                Your details
+            </li>
+        </ol>
+        <small>Best-rate guarantee · Flexible cancellation · Secure checkout</small>
+    </aside>
+    <form>
+        <div class="mshbf__step" data-step="1">
+            <h3>When are you arriving?</h3>
+            <div class="mshbf__fields">
+                <label>
+                    <span>Check in</span>
+                    <input required type="date">
+                </label>
+                <label>
+                    <span>Check out</span>
+                    <input required type="date">
+                </label>
+                <label>
+                    <span>Adults</span>
+                    <select>
+                        <option>2 adults</option>
+                        <option>1 adult</option>
+                        <option>3 adults</option>
+                    </select>
+                </label>
+                <label>
+                    <span>Children</span>
+                    <select>
+                        <option>No children</option>
+                        <option>1 child</option>
+                        <option>2 children</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div class="mshbf__step" data-step="2" hidden>
+            <h3>Which space feels right?</h3>
+            <div class="mshbf__rooms">
+                <label>
+                    <input checked name="room" type="radio">
+                    <span>
+                        <strong>Garden Room</strong>
+                        <small>From $220 / night</small>
+                    </span>
+                </label>
+                <label>
+                    <input name="room" type="radio">
+                    <span>
+                        <strong>Ocean Suite</strong>
+                        <small>From $410 / night</small>
+                    </span>
+                </label>
+                <label>
+                    <input name="room" type="radio">
+                    <span>
+                        <strong>Family Villa</strong>
+                        <small>From $590 / night</small>
+                    </span>
+                </label>
+            </div>
+        </div>
+        <div class="mshbf__step" data-step="3" hidden>
+            <h3>Who should we welcome?</h3>
+            <div class="mshbf__fields">
+                <label>
+                    <span>First name</span>
+                    <input required type="text">
+                </label>
+                <label>
+                    <span>Last name</span>
+                    <input required type="text">
+                </label>
+                <label>
+                    <span>Email address</span>
+                    <input required type="email">
+                </label>
+                <label>
+                    <span>Phone number</span>
+                    <input type="tel">
+                </label>
+            </div>
+            <label class="mshbf__message">
+                <span>Anything we should prepare?</span>
+                <textarea placeholder="Arrival time, accessibility, celebration or dietary notes" rows="4">
+                </textarea>
+            </label>
+        </div>
+        <footer>
+            <button class="mshbf__back" data-back hidden type="button">Back</button>
+            <button class="mshbf__next" data-next type="button">Continue</button>
+        </footer>
+    </form>
+</section>

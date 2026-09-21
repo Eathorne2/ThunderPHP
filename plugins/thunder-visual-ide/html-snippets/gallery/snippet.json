@@ -1,0 +1,12 @@
+{
+  "id": "mosaic-gallery",
+  "name": "Mosaic Gallery",
+  "description": "A responsive gallery with a simple full-screen lightbox interaction.",
+  "category": "Galleries",
+  "order": 40,
+  "tags": ["gallery", "images", "lightbox"],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

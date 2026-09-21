@@ -1,0 +1,18 @@
+{
+  "id": "web3-story-grid",
+  "name": "Web3 Story Grid",
+  "description": "A dark editorial story grid with luminous gradients, numbered features and varied card proportions.",
+  "category": "Magazine & Editorial",
+  "order": 3203,
+  "tags": [
+    "magazine",
+    "web3",
+    "grid",
+    "stories",
+    "dark"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

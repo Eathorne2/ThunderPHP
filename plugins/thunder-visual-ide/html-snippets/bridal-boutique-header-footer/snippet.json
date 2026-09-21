@@ -1,0 +1,18 @@
+{
+  "id": "bridal-boutique-header-footer",
+  "name": "Bridal Boutique Header and Footer",
+  "description": "A fashion-led bridal boutique shell with collection navigation, appointment booking and a matching retail footer.",
+  "category": "Wedding",
+  "order": 4790,
+  "tags": [
+    "bridal boutique",
+    "dress",
+    "header",
+    "footer",
+    "fashion"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,47 @@
+{
+    "name": "Clean Card",
+    "version": "1.0.0",
+    "plugin": "thunder-authentication",
+    "plugin_requires": "^1.0.0",
+    "author": "Eathorne Choongo",
+    "description": "A centered, spacious authentication card with a restrained visual panel.",
+    "default_palette": "blue",
+    "palettes": {
+        "blue": {
+            "primary": "#2563eb",
+            "secondary": "#64748b",
+            "background": "#f1f5f9",
+            "surface": "#ffffff",
+            "text": "#0f172a",
+            "muted_text": "#64748b",
+            "border": "#dbe4ef",
+            "success": "#15803d",
+            "warning": "#b45309",
+            "danger": "#b91c1c"
+        },
+        "emerald": {
+            "primary": "#047857",
+            "secondary": "#475569",
+            "background": "#ecfdf5",
+            "surface": "#ffffff",
+            "text": "#052e2b",
+            "muted_text": "#64748b",
+            "border": "#cce8df",
+            "success": "#15803d",
+            "warning": "#b45309",
+            "danger": "#b91c1c"
+        },
+        "plum": {
+            "primary": "#7e22ce",
+            "secondary": "#64748b",
+            "background": "#faf5ff",
+            "surface": "#ffffff",
+            "text": "#2e1065",
+            "muted_text": "#6b7280",
+            "border": "#eadcf5",
+            "success": "#15803d",
+            "warning": "#b45309",
+            "danger": "#be123c"
+        }
+    }
+}

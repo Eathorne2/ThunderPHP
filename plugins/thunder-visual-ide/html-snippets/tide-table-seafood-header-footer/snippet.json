@@ -1,0 +1,18 @@
+{
+  "id": "tide-table-seafood-header-footer",
+  "name": "Tide Table Seafood Header and Footer",
+  "description": "A deep-blue seafood restaurant shell with a catch-of-the-day navigation treatment and matching coastal footer.",
+  "category": "Food & Restaurant",
+  "order": 3820,
+  "tags": [
+    "header footer",
+    "seafood",
+    "restaurant",
+    "coastal",
+    "menu"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "creator-portfolio-profile-page",
+  "name": "Creator Portfolio Profile",
+  "description": "A visual creator profile with introduction, skills, selected work, and contact details.",
+  "category": "Profiles",
+  "order": 3050,
+  "tags": [
+    "profile",
+    "portfolio",
+    "creator",
+    "gallery"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

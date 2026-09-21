@@ -1,0 +1,17 @@
+{
+  "id": "corporate-compliance-checklist",
+  "name": "Corporate Compliance Checklist",
+  "description": "An interactive compliance readiness checklist with visible progress.",
+  "category": "Business & Law",
+  "order": 5310,
+  "tags": [
+    "business",
+    "compliance",
+    "checklist",
+    "interactive"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

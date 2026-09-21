@@ -1,0 +1,18 @@
+{
+  "id": "collectors-registration",
+  "name": "Collectors Registration",
+  "description": "A layered editorial registration panel for a premium club, publication or invite-only community.",
+  "category": "Authentication",
+  "order": 270,
+  "tags": [
+    "authentication",
+    "registration",
+    "signup",
+    "editorial",
+    "membership"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

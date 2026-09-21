@@ -1,0 +1,250 @@
+{
+  "slug": "food-healthy-hero",
+  "name": "Healthy Food Hero",
+  "category": "Food & Restaurant",
+  "description": "Fresh health-focused food hero with image, benefits and action",
+  "keywords": [
+    "food",
+    "restaurant",
+    "healthy",
+    "nutrition",
+    "organic"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-food-healthy\"><div class=\"tb-food-healthy__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}{{elements:benefits}}{{elements:cta}}</div><div class=\"tb-food-healthy__visual\">{{elements:image}}</div></div>",
+  "css": ".tb-food-healthy{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,76px);align-items:center;padding:clamp(34px,6vw,78px);background:color-mix(in srgb,var(--tb-color-primary) 7%,var(--tb-color-surface))}.tb-food-healthy__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:950;letter-spacing:.16em;text-transform:uppercase}.tb-food-healthy__title{margin:10px 0;color:var(--tb-color-secondary);font-size:clamp(48px,7vw,82px);line-height:.95}.tb-food-healthy__text{color:var(--tb-color-muted);font-size:17px;line-height:1.75}.tb-food-healthy__benefit{display:inline-flex;margin:8px 8px 0 0;padding:8px 11px;border:1px solid var(--tb-color-border);background:var(--tb-color-background);color:var(--tb-color-secondary);font-weight:800;font-size:13px}.tb-food-healthy__cta{display:inline-flex;margin-top:24px;padding:13px 20px;background:var(--tb-color-primary);color:var(--tb-color-surface);font-weight:900;text-decoration:none}.tb-food-healthy__image{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:50% 50% 8% 50%;display:block}@media(max-width:720px){.tb-food-healthy{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Eat bright"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-food-healthy__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Fresh food that works for your day"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-food-healthy__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Colorful bowls, balanced plates and simple ingredients prepared without unnecessary fuss."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-food-healthy__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "benefits",
+      "label": "Benefit",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Fresh daily"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ".tb-food-healthy__benefit"
+        }
+      ],
+      "template": "<span class=\"tb-food-healthy__benefit\">{{text}}</span>",
+      "min": 1,
+      "max": 10,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "text": "Fresh daily"
+        },
+        {
+          "text": "Plant-forward"
+        },
+        {
+          "text": "Made to order"
+        }
+      ]
+    },
+    {
+      "key": "cta",
+      "label": "Menu button",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Explore the menu",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-food-healthy__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "image",
+      "label": "Healthy food image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Healthy colorful meal"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-food-healthy__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-food-healthy__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

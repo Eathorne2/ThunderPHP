@@ -1,0 +1,28 @@
+{
+    "name": "Install Wizard",
+    "version": "1.0.0",
+    "core_requires": "^1.0.0",
+    "id": "install-wizard",
+    "description": "A first-run setup wizard that creates config.php from config-sample.php when the main config file is missing.",
+    "author": "Eathorne Choongo",
+    "website": "thunderphp.com",
+    "thumbnail": "thumbnail.jpg",
+    "active": true,
+    "look": "main",
+    "index": 0,
+    "permissions": [],
+    "routes": {
+        "on": [
+            "all"
+        ],
+        "off": [],
+        "routes": [
+            {
+                "method": "GET|POST",
+                "pattern": "/install",
+                "name": "install.index"
+            }
+        ]
+    },
+    "dependencies": {}
+}

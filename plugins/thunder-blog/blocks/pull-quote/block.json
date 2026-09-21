@@ -1,0 +1,94 @@
+{
+  "slug": "pull-quote",
+  "name": "Pull Quote",
+  "category": "Article",
+  "description": "A prominent quotation with attribution.",
+  "version": "1.0.0",
+  "html": "<blockquote class=\"tb-block tb-block--pull-quote\">\n  <span class=\"tb-pull-quote__mark\">“</span>\n  {{elements:quote}}\n  {{elements:source}}\n</blockquote>",
+  "css": ".tb-block--pull-quote{position:relative;margin:0;padding:34px 38px;border-left:5px solid var(--tb-color-primary);border-radius:0 18px 18px 0;background:color-mix(in srgb,var(--tb-color-primary) 7%,var(--tb-color-surface))}.tb-pull-quote__mark{position:absolute;right:22px;top:10px;color:color-mix(in srgb,var(--tb-color-primary) 22%,transparent);font-size:90px;font-family:Georgia,serif;line-height:1}.tb-pull-quote__text{position:relative;margin:0;color:var(--tb-color-secondary);font-family:Georgia,\"Times New Roman\",serif;font-size:clamp(25px,4vw,40px);line-height:1.35;letter-spacing:-.025em}.tb-pull-quote__footer{margin-top:18px;display:flex;flex-wrap:wrap;gap:5px 10px}.tb-pull-quote__author{color:var(--tb-color-text);font-size:14px}.tb-pull-quote__role{color:var(--tb-color-muted);font-size:14px}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "quote",
+      "label": "Quote",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "The most useful ideas are the ones that change how we see the work in front of us."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Quote",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 6
+        }
+      ],
+      "template": "<p class=\"tb-pull-quote__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "source",
+      "label": "Source",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "author": "Jane Doe",
+        "role": "Writer and researcher"
+      },
+      "schema": [
+        {
+          "key": "author",
+          "label": "Author",
+          "type": "text",
+          "selector": ".tb-pull-quote__author"
+        },
+        {
+          "key": "role",
+          "label": "Role or source",
+          "type": "text",
+          "selector": ".tb-pull-quote__role"
+        }
+      ],
+      "template": "<footer class=\"tb-pull-quote__footer\"><strong class=\"tb-pull-quote__author\">{{author}}</strong><span class=\"tb-pull-quote__role\">{{role}}</span></footer>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

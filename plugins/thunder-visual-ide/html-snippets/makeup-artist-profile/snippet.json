@@ -1,0 +1,17 @@
+{
+  "id": "makeup-artist-profile",
+  "name": "Makeup Artist Profile",
+  "description": "A portfolio-style profile for a makeup artist, stylist or beauty professional.",
+  "category": "Fashion & Beauty",
+  "order": 3980,
+  "tags": [
+    "fashion",
+    "beauty",
+    "feature",
+    "about"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

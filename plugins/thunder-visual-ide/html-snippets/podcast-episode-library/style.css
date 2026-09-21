@@ -1,0 +1,186 @@
+.pel {
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-text) 14%, transparent);
+    border-radius: 1.4rem;
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-background);
+}
+
+.pel *,
+.pel *::before,
+.pel *::after {
+    box-sizing: border-box;
+}
+
+.pel__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: end;
+    padding: clamp(1.4rem, 4vw, 3.2rem);
+}
+
+.pel__header p,
+.pel__featured > span {
+    margin: 0;
+    color: var(--thv-theme-primary);
+    font-size: .64rem;
+    font-weight: 900;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.pel h2 {
+    margin: .45rem 0 0;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    letter-spacing: -.06em;
+    line-height: .9;
+}
+
+.pel__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+
+.pel__filters button {
+    padding: .6rem .75rem;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-text) 18%, transparent);
+    color: inherit;
+    background: transparent;
+    font: inherit;
+    font-size: .64rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.pel__filters button.is-active {
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary);
+}
+
+.pel__featured {
+    position: relative;
+    padding: clamp(2rem, 7vw, 6rem);
+    color: var(--thv-theme-on-primary);
+    background:
+        linear-gradient(90deg, color-mix(in srgb, var(--thv-theme-secondary) 92%, transparent), color-mix(in srgb, var(--thv-theme-secondary) 32%, transparent)),
+        url("https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=1600&q=85") center / cover;
+}
+
+.pel__featured h3 {
+    max-width: 12ch;
+    margin: .7rem 0 1rem;
+    font-family: Georgia, serif;
+    font-size: clamp(2.7rem, 6vw, 5rem);
+    font-weight: 500;
+    letter-spacing: -.055em;
+    line-height: .95;
+}
+
+.pel__featured p {
+    max-width: 37rem;
+    color: color-mix(in srgb, var(--thv-theme-on-primary) 68%, transparent);
+    line-height: 1.75;
+}
+
+.pel__featured button {
+    display: inline-flex;
+    gap: .8rem;
+    align-items: center;
+    margin-top: 1rem;
+    padding: .85rem 1rem;
+    border: 0;
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary);
+    font: inherit;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.pel__featured button small {
+    padding-left: .8rem;
+    border-left: 1px solid color-mix(in srgb, var(--thv-theme-text) 25%, transparent);
+}
+
+.pel__episodes {
+    padding: 0 clamp(1.4rem, 4vw, 3.2rem) 1rem;
+}
+
+.pel__episodes article {
+    display: grid;
+    grid-template-columns: 3.2rem 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--thv-theme-text) 12%, transparent);
+}
+
+.pel__episodes article[hidden] {
+    display: none;
+}
+
+.pel__episodes article > span {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -.05em;
+}
+
+.pel__episodes article > div {
+    display: grid;
+    gap: .25rem;
+}
+
+.pel__episodes small {
+    color: var(--thv-theme-primary);
+    font-size: .62rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.pel__episodes h3 {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.pel__episodes p {
+    margin: .2rem 0 0;
+    color: var(--thv-theme-muted);
+    font-size: .78rem;
+    line-height: 1.55;
+}
+
+.pel__episodes button {
+    display: grid;
+    width: 2.7rem;
+    height: 2.7rem;
+    place-items: center;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-text) 20%, transparent);
+    border-radius: 50%;
+    color: inherit;
+    background: transparent;
+    cursor: pointer;
+}
+
+.pel__episodes button.is-playing {
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary);
+}
+
+@media (max-width: 760px) {
+    .pel__header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 520px) {
+    .pel__episodes article {
+        grid-template-columns: 2.5rem 1fr;
+    }
+
+    .pel__episodes article > button {
+        grid-column: 2;
+        justify-self: start;
+    }
+}

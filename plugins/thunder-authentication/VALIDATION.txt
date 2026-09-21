@@ -1,0 +1,51 @@
+THUNDER AUTHENTICATION VALIDATION
+=================================
+Version: 1.1.0
+Validated: 2026-08-01T09:24:21
+
+Syntax and manifests
+--------------------
+PHP files linted: 97
+JavaScript files checked: 12
+JSON manifests parsed: 7
+
+Route coverage
+--------------
+Configured routes: 33
+Controller mappings: 33
+Frontend view routes: 4
+Admin view routes: 10
+Unmapped controller routes: none
+Missing view routes: none
+
+Looks
+-----
+Complete looks: 6
+- centered-minimal
+- clean-card
+- dark-access
+- line-minimal
+- soft-rounded
+- split-screen
+
+Requested changes
+-----------------
+PASS: Controller loop uses require_once
+PASS: auth_render_view uses require_once
+PASS: Password toggles excluded from tab order
+PASS: Old-input session restoration exists
+PASS: Passwords excluded from old input
+PASS: Profile logout action exists
+PASS: Account logout action exists
+PASS: Admin profile action exists
+PASS: Six looks discovered
+PASS: No old admin asset hooks
+PASS: All routes have controllers
+PASS: All view routes covered
+PASS: All look files complete
+
+Notes
+-----
+- Password fields are intentionally never restored after a failed submit.
+- Frontend and admin CSS/JS are included directly by each look's view wrappers.
+- Runtime database and framework integration should still be tested in the target ThunderPHP installation.

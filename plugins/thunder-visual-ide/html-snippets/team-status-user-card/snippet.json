@@ -1,0 +1,17 @@
+{
+  "id": "team-status-user-card",
+  "name": "Team Status User Card",
+  "description": "A workspace member card showing current status, workload, skills, and team actions.",
+  "category": "User Cards",
+  "order": 3080,
+  "tags": [
+    "user",
+    "card",
+    "team",
+    "status"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

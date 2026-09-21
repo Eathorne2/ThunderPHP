@@ -1,0 +1,17 @@
+{
+  "id": "legal-services-tabs",
+  "name": "Legal Services Tabs",
+  "description": "Interactive practice-area tabs for a modern legal or advisory website.",
+  "category": "Business & Law",
+  "order": 5260,
+  "tags": [
+    "law",
+    "services",
+    "tabs",
+    "interactive"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

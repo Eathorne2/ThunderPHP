@@ -1,0 +1,19 @@
+{
+  "id": "criminal-defense-header-footer",
+  "name": "Criminal Defense Header and Footer",
+  "description": "Responsive defence counsel for individuals, executives and organisations.",
+  "category": "Business & Law",
+  "order": 5404,
+  "tags": [
+    "header",
+    "footer",
+    "business",
+    "law",
+    "navigation",
+    "criminal defence"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

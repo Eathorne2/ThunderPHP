@@ -1,0 +1,17 @@
+{
+  "id": "stats-callout-call-to-action",
+  "name": "Stats Callout CTA",
+  "description": "A credible call to action combining proof metrics, customer result copy, and one clear next step.",
+  "category": "Call to Action",
+  "order": 3140,
+  "tags": [
+    "cta",
+    "statistics",
+    "proof",
+    "signup"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

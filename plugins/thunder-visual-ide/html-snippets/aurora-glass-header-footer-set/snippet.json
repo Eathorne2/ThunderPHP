@@ -1,0 +1,18 @@
+{
+  "id": "aurora-glass-header-footer-set",
+  "name": "Aurora Glass Header and Footer Set",
+  "description": "A translucent startup header and luminous newsletter footer with matching gradient accents.",
+  "category": "Header and Footer Sets",
+  "order": 3003,
+  "tags": [
+    "header",
+    "footer",
+    "glass",
+    "startup",
+    "gradient"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

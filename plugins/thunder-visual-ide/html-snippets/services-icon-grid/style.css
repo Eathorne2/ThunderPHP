@@ -1,0 +1,99 @@
+.services-icon-grid {
+    max-width: 76rem;
+    margin: 0 auto;
+    padding: clamp(1.5rem, 5vw, 4rem);
+    color: var(--thv-theme-text, #172033);
+    background: var(--thv-theme-surface-alt, #f5f7fa);
+}
+
+.services-icon-grid__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(16rem, 0.8fr);
+    align-items: end;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.services-icon-grid__header p,
+.services-icon-grid__header h2 {
+    margin: 0;
+}
+
+.services-icon-grid__header > div > p {
+    color: var(--thv-theme-primary, #4f46e5);
+    font-size: 0.75rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.services-icon-grid__header h2 {
+    margin-top: 0.55rem;
+    font-size: clamp(2rem, 5vw, 3.7rem);
+    letter-spacing: -0.05em;
+    line-height: 1.05;
+}
+
+.services-icon-grid__header > p {
+    color: var(--thv-theme-muted, #667085);
+    line-height: 1.7;
+}
+
+.services-icon-grid__items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.services-icon-grid__items article {
+    position: relative;
+    padding: clamp(1.4rem, 4vw, 2.4rem);
+    border: 1px solid var(--thv-theme-border, #dce3ec);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.services-icon-grid__number {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    color: var(--thv-theme-muted, #667085);
+    font-size: 0.72rem;
+    font-weight: 850;
+}
+
+.services-icon-grid__icon {
+    display: grid;
+    width: 3.4rem;
+    height: 3.4rem;
+    place-items: center;
+    border-radius: 1rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #4f46e5);
+    font-size: 1.35rem;
+}
+
+.services-icon-grid h3 {
+    margin: 1.2rem 0 0.55rem;
+    font-size: 1.4rem;
+}
+
+.services-icon-grid article p {
+    color: var(--thv-theme-muted, #667085);
+    line-height: 1.65;
+}
+
+.services-icon-grid article a {
+    display: inline-block;
+    margin-top: 0.4rem;
+    color: var(--thv-theme-primary, #4f46e5);
+    font-weight: 750;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .services-icon-grid__header,
+    .services-icon-grid__items {
+        grid-template-columns: 1fr;
+    }
+}

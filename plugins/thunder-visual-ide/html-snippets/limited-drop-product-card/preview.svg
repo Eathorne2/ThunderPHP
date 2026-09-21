@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+    <rect width="640" height="360" rx="28" fill="#0d0f16"/>
+    <rect x="22" y="22" width="596" height="316" rx="18" fill="#fffdf7"/>
+    <text x="42" y="52" fill="#111111" font-family="Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="2">PRODUCT CARDS</text>
+    <text x="598" y="52" fill="#e24a2b" font-family="Arial, sans-serif" font-size="10" font-weight="900" text-anchor="end">03</text>
+    
+        <rect x="42" y="82" width="556" height="218" fill="#11131a"/>
+        <rect x="62" y="102" width="516" height="38" fill="#f2ff6b"/>
+        <rect x="62" y="158" width="178" height="122" fill="#e24a2b"/>
+        <rect x="258" y="158" width="320" height="122" fill="#24283a"/>
+        <circle cx="522" cy="219" r="38" fill="#f2ff6b"/>
+    <text x="42" y="326" fill="#111111" font-family="Arial, sans-serif" font-size="21" font-weight="800">Limited Drop Product Card</text>
+</svg>

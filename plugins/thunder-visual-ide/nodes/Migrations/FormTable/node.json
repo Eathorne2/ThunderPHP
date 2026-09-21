@@ -1,0 +1,81 @@
+{
+  "type": "migration.form_table",
+  "label": "Create Table From Form",
+  "category": "Migrations",
+  "kind": "migration",
+  "icon": "CRE",
+  "color": "#8b5cf6",
+  "description": "Infers database columns from a visual Form schema and creates a reversible table migration.",
+  "allowed_graphs": [
+    "migration"
+  ],
+  "defaults": {
+    "title": "Create Table From Form",
+    "view_node_id": "",
+    "form_name": "",
+    "table": "users",
+    "include_id": true,
+    "include_timestamps": true,
+    "unique_fields": "email"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "view_node_id",
+      "label": "View",
+      "type": "view_ref"
+    },
+    {
+      "name": "form_name",
+      "label": "Visual form",
+      "type": "form_ref"
+    },
+    {
+      "name": "table",
+      "label": "Table",
+      "type": "text"
+    },
+    {
+      "name": "include_id",
+      "label": "Add auto-increment id",
+      "type": "checkbox"
+    },
+    {
+      "name": "include_timestamps",
+      "label": "Add date_created/date_updated",
+      "type": "checkbox"
+    },
+    {
+      "name": "unique_fields",
+      "label": "Unique form fields",
+      "type": "text",
+      "help": "Comma-separated, for example email."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Previous",
+        "type": "exec",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out"
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Migrations\\FormTableCompiler",
+    "file": "Compiler.php"
+  }
+}

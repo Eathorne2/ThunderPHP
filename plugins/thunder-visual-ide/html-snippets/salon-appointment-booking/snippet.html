@@ -1,0 +1,73 @@
+<section class="sab-booking">
+    <div class="sab-booking__image">
+        <img alt="Beauty studio appointment" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+        <div>
+            <span>
+                Appointments
+            </span>
+            <strong>
+                Personal service, reserved for you.
+            </strong>
+        </div>
+    </div>
+    <form>
+        <header>
+            <span class="sab-booking__eyebrow">
+                Book the studio
+            </span>
+            <h2>
+                Your next appointment.
+            </h2>
+            <p>
+                Choose a service and preferred date. The studio will confirm availability.
+            </p>
+        </header>
+        <div class="sab-booking__fields">
+            <label>
+                <span>
+                    Service
+                </span>
+                <select>
+                    <option>
+                        Signature facial
+                    </option>
+                    <option>
+                        Cut and finish
+                    </option>
+                    <option>
+                        Makeup appointment
+                    </option>
+                </select>
+            </label>
+            <label>
+                <span>
+                    Date
+                </span>
+                <input required="" type="date"/>
+            </label>
+            <label>
+                <span>
+                    Name
+                </span>
+                <input placeholder="Full name" required="" type="text"/>
+            </label>
+            <label>
+                <span>
+                    Email
+                </span>
+                <input placeholder="you@example.com" required="" type="email"/>
+            </label>
+        </div>
+        <label>
+            <span>
+                Notes
+            </span>
+            <textarea placeholder="Tell us anything useful before your appointment" rows="4"></textarea>
+        </label>
+        <button type="submit">
+            Request appointment
+        </button>
+        <p aria-live="polite" data-sab-booking-message="">
+        </p>
+    </form>
+</section>

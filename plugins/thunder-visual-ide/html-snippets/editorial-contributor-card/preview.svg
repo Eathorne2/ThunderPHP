@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+    <rect width="640" height="360" rx="28" fill="#0d0f16"/>
+    <rect x="22" y="22" width="596" height="316" rx="18" fill="#fffdf7"/>
+    <text x="42" y="52" fill="#111111" font-family="Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="2">USER CARDS</text>
+    <text x="598" y="52" fill="#e84b32" font-family="Arial, sans-serif" font-size="10" font-weight="900" text-anchor="end">05</text>
+    
+        <rect x="42" y="82" width="210" height="218" fill="#e84b32"/>
+        <rect x="268" y="82" width="330" height="102" fill="#f7f2e9"/>
+        <rect x="268" y="198" width="158" height="102" fill="#f5e76b"/>
+        <rect x="440" y="198" width="158" height="102" fill="#24242d"/>
+    <text x="42" y="326" fill="#111111" font-family="Arial, sans-serif" font-size="21" font-weight="800">Editorial Contributor Card</text>
+</svg>

@@ -1,0 +1,16 @@
+.market-card {
+    padding: 1.25rem;
+    border: 1px solid var(--thv-theme-border, #cbd5e1);
+    border-radius: 1rem;
+    color: var(--thv-theme-text, #0f172a);
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.market-card__eyebrow {
+    color: var(--thv-theme-primary, #2563eb);
+}
+
+.market-card__button {
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #2563eb);
+}

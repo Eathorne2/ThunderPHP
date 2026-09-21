@@ -1,0 +1,17 @@
+{
+  "id": "searchable-user-directory",
+  "name": "Searchable User Directory",
+  "description": "A searchable directory of compact user cards with availability indicators.",
+  "category": "User Cards",
+  "order": 410,
+  "tags": [
+    "users",
+    "directory",
+    "cards",
+    "search"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

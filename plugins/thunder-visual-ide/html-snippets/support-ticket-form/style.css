@@ -1,0 +1,147 @@
+.support-form {
+    width: min(100%, 42rem);
+    padding: 1.4rem;
+    box-sizing: border-box;
+    border: 1px solid var(--thv-theme-border, #e2e8f0);
+    border-radius: 1.2rem;
+    background: var(--thv-theme-surface, #ffffff);
+    color: var(--thv-theme-text, #0f172a);
+    box-shadow: 0 18px 50px rgba(15, 23, 42, .08);
+}
+
+.support-form header {
+    display: flex;
+    gap: .9rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--thv-theme-border, #e2e8f0);
+}
+
+.support-form__icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 3rem;
+    height: 3rem;
+    border-radius: .85rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: linear-gradient(135deg, var(--thv-theme-warning, #f97316), var(--thv-theme-secondary, #db2777));
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.support-form header span {
+    color: var(--thv-theme-secondary, #db2777);
+    font-size: .7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.support-form h2 {
+    margin: .2rem 0;
+}
+
+.support-form header p {
+    margin: .2rem 0 0;
+    color: var(--thv-theme-muted, #64748b);
+}
+
+.support-form form {
+    display: grid;
+    gap: .85rem;
+    margin-top: 1rem;
+}
+
+.support-form label {
+    display: grid;
+    gap: .35rem;
+    color: var(--thv-theme-text, #334155);
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.support-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .75rem;
+}
+
+.support-form input[type="text"], .support-form select, .support-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: .72rem .8rem;
+    border: 1px solid var(--thv-theme-border, #cbd5e1);
+    border-radius: .68rem;
+    font: inherit;
+}
+
+.support-form textarea {
+    resize: vertical;
+}
+
+.support-form label small {
+    color: var(--thv-theme-muted, #94a3b8);
+    text-align: right;
+    font-weight: 500;
+}
+
+.support-form__upload {
+    position: relative;
+    padding: 1rem;
+    border: 1px dashed var(--thv-theme-muted, #94a3b8);
+    border-radius: .75rem;
+    background: var(--thv-theme-surface-alt, #f8fafc);
+    text-align: center;
+}
+
+.support-form__upload input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.support-form__upload strong, .support-form__upload span {
+    display: block;
+}
+
+.support-form__upload span {
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .72rem;
+    font-weight: 500;
+}
+
+.support-form__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.support-form__footer .copy {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    color: var(--thv-theme-muted, #64748b);
+    font-weight: 500;
+}
+
+.support-form__footer button {
+    padding: .75rem 1rem;
+    border: 0;
+    border-radius: .7rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-text, #0f172a);
+    font-weight: 800;
+}
+
+@media(max-width:520px) {
+    .support-form__row {
+        grid-template-columns: 1fr
+    }
+    .support-form__footer {
+        align-items: stretch;
+        flex-direction: column
+    }
+    .support-form__footer button {
+        width: 100%
+    }
+}

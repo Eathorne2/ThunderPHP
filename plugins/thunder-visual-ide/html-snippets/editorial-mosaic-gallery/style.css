@@ -1,0 +1,168 @@
+.ig-editorial-mosaic {
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.ig-editorial-mosaic *,
+.ig-editorial-mosaic *::before,
+.ig-editorial-mosaic *::after {
+    box-sizing: border-box;
+}
+
+.ig-editorial-mosaic button,
+.ig-editorial-mosaic input,
+.ig-editorial-mosaic select,
+.ig-editorial-mosaic textarea {
+    font: inherit;
+}
+
+.ig-editorial-mosaic a {
+    color: inherit;
+}
+
+.ig-editorial-mosaic img {
+    display: block;
+    max-width: 100%;
+}
+.ig-editorial-mosaic {
+    padding: clamp(1.25rem, 4vw, 3.5rem);
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.5rem;
+    background: var(--thv-theme-surface);
+}
+
+.ig-editorial-mosaic__heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.ig-editorial-mosaic__heading p,
+.ig-editorial-mosaic__heading span {
+    margin: 0;
+    color: var(--thv-theme-primary);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.ig-editorial-mosaic__heading h2 {
+    margin: .4rem 0 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2.2rem, 6vw, 5rem);
+    font-weight: 400;
+    letter-spacing: -.055em;
+}
+
+.ig-editorial-mosaic__grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-auto-rows: 12rem;
+    gap: .75rem;
+}
+
+.ig-editorial-mosaic__grid button {
+    position: relative;
+    grid-column: span 4;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 1rem;
+    background: var(--thv-theme-surface-alt);
+    cursor: zoom-in;
+}
+
+.ig-editorial-mosaic__grid button:first-child {
+    grid-column: span 7;
+    grid-row: span 2;
+}
+
+.ig-editorial-mosaic__grid button:nth-child(2) {
+    grid-column: span 5;
+    grid-row: span 2;
+}
+
+.ig-editorial-mosaic__grid button:nth-child(3) { grid-column: span 5; }
+.ig-editorial-mosaic__grid button:nth-child(4) { grid-column: span 3; }
+.ig-editorial-mosaic__grid button:nth-child(5) { grid-column: span 4; }
+
+.ig-editorial-mosaic__grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .35s ease;
+}
+
+.ig-editorial-mosaic__grid button:hover img { transform: scale(1.04); }
+
+.ig-editorial-mosaic__grid span {
+    position: absolute;
+    right: .65rem;
+    bottom: .65rem;
+    left: .65rem;
+    padding: .65rem .75rem;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-on-primary) 28%, transparent);
+    border-radius: .65rem;
+    color: var(--thv-theme-on-primary);
+    background: color-mix(in srgb, var(--thv-theme-text) 62%, transparent);
+    font-size: .72rem;
+    font-weight: 750;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    backdrop-filter: blur(10px);
+}
+
+.ig-editorial-mosaic__lightbox {
+    width: min(92vw, 72rem);
+    padding: 0;
+    overflow: visible;
+    border: 0;
+    background: transparent;
+}
+
+.ig-editorial-mosaic__lightbox::backdrop {
+    background: color-mix(in srgb, var(--thv-theme-text) 86%, transparent);
+}
+
+.ig-editorial-mosaic__lightbox img {
+    width: 100%;
+    max-height: 82vh;
+    border-radius: 1rem;
+    object-fit: contain;
+}
+
+.ig-editorial-mosaic__lightbox p {
+    margin: .75rem 0 0;
+    color: var(--thv-theme-on-primary);
+    text-align: center;
+}
+
+.ig-editorial-mosaic__lightbox button {
+    position: absolute;
+    top: -2.7rem;
+    right: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-on-primary) 45%, transparent);
+    border-radius: 50%;
+    color: var(--thv-theme-on-primary);
+    background: transparent;
+    cursor: pointer;
+}
+
+@media (max-width: 760px) {
+    .ig-editorial-mosaic__heading { align-items: start; flex-direction: column; gap: .7rem; }
+    .ig-editorial-mosaic__grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 14rem; }
+    .ig-editorial-mosaic__grid button,
+    .ig-editorial-mosaic__grid button:first-child,
+    .ig-editorial-mosaic__grid button:nth-child(2),
+    .ig-editorial-mosaic__grid button:nth-child(3),
+    .ig-editorial-mosaic__grid button:nth-child(4),
+    .ig-editorial-mosaic__grid button:nth-child(5) { grid-column: auto; grid-row: auto; }
+    .ig-editorial-mosaic__grid button:first-child { grid-column: 1 / -1; }
+}

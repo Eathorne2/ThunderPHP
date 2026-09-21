@@ -1,0 +1,221 @@
+{
+  "slug": "fb-spa-ritual",
+  "name": "Spa Ritual Feature",
+  "category": "Fashion & Beauty",
+  "description": "Large spa imagery with a calm three-step restorative ritual.",
+  "keywords": [
+    "spa",
+    "wellness",
+    "beauty",
+    "ritual"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-fb-spa\"><div class=\"tb-fb-spa__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-fb-spa__layout\">{{elements:image}}<div class=\"tb-fb-spa__steps\">{{elements:steps}}</div></div></div>",
+  "css": ".tb-fb-spa{padding:clamp(30px,6vw,78px);background:color-mix(in srgb,var(--tb-color-primary) 5%,var(--tb-color-background))}.tb-fb-spa__head{max-width:760px;margin-bottom:32px}.tb-fb-spa__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.17em;text-transform:uppercase}.tb-fb-spa__title{margin:10px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(40px,6vw,68px);font-weight:500}.tb-fb-spa__text{max-width:620px;color:var(--tb-color-muted);line-height:1.7}.tb-fb-spa__layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:24px}.tb-fb-spa__image{width:100%;height:100%;min-height:520px;object-fit:cover}.tb-fb-spa__steps{display:grid}.tb-fb-spa__step{padding:26px;border-bottom:1px solid var(--tb-color-border);background:var(--tb-color-surface)}.tb-fb-spa__step-title{margin:0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:28px}.tb-fb-spa__step-text{margin:8px 0 0;color:var(--tb-color-muted);line-height:1.65}@media(max-width:760px){.tb-fb-spa__layout{grid-template-columns:1fr}.tb-fb-spa__image{min-height:380px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Relax & refresh"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-fb-spa__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A ritual designed around you"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-fb-spa__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Use a calm editorial layout to explain the experience around a spa or wellness service."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-fb-spa__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "image",
+      "label": "Spa image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Relaxing spa treatment"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-fb-spa__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-fb-spa__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "steps",
+      "label": "Ritual step",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "title": "Slow down",
+        "text": "A calm arrival and unhurried consultation."
+      },
+      "schema": [
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-fb-spa__step-title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-fb-spa__step-text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-fb-spa__step\"><h3 class=\"tb-fb-spa__step-title\">{{title}}</h3><p class=\"tb-fb-spa__step-text\">{{text}}</p></article>",
+      "min": 1,
+      "max": 6,
+      "default_items": [
+        {
+          "title": "Slow down",
+          "text": "A calm arrival and unhurried consultation."
+        },
+        {
+          "title": "Release",
+          "text": "Hands-on rituals chosen for your needs."
+        },
+        {
+          "title": "Restore",
+          "text": "Leave with a simple after-care plan."
+        }
+      ],
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

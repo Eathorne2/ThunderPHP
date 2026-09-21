@@ -1,0 +1,47 @@
+{
+    "name": "Centered Minimal",
+    "version": "1.0.0",
+    "plugin": "thunder-authentication",
+    "plugin_requires": "^1.0.0",
+    "author": "Eathorne Choongo",
+    "description": "A quiet, centered form with generous white space and almost no decorative chrome.",
+    "default_palette": "ink",
+    "palettes": {
+        "ink": {
+            "primary": "#111827",
+            "secondary": "#6b7280",
+            "background": "#f8fafc",
+            "surface": "#ffffff",
+            "text": "#111827",
+            "muted_text": "#6b7280",
+            "border": "#e5e7eb",
+            "success": "#15803d",
+            "warning": "#a16207",
+            "danger": "#b91c1c"
+        },
+        "sage": {
+            "primary": "#3f6212",
+            "secondary": "#64748b",
+            "background": "#f7fee7",
+            "surface": "#ffffff",
+            "text": "#1a2e05",
+            "muted_text": "#64748b",
+            "border": "#d9e8c5",
+            "success": "#15803d",
+            "warning": "#a16207",
+            "danger": "#b91c1c"
+        },
+        "navy": {
+            "primary": "#1e3a8a",
+            "secondary": "#64748b",
+            "background": "#f8fafc",
+            "surface": "#ffffff",
+            "text": "#172554",
+            "muted_text": "#64748b",
+            "border": "#dbe3ef",
+            "success": "#15803d",
+            "warning": "#a16207",
+            "danger": "#b91c1c"
+        }
+    }
+}

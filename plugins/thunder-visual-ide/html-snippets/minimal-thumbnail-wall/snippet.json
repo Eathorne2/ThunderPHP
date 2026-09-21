@@ -1,0 +1,20 @@
+{
+  "id": "minimal-thumbnail-wall",
+  "name": "Minimal Thumbnail Wall",
+  "description": "A clean thumbnail wall that opens selected images in a centered detail panel.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9012,
+  "tags": [
+    "gallery",
+    "thumbnails",
+    "minimal",
+    "lightbox"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

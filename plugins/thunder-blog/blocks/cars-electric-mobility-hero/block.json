@@ -1,0 +1,206 @@
+{
+  "slug": "cars-electric-mobility-hero",
+  "name": "Electric Mobility Hero",
+  "category": "Cars & Transportation",
+  "description": "EV-focused hero for clean modern transportation brands",
+  "keywords": [
+    "cars",
+    "transportation",
+    "hero",
+    "image",
+    "cta"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-auto-electric-mobility-hero\"><div class=\"tb-auto-electric-mobility-hero__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}{{elements:cta}}</div><div class=\"tb-auto-electric-mobility-hero__visual\">{{elements:image}}</div></section>",
+  "css": ".tb-auto-electric-mobility-hero{display:grid;grid-template-columns:1.15fr .85fr;gap:0;background:var(--tb-color-background);padding:clamp(28px,5vw,72px)}.tb-auto-electric-mobility-hero__visual{padding:18px;background:var(--tb-color-primary);transform:rotate(-2deg)}.tb-auto-electric-mobility-hero__image{width:100%;height:560px;object-fit:cover;display:block;transform:rotate(2deg)}.tb-auto-electric-mobility-hero__copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(26px,5vw,70px);border:1px solid var(--tb-color-border);background:var(--tb-color-surface)}.tb-auto-electric-mobility-hero__eyebrow{color:var(--tb-color-primary);font-weight:950;letter-spacing:.16em;text-transform:uppercase;font-size:11px}.tb-auto-electric-mobility-hero__title{margin:12px 0;color:var(--tb-color-secondary);font-size:clamp(42px,6vw,74px);line-height:1}.tb-auto-electric-mobility-hero__text{color:var(--tb-color-muted);line-height:1.75;font-size:17px}.tb-auto-electric-mobility-hero__cta{align-self:flex-start;margin-top:22px;color:var(--tb-color-primary);font-weight:950;text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:5px}@media(max-width:780px){.tb-auto-electric-mobility-hero{grid-template-columns:1fr}.tb-auto-electric-mobility-hero__image{height:400px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Zero emissions"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-auto-electric-mobility-hero__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Electric without compromise"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-auto-electric-mobility-hero__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Position an EV, charging network or sustainable mobility service with confident modern messaging."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-auto-electric-mobility-hero__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Action",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Explore electric",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-auto-electric-mobility-hero__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "image",
+      "label": "Image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Electric Mobility Hero"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-auto-electric-mobility-hero__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-auto-electric-mobility-hero__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

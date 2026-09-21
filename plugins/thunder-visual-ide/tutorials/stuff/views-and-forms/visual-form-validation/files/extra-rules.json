@@ -1,0 +1,10 @@
+{
+  "name": {
+    "name": "Full name",
+    "rules": ["required", {"rule": "min", "param": 2}]
+  },
+  "email": {
+    "name": "Email address",
+    "rules": ["required", "email"]
+  }
+}

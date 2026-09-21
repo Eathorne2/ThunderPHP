@@ -1,0 +1,53 @@
+{
+  "type": "custom.php_code",
+  "label": "PHP Code",
+  "category": "Custom",
+  "kind": "flow",
+  "icon": "</>",
+  "color": "#3f3f46",
+  "description": "Executes custom PHP inside a controller or function flow. An initial <?php tag is allowed and removed during compilation.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Custom PHP",
+    "code": "<?php\n"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "code",
+      "label": "PHP code",
+      "type": "code",
+      "help": "You may include one opening <?php tag at the beginning for syntax highlighting. The compiler removes it before inserting the code into the generated PHP flow."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Custom\\PhpCodeCompiler",
+    "file": "Compiler.php"
+  }
+}

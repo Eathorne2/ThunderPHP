@@ -1,0 +1,17 @@
+{
+  "id": "split-contact-form",
+  "name": "Split Contact Form",
+  "description": "A detailed contact section combining office details, response expectations and a responsive form.",
+  "category": "Contact Forms",
+  "order": 600,
+  "tags": [
+    "contact",
+    "form",
+    "support",
+    "split"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

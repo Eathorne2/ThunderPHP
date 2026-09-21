@@ -1,0 +1,119 @@
+.mwin {
+    display: grid;
+    min-height: 46rem;
+    padding: clamp(1rem, 5vw, 4rem);
+    place-items: center;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    color: var(--thv-theme-text);
+    background:
+        radial-gradient(circle at 10% 20%, color-mix(in srgb, var(--thv-theme-secondary) 42%, transparent), transparent 18rem),
+        radial-gradient(circle at 90% 80%, color-mix(in srgb, var(--thv-theme-primary) 16%, transparent), transparent 22rem),
+        var(--thv-theme-surface);
+}
+
+.mwin *,
+.mwin *::before,
+.mwin *::after {
+    box-sizing: border-box;
+}
+
+.mwin__card {
+    position: relative;
+    width: min(100%, 48rem);
+    padding: clamp(2rem, 7vw, 6rem);
+    border: 1px solid color-mix(in srgb, var(--thv-theme-primary) 35%, transparent);
+    text-align: center;
+    background: color-mix(in srgb, var(--thv-theme-surface) 76%, transparent);
+    backdrop-filter: blur(8px);
+}
+
+.mwin__host,
+.mwin__request,
+.mwin__details small,
+.mwin__details span {
+    color: var(--thv-theme-muted);
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.mwin__names {
+    margin: 1.6rem 0;
+    font-family: Georgia, serif;
+    font-size: clamp(3.8rem, 9vw, 7.8rem);
+    letter-spacing: -.065em;
+    line-height: .78;
+}
+
+.mwin__names span,
+.mwin__names i {
+    display: block;
+}
+
+.mwin__names i {
+    margin: .2em 0;
+    color: var(--thv-theme-primary);
+    font-size: .45em;
+    font-weight: 400;
+}
+
+.mwin__request {
+    max-width: 38rem;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.mwin__details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    margin: 2rem 0;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-text) 14%, transparent);
+    background: color-mix(in srgb, var(--thv-theme-text) 14%, transparent);
+}
+
+.mwin__details div {
+    display: flex;
+    min-height: 9rem;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    background: color-mix(in srgb, var(--thv-theme-surface) 90%, transparent);
+}
+
+.mwin__details strong {
+    margin: .5rem 0;
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.mwin__card > a {
+    display: inline-flex;
+    padding: .9rem 1.3rem;
+    border-radius: 999px;
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary);
+    font-size: .7rem;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.mwin__monogram {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    color: var(--thv-theme-primary);
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .mwin__details {
+        grid-template-columns: 1fr;
+    }
+}

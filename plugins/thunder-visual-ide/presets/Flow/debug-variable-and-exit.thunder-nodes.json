@@ -1,0 +1,67 @@
+{
+  "format": "thunder-visual-ide-node-bundle",
+  "format_version": 1,
+  "schema_version": 4,
+  "generated_by": "Thunder Visual IDE 0.12.36",
+  "id": "bundled-debug-variable-exit",
+  "name": "Debug Variable and Exit",
+  "description": "Read an existing variable, display it with dd(), then stop execution.",
+  "category": "Debug",
+  "order": 10,
+  "graph_kind": "flow",
+  "created_at": "2026-07-23T00:00:00Z",
+  "nodes": [
+    {
+      "id": "debug-variable",
+      "type": "data.variable",
+      "x": 0,
+      "y": 0,
+      "data": {
+        "title": "Debug Variable",
+        "variable_name": "data",
+        "path": "",
+        "path_mode": "object"
+      }
+    },
+    {
+      "id": "debug-display",
+      "type": "debug.display_data",
+      "x": 260,
+      "y": 0,
+      "data": {
+        "title": "Display Data"
+      }
+    },
+    {
+      "id": "debug-exit",
+      "type": "flow.exit",
+      "x": 520,
+      "y": 0,
+      "data": {
+        "title": "Exit",
+        "function": "exit",
+        "use_value": false,
+        "default_value": ""
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "debug-value-edge",
+      "from": "debug-variable",
+      "from_port": "value",
+      "to": "debug-display",
+      "to_port": "data",
+      "port_type": "mixed"
+    },
+    {
+      "id": "debug-exec-edge",
+      "from": "debug-display",
+      "from_port": "exec",
+      "to": "debug-exit",
+      "to_port": "exec_in",
+      "port_type": "exec"
+    }
+  ],
+  "nested_graphs": {}
+}

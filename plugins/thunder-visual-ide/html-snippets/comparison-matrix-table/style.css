@@ -1,0 +1,70 @@
+.cmt-table {
+    overflow: auto;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface, #fff);
+    font-family: system-ui, sans-serif
+}
+
+.cmt-table table {
+    width: 100%;
+    min-width: 44rem;
+    border-collapse: collapse;
+    color: var(--thv-theme-text, #0f172a);
+    text-align: center
+}
+
+.cmt-table th, .cmt-table td {
+    padding: .8rem 1rem;
+    border-right: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-bottom: 1px solid var(--thv-theme-border, #dbe4ef)
+}
+
+.cmt-table th:first-child, .cmt-table tbody th {
+    text-align: left
+}
+
+.cmt-table thead th {
+    font-size: .83rem
+}
+
+.cmt-table thead small {
+    color: var(--thv-theme-muted, #64748b);
+    font-weight: 500
+}
+
+.cmt-table tbody th {
+    font-size: .75rem
+}
+
+.cmt-table tbody td {
+    font-size: .78rem
+}
+
+.cmt-table .is-featured {
+    background: #eff6ff
+}
+
+.cmt-table thead .is-featured {
+    color: #1d4ed8
+}
+
+.cmt-table tfoot td {
+    border-bottom: 0
+}
+
+.cmt-table a {
+    display: inline-block;
+    padding: .5rem .65rem;
+    border: 1px solid var(--thv-theme-primary, #2563eb);
+    border-radius: .5rem;
+    color: var(--thv-theme-primary, #2563eb);
+    font-size: .72rem;
+    font-weight: 800;
+    text-decoration: none
+}
+
+.cmt-table tfoot .is-featured a {
+    background: var(--thv-theme-primary, #2563eb);
+    color: #fff
+}

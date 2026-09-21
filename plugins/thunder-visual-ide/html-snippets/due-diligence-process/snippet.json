@@ -1,0 +1,17 @@
+{
+  "id": "due-diligence-process",
+  "name": "Due Diligence Process",
+  "description": "A four-stage due diligence process section for legal and corporate advisory teams.",
+  "category": "Business & Law",
+  "order": 5360,
+  "tags": [
+    "law",
+    "due diligence",
+    "process",
+    "transactions"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

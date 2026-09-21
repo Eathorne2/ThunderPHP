@@ -1,0 +1,114 @@
+.cpi-section {
+    overflow: hidden;
+    border: 1px solid var(--thv-theme-border, #d7dee6);
+    border-radius: 1.35rem;
+    color: var(--thv-theme-text, #152238);
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.cpi-section nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    padding: 1rem clamp(1.25rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--thv-theme-border, #d7dee6);
+    color: var(--thv-theme-muted, #667386);
+    font-size: .68rem;
+}
+
+.cpi-section nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cpi-section nav b {
+    color: var(--thv-theme-text, #152238);
+}
+
+.cpi-section__body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(18rem, .85fr);
+    align-items: end;
+    gap: clamp(2rem, 6vw, 6rem);
+    min-height: 24rem;
+    padding: clamp(2rem, 7vw, 5rem);
+    background:
+        radial-gradient(circle at 94% 8%, color-mix(in srgb, var(--thv-theme-secondary, #7ba8d4) 22%, transparent), transparent 22rem),
+        var(--thv-theme-surface, #ffffff);
+}
+
+.cpi-section__body > div:first-child > span {
+    color: var(--thv-theme-primary, #2b5c8d);
+    font-size: .72rem;
+    font-weight: 850;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.cpi-section h1 {
+    max-width: 10ch;
+    margin: .7rem 0 0;
+    font-family: Georgia, serif;
+    font-size: clamp(3rem, 7vw, 6.8rem);
+    font-weight: 500;
+    letter-spacing: -.06em;
+    line-height: .92;
+}
+
+.cpi-section__summary {
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--thv-theme-primary, #2b5c8d);
+}
+
+.cpi-section__summary p {
+    margin: 0 0 1.2rem;
+    color: var(--thv-theme-muted, #667386);
+    line-height: 1.75;
+}
+
+.cpi-section__summary a {
+    color: var(--thv-theme-text, #152238);
+    font-size: .75rem;
+    font-weight: 850;
+    text-decoration: none;
+}
+
+.cpi-section aside {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: #ffffff;
+    background: #13243a;
+}
+
+.cpi-section aside div {
+    display: grid;
+    gap: .45rem;
+    padding: 1.35rem clamp(1rem, 3vw, 2rem);
+    border-right: 1px solid rgba(255, 255, 255, .13);
+}
+
+.cpi-section aside div:last-child {
+    border-right: 0;
+}
+
+.cpi-section aside strong {
+    font-size: .78rem;
+}
+
+.cpi-section aside span {
+    color: #93a2b6;
+    font-size: .7rem;
+    line-height: 1.55;
+}
+
+@media (max-width: 720px) {
+    .cpi-section__body,
+    .cpi-section aside {
+        grid-template-columns: 1fr;
+    }
+
+    .cpi-section aside div {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .13);
+    }
+}

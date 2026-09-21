@@ -1,0 +1,18 @@
+{
+  "id": "italian-destination-wedding-header-footer",
+  "name": "Italian Destination Wedding Header and Footer",
+  "description": "A sunlit destination-wedding shell with travel-first navigation, Mediterranean styling and a polished footer.",
+  "category": "Wedding",
+  "order": 4760,
+  "tags": [
+    "destination wedding",
+    "italy",
+    "tuscany",
+    "header",
+    "footer"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

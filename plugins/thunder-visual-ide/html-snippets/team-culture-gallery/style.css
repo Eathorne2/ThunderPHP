@@ -1,0 +1,168 @@
+.tcg-gal {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.tcg-gal *, .tcg-gal *::before, .tcg-gal *::after {
+    box-sizing: border-box;
+}
+
+.tcg-gal button, .tcg-gal input, .tcg-gal select, .tcg-gal textarea {
+    font: inherit;
+}
+
+.tcg-gal a {
+    color: inherit;
+}
+
+.tcg-gal {
+    max-width: 74rem;
+}
+
+.tcg-gal header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tcg-gal header span {
+    color: var(--thv-theme-primary);
+    font-size: 0.7rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.tcg-gal header h2 {
+    margin: 0.25rem 0 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.tcg-gal__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tcg-gal__filters button {
+    padding: 0.55rem 0.75rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 999px;
+    background: var(--thv-theme-surface);
+    color: var(--thv-theme-text);
+    cursor: pointer;
+}
+
+.tcg-gal__filters button.is-active {
+    border-color: var(--thv-theme-primary);
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+}
+
+.tcg-gal__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.8rem;
+}
+
+.tcg-gal figure {
+    position: relative;
+    grid-column: span 4;
+    min-height: 17rem;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: var(--thv-theme-surface-alt);
+    cursor: zoom-in;
+}
+
+.tcg-gal figure:nth-child(1), .tcg-gal figure:nth-child(5) {
+    grid-column: span 8;
+}
+
+.tcg-gal figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.tcg-gal figure:hover img {
+    transform: scale(1.045);
+}
+
+.tcg-gal figcaption {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 1.3rem 1rem 0.9rem;
+    background: linear-gradient(transparent, color-mix(in srgb, var(--thv-theme-text) 78%, transparent));
+    color: var(--thv-theme-on-primary);
+}
+
+.tcg-gal figcaption span, .tcg-gal figcaption strong {
+    display: block;
+}
+
+.tcg-gal figcaption span {
+    font-size: 0.67rem;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.tcg-gal dialog {
+    width: min(90vw, 64rem);
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface);
+    color: var(--thv-theme-text);
+}
+
+.tcg-gal dialog::backdrop {
+    background: color-mix(in srgb, var(--thv-theme-text) 72%, transparent);
+}
+
+.tcg-gal dialog img {
+    display: block;
+    width: 100%;
+    max-height: 75vh;
+    object-fit: cover;
+}
+
+.tcg-gal dialog p {
+    margin: 0;
+    padding: 1rem;
+}
+
+.tcg-gal dialog button {
+    position: absolute;
+    right: 0.7rem;
+    top: 0.7rem;
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 50%;
+    background: var(--thv-theme-surface);
+    color: var(--thv-theme-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .tcg-gal header {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .tcg-gal figure, .tcg-gal figure:nth-child(1), .tcg-gal figure:nth-child(5) {
+        grid-column: span 12;
+    }
+
+}

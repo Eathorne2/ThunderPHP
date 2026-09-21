@@ -1,0 +1,18 @@
+{
+  "id": "nightclub-event-carousel",
+  "name": "Nightclub Event Carousel",
+  "description": "A neon event carousel for clubs and promoters with dates, genres and booking links.",
+  "category": "Music & Entertainment",
+  "order": 4300,
+  "tags": [
+    "nightclub",
+    "events",
+    "carousel",
+    "dj",
+    "party"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

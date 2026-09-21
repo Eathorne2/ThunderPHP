@@ -1,0 +1,141 @@
+{
+  "settings": {
+    "defaults": {
+      "menu_id": "0",
+      "width": "1200"
+    },
+    "schema": [
+      {
+        "key": "menu_id",
+        "label": "Saved menu",
+        "type": "menu",
+        "default": "0"
+      },
+      {
+        "key": "width",
+        "label": "Content width",
+        "type": "select",
+        "options": {
+          "1040": "Compact",
+          "1200": "Standard",
+          "1360": "Wide",
+          "1480": "Extra wide"
+        },
+        "default": "1200"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "key": "brand",
+      "label": "Brand",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "name": "{{app_name}}",
+        "logo": "{{app_logo}}",
+        "url": "{{root}}/"
+      },
+      "schema": [
+        {
+          "key": "name",
+          "label": "Brand name",
+          "type": "text",
+          "selector": ".tb-h-corporate-utility__brand-name"
+        },
+        {
+          "key": "logo",
+          "label": "Logo",
+          "type": "image",
+          "selector": ".tb-h-corporate-utility__logo"
+        },
+        {
+          "key": "url",
+          "label": "Home URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-h-corporate-utility__brand\" href=\"{{url}}\"><img class=\"tb-h-corporate-utility__logo\" src=\"{{logo}}\" alt=\"\"><span class=\"tb-h-corporate-utility__brand-name\">{{name}}</span></a>",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "secondary"
+        }
+      }
+    },
+    {
+      "key": "contact",
+      "label": "Contact link",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": true,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "hello@example.com",
+        "url": "mailto:hello@example.com"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Contact text",
+          "type": "text",
+          "selector": ".tb-h-corporate-utility__contact"
+        },
+        {
+          "key": "url",
+          "label": "Contact URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-h-corporate-utility__contact\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 1,
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "text"
+        }
+      }
+    }
+  ],
+  "menu_sources": [
+    {
+      "setting": "menu_id",
+      "token": "primary",
+      "empty": "",
+      "container": "<nav class=\"tb-h-corporate-utility__nav\" aria-label=\"{{menu_name}}\">{{items}}</nav>",
+      "item": "<a class=\"tb-h-corporate-utility__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}}</a>",
+      "parent": "<div class=\"tb-h-corporate-utility__parent\"><a class=\"tb-h-corporate-utility__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}}<span class=\"tb-h-corporate-utility__chevron\">⌄</span></a><div class=\"tb-h-corporate-utility__submenu\">{{children}}</div></div>",
+      "empty_preview": "<nav class=\"tb-h-corporate-utility__nav tb-menu-empty\">Select a menu</nav>"
+    }
+  ],
+  "html": "<header class=\"tb-block tb-h-corporate-utility\"><div class=\"tb-h-corporate-utility__top\"><div class=\"tb-h-corporate-utility__inner\" style=\"--tb-h-corporate-utility-width:{{width}}px\"><span class=\"tb-h-corporate-utility__tagline\">{{app_description}}</span>{{elements:contact}}</div></div><div class=\"tb-h-corporate-utility__inner\" style=\"--tb-h-corporate-utility-width:{{width}}px\"><div class=\"tb-h-corporate-utility__row\">{{elements:brand}}{{menu:primary}}</div></div></header>",
+  "css": ".tb-h-corporate-utility{position:relative;background:var(--tb-color-surface);color:var(--tb-color-text)}.tb-h-corporate-utility__inner{max-width:var(--tb-h-corporate-utility-width);margin:auto;padding:0 24px}.tb-h-corporate-utility__brand{display:flex;align-items:center;gap:10px;color:var(--tb-color-secondary);text-decoration:none;font-weight:900}.tb-h-corporate-utility__logo{width:38px;height:38px;object-fit:contain}.tb-h-corporate-utility__brand-name{letter-spacing:-.025em}.tb-h-corporate-utility__nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.tb-h-corporate-utility__link{display:inline-flex;align-items:center;gap:5px;padding:9px 11px;color:inherit;text-decoration:none;font-weight:750}.tb-h-corporate-utility__link:hover{color:var(--tb-color-primary)}.tb-h-corporate-utility__parent{position:relative}.tb-h-corporate-utility__submenu{position:absolute;z-index:20;top:100%;left:0;min-width:190px;padding:8px;border:1px solid var(--tb-color-border);border-radius:12px;background:var(--tb-color-surface);display:none;box-shadow:0 16px 38px color-mix(in srgb,var(--tb-color-secondary) 14%,transparent)}.tb-h-corporate-utility__submenu .tb-h-corporate-utility__link{display:flex}.tb-h-corporate-utility__parent:hover>.tb-h-corporate-utility__submenu,.tb-h-corporate-utility__parent:focus-within>.tb-h-corporate-utility__submenu{display:grid}.tb-h-corporate-utility__chevron{font-size:10px;opacity:.65}.tb-h-corporate-utility__top{border-bottom:1px solid var(--tb-color-border);background:var(--tb-color-background)}.tb-h-corporate-utility__top .tb-h-corporate-utility__inner{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:20px}.tb-h-corporate-utility__tagline{color:var(--tb-color-muted);font-size:12px}.tb-h-corporate-utility__contact{color:var(--tb-color-primary);text-decoration:none;font-size:12px;font-weight:800}.tb-h-corporate-utility__row{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}@media(max-width:820px){.tb-h-corporate-utility__row,.tb-h-corporate-utility__top,.tb-h-corporate-utility__glass,.tb-h-corporate-utility__frame,.tb-h-corporate-utility__pill{flex-wrap:wrap;height:auto;padding-top:14px;padding-bottom:14px}.tb-h-corporate-utility__nav{width:100%;order:5}.tb-h-corporate-utility__submenu{position:static;box-shadow:none}}@media(max-width:560px){.tb-h-corporate-utility__inner{padding-left:16px;padding-right:16px}.tb-h-corporate-utility__row{grid-template-columns:1fr!important}.tb-h-corporate-utility__search{width:100%!important}}",
+  "js": "",
+  "slug": "header-corporate-utility",
+  "name": "Corporate Utility Header",
+  "category": "Headers",
+  "description": "A professional multi-row header with utility text, menu and action.",
+  "keywords": [
+    "header",
+    "navigation",
+    "menu",
+    "utility"
+  ],
+  "contexts": [
+    "header"
+  ],
+  "version": "1.0.0"
+}

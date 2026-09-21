@@ -1,0 +1,17 @@
+{
+  "id": "floating-panel-call-to-action",
+  "name": "Floating Panel Call to Action",
+  "description": "A high-contrast floating action panel with concise copy, primary action, and secondary contact option.",
+  "category": "Call to Action",
+  "order": 3130,
+  "tags": [
+    "cta",
+    "panel",
+    "banner",
+    "conversion"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

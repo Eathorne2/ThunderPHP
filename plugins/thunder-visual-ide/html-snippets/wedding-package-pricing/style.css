@@ -1,0 +1,124 @@
+.wwpk {
+    padding: clamp(2rem, 6vw, 5rem);
+    border-radius: 1.5rem;
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-surface);
+}
+
+.wwpk *,
+.wwpk *::before,
+.wwpk *::after {
+    box-sizing: border-box;
+}
+
+.wwpk header {
+    max-width: 48rem;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.wwpk header p,
+.wwpk article small,
+.wwpk__featured > span {
+    margin: 0;
+    color: var(--thv-theme-primary);
+    font-size: .67rem;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.wwpk h2 {
+    margin: .65rem 0 1rem;
+    font-family: Georgia, serif;
+    font-size: clamp(2.7rem, 6vw, 5.1rem);
+    font-weight: 400;
+    letter-spacing: -.05em;
+}
+
+.wwpk header > span {
+    color: var(--thv-theme-muted);
+    line-height: 1.7;
+}
+
+.wwpk__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.wwpk article {
+    position: relative;
+    padding: 1.5rem;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-text) 14%, transparent);
+    border-radius: 1rem;
+    background: color-mix(in srgb, var(--thv-theme-secondary) 10%, var(--thv-theme-surface));
+}
+
+.wwpk__featured {
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary) !important;
+}
+
+.wwpk__featured > span {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    color: var(--thv-theme-on-primary);
+}
+
+.wwpk__featured small,
+.wwpk__featured p,
+.wwpk__featured a {
+    color: var(--thv-theme-on-primary) !important;
+}
+
+.wwpk h3 {
+    margin: 3.8rem 0 1rem;
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.wwpk__price {
+    margin: 0;
+    color: var(--thv-theme-muted);
+}
+
+.wwpk__price strong {
+    display: block;
+    margin-top: .25rem;
+    color: inherit;
+    font-family: Georgia, serif;
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+.wwpk ul {
+    min-height: 10rem;
+    margin: 1.4rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    list-style: none;
+    opacity: .82;
+}
+
+.wwpk li {
+    padding: .35rem 0;
+}
+
+.wwpk a {
+    color: var(--thv-theme-primary);
+    font-size: .7rem;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 820px) {
+    .wwpk__grid {
+        grid-template-columns: 1fr;
+    }
+}

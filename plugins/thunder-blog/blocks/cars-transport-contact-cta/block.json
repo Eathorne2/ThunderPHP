@@ -1,0 +1,166 @@
+{
+  "slug": "cars-transport-contact-cta",
+  "name": "Transportation Contact CTA",
+  "category": "Cars & Transportation",
+  "description": "Bold contact call-to-action for transport, rental or automotive services",
+  "keywords": [
+    "cars",
+    "transportation",
+    "cta",
+    "booking"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-auto-transport-contact-cta\"><div>{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div>{{elements:cta}}</div></section>",
+  "css": ".tb-auto-transport-contact-cta{margin:clamp(24px,4vw,54px);padding:clamp(38px,7vw,88px);background:linear-gradient(135deg,var(--tb-color-primary),var(--tb-color-secondary));color:var(--tb-color-surface);display:grid;grid-template-columns:1fr auto;align-items:end;gap:30px}.tb-auto-transport-contact-cta__eyebrow{font-size:11px;font-weight:950;letter-spacing:.16em;text-transform:uppercase}.tb-auto-transport-contact-cta__title{margin:10px 0;font-size:clamp(40px,6vw,74px);line-height:1}.tb-auto-transport-contact-cta__text{max-width:700px;line-height:1.7;opacity:.82}.tb-auto-transport-contact-cta__cta{display:inline-flex;padding:14px 20px;background:var(--tb-color-surface);color:var(--tb-color-secondary);font-weight:950;text-decoration:none;white-space:nowrap}@media(max-width:720px){.tb-auto-transport-contact-cta{grid-template-columns:1fr;align-items:start}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Ready when you are"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-auto-transport-contact-cta__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Plan the next journey with us"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-auto-transport-contact-cta__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Use one strong closing action for a quote, booking, vehicle viewing, service appointment or shipment request."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-auto-transport-contact-cta__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Action",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Request a quote",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-auto-transport-contact-cta__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

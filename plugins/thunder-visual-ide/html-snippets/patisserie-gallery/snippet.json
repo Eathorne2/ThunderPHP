@@ -1,0 +1,18 @@
+{
+  "id": "patisserie-gallery",
+  "name": "Patisserie Gallery",
+  "description": "A refined dessert gallery with category filters and an asymmetric display inspired by boutique pastry shops.",
+  "category": "Food & Restaurant",
+  "order": 3720,
+  "tags": [
+    "patisserie",
+    "dessert",
+    "gallery",
+    "bakery",
+    "filter"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

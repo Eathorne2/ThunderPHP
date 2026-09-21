@@ -1,0 +1,88 @@
+{
+    "name": "Compact Sidebar",
+    "version": "1.0.1",
+    "plugin": "thunder-admin",
+    "plugin_requires": "^1.1.0",
+    "author": "Eathorne Choongo",
+    "thumbnail": "screenshot.png",
+    "description": "A space-efficient administration layout with a permanent icon rail, expandable navigation panel and full mobile drawer.",
+    "default_palette": "electric-indigo",
+    "palettes": {
+        "electric-indigo": {
+            "name": "Electric Indigo",
+            "description": "A crisp indigo palette designed for the compact icon rail.",
+            "colors": {
+                "primary": "#4f46e5",
+                "primary_dark": "#3730a3",
+                "primary_soft": "#e0e7ff",
+                "sidebar_bg": "#111827",
+                "sidebar_text": "#aeb8ca",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f5f7fb",
+                "surface": "#ffffff",
+                "border": "#e4e8f0",
+                "text": "#172033",
+                "muted": "#687386",
+                "success": "#16845b",
+                "danger": "#dc2626"
+            }
+        },
+        "cobalt": {
+            "name": "Cobalt",
+            "description": "A bright blue palette with a deep navy rail.",
+            "colors": {
+                "primary": "#0f6fec",
+                "primary_dark": "#0b4fb5",
+                "primary_soft": "#dcecff",
+                "sidebar_bg": "#081b33",
+                "sidebar_text": "#afc3dc",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f2f6fb",
+                "surface": "#ffffff",
+                "border": "#dbe5f0",
+                "text": "#142338",
+                "muted": "#617289",
+                "success": "#0f966b",
+                "danger": "#d53f4c"
+            }
+        },
+        "forest": {
+            "name": "Forest",
+            "description": "A grounded green palette for operational dashboards.",
+            "colors": {
+                "primary": "#15803d",
+                "primary_dark": "#166534",
+                "primary_soft": "#dcfce7",
+                "sidebar_bg": "#10261c",
+                "sidebar_text": "#b6d0c0",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f3f8f5",
+                "surface": "#ffffff",
+                "border": "#dce9e1",
+                "text": "#183126",
+                "muted": "#657a6d",
+                "success": "#15803d",
+                "danger": "#c83c3c"
+            }
+        },
+        "slate": {
+            "name": "Slate",
+            "description": "A neutral, low-distraction palette for dense admin tools.",
+            "colors": {
+                "primary": "#475569",
+                "primary_dark": "#334155",
+                "primary_soft": "#e2e8f0",
+                "sidebar_bg": "#0f172a",
+                "sidebar_text": "#b8c0ce",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f4f5f7",
+                "surface": "#ffffff",
+                "border": "#dfe3e8",
+                "text": "#1f2937",
+                "muted": "#6b7280",
+                "success": "#16845b",
+                "danger": "#c93b3b"
+            }
+        }
+    }
+}

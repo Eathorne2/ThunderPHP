@@ -1,0 +1,20 @@
+{
+  "id": "search-with-suggestions",
+  "name": "Search with Suggestions",
+  "description": "An autocomplete search field with grouped recent and suggested results.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Search Bars",
+  "order": 8055,
+  "tags": [
+    "search",
+    "autocomplete",
+    "suggestions",
+    "input"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

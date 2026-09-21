@@ -1,0 +1,20 @@
+{
+  "id": "category-mega-menu",
+  "name": "Category Mega Menu",
+  "description": "A responsive category menu with grouped links and a featured card.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Menus",
+  "order": 8043,
+  "tags": [
+    "menu",
+    "mega menu",
+    "categories",
+    "navigation"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

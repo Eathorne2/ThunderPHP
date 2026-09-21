@@ -1,0 +1,11 @@
+{
+    "id": 4,
+    "title": "Query Builder",
+    "slug": "query-builder",
+    "description": "The Query Builder provides a fluent, chainable interface for building and executing SQL queries safely using prepared statements.",
+    "icon": "",
+    "type": "reference",
+    "featured": false,
+    "published": true,
+    "order": 3
+}

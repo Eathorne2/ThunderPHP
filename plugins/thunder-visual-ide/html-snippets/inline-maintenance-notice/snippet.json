@@ -1,0 +1,20 @@
+{
+  "id": "inline-maintenance-notice",
+  "name": "Inline Maintenance Notice",
+  "description": "A calm maintenance notice with schedule details and a dismiss action.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Alerts - Inline",
+  "order": 8001,
+  "tags": [
+    "alert",
+    "maintenance",
+    "notice",
+    "inline"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

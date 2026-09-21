@@ -1,0 +1,20 @@
+{
+  "id": "magazine-contact-sheet",
+  "name": "Magazine Contact Sheet",
+  "description": "A numbered contact sheet for editorial selects, photography proofs and campaign reviews.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9010,
+  "tags": [
+    "gallery",
+    "contact sheet",
+    "editorial",
+    "proofs"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

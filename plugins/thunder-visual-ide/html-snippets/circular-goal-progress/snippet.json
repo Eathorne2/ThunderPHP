@@ -1,0 +1,20 @@
+{
+  "id": "circular-goal-progress",
+  "name": "Circular Goal Progress",
+  "description": "A compact group of circular progress indicators for dashboard goals.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Progress Bars",
+  "order": 2210,
+  "tags": [
+    "progress",
+    "circular",
+    "dashboard",
+    "goals"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

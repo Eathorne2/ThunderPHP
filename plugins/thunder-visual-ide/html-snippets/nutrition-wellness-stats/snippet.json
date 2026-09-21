@@ -1,0 +1,18 @@
+{
+  "id": "nutrition-wellness-stats",
+  "name": "Nutrition and Wellness Stats",
+  "description": "A clean healthy-food section combining nutrition metrics, ingredient benefits and a colourful meal image.",
+  "category": "Food & Restaurant",
+  "order": 3740,
+  "tags": [
+    "nutrition",
+    "healthy food",
+    "stats",
+    "wellness",
+    "meal"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

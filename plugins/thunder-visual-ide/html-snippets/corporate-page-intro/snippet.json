@@ -1,0 +1,18 @@
+{
+  "id": "corporate-page-intro",
+  "name": "Corporate Page Intro",
+  "description": "A professional inner-page heading with breadcrumb, executive summary and highlighted key fact.",
+  "category": "Page Title Headings",
+  "order": 3580,
+  "tags": [
+    "page title",
+    "corporate",
+    "intro",
+    "breadcrumb",
+    "business"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "culinary-journal-cards",
+  "name": "Culinary Journal Cards",
+  "description": "An editorial food-journal grid for recipes, chef interviews, restaurant stories and seasonal guides.",
+  "category": "Food & Restaurant",
+  "order": 3780,
+  "tags": [
+    "food blog",
+    "articles",
+    "recipe cards",
+    "editorial",
+    "journal"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

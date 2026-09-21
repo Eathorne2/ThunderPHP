@@ -1,0 +1,18 @@
+{
+  "id": "hotel-dining-spotlight",
+  "name": "Hotel Dining Spotlight",
+  "description": "An editorial hotel restaurant section with menu tabs, chef note and reservation call to action.",
+  "category": "Travel & Hotels",
+  "order": 4930,
+  "tags": [
+    "hotel",
+    "restaurant",
+    "dining",
+    "menu",
+    "chef"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

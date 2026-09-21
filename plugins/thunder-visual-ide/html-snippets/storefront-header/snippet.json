@@ -1,0 +1,17 @@
+{
+  "id": "storefront-header",
+  "name": "Storefront Header",
+  "description": "A two-level ecommerce header with search, category navigation, account and cart controls.",
+  "category": "Headers",
+  "order": 1150,
+  "tags": [
+    "header",
+    "store",
+    "ecommerce",
+    "search"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "guided-tour-itinerary-timeline",
+  "name": "Guided Tour Itinerary Timeline",
+  "description": "An expandable day-by-day itinerary for escorted tours, retreats and multi-stop journeys.",
+  "category": "Travel & Hotels",
+  "order": 4880,
+  "tags": [
+    "tour",
+    "itinerary",
+    "timeline",
+    "travel",
+    "accordion"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,103 @@
+.srs-routine {
+    color:var(--thv-theme-text, #211b1e);
+    background:var(--thv-theme-background, #f5faf6);
+}
+.srs-routine a {
+    color:inherit;
+}
+.srs-routine img {
+    display:block;
+    max-width:100%;
+}
+.srs-routine__eyebrow {
+    color:var(--thv-theme-primary, #49735b);
+    font-size:.68rem;
+    font-weight:900;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+}
+.srs-routine__muted {
+    color:var(--thv-theme-muted, #65716a);
+}
+.srs-routine {
+    padding:clamp(1.25rem, 4vw, 3.5rem);
+    border-radius:1.4rem
+}
+.srs-routine>header {
+    display:flex;
+    justify-content:space-between;
+    gap:2rem;
+    align-items:end;
+    padding-bottom:1.2rem;
+    border-bottom:1px solid var(--thv-theme-border, #cfdbd2)
+}
+.srs-routine h2 {
+    margin:.5rem 0 0;
+    font-family:Georgia, serif;
+    font-size:clamp(3rem, 6vw, 5.8rem);
+    font-weight:500;
+    letter-spacing:-.07em
+}
+.srs-routine__tabs {
+    display:flex;
+    padding:.3rem;
+    border:1px solid var(--thv-theme-border, #cfdbd2);
+    border-radius:999px
+}
+.srs-routine__tabs button {
+    padding:.7rem 1rem;
+    border:0;
+    border-radius:999px;
+    color:inherit;
+    background:transparent;
+    font:inherit;
+    font-size:.7rem;
+    font-weight:900;
+    cursor:pointer
+}
+.srs-routine__tabs button.is-active {
+    color:var(--thv-theme-on-primary, #fff);
+    background:var(--thv-theme-primary, #49735b)
+}
+.srs-routine__panel {
+    display:grid;
+    grid-template-columns:repeat(3, 1fr)
+}
+.srs-routine__panel[hidden] {
+    display:none
+}
+.srs-routine__panel article {
+    min-height:15rem;
+    padding:1.3rem;
+    border-right:1px solid var(--thv-theme-border, #cfdbd2)
+}
+.srs-routine__panel article:last-child {
+    border-right:0
+}
+.srs-routine__panel article>span {
+    font-size:.65rem;
+    font-weight:900
+}
+.srs-routine__panel h3 {
+    margin:4rem 0 .6rem;
+    font-family:Georgia, serif;
+    font-size:1.9rem;
+    font-weight:500
+}
+.srs-routine__panel p {
+    color:var(--thv-theme-muted, #65716a);
+    line-height:1.6
+}
+@media(max-width:700px) {
+    .srs-routine>header {
+        align-items:start;
+        flex-direction:column
+    }
+    .srs-routine__panel {
+        grid-template-columns:1fr
+    }
+    .srs-routine__panel article {
+        border-right:0;
+        border-bottom:1px solid var(--thv-theme-border, #cfdbd2)
+    }
+}

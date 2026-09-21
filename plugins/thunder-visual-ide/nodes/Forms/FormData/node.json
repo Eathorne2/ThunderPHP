@@ -1,0 +1,82 @@
+{
+  "type": "forms.data",
+  "label": "Read Form Data",
+  "category": "Forms",
+  "kind": "flow",
+  "icon": "DATA",
+  "color": "#0d9488",
+  "description": "Reads all fields from a visual Form schema into an array.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "dynamic_ports": "form_schema_data",
+  "defaults": {
+    "title": "Read Form Data",
+    "view_node_id": "",
+    "form_name": "",
+    "source": "auto",
+    "result_variable": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "result_variable",
+      "label": "Result variable",
+      "type": "text",
+      "help": "Optional PHP variable name. Omit the $ sign. Leave blank to use the automatic node-specific name."
+    },
+    {
+      "name": "view_node_id",
+      "label": "View",
+      "type": "view_ref"
+    },
+    {
+      "name": "form_name",
+      "label": "Visual form",
+      "type": "form_ref"
+    },
+    {
+      "name": "source",
+      "label": "Request source",
+      "type": "select",
+      "options": [
+        "auto",
+        "post",
+        "get"
+      ]
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out"
+      },
+      {
+        "id": "data",
+        "label": "Form Data",
+        "type": "array",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Forms\\FormDataCompiler",
+    "file": "Compiler.php"
+  }
+}

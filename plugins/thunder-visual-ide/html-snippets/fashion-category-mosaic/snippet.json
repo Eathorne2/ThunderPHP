@@ -1,0 +1,17 @@
+{
+  "id": "fashion-category-mosaic",
+  "name": "Fashion Category Mosaic",
+  "description": "A refined retail category mosaic for clothing, accessories and seasonal edits.",
+  "category": "Fashion & Beauty",
+  "order": 3920,
+  "tags": [
+    "fashion",
+    "beauty",
+    "grid",
+    "gallery"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

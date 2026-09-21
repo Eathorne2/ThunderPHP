@@ -1,0 +1,192 @@
+{
+  "slug": "wed-couple-story",
+  "name": "Our Love Story",
+  "category": "Wedding",
+  "description": "Three-card love story sequence with dates and editable milestones",
+  "keywords": [
+    "wedding",
+    "love story",
+    "timeline",
+    "couple"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-wed-couple-story\"><div class=\"tb-wed-couple-story__head\">{{elements:eyebrow}}{{elements:title}}{{elements:intro}}</div><div class=\"tb-wed-couple-story__grid\">{{elements:stories}}</div></div>",
+  "css": ".tb-wed-couple-story{padding:clamp(32px,6vw,76px);background:var(--tb-color-background)}.tb-wed-couple-story__head{max-width:760px;margin:0 auto 34px;text-align:center}.tb-wed-couple-story__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-wed-couple-story__title{margin:10px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(38px,5vw,62px);font-weight:400}.tb-wed-couple-story__intro{color:var(--tb-color-muted);line-height:1.75}.tb-wed-couple-story__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.tb-wed-couple-story__card{padding:30px;border:1px solid var(--tb-color-border);background:var(--tb-color-surface)}.tb-wed-couple-story__year{display:block;color:var(--tb-color-primary);font-size:13px;font-weight:900;letter-spacing:.12em}.tb-wed-couple-story__card-title{margin:42px 0 12px;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:30px;font-weight:400}.tb-wed-couple-story__card-text{margin:0;color:var(--tb-color-muted);line-height:1.7}@media(max-width:760px){.tb-wed-couple-story__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Our story"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-wed-couple-story__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "How we found forever"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-wed-couple-story__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "intro",
+      "label": "Intro",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A few of the little chapters that brought us to the big day."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-wed-couple-story__intro\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "stories",
+      "label": "Story milestone",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "year": "2019",
+        "title": "The first hello",
+        "text": "A coffee became a long walk and the beginning of everything."
+      },
+      "schema": [
+        {
+          "key": "year",
+          "label": "Year",
+          "type": "text",
+          "selector": ".tb-wed-couple-story__year"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-wed-couple-story__card-title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-wed-couple-story__card-text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-wed-couple-story__card\"><span class=\"tb-wed-couple-story__year\">{{year}}</span><h3 class=\"tb-wed-couple-story__card-title\">{{title}}</h3><p class=\"tb-wed-couple-story__card-text\">{{text}}</p></article>",
+      "min": 1,
+      "max": 8,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "year": "2019",
+          "title": "The first hello",
+          "text": "A coffee became a long walk and the beginning of everything."
+        },
+        {
+          "year": "2022",
+          "title": "The adventure",
+          "text": "New cities, shared dreams and a home built together."
+        },
+        {
+          "year": "2025",
+          "title": "The yes",
+          "text": "One question, one answer, and a date to remember."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

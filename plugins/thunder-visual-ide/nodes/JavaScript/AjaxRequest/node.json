@@ -1,0 +1,233 @@
+{
+  "type": "javascript.ajax_request",
+  "label": "AJAX Request",
+  "category": "JavaScript AJAX",
+  "kind": "flow",
+  "icon": "XHR",
+  "color": "#0f766e",
+  "description": "Runs an XMLHttpRequest with upload/download progress and callback branches.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "AJAX Request",
+    "method": "POST",
+    "url": "",
+    "body_mode": "Connected value",
+    "headers_json": "{}",
+    "response_type": "text",
+    "parse_json": true,
+    "timeout_ms": 30000,
+    "with_credentials": false,
+    "intercept_submit": false,
+    "form_selector": "form",
+    "xhr_variable_name": "xhr"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "xhr_variable_name",
+      "label": "XHR variable name",
+      "type": "text",
+      "help": "JavaScript identifier used for the XMLHttpRequest object inside this request and all callback branches. Defaults to xhr."
+    },
+    {
+      "name": "method",
+      "label": "Method",
+      "type": "select",
+      "options": [
+        "GET",
+        "POST",
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ]
+    },
+    {
+      "name": "url",
+      "label": "Fallback URL",
+      "type": "text"
+    },
+    {
+      "name": "body_mode",
+      "label": "Body mode",
+      "type": "select",
+      "options": [
+        "Connected value",
+        "JSON",
+        "FormData",
+        "None"
+      ]
+    },
+    {
+      "name": "headers_json",
+      "label": "Fallback headers JSON",
+      "type": "code"
+    },
+    {
+      "name": "response_type",
+      "label": "XHR response type",
+      "type": "select",
+      "options": [
+        "text",
+        "json",
+        "blob",
+        "arraybuffer",
+        "document"
+      ]
+    },
+    {
+      "name": "parse_json",
+      "label": "Parse text response as JSON",
+      "type": "checkbox"
+    },
+    {
+      "name": "timeout_ms",
+      "label": "Timeout milliseconds",
+      "type": "number"
+    },
+    {
+      "name": "with_credentials",
+      "label": "Send credentials",
+      "type": "checkbox"
+    },
+    {
+      "name": "intercept_submit",
+      "label": "Intercept form submit automatically",
+      "type": "checkbox",
+      "help": "When this node has no JS execution input, it can act as its own form-submit entry."
+    },
+    {
+      "name": "form_selector",
+      "label": "Form selector",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "js-exec",
+        "direction": "in"
+      },
+      {
+        "id": "url",
+        "label": "URL",
+        "type": "js-string",
+        "direction": "in"
+      },
+      {
+        "id": "body",
+        "label": "Body",
+        "type": "js-value",
+        "direction": "in"
+      },
+      {
+        "id": "headers",
+        "label": "Headers",
+        "type": "js-object",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "before_send",
+        "label": "Before Send",
+        "type": "js-exec",
+        "direction": "out"
+      },
+      {
+        "id": "upload_progress",
+        "label": "Upload Progress",
+        "type": "js-exec",
+        "direction": "out"
+      },
+      {
+        "id": "download_progress",
+        "label": "Download Progress",
+        "type": "js-exec",
+        "direction": "out"
+      },
+      {
+        "id": "success",
+        "label": "Success",
+        "type": "js-exec",
+        "direction": "out"
+      },
+      {
+        "id": "http_error",
+        "label": "HTTP Error",
+        "type": "js-exec",
+        "direction": "out"
+      },
+      {
+        "id": "network_error",
+        "label": "Network Error",
+        "type": "js-exec",
+        "direction": "out"
+      },
+      {
+        "id": "timeout",
+        "label": "Timeout",
+        "type": "js-exec",
+        "direction": "out"
+      },
+      {
+        "id": "aborted",
+        "label": "Aborted",
+        "type": "js-exec",
+        "direction": "out"
+      },
+      {
+        "id": "complete",
+        "label": "Complete",
+        "type": "js-exec",
+        "direction": "out"
+      },
+      {
+        "id": "response",
+        "label": "Response",
+        "type": "js-value",
+        "direction": "out",
+        "multiple": true
+      },
+      {
+        "id": "xhr",
+        "label": "XHR",
+        "type": "js-xhr",
+        "direction": "out",
+        "multiple": true
+      },
+      {
+        "id": "status",
+        "label": "Status",
+        "type": "js-number",
+        "direction": "out",
+        "multiple": true
+      },
+      {
+        "id": "progress",
+        "label": "Progress",
+        "type": "js-progress",
+        "direction": "out",
+        "multiple": true
+      },
+      {
+        "id": "error",
+        "label": "Error",
+        "type": "js-value",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\AjaxRequestCompiler",
+    "file": "Compiler.php"
+  }
+}

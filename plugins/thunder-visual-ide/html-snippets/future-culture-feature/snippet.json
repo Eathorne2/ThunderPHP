@@ -1,0 +1,18 @@
+{
+  "id": "future-culture-feature",
+  "name": "Future Culture Feature",
+  "description": "An asymmetric editorial feature with layered images, vertical issue text and compact story statistics.",
+  "category": "Magazine & Editorial",
+  "order": 3202,
+  "tags": [
+    "magazine",
+    "culture",
+    "feature",
+    "asymmetric",
+    "layered"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

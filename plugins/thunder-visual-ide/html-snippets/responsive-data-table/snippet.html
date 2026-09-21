@@ -1,0 +1,72 @@
+<section class="data-table-card">
+    <div class="data-table-card__header">
+        <div>
+            <p class="data-table-card__eyebrow">Customers</p>
+            <h2>Account directory</h2>
+        </div>
+        <label class="data-table-card__search">
+            <span class="sr-only">Search customers</span>
+            <input type="search" placeholder="Search name, email or status" data-table-search>
+        </label>
+    </div>
+    <div class="data-table-card__scroll">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Plan</th>
+                    <th>Status</th>
+                    <th class="data-table__number">Orders</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-table-row>
+                    <td>
+                        <strong>Amara Banda</strong>
+                    </td>
+                    <td>amara@example.com</td>
+                    <td>Business</td>
+                    <td>
+                        <span class="status status--active">Active</span>
+                    </td>
+                    <td class="data-table__number">24</td>
+                </tr>
+                <tr data-table-row>
+                    <td>
+                        <strong>Chanda Phiri</strong>
+                    </td>
+                    <td>chanda@example.com</td>
+                    <td>Starter</td>
+                    <td>
+                        <span class="status status--pending">Pending</span>
+                    </td>
+                    <td class="data-table__number">8</td>
+                </tr>
+                <tr data-table-row>
+                    <td>
+                        <strong>Mercy Mwansa</strong>
+                    </td>
+                    <td>mercy@example.com</td>
+                    <td>Business</td>
+                    <td>
+                        <span class="status status--active">Active</span>
+                    </td>
+                    <td class="data-table__number">31</td>
+                </tr>
+                <tr data-table-row>
+                    <td>
+                        <strong>Peter Zulu</strong>
+                    </td>
+                    <td>peter@example.com</td>
+                    <td>Free</td>
+                    <td>
+                        <span class="status status--inactive">Inactive</span>
+                    </td>
+                    <td class="data-table__number">3</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="data-table-card__empty" data-table-empty hidden>No matching records found.</p>
+    </div>
+</section>

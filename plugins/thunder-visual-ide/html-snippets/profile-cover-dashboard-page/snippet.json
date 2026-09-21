@@ -1,0 +1,17 @@
+{
+  "id": "profile-cover-dashboard-page",
+  "name": "Profile Cover Dashboard",
+  "description": "A full profile page with cover image, identity summary, statistics, biography, and recent activity.",
+  "category": "Profiles",
+  "order": 3030,
+  "tags": [
+    "profile",
+    "dashboard",
+    "user",
+    "activity"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

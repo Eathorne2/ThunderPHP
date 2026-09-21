@@ -1,0 +1,20 @@
+{
+  "id": "user-metrics-card",
+  "name": "User Metrics Card",
+  "description": "A profile summary card with contact details and compact activity metrics.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "User Cards",
+  "order": 2320,
+  "tags": [
+    "user",
+    "metrics",
+    "profile",
+    "listing"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

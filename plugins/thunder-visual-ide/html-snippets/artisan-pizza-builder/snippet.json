@@ -1,0 +1,18 @@
+{
+  "id": "artisan-pizza-builder",
+  "name": "Artisan Pizza Builder",
+  "description": "An interactive pizza product panel with size selection, optional extras and a live total.",
+  "category": "Food & Restaurant",
+  "order": 3710,
+  "tags": [
+    "pizza",
+    "product",
+    "ordering",
+    "builder",
+    "restaurant"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

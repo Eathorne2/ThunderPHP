@@ -1,0 +1,18 @@
+{
+  "id": "cruise-yacht-header-footer",
+  "name": "Cruise and Yacht Header and Footer",
+  "description": "A premium maritime shell for private charters, itineraries, fleet details and concierge planning.",
+  "category": "Travel & Hotels",
+  "order": 5090,
+  "tags": [
+    "travel",
+    "hotel",
+    "header",
+    "footer",
+    "private yacht journeys"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

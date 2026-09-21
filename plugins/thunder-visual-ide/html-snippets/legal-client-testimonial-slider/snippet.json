@@ -1,0 +1,17 @@
+{
+  "id": "legal-client-testimonial-slider",
+  "name": "Legal Client Testimonial Slider",
+  "description": "A restrained testimonial slider for law firms and advisory practices.",
+  "category": "Business & Law",
+  "order": 5270,
+  "tags": [
+    "law",
+    "testimonials",
+    "slider",
+    "clients"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

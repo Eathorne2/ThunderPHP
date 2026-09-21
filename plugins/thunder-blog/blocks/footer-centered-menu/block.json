@@ -1,0 +1,128 @@
+{
+  "settings": {
+    "defaults": {
+      "menu_id": "0",
+      "width": "1100"
+    },
+    "schema": [
+      {
+        "key": "menu_id",
+        "label": "Footer menu",
+        "type": "menu",
+        "default": "0"
+      },
+      {
+        "key": "width",
+        "label": "Content width",
+        "type": "select",
+        "options": {
+          "900": "Compact",
+          "1100": "Standard",
+          "1400": "Wide"
+        },
+        "default": "1100"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "key": "brand",
+      "label": "Brand message",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": true,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "heading": "{{app_name}}",
+        "text": "{{app_description}}"
+      },
+      "schema": [
+        {
+          "key": "heading",
+          "label": "Heading",
+          "type": "text",
+          "selector": ".tb-centered-footer__heading"
+        },
+        {
+          "key": "text",
+          "label": "Description",
+          "type": "textarea",
+          "selector": ".tb-centered-footer__text"
+        }
+      ],
+      "template": "<div class=\"tb-centered-footer__brand\"><h2 class=\"tb-centered-footer__heading\">{{heading}}</h2><p class=\"tb-centered-footer__text\">{{text}}</p></div>",
+      "min": 0,
+      "max": 1,
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "text"
+        }
+      }
+    },
+    {
+      "key": "copyright",
+      "label": "Copyright",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": true,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "© {{year}} {{app_name}}"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Copyright text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<p class=\"tb-centered-footer__copyright\">{{text}}</p>",
+      "min": 0,
+      "max": 1,
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "muted"
+        }
+      }
+    }
+  ],
+  "menu_sources": [
+    {
+      "setting": "menu_id",
+      "token": "footer",
+      "empty": "",
+      "container": "<nav class=\"tb-centered-footer__menu\" aria-label=\"{{menu_name}}\">{{items}}</nav>",
+      "item": "<a class=\"tb-centered-footer__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}}</a>",
+      "parent": "<div class=\"tb-centered-footer__group\"><a class=\"tb-centered-footer__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}}</a><div class=\"tb-centered-footer__children\">{{children}}</div></div>",
+      "empty_preview": "<nav class=\"tb-centered-footer__menu tb-menu-empty\">Select a menu</nav>"
+    }
+  ],
+  "html": "<footer class=\"tb-block tb-centered-footer\"><div class=\"tb-centered-footer__inner\" style=\"--tb-centered-footer-width:{{width}}px\">{{elements:brand}}{{menu:footer}}{{elements:copyright}}</div></footer>",
+  "css": ".tb-centered-footer{border-top:1px solid var(--tb-color-border);background:var(--tb-color-surface);text-align:center}.tb-centered-footer__inner{max-width:var(--tb-centered-footer-width);margin:auto;padding:54px 24px 28px}.tb-centered-footer__heading{margin:0;color:var(--tb-color-secondary);font-size:30px}.tb-centered-footer__text{max-width:600px;margin:10px auto 26px;color:var(--tb-color-muted);line-height:1.65}.tb-centered-footer__menu,.tb-centered-footer__children{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}.tb-centered-footer__link{padding:9px 12px;border-radius:8px;color:var(--tb-color-text);text-decoration:none;font-weight:700}.tb-centered-footer__link:hover{background:var(--tb-color-background);color:var(--tb-color-primary)}.tb-centered-footer__group{display:flex;gap:6px}.tb-centered-footer__children{padding-left:6px;border-left:1px solid var(--tb-color-border)}.tb-centered-footer__copyright{margin:32px 0 0;padding-top:22px;border-top:1px solid var(--tb-color-border);font-size:13px}.tb-menu-empty{color:var(--tb-color-muted);font-size:13px}",
+  "js": "",
+  "slug": "footer-centered-menu",
+  "name": "Centered Menu Footer",
+  "category": "Footers",
+  "description": "A centered brand footer with a reusable saved menu.",
+  "keywords": [
+    "footer",
+    "centered",
+    "menu",
+    "brand"
+  ],
+  "contexts": [
+    "footer"
+  ],
+  "version": "1.0.0"
+}

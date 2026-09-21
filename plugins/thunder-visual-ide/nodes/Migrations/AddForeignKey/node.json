@@ -1,0 +1,98 @@
+{
+  "type": "migration.add_foreign_key",
+  "label": "Add Foreign Key",
+  "category": "Migrations",
+  "kind": "migration",
+  "icon": "ADD",
+  "color": "#8b5cf6",
+  "description": "Adds a named foreign key to an existing table and removes it on rollback.",
+  "allowed_graphs": [
+    "migration"
+  ],
+  "defaults": {
+    "title": "Add Foreign Key",
+    "table": "posts",
+    "column": "user_id",
+    "reference_table": "users",
+    "reference_column": "id",
+    "on_delete": "CASCADE",
+    "on_update": "CASCADE",
+    "constraint_name": "fk_posts_user_id"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "table",
+      "label": "Table",
+      "type": "text"
+    },
+    {
+      "name": "column",
+      "label": "Column",
+      "type": "text"
+    },
+    {
+      "name": "reference_table",
+      "label": "Referenced table",
+      "type": "text"
+    },
+    {
+      "name": "reference_column",
+      "label": "Referenced column",
+      "type": "text"
+    },
+    {
+      "name": "on_delete",
+      "label": "On delete",
+      "type": "select",
+      "options": [
+        "CASCADE",
+        "RESTRICT",
+        "SET NULL",
+        "NO ACTION"
+      ]
+    },
+    {
+      "name": "on_update",
+      "label": "On update",
+      "type": "select",
+      "options": [
+        "CASCADE",
+        "RESTRICT",
+        "SET NULL",
+        "NO ACTION"
+      ]
+    },
+    {
+      "name": "constraint_name",
+      "label": "Constraint name",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Previous",
+        "type": "exec",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out"
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Migrations\\AddForeignKeyCompiler",
+    "file": "Compiler.php"
+  }
+}

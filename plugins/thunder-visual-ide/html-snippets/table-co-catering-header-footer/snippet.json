@@ -1,0 +1,18 @@
+{
+  "id": "table-co-catering-header-footer",
+  "name": "Table and Co Catering Header and Footer",
+  "description": "A polished catering-company header and footer designed for weddings, corporate events and private celebrations.",
+  "category": "Food & Restaurant",
+  "order": 3890,
+  "tags": [
+    "header footer",
+    "catering",
+    "events",
+    "wedding",
+    "corporate"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "field-fork-header-footer",
+  "name": "Field and Fork Header and Footer",
+  "description": "A fresh farm-to-table header and footer with organic shapes, produce-led navigation and farm newsletter signup.",
+  "category": "Food & Restaurant",
+  "order": 3840,
+  "tags": [
+    "header footer",
+    "farm to table",
+    "organic",
+    "restaurant",
+    "green"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

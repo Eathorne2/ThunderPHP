@@ -1,0 +1,20 @@
+{
+  "id": "marketing-mega-header",
+  "name": "Marketing Mega Header",
+  "description": "A responsive marketing header with dropdown product menu and call-to-action.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Headers",
+  "order": 2610,
+  "tags": [
+    "header",
+    "menu",
+    "marketing",
+    "dropdown"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

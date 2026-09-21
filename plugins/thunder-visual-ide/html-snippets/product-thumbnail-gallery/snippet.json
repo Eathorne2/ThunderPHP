@@ -1,0 +1,20 @@
+{
+  "id": "product-thumbnail-gallery",
+  "name": "Product Thumbnail Gallery",
+  "description": "A commerce-ready product image gallery with vertical thumbnails and active-image switching.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9007,
+  "tags": [
+    "gallery",
+    "product",
+    "thumbnails",
+    "commerce"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

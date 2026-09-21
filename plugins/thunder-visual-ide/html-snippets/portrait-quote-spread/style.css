@@ -1,0 +1,150 @@
+.quote-spread {
+    display: grid;
+    grid-template-columns: minmax(20rem, 0.9fr) minmax(24rem, 1.1fr);
+    min-height: 46rem;
+    color: var(--thv-theme-text, #161616);
+    background: var(--thv-theme-surface, #fffdf9);
+}
+
+.quote-spread__portrait {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.quote-spread__portrait::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 38%;
+    height: 24%;
+    background: color-mix(in srgb, var(--thv-theme-primary, #df3153) 86%, transparent);
+    mix-blend-mode: multiply;
+}
+
+.quote-spread__portrait img {
+    width: 100%;
+    height: 100%;
+    min-height: 46rem;
+    object-fit: cover;
+    filter: grayscale(0.15) contrast(1.04);
+}
+
+.quote-spread__portrait figcaption {
+    position: absolute;
+    z-index: 1;
+    left: 1.2rem;
+    bottom: 1.2rem;
+    color: #ffffff;
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.quote-spread__story {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: clamp(2rem, 6vw, 5.5rem);
+}
+
+.quote-spread__story > header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--thv-theme-border, #d8d3cc);
+    color: var(--thv-theme-muted, #6d6861);
+    font-size: 0.64rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.quote-spread blockquote {
+    position: relative;
+    margin: clamp(2.2rem, 6vw, 5rem) 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.7rem, 6vw, 6.2rem);
+    line-height: 0.95;
+}
+
+.quote-spread blockquote::before {
+    content: "“";
+    position: absolute;
+    top: -0.35em;
+    left: -0.1em;
+    color: var(--thv-theme-primary, #df3153);
+    font-size: 1.7em;
+    opacity: 0.22;
+}
+
+.quote-spread__body {
+    columns: 2;
+    column-gap: 2rem;
+    color: var(--thv-theme-muted, #5f5a54);
+    line-height: 1.75;
+}
+
+.quote-spread__body p {
+    margin-top: 0;
+}
+
+.quote-spread__dropcap::first-letter {
+    float: left;
+    margin: 0.05rem 0.45rem 0 0;
+    color: var(--thv-theme-primary, #df3153);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 4.2rem;
+    line-height: 0.75;
+}
+
+.quote-spread__story > footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    align-items: end;
+    margin-top: 2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--thv-theme-border, #d8d3cc);
+}
+
+.quote-spread__story > footer strong,
+.quote-spread__story > footer small {
+    display: block;
+}
+
+.quote-spread__story > footer small {
+    margin-top: 0.2rem;
+    color: var(--thv-theme-muted, #6d6861);
+}
+
+.quote-spread__story > footer a {
+    color: var(--thv-theme-primary, #df3153);
+    font-weight: 850;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    .quote-spread {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-spread__portrait img {
+        min-height: 32rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .quote-spread__body {
+        columns: 1;
+    }
+
+    .quote-spread__story > footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

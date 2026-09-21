@@ -1,0 +1,204 @@
+.eng {
+    padding: clamp(1.2rem, 4vw, 3.2rem);
+    border: 1px solid color-mix(in srgb, var(--thv-theme-text) 16%, transparent);
+    border-radius: 1.3rem;
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-background);
+}
+
+.eng *,
+.eng *::before,
+.eng *::after {
+    box-sizing: border-box;
+}
+
+.eng a {
+    color: inherit;
+}
+
+.eng img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.eng > header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid currentColor;
+}
+
+.eng__brand {
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.eng > header > div {
+    display: flex;
+    gap: 1rem;
+    color: var(--thv-theme-muted);
+    font-size: .65rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.eng__layout {
+    display: grid;
+    grid-template-columns: 1.35fr .65fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.eng__lead {
+    position: relative;
+    min-height: 34rem;
+    overflow: hidden;
+}
+
+.eng__lead::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 35%, color-mix(in srgb, var(--thv-theme-text) 88%, transparent));
+    content: "";
+}
+
+.eng__lead > img {
+    height: 100%;
+    min-height: 34rem;
+}
+
+.eng__lead > div {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: clamp(1.2rem, 4vw, 3rem);
+    color: var(--thv-theme-on-primary);
+}
+
+.eng article span {
+    color: var(--thv-theme-primary);
+    font-size: .62rem;
+    font-weight: 900;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+}
+
+.eng__lead h2 {
+    max-width: 12ch;
+    margin: .55rem 0 .75rem;
+    font-family: Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 4.8rem);
+    font-weight: 500;
+    letter-spacing: -.055em;
+    line-height: .94;
+}
+
+.eng__lead p {
+    max-width: 36rem;
+    margin: 0;
+    color: color-mix(in srgb, var(--thv-theme-on-primary) 68%, transparent);
+    line-height: 1.7;
+}
+
+.eng__lead a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding-bottom: .2rem;
+    border-bottom: 1px solid currentColor;
+    font-size: .65rem;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.eng__side {
+    display: grid;
+    gap: 1rem;
+}
+
+.eng__side article {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 16.5rem;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--thv-theme-text) 4%, transparent);
+}
+
+.eng__side img {
+    height: 100%;
+    min-height: 10rem;
+}
+
+.eng__side article > div {
+    padding: 1rem;
+}
+
+.eng__side h3 {
+    margin: .45rem 0 0;
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.eng__ticker {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+    padding: .9rem 0;
+    overflow-x: auto;
+    border-top: 1px solid color-mix(in srgb, var(--thv-theme-text) 16%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--thv-theme-text) 16%, transparent);
+    var(--thv-theme-surface)-space: nowrap;
+}
+
+.eng__ticker strong {
+    padding: .35rem .55rem;
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary);
+    font-size: .6rem;
+    text-transform: uppercase;
+}
+
+.eng__ticker span {
+    color: var(--thv-theme-muted);
+    font-size: .72rem;
+}
+
+.eng__ticker span::after {
+    margin-left: 1rem;
+    color: var(--thv-theme-primary);
+    content: "●";
+}
+
+@media (max-width: 820px) {
+    .eng__layout {
+        grid-template-columns: 1fr;
+    }
+
+    .eng__side {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .eng > header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .eng > header > div {
+        flex-wrap: wrap;
+    }
+
+    .eng__side {
+        grid-template-columns: 1fr;
+    }
+}

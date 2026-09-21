@@ -1,0 +1,76 @@
+{
+  "id": "soft-panel",
+  "name": "Soft Panel",
+  "description": "Rounded inset controls on a softly elevated form surface for dashboards and account screens.",
+  "order": 40,
+  "palettes": {
+    "default": {
+      "name": "Default",
+      "colors": {
+        "primary": "#4f46e5",
+        "secondary": "#6366f1",
+        "surface": "#ffffff",
+        "surface_alt": "#eef2ff",
+        "text": "#1e1b4b",
+        "muted": "#64748b",
+        "border": "#c7d2fe",
+        "danger": "#dc2626",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    },
+    "rose": {
+      "name": "Rose",
+      "colors": {
+        "primary": "#e11d48",
+        "secondary": "#be123c",
+        "surface": "#fffafa",
+        "surface_alt": "#fff1f2",
+        "text": "#881337",
+        "muted": "#9f1239",
+        "border": "#fecdd3",
+        "danger": "#b91c1c",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    },
+    "gold": {
+      "name": "Gold",
+      "colors": {
+        "primary": "#ca8a04",
+        "secondary": "#a16207",
+        "surface": "#fffdf5",
+        "surface_alt": "#fefce8",
+        "text": "#713f12",
+        "muted": "#854d0e",
+        "border": "#fde68a",
+        "danger": "#b91c1c",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    }
+  },
+  "default_palette": "default",
+  "preview": "preview.html",
+  "css": "style.css",
+  "js": "script.js",
+  "components": {
+    "text_input": "field.html.tpl",
+    "email_input": "field.html.tpl",
+    "password_input": "field.html.tpl",
+    "number_input": "field.html.tpl",
+    "date_input": "field.html.tpl",
+    "file_input": "field.html.tpl",
+    "textarea": "textarea.html.tpl",
+    "select": "select.html.tpl",
+    "checkbox": "checkbox.html.tpl",
+    "button": "button.html.tpl",
+    "form": "form.html.tpl"
+  }
+}

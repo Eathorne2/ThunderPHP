@@ -1,0 +1,86 @@
+{
+  "format": "thunder-visual-ide-node-bundle",
+  "format_version": 1,
+  "schema_version": 4,
+  "generated_by": "Thunder Visual IDE 0.12.36",
+  "id": "bundled-login-fields",
+  "name": "Login Form Fields",
+  "description": "Email, password, and submit controls ready to connect to a visual Form node.",
+  "category": "Forms",
+  "order": 10,
+  "graph_kind": "view",
+  "created_at": "2026-07-23T00:00:00Z",
+  "nodes": [
+    {
+      "id": "login-email",
+      "type": "view.email_input",
+      "x": 0,
+      "y": 0,
+      "data": {
+        "title": "Email",
+        "name": "email",
+        "label": "Email address",
+        "placeholder": "you@example.com",
+        "value_path": "",
+        "required": true,
+        "autocomplete": "email",
+        "css_class": "",
+        "control_css_class": "",
+        "validation_rules": "",
+        "widths": {
+          "mobile": 12,
+          "small": 12,
+          "medium": 12,
+          "large": 12
+        }
+      }
+    },
+    {
+      "id": "login-password",
+      "type": "view.password_input",
+      "x": 0,
+      "y": 170,
+      "data": {
+        "title": "Password",
+        "name": "password",
+        "label": "Password",
+        "placeholder": "Enter your password",
+        "value_path": "",
+        "required": true,
+        "autocomplete": "current-password",
+        "css_class": "",
+        "control_css_class": "",
+        "validation_rules": "min:6",
+        "widths": {
+          "mobile": 12,
+          "small": 12,
+          "medium": 12,
+          "large": 12
+        }
+      }
+    },
+    {
+      "id": "login-button",
+      "type": "view.button",
+      "x": 0,
+      "y": 340,
+      "data": {
+        "title": "Login Button",
+        "text": "Log in",
+        "button_type": "submit",
+        "style": "primary",
+        "name": "",
+        "value": "",
+        "css_class": "",
+        "widths": {
+          "mobile": 12,
+          "small": 12,
+          "medium": 12,
+          "large": 12
+        }
+      }
+    }
+  ],
+  "edges": [],
+  "nested_graphs": {}
+}

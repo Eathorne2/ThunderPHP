@@ -1,0 +1,18 @@
+{
+  "id": "esports-tournament-bracket",
+  "name": "Esports Tournament Bracket",
+  "description": "A professional esports bracket with team scores, live-match status and round navigation.",
+  "category": "Music & Entertainment",
+  "order": 4340,
+  "tags": [
+    "gaming",
+    "esports",
+    "tournament",
+    "bracket",
+    "competition"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

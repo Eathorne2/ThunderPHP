@@ -1,0 +1,239 @@
+{
+  "slug": "fb-boutique-promo-banner",
+  "name": "Boutique Promo Banner",
+  "category": "Fashion & Beauty",
+  "description": "High-impact boutique promotion with discount badge and fashion image.",
+  "keywords": [
+    "fashion",
+    "boutique",
+    "promo",
+    "sale",
+    "banner"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-fb-promo\"><div class=\"tb-fb-promo__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}{{elements:cta}}</div><div class=\"tb-fb-promo__media\">{{elements:image}}<div class=\"tb-fb-promo__badge\">{{elements:badge}}</div></div></div>",
+  "css": ".tb-fb-promo{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,1fr);background:var(--tb-color-primary);color:#fff;overflow:hidden}.tb-fb-promo__copy{padding:clamp(32px,7vw,88px);display:flex;flex-direction:column;justify-content:center}.tb-fb-promo__eyebrow{font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-fb-promo__title{margin:10px 0;font-family:Georgia,serif;font-size:clamp(44px,7vw,80px);font-weight:500;line-height:.98}.tb-fb-promo__text{max-width:540px;line-height:1.7;opacity:.88}.tb-fb-promo__cta{align-self:flex-start;margin-top:18px;padding:12px 18px;background:#fff;color:var(--tb-color-primary);text-decoration:none;font-weight:900}.tb-fb-promo__media{position:relative;min-height:520px}.tb-fb-promo__image{width:100%;height:100%;min-height:520px;object-fit:cover;display:block}.tb-fb-promo__badge{position:absolute;left:22px;top:22px;width:100px;height:100px;border-radius:50%;display:grid;place-items:center;text-align:center;padding:12px;background:var(--tb-color-accent);color:var(--tb-color-secondary);font-weight:900}@media(max-width:760px){.tb-fb-promo{grid-template-columns:1fr}.tb-fb-promo__media,.tb-fb-promo__image{min-height:390px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Boutique edit"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-fb-promo__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "The weekend wardrobe refresh"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-fb-promo__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Use this bold banner for a collection launch, promotion or limited seasonal edit."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-fb-promo__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Button",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Shop the edit",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-fb-promo__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "image",
+      "label": "Promo image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Fashion boutique campaign"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-fb-promo__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-fb-promo__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "badge",
+      "label": "Badge",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "20% OFF"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<div class=\"tb-fb-promo__badge\">{{text}}</div>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

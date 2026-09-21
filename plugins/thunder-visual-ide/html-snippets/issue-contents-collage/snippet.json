@@ -1,0 +1,18 @@
+{
+  "id": "issue-contents-collage",
+  "name": "Issue Contents Collage",
+  "description": "A modular magazine contents board combining image tiles, category blocks and bold issue typography.",
+  "category": "Magazine & Editorial",
+  "order": 3207,
+  "tags": [
+    "magazine",
+    "contents",
+    "collage",
+    "grid",
+    "editorial"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

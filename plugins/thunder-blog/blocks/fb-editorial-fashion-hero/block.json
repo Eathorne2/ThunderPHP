@@ -1,0 +1,205 @@
+{
+  "slug": "fb-editorial-fashion-hero",
+  "name": "Editorial Fashion Hero",
+  "category": "Fashion & Beauty",
+  "description": "Oversized editorial headline paired with a tall fashion image and CTA.",
+  "keywords": [
+    "fashion",
+    "hero",
+    "editorial",
+    "collection"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-fb-editorial-hero\"><div class=\"tb-fb-editorial-hero__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}{{elements:cta}}</div><div class=\"tb-fb-editorial-hero__media\">{{elements:image}}<span class=\"tb-fb-editorial-hero__number\">01</span></div></div>",
+  "css": ".tb-fb-editorial-hero{display:grid;grid-template-columns:minmax(0,.9fr) minmax(300px,1.1fr);gap:clamp(28px,6vw,84px);align-items:center;padding:clamp(28px,6vw,78px);background:var(--tb-color-surface);border:1px solid var(--tb-color-border)}.tb-fb-editorial-hero__copy{min-width:0}.tb-fb-editorial-hero__eyebrow{display:block;margin-bottom:16px;color:var(--tb-color-primary);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.tb-fb-editorial-hero__title{margin:0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(46px,8vw,92px);font-weight:500;line-height:.92;letter-spacing:-.05em}.tb-fb-editorial-hero__text{max-width:560px;margin:24px 0;color:var(--tb-color-muted);font-size:17px;line-height:1.75}.tb-fb-editorial-hero__cta{display:inline-flex;padding:12px 20px;border:1px solid var(--tb-color-secondary);color:var(--tb-color-secondary);text-decoration:none;font-weight:800}.tb-fb-editorial-hero__media{position:relative;min-height:580px;overflow:hidden}.tb-fb-editorial-hero__image{width:100%;height:100%;min-height:580px;object-fit:cover;display:block}.tb-fb-editorial-hero__number{position:absolute;right:16px;bottom:12px;color:#fff;font-family:Georgia,serif;font-size:54px;text-shadow:0 2px 20px rgba(0,0,0,.35)}@media(max-width:760px){.tb-fb-editorial-hero{grid-template-columns:1fr}.tb-fb-editorial-hero__media,.tb-fb-editorial-hero__image{min-height:420px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Season edit"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-fb-editorial-hero__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Style that moves with you"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-fb-editorial-hero__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A confident editorial opening for collections, designers and seasonal fashion stories."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-fb-editorial-hero__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Button",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Explore the edit",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-fb-editorial-hero__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "image",
+      "label": "Hero image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Fashion editorial portrait"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-fb-editorial-hero__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-fb-editorial-hero__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

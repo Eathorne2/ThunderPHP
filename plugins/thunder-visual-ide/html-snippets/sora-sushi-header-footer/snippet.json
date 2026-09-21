@@ -1,0 +1,18 @@
+{
+  "id": "sora-sushi-header-footer",
+  "name": "Sora Sushi Header and Footer",
+  "description": "A restrained Japanese-inspired navigation and footer set with editorial spacing and a compact booking action.",
+  "category": "Food & Restaurant",
+  "order": 3830,
+  "tags": [
+    "header footer",
+    "sushi",
+    "japanese",
+    "restaurant",
+    "minimal"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

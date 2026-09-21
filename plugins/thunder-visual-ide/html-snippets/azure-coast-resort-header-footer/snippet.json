@@ -1,0 +1,18 @@
+{
+  "id": "azure-coast-resort-header-footer",
+  "name": "Azure Coast Resort Header and Footer",
+  "description": "A light coastal resort shell with direct booking, experience links and a relaxed guest-information footer.",
+  "category": "Travel & Hotels",
+  "order": 5010,
+  "tags": [
+    "travel",
+    "hotel",
+    "header",
+    "footer",
+    "private island resort"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

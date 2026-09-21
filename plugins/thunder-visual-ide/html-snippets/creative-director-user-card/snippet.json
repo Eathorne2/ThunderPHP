@@ -1,0 +1,18 @@
+{
+  "id": "creative-director-user-card",
+  "name": "Creative Director User Card",
+  "description": "A bold art-direction profile card with portrait collage, project count, status and contact action.",
+  "category": "User Cards",
+  "order": 2400,
+  "tags": [
+    "user",
+    "card",
+    "creative",
+    "profile",
+    "editorial"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

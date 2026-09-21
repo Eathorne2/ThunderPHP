@@ -1,0 +1,20 @@
+{
+  "id": "hero-search-panel",
+  "name": "Hero Search Panel",
+  "description": "A large search interface with category selector and popular suggestions.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Search Bars",
+  "order": 8054,
+  "tags": [
+    "search",
+    "hero",
+    "categories",
+    "suggestions"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

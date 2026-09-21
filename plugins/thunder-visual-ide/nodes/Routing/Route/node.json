@@ -1,0 +1,70 @@
+{
+  "type": "routing.route",
+  "label": "Route",
+  "category": "Routing",
+  "kind": "architecture",
+  "icon": "R",
+  "color": "#ea580c",
+  "description": "Defines a named ThunderPHP route and receives controller/view lifecycle nodes.",
+  "allowed_graphs": [
+    "architecture"
+  ],
+  "defaults": {
+    "title": "Route",
+    "method": "GET",
+    "path": "/page",
+    "route_name": "page.index"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "method",
+      "label": "Request method",
+      "type": "select",
+      "options": [
+        "GET",
+        "POST",
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ]
+    },
+    {
+      "name": "path",
+      "label": "Path",
+      "type": "text"
+    },
+    {
+      "name": "route_name",
+      "label": "Route name",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "controller",
+        "label": "Controller",
+        "type": "controller",
+        "direction": "in",
+        "multiple": true
+      },
+      {
+        "id": "view",
+        "label": "View",
+        "type": "view",
+        "direction": "in",
+        "multiple": true
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Routing\\RouteCompiler",
+    "file": "Compiler.php"
+  }
+}

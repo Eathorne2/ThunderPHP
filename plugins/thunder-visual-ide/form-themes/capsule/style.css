@@ -1,0 +1,8 @@
+{{scope}}{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--thv-theme-text)}
+{{scope}}.thv-form,{{scope}} .thv-form{padding:1.45rem;border-radius:1.75rem;background:var(--thv-theme-surface-alt);border:1px solid var(--thv-theme-border)}
+{{scope}} .thv-field>label,{{scope}}.thv-field>label,{{scope}} .thv-label{padding-left:.45rem;color:var(--thv-theme-text);font-size:.84rem;font-weight:750}
+{{scope}} .thv-field :where(input:not([type=checkbox]):not([type=radio]),textarea,select),{{scope}}.thv-field :where(input:not([type=checkbox]):not([type=radio]),textarea,select){min-height:3rem;padding:.78rem 1.1rem;border:1px solid var(--thv-theme-border);border-radius:999px;background:var(--thv-theme-surface);color:var(--thv-theme-text)}
+{{scope}} .thv-field textarea,{{scope}}.thv-field textarea{min-height:7rem;border-radius:1.2rem}
+{{scope}} .thv-field :where(input,textarea,select):focus,{{scope}}.thv-field :where(input,textarea,select):focus{outline:0;border-color:var(--thv-theme-primary);box-shadow:0 0 0 4px color-mix(in srgb,var(--thv-theme-primary) 15%,transparent)}
+{{scope}} .thv-checkbox,{{scope}}.thv-checkbox{padding:.5rem .75rem;border-radius:999px;background:color-mix(in srgb,var(--thv-theme-primary) 7%,var(--thv-theme-surface))}
+{{scope}} .thv-button--primary,{{scope}}.thv-button--primary{min-height:3rem;padding:.75rem 1.35rem;border:0;border-radius:999px;background:linear-gradient(135deg,var(--thv-theme-primary),var(--thv-theme-secondary));color:var(--thv-theme-on-primary);box-shadow:0 12px 24px color-mix(in srgb,var(--thv-theme-primary) 22%,transparent)}

@@ -1,0 +1,198 @@
+.cbm-men {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.cbm-men *, .cbm-men *::before, .cbm-men *::after {
+    box-sizing: border-box;
+}
+
+.cbm-men button, .cbm-men input, .cbm-men select, .cbm-men textarea {
+    font: inherit;
+}
+
+.cbm-men a {
+    color: inherit;
+}
+
+.cbm-men {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 74rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface);
+}
+
+.cbm-men__brand {
+    color: var(--thv-theme-text);
+    font-weight: 950;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+}
+
+.cbm-men__links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cbm-men__links:first-child {
+    margin-right: auto;
+}
+
+.cbm-men__links:last-of-type {
+    margin-left: auto;
+}
+
+.cbm-men__links a {
+    color: var(--thv-theme-muted);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.cbm-men__links a:hover {
+    color: var(--thv-theme-primary);
+}
+
+.cbm-men__action {
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.65rem;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary) !important;
+}
+
+.cbm-men__toggle, .cbm-men__mobile {
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.65rem;
+    background: var(--thv-theme-background);
+    color: var(--thv-theme-text);
+    cursor: pointer;
+}
+
+.cbm-men__mobile {
+    display: none;
+    margin-left: auto;
+}
+
+.cbm-men__mega {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 0.55rem);
+    z-index: 10;
+    display: none;
+    grid-template-columns: 1fr 1fr 1.3fr;
+    gap: 1.5rem;
+    padding: 1.2rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface);
+    box-shadow: 0 1rem 2.5rem color-mix(in srgb, var(--thv-theme-text) 14%, transparent);
+}
+
+.cbm-men__mega.is-open {
+    display: grid;
+}
+
+.cbm-men__mega strong, .cbm-men__mega a {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+.cbm-men__mega a {
+    color: var(--thv-theme-muted);
+}
+
+.cbm-men__mega article {
+    padding: 1rem;
+    border-radius: 0.8rem;
+    background: var(--thv-theme-surface-alt);
+}
+
+.cbm-men__mega article span {
+    color: var(--thv-theme-primary);
+    font-size: 0.7rem;
+    font-weight: 850;
+    text-transform: uppercase;
+}
+
+.cbm-men__mega article h3 {
+    margin: 0.5rem 0;
+}
+
+.cbm-men__account {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--thv-theme-border);
+}
+
+.cbm-men__account > span {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+    font-weight: 850;
+}
+
+.cbm-men__account strong, .cbm-men__account small {
+    display: block;
+}
+
+.cbm-men__account small {
+    color: var(--thv-theme-muted);
+}
+
+.cbm-men.is-collapsed {
+    width: 5rem;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.cbm-men.is-collapsed .cbm-men__links, .cbm-men.is-collapsed .cbm-men__account div, .cbm-men.is-collapsed .cbm-men__brand {
+    display: none;
+}
+
+@media (max-width: 760px) {
+    .cbm-men__mobile {
+        display: block;
+    }
+
+    .cbm-men:not(.is-collapsed) > .cbm-men__links {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: calc(100% + 0.5rem);
+        z-index: 10;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+        border: 1px solid var(--thv-theme-border);
+        border-radius: 0.8rem;
+        background: var(--thv-theme-surface);
+    }
+
+    .cbm-men.is-open > .cbm-men__links {
+        display: flex;
+    }
+
+    .cbm-men__mega {
+        grid-template-columns: 1fr;
+    }
+
+}

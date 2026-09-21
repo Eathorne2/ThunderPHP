@@ -1,0 +1,18 @@
+{
+  "id": "modern-wedding-invitation",
+  "name": "Modern Wedding Invitation",
+  "description": "A minimal digital invitation card with names, ceremony details and RSVP action.",
+  "category": "Wedding",
+  "order": 4680,
+  "tags": [
+    "wedding",
+    "invitation",
+    "announcement",
+    "minimal",
+    "save the date"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

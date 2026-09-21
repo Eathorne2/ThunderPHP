@@ -1,0 +1,218 @@
+.pbc-car {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.pbc-car *, .pbc-car *::before, .pbc-car *::after {
+    box-sizing: border-box;
+}
+
+.pbc-car button, .pbc-car input, .pbc-car select, .pbc-car textarea {
+    font: inherit;
+}
+
+.pbc-car a {
+    color: inherit;
+}
+
+.pbc-car {
+    max-width: 68rem;
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.35rem;
+    background: var(--thv-theme-background);
+}
+
+.pbc-car header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.pbc-car header span {
+    color: var(--thv-theme-primary);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.pbc-car header h2 {
+    margin: 0.2rem 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.pbc-car header p {
+    margin: 0;
+    color: var(--thv-theme-muted);
+}
+
+.pbc-car header label {
+    padding: 0.55rem 0.8rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 999px;
+    background: var(--thv-theme-surface);
+}
+
+.pbc-car__plans, .pbc-car__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.pbc-car__plans article, .pbc-car__grid article {
+    padding: 1.2rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface);
+}
+
+.pbc-car__plans article.is-featured, .pbc-car__grid article.is-selected {
+    border-color: var(--thv-theme-primary);
+    box-shadow: 0 0 0 0.18rem color-mix(in srgb, var(--thv-theme-primary) 18%, transparent);
+}
+
+.pbc-car__plans h3 {
+    margin: 0.65rem 0 0;
+    font-size: 2rem;
+}
+
+.pbc-car__plans small, .pbc-car__grid small {
+    color: var(--thv-theme-muted);
+}
+
+.pbc-car__plans ul {
+    display: grid;
+    gap: 0.5rem;
+    min-height: 7rem;
+    padding-left: 1.15rem;
+}
+
+.pbc-car__plans li::marker {
+    color: var(--thv-theme-primary);
+}
+
+.pbc-car__plans button, .pbc-car__grid button, .pbc-car__checkout, .pbc-car__promo button {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: 0.7rem;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.pbc-car__grid article {
+    padding: 0;
+    overflow: hidden;
+}
+
+.pbc-car__grid img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.pbc-car__grid article > div {
+    padding: 1rem;
+}
+
+.pbc-car__grid h3 {
+    margin: 0.25rem 0;
+}
+
+.pbc-car__message {
+    color: var(--thv-theme-primary);
+    font-weight: 750;
+}
+
+.pbc-car__head {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--thv-theme-border);
+}
+
+.pbc-car__item {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr auto;
+    gap: 0.8rem;
+    align-items: center;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--thv-theme-border);
+}
+
+.pbc-car__item img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.65rem;
+    object-fit: cover;
+}
+
+.pbc-car__item strong, .pbc-car__item small {
+    display: block;
+}
+
+.pbc-car__item small {
+    margin-top: 0.2rem;
+    color: var(--thv-theme-muted);
+}
+
+.pbc-car__promo {
+    display: grid;
+    gap: 0.4rem;
+    margin: 1rem 0;
+}
+
+.pbc-car__promo span {
+    display: flex;
+}
+
+.pbc-car__promo input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.7rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.7rem 0 0 0.7rem;
+    background: var(--thv-theme-surface);
+    color: var(--thv-theme-text);
+}
+
+.pbc-car__promo button {
+    width: auto;
+    border-radius: 0 0.7rem 0.7rem 0;
+}
+
+.pbc-car dl div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+}
+
+.pbc-car dl dd {
+    margin: 0;
+}
+
+.pbc-car__total {
+    margin-top: 0.5rem;
+    padding-top: 0.9rem !important;
+    border-top: 1px solid var(--thv-theme-border);
+    font-size: 1.15rem;
+    font-weight: 900;
+}
+
+@media (max-width: 760px) {
+    .pbc-car header {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .pbc-car__plans,     .pbc-car__grid {
+        grid-template-columns: 1fr;
+    }
+
+}

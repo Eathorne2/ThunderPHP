@@ -1,0 +1,42 @@
+{
+  "id": "pills",
+  "name": "Soft Pills",
+  "description": "Friendly pill-shaped controls with a strong active page.",
+  "order": 20,
+  "defaults": {
+    "component_name": "pagination",
+    "pager_variable": "pager",
+    "show_summary": true,
+    "first_label": "First",
+    "prev_label": "Previous",
+    "next_label": "Next",
+    "last_label": "Last",
+    "wrapper_class": "tvi-pager-pills",
+    "buttons_class": "tvi-pager-pills__buttons",
+    "button_class": "tvi-pager-pills__button",
+    "active_class": "is-active",
+    "disabled_class": "is-disabled",
+    "ellipsis_class": "is-ellipsis",
+    "summary_class": "tvi-pager-pills__summary",
+    "base_styles": true,
+    "custom_css": "",
+    "widths": {
+      "mobile": 12,
+      "small": 12,
+      "medium": 12,
+      "large": 12
+    }
+  },
+  "palette": {
+    "button_background": "#eef2ff",
+    "button_text": "#3730a3",
+    "button_border": "transparent",
+    "hover_background": "#e0e7ff",
+    "hover_text": "#312e81",
+    "active_background": "#4f46e5",
+    "active_text": "#ffffff",
+    "disabled_background": "#eef2ff",
+    "disabled_text": "#64748b",
+    "summary_text": "#64748b"
+  }
+}

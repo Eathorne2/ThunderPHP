@@ -1,0 +1,71 @@
+<section class="playlist-audio" data-media-player>
+    <header class="playlist-audio__header">
+        <div>
+            <p>Focus collection</p>
+            <h2>Late afternoon sessions</h2>
+        </div>
+        <span>3 tracks · 16 min</span>
+    </header>
+
+    <audio preload="metadata" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
+
+    <div class="playlist-audio__now-playing">
+        <button class="playlist-audio__play" type="button" data-media-play>Play</button>
+        <div>
+            <strong data-track-title>Clear Skies</strong>
+            <span data-track-artist>Northline Sessions</span>
+        </div>
+        <input type="range" min="0" max="100" value="0" step="0.1" aria-label="Track progress" data-media-progress>
+        <span data-media-time>0:00 / 0:00</span>
+        <button type="button" data-media-mute>Mute</button>
+    </div>
+
+    <ol class="playlist-audio__tracks">
+        <li>
+            <button
+                class="is-active"
+                type="button"
+                data-audio-source="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+                data-audio-title="Clear Skies"
+                data-audio-artist="Northline Sessions"
+            >
+                <span>01</span>
+                <div>
+                    <strong>Clear Skies</strong>
+                    <small>Northline Sessions</small>
+                </div>
+                <time>5:32</time>
+            </button>
+        </li>
+        <li>
+            <button
+                type="button"
+                data-audio-source="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
+                data-audio-title="Slow Current"
+                data-audio-artist="Mira Studio"
+            >
+                <span>02</span>
+                <div>
+                    <strong>Slow Current</strong>
+                    <small>Mira Studio</small>
+                </div>
+                <time>4:48</time>
+            </button>
+        </li>
+        <li>
+            <button
+                type="button"
+                data-audio-source="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
+                data-audio-title="Golden Hour"
+                data-audio-artist="Field Recordings"
+            >
+                <span>03</span>
+                <div>
+                    <strong>Golden Hour</strong>
+                    <small>Field Recordings</small>
+                </div>
+                <time>5:41</time>
+            </button>
+        </li>
+    </ol>
+</section>

@@ -1,0 +1,40 @@
+.ig-contact-sheet {
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.ig-contact-sheet *,
+.ig-contact-sheet *::before,
+.ig-contact-sheet *::after {
+    box-sizing: border-box;
+}
+
+.ig-contact-sheet button,
+.ig-contact-sheet input,
+.ig-contact-sheet select,
+.ig-contact-sheet textarea {
+    font: inherit;
+}
+
+.ig-contact-sheet a {
+    color: inherit;
+}
+
+.ig-contact-sheet img {
+    display: block;
+    max-width: 100%;
+}
+.ig-contact-sheet { padding: clamp(1.2rem, 4vw, 3rem); border: 1px solid var(--thv-theme-border); background: var(--thv-theme-surface); }
+.ig-contact-sheet header { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; padding-bottom: .8rem; border-bottom: 1px solid var(--thv-theme-border); }
+.ig-contact-sheet header p { margin: 0; color: var(--thv-theme-primary); font-size: .66rem; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
+.ig-contact-sheet h2 { margin: .25rem 0 0; font-size: clamp(1.8rem, 4vw, 3.2rem); letter-spacing: -.04em; }
+.ig-contact-sheet header span { color: var(--thv-theme-muted); font-size: .76rem; }
+.ig-contact-sheet__grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: .55rem; }
+.ig-contact-sheet figure { position: relative; margin: 0; overflow: hidden; background: var(--thv-theme-surface-alt); }
+.ig-contact-sheet figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; filter: saturate(.85); transition: filter .2s ease, transform .2s ease; }
+.ig-contact-sheet figure:hover img { filter: saturate(1); transform: scale(1.025); }
+.ig-contact-sheet figcaption { position: absolute; right: .35rem; bottom: .35rem; min-width: 1.6rem; padding: .25rem .35rem; color: var(--thv-theme-on-primary); background: color-mix(in srgb, var(--thv-theme-text) 68%, transparent); font-family: ui-monospace, monospace; font-size: .62rem; text-align: center; }
+@media (max-width: 850px) { .ig-contact-sheet__grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 520px) { .ig-contact-sheet header { align-items: start; flex-direction: column; } .ig-contact-sheet__grid { grid-template-columns: repeat(2, 1fr); } }

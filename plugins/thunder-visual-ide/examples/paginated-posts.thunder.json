@@ -1,0 +1,484 @@
+{
+  "schema_version": 4,
+  "generated_by": "Thunder Visual IDE 0.12.36",
+  "active_graph_id": "main",
+  "sample": {
+    "id": "paginated-posts",
+    "name": "Paginated Posts & Migration",
+    "order": 3,
+    "level": "Intermediate",
+    "description": "Shows custom Query Builder model methods, Pager limit/offset outputs, set_value() view data, a visual foreach loop, and a reversible table migration.",
+    "focus": [
+      "Pagination",
+      "Models",
+      "View Loops",
+      "Migrations"
+    ]
+  },
+  "graphs": {
+    "main": {
+      "id": "main",
+      "name": "Plugin Architecture",
+      "kind": "architecture",
+      "nodes": [
+        {
+          "id": "plugin",
+          "type": "project.plugin",
+          "x": 40,
+          "y": 40,
+          "data": {
+            "name": "Paginated Posts",
+            "id": "paginated-posts-sample",
+            "namespace": "PaginatedPostsSample",
+            "type": "Companion",
+            "version": "1.0.0",
+            "core_requires": "^1.0.0",
+            "description": "Model methods, Pager outputs, page values, a visual loop, and a reversible migration.",
+            "author": "",
+            "website": "",
+            "thumbnail": "",
+            "active": true,
+            "look": "main",
+            "index": 10,
+            "dependencies": "{}"
+          }
+        },
+        {
+          "id": "look",
+          "type": "looks.look",
+          "x": 40,
+          "y": 250,
+          "data": {
+            "title": "Main Look",
+            "folder": "main",
+            "name": "Posts Look",
+            "version": "1.0.0",
+            "plugin_requires": "^1.0.0",
+            "author": "",
+            "thumbnail": "",
+            "description": "Paginated post listing"
+          }
+        },
+        {
+          "id": "model",
+          "type": "models.model",
+          "x": 40,
+          "y": 480,
+          "data": {
+            "title": "Post Model",
+            "class_name": "Post",
+            "table": "sample_posts",
+            "fillable_insert": "title,body,status,date_created",
+            "fillable_update": "title,body,status",
+            "methods_json": "[\n  {\n    \"name\": \"countPublished\",\n    \"params\": [],\n    \"return_type\": \"int\",\n    \"implementation\": \"body\",\n    \"body\": \"return $this->where('status', 'published')->count();\"\n  },\n  {\n    \"name\": \"publishedPage\",\n    \"params\": [\n      {\n        \"name\": \"limit\",\n        \"type\": \"int\"\n      },\n      {\n        \"name\": \"offset\",\n        \"type\": \"int\"\n      }\n    ],\n    \"return_type\": \"array\",\n    \"implementation\": \"body\",\n    \"body\": \"return $this->where('status', 'published')->orderBy('id', 'DESC')->limit($limit)->offset($offset)->get();\"\n  }\n]"
+          }
+        },
+        {
+          "id": "route",
+          "type": "routing.route",
+          "x": 430,
+          "y": 40,
+          "data": {
+            "title": "posts.index",
+            "method": "GET",
+            "path": "/sample-posts",
+            "route_name": "posts.index"
+          }
+        },
+        {
+          "id": "controller",
+          "type": "lifecycle.controller",
+          "x": 730,
+          "y": 40,
+          "data": {
+            "title": "Load Paginated Posts",
+            "hook_name": "controller",
+            "priority": 10,
+            "graph_id": "flow-posts"
+          }
+        },
+        {
+          "id": "view",
+          "type": "lifecycle.view",
+          "x": 730,
+          "y": 260,
+          "data": {
+            "title": "Posts Index",
+            "filename": "frontend/posts.php",
+            "hook_name": "view",
+            "priority": 10,
+            "content": "<div class=\"posts-page\">\n    <h1>Published posts</h1>\n    <tvi-component name=\"post-list\" />\n    <tvi-component name=\"posts-pagination\" />\n</div>\n",
+            "graph_id": "view-posts"
+          }
+        },
+        {
+          "id": "migration",
+          "type": "migration.definition",
+          "x": 430,
+          "y": 480,
+          "data": {
+            "title": "Create sample posts",
+            "timestamp": "2026-07-21_090000",
+            "filename_slug": "create_sample_posts_table",
+            "graph_id": "migration-posts"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "p1",
+          "from": "controller",
+          "from_port": "route",
+          "to": "route",
+          "to_port": "controller",
+          "port_type": "controller"
+        },
+        {
+          "id": "p2",
+          "from": "view",
+          "from_port": "route",
+          "to": "route",
+          "to_port": "view",
+          "port_type": "view"
+        },
+        {
+          "id": "p3",
+          "from": "view",
+          "from_port": "look",
+          "to": "look",
+          "to_port": "view",
+          "port_type": "view"
+        }
+      ],
+      "viewport": {
+        "x": 70,
+        "y": 60,
+        "zoom": 0.85
+      }
+    },
+    "flow-posts": {
+      "id": "flow-posts",
+      "name": "Load Paginated Posts Flow",
+      "kind": "flow",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "flow.start",
+          "x": 30,
+          "y": 180,
+          "data": {
+            "title": "Start"
+          }
+        },
+        {
+          "id": "count",
+          "type": "models.method_call",
+          "x": 250,
+          "y": 180,
+          "data": {
+            "title": "Count Published",
+            "model_node_id": "model",
+            "method_name": "countPublished",
+            "result_variable": "total_posts"
+          }
+        },
+        {
+          "id": "pager",
+          "type": "pagination.pager",
+          "x": 500,
+          "y": 180,
+          "data": {
+            "title": "Create Pager",
+            "items_per_page": 10,
+            "extra_links": 2,
+            "result_variable": "pager"
+          }
+        },
+        {
+          "id": "page",
+          "type": "models.method_call",
+          "x": 770,
+          "y": 180,
+          "data": {
+            "title": "Load Page",
+            "model_node_id": "model",
+            "method_name": "publishedPage",
+            "result_variable": "posts"
+          }
+        },
+        {
+          "id": "set-posts",
+          "type": "data.page_value_set",
+          "x": 1040,
+          "y": 130,
+          "data": {
+            "title": "Expose Posts",
+            "key": "posts"
+          }
+        },
+        {
+          "id": "set-pager",
+          "type": "data.page_value_set",
+          "x": 1280,
+          "y": 180,
+          "data": {
+            "title": "Expose Pager",
+            "key": "pager"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "pf1",
+          "from": "start",
+          "from_port": "exec",
+          "to": "count",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "pf2",
+          "from": "count",
+          "from_port": "exec",
+          "to": "pager",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "pf3",
+          "from": "count",
+          "from_port": "result",
+          "to": "pager",
+          "to_port": "total_rows",
+          "port_type": "mixed"
+        },
+        {
+          "id": "pf4",
+          "from": "pager",
+          "from_port": "exec",
+          "to": "page",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "pf5",
+          "from": "pager",
+          "from_port": "limit",
+          "to": "page",
+          "to_port": "param_limit",
+          "port_type": "int"
+        },
+        {
+          "id": "pf6",
+          "from": "pager",
+          "from_port": "offset",
+          "to": "page",
+          "to_port": "param_offset",
+          "port_type": "int"
+        },
+        {
+          "id": "pf7",
+          "from": "page",
+          "from_port": "exec",
+          "to": "set-posts",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "pf8",
+          "from": "page",
+          "from_port": "result",
+          "to": "set-posts",
+          "to_port": "value",
+          "port_type": "array"
+        },
+        {
+          "id": "pf9",
+          "from": "set-posts",
+          "from_port": "exec",
+          "to": "set-pager",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "pf10",
+          "from": "pager",
+          "from_port": "pager",
+          "to": "set-pager",
+          "to_port": "value",
+          "port_type": "object"
+        }
+      ],
+      "viewport": {
+        "x": 50,
+        "y": 80,
+        "zoom": 0.82
+      },
+      "owner_node_id": "controller"
+    },
+    "view-posts": {
+      "id": "view-posts",
+      "name": "Posts Index View Builder",
+      "kind": "view",
+      "nodes": [
+        {
+          "id": "component",
+          "type": "view.component",
+          "x": 70,
+          "y": 100,
+          "data": {
+            "title": "Post List",
+            "component_name": "post-list",
+            "wrapper_tag": "section",
+            "css_class": "post-list",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            }
+          }
+        },
+        {
+          "id": "loop",
+          "type": "view.loop",
+          "x": 370,
+          "y": 100,
+          "data": {
+            "title": "Posts Loop",
+            "collection_path": "posts",
+            "item_name": "post",
+            "index_name": "index",
+            "empty_html": "<p>No published posts yet.</p>",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            }
+          }
+        },
+        {
+          "id": "card",
+          "type": "view.html",
+          "x": 680,
+          "y": 100,
+          "data": {
+            "title": "Post Card",
+            "content": "<article class=\"post-card\">\n    <h2>{{ post.title }}</h2>\n    <p>{{ post.body }}</p>\n</article>",
+            "css_class": "",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            }
+          }
+        },
+        {
+          "id": "pagination-component",
+          "type": "view.pagination",
+          "x": 70,
+          "y": 420,
+          "data": {
+            "title": "Posts Pagination",
+            "component_name": "posts-pagination",
+            "template_id": "minimal",
+            "pager_variable": "pager",
+            "show_summary": true,
+            "first_label": "First",
+            "prev_label": "Previous",
+            "next_label": "Next",
+            "last_label": "Last",
+            "wrapper_class": "tvi-pager-minimal",
+            "buttons_class": "tvi-pager-minimal__buttons",
+            "button_class": "tvi-pager-minimal__button",
+            "active_class": "is-active",
+            "disabled_class": "is-disabled",
+            "ellipsis_class": "is-ellipsis",
+            "summary_class": "tvi-pager-minimal__summary",
+            "base_styles": true,
+            "custom_css": "",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            }
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "pv1",
+          "from": "component",
+          "from_port": "children",
+          "to": "loop",
+          "to_port": "parent",
+          "port_type": "view-child"
+        },
+        {
+          "id": "pv2",
+          "from": "loop",
+          "from_port": "children",
+          "to": "card",
+          "to_port": "parent",
+          "port_type": "view-child"
+        }
+      ],
+      "viewport": {
+        "x": 80,
+        "y": 60,
+        "zoom": 0.9
+      },
+      "owner_node_id": "view"
+    },
+    "migration-posts": {
+      "id": "migration-posts",
+      "name": "Create Posts Migration",
+      "kind": "migration",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "migration.start",
+          "x": 30,
+          "y": 150,
+          "data": {
+            "title": "Migration Start"
+          }
+        },
+        {
+          "id": "create",
+          "type": "migration.create_table",
+          "x": 280,
+          "y": 150,
+          "data": {
+            "title": "Create Posts Table",
+            "table": "sample_posts",
+            "columns_json": "[\n  {\n    \"name\": \"id\",\n    \"type\": \"INT\",\n    \"length\": \"\",\n    \"unsigned\": true,\n    \"nullable\": false,\n    \"default\": \"\",\n    \"auto_increment\": true,\n    \"extra\": \"\"\n  },\n  {\n    \"name\": \"title\",\n    \"type\": \"VARCHAR\",\n    \"length\": \"255\",\n    \"unsigned\": false,\n    \"nullable\": false,\n    \"default\": \"\",\n    \"auto_increment\": false,\n    \"extra\": \"\"\n  },\n  {\n    \"name\": \"body\",\n    \"type\": \"TEXT\",\n    \"length\": \"\",\n    \"unsigned\": false,\n    \"nullable\": true,\n    \"default\": \"\",\n    \"auto_increment\": false,\n    \"extra\": \"\"\n  },\n  {\n    \"name\": \"status\",\n    \"type\": \"VARCHAR\",\n    \"length\": \"30\",\n    \"unsigned\": false,\n    \"nullable\": false,\n    \"default\": \"draft\",\n    \"auto_increment\": false,\n    \"extra\": \"\"\n  },\n  {\n    \"name\": \"date_created\",\n    \"type\": \"DATETIME\",\n    \"length\": \"\",\n    \"unsigned\": false,\n    \"nullable\": false,\n    \"default\": \"CURRENT_TIMESTAMP\",\n    \"auto_increment\": false,\n    \"extra\": \"\"\n  }\n]",
+            "primary_key": "id",
+            "engine": "InnoDB",
+            "charset": "utf8mb4",
+            "collate": "utf8mb4_unicode_ci"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "pm1",
+          "from": "start",
+          "from_port": "exec",
+          "to": "create",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        }
+      ],
+      "viewport": {
+        "x": 80,
+        "y": 60,
+        "zoom": 0.9
+      },
+      "owner_node_id": "migration"
+    }
+  }
+}

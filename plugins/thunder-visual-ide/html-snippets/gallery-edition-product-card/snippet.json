@@ -1,0 +1,18 @@
+{
+  "id": "gallery-edition-product-card",
+  "name": "Gallery Edition Product Card",
+  "description": "A gallery-shop product card with alternate image views, structured details and editorial typography.",
+  "category": "Product Cards",
+  "order": 2270,
+  "tags": [
+    "product",
+    "card",
+    "gallery",
+    "editorial",
+    "shop"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

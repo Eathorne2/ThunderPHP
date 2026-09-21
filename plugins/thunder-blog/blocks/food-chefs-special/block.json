@@ -1,0 +1,230 @@
+{
+  "slug": "food-chefs-special",
+  "name": "Chef's Special",
+  "category": "Food & Restaurant",
+  "description": "Editorial daily-special section with featured dish and compact menu",
+  "keywords": [
+    "food",
+    "restaurant",
+    "chef",
+    "special",
+    "menu"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-food-special\"><div class=\"tb-food-special__image-wrap\">{{elements:image}}<span class=\"tb-food-special__stamp\">Chef’s pick</span></div><div class=\"tb-food-special__body\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}<div class=\"tb-food-special__list\">{{elements:items}}</div></div></div>",
+  "css": ".tb-food-special{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,72px);padding:clamp(34px,6vw,76px);background:var(--tb-color-background);align-items:center}.tb-food-special__image-wrap{position:relative}.tb-food-special__image{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.tb-food-special__stamp{position:absolute;right:-16px;bottom:24px;padding:14px 18px;background:var(--tb-color-primary);color:var(--tb-color-surface);font-weight:900;transform:rotate(-3deg)}.tb-food-special__eyebrow{color:var(--tb-color-primary);font-weight:900;text-transform:uppercase;letter-spacing:.15em;font-size:12px}.tb-food-special__title{margin:10px 0;font-family:Georgia,serif;color:var(--tb-color-secondary);font-size:clamp(42px,6vw,68px)}.tb-food-special__text{color:var(--tb-color-muted);line-height:1.7}.tb-food-special__list{margin-top:26px}.tb-food-special__item{display:grid;grid-template-columns:1fr auto;gap:6px 20px;padding:18px 0;border-top:1px solid var(--tb-color-border)}.tb-food-special__item h3{margin:0;color:var(--tb-color-secondary)}.tb-food-special__item p{grid-column:1;margin:0;color:var(--tb-color-muted)}.tb-food-special__price{grid-column:2;grid-row:1/3;font-weight:900;color:var(--tb-color-primary)}@media(max-width:760px){.tb-food-special{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "image",
+      "label": "Featured dish",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Chef plated dish"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-food-special__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-food-special__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Tonight's specials"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-food-special__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "From the pass"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<h2 class=\"tb-food-special__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Introduction",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A short rotating menu built from the best ingredients available today."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-food-special__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "items",
+      "label": "Special",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "title": "Fire-roasted pumpkin",
+        "text": "Brown butter · sage · toasted seeds",
+        "price": "K180"
+      },
+      "schema": [
+        {
+          "key": "title",
+          "label": "Dish",
+          "type": "text",
+          "selector": ".tb-food-special__item h3"
+        },
+        {
+          "key": "text",
+          "label": "Details",
+          "type": "text",
+          "selector": ".tb-food-special__item p"
+        },
+        {
+          "key": "price",
+          "label": "Price",
+          "type": "text",
+          "selector": ".tb-food-special__price"
+        }
+      ],
+      "template": "<article class=\"tb-food-special__item\"><h3>{{title}}</h3><p>{{text}}</p><strong class=\"tb-food-special__price\">{{price}}</strong></article>",
+      "min": 1,
+      "max": 12,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "title": "Fire-roasted pumpkin",
+          "text": "Brown butter · sage · toasted seeds",
+          "price": "K180"
+        },
+        {
+          "title": "Market fish",
+          "text": "Citrus beurre blanc · garden greens",
+          "price": "K240"
+        },
+        {
+          "title": "Chocolate tart",
+          "text": "Sea salt · espresso cream",
+          "price": "K110"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

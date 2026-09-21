@@ -1,0 +1,32 @@
+<section class="apb-pizza">
+    <div class="apb-pizza__visual">
+        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Wood-fired margherita pizza">
+        <span>Wood-fired · Ready in 18 minutes</span>
+    </div>
+
+    <form class="apb-pizza__form" data-apb-form>
+        <span class="apb-pizza__eyebrow">Build your order</span>
+        <h2>The house margherita.</h2>
+        <p>San Marzano tomato, fior di latte, basil and cold-pressed olive oil.</p>
+
+        <fieldset>
+            <legend>Choose a size</legend>
+            <label><input type="radio" name="size" value="12" data-apb-size checked><span>10 inch</span><strong>$12</strong></label>
+            <label><input type="radio" name="size" value="16" data-apb-size><span>13 inch</span><strong>$16</strong></label>
+            <label><input type="radio" name="size" value="20" data-apb-size><span>16 inch</span><strong>$20</strong></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Add something extra</legend>
+            <label><input type="checkbox" value="2.5" data-apb-extra><span>Buffalo mozzarella</span><strong>+$2.50</strong></label>
+            <label><input type="checkbox" value="2" data-apb-extra><span>Roasted mushrooms</span><strong>+$2.00</strong></label>
+            <label><input type="checkbox" value="1.5" data-apb-extra><span>Chilli honey</span><strong>+$1.50</strong></label>
+        </fieldset>
+
+        <div class="apb-pizza__total">
+            <div><span>Your total</span><strong data-apb-total>$12.00</strong></div>
+            <button type="submit">Add to order</button>
+        </div>
+        <output data-apb-message aria-live="polite"></output>
+    </form>
+</section>

@@ -1,0 +1,57 @@
+{
+  "type": "logic.boolean_group",
+  "label": "Combine Conditions",
+  "category": "Logic",
+  "kind": "expression",
+  "icon": "&&",
+  "color": "#a16207",
+  "description": "Combines two or more boolean conditions using AND or OR.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "dynamic_ports": "boolean_group",
+  "defaults": {
+    "title": "Combine Conditions",
+    "operator": "AND",
+    "condition_count": 2
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "operator",
+      "label": "Operation",
+      "type": "select",
+      "options": [
+        "AND",
+        "OR"
+      ]
+    },
+    {
+      "name": "condition_count",
+      "label": "Number of conditions",
+      "type": "number",
+      "min": 2,
+      "max": 20
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Boolean",
+        "type": "boolean",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Logic\\BooleanGroupCompiler",
+    "file": "Compiler.php"
+  }
+}

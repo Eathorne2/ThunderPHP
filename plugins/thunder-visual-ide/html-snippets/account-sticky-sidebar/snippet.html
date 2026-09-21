@@ -1,0 +1,53 @@
+<div class="account-sidebar-layout">
+    <aside class="account-sidebar-layout__sidebar">
+        <div class="account-sidebar-layout__identity">
+            <img src="https://i.pravatar.cc/120?img=44" alt="Natasha Lungu">
+            <div>
+                <strong>Natasha Lungu</strong>
+                <span>natasha@example.com</span>
+            </div>
+        </div>
+
+        <nav aria-label="Account sections">
+            <a class="is-active" href="#account-general">General</a>
+            <a href="#account-billing">Billing</a>
+            <a href="#account-team">Team members</a>
+            <a href="#account-security">Security</a>
+        </nav>
+
+        <button type="button">Sign out</button>
+    </aside>
+
+    <main class="account-sidebar-layout__content">
+        <section id="account-general">
+            <h1>General settings</h1>
+            <p>Manage the basic information used across your account.</p>
+            <label>
+                <span>Workspace name</span>
+                <input type="text" value="Northline Studio">
+            </label>
+            <label>
+                <span>Contact email</span>
+                <input type="email" value="hello@northline.example">
+            </label>
+        </section>
+
+        <section id="account-billing">
+            <h2>Billing details</h2>
+            <p>Your next invoice will be generated on August 28.</p>
+            <button type="button">Manage billing</button>
+        </section>
+
+        <section id="account-team">
+            <h2>Team members</h2>
+            <p>Invite colleagues and control access to this workspace.</p>
+            <button type="button">Invite a member</button>
+        </section>
+
+        <section id="account-security">
+            <h2>Security</h2>
+            <p>Review sessions, passwords, and account recovery options.</p>
+            <button type="button">Review security</button>
+        </section>
+    </main>
+</div>

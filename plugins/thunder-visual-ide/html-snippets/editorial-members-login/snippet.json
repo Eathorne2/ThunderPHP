@@ -1,0 +1,18 @@
+{
+  "id": "editorial-members-login",
+  "name": "Editorial Members Login",
+  "description": "A publication-style member login with a bold issue cover, account form and password visibility control.",
+  "category": "Authentication",
+  "order": 260,
+  "tags": [
+    "authentication",
+    "login",
+    "editorial",
+    "members",
+    "magazine"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

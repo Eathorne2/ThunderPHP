@@ -1,0 +1,52 @@
+{
+  "type": "view.code_asset",
+  "label": "Load Code Asset",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "</>",
+  "color": "#0284c7",
+  "description": "Loads a selected architecture Code Asset at this exact position in the generated View.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Load Code Asset",
+    "code_asset_node_id": "",
+    "component_name": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "code_asset_node_id",
+      "label": "Code Asset",
+      "type": "code_asset_ref",
+      "help": "Select any Code Asset node from the architecture graph. Its CSS or JavaScript file is linked automatically."
+    },
+    {
+      "name": "component_name",
+      "label": "Reusable component name",
+      "type": "text",
+      "help": "Leave blank to load the asset at this node's position. Set a name while the node is a View root to place it with a component marker."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\CodeAssetCompiler",
+    "file": "Compiler.php"
+  }
+}

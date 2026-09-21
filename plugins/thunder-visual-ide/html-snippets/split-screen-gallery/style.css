@@ -1,0 +1,47 @@
+.ig-split-screen {
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.ig-split-screen *,
+.ig-split-screen *::before,
+.ig-split-screen *::after {
+    box-sizing: border-box;
+}
+
+.ig-split-screen button,
+.ig-split-screen input,
+.ig-split-screen select,
+.ig-split-screen textarea {
+    font: inherit;
+}
+
+.ig-split-screen a {
+    color: inherit;
+}
+
+.ig-split-screen img {
+    display: block;
+    max-width: 100%;
+}
+.ig-split-screen { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(19rem, .7fr); min-height: 40rem; overflow: hidden; border: 1px solid var(--thv-theme-border); border-radius: 1.4rem; background: var(--thv-theme-surface); }
+.ig-split-screen__stage { position: relative; min-height: 40rem; margin: 0; overflow: hidden; }
+.ig-split-screen__stage > img { width: 100%; height: 100%; object-fit: cover; }
+.ig-split-screen__stage figcaption { position: absolute; right: 1rem; bottom: 1rem; left: 1rem; display: flex; align-items: center; gap: .8rem; padding: .85rem 1rem; border: 1px solid color-mix(in srgb, var(--thv-theme-on-primary) 28%, transparent); border-radius: .85rem; color: var(--thv-theme-on-primary); background: color-mix(in srgb, var(--thv-theme-text) 62%, transparent); backdrop-filter: blur(10px); }
+.ig-split-screen__stage figcaption > span { font-size: 1.6rem; font-weight: 900; }
+.ig-split-screen__stage strong,
+.ig-split-screen__stage small { display: block; }
+.ig-split-screen__stage small { margin-top: .15rem; opacity: .76; }
+.ig-split-screen__list { display: flex; flex-direction: column; padding: 1.2rem; }
+.ig-split-screen__list header { margin-bottom: .8rem; }
+.ig-split-screen__list header p { margin: 0; color: var(--thv-theme-primary); font-size: .66rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+.ig-split-screen__list h2 { margin: .3rem 0 0; font-family: Georgia, serif; font-size: 2rem; font-weight: 400; }
+.ig-split-screen__list button { display: grid; grid-template-columns: 4.5rem 1fr; align-items: center; gap: .8rem; padding: .65rem 0; border: 0; border-top: 1px solid var(--thv-theme-border); color: var(--thv-theme-text); background: transparent; text-align: left; cursor: pointer; }
+.ig-split-screen__list button.is-active b { color: var(--thv-theme-primary); }
+.ig-split-screen__list button img { width: 4.5rem; aspect-ratio: 4 / 3; border-radius: .45rem; object-fit: cover; }
+.ig-split-screen__list b,
+.ig-split-screen__list small { display: block; }
+.ig-split-screen__list small { margin-top: .15rem; color: var(--thv-theme-muted); }
+@media (max-width: 800px) { .ig-split-screen { grid-template-columns: 1fr; } .ig-split-screen__stage { min-height: 30rem; } }

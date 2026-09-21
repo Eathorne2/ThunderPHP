@@ -1,0 +1,210 @@
+.trend-radar {
+    overflow: hidden;
+    color: #f5f7ff;
+    background: #090b12;
+}
+
+.trend-radar__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: end;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.trend-radar__header span,
+.trend-radar__lead > span,
+.trend-radar__card > span,
+.trend-radar__card div > span {
+    color: #aeb4c6;
+    font-size: 0.67rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.trend-radar__header h2 {
+    margin: 0.4rem 0 0;
+    font-size: clamp(2.8rem, 8vw, 7rem);
+    letter-spacing: -0.08em;
+    line-height: 0.8;
+}
+
+.trend-radar__header button {
+    padding: 0.7rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+    color: inherit;
+    background: transparent;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.trend-radar__ticker {
+    overflow: hidden;
+    color: #12130a;
+    background: #dfff62;
+}
+
+.trend-radar__ticker > div {
+    display: flex;
+    width: max-content;
+    animation: trend-radar-scroll 28s linear infinite;
+}
+
+.trend-radar__ticker.is-paused > div {
+    animation-play-state: paused;
+}
+
+.trend-radar__ticker span {
+    padding: 0.85rem 2rem;
+    border-right: 1px solid rgba(18, 19, 10, 0.3);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.trend-radar__grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    gap: 1rem;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.trend-radar__lead,
+.trend-radar__card {
+    position: relative;
+    overflow: hidden;
+    min-height: 22rem;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 1.4rem;
+    background: rgba(255, 255, 255, 0.055);
+}
+
+.trend-radar__lead {
+    grid-row: span 2;
+    min-height: 45rem;
+    background:
+        radial-gradient(circle at 74% 22%, rgba(122, 92, 255, 0.38), transparent 28rem),
+        rgba(255, 255, 255, 0.055);
+}
+
+.trend-radar__orb {
+    position: absolute;
+    top: 12%;
+    right: 8%;
+    width: min(24rem, 42vw);
+    aspect-ratio: 1;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 34% 32%, #ffffff, #8d6fff 8%, #2d1f75 36%, transparent 68%);
+    box-shadow: 0 0 6rem rgba(116, 84, 255, 0.32);
+}
+
+.trend-radar__lead h3 {
+    position: relative;
+    z-index: 1;
+    max-width: 44rem;
+    margin: 15rem 0 1rem;
+    font-size: clamp(2.8rem, 6vw, 6rem);
+    letter-spacing: -0.07em;
+    line-height: 0.92;
+}
+
+.trend-radar__lead p {
+    position: relative;
+    z-index: 1;
+    max-width: 30rem;
+    color: #bec3d2;
+    line-height: 1.7;
+}
+
+.trend-radar__lead a {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-top: 1rem;
+    color: #dfff62;
+    font-weight: 850;
+    text-decoration: none;
+}
+
+.trend-radar__card strong {
+    display: block;
+    margin: 1.5rem 0 0.5rem;
+    color: #dfff62;
+    font-size: clamp(4rem, 8vw, 7rem);
+    letter-spacing: -0.08em;
+    line-height: 0.8;
+}
+
+.trend-radar__card h3 {
+    margin: 0.8rem 0;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+
+.trend-radar__card p {
+    color: #aeb4c6;
+    line-height: 1.6;
+}
+
+.trend-radar__card--image {
+    min-height: 22rem;
+    padding: 0;
+}
+
+.trend-radar__card--image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trend-radar__card--image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 34%, rgba(4, 6, 10, 0.9));
+}
+
+.trend-radar__card--image div {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.6rem;
+}
+
+@keyframes trend-radar-scroll {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .trend-radar__ticker > div {
+        animation: none;
+    }
+}
+
+@media (max-width: 780px) {
+    .trend-radar__header,
+    .trend-radar__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trend-radar__header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .trend-radar__lead {
+        min-height: 38rem;
+    }
+}

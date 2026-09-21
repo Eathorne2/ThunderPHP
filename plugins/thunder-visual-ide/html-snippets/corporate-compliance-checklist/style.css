@@ -1,0 +1,49 @@
+.blcc-section {
+    padding: clamp(1.5rem, 5vw, 4.5rem);
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.4rem;
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-surface);
+    box-shadow: 0 1.5rem 4rem color-mix(in srgb, var(--thv-theme-text) 10%, transparent);
+}
+.blcc-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    color: var(--thv-theme-primary);
+    font-size: .72rem;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+.blcc-eyebrow::before {
+    width: 2rem;
+    height: 2px;
+    content: "";
+    background: var(--thv-theme-primary);
+}
+.blcc-section h2 {
+    margin: .65rem 0 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 5vw, 4.3rem);
+    font-weight: 500;
+    line-height: 1.02;
+}
+.blcc-section p {
+    color: var(--thv-theme-muted);
+    line-height: 1.75;
+}
+.blcc-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .85rem 1.1rem;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: .55rem;
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.blcc-layout{display:grid;grid-template-columns:1.3fr .7fr;gap:1rem;margin-top:2rem}.blcc-list{display:grid;gap:.7rem}.blcc-list label{display:flex;gap:.8rem;align-items:flex-start;padding:1rem;border:1px solid var(--thv-theme-border);border-radius:.55rem;background:var(--thv-theme-surface-alt);color:var(--thv-theme-text)}.blcc-list input{margin-top:.2rem;accent-color:var(--thv-theme-primary)}.blcc-layout aside{display:flex;flex-direction:column;padding:1.5rem;border-radius:.8rem;color:var(--thv-theme-on-primary);background:var(--thv-theme-primary)}.blcc-layout aside>strong{font-family:Georgia,serif;font-size:4.5rem;font-weight:500}.blcc-layout aside>span{opacity:.78}.blcc-layout aside>div{height:.5rem;margin:1.5rem 0 2rem;overflow:hidden;border-radius:999px;background:color-mix(in srgb,var(--thv-theme-on-primary) 25%,transparent)}.blcc-layout aside i{display:block;width:0;height:100%;background:var(--thv-theme-secondary);transition:width .2s ease}.blcc-button{margin-top:auto;border-color:var(--thv-theme-on-primary);color:var(--thv-theme-primary);background:var(--thv-theme-on-primary)}@media(max-width:700px){.blcc-layout{grid-template-columns:1fr}}

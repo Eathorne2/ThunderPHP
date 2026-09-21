@@ -1,0 +1,18 @@
+{
+  "id": "artisan-bakery-hero",
+  "name": "Artisan Bakery Hero",
+  "description": "A warm bakery landing hero with an offset bread photograph, opening hours and a compact daily bake list.",
+  "category": "Food & Restaurant",
+  "order": 3600,
+  "tags": [
+    "bakery",
+    "bread",
+    "hero",
+    "artisan",
+    "food"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

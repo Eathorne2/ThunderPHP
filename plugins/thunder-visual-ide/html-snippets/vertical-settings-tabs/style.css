@@ -1,0 +1,89 @@
+.vst-tabs {
+    display: grid;
+    grid-template-columns: minmax(12rem, 16rem) 1fr;
+    gap: 1rem;
+    font-family: system-ui, sans-serif;
+    color: var(--thv-theme-text, #0f172a)
+}
+
+.vst-tabs nav {
+    display: grid;
+    align-content: start;
+    gap: .35rem
+}
+
+.vst-tabs nav button {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: .65rem;
+    padding: .7rem;
+    border: 0;
+    border-radius: .65rem;
+    background: transparent;
+    color: var(--thv-theme-muted, #64748b);
+    text-align: left;
+    cursor: pointer
+}
+
+.vst-tabs nav button>span {
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: .5rem;
+    background: var(--thv-theme-surface-alt, #f1f5f9)
+}
+
+.vst-tabs nav strong, .vst-tabs nav small {
+    display: block
+}
+
+.vst-tabs nav strong {
+    font-size: .78rem
+}
+
+.vst-tabs nav small {
+    margin-top: .12rem;
+    font-size: .68rem
+}
+
+.vst-tabs nav button.is-active {
+    background: #eff6ff;
+    color: #1d4ed8
+}
+
+.vst-tabs__content {
+    padding: 1.1rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: .8rem;
+    background: var(--thv-theme-surface, #fff)
+}
+
+.vst-tabs__content h3 {
+    margin: 0 0 .35rem
+}
+
+.vst-tabs__content p {
+    margin: 0;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .82rem
+}
+
+@media(max-width:620px) {
+    .vst-tabs {
+        grid-template-columns: 1fr
+    }
+    .vst-tabs nav {
+        grid-template-columns: repeat(3, 1fr);
+        overflow: auto
+    }
+    .vst-tabs nav button {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center
+    }
+    .vst-tabs nav small {
+        display: none
+    }
+}

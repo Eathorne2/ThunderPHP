@@ -1,0 +1,41 @@
+{
+    "name": "Thunder Admin",
+    "type": "Foundation",
+    "version": "1.5.0",
+    "core_requires": "^1.0.0",
+    "id": "thunder-admin",
+    "description": "Reusable administration shell, navigation and dashboard foundation for ThunderPHP applications.",
+    "author": "Eathorne Choongo",
+    "website": "thunderphp.com",
+    "thumbnail": "thumbnail.jpg",
+    "active": true,
+    "look": "classic-sidebar",
+    "index": 2,
+    "permissions": [
+        {
+            "name": "View Admin Area",
+            "slug": "view-admin-area",
+            "group": "Administration",
+            "description": "Allow a logged-in user to access the Thunder Admin area."
+        }
+    ],
+    "routes": {
+        "on": [
+            "admin"
+        ],
+        "off": [],
+        "routes": [
+            {
+                "method": "GET",
+                "pattern": "/admin",
+                "name": "admin.dashboard"
+            },
+            {
+                "method": "GET|POST",
+                "pattern": "/admin/settings",
+                "name": "admin.settings"
+            }
+        ]
+    },
+    "dependencies": {}
+}

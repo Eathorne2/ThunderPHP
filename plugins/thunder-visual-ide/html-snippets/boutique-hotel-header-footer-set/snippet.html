@@ -1,0 +1,101 @@
+<div class="hotel-shell">
+    <header class="hotel-shell__header">
+        <button
+            class="hotel-shell__menu-button"
+            type="button"
+            data-hotel-menu-button
+            aria-controls="hotel-navigation"
+            aria-expanded="false"
+        >
+            <span aria-hidden="true">☰</span>
+            <span>Menu</span>
+        </button>
+
+        <nav
+            class="hotel-shell__nav hotel-shell__nav--left"
+            id="hotel-navigation"
+            data-hotel-navigation
+            aria-label="Hotel navigation"
+        >
+            <a href="#stay">Stay</a>
+            <a href="#dine">Dine</a>
+            <a href="#experience">Experience</a>
+            <a class="hotel-shell__mobile-link" href="#story">Our story</a>
+            <a class="hotel-shell__mobile-link" href="#gallery">Gallery</a>
+        </nav>
+
+        <a class="hotel-shell__brand" href="#" aria-label="The Jacaranda House home">
+            <span>The Jacaranda</span>
+            <small>House</small>
+        </a>
+
+        <nav class="hotel-shell__nav hotel-shell__nav--right" aria-label="Secondary navigation">
+            <a href="#story">Our story</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+
+        <a class="hotel-shell__reserve" href="#reserve">Reserve</a>
+    </header>
+
+    <main class="hotel-shell__demo">
+        <p>Place room, dining, experience, or destination content here.</p>
+    </main>
+
+    <footer class="hotel-shell__footer">
+        <section class="hotel-shell__invitation">
+            <p class="hotel-shell__eyebrow">A quieter way to arrive</p>
+            <h2>Seasonal stays, thoughtful food and warm Zambian hospitality.</h2>
+            <a href="#reserve">Plan your stay</a>
+        </section>
+
+        <div class="hotel-shell__footer-main">
+            <section class="hotel-shell__location">
+                <a class="hotel-shell__brand" href="#" aria-label="The Jacaranda House home">
+                    <span>The Jacaranda</span>
+                    <small>House</small>
+                </a>
+                <address>
+                    18 Jacaranda Lane<br>
+                    Lusaka, Zambia
+                </address>
+                <a href="tel:+260000000000">+260 000 000 000</a>
+                <a href="mailto:stay@example.com">stay@example.com</a>
+            </section>
+
+            <nav aria-label="Explore hotel links">
+                <h2>Explore</h2>
+                <a href="#rooms">Rooms and suites</a>
+                <a href="#restaurant">Restaurant</a>
+                <a href="#wellness">Wellness</a>
+                <a href="#experiences">Local experiences</a>
+            </nav>
+
+            <nav aria-label="Hotel information links">
+                <h2>Information</h2>
+                <a href="#directions">Getting here</a>
+                <a href="#faq">Frequently asked</a>
+                <a href="#events">Private events</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <section class="hotel-shell__newsletter">
+                <h2>Letters from the house</h2>
+                <p>Occasional notes, seasonal menus and special stays.</p>
+                <form>
+                    <label class="hotel-shell__sr-only" for="hotel-email">Email address</label>
+                    <input id="hotel-email" type="email" placeholder="Email address">
+                    <button type="submit" aria-label="Subscribe">→</button>
+                </form>
+            </section>
+        </div>
+
+        <div class="hotel-shell__footer-bottom">
+            <span>© 2026 The Jacaranda House</span>
+            <div>
+                <a href="#instagram">Instagram</a>
+                <a href="#privacy">Privacy</a>
+                <a href="#terms">Terms</a>
+            </div>
+        </div>
+    </footer>
+</div>

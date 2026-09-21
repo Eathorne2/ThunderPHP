@@ -1,0 +1,18 @@
+{
+  "id": "laughline-comedy-header-footer",
+  "name": "Laughline Comedy Header and Footer",
+  "description": "A playful comedy-club shell with show listings, performer navigation and a bright coordinated footer.",
+  "category": "Music & Entertainment",
+  "order": 4500,
+  "tags": [
+    "comedy",
+    "club",
+    "header",
+    "footer",
+    "shows"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "destination-guide-tabs",
+  "name": "Destination Guide Tabs",
+  "description": "A practical destination guide with tabs for highlights, dining, getting around and seasonal advice.",
+  "category": "Travel & Hotels",
+  "order": 4990,
+  "tags": [
+    "destination",
+    "guide",
+    "tabs",
+    "travel",
+    "information"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

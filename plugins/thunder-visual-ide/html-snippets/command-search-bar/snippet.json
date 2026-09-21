@@ -1,0 +1,20 @@
+{
+  "id": "command-search-bar",
+  "name": "Command Search Bar",
+  "description": "A keyboard-friendly search field with scope selector and shortcut hint.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Search Bars",
+  "order": 2400,
+  "tags": [
+    "search",
+    "command",
+    "filter",
+    "keyboard"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

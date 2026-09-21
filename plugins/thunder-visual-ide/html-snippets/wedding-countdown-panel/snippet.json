@@ -1,0 +1,18 @@
+{
+  "id": "wedding-countdown-panel",
+  "name": "Wedding Countdown Panel",
+  "description": "An elegant live countdown panel for the wedding day with date, location and calendar action.",
+  "category": "Wedding",
+  "order": 4520,
+  "tags": [
+    "wedding",
+    "countdown",
+    "date",
+    "event",
+    "calendar"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

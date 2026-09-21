@@ -1,0 +1,17 @@
+{
+  "id": "product-gallery-page",
+  "name": "Product Gallery Page",
+  "description": "A fashion-style product page with asymmetric image gallery, sticky details and size selection.",
+  "category": "Single Product Pages",
+  "order": 1230,
+  "tags": [
+    "product",
+    "fashion",
+    "gallery",
+    "ecommerce"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

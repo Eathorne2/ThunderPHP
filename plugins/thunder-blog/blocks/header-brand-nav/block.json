@@ -1,0 +1,107 @@
+{
+  "settings": {
+    "defaults": {
+      "width": "1200",
+      "sticky": "no",
+      "menu_id": "0"
+    },
+    "schema": [
+      {
+        "key": "menu_id",
+        "label": "Navigation menu",
+        "type": "menu",
+        "default": "0",
+        "help": "Create and arrange menus under Blog → Menus."
+      },
+      {
+        "key": "width",
+        "label": "Content width",
+        "type": "select",
+        "options": {
+          "1000": "Compact",
+          "1200": "Standard",
+          "1440": "Wide"
+        },
+        "default": "1200"
+      },
+      {
+        "key": "sticky",
+        "label": "Sticky behavior",
+        "type": "select",
+        "options": {
+          "no": "Normal",
+          "yes": "Sticky"
+        },
+        "default": "no"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "key": "brand",
+      "label": "Brand",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "name": "{{app_name}}",
+        "url": "{{root}}/"
+      },
+      "schema": [
+        {
+          "key": "name",
+          "label": "Brand name",
+          "type": "text",
+          "selector": ".tb-site-header__brand-text"
+        },
+        {
+          "key": "url",
+          "label": "Home URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-site-header__brand\" href=\"{{url}}\"><span class=\"tb-site-header__brand-mark\">T</span><span class=\"tb-site-header__brand-text\">{{name}}</span></a>",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "secondary"
+        }
+      }
+    }
+  ],
+  "html": "<header class=\"tb-block tb-site-header tb-site-header--sticky-{{sticky}}\"><div class=\"tb-site-header__inner\" style=\"--tb-header-width:{{width}}px\">{{elements:brand}}{{menu:primary}}</div></header>",
+  "css": ".tb-site-header{position:relative;z-index:50;border-bottom:1px solid var(--tb-color-border);background:var(--tb-color-surface)}.tb-site-header--sticky-yes{position:sticky;top:0}.tb-site-header__inner{max-width:var(--tb-header-width);min-height:72px;margin:auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}.tb-site-header__brand{display:flex;align-items:center;gap:10px;color:var(--tb-color-secondary);font-weight:850;text-decoration:none}.tb-site-header__brand-mark{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:var(--tb-color-primary);color:#fff}.tb-site-header__nav{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap}.tb-site-header__link{padding:9px 12px;border-radius:8px;color:var(--tb-color-text);text-decoration:none;font-weight:650}.tb-site-header__link:hover{background:var(--tb-color-background);color:var(--tb-color-primary)}@media(max-width:680px){.tb-site-header__inner{align-items:flex-start;flex-direction:column;padding-top:16px;padding-bottom:16px}.tb-site-header__nav{justify-content:flex-start}}.tb-site-header__parent{position:relative}.tb-site-header__submenu{position:absolute;top:100%;left:0;min-width:190px;padding:8px;border:1px solid var(--tb-color-border);border-radius:12px;background:var(--tb-color-surface);box-shadow:0 18px 45px color-mix(in srgb,var(--tb-color-secondary) 16%,transparent);display:none}.tb-site-header__parent:hover>.tb-site-header__submenu,.tb-site-header__parent:focus-within>.tb-site-header__submenu{display:grid}.tb-site-header__submenu .tb-site-header__link{display:block}.tb-site-header__caret{font-size:11px}.tb-menu-empty{color:var(--tb-color-muted);font-size:13px}@media(max-width:680px){.tb-site-header__parent{width:100%}.tb-site-header__submenu{position:static;display:grid;margin-left:14px;border:0;border-left:2px solid var(--tb-color-border);border-radius:0;box-shadow:none}}",
+  "js": "",
+  "slug": "header-brand-nav",
+  "name": "Brand and Navigation Header",
+  "category": "Headers",
+  "description": "A clean responsive header whose navigation is sourced from a saved menu.",
+  "keywords": [
+    "header",
+    "navigation",
+    "logo",
+    "menu"
+  ],
+  "contexts": [
+    "header"
+  ],
+  "version": "1.2.0",
+  "menu_sources": [
+    {
+      "setting": "menu_id",
+      "token": "primary",
+      "empty": "",
+      "container": "<nav class=\"tb-site-header__nav\" aria-label=\"{{menu_name}}\">{{items}}</nav>",
+      "item": "<a class=\"tb-site-header__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}}</a>",
+      "parent": "<div class=\"tb-site-header__parent\"><a class=\"tb-site-header__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}} <span class=\"tb-site-header__caret\">⌄</span></a><div class=\"tb-site-header__submenu\">{{children}}</div></div>",
+      "empty_preview": "<nav class=\"tb-site-header__nav tb-menu-empty\">Select a menu in block settings</nav>"
+    }
+  ]
+}

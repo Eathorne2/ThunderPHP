@@ -1,0 +1,18 @@
+{
+  "id": "backstage-photo-mosaic",
+  "name": "Backstage Photo Mosaic",
+  "description": "An immersive tour-gallery mosaic with captions and an accessible lightbox preview.",
+  "category": "Music & Entertainment",
+  "order": 4390,
+  "tags": [
+    "gallery",
+    "photos",
+    "tour",
+    "backstage",
+    "lightbox"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

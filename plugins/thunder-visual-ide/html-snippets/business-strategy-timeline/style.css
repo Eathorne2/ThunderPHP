@@ -1,0 +1,49 @@
+.blbt-section {
+    padding: clamp(1.5rem, 5vw, 4.5rem);
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.4rem;
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-surface);
+    box-shadow: 0 1.5rem 4rem color-mix(in srgb, var(--thv-theme-text) 10%, transparent);
+}
+.blbt-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    color: var(--thv-theme-primary);
+    font-size: .72rem;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+.blbt-eyebrow::before {
+    width: 2rem;
+    height: 2px;
+    content: "";
+    background: var(--thv-theme-primary);
+}
+.blbt-section h2 {
+    margin: .65rem 0 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 5vw, 4.3rem);
+    font-weight: 500;
+    line-height: 1.02;
+}
+.blbt-section p {
+    color: var(--thv-theme-muted);
+    line-height: 1.75;
+}
+.blbt-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .85rem 1.1rem;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: .55rem;
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.blbt-section ol{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:2rem 0 0;padding:0;list-style:none}.blbt-section li{position:relative;padding:1.4rem;border-top:3px solid var(--thv-theme-border);background:var(--thv-theme-surface-alt)}.blbt-section li::before{position:absolute;top:-.55rem;left:1.3rem;width:.9rem;height:.9rem;border:3px solid var(--thv-theme-surface);border-radius:50%;content:"";background:var(--thv-theme-primary)}.blbt-section li>span{color:var(--thv-theme-primary);font-size:.72rem;font-weight:850}.blbt-section strong{display:block;margin:2rem 0 .5rem;font-family:Georgia,serif;font-size:1.55rem}.blbt-section p{margin:0;font-size:.86rem}@media(max-width:800px){.blbt-section ol{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.blbt-section ol{grid-template-columns:1fr}}

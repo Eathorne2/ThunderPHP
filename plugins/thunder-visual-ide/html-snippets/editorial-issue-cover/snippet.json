@@ -1,0 +1,18 @@
+{
+  "id": "editorial-issue-cover",
+  "name": "Editorial Issue Cover",
+  "description": "A dramatic magazine cover hero with oversized issue typography, layered photography and a featured-story rail.",
+  "category": "Magazine & Editorial",
+  "order": 3201,
+  "tags": [
+    "magazine",
+    "editorial",
+    "hero",
+    "cover",
+    "feature"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

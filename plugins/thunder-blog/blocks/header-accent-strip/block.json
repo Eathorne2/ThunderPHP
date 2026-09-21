@@ -1,0 +1,142 @@
+{
+  "settings": {
+    "defaults": {
+      "menu_id": "0",
+      "width": "1200"
+    },
+    "schema": [
+      {
+        "key": "menu_id",
+        "label": "Saved menu",
+        "type": "menu",
+        "default": "0"
+      },
+      {
+        "key": "width",
+        "label": "Content width",
+        "type": "select",
+        "options": {
+          "1040": "Compact",
+          "1200": "Standard",
+          "1360": "Wide",
+          "1480": "Extra wide"
+        },
+        "default": "1200"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "key": "brand",
+      "label": "Brand",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "name": "{{app_name}}",
+        "logo": "{{app_logo}}",
+        "url": "{{root}}/"
+      },
+      "schema": [
+        {
+          "key": "name",
+          "label": "Brand name",
+          "type": "text",
+          "selector": ".tb-h-accent-strip__brand-name"
+        },
+        {
+          "key": "logo",
+          "label": "Logo",
+          "type": "image",
+          "selector": ".tb-h-accent-strip__logo"
+        },
+        {
+          "key": "url",
+          "label": "Home URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-h-accent-strip__brand\" href=\"{{url}}\"><img class=\"tb-h-accent-strip__logo\" src=\"{{logo}}\" alt=\"\"><span class=\"tb-h-accent-strip__brand-name\">{{name}}</span></a>",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "secondary"
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Call to action",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": true,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Get started",
+        "url": "{{root}}/contact"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Button text",
+          "type": "text",
+          "selector": ".tb-h-accent-strip__cta"
+        },
+        {
+          "key": "url",
+          "label": "Button URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-h-accent-strip__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 1,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "background",
+          "background_color": "primary"
+        }
+      }
+    }
+  ],
+  "menu_sources": [
+    {
+      "setting": "menu_id",
+      "token": "primary",
+      "empty": "",
+      "container": "<nav class=\"tb-h-accent-strip__nav\" aria-label=\"{{menu_name}}\">{{items}}</nav>",
+      "item": "<a class=\"tb-h-accent-strip__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}}</a>",
+      "parent": "<div class=\"tb-h-accent-strip__parent\"><a class=\"tb-h-accent-strip__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}}<span class=\"tb-h-accent-strip__chevron\">⌄</span></a><div class=\"tb-h-accent-strip__submenu\">{{children}}</div></div>",
+      "empty_preview": "<nav class=\"tb-h-accent-strip__nav tb-menu-empty\">Select a menu</nav>"
+    }
+  ],
+  "html": "<header class=\"tb-block tb-h-accent-strip\"><div class=\"tb-h-accent-strip__accent\"></div><div class=\"tb-h-accent-strip__inner\" style=\"--tb-h-accent-strip-width:{{width}}px\"><div class=\"tb-h-accent-strip__row\">{{elements:brand}}{{menu:primary}}{{elements:cta}}</div></div></header>",
+  "css": ".tb-h-accent-strip{position:relative;background:var(--tb-color-surface);color:var(--tb-color-text)}.tb-h-accent-strip__inner{max-width:var(--tb-h-accent-strip-width);margin:auto;padding:0 24px}.tb-h-accent-strip__brand{display:flex;align-items:center;gap:10px;color:var(--tb-color-secondary);text-decoration:none;font-weight:900}.tb-h-accent-strip__logo{width:38px;height:38px;object-fit:contain}.tb-h-accent-strip__brand-name{letter-spacing:-.025em}.tb-h-accent-strip__nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.tb-h-accent-strip__link{display:inline-flex;align-items:center;gap:5px;padding:9px 11px;color:inherit;text-decoration:none;font-weight:750}.tb-h-accent-strip__link:hover{color:var(--tb-color-primary)}.tb-h-accent-strip__parent{position:relative}.tb-h-accent-strip__submenu{position:absolute;z-index:20;top:100%;left:0;min-width:190px;padding:8px;border:1px solid var(--tb-color-border);border-radius:12px;background:var(--tb-color-surface);display:none;box-shadow:0 16px 38px color-mix(in srgb,var(--tb-color-secondary) 14%,transparent)}.tb-h-accent-strip__submenu .tb-h-accent-strip__link{display:flex}.tb-h-accent-strip__parent:hover>.tb-h-accent-strip__submenu,.tb-h-accent-strip__parent:focus-within>.tb-h-accent-strip__submenu{display:grid}.tb-h-accent-strip__chevron{font-size:10px;opacity:.65}.tb-h-accent-strip__accent{height:5px;background:var(--tb-color-primary)}.tb-h-accent-strip__row{min-height:78px;display:flex;align-items:center;gap:22px}.tb-h-accent-strip__nav{margin-left:auto}.tb-h-accent-strip__cta{padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:850}@media(max-width:820px){.tb-h-accent-strip__row,.tb-h-accent-strip__top,.tb-h-accent-strip__glass,.tb-h-accent-strip__frame,.tb-h-accent-strip__pill{flex-wrap:wrap;height:auto;padding-top:14px;padding-bottom:14px}.tb-h-accent-strip__nav{width:100%;order:5}.tb-h-accent-strip__submenu{position:static;box-shadow:none}}@media(max-width:560px){.tb-h-accent-strip__inner{padding-left:16px;padding-right:16px}.tb-h-accent-strip__row{grid-template-columns:1fr!important}.tb-h-accent-strip__search{width:100%!important}}",
+  "js": "",
+  "slug": "header-accent-strip",
+  "name": "Accent Strip Header",
+  "category": "Headers",
+  "description": "A slim accent band adds visual identity to a straightforward navigation row.",
+  "keywords": [
+    "header",
+    "navigation",
+    "menu",
+    "accent"
+  ],
+  "contexts": [
+    "header"
+  ],
+  "version": "1.0.0"
+}

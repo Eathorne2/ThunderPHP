@@ -1,0 +1,44 @@
+{
+  "type": "data.number",
+  "label": "Number",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "#",
+  "color": "#1d4ed8",
+  "description": "Outputs an integer or floating point literal.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Number",
+    "value": 0
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "value",
+      "label": "Number",
+      "type": "number"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Number",
+        "type": "number",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\NumberCompiler",
+    "file": "Compiler.php"
+  }
+}

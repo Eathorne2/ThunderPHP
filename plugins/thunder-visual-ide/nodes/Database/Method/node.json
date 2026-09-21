@@ -1,0 +1,1053 @@
+{
+  "type": "database.query_builder_method",
+  "label": "Query Builder Method",
+  "category": "Database",
+  "kind": "flow",
+  "icon": "DB()",
+  "color": "#0d9488",
+  "description": "Calls a documented fluent QueryBuilder method on a Core\\Database instance.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "dynamic_ports": "query_builder_method",
+  "defaults": {
+    "title": "Query Builder Method",
+    "method": "table",
+    "result_variable": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "result_variable",
+      "label": "Result variable",
+      "type": "text",
+      "help": "Optional PHP variable name. Omit the $ sign. Leave blank to use the automatic node-specific name."
+    },
+    {
+      "name": "method",
+      "label": "Method",
+      "type": "select",
+      "options": [
+        "table",
+        "from",
+        "select",
+        "selectRaw",
+        "where",
+        "orWhere",
+        "whereRaw",
+        "orWhereRaw",
+        "whereIn",
+        "whereNull",
+        "whereBetween",
+        "whereNested",
+        "join",
+        "leftJoin",
+        "rightJoin",
+        "orderBy",
+        "orderByRaw",
+        "groupBy",
+        "having",
+        "limit",
+        "offset",
+        "paginate",
+        "get",
+        "first",
+        "count",
+        "insert",
+        "update",
+        "delete",
+        "upsert",
+        "union",
+        "unionAll",
+        "raw",
+        "toSql",
+        "getBindings",
+        "getRawBindings",
+        "reset",
+        "getLastInsertId",
+        "getAffectedRows",
+        "getLastError",
+        "getLastErrorCode",
+        "getLastSqlState"
+      ]
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "builder",
+        "label": "Query Builder",
+        "type": "object",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      },
+      {
+        "id": "result",
+        "label": "Result",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": false
+      },
+      {
+        "id": "builder",
+        "label": "Query Builder",
+        "type": "object",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "methods": [
+    {
+      "name": "table",
+      "label": "Set Table",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "table",
+          "label": "Table",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        }
+      ],
+      "group": "Setup",
+      "description": "Sets the table used by the fluent query and returns the builder.",
+      "help": "Sets the table used by the fluent query and returns the builder.\n\n### Example\n\n```php\n$db->table('users')->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "from",
+      "label": "Set FROM Table",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "table",
+          "label": "Table",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        }
+      ],
+      "group": "Setup",
+      "description": "Sets the table through the from() alias and returns the builder.",
+      "help": "Sets the table through the from() alias and returns the builder.\n\n### Example\n\n```php\n$db->from('posts')->where('published', 1)->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "select",
+      "label": "Select Columns",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "columns",
+          "label": "Columns",
+          "type": "array",
+          "spread": true,
+          "optional": true,
+          "variadic": true,
+          "fallback": "[]",
+          "signature_type": ""
+        }
+      ],
+      "group": "Select",
+      "description": "Replaces the selected columns. Connect an Array node; values are unpacked as variadic arguments.",
+      "help": "Replaces the selected columns. Connect an Array node; values are unpacked as variadic arguments.\n\n### Example\n\n```php\n$db->table('users')->select('id', 'name', 'email')->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "selectRaw",
+      "label": "Select Raw Expression",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "sql",
+          "label": "SQL",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "bindings",
+          "label": "Bindings",
+          "type": "array",
+          "default": "[]",
+          "optional": true,
+          "fallback": "[]"
+        }
+      ],
+      "group": "Select",
+      "description": "Adds a raw SELECT expression with optional prepared bindings.",
+      "help": "Adds a raw SELECT expression with optional prepared bindings.\n\n### Example\n\n```php\n$db->table('orders')->selectRaw('SUM(amount) AS total')->first();\n```",
+      "chainable": true
+    },
+    {
+      "name": "where",
+      "label": "WHERE",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "column",
+          "label": "Column",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "operator",
+          "label": "Operator or Value",
+          "type": "mixed",
+          "default": "null",
+          "optional": true,
+          "fallback": "null"
+        },
+        {
+          "name": "value",
+          "label": "Value",
+          "type": "mixed",
+          "default": "null",
+          "optional": true,
+          "fallback": "null"
+        },
+        {
+          "name": "boolean",
+          "label": "Boolean",
+          "type": "string",
+          "default": "'AND'",
+          "optional": true,
+          "fallback": "'AND'"
+        }
+      ],
+      "group": "Conditions",
+      "description": "Adds a basic WHERE condition. Use the second input as the value for shorthand equality.",
+      "help": "Adds a basic WHERE condition. Use the second input as the value for shorthand equality.\n\n### Example\n\n```php\n$db->table('users')->where('status', 'active')->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "orWhere",
+      "label": "OR WHERE",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "column",
+          "label": "Column",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "operator",
+          "label": "Operator or Value",
+          "type": "mixed",
+          "default": "null",
+          "optional": true,
+          "fallback": "null"
+        },
+        {
+          "name": "value",
+          "label": "Value",
+          "type": "mixed",
+          "default": "null",
+          "optional": true,
+          "fallback": "null"
+        }
+      ],
+      "group": "Conditions",
+      "description": "Adds an OR WHERE condition with shorthand equality support.",
+      "help": "Adds an OR WHERE condition with shorthand equality support.\n\n### Example\n\n```php\n$db->table('users')->where('role', 'admin')->orWhere('role', 'moderator')->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "whereRaw",
+      "label": "Raw WHERE",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "sql",
+          "label": "SQL",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "bindings",
+          "label": "Bindings",
+          "type": "array",
+          "default": "[]",
+          "optional": true,
+          "fallback": "[]"
+        },
+        {
+          "name": "boolean",
+          "label": "Boolean",
+          "type": "string",
+          "default": "'AND'",
+          "optional": true,
+          "fallback": "'AND'"
+        }
+      ],
+      "group": "Conditions",
+      "description": "Adds a raw WHERE clause with prepared bindings.",
+      "help": "Adds a raw WHERE clause with prepared bindings.\n\n### Example\n\n```php\n$db->table('users')->whereRaw('age BETWEEN ? AND ?', [18, 30])->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "orWhereRaw",
+      "label": "Raw OR WHERE",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "sql",
+          "label": "SQL",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "bindings",
+          "label": "Bindings",
+          "type": "array",
+          "default": "[]",
+          "optional": true,
+          "fallback": "[]"
+        }
+      ],
+      "group": "Conditions",
+      "description": "Adds a raw OR WHERE clause with prepared bindings.",
+      "help": "Adds a raw OR WHERE clause with prepared bindings.\n\n### Example\n\n```php\n$db->table('users')->where('active', 1)->orWhereRaw('LENGTH(name) > ?', [10])->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "whereIn",
+      "label": "WHERE IN",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "column",
+          "label": "Column",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "values",
+          "label": "Values",
+          "type": "array",
+          "optional": false,
+          "fallback": "[]"
+        },
+        {
+          "name": "boolean",
+          "label": "Boolean",
+          "type": "string",
+          "default": "'AND'",
+          "optional": true,
+          "fallback": "'AND'"
+        }
+      ],
+      "group": "Conditions",
+      "description": "Adds a WHERE IN condition from an array of values.",
+      "help": "Adds a WHERE IN condition from an array of values.\n\n### Example\n\n```php\n$db->table('users')->whereIn('id', [1, 2, 3])->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "whereNull",
+      "label": "WHERE NULL",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "column",
+          "label": "Column",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "boolean",
+          "label": "Boolean",
+          "type": "string",
+          "default": "'AND'",
+          "optional": true,
+          "fallback": "'AND'"
+        }
+      ],
+      "group": "Conditions",
+      "description": "Adds an IS NULL condition.",
+      "help": "Adds an IS NULL condition.\n\n### Example\n\n```php\n$db->table('users')->whereNull('deleted_at')->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "whereBetween",
+      "label": "WHERE BETWEEN",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "column",
+          "label": "Column",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "values",
+          "label": "Range Values",
+          "type": "array",
+          "optional": false,
+          "fallback": "[]"
+        },
+        {
+          "name": "boolean",
+          "label": "Boolean",
+          "type": "string",
+          "default": "'AND'",
+          "optional": true,
+          "fallback": "'AND'"
+        }
+      ],
+      "group": "Conditions",
+      "description": "Adds a BETWEEN condition using a two-value array.",
+      "help": "Adds a BETWEEN condition using a two-value array.\n\n### Example\n\n```php\n$db->table('users')->whereBetween('age', [18, 30])->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "whereNested",
+      "label": "Nested WHERE Group",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "callback",
+          "label": "Callback",
+          "type": "callable",
+          "optional": false,
+          "fallback": "null",
+          "signature_type": "Closure"
+        },
+        {
+          "name": "boolean",
+          "label": "Boolean",
+          "type": "string",
+          "default": "'AND'",
+          "optional": true,
+          "fallback": "'AND'"
+        }
+      ],
+      "group": "Conditions",
+      "description": "Adds grouped nested conditions through a Closure receiving the nested builder.",
+      "help": "Adds grouped nested conditions through a Closure receiving the nested builder.\n\n### Example\n\n```php\n$db->table('users')->whereNested(function ($q) { $q->where('role', 'admin'); })->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "join",
+      "label": "JOIN",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "table",
+          "label": "Table",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "first",
+          "label": "First Column",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "operator",
+          "label": "Operator",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "second",
+          "label": "Second Column",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "type",
+          "label": "Join Type",
+          "type": "string",
+          "default": "'INNER'",
+          "optional": true,
+          "fallback": "'INNER'"
+        }
+      ],
+      "group": "Joins",
+      "description": "Adds an INNER or custom JOIN.",
+      "help": "Adds an INNER or custom JOIN.\n\n### Example\n\n```php\n$db->table('posts')->join('users', 'posts.user_id', '=', 'users.id')->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "leftJoin",
+      "label": "LEFT JOIN",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "table",
+          "label": "Table",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "first",
+          "label": "First Column",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "operator",
+          "label": "Operator",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "second",
+          "label": "Second Column",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        }
+      ],
+      "group": "Joins",
+      "description": "Adds a LEFT JOIN.",
+      "help": "Adds a LEFT JOIN.\n\n### Example\n\n```php\n$db->table('posts')->leftJoin('comments', 'posts.id', '=', 'comments.post_id')->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "rightJoin",
+      "label": "RIGHT JOIN",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "table",
+          "label": "Table",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "first",
+          "label": "First Column",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "operator",
+          "label": "Operator",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "second",
+          "label": "Second Column",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        }
+      ],
+      "group": "Joins",
+      "description": "Adds a RIGHT JOIN.",
+      "help": "Adds a RIGHT JOIN.\n\n### Example\n\n```php\n$db->table('posts')->rightJoin('authors', 'posts.author_id', '=', 'authors.id')->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "orderBy",
+      "label": "ORDER BY",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "column",
+          "label": "Column",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "direction",
+          "label": "Direction",
+          "type": "string",
+          "default": "'ASC'",
+          "optional": true,
+          "fallback": "'ASC'"
+        }
+      ],
+      "group": "Ordering & Grouping",
+      "description": "Adds an ORDER BY clause.",
+      "help": "Adds an ORDER BY clause.\n\n### Example\n\n```php\n$db->table('users')->orderBy('created_at', 'DESC')->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "orderByRaw",
+      "label": "Raw ORDER BY",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "sql",
+          "label": "SQL",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "bindings",
+          "label": "Bindings",
+          "type": "array",
+          "default": "[]",
+          "optional": true,
+          "fallback": "[]"
+        }
+      ],
+      "group": "Ordering & Grouping",
+      "description": "Adds a raw ORDER BY expression.",
+      "help": "Adds a raw ORDER BY expression.\n\n### Example\n\n```php\n$db->table('tasks')->orderByRaw('priority DESC')->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "groupBy",
+      "label": "GROUP BY",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "columns",
+          "label": "Columns",
+          "type": "array",
+          "spread": true,
+          "optional": true,
+          "variadic": true,
+          "fallback": "[]",
+          "signature_type": ""
+        }
+      ],
+      "group": "Ordering & Grouping",
+      "description": "Sets GROUP BY columns. Connect an Array node; values are unpacked.",
+      "help": "Sets GROUP BY columns. Connect an Array node; values are unpacked.\n\n### Example\n\n```php\n$db->table('users')->selectRaw('role, COUNT(*) AS total')->groupBy('role')->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "having",
+      "label": "HAVING",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "column",
+          "label": "Column",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "operator",
+          "label": "Operator",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "value",
+          "label": "Value",
+          "type": "mixed",
+          "optional": false,
+          "fallback": "null"
+        },
+        {
+          "name": "boolean",
+          "label": "Boolean",
+          "type": "string",
+          "default": "'AND'",
+          "optional": true,
+          "fallback": "'AND'"
+        }
+      ],
+      "group": "Ordering & Grouping",
+      "description": "Adds a HAVING condition after grouping.",
+      "help": "Adds a HAVING condition after grouping.\n\n### Example\n\n```php\n$db->table('users')->selectRaw('role, COUNT(*) AS total')->groupBy('role')->having('total', '>', 5)->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "limit",
+      "label": "LIMIT",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "limit",
+          "label": "Limit",
+          "type": "int",
+          "optional": false,
+          "fallback": "0"
+        }
+      ],
+      "group": "Limits",
+      "description": "Sets the maximum number of rows returned.",
+      "help": "Sets the maximum number of rows returned.\n\n### Example\n\n```php\n$db->table('users')->limit(10)->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "offset",
+      "label": "OFFSET",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "offset",
+          "label": "Offset",
+          "type": "int",
+          "optional": false,
+          "fallback": "0"
+        }
+      ],
+      "group": "Limits",
+      "description": "Sets how many rows to skip.",
+      "help": "Sets how many rows to skip.\n\n### Example\n\n```php\n$db->table('users')->limit(10)->offset(20)->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "paginate",
+      "label": "Paginate",
+      "return_type": "array",
+      "params": [
+        {
+          "name": "perPage",
+          "label": "Per Page",
+          "type": "int",
+          "default": "15",
+          "optional": true,
+          "fallback": "15"
+        },
+        {
+          "name": "page",
+          "label": "Page",
+          "type": "int",
+          "default": "1",
+          "optional": true,
+          "fallback": "1"
+        }
+      ],
+      "group": "Execution",
+      "description": "Executes a paginated SELECT and returns rows plus pagination metadata.",
+      "help": "Executes a paginated SELECT and returns rows plus pagination metadata.\n\n### Example\n\n```php\n$page = $db->table('posts')->paginate(20, 1);\n```",
+      "chainable": false
+    },
+    {
+      "name": "get",
+      "label": "Get Rows",
+      "return_type": "array",
+      "params": [],
+      "group": "Execution",
+      "description": "Executes the SELECT query and returns an array of row objects.",
+      "help": "Executes the SELECT query and returns an array of row objects.\n\n### Example\n\n```php\n$users = $db->table('users')->where('active', 1)->get();\n```",
+      "chainable": false
+    },
+    {
+      "name": "first",
+      "label": "Get First Row",
+      "return_type": "?object",
+      "params": [],
+      "group": "Execution",
+      "description": "Returns the first row object or null.",
+      "help": "Returns the first row object or null.\n\n### Example\n\n```php\n$user = $db->table('users')->where('id', 1)->first();\n```",
+      "chainable": false
+    },
+    {
+      "name": "count",
+      "label": "Count Rows",
+      "return_type": "int",
+      "params": [
+        {
+          "name": "column",
+          "label": "Column",
+          "type": "string",
+          "default": "'*'",
+          "optional": true,
+          "fallback": "'*'"
+        }
+      ],
+      "group": "Execution",
+      "description": "Counts rows or non-null values in a selected column.",
+      "help": "Counts rows or non-null values in a selected column.\n\n### Example\n\n```php\n$total = $db->table('users')->count();\n```",
+      "chainable": false
+    },
+    {
+      "name": "insert",
+      "label": "Insert Row",
+      "return_type": "bool",
+      "params": [
+        {
+          "name": "data",
+          "label": "Data",
+          "type": "array",
+          "optional": false,
+          "fallback": "[]"
+        }
+      ],
+      "group": "Write Queries",
+      "description": "Inserts one row into the selected table.",
+      "help": "Inserts one row into the selected table.\n\n### Example\n\n```php\n$ok = $db->table('users')->insert(['name' => 'John']);\n```",
+      "chainable": false
+    },
+    {
+      "name": "update",
+      "label": "Update Rows",
+      "return_type": "int",
+      "params": [
+        {
+          "name": "data",
+          "label": "Data",
+          "type": "array",
+          "optional": false,
+          "fallback": "[]"
+        }
+      ],
+      "group": "Write Queries",
+      "description": "Updates matching rows and returns the affected-row count.",
+      "help": "Updates matching rows and returns the affected-row count.\n\n### Example\n\n```php\n$count = $db->table('users')->where('id', 5)->update(['active' => 0]);\n```",
+      "chainable": false
+    },
+    {
+      "name": "delete",
+      "label": "Delete Rows",
+      "return_type": "int",
+      "params": [],
+      "group": "Write Queries",
+      "description": "Deletes matching rows and returns the affected-row count. Without a WHERE clause, every row is deleted.",
+      "help": "Deletes matching rows and returns the affected-row count. Without a WHERE clause, every row is deleted.\n\n### Example\n\n```php\n$count = $db->table('users')->where('id', 10)->delete();\n```",
+      "chainable": false
+    },
+    {
+      "name": "upsert",
+      "label": "Upsert Rows",
+      "return_type": "int",
+      "params": [
+        {
+          "name": "rows",
+          "label": "Rows",
+          "type": "array",
+          "optional": false,
+          "fallback": "[]"
+        },
+        {
+          "name": "conflictColumns",
+          "label": "Conflict Columns",
+          "type": "array",
+          "optional": false,
+          "fallback": "[]"
+        },
+        {
+          "name": "updateColumns",
+          "label": "Update Columns",
+          "type": "array",
+          "default": "[]",
+          "optional": true,
+          "fallback": "[]"
+        }
+      ],
+      "group": "Write Queries",
+      "description": "Inserts or updates rows using database-specific conflict handling.",
+      "help": "Inserts or updates rows using database-specific conflict handling.\n\n### Example\n\n```php\n$count = $db->table('users')->upsert($rows, ['email'], ['name']);\n```",
+      "chainable": false
+    },
+    {
+      "name": "union",
+      "label": "UNION",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "query",
+          "label": "Query or Callback",
+          "type": "mixed",
+          "optional": false,
+          "fallback": "null",
+          "signature_type": "QueryBuilder|Closure"
+        },
+        {
+          "name": "all",
+          "label": "Use UNION ALL",
+          "type": "bool",
+          "default": "false",
+          "optional": true,
+          "fallback": "false"
+        }
+      ],
+      "group": "Combining Queries",
+      "description": "Combines this query with another builder or Closure.",
+      "help": "Combines this query with another builder or Closure.\n\n### Example\n\n```php\n$first->union($second)->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "unionAll",
+      "label": "UNION ALL",
+      "return_type": "self",
+      "params": [
+        {
+          "name": "query",
+          "label": "Query or Callback",
+          "type": "mixed",
+          "optional": false,
+          "fallback": "null",
+          "signature_type": "QueryBuilder|Closure"
+        }
+      ],
+      "group": "Combining Queries",
+      "description": "Combines this query with another builder or Closure using UNION ALL.",
+      "help": "Combines this query with another builder or Closure using UNION ALL.\n\n### Example\n\n```php\n$first->unionAll($second)->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "raw",
+      "label": "Execute Raw SQL",
+      "return_type": "array|object|int|false",
+      "params": [
+        {
+          "name": "sql",
+          "label": "SQL",
+          "type": "string",
+          "optional": false,
+          "fallback": "''"
+        },
+        {
+          "name": "bindings",
+          "label": "Bindings",
+          "type": "array",
+          "default": "[]",
+          "optional": true,
+          "fallback": "[]"
+        },
+        {
+          "name": "fetchAll",
+          "label": "Fetch All",
+          "type": "bool",
+          "default": "true",
+          "optional": true,
+          "fallback": "true"
+        }
+      ],
+      "group": "Raw SQL",
+      "description": "Executes prepared raw SQL. SELECT-like statements return object results; write statements return affected rows.",
+      "help": "Executes prepared raw SQL. SELECT-like statements return object results; write statements return affected rows.\n\n### Example\n\n```php\n$rows = $db->raw('SELECT * FROM users WHERE active = ?', [1]);\n```",
+      "chainable": false
+    },
+    {
+      "name": "toSql",
+      "label": "Build SQL",
+      "return_type": "string",
+      "params": [],
+      "group": "Inspection",
+      "description": "Builds the current SQL string without executing it.",
+      "help": "Builds the current SQL string without executing it.\n\n### Example\n\n```php\n$sql = $db->table('users')->where('active', 1)->toSql();\n```",
+      "chainable": false
+    },
+    {
+      "name": "getBindings",
+      "label": "Get Bindings",
+      "return_type": "array",
+      "params": [],
+      "group": "Inspection",
+      "description": "Returns the prepared bindings accumulated by the builder.",
+      "help": "Returns the prepared bindings accumulated by the builder.\n\n### Example\n\n```php\n$bindings = $db->getBindings();\n```",
+      "chainable": false
+    },
+    {
+      "name": "getRawBindings",
+      "label": "Get Raw Bindings",
+      "return_type": "array",
+      "params": [],
+      "group": "Inspection",
+      "description": "Returns the bindings in their raw internal order.",
+      "help": "Returns the bindings in their raw internal order.\n\n### Example\n\n```php\n$bindings = $db->getRawBindings();\n```",
+      "chainable": false
+    },
+    {
+      "name": "reset",
+      "label": "Reset Builder",
+      "return_type": "self",
+      "params": [],
+      "group": "Lifecycle",
+      "description": "Clears the current query state and returns the builder.",
+      "help": "Clears the current query state and returns the builder.\n\n### Example\n\n```php\n$db->reset()->table('users')->get();\n```",
+      "chainable": true
+    },
+    {
+      "name": "getLastInsertId",
+      "label": "Last Insert ID",
+      "return_type": "?int",
+      "params": [],
+      "group": "Results & Errors",
+      "description": "Returns the most recent QueryBuilder insert ID.",
+      "help": "Returns the most recent QueryBuilder insert ID.\n\n### Example\n\n```php\n$id = $db->getLastInsertId();\n```",
+      "chainable": false
+    },
+    {
+      "name": "getAffectedRows",
+      "label": "Affected Rows",
+      "return_type": "?int",
+      "params": [],
+      "group": "Results & Errors",
+      "description": "Returns the affected rows from the most recent write operation.",
+      "help": "Returns the affected rows from the most recent write operation.\n\n### Example\n\n```php\n$count = $db->getAffectedRows();\n```",
+      "chainable": false
+    },
+    {
+      "name": "getLastError",
+      "label": "Last Error Message",
+      "return_type": "?string",
+      "params": [],
+      "group": "Results & Errors",
+      "description": "Returns the latest QueryBuilder error message or null.",
+      "help": "Returns the latest QueryBuilder error message or null.\n\n### Example\n\n```php\n$error = $db->getLastError();\n```",
+      "chainable": false
+    },
+    {
+      "name": "getLastErrorCode",
+      "label": "Last Error Code",
+      "return_type": "?int",
+      "params": [],
+      "group": "Results & Errors",
+      "description": "Returns the latest driver error code or null.",
+      "help": "Returns the latest driver error code or null.\n\n### Example\n\n```php\n$code = $db->getLastErrorCode();\n```",
+      "chainable": false
+    },
+    {
+      "name": "getLastSqlState",
+      "label": "Last SQLSTATE",
+      "return_type": "?string",
+      "params": [],
+      "group": "Results & Errors",
+      "description": "Returns the latest SQLSTATE value or null.",
+      "help": "Returns the latest SQLSTATE value or null.\n\n### Example\n\n```php\n$state = $db->getLastSqlState();\n```",
+      "chainable": false
+    }
+  ],
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Database\\QueryBuilderMethodCompiler",
+    "file": "Compiler.php"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "admin-utility-footer",
+  "name": "Admin Utility Footer",
+  "description": "A practical application footer with environment, status and support information.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Footers",
+  "order": 2520,
+  "tags": [
+    "footer",
+    "admin",
+    "status",
+    "application"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

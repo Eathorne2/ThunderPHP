@@ -1,0 +1,18 @@
+{
+  "id": "wedding-save-the-date-hero",
+  "name": "Save the Date Hero",
+  "description": "A romantic split-layout wedding announcement with date details, layered photography and invitation actions.",
+  "category": "Wedding",
+  "order": 4510,
+  "tags": [
+    "wedding",
+    "save the date",
+    "hero",
+    "invitation",
+    "couple"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

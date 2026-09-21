@@ -1,0 +1,17 @@
+{
+  "id": "fragrance-collection-grid",
+  "name": "Fragrance Collection Grid",
+  "description": "A luxury fragrance collection grid organized by mood and note family.",
+  "category": "Fashion & Beauty",
+  "order": 3960,
+  "tags": [
+    "fashion",
+    "beauty",
+    "grid",
+    "gallery"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

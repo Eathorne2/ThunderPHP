@@ -1,0 +1,19 @@
+{
+  "id": "global-business-consulting-header-footer",
+  "name": "Global Business Consulting Header and Footer",
+  "description": "Strategy, transformation and operating-model support for organisations in motion.",
+  "category": "Business & Law",
+  "order": 5409,
+  "tags": [
+    "header",
+    "footer",
+    "business",
+    "law",
+    "navigation",
+    "business consulting"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

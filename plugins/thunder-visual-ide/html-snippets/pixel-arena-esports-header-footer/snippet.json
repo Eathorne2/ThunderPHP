@@ -1,0 +1,18 @@
+{
+  "id": "pixel-arena-esports-header-footer",
+  "name": "Pixel Arena Esports Header and Footer",
+  "description": "A competitive esports shell with match navigation, live status and a structured gaming-community footer.",
+  "category": "Music & Entertainment",
+  "order": 4470,
+  "tags": [
+    "esports",
+    "gaming",
+    "header",
+    "footer",
+    "tournament"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

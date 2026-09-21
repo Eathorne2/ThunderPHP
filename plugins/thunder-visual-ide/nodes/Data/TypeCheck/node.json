@@ -1,0 +1,68 @@
+{
+  "type": "data.type_check",
+  "label": "Type Check",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "IS?",
+  "color": "#1e40af",
+  "description": "Checks a connected PHP value using a selected is_* predicate.",
+  "allowed_graphs": [
+    "flow",
+    "view"
+  ],
+  "defaults": {
+    "title": "Type Check",
+    "check": "is_numeric"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "check",
+      "label": "Check type",
+      "type": "select",
+      "options": [
+        "is_array",
+        "is_bool",
+        "is_callable",
+        "is_countable",
+        "is_float",
+        "is_int",
+        "is_iterable",
+        "is_null",
+        "is_numeric",
+        "is_object",
+        "is_resource",
+        "is_scalar",
+        "is_string"
+      ]
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "value",
+        "label": "Value",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "result",
+        "label": "Matches",
+        "type": "boolean",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\TypeCheckCompiler",
+    "file": "Compiler.php"
+  }
+}

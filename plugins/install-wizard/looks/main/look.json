@@ -1,0 +1,9 @@
+{
+    "name": "Default Installer Look",
+    "version": "1.0.0",
+    "plugin": "install-wizard",
+    "plugin_requires": "^1.0.0",
+    "author": "Eathorne Choongo",
+    "thumbnail": "screenshot.png",
+    "description": "Full-page installation wizard UI."
+}

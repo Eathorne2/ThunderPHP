@@ -1,0 +1,17 @@
+{
+  "id": "skincare-routine-steps",
+  "name": "Skincare Routine Steps",
+  "description": "A morning and evening skincare routine with switchable guidance panels.",
+  "category": "Fashion & Beauty",
+  "order": 3940,
+  "tags": [
+    "beauty",
+    "tabs",
+    "routine",
+    "interactive"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

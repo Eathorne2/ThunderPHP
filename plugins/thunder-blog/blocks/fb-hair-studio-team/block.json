@@ -1,0 +1,200 @@
+{
+  "slug": "fb-hair-studio-team",
+  "name": "Hair Studio Team",
+  "category": "Fashion & Beauty",
+  "description": "Editorial team cards for salons, stylists and beauty studios.",
+  "keywords": [
+    "hair",
+    "salon",
+    "team",
+    "stylists"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-fb-team\"><div class=\"tb-fb-team__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-fb-team__grid\">{{elements:members}}</div></div>",
+  "css": ".tb-fb-team{padding:clamp(28px,6vw,76px);background:var(--tb-color-background)}.tb-fb-team__head{max-width:720px;margin-bottom:30px}.tb-fb-team__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-fb-team__title{margin:10px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(38px,5vw,62px);font-weight:500}.tb-fb-team__text{color:var(--tb-color-muted);line-height:1.7}.tb-fb-team__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.tb-fb-team__member{background:var(--tb-color-surface);border:1px solid var(--tb-color-border)}.tb-fb-team__image{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.tb-fb-team__copy{padding:18px}.tb-fb-team__name{margin:0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:26px}.tb-fb-team__role{margin:5px 0 0;color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}@media(max-width:760px){.tb-fb-team__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Meet the studio"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-fb-team__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Artists behind the chair"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-fb-team__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Introduce the people and specialties that make your salon distinctive."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-fb-team__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "members",
+      "label": "Team member",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Hair stylist portrait",
+        "name": "Maya",
+        "role": "Cut & colour"
+      },
+      "schema": [
+        {
+          "key": "image",
+          "label": "Photo",
+          "type": "image",
+          "selector": ".tb-fb-team__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        },
+        {
+          "key": "name",
+          "label": "Name",
+          "type": "text",
+          "selector": ".tb-fb-team__name"
+        },
+        {
+          "key": "role",
+          "label": "Role",
+          "type": "text",
+          "selector": ".tb-fb-team__role"
+        }
+      ],
+      "template": "<article class=\"tb-fb-team__member\"><img class=\"tb-fb-team__image\" src=\"{{image}}\" alt=\"{{alt}}\"><div class=\"tb-fb-team__copy\"><h3 class=\"tb-fb-team__name\">{{name}}</h3><p class=\"tb-fb-team__role\">{{role}}</p></div></article>",
+      "min": 1,
+      "max": 8,
+      "default_items": [
+        {
+          "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Hair stylist portrait",
+          "name": "Maya",
+          "role": "Cut & colour"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Beauty stylist portrait",
+          "name": "Leah",
+          "role": "Texture specialist"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Creative stylist portrait",
+          "name": "Noor",
+          "role": "Editorial styling"
+        }
+      ],
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

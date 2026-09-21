@@ -1,0 +1,182 @@
+{
+  "slug": "fb-accessories-showcase",
+  "name": "Accessories Showcase",
+  "category": "Fashion & Beauty",
+  "description": "Four polished accessory cards with imagery, text and links.",
+  "keywords": [
+    "fashion",
+    "accessories",
+    "shop",
+    "cards"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-fb-accessories\"><div class=\"tb-fb-accessories__head\">{{elements:eyebrow}}{{elements:title}}</div><div class=\"tb-fb-accessories__grid\">{{elements:items}}</div></div>",
+  "css": ".tb-fb-accessories{padding:clamp(28px,5vw,68px);background:var(--tb-color-background)}.tb-fb-accessories__head{display:flex;align-items:end;justify-content:space-between;margin-bottom:28px}.tb-fb-accessories__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.17em;text-transform:uppercase}.tb-fb-accessories__title{margin:8px 0 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(36px,5vw,58px);font-weight:500}.tb-fb-accessories__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.tb-fb-accessories__card{background:var(--tb-color-surface);border:1px solid var(--tb-color-border);text-decoration:none}.tb-fb-accessories__image{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.tb-fb-accessories__copy{padding:18px}.tb-fb-accessories__card-title{margin:0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:23px}.tb-fb-accessories__card-text{margin:6px 0 0;color:var(--tb-color-muted);font-size:13px;line-height:1.55}@media(max-width:900px){.tb-fb-accessories__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.tb-fb-accessories__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Details matter"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-fb-accessories__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Accessories in focus"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-fb-accessories__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "items",
+      "label": "Accessory item",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Watch accessory",
+        "title": "Timepieces",
+        "text": "Quiet statement pieces.",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "image",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-fb-accessories__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-fb-accessories__card-title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ".tb-fb-accessories__card-text"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-fb-accessories__card\" href=\"{{url}}\"><img class=\"tb-fb-accessories__image\" src=\"{{image}}\" alt=\"{{alt}}\"><div class=\"tb-fb-accessories__copy\"><h3 class=\"tb-fb-accessories__card-title\">{{title}}</h3><p class=\"tb-fb-accessories__card-text\">{{text}}</p></div></a>",
+      "min": 1,
+      "max": 8,
+      "default_items": [
+        {
+          "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Watch accessory",
+          "title": "Timepieces",
+          "text": "Quiet statement pieces.",
+          "url": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Jewelry accessory",
+          "title": "Jewelry",
+          "text": "Small details, strong finish.",
+          "url": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Fashion store accessories",
+          "title": "Bags",
+          "text": "Shape, texture and utility.",
+          "url": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Fashion collection",
+          "title": "Finishing Touches",
+          "text": "The pieces that pull a look together.",
+          "url": "#"
+        }
+      ],
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

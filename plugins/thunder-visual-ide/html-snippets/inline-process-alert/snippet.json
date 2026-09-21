@@ -1,0 +1,20 @@
+{
+  "id": "inline-process-alert",
+  "name": "Inline Process Alert",
+  "description": "A progress-aware inline notice with status details and a compact action.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Alerts - Inline",
+  "order": 8000,
+  "tags": [
+    "alert",
+    "process",
+    "status",
+    "inline"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

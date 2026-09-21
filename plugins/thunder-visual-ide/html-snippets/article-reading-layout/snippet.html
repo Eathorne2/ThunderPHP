@@ -1,0 +1,58 @@
+<article class="reading-article">
+    <header>
+        <span class="reading-article__category">Engineering</span>
+        <h1>Readable systems are easier to improve.</h1>
+        <p class="reading-article__lead">
+            A node-based workflow is most useful when the generated code remains ordinary, clear and editable.
+        </p>
+        <div class="reading-article__author">
+            <img src="https://picsum.photos/id/1005/120/120" alt="Author">
+            <div>
+                <strong>Daniel Mwewa</strong>
+                <span>25 July 2026 · 9 min read</span>
+            </div>
+        </div>
+    </header>
+    <img class="reading-article__hero" src="https://picsum.photos/id/0/1400/760" alt="Laptop on a desk">
+    <div class="reading-article__layout">
+        <aside>
+            <span>Share</span>
+            <a href="#">X</a>
+            <a href="#">in</a>
+            <a href="#">✉</a>
+        </aside>
+        <div class="reading-article__content">
+            <p class="is-intro">
+                Visual programming does not need to hide the underlying language. It can instead provide a clear
+                map of how ordinary code is assembled.
+            </p>
+            <h2>Keep the output familiar</h2>
+            <p>
+                Developers should be able to open generated files, understand the control flow and continue
+                editing without a proprietary runtime.
+            </p>
+            <blockquote>
+                Good visual tooling reduces repetitive work without removing the developer’s ability to reason
+                about the result.
+            </blockquote>
+            <h2>Use focused building blocks</h2>
+            <p>
+                Small nodes with precise responsibilities are easier to combine, document and test than large
+                nodes that attempt to build an entire application at once.
+            </p>
+            <pre><code>add_action('controller', function ($data = []) {
+    $user = $model->findById($data['id']);
+    set_value('user', $user);
+}, 10, 'users.view');</code></pre>
+            <h2>Make conventions visible</h2>
+            <p>
+                Names, types, result variables and mandatory filter returns should be visible directly in the
+                graph so the architecture explains itself.
+            </p>
+        </div>
+    </div>
+    <footer>
+        <strong>Continue learning</strong>
+        <a href="#">Build your first route and View →</a>
+    </footer>
+</article>

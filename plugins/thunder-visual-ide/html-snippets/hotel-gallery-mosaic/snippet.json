@@ -1,0 +1,18 @@
+{
+  "id": "hotel-gallery-mosaic",
+  "name": "Hotel Gallery Mosaic",
+  "description": "An image-led hotel gallery with category filters and a lightweight accessible lightbox.",
+  "category": "Travel & Hotels",
+  "order": 4900,
+  "tags": [
+    "hotel",
+    "gallery",
+    "mosaic",
+    "lightbox",
+    "resort"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,82 @@
+.umc-card {
+    padding: 1rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface, #fff);
+    color: var(--thv-theme-text, #0f172a);
+    font-family: system-ui, sans-serif
+}
+
+.umc-card header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: .7rem
+}
+
+.umc-card header img {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: .8rem;
+    object-fit: cover
+}
+
+.umc-card header strong, .umc-card header span {
+    display: block
+}
+
+.umc-card header span {
+    margin-top: .15rem;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .78rem
+}
+
+.umc-card button {
+    padding: .5rem .7rem;
+    border: 0;
+    border-radius: .5rem;
+    background: var(--thv-theme-primary, #2563eb);
+    color: #fff;
+    font-weight: 800
+}
+
+.umc-card>p {
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .82rem;
+    line-height: 1.5
+}
+
+.umc-card dl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem 0;
+    padding: .75rem 0;
+    border-block: 1px solid var(--thv-theme-border, #dbe4ef)
+}
+
+.umc-card dl div {
+    text-align: center
+}
+
+.umc-card dt {
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .68rem
+}
+
+.umc-card dd {
+    margin: .15rem 0 0;
+    font-weight: 900
+}
+
+.umc-card footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .75rem
+}
+
+.umc-card footer a {
+    color: var(--thv-theme-primary, #2563eb);
+    text-decoration: none
+}

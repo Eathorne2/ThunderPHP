@@ -1,0 +1,182 @@
+.collectors-newsletter {
+    display: grid;
+    grid-template-columns: minmax(20rem, 0.9fr) minmax(24rem, 1.1fr);
+    gap: clamp(2rem, 7vw, 7rem);
+    align-items: center;
+    min-height: 44rem;
+    padding: clamp(2rem, 6vw, 6rem);
+    overflow: hidden;
+    color: var(--thv-theme-text, #17120f);
+    background:
+        radial-gradient(circle at 15% 20%, color-mix(in srgb, var(--thv-theme-secondary, #ff9f7a) 34%, transparent), transparent 22rem),
+        var(--thv-theme-surface-alt, #f2ebe0);
+}
+
+.collectors-newsletter__covers {
+    position: relative;
+    min-height: 34rem;
+}
+
+.collectors-newsletter__cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: min(18rem, 55vw);
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border: 0.45rem solid var(--thv-theme-surface, #ffffff);
+    background: var(--thv-theme-surface, #ffffff);
+    box-shadow: 0 2rem 4rem rgba(55, 35, 24, 0.22);
+    transform-origin: center bottom;
+}
+
+.collectors-newsletter__cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.72));
+}
+
+.collectors-newsletter__cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collectors-newsletter__cover span,
+.collectors-newsletter__cover strong {
+    position: absolute;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.collectors-newsletter__cover span {
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.68rem;
+    font-weight: 900;
+}
+
+.collectors-newsletter__cover strong {
+    right: 0.8rem;
+    bottom: 0.6rem;
+    left: 0.8rem;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    letter-spacing: -0.08em;
+    line-height: 0.85;
+}
+
+.collectors-newsletter__cover--back {
+    transform: translate(-72%, -47%) rotate(-14deg);
+}
+
+.collectors-newsletter__cover--middle {
+    transform: translate(-48%, -51%) rotate(2deg);
+}
+
+.collectors-newsletter__cover--front {
+    transform: translate(-21%, -45%) rotate(12deg);
+}
+
+.collectors-newsletter__copy {
+    max-width: 39rem;
+}
+
+.collectors-newsletter__eyebrow {
+    color: var(--thv-theme-primary, #d64b2f);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.collectors-newsletter h2 {
+    margin: 1rem 0 1.4rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3.2rem, 7vw, 7rem);
+    font-weight: 500;
+    letter-spacing: -0.075em;
+    line-height: 0.9;
+}
+
+.collectors-newsletter__copy > p {
+    max-width: 34rem;
+    color: var(--thv-theme-muted, #6b5e55);
+    line-height: 1.75;
+}
+
+.collectors-newsletter__form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.7rem;
+    margin-top: 2rem;
+}
+
+.collectors-newsletter__form label span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.collectors-newsletter__form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--thv-theme-border, #cfc0b5);
+    border-radius: 0;
+    color: inherit;
+    background: color-mix(in srgb, var(--thv-theme-surface, #ffffff) 78%, transparent);
+}
+
+.collectors-newsletter__form button {
+    padding: 1rem 1.25rem;
+    border: 0;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #d64b2f);
+    font-weight: 850;
+    cursor: pointer;
+}
+
+.collectors-newsletter__copy > small {
+    display: block;
+    min-height: 1.2rem;
+    margin-top: 0.8rem;
+    color: var(--thv-theme-muted, #6b5e55);
+}
+
+.collectors-newsletter__copy > small.is-success {
+    color: var(--thv-theme-success, #15803d);
+    font-weight: 800;
+}
+
+.collectors-newsletter__notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem 1.5rem;
+    margin-top: 2.4rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--thv-theme-border, #cfc0b5);
+    color: var(--thv-theme-muted, #6b5e55);
+    font-size: 0.68rem;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 840px) {
+    .collectors-newsletter {
+        grid-template-columns: 1fr;
+    }
+
+    .collectors-newsletter__covers {
+        min-height: 28rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .collectors-newsletter__form {
+        grid-template-columns: 1fr;
+    }
+}

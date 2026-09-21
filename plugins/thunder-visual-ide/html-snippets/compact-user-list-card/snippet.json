@@ -1,0 +1,20 @@
+{
+  "id": "compact-user-list-card",
+  "name": "Compact User List Card",
+  "description": "A compact user row for directories with status and quick actions.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "User Cards",
+  "order": 2300,
+  "tags": [
+    "user",
+    "list",
+    "directory",
+    "status"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

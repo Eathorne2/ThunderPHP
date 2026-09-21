@@ -1,0 +1,18 @@
+{
+  "id": "scent-house-perfume-header-footer",
+  "name": "Scent House Perfume Header and Footer",
+  "description": "A coordinated responsive header and footer set for SCENT HOUSE.",
+  "category": "Fashion & Beauty",
+  "order": 4170,
+  "tags": [
+    "header footer",
+    "fashion",
+    "beauty",
+    "responsive",
+    "scent house"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

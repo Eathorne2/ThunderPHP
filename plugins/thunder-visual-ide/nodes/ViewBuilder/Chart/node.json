@@ -1,0 +1,108 @@
+{
+  "type": "view.chart",
+  "label": "Chart View",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "CH",
+  "color": "#8b5cf6",
+  "description": "Renders a Chart.js canvas from a Chart Builder page-value key.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Chart View",
+    "component_name": "",
+    "data_key": "chart",
+    "canvas_id": "chartCanvas",
+    "height": 360,
+    "width": "100%",
+    "css_class": "",
+    "empty_message": "No chart data is available.",
+    "chart_js_source": "",
+    "widths": {
+      "mobile": 12,
+      "small": 12,
+      "medium": 12,
+      "large": 12
+    },
+    "inline_style": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "component_name",
+      "label": "Reusable component name",
+      "type": "text",
+      "help": "Leave empty to render inline. Set a name to create a reusable component file."
+    },
+    {
+      "name": "data_key",
+      "label": "Chart data key",
+      "type": "text",
+      "help": "Must match the Chart Builder Page value key."
+    },
+    {
+      "name": "canvas_id",
+      "label": "Canvas ID",
+      "type": "text"
+    },
+    {
+      "name": "height",
+      "label": "Height in pixels",
+      "type": "number"
+    },
+    {
+      "name": "width",
+      "label": "Width",
+      "type": "text"
+    },
+    {
+      "name": "css_class",
+      "label": "Wrapper CSS classes",
+      "type": "text",
+      "help": "Optional outer wrapper classes. Leave both wrapper fields empty to render only the chart component."
+    },
+    {
+      "name": "inline_style",
+      "label": "Wrapper inline styles",
+      "type": "textarea",
+      "help": "Optional outer wrapper styles. Leave both wrapper fields empty to render only the chart component."
+    },
+    {
+      "name": "empty_message",
+      "label": "Empty-state message",
+      "type": "text"
+    },
+    {
+      "name": "chart_js_source",
+      "label": "Custom Chart.js path",
+      "type": "text",
+      "help": "Optional local or remote script URL. Leave empty to use the bundled assets/js/chart.min.js file copied into the generated plugin."
+    },
+    {
+      "name": "widths",
+      "label": "Responsive width",
+      "type": "breakpoints",
+      "help": "Applied only when wrapper classes or wrapper inline styles are provided."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\ChartCompiler",
+    "file": "Compiler.php"
+  }
+}

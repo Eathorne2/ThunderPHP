@@ -1,0 +1,17 @@
+{
+  "id": "brand-header-footer-set",
+  "name": "Brand Header and Footer Set",
+  "description": "A polished navigation header and matching multi-column footer for a modern brand site.",
+  "category": "Header and Footer Sets",
+  "order": 3000,
+  "tags": [
+    "header",
+    "footer",
+    "navigation",
+    "brand"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

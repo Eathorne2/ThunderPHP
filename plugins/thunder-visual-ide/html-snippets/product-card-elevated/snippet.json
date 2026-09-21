@@ -1,0 +1,17 @@
+{
+  "id": "product-card-elevated",
+  "name": "Elevated Product Card",
+  "description": "A polished commerce card with image, discount badge, rating, price and favourite interaction.",
+  "category": "Product Cards",
+  "order": 1000,
+  "tags": [
+    "product",
+    "shop",
+    "card",
+    "commerce"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

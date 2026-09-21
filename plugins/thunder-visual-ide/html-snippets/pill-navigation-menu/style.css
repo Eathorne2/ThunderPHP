@@ -1,0 +1,98 @@
+.pill-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .65rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: 999px;
+    background: var(--thv-theme-surface, #fff);
+    color: var(--thv-theme-text, #0f172a);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, .08)
+}
+
+.pill-menu__brand {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: inherit;
+    text-decoration: none
+}
+
+.pill-menu__brand span {
+    display: grid;
+    place-items: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    background: var(--thv-theme-primary, #2563eb);
+    color: var(--thv-theme-on-primary, #fff);
+    font-weight: 900
+}
+
+.pill-menu__links {
+    display: flex;
+    gap: .25rem;
+    margin: auto
+}
+
+.pill-menu__links a {
+    padding: .55rem .75rem;
+    border-radius: 999px;
+    color: var(--thv-theme-muted, #64748b);
+    text-decoration: none;
+    font-size: .84rem;
+    font-weight: 700
+}
+
+.pill-menu__links a:hover, .pill-menu__links a.is-active {
+    background: var(--thv-theme-surface-alt, #f8fafc);
+    color: var(--thv-theme-primary, #2563eb)
+}
+
+.pill-menu__cta {
+    padding: .6rem .9rem;
+    border-radius: 999px;
+    background: var(--thv-theme-primary, #2563eb);
+    color: var(--thv-theme-on-primary, #fff);
+    font-size: .82rem;
+    font-weight: 800;
+    text-decoration: none
+}
+
+.pill-menu__toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: var(--thv-theme-text, #0f172a)
+}
+
+@media(max-width:760px) {
+    .pill-menu {
+        position: relative;
+        border-radius: 1rem
+    }
+    .pill-menu__toggle {
+        display: block;
+        margin-left: auto
+    }
+    .pill-menu__cta {
+        display: none
+    }
+    .pill-menu__links {
+        position: absolute;
+        z-index: 5;
+        left: 0;
+        right: 0;
+        top: calc(100% + .5rem);
+        display: none;
+        flex-direction: column;
+        padding: .6rem;
+        border: 1px solid var(--thv-theme-border, #dbe4ef);
+        border-radius: .8rem;
+        background: var(--thv-theme-surface, #fff);
+        box-shadow: 0 15px 35px rgba(15, 23, 42, .16)
+    }
+    .pill-menu__links.is-open {
+        display: flex
+    }
+}

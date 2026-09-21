@@ -1,0 +1,19 @@
+{
+  "id": "midnight-saas-header-footer-set",
+  "name": "Midnight SaaS Header and Footer Set",
+  "description": "A dark product shell with status messaging, precise navigation and a conversion-focused software footer.",
+  "category": "Header and Footer Sets",
+  "order": 3006,
+  "tags": [
+    "header",
+    "footer",
+    "saas",
+    "dark",
+    "software",
+    "technology"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

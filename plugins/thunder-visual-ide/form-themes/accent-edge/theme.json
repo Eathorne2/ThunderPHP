@@ -1,0 +1,76 @@
+{
+  "id": "accent-edge",
+  "name": "Accent Edge",
+  "description": "Crisp bordered controls with a strong accent rail and clear administrative hierarchy.",
+  "order": 50,
+  "palettes": {
+    "default": {
+      "name": "Indigo",
+      "colors": {
+        "primary": "#4f46e5",
+        "secondary": "#7c3aed",
+        "surface": "#ffffff",
+        "surface_alt": "#f8fafc",
+        "text": "#111827",
+        "muted": "#64748b",
+        "border": "#dbe3ef",
+        "danger": "#dc2626",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    },
+    "rose": {
+      "name": "Rose",
+      "colors": {
+        "primary": "#e11d48",
+        "secondary": "#be123c",
+        "surface": "#fffafa",
+        "surface_alt": "#fff1f2",
+        "text": "#4c0519",
+        "muted": "#9f1239",
+        "border": "#fecdd3",
+        "danger": "#dc2626",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    },
+    "teal": {
+      "name": "Teal",
+      "colors": {
+        "primary": "#0f766e",
+        "secondary": "#0d9488",
+        "surface": "#fbfffe",
+        "surface_alt": "#f0fdfa",
+        "text": "#134e4a",
+        "muted": "#5f7f7a",
+        "border": "#99f6e4",
+        "danger": "#dc2626",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    }
+  },
+  "default_palette": "default",
+  "preview": "preview.html",
+  "css": "style.css",
+  "js": "script.js",
+  "components": {
+    "text_input": "field.html.tpl",
+    "email_input": "field.html.tpl",
+    "password_input": "field.html.tpl",
+    "number_input": "field.html.tpl",
+    "date_input": "field.html.tpl",
+    "file_input": "field.html.tpl",
+    "textarea": "textarea.html.tpl",
+    "select": "select.html.tpl",
+    "checkbox": "checkbox.html.tpl",
+    "button": "button.html.tpl",
+    "form": "form.html.tpl"
+  }
+}

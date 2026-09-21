@@ -1,0 +1,18 @@
+{
+  "id": "edition-launch-hero-section",
+  "name": "Edition Launch Hero",
+  "description": "A layered issue-launch hero with oversized type, cover photography, story index and editorial call-to-action.",
+  "category": "Hero Sections",
+  "order": 2430,
+  "tags": [
+    "hero",
+    "magazine",
+    "editorial",
+    "launch",
+    "cover"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "logo-testimonial-slider",
+  "name": "Logo Testimonial Slider",
+  "description": "A business testimonial slider combining customer logo, result metrics, quote, and compact navigation.",
+  "category": "Testimonial Sliders",
+  "order": 3250,
+  "tags": [
+    "testimonial",
+    "slider",
+    "logo",
+    "business"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

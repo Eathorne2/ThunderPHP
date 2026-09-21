@@ -1,0 +1,198 @@
+.cmm-men {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.cmm-men *, .cmm-men *::before, .cmm-men *::after {
+    box-sizing: border-box;
+}
+
+.cmm-men button, .cmm-men input, .cmm-men select, .cmm-men textarea {
+    font: inherit;
+}
+
+.cmm-men a {
+    color: inherit;
+}
+
+.cmm-men {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 74rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface);
+}
+
+.cmm-men__brand {
+    color: var(--thv-theme-text);
+    font-weight: 950;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+}
+
+.cmm-men__links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cmm-men__links:first-child {
+    margin-right: auto;
+}
+
+.cmm-men__links:last-of-type {
+    margin-left: auto;
+}
+
+.cmm-men__links a {
+    color: var(--thv-theme-muted);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.cmm-men__links a:hover {
+    color: var(--thv-theme-primary);
+}
+
+.cmm-men__action {
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.65rem;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary) !important;
+}
+
+.cmm-men__toggle, .cmm-men__mobile {
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.65rem;
+    background: var(--thv-theme-background);
+    color: var(--thv-theme-text);
+    cursor: pointer;
+}
+
+.cmm-men__mobile {
+    display: none;
+    margin-left: auto;
+}
+
+.cmm-men__mega {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 0.55rem);
+    z-index: 10;
+    display: none;
+    grid-template-columns: 1fr 1fr 1.3fr;
+    gap: 1.5rem;
+    padding: 1.2rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface);
+    box-shadow: 0 1rem 2.5rem color-mix(in srgb, var(--thv-theme-text) 14%, transparent);
+}
+
+.cmm-men__mega.is-open {
+    display: grid;
+}
+
+.cmm-men__mega strong, .cmm-men__mega a {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+.cmm-men__mega a {
+    color: var(--thv-theme-muted);
+}
+
+.cmm-men__mega article {
+    padding: 1rem;
+    border-radius: 0.8rem;
+    background: var(--thv-theme-surface-alt);
+}
+
+.cmm-men__mega article span {
+    color: var(--thv-theme-primary);
+    font-size: 0.7rem;
+    font-weight: 850;
+    text-transform: uppercase;
+}
+
+.cmm-men__mega article h3 {
+    margin: 0.5rem 0;
+}
+
+.cmm-men__account {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--thv-theme-border);
+}
+
+.cmm-men__account > span {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+    font-weight: 850;
+}
+
+.cmm-men__account strong, .cmm-men__account small {
+    display: block;
+}
+
+.cmm-men__account small {
+    color: var(--thv-theme-muted);
+}
+
+.cmm-men.is-collapsed {
+    width: 5rem;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.cmm-men.is-collapsed .cmm-men__links, .cmm-men.is-collapsed .cmm-men__account div, .cmm-men.is-collapsed .cmm-men__brand {
+    display: none;
+}
+
+@media (max-width: 760px) {
+    .cmm-men__mobile {
+        display: block;
+    }
+
+    .cmm-men:not(.is-collapsed) > .cmm-men__links {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: calc(100% + 0.5rem);
+        z-index: 10;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+        border: 1px solid var(--thv-theme-border);
+        border-radius: 0.8rem;
+        background: var(--thv-theme-surface);
+    }
+
+    .cmm-men.is-open > .cmm-men__links {
+        display: flex;
+    }
+
+    .cmm-men__mega {
+        grid-template-columns: 1fr;
+    }
+
+}

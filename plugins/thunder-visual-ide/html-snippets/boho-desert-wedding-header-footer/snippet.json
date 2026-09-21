@@ -1,0 +1,18 @@
+{
+  "id": "boho-desert-wedding-header-footer",
+  "name": "Boho Desert Wedding Header and Footer",
+  "description": "An earthy bohemian wedding shell with sculptural typography, sunset tones and a relaxed footer.",
+  "category": "Wedding",
+  "order": 4770,
+  "tags": [
+    "boho wedding",
+    "desert",
+    "header",
+    "footer",
+    "sunset"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "project-sticky-navigation",
+  "name": "Project Sticky Navigation",
+  "description": "A sticky project navigation with milestones, files and status.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Sticky Sidebars",
+  "order": 8068,
+  "tags": [
+    "sidebar",
+    "sticky",
+    "project",
+    "navigation"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

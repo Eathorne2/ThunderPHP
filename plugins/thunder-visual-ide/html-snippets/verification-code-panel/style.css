@@ -1,0 +1,78 @@
+.vcp-auth {
+    width: min(30rem, 100%);
+    padding: 1.7rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface, #fff);
+    color: var(--thv-theme-text, #0f172a);
+    font-family: system-ui, sans-serif;
+    text-align: center
+}
+
+.vcp-auth__icon {
+    display: grid;
+    place-items: center;
+    width: 3.4rem;
+    height: 3.4rem;
+    margin: auto;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 1.35rem
+}
+
+.vcp-auth h2 {
+    margin: .8rem 0 .3rem
+}
+
+.vcp-auth>p {
+    margin: 0;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .82rem
+}
+
+.vcp-auth form {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.2rem
+}
+
+.vcp-auth__code {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: .45rem
+}
+
+.vcp-auth__code input {
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 1;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: .55rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 900
+}
+
+.vcp-auth form>button {
+    padding: .72rem;
+    border: 0;
+    border-radius: .55rem;
+    background: var(--thv-theme-primary, #2563eb);
+    color: #fff;
+    font-weight: 850
+}
+
+.vcp-auth>small {
+    display: block;
+    margin-top: 1rem;
+    color: var(--thv-theme-muted, #64748b)
+}
+
+.vcp-auth>small button {
+    border: 0;
+    background: none;
+    color: var(--thv-theme-primary, #2563eb);
+    font-weight: 800;
+    cursor: pointer
+}

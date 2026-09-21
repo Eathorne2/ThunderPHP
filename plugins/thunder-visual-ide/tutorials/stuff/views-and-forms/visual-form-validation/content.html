@@ -1,0 +1,17 @@
+<h2>Build the form in the View</h2>
+<p>Add a Form component, then place Name and Email inputs inside it. Add a submit button and the CSRF component when your application uses session-based CSRF protection.</p>
+<h2>Choose a form theme</h2>
+<p>Select the View node in the main graph and open the Form Theme browser. The theme belongs to the View, so every built-in input uses the same design and palette.</p>
+<h2>Read and validate submitted data</h2>
+<ol>
+    <li>Open the Controller flow.</li>
+    <li>Read the visual form data.</li>
+    <li>Connect it to <strong>Validate Form Schema</strong>.</li>
+    <li>Use the rules manager for extra or replacement rules.</li>
+    <li>Send validation errors back to the View through <code>set_value('errors', ...)</code>.</li>
+</ol>
+<h2>Show errors beside inputs</h2>
+<p>Each input defaults to the path <code>errors.&lt;field-name&gt;</code>. Choose whether to show the first message or every message.</p>
+<pre><code>errors.email
+errors.name</code></pre>
+<div class="tvi-tutorial-callout"><strong>Reusable styling</strong><p>Inline error markup is inserted through the active form theme, so custom themes can control exactly where error messages appear.</p></div>

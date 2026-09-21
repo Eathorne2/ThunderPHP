@@ -1,0 +1,18 @@
+{
+  "id": "solo-artist-header-footer",
+  "name": "Solo Artist Header and Footer",
+  "description": "A personal artist shell with release links, tour navigation and an intimate editorial footer.",
+  "category": "Music & Entertainment",
+  "order": 4450,
+  "tags": [
+    "artist",
+    "musician",
+    "header",
+    "footer",
+    "tour"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

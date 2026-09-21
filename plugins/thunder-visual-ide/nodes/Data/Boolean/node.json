@@ -1,0 +1,45 @@
+{
+  "type": "data.boolean",
+  "label": "Boolean",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "T/F",
+  "color": "#1e40af",
+  "description": "Outputs the PHP true or false literal.",
+  "allowed_graphs": [
+    "flow",
+    "view"
+  ],
+  "defaults": {
+    "title": "Boolean",
+    "value": true
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "value",
+      "label": "Boolean value",
+      "type": "checkbox"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Boolean",
+        "type": "boolean",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\BooleanCompiler",
+    "file": "Compiler.php"
+  }
+}

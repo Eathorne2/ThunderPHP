@@ -1,0 +1,206 @@
+{
+  "slug": "arch-construction-company-hero",
+  "name": "Construction Company Hero",
+  "category": "Architecture & Building",
+  "description": "Large architecture/building hero with image and CTA",
+  "keywords": [
+    "construction",
+    "company",
+    "hero",
+    "hero"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-arch-construction-company-hero\"><div class=\"tb-arch-construction-company-hero__copy\">{{elements:kicker}}{{elements:title}}{{elements:text}}<div class=\"tb-arch-construction-company-hero__actions\">{{elements:cta}}</div></div><div class=\"tb-arch-construction-company-hero__media\">{{elements:image}}<span class=\"tb-arch-construction-company-hero__mark\">BUILD</span></div></section>",
+  "css": ".tb-arch-construction-company-hero{display:grid;grid-template-columns:1.02fr .98fr;min-height:560px;background:var(--tb-color-surface);overflow:hidden}.tb-arch-construction-company-hero__copy{padding:clamp(38px,7vw,88px);display:flex;flex-direction:column;justify-content:center}.tb-arch-construction-company-hero__kicker{font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--tb-color-primary)}.tb-arch-construction-company-hero__title{font-size:clamp(44px,7vw,82px);line-height:.96;margin:14px 0 20px;color:var(--tb-color-secondary);letter-spacing:-.05em}.tb-arch-construction-company-hero__text{font-size:18px;line-height:1.7;color:var(--tb-color-muted);max-width:650px}.tb-arch-construction-company-hero__cta{display:inline-block;margin-top:26px;padding:14px 22px;background:var(--tb-color-primary);color:var(--tb-color-surface);text-decoration:none;font-weight:900}.tb-arch-construction-company-hero__media{position:relative;min-height:560px}.tb-arch-construction-company-hero__image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.tb-arch-construction-company-hero__mark{position:absolute;right:20px;bottom:18px;font-size:clamp(52px,8vw,112px);font-weight:950;line-height:.8;letter-spacing:-.08em;color:var(--tb-color-surface);opacity:.78}@media(max-width:800px){.tb-arch-construction-company-hero{grid-template-columns:1fr}.tb-arch-construction-company-hero__media{min-height:380px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "kicker",
+      "label": "Kicker",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Built to last"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-arch-construction-company-hero__kicker\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "title",
+      "label": "Headline",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "From groundwork to handover"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-arch-construction-company-hero__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "A confident contractor hero for construction companies delivering complex projects safely and on schedule."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-arch-construction-company-hero__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "cta",
+      "label": "Action",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Start a project",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-arch-construction-company-hero__cta\" href=\"{{url}}\">{{text}}</a>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "image",
+      "label": "Hero image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Construction Company Hero"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-arch-construction-company-hero__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-arch-construction-company-hero__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "appearance": {
+        "color": false,
+        "background_color": false,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

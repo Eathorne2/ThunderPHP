@@ -1,0 +1,167 @@
+{
+  "slug": "sports-tournament-registration",
+  "name": "Tournament Registration CTA",
+  "category": "Sports",
+  "description": "Bold event registration callout",
+  "keywords": [
+    "tournament",
+    "event",
+    "registration",
+    "cta"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-sport-tournament-registration\"><div class=\"tb-sport-tournament-registration__copy\">{{elements:kicker}}{{elements:heading}}{{elements:text}}</div><div class=\"tb-sport-tournament-registration__action\">{{elements:cta}}</div></section>",
+  "css": ".tb-sport-tournament-registration{padding:clamp(42px,7vw,82px);display:flex;justify-content:space-between;align-items:center;gap:30px;background:var(--tb-color-primary);color:var(--tb-color-surface)}.tb-sport-tournament-registration__copy{max-width:760px}.tb-sport-tournament-registration__kicker{font-size:12px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.tb-sport-tournament-registration__heading{font-size:clamp(38px,6vw,68px);line-height:1;margin:10px 0 16px}.tb-sport-tournament-registration__text{font-size:18px;line-height:1.6;margin:0}.tb-sport-tournament-registration__cta{display:inline-block;padding:15px 22px;background:var(--tb-color-surface);color:var(--tb-color-secondary);text-decoration:none;border-radius:999px;font-weight:950;white-space:nowrap}@media(max-width:720px){.tb-sport-tournament-registration{align-items:flex-start;flex-direction:column}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "kicker",
+      "label": "Kicker",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Registration open"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-sport-tournament-registration__kicker\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "heading",
+      "label": "Heading",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Ready for competition day?"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-sport-tournament-registration__heading\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Invite athletes, teams or community members to register for the next tournament, race or sports event."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-sport-tournament-registration__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "cta",
+      "label": "Action",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Register now",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-sport-tournament-registration__cta\" href=\"{{url}}\">{{text}}</a>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

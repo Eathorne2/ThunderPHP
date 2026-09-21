@@ -1,0 +1,20 @@
+{
+  "id": "project-brief-form",
+  "name": "Project Brief Form",
+  "description": "A structured project enquiry form for scope, budget and delivery timing.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Contact Forms",
+  "order": 8015,
+  "tags": [
+    "contact",
+    "form",
+    "project",
+    "brief"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

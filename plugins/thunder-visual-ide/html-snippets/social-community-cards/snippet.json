@@ -1,0 +1,20 @@
+{
+  "id": "social-community-cards",
+  "name": "Social Community Cards",
+  "description": "A group of social community cards with audience statistics and actions.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Socials",
+  "order": 8066,
+  "tags": [
+    "social",
+    "community",
+    "cards",
+    "followers"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,23 @@
+{
+  "type": "authorization.has_role",
+  "label": "Has Role",
+  "category": "Authorization",
+  "kind": "expression",
+  "icon": "ROLE?",
+  "color": "#7e22ce",
+  "description": "Returns a boolean from ThunderPHP contains_role().",
+  "allowed_graphs": ["flow"],
+  "defaults": {"title": "Has Role", "role": ""},
+  "properties": [
+    {"name": "title", "label": "Node title", "type": "text"},
+    {"name": "role", "label": "Role", "type": "role_ref", "help": "Values come from the All Roles node. Manual values are also accepted."}
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [{"id": "value", "label": "Has role?", "type": "boolean", "direction": "out", "multiple": true}]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Authorization\\HasRoleCompiler",
+    "file": "Compiler.php"
+  }
+}

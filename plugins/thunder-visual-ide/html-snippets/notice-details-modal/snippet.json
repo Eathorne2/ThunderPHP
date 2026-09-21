@@ -1,0 +1,20 @@
+{
+  "id": "notice-details-modal",
+  "name": "Notice Details Modal",
+  "description": "An informational modal with a compact detail list and acknowledge action.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Alerts - Modal",
+  "order": 2020,
+  "tags": [
+    "alert",
+    "modal",
+    "notice",
+    "details"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

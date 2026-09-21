@@ -1,0 +1,17 @@
+{
+  "id": "mini-kanban-board",
+  "name": "Mini Kanban Board",
+  "description": "A compact three-column work board with draggable task cards and live item counts.",
+  "category": "Dashboard",
+  "order": 560,
+  "tags": [
+    "kanban",
+    "tasks",
+    "dashboard",
+    "drag"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

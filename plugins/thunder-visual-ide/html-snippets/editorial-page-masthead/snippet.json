@@ -1,0 +1,20 @@
+{
+  "id": "editorial-page-masthead",
+  "name": "Editorial Page Masthead",
+  "description": "A magazine-inspired page masthead with issue label and summary.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Page Title Headings",
+  "order": 8049,
+  "tags": [
+    "heading",
+    "page title",
+    "editorial",
+    "masthead"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

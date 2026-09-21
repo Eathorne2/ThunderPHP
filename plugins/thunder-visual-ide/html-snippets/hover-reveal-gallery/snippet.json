@@ -1,0 +1,20 @@
+{
+  "id": "hover-reveal-gallery",
+  "name": "Hover Reveal Gallery",
+  "description": "A bold image grid whose project titles and actions reveal on hover or keyboard focus.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9015,
+  "tags": [
+    "gallery",
+    "hover",
+    "projects",
+    "modern"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,64 @@
+<section class="atb">
+    <header>
+        <p>Arrive with ease</p>
+        <h2>Private airport transfer</h2>
+        <span>Your driver will track the flight, meet you in arrivals and take you directly to the hotel.</span>
+    </header>
+    <form>
+        <div class="atb__fields">
+            <label>
+                <span>Airport</span>
+                <select>
+                    <option>International Airport</option>
+                    <option>Domestic Terminal</option>
+                </select>
+            </label>
+            <label>
+                <span>Flight number</span>
+                <input placeholder="e.g. KQ 706" type="text">
+            </label>
+            <label>
+                <span>Arrival date</span>
+                <input type="date">
+            </label>
+            <label>
+                <span>Arrival time</span>
+                <input type="time">
+            </label>
+        </div>
+        <fieldset>
+            <legend>Choose a vehicle</legend>
+            <label>
+                <input checked name="vehicle" type="radio" value="55">
+                <span>
+                    <strong>Comfort sedan</strong>
+                    <small>Up to 3 guests · 2 bags</small>
+                </span>
+                <b>$55</b>
+            </label>
+            <label>
+                <input name="vehicle" type="radio" value="85">
+                <span>
+                    <strong>Premium SUV</strong>
+                    <small>Up to 5 guests · 4 bags</small>
+                </span>
+                <b>$85</b>
+            </label>
+            <label>
+                <input name="vehicle" type="radio" value="120">
+                <span>
+                    <strong>Family van</strong>
+                    <small>Up to 8 guests · 8 bags</small>
+                </span>
+                <b>$120</b>
+            </label>
+        </fieldset>
+        <footer>
+            <div>
+                <span>Estimated total</span>
+                <strong data-transfer-total>$55</strong>
+            </div>
+            <button type="submit">Request transfer</button>
+        </footer>
+    </form>
+</section>

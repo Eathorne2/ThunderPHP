@@ -1,0 +1,18 @@
+{
+  "id": "studio-cut-barber-header-footer",
+  "name": "Studio Cut Barber Header and Footer",
+  "description": "A coordinated responsive header and footer set for STUDIO CUT.",
+  "category": "Fashion & Beauty",
+  "order": 4180,
+  "tags": [
+    "header footer",
+    "fashion",
+    "beauty",
+    "responsive",
+    "studio cut"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

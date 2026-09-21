@@ -1,0 +1,20 @@
+{
+  "id": "segmented-product-tabs",
+  "name": "Segmented Product Tabs",
+  "description": "A segmented tab interface for product information and reviews.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Navigation - Tabs",
+  "order": 8047,
+  "tags": [
+    "tabs",
+    "product",
+    "segmented",
+    "navigation"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "seafood-daily-specials",
+  "name": "Seafood Daily Specials",
+  "description": "A coastal daily-specials board with a featured catch, market list and freshness details.",
+  "category": "Food & Restaurant",
+  "order": 3760,
+  "tags": [
+    "seafood",
+    "daily specials",
+    "menu",
+    "restaurant",
+    "coastal"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,88 @@
+{
+    "name": "Horizontal Navigation",
+    "version": "1.0.1",
+    "plugin": "thunder-admin",
+    "plugin_requires": "^1.2.1",
+    "author": "Eathorne Choongo",
+    "thumbnail": "screenshot.png",
+    "description": "A wide administration layout with application branding, a sticky horizontal menu, hover dropdown submenus and a mobile navigation drawer.",
+    "default_palette": "skyline-blue",
+    "palettes": {
+        "skyline-blue": {
+            "name": "Skyline Blue",
+            "description": "A bright blue navigation bar with clean neutral surfaces.",
+            "colors": {
+                "primary": "#2563eb",
+                "primary_dark": "#1d4ed8",
+                "primary_soft": "#dbeafe",
+                "sidebar_bg": "#102a56",
+                "sidebar_text": "#c8d8ee",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f3f6fb",
+                "surface": "#ffffff",
+                "border": "#dfe6ef",
+                "text": "#182235",
+                "muted": "#667085",
+                "success": "#16845b",
+                "danger": "#dc2626"
+            }
+        },
+        "midnight-teal": {
+            "name": "Midnight Teal",
+            "description": "A deep teal header with calm green highlights.",
+            "colors": {
+                "primary": "#0f8a83",
+                "primary_dark": "#0b6b66",
+                "primary_soft": "#d8f3f0",
+                "sidebar_bg": "#103a3a",
+                "sidebar_text": "#c1dcda",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f2f7f6",
+                "surface": "#ffffff",
+                "border": "#dce8e6",
+                "text": "#193331",
+                "muted": "#627a77",
+                "success": "#11845d",
+                "danger": "#cf3f49"
+            }
+        },
+        "rosewood": {
+            "name": "Rosewood",
+            "description": "A warm burgundy header suited to editorial dashboards.",
+            "colors": {
+                "primary": "#b4235a",
+                "primary_dark": "#8f1945",
+                "primary_soft": "#fce2ec",
+                "sidebar_bg": "#4a1730",
+                "sidebar_text": "#e9c6d4",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#faf5f7",
+                "surface": "#ffffff",
+                "border": "#eadde3",
+                "text": "#38212b",
+                "muted": "#7b6670",
+                "success": "#16845b",
+                "danger": "#c92f42"
+            }
+        },
+        "sandstone": {
+            "name": "Sandstone",
+            "description": "A warm brown and amber palette with soft ivory surfaces.",
+            "colors": {
+                "primary": "#b76e21",
+                "primary_dark": "#8f5115",
+                "primary_soft": "#f8ead7",
+                "sidebar_bg": "#423429",
+                "sidebar_text": "#ded2c7",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f8f6f2",
+                "surface": "#ffffff",
+                "border": "#e6e0d7",
+                "text": "#332b25",
+                "muted": "#756b63",
+                "success": "#2b7d57",
+                "danger": "#c8443d"
+            }
+        }
+    }
+}

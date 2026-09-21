@@ -1,0 +1,195 @@
+{
+  "slug": "wed-theme-palette",
+  "name": "Wedding Theme Palette",
+  "category": "Wedding",
+  "description": "Wedding mood board with editable named color swatches and styling notes",
+  "keywords": [
+    "wedding",
+    "theme",
+    "colors",
+    "moodboard"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-wed-theme-palette\"><div class=\"tb-wed-theme-palette__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-wed-theme-palette__swatches\">{{elements:colors}}</div></div>",
+  "css": ".tb-wed-theme-palette{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;padding:clamp(34px,6vw,78px);background:var(--tb-color-background)}.tb-wed-theme-palette__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-wed-theme-palette__title{margin:8px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(40px,5vw,62px);font-weight:400}.tb-wed-theme-palette__text{color:var(--tb-color-muted);line-height:1.7}.tb-wed-theme-palette__swatches{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.tb-wed-theme-palette__swatch{min-height:180px;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;background:var(--tb-wed-swatch);border:1px solid rgba(0,0,0,.08)}.tb-wed-theme-palette__name{font-family:Georgia,serif;font-size:26px;color:#222}.tb-wed-theme-palette__note{font-size:12px;font-weight:800;color:#333;opacity:.68}@media(max-width:700px){.tb-wed-theme-palette{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Wedding style"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-wed-theme-palette__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A palette with feeling"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-wed-theme-palette__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Intro",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Use a simple collection of colors to keep flowers, stationery, fashion and reception details visually connected."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-wed-theme-palette__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "colors",
+      "label": "Color swatch",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "name": "Ivory",
+        "note": "Ceremony base",
+        "swatch": "#F4EFE6"
+      },
+      "schema": [
+        {
+          "key": "name",
+          "label": "Name",
+          "type": "text",
+          "selector": ".tb-wed-theme-palette__name"
+        },
+        {
+          "key": "note",
+          "label": "Note",
+          "type": "text",
+          "selector": ".tb-wed-theme-palette__note"
+        },
+        {
+          "key": "swatch",
+          "label": "Swatch",
+          "type": "color"
+        }
+      ],
+      "template": "<div class=\"tb-wed-theme-palette__swatch\" style=\"--tb-wed-swatch:{{swatch}}\"><span class=\"tb-wed-theme-palette__name\">{{name}}</span><span class=\"tb-wed-theme-palette__note\">{{note}}</span></div>",
+      "min": 1,
+      "max": 8,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "name": "Ivory",
+          "note": "Ceremony base",
+          "swatch": "#F4EFE6"
+        },
+        {
+          "name": "Sage",
+          "note": "Botanical accent",
+          "swatch": "#87937C"
+        },
+        {
+          "name": "Rose",
+          "note": "Soft floral note",
+          "swatch": "#C9959A"
+        },
+        {
+          "name": "Ink",
+          "note": "Type & evening detail",
+          "swatch": "#2E2B29"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

@@ -1,0 +1,8 @@
+{{scope}}{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--thv-theme-text)}
+{{scope}}.thv-form,{{scope}} .thv-form{padding:1.4rem;border-radius:1.25rem;background:var(--thv-theme-surface);box-shadow:0 18px 50px rgba(15,23,42,.1)}
+{{scope}} .thv-theme-soft-control,{{scope}}.thv-field .thv-theme-soft-control{display:grid;gap:.45rem;padding:.75rem .85rem;border:1px solid var(--thv-theme-border);border-radius:.9rem;background:var(--thv-theme-surface-alt);transition:.18s}
+{{scope}} .thv-theme-soft-control:focus-within,{{scope}}.thv-field .thv-theme-soft-control:focus-within{border-color:var(--thv-theme-primary);box-shadow:0 0 0 3px color-mix(in srgb,var(--thv-theme-primary) 15%,transparent)}
+{{scope}} .thv-theme-soft-control label,{{scope}}.thv-field .thv-theme-soft-control label{font-size:.78rem;color:var(--thv-theme-muted)}
+{{scope}} .thv-theme-soft-control :where(input,textarea,select),{{scope}}.thv-field .thv-theme-soft-control :where(input,textarea,select){padding:0;border:0;background:transparent;color:var(--thv-theme-text);box-shadow:none;outline:none}
+{{scope}} .thv-theme-soft-check,{{scope}}.thv-field .thv-theme-soft-check{display:flex;gap:.65rem;align-items:flex-start;padding:.8rem;border-radius:.8rem;background:var(--thv-theme-surface-alt)}
+{{scope}} .thv-button--primary,{{scope}}.thv-button--primary{background:var(--thv-theme-primary);color:#fff;border:0;border-radius:.9rem;box-shadow:0 8px 20px color-mix(in srgb,var(--thv-theme-primary) 26%,transparent)}

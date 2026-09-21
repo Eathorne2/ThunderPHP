@@ -1,0 +1,100 @@
+{
+  "slug": "image-caption",
+  "name": "Image with Caption",
+  "category": "Media",
+  "description": "A wide image with an optional caption and credit.",
+  "version": "1.0.0",
+  "html": "<figure class=\"tb-block tb-block--image-caption\">\n  {{elements:image}}\n  {{elements:caption}}\n</figure>",
+  "css": ".tb-block--image-caption{margin:0}.tb-image-caption__frame{overflow:hidden;border-radius:18px;background:var(--tb-color-background)}.tb-image-caption__image{width:100%;max-height:620px;display:block;object-fit:cover}.tb-image-caption__caption{padding:11px 4px 0;display:flex;justify-content:space-between;gap:18px;color:var(--tb-color-muted);font-size:12px;line-height:1.5}.tb-image-caption__credit{font-weight:800;white-space:nowrap}@media(max-width:560px){.tb-image-caption__caption{flex-direction:column;gap:3px}.tb-image-caption__credit{white-space:normal}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "image",
+      "label": "Image",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80",
+        "alt": "Modern office corridor with glass walls"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-image-caption__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<div class=\"tb-image-caption__frame\"><img class=\"tb-image-caption__image\" src=\"{{url}}\" alt=\"{{alt}}\"></div>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "caption",
+      "label": "Caption",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A strong contextual image can establish place and mood before the next section.",
+        "credit": "Photo via Unsplash"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Caption",
+          "type": "textarea",
+          "selector": ".tb-image-caption__caption-text",
+          "rows": 3
+        },
+        {
+          "key": "credit",
+          "label": "Credit",
+          "type": "text",
+          "selector": ".tb-image-caption__credit"
+        }
+      ],
+      "template": "<figcaption class=\"tb-image-caption__caption\"><span class=\"tb-image-caption__caption-text\">{{text}}</span><span class=\"tb-image-caption__credit\">{{credit}}</span></figcaption>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

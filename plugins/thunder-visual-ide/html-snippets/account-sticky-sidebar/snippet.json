@@ -1,0 +1,17 @@
+{
+  "id": "account-sticky-sidebar",
+  "name": "Account Sticky Sidebar",
+  "description": "An account settings layout with a sticky identity card and navigation beside editable content.",
+  "category": "Sticky Sidebars",
+  "order": 3160,
+  "tags": [
+    "sticky",
+    "sidebar",
+    "account",
+    "settings"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,87 @@
+{
+  "format": "thunder-visual-ide-form-theme",
+  "format_version": 1,
+  "id": "my-form-theme",
+  "name": "My Form Theme",
+  "description": "A distributable custom form theme package.",
+  "version": "1.0.0",
+  "author": "Your Name",
+  "website": "https://example.com",
+  "license": "Commercial",
+  "category": "Forms",
+  "tags": [
+    "clean",
+    "responsive"
+  ],
+  "order": 100,
+  "palettes": {
+    "default": {
+      "name": "Default",
+      "colors": {
+        "primary": "#2563eb",
+        "secondary": "#64748b",
+        "surface": "#ffffff",
+        "surface_alt": "#f8fafc",
+        "text": "#0f172a",
+        "muted": "#64748b",
+        "border": "#cbd5e1",
+        "danger": "#b91c1c",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    },
+    "ocean": {
+      "name": "Ocean",
+      "colors": {
+        "primary": "#0891b2",
+        "secondary": "#0e7490",
+        "surface": "#f8fdff",
+        "surface_alt": "#ecfeff",
+        "text": "#164e63",
+        "muted": "#64748b",
+        "border": "#a5f3fc",
+        "danger": "#be123c",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    },
+    "forest": {
+      "name": "Forest",
+      "colors": {
+        "primary": "#15803d",
+        "secondary": "#166534",
+        "surface": "#fbfffc",
+        "surface_alt": "#f0fdf4",
+        "text": "#14532d",
+        "muted": "#64748b",
+        "border": "#bbf7d0",
+        "danger": "#b91c1c",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    }
+  },
+  "default_palette": "default",
+  "preview": "preview.html",
+  "css": "style.css",
+  "js": "script.js",
+  "components": {
+    "text_input": "field.html.tpl",
+    "email_input": "field.html.tpl",
+    "password_input": "field.html.tpl",
+    "number_input": "field.html.tpl",
+    "date_input": "field.html.tpl",
+    "file_input": "field.html.tpl",
+    "textarea": "textarea.html.tpl",
+    "select": "select.html.tpl",
+    "checkbox": "checkbox.html.tpl",
+    "button": "button.html.tpl",
+    "form": "form.html.tpl"
+  }
+}

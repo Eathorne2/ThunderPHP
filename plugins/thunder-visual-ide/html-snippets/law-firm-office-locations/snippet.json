@@ -1,0 +1,17 @@
+{
+  "id": "law-firm-office-locations",
+  "name": "Law Firm Office Locations",
+  "description": "A global office selector with contact details and consultation actions.",
+  "category": "Business & Law",
+  "order": 5340,
+  "tags": [
+    "law",
+    "offices",
+    "contact",
+    "locations"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,67 @@
+{
+  "type": "javascript.code",
+  "label": "JavaScript Code",
+  "category": "JavaScript Flow",
+  "kind": "flow",
+  "icon": "JS",
+  "color": "#7c3aed",
+  "description": "Runs custom JavaScript inside the current JS Flow scope.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "dynamic_ports": "js_code_inputs",
+  "defaults": {
+    "title": "JavaScript Code",
+    "input_count": 0,
+    "input_names": "",
+    "code": "// Custom JavaScript"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "input_count",
+      "label": "Value input count",
+      "type": "number"
+    },
+    {
+      "name": "input_names",
+      "label": "Local variable names",
+      "type": "text",
+      "help": "Comma-separated names matched to Value inputs."
+    },
+    {
+      "name": "code",
+      "label": "JavaScript",
+      "type": "code",
+      "help": "Do not add script tags."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "js-exec",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "js-exec",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\CodeCompiler",
+    "file": "Compiler.php"
+  }
+}

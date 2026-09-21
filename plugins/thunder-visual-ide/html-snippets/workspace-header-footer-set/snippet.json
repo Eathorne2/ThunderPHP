@@ -1,0 +1,17 @@
+{
+  "id": "workspace-header-footer-set",
+  "name": "Workspace Header and Footer Set",
+  "description": "A compact application-style header and utility footer with matching visual language.",
+  "category": "Header and Footer Sets",
+  "order": 3020,
+  "tags": [
+    "header",
+    "footer",
+    "dashboard",
+    "workspace"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

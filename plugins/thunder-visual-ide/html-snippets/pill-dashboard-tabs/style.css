@@ -1,0 +1,54 @@
+.pdt-tabs {
+    display: grid;
+    gap: .8rem;
+    font-family: system-ui, sans-serif
+}
+
+.pdt-tabs__list {
+    display: flex;
+    gap: .4rem;
+    overflow: auto;
+    padding: .3rem;
+    border-radius: .7rem;
+    background: var(--thv-theme-surface-alt, #f1f5f9)
+}
+
+.pdt-tabs__list button {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    white-space: nowrap;
+    padding: .48rem .65rem;
+    border: 0;
+    border-radius: .5rem;
+    background: transparent;
+    color: var(--thv-theme-muted, #64748b);
+    font-weight: 800;
+    cursor: pointer
+}
+
+.pdt-tabs__list button span {
+    padding: .12rem .34rem;
+    border-radius: 999px;
+    background: rgba(100, 116, 139, .14);
+    font-size: .65rem
+}
+
+.pdt-tabs__list button.is-active {
+    background: var(--thv-theme-surface, #fff);
+    color: var(--thv-theme-text, #0f172a);
+    box-shadow: 0 2px 7px rgba(15, 23, 42, .08)
+}
+
+.pdt-tabs__panel {
+    padding: 1rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: .75rem;
+    background: var(--thv-theme-surface, #fff)
+}
+
+.pdt-tabs__panel p {
+    margin: .25rem 0 0;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .8rem
+}

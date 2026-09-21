@@ -1,0 +1,111 @@
+.thfaq {
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-background);
+}
+
+.thfaq *, .thfaq *::before, .thfaq *::after {
+    box-sizing: border-box;
+}
+
+.thfaq a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.thfaq button, .thfaq input, .thfaq select, .thfaq textarea {
+    font: inherit;
+}
+
+.thfaq {
+    display: grid;
+    grid-template-columns: minmax(17rem, .7fr) minmax(0, 1.3fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    padding: clamp(2rem, 6vw, 5rem);
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.6rem;
+    background: var(--thv-theme-background);
+}
+
+.thfaq__intro p {
+    margin: 0;
+    color: var(--thv-theme-primary);
+    font-size: .68rem;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.thfaq h2 {
+    margin: .8rem 0 1rem;
+    font-family: Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 4.6rem);
+    font-weight: 400;
+    letter-spacing: -.05em;
+    line-height: 1;
+}
+
+.thfaq__intro span {
+    color: var(--thv-theme-muted);
+    line-height: 1.7;
+}
+
+.thfaq__intro a {
+    display: inline-flex;
+    margin-top: 1.4rem;
+    padding-bottom: .25rem;
+    border-bottom: 1px solid var(--thv-theme-primary);
+    color: var(--thv-theme-primary);
+    font-weight: 900;
+}
+
+.thfaq__list {
+    border-top: 1px solid var(--thv-theme-border);
+}
+
+.thfaq article {
+    border-bottom: 1px solid var(--thv-theme-border);
+}
+
+.thfaq article button {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.2rem 0;
+    border: 0;
+    color: var(--thv-theme-text);
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+}
+
+.thfaq article button strong {
+    font-family: Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.thfaq article button i {
+    color: var(--thv-theme-primary);
+    font-size: 1.35rem;
+    font-style: normal;
+}
+
+.thfaq article p {
+    margin: 0;
+    padding: 0 2rem 1.2rem 0;
+    color: var(--thv-theme-muted);
+    line-height: 1.65;
+}
+
+.thfaq article.is-open {
+    background: color-mix(in srgb, var(--thv-theme-secondary) 8%, transparent);
+}
+
+@media (max-width: 720px) {
+    .thfaq {
+        grid-template-columns: 1fr;
+    }
+
+}

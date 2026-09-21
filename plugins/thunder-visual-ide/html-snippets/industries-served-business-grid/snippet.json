@@ -1,0 +1,17 @@
+{
+  "id": "industries-served-business-grid",
+  "name": "Industries Served Business Grid",
+  "description": "An industry expertise grid for law, consulting and advisory websites.",
+  "category": "Business & Law",
+  "order": 5220,
+  "tags": [
+    "business",
+    "industries",
+    "consulting",
+    "grid"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

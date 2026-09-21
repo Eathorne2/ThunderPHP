@@ -1,0 +1,18 @@
+{
+  "id": "executive-insights-article-cards",
+  "name": "Executive Insights Article Cards",
+  "description": "A professional editorial card collection for business perspectives, research and leadership commentary.",
+  "category": "Blog Post Cards",
+  "order": 3590,
+  "tags": [
+    "articles",
+    "insights",
+    "corporate",
+    "research",
+    "cards"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

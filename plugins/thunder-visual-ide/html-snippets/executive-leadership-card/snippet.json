@@ -1,0 +1,18 @@
+{
+  "id": "executive-leadership-card",
+  "name": "Executive Leadership Card",
+  "description": "A polished executive profile card with portrait, leadership remit, credentials and contact action.",
+  "category": "User Cards",
+  "order": 3480,
+  "tags": [
+    "executive",
+    "leadership",
+    "profile",
+    "corporate",
+    "team"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

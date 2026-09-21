@@ -1,0 +1,190 @@
+{
+  "slug": "edu-creative-crafts",
+  "name": "Creative Learning Activities",
+  "category": "Education",
+  "description": "Playful creative-learning image cards for children and workshops",
+  "keywords": [
+    "education",
+    "creative",
+    "kids",
+    "activities"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-edu-crafts\"><div class=\"tb-edu-crafts__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-edu-crafts__grid\">{{elements:items}}</div></div>",
+  "css": ".tb-edu-crafts{padding:clamp(34px,6vw,78px);background:var(--tb-color-surface)}.tb-edu-crafts__head{max-width:760px;margin-bottom:28px}.tb-edu-crafts__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.15em}.tb-edu-crafts__title{margin:8px 0;color:var(--tb-color-secondary);font-size:clamp(40px,5vw,60px)}.tb-edu-crafts__text{color:var(--tb-color-muted);line-height:1.7}.tb-edu-crafts__grid{display:grid;grid-template-columns:1.2fr .9fr .9fr;gap:12px}.tb-edu-crafts__item{position:relative;min-height:390px;overflow:hidden;border-radius:24px}.tb-edu-crafts__image{width:100%;height:100%;min-height:390px;object-fit:cover}.tb-edu-crafts__title-card{position:absolute;left:16px;bottom:16px;margin:0;padding:10px 13px;border-radius:999px;background:var(--tb-color-surface);color:var(--tb-color-text);font-size:16px}@media(max-width:760px){.tb-edu-crafts__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Creative classroom"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-edu-crafts__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Make, imagine, experiment"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-edu-crafts__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A lively gallery for crafts, art classes, camps and hands-on learning."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-edu-crafts__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "items",
+      "label": "Activity",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "image": "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Children learning",
+        "title": "Make with color"
+      },
+      "schema": [
+        {
+          "key": "image",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-edu-crafts__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-edu-crafts__title-card"
+        }
+      ],
+      "template": "<article class=\"tb-edu-crafts__item\"><img class=\"tb-edu-crafts__image\" src=\"{{image}}\" alt=\"{{alt}}\"><h3 class=\"tb-edu-crafts__title-card\">{{title}}</h3></article>",
+      "min": 1,
+      "max": 8,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "image": "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Children learning",
+          "title": "Make with color"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Writing activity",
+          "title": "Tell a story"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Class activity",
+          "title": "Build together"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

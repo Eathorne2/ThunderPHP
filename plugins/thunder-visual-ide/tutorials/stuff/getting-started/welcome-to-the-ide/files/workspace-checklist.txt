@@ -1,0 +1,9 @@
+THUNDER VISUAL IDE — FIRST SESSION CHECKLIST
+
+1. Open a bundled sample.
+2. Inspect the main architecture graph.
+3. Double-click a Controller or View to open its nested graph.
+4. Validate the project.
+5. Preview generated code.
+6. Save the project under a new name.
+7. Export a project package ZIP when assets or libraries are involved.

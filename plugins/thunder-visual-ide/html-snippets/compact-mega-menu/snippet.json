@@ -1,0 +1,17 @@
+{
+  "id": "compact-mega-menu",
+  "name": "Compact Mega Menu",
+  "description": "A desktop mega menu with grouped links, feature panel and mobile-friendly disclosure.",
+  "category": "Menus",
+  "order": 1130,
+  "tags": [
+    "menu",
+    "mega menu",
+    "navigation",
+    "dropdown"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

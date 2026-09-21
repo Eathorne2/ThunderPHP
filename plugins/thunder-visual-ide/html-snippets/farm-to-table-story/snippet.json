@@ -1,0 +1,18 @@
+{
+  "id": "farm-to-table-story",
+  "name": "Farm to Table Story",
+  "description": "A layered origin-story section showing growers, seasonal sourcing and the journey from farm to plate.",
+  "category": "Food & Restaurant",
+  "order": 3660,
+  "tags": [
+    "farm to table",
+    "story",
+    "organic",
+    "restaurant",
+    "sourcing"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

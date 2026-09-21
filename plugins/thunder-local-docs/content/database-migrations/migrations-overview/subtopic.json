@@ -1,0 +1,14 @@
+{
+    "id": 11,
+    "title": "Migrations Overview",
+    "slug": "migrations-overview",
+    "description": "Learn how to save database table structures as migration files for repeated use and quick setup",
+    "type": "reference",
+    "featured": false,
+    "published": true,
+    "order": 1,
+    "meta_title": "",
+    "meta_description": "",
+    "image": "",
+    "video_url": ""
+}

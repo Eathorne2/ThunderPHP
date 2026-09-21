@@ -1,0 +1,18 @@
+{
+  "id": "grain-house-bakery-header-footer",
+  "name": "Grain House Bakery Header and Footer",
+  "description": "A warm bakery header with a daily-bake menu and a matching newsletter-led footer.",
+  "category": "Food & Restaurant",
+  "order": 3810,
+  "tags": [
+    "header footer",
+    "bakery",
+    "bread",
+    "menu",
+    "artisan"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

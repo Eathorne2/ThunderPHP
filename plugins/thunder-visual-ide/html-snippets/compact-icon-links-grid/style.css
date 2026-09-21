@@ -1,0 +1,63 @@
+.compact-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+    max-width: 64rem;
+    color: var(--thv-theme-text, #172033);
+}
+
+.compact-icon-grid a {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.9rem;
+    border: 1px solid var(--thv-theme-border, #dce3ec);
+    border-radius: 0.85rem;
+    color: inherit;
+    background: var(--thv-theme-surface, #ffffff);
+    text-decoration: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.compact-icon-grid a:hover {
+    border-color: var(--thv-theme-primary, #4f46e5);
+    background: color-mix(in srgb, var(--thv-theme-primary, #4f46e5) 4%, var(--thv-theme-surface, #ffffff));
+}
+
+.compact-icon-grid a > span {
+    display: grid;
+    width: 2.6rem;
+    height: 2.6rem;
+    place-items: center;
+    border-radius: 0.75rem;
+    color: var(--thv-theme-primary, #4f46e5);
+    background: color-mix(in srgb, var(--thv-theme-primary, #4f46e5) 9%, transparent);
+    font-size: 0.7rem;
+    font-weight: 900;
+}
+
+.compact-icon-grid strong,
+.compact-icon-grid small {
+    display: block;
+}
+
+.compact-icon-grid small {
+    margin-top: 0.2rem;
+    color: var(--thv-theme-muted, #667085);
+}
+
+.compact-icon-grid b {
+    color: var(--thv-theme-muted, #667085);
+    font-size: 1.1rem;
+}
+
+.compact-icon-grid a:hover b {
+    color: var(--thv-theme-primary, #4f46e5);
+}
+
+@media (max-width: 640px) {
+    .compact-icon-grid {
+        grid-template-columns: 1fr;
+    }
+}

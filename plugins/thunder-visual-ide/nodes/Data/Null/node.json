@@ -1,0 +1,14 @@
+{
+  "type": "data.null",
+  "label": "Null",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "∅",
+  "color": "#1e3a8a",
+  "description": "Outputs the PHP null literal.",
+  "allowed_graphs": ["flow"],
+  "defaults": {"title": "Null"},
+  "properties": [{"name":"title","label":"Node title","type":"text"}],
+  "ports": {"inputs": [], "outputs": [{"id":"value","label":"Null","type":"mixed","direction":"out"}]},
+  "compiler": {"class":"ThunderVisualIde\\Nodes\\Data\\NullCompiler","file":"Compiler.php"}
+}

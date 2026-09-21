@@ -1,0 +1,18 @@
+{
+  "id": "wedding-party-profiles",
+  "name": "Wedding Party Profiles",
+  "description": "A polished portrait grid for introducing bridesmaids, groomsmen and key members of the wedding party.",
+  "category": "Wedding",
+  "order": 4570,
+  "tags": [
+    "wedding",
+    "wedding party",
+    "profiles",
+    "bridesmaids",
+    "groomsmen"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

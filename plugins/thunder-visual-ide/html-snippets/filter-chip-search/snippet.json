@@ -1,0 +1,20 @@
+{
+  "id": "filter-chip-search",
+  "name": "Filter Chip Search",
+  "description": "A search field with removable active-filter chips.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Search Bars",
+  "order": 2410,
+  "tags": [
+    "search",
+    "filters",
+    "chips",
+    "facets"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

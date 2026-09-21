@@ -1,0 +1,20 @@
+{
+  "id": "product-showcase-gallery",
+  "name": "Product Showcase Gallery",
+  "description": "A filtered product gallery with categories and a focused preview panel.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Galleries",
+  "order": 8030,
+  "tags": [
+    "gallery",
+    "products",
+    "filter",
+    "showcase"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

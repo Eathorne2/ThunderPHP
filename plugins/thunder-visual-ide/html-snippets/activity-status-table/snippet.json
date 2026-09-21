@@ -1,0 +1,17 @@
+{
+  "id": "activity-status-table",
+  "name": "Activity Status Table",
+  "description": "A compact operations table with selectable rows, avatars and contextual action buttons.",
+  "category": "Tables",
+  "order": 110,
+  "tags": [
+    "table",
+    "admin",
+    "activity",
+    "status"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

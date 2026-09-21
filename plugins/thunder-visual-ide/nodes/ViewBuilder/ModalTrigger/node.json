@@ -1,0 +1,87 @@
+{
+  "type": "view.modal_trigger",
+  "label": "Modal Trigger",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "OPEN",
+  "color": "#8b5cf6",
+  "description": "Turns the first element in a small HTML fragment into an open, close or toggle control for a Modal.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Modal Trigger",
+    "component_name": "",
+    "modal_node_id": "",
+    "action": "open",
+    "html": "<button type=\"button\">Open modal</button>",
+    "widths": {
+      "mobile": 12,
+      "small": 12,
+      "medium": 12,
+      "large": 12
+    }
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "component_name",
+      "label": "Component name",
+      "type": "text",
+      "help": "Use this name with a <tvi-component> marker when the trigger is a reusable root component."
+    },
+    {
+      "name": "modal_node_id",
+      "label": "Modal fallback",
+      "type": "modal_ref",
+      "help": "Optional fallback. A connected Modal target port takes priority."
+    },
+    {
+      "name": "action",
+      "label": "Trigger action",
+      "type": "select",
+      "options": [
+        "open",
+        "close",
+        "toggle"
+      ]
+    },
+    {
+      "name": "html",
+      "label": "Trigger HTML",
+      "type": "code",
+      "help": "The click action is attached to the first HTML element. A button is used when no valid element is supplied."
+    },
+    {
+      "name": "widths",
+      "label": "Responsive width",
+      "type": "breakpoints"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "modal",
+        "label": "Modal Target",
+        "type": "modal-trigger",
+        "direction": "out"
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\ModalTriggerCompiler",
+    "file": "Compiler.php"
+  }
+}

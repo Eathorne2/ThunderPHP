@@ -1,0 +1,17 @@
+{
+  "id": "video-playlist-player",
+  "name": "Video Playlist Player",
+  "description": "A video player paired with a selectable episode list for tutorials, courses, or media collections.",
+  "category": "Video Players",
+  "order": 3200,
+  "tags": [
+    "video",
+    "player",
+    "playlist",
+    "episodes"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

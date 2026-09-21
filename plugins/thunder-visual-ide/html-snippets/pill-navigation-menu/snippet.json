@@ -1,0 +1,17 @@
+{
+  "id": "pill-navigation-menu",
+  "name": "Pill Navigation Menu",
+  "description": "A responsive horizontal menu with active-state pills and a compact mobile toggle.",
+  "category": "Menus",
+  "order": 1120,
+  "tags": [
+    "menu",
+    "navigation",
+    "pills",
+    "responsive"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

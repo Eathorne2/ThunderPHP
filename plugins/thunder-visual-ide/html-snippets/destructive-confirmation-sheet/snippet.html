@@ -1,0 +1,43 @@
+<div class="dcs-she" data-dcs-she="">
+    <button class="dcs-she__button" data-open="" type="button">
+        Open Destructive Confirmation Sheet
+    </button>
+    <div class="dcs-she__backdrop" data-dialog="" hidden="">
+        <section aria-labelledby="dcs-she-title" aria-modal="true" class="dcs-she__dialog" role="dialog">
+            <span aria-hidden="true" class="dcs-she__icon">
+                !
+            </span>
+            <p class="dcs-she__eyebrow">
+                Confirmation required
+            </p>
+            <h2 id="dcs-she-title">
+                Destructive Confirmation Sheet
+            </h2>
+            <p>
+                This action affects shared workspace data. Review the details before continuing.
+            </p>
+            <div class="dcs-she__details">
+                <span>
+                    Scope
+                </span>
+                <strong>
+                    Current workspace
+                </strong>
+                <span>
+                    Impact
+                </span>
+                <strong>
+                    Immediate
+                </strong>
+            </div>
+            <div class="dcs-she__actions">
+                <button class="dcs-she__button dcs-she__button--quiet" data-close="" type="button">
+                    Cancel
+                </button>
+                <button class="dcs-she__button" data-confirm="" type="button">
+                    Continue
+                </button>
+            </div>
+        </section>
+    </div>
+</div>

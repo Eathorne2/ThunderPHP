@@ -1,0 +1,20 @@
+{
+  "id": "split-registration-panel",
+  "name": "Split Registration Panel",
+  "description": "A two-column account-registration panel with benefit summary.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Authentication",
+  "order": 2810,
+  "tags": [
+    "authentication",
+    "register",
+    "signup",
+    "split"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

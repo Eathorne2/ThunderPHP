@@ -1,0 +1,8 @@
+.account-form .thv-errors {
+    margin-top: 0.5rem;
+}
+
+.account-form .thv-error {
+    color: var(--thv-theme-danger, #b91c1c);
+    font-weight: 600;
+}

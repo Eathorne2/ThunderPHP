@@ -1,0 +1,19 @@
+{
+  "id": "commerce-header-footer-set",
+  "name": "Commerce Header and Footer Set",
+  "description": "A practical storefront header with promotion, search and cart controls paired with a trust-focused footer.",
+  "category": "Header and Footer Sets",
+  "order": 3004,
+  "tags": [
+    "header",
+    "footer",
+    "commerce",
+    "store",
+    "search",
+    "cart"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

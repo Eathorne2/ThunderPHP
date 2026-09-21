@@ -1,0 +1,10 @@
+#deny access to all files except
+#the index.php file, css and image files
+
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif|webp|svg|woff|woff2|ttf)$">
+    Require all granted
+</FilesMatch>
+
+<FilesMatch "\.(php|phtml|phar|json|sql|log|env|ini|yml|yaml|sh|bat|md|txt)$">
+    Require all denied
+</FilesMatch>

@@ -1,0 +1,231 @@
+{
+  "slug": "fb-designer-story",
+  "name": "Designer Story Timeline",
+  "category": "Fashion & Beauty",
+  "description": "Fashion brand story told through a compact editorial timeline.",
+  "keywords": [
+    "fashion",
+    "designer",
+    "story",
+    "timeline"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-fb-designer-story\"><div class=\"tb-fb-designer-story__media\">{{elements:image}}</div><div class=\"tb-fb-designer-story__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}<div class=\"tb-fb-designer-story__timeline\">{{elements:milestones}}</div></div></div>",
+  "css": ".tb-fb-designer-story{display:grid;grid-template-columns:minmax(300px,.85fr) minmax(0,1.15fr);gap:clamp(30px,6vw,84px);align-items:start;padding:clamp(30px,6vw,78px);background:var(--tb-color-surface)}.tb-fb-designer-story__image{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.tb-fb-designer-story__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-fb-designer-story__title{margin:10px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(38px,5vw,64px);font-weight:500}.tb-fb-designer-story__text{color:var(--tb-color-muted);line-height:1.7}.tb-fb-designer-story__timeline{margin-top:26px;border-left:1px solid var(--tb-color-border)}.tb-fb-designer-story__milestone{position:relative;padding:0 0 24px 28px}.tb-fb-designer-story__milestone:before{content:\"\";position:absolute;left:-5px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--tb-color-primary)}.tb-fb-designer-story__year{color:var(--tb-color-primary);font-weight:900}.tb-fb-designer-story__milestone-title{margin:5px 0;color:var(--tb-color-secondary);font-size:20px}.tb-fb-designer-story__milestone-text{margin:0;color:var(--tb-color-muted);line-height:1.6}@media(max-width:760px){.tb-fb-designer-story{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "image",
+      "label": "Designer image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Designer fashion story image"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-fb-designer-story__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-fb-designer-story__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Studio story"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-fb-designer-story__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "How the label took shape"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-fb-designer-story__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A clean timeline for a designer, fashion label or creative studio."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-fb-designer-story__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "milestones",
+      "label": "Milestone",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "year": "2018",
+        "title": "The first collection",
+        "text": "A small capsule established the studio language."
+      },
+      "schema": [
+        {
+          "key": "year",
+          "label": "Year",
+          "type": "text",
+          "selector": ".tb-fb-designer-story__year"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-fb-designer-story__milestone-title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-fb-designer-story__milestone-text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-fb-designer-story__milestone\"><span class=\"tb-fb-designer-story__year\">{{year}}</span><h3 class=\"tb-fb-designer-story__milestone-title\">{{title}}</h3><p class=\"tb-fb-designer-story__milestone-text\">{{text}}</p></article>",
+      "min": 1,
+      "max": 10,
+      "default_items": [
+        {
+          "year": "2018",
+          "title": "The first collection",
+          "text": "A small capsule established the studio language."
+        },
+        {
+          "year": "2021",
+          "title": "A wider point of view",
+          "text": "Collaborations brought new materials and new audiences."
+        },
+        {
+          "year": "2026",
+          "title": "Made for now",
+          "text": "The label focuses on fewer, stronger pieces with longer life."
+        }
+      ],
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

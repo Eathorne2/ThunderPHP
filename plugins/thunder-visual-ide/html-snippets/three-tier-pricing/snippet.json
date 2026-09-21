@@ -1,0 +1,17 @@
+{
+  "id": "three-tier-pricing",
+  "name": "Three Tier Pricing",
+  "description": "Three responsive pricing cards with a monthly and yearly billing switch.",
+  "category": "Commerce",
+  "order": 510,
+  "tags": [
+    "pricing",
+    "commerce",
+    "plans",
+    "toggle"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

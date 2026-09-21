@@ -1,0 +1,18 @@
+{
+  "id": "executive-advisory-hero",
+  "name": "Executive Advisory Hero",
+  "description": "A refined consulting hero with layered imagery, business outcomes and a compact credibility panel.",
+  "category": "Hero Sections",
+  "order": 3400,
+  "tags": [
+    "corporate",
+    "consulting",
+    "executive",
+    "hero",
+    "strategy"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

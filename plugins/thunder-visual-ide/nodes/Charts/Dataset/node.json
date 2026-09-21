@@ -1,0 +1,149 @@
+{
+  "type": "charts.dataset",
+  "label": "Chart Dataset",
+  "category": "Charts",
+  "kind": "expression",
+  "icon": "DS",
+  "color": "#7c3aed",
+  "description": "Builds one Chart.js dataset from values and visual options.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Chart Dataset",
+    "label": "Dataset",
+    "chart_type": "inherit",
+    "background_color": "rgba(37, 99, 235, 0.35)",
+    "border_color": "#2563eb",
+    "border_width": 2,
+    "fill": false,
+    "tension": 0.25,
+    "hidden": false,
+    "y_axis_id": "",
+    "stack": "",
+    "point_radius": 3
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "label",
+      "label": "Dataset label",
+      "type": "text"
+    },
+    {
+      "name": "chart_type",
+      "label": "Dataset chart type",
+      "type": "select",
+      "options": [
+        "inherit",
+        "bar",
+        "line",
+        "pie",
+        "doughnut",
+        "polarArea",
+        "radar",
+        "scatter",
+        "bubble"
+      ],
+      "help": "Use inherit for the Chart Builder type. Choose another type for a mixed chart."
+    },
+    {
+      "name": "background_color",
+      "label": "Default background color",
+      "type": "text",
+      "help": "Used when Background Colors is not connected."
+    },
+    {
+      "name": "border_color",
+      "label": "Default border color",
+      "type": "text",
+      "help": "Used when Border Colors is not connected."
+    },
+    {
+      "name": "border_width",
+      "label": "Border width",
+      "type": "number"
+    },
+    {
+      "name": "fill",
+      "label": "Fill area",
+      "type": "checkbox"
+    },
+    {
+      "name": "tension",
+      "label": "Line tension",
+      "type": "number"
+    },
+    {
+      "name": "hidden",
+      "label": "Hidden initially",
+      "type": "checkbox"
+    },
+    {
+      "name": "y_axis_id",
+      "label": "Y axis ID",
+      "type": "text",
+      "help": "Optional axis ID such as y or y1."
+    },
+    {
+      "name": "stack",
+      "label": "Stack name",
+      "type": "text",
+      "help": "Datasets with the same stack name are stacked together."
+    },
+    {
+      "name": "point_radius",
+      "label": "Point radius",
+      "type": "number"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "data",
+        "label": "Data",
+        "type": "array",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "background_colors",
+        "label": "Background Colors",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "border_colors",
+        "label": "Border Colors",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "advanced_options",
+        "label": "Advanced Dataset Options",
+        "type": "array",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "dataset",
+        "label": "Dataset",
+        "type": "chart-dataset",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Charts\\DatasetCompiler",
+    "file": "Compiler.php"
+  }
+}

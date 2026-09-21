@@ -1,0 +1,230 @@
+{
+  "type": "view.pagination",
+  "label": "Pagination Component",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "PAGE",
+  "color": "#7c3aed",
+  "description": "Creates an editable reusable Pager view from a file-based design template.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Pagination",
+    "component_name": "pagination",
+    "template_id": "minimal",
+    "pager_variable": "pager",
+    "show_summary": true,
+    "first_label": "First",
+    "prev_label": "Previous",
+    "next_label": "Next",
+    "last_label": "Last",
+    "wrapper_class": "tvi-pager-minimal",
+    "buttons_class": "tvi-pager-minimal__buttons",
+    "button_class": "tvi-pager-minimal__button",
+    "active_class": "is-active",
+    "disabled_class": "is-disabled",
+    "ellipsis_class": "is-ellipsis",
+    "summary_class": "tvi-pager-minimal__summary",
+    "base_styles": true,
+    "custom_css": "",
+    "widths": {
+      "mobile": 12,
+      "small": 12,
+      "medium": 12,
+      "large": 12
+    },
+    "wrapper_style": "",
+    "buttons_style": "",
+    "button_style": "",
+    "active_style": "",
+    "disabled_style": "",
+    "ellipsis_style": "",
+    "summary_style": "",
+    "color_mode": "inherit",
+    "custom_button_background": "#ffffff",
+    "custom_button_text": "#334155",
+    "custom_button_border": "#cbd5e1",
+    "custom_hover_background": "#f8fafc",
+    "custom_hover_text": "#0f172a",
+    "custom_active_background": "#2563eb",
+    "custom_active_text": "#ffffff",
+    "custom_disabled_background": "#f8fafc",
+    "custom_disabled_text": "#64748b",
+    "custom_summary_text": "#64748b",
+    "theme_button_background": "surface",
+    "theme_button_text": "text",
+    "theme_button_border": "border",
+    "theme_hover_background": "surface_alt",
+    "theme_hover_text": "text",
+    "theme_active_background": "primary",
+    "theme_active_text": "on_primary",
+    "theme_disabled_background": "surface_alt",
+    "theme_disabled_text": "muted",
+    "theme_summary_text": "muted"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "component_name",
+      "label": "Component name",
+      "type": "text",
+      "help": "Use this name with a <tvi-component> marker in the View source."
+    },
+    {
+      "name": "template_id",
+      "label": "Design template",
+      "type": "pagination_template"
+    },
+    {
+      "name": "pagination_palette",
+      "label": "Color palette",
+      "type": "pagination_palette",
+      "help": "Use the design defaults, choose custom colors, or inherit named colors from the connected Look. In inherit mode, each pagination role can map to a different theme color."
+    },
+    {
+      "name": "pager_variable",
+      "label": "Pager variable",
+      "type": "text",
+      "help": "Variable made available to the View, normally pager."
+    },
+    {
+      "name": "show_summary",
+      "label": "Show summary",
+      "type": "checkbox"
+    },
+    {
+      "name": "first_label",
+      "label": "First label",
+      "type": "text"
+    },
+    {
+      "name": "prev_label",
+      "label": "Previous label",
+      "type": "text"
+    },
+    {
+      "name": "next_label",
+      "label": "Next label",
+      "type": "text"
+    },
+    {
+      "name": "last_label",
+      "label": "Last label",
+      "type": "text"
+    },
+    {
+      "name": "wrapper_class",
+      "label": "Wrapper classes",
+      "type": "text"
+    },
+    {
+      "name": "wrapper_style",
+      "label": "Wrapper inline styles",
+      "type": "textarea",
+      "help": "CSS declarations applied directly to this pagination element."
+    },
+    {
+      "name": "buttons_class",
+      "label": "Buttons container classes",
+      "type": "text"
+    },
+    {
+      "name": "buttons_style",
+      "label": "Buttons container inline styles",
+      "type": "textarea",
+      "help": "CSS declarations applied directly to this pagination element."
+    },
+    {
+      "name": "button_class",
+      "label": "Button classes",
+      "type": "text"
+    },
+    {
+      "name": "button_style",
+      "label": "Button inline styles",
+      "type": "textarea",
+      "help": "CSS declarations applied directly to this pagination element."
+    },
+    {
+      "name": "active_class",
+      "label": "Active-page class",
+      "type": "text"
+    },
+    {
+      "name": "active_style",
+      "label": "Active-page inline styles",
+      "type": "textarea",
+      "help": "CSS declarations applied directly to this pagination element."
+    },
+    {
+      "name": "disabled_class",
+      "label": "Disabled class",
+      "type": "text"
+    },
+    {
+      "name": "disabled_style",
+      "label": "Disabled inline styles",
+      "type": "textarea",
+      "help": "CSS declarations applied directly to this pagination element."
+    },
+    {
+      "name": "ellipsis_class",
+      "label": "Ellipsis class",
+      "type": "text"
+    },
+    {
+      "name": "ellipsis_style",
+      "label": "Ellipsis inline styles",
+      "type": "textarea",
+      "help": "CSS declarations applied directly to this pagination element."
+    },
+    {
+      "name": "summary_class",
+      "label": "Summary classes",
+      "type": "text"
+    },
+    {
+      "name": "summary_style",
+      "label": "Summary inline styles",
+      "type": "textarea",
+      "help": "CSS declarations applied directly to this pagination element."
+    },
+    {
+      "name": "base_styles",
+      "label": "Include template styles",
+      "type": "checkbox"
+    },
+    {
+      "name": "custom_css",
+      "label": "Additional CSS",
+      "type": "code",
+      "language": "css",
+      "help": "Use .{{scope}} to target only this pagination component."
+    },
+    {
+      "name": "widths",
+      "label": "Responsive width",
+      "type": "breakpoints"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\PaginationCompiler",
+    "file": "Compiler.php"
+  }
+}

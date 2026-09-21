@@ -1,0 +1,57 @@
+{
+  "type": "custom.class_definition",
+  "label": "Class Definition",
+  "category": "Custom",
+  "kind": "architecture",
+  "icon": "C",
+  "color": "#7c3aed",
+  "description": "Defines a reusable custom PHP class. Each method is built in its own execution graph.",
+  "allowed_graphs": [
+    "architecture"
+  ],
+  "defaults": {
+    "title": "Service Class",
+    "class_name": "UserService",
+    "extends": "",
+    "implements": "",
+    "methods_json": "[]"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "class_name",
+      "label": "Class name",
+      "type": "text"
+    },
+    {
+      "name": "extends",
+      "label": "Extends class",
+      "type": "text",
+      "help": "Optional. Example: \\Core\\Service."
+    },
+    {
+      "name": "implements",
+      "label": "Implements interfaces",
+      "type": "text",
+      "help": "Optional comma-separated interface names."
+    },
+    {
+      "name": "methods_json",
+      "label": "Class methods",
+      "type": "class_methods",
+      "help": "Use the method manager. Each method may include Markdown help and examples shown by Class Method Call nodes in the Method Browser."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Custom\\ClassDefinitionCompiler",
+    "file": "Compiler.php"
+  }
+}

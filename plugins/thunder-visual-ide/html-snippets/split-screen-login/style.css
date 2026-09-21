@@ -1,0 +1,171 @@
+.split-login {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(20rem, .95fr);
+    min-height: 34rem;
+    overflow: hidden;
+    border-radius: 1.4rem;
+    background: var(--thv-theme-surface, #ffffff);
+    box-shadow: 0 24px 70px rgba(15, 23, 42, .16);
+}
+
+.split-login__brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2.2rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, .18), transparent 34%),
+        linear-gradient(145deg, var(--thv-theme-primary, #312e81), var(--thv-theme-secondary, #2563eb));
+}
+
+.split-login__logo {
+    display: grid;
+    place-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: .85rem;
+    color: var(--thv-theme-primary, #312e81);
+    background: var(--thv-theme-surface, #ffffff);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.split-login__kicker {
+    margin: 0 0 .6rem;
+    color: color-mix(in srgb, var(--thv-theme-secondary, #2563eb) 24%, var(--thv-theme-surface, #ffffff));
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.split-login__brand h2 {
+    max-width: 25rem;
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.05;
+}
+
+.split-login__brand p:not(.split-login__kicker) {
+    max-width: 30rem;
+    color: color-mix(in srgb, var(--thv-theme-secondary, #2563eb) 14%, var(--thv-theme-surface, #ffffff));
+    line-height: 1.7;
+}
+
+.split-login__brand small {
+    color: color-mix(in srgb, var(--thv-theme-secondary, #2563eb) 24%, var(--thv-theme-surface, #ffffff));
+}
+
+.split-login__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: clamp(1.5rem, 4vw, 3.2rem);
+}
+
+.split-login__intro span {
+    color: var(--thv-theme-secondary, #2563eb);
+    font-size: .75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.split-login__intro h3 {
+    margin: .25rem 0;
+    color: var(--thv-theme-text, #0f172a);
+    font-size: 1.6rem;
+}
+
+.split-login__intro p {
+    margin: 0 0 .6rem;
+    color: var(--thv-theme-muted, #64748b);
+}
+
+.split-login__form > label {
+    display: grid;
+    gap: .4rem;
+    color: var(--thv-theme-text, #334155);
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.split-login input[type="email"], .split-login input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8rem .9rem;
+    border: 1px solid var(--thv-theme-border, #cbd5e1);
+    border-radius: .75rem;
+    outline: none;
+}
+
+.split-login input:focus {
+    border-color: var(--thv-theme-secondary, #2563eb);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--thv-theme-secondary, #2563eb) 14%, transparent);
+}
+
+.password-field {
+    position: relative;
+    display: block;
+}
+
+.password-field button {
+    position: absolute;
+    top: 50%;
+    right: .5rem;
+    transform: translateY(-50%);
+    border: 0;
+    color: var(--thv-theme-secondary, #2563eb);
+    background: transparent;
+    font-weight: 700;
+}
+
+.password-field input {
+    padding-right: 4rem !important;
+}
+
+.split-login__options {
+    display: flex;
+    justify-content: space-between;
+    gap: .8rem;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .82rem;
+}
+
+.split-login a {
+    color: var(--thv-theme-secondary, #2563eb);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.split-login__submit {
+    padding: .85rem 1rem;
+    border: 0;
+    border-radius: .78rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-secondary, #2563eb);
+    font-weight: 800;
+}
+
+.split-login__signup {
+    margin: 0;
+    color: var(--thv-theme-muted, #64748b);
+    text-align: center;
+    font-size: .85rem;
+}
+
+@media (max-width: 760px) {
+    .split-login {
+        grid-template-columns: 1fr;
+    }
+    .split-login__brand {
+        min-height: 18rem;
+    }
+}

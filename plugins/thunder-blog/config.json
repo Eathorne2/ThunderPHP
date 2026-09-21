@@ -1,0 +1,282 @@
+{
+  "name": "Thunder Blog",
+  "type": "Foundation",
+  "version": "1.12.0",
+  "core_requires": "^1.0.0",
+  "id": "thunder-blog",
+  "description": "A standalone ThunderPHP publishing system with posts, pages, reusable header/footer designs, structured menus, search, shortcodes, configurable authors, palettes and an iframe block designer.",
+  "author": "Eathorne Choongo",
+  "website": "thunderphp.com",
+  "thumbnail": "assets/images/thumbnail.svg",
+  "active": true,
+  "look": "editorial",
+  "index": 20,
+  "permissions": [
+    {
+      "name": "View Blog Admin",
+      "slug": "view-blog-admin",
+      "group": "Thunder Blog",
+      "description": "Open the Thunder Blog administration area."
+    },
+    {
+      "name": "Create Blog Posts",
+      "slug": "create-blog-posts",
+      "group": "Thunder Blog",
+      "description": "Create new blog posts."
+    },
+    {
+      "name": "Edit Blog Posts",
+      "slug": "edit-blog-posts",
+      "group": "Thunder Blog",
+      "description": "Edit existing blog posts."
+    },
+    {
+      "name": "Delete Blog Posts",
+      "slug": "delete-blog-posts",
+      "group": "Thunder Blog",
+      "description": "Delete blog posts."
+    },
+    {
+      "name": "Publish Blog Posts",
+      "slug": "publish-blog-posts",
+      "group": "Thunder Blog",
+      "description": "Publish posts or schedule their publication."
+    },
+    {
+      "name": "Manage Blog Categories",
+      "slug": "manage-blog-categories",
+      "group": "Thunder Blog",
+      "description": "Create, edit and delete blog categories."
+    },
+    {
+      "name": "Manage Blog Settings",
+      "slug": "manage-blog-settings",
+      "group": "Thunder Blog",
+      "description": "Configure looks, colours, author mapping and frontend behavior."
+    },
+    {
+      "name": "Manage Blog Pages",
+      "slug": "manage-blog-pages",
+      "group": "Thunder Blog",
+      "description": "Create, edit, publish and delete standalone pages."
+    },
+    {
+      "name": "Manage Header and Footer Designs",
+      "slug": "manage-blog-designs",
+      "group": "Thunder Blog",
+      "description": "Create reusable headers and footers and select the active designs."
+    },
+    {
+      "name": "Manage Blog Menus",
+      "slug": "manage-blog-menus",
+      "group": "Thunder Blog",
+      "description": "Create menus and manage custom, post and page links with hierarchy."
+    },
+    {
+      "name": "Use Shortcode Generator",
+      "slug": "use-blog-shortcode-generator",
+      "group": "Thunder Blog",
+      "description": "Open the shortcode generator and create dynamic post-listing shortcodes."
+    }
+  ],
+  "routes": {
+    "on": [
+      "all"
+    ],
+    "off": [],
+    "routes": [
+      {
+        "method": "GET",
+        "pattern": "/blog",
+        "name": "blog.index"
+      },
+      {
+        "method": "GET",
+        "pattern": "/blog/category/{slug}",
+        "name": "blog.category"
+      },
+      {
+        "method": "GET",
+        "pattern": "/blog/tag/{slug}",
+        "name": "blog.tag"
+      },
+      {
+        "method": "GET",
+        "pattern": "/blog/search",
+        "name": "blog.search"
+      },
+      {
+        "method": "GET",
+        "pattern": "/blog/{slug}",
+        "name": "blog.show"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog",
+        "name": "blog.admin.posts"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/create",
+        "name": "blog.admin.create"
+      },
+      {
+        "method": "POST",
+        "pattern": "/admin/blog/create",
+        "name": "blog.admin.create.store"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/{id}/edit",
+        "name": "blog.admin.edit"
+      },
+      {
+        "method": "POST",
+        "pattern": "/admin/blog/{id}/edit",
+        "name": "blog.admin.edit.update"
+      },
+      {
+        "method": "POST",
+        "pattern": "/admin/blog/{id}/delete",
+        "name": "blog.admin.delete"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/categories",
+        "name": "blog.admin.categories"
+      },
+      {
+        "method": "POST",
+        "pattern": "/admin/blog/categories",
+        "name": "blog.admin.categories.store"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/settings",
+        "name": "blog.admin.settings"
+      },
+      {
+        "method": "POST",
+        "pattern": "/admin/blog/settings",
+        "name": "blog.admin.settings.update"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/menus",
+        "name": "blog.admin.menus"
+      },
+      {
+        "method": "POST",
+        "pattern": "/admin/blog/menus",
+        "name": "blog.admin.menus.store"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/menus/{id}",
+        "name": "blog.admin.menu.edit"
+      },
+      {
+        "method": "POST",
+        "pattern": "/admin/blog/menus/{id}",
+        "name": "blog.admin.menu.update"
+      },
+      {
+        "method": "POST",
+        "pattern": "/admin/blog/menus/{id}/delete",
+        "name": "blog.admin.menu.delete"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/api/blocks",
+        "name": "blog.admin.api.blocks"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/api/blocks/{slug}",
+        "name": "blog.admin.api.block"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/api/images",
+        "name": "blog.admin.api.images"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/pages",
+        "name": "blog.admin.pages"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/pages/create",
+        "name": "blog.admin.page.create"
+      },
+      {
+        "method": "POST",
+        "pattern": "/admin/blog/pages/create",
+        "name": "blog.admin.page.create.store"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/pages/{id}/edit",
+        "name": "blog.admin.page.edit"
+      },
+      {
+        "method": "POST",
+        "pattern": "/admin/blog/pages/{id}/edit",
+        "name": "blog.admin.page.edit.update"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/designs",
+        "name": "blog.admin.designs"
+      },
+      {
+        "method": "POST",
+        "pattern": "/admin/blog/designs/activate",
+        "name": "blog.admin.designs.activate"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/designs/create/{type}",
+        "name": "blog.admin.design.create"
+      },
+      {
+        "method": "POST",
+        "pattern": "/admin/blog/designs/create/{type}",
+        "name": "blog.admin.design.create.store"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/designs/{id}/edit",
+        "name": "blog.admin.design.edit"
+      },
+      {
+        "method": "POST",
+        "pattern": "/admin/blog/designs/{id}/edit",
+        "name": "blog.admin.design.edit.update"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/shortcodes",
+        "name": "blog.admin.shortcodes"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/blog/api/schema",
+        "name": "blog.admin.api.schema"
+      }
+    ]
+  },
+  "dependencies": {
+    "thunder-admin": {
+      "name": "Thunder Admin",
+      "version": "1.0.0",
+      "required": false
+    },
+    "thunder-authentication": {
+      "name": "Thunder Authentication",
+      "version": "1.1.0",
+      "required": false
+    }
+  }
+}

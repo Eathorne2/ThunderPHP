@@ -1,0 +1,14 @@
+{
+    "id": 13,
+    "title": "Thunder CLI Recipes",
+    "slug": "thunder-cli-recipes",
+    "description": "Use this page when you want to quickly remember what command to run, what file gets created, what to put inside the migration, what happens when you migrate, rollback, refresh, or check status",
+    "type": "guide",
+    "featured": false,
+    "published": true,
+    "order": 3,
+    "meta_title": "",
+    "meta_description": "",
+    "image": "",
+    "video_url": ""
+}

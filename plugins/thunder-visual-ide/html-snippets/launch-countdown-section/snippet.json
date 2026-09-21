@@ -1,0 +1,20 @@
+{
+  "id": "launch-countdown-section",
+  "name": "Launch Countdown Section",
+  "description": "A product launch section with a live countdown and early-access form.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Marketing",
+  "order": 8038,
+  "tags": [
+    "marketing",
+    "launch",
+    "countdown",
+    "signup"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

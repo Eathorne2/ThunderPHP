@@ -1,0 +1,136 @@
+.css-sum {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.css-sum *, .css-sum *::before, .css-sum *::after {
+    box-sizing: border-box;
+}
+
+.css-sum button, .css-sum input, .css-sum select, .css-sum textarea {
+    font: inherit;
+}
+
+.css-sum a {
+    color: inherit;
+}
+
+.css-sum {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 18rem;
+    gap: 2rem;
+    max-width: 72rem;
+}
+
+.css-sum__content > span {
+    color: var(--thv-theme-primary);
+    font-size: 0.7rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.css-sum__content > h2 {
+    margin: 0.4rem 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.css-sum__content > p, .css-sum__content section p {
+    color: var(--thv-theme-muted);
+    line-height: 1.75;
+}
+
+.css-sum__content section {
+    min-height: 18rem;
+    padding: 1.3rem 0;
+    border-top: 1px solid var(--thv-theme-border);
+}
+
+.css-sum aside {
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+    padding: 1rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface);
+}
+
+.css-sum__status {
+    padding: 0.8rem;
+    border-radius: 0.75rem;
+    background: color-mix(in srgb, var(--thv-theme-primary) 12%, var(--thv-theme-surface-alt));
+}
+
+.css-sum__status span, .css-sum__status strong {
+    display: block;
+}
+
+.css-sum__status span {
+    color: var(--thv-theme-muted);
+    font-size: 0.72rem;
+}
+
+.css-sum__status strong {
+    margin-top: 0.2rem;
+    color: var(--thv-theme-primary);
+}
+
+.css-sum nav {
+    display: grid;
+    gap: 0.25rem;
+    margin: 0.8rem 0;
+}
+
+.css-sum nav a {
+    padding: 0.6rem;
+    border-radius: 0.55rem;
+    color: var(--thv-theme-muted);
+    text-decoration: none;
+}
+
+.css-sum nav a:hover, .css-sum nav a.is-active {
+    background: var(--thv-theme-surface-alt);
+    color: var(--thv-theme-primary);
+}
+
+.css-sum dl div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.45rem 0;
+    border-top: 1px solid var(--thv-theme-border);
+}
+
+.css-sum dd {
+    margin: 0;
+    font-weight: 750;
+}
+
+.css-sum aside button {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: 0.65rem;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+    font-weight: 850;
+    cursor: pointer;
+}
+
+.css-sum [data-message] {
+    color: var(--thv-theme-success);
+    font-size: 0.75rem;
+    font-weight: 750;
+}
+
+@media (max-width: 760px) {
+    .css-sum {
+        grid-template-columns: 1fr;
+    }
+
+    .css-sum aside {
+        position: static;
+    }
+
+}

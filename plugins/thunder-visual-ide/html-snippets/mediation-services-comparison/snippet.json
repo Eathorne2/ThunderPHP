@@ -1,0 +1,17 @@
+{
+  "id": "mediation-services-comparison",
+  "name": "Mediation Services Comparison",
+  "description": "A side-by-side comparison of mediation, negotiation and litigation pathways.",
+  "category": "Business & Law",
+  "order": 5370,
+  "tags": [
+    "law",
+    "mediation",
+    "comparison",
+    "disputes"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

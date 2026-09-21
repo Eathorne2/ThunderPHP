@@ -1,0 +1,18 @@
+{
+  "id": "adventure-tours-header-footer",
+  "name": "Adventure Tours Header and Footer",
+  "description": "An energetic guided-adventure shell with trip finder, activity navigation and expedition support footer.",
+  "category": "Travel & Hotels",
+  "order": 5080,
+  "tags": [
+    "travel",
+    "hotel",
+    "header",
+    "footer",
+    "small-group adventures"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

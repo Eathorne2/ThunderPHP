@@ -1,0 +1,20 @@
+{
+  "id": "editorial-hover-gallery",
+  "name": "Editorial Hover Gallery",
+  "description": "A responsive image gallery with editorial captions and hover details.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Galleries",
+  "order": 8029,
+  "tags": [
+    "gallery",
+    "editorial",
+    "hover",
+    "images"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

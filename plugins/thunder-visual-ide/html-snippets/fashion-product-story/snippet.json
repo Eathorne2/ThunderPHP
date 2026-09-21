@@ -1,0 +1,20 @@
+{
+  "id": "fashion-product-story",
+  "name": "Fashion Product Story",
+  "description": "A fashion product page with editorial imagery, sizes and material details.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Single Product Pages",
+  "order": 8060,
+  "tags": [
+    "product",
+    "fashion",
+    "story",
+    "shop"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

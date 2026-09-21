@@ -1,0 +1,20 @@
+{
+  "id": "case-study-article",
+  "name": "Case Study Article",
+  "description": "A polished case study article with results, challenge and solution sections.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Single Blog Posts",
+  "order": 8056,
+  "tags": [
+    "blog",
+    "case study",
+    "article",
+    "results"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

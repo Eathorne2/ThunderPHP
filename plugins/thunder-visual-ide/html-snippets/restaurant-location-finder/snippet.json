@@ -1,0 +1,18 @@
+{
+  "id": "restaurant-location-finder",
+  "name": "Restaurant Location Finder",
+  "description": "An interactive multi-location restaurant section with branch tabs, hours, amenities and a large venue image.",
+  "category": "Food & Restaurant",
+  "order": 3750,
+  "tags": [
+    "locations",
+    "restaurant",
+    "tabs",
+    "contact",
+    "hours"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

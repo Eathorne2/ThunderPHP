@@ -1,0 +1,289 @@
+.collectors-register {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(20rem, 0.8fr) minmax(28rem, 1.2fr);
+    gap: clamp(1.5rem, 5vw, 5rem);
+    align-items: center;
+    min-height: 50rem;
+    padding: clamp(1.25rem, 4vw, 3rem);
+    overflow: hidden;
+    color: var(--thv-theme-text, #17130f);
+    background:
+        radial-gradient(circle at 85% 14%, color-mix(in srgb, var(--thv-theme-secondary, #ff735c) 28%, transparent), transparent 24rem),
+        var(--thv-theme-surface-alt, #eee8dd);
+}
+
+.collectors-register__poster {
+    position: relative;
+    min-height: 41rem;
+    overflow: hidden;
+    color: #ffffff;
+    background: #111111;
+    box-shadow: 0 2.4rem 5rem rgba(52, 37, 27, 0.22);
+    transform: rotate(-2deg);
+}
+
+.collectors-register__poster::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.76));
+}
+
+.collectors-register__poster img {
+    width: 100%;
+    height: 100%;
+    min-height: 41rem;
+    object-fit: cover;
+    filter: saturate(0.78) contrast(1.1);
+}
+
+.collectors-register__poster-number,
+.collectors-register__poster-title,
+.collectors-register__poster-label {
+    position: absolute;
+    z-index: 1;
+}
+
+.collectors-register__poster-number {
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+.collectors-register__poster-title {
+    right: 1rem;
+    bottom: 2.8rem;
+    left: 1rem;
+    font-size: clamp(3.8rem, 7vw, 7rem);
+    font-weight: 950;
+    letter-spacing: -0.09em;
+    line-height: 0.76;
+}
+
+.collectors-register__poster-label {
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.collectors-register__content {
+    width: min(100%, 48rem);
+    justify-self: center;
+    padding: clamp(1rem, 3vw, 2rem) 0;
+}
+
+.collectors-register__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--thv-theme-border, #cfc5b8);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.collectors-register__header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.collectors-register__header span {
+    color: var(--thv-theme-primary, #d84f34);
+}
+
+.collectors-register__form {
+    padding-top: clamp(2rem, 5vw, 4rem);
+}
+
+.collectors-register__eyebrow {
+    margin: 0;
+    color: var(--thv-theme-primary, #d84f34);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.collectors-register__title {
+    max-width: 44rem;
+    margin: 0.8rem 0 2rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 500;
+    letter-spacing: -0.07em;
+    line-height: 0.9;
+}
+
+.collectors-register__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.collectors-register__field {
+    display: grid;
+    gap: 0.5rem;
+    font-size: 0.68rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.collectors-register__field--wide {
+    grid-column: 1 / -1;
+}
+
+.collectors-register__field input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.95rem 1rem;
+    border: 1px solid var(--thv-theme-border, #cfc5b8);
+    border-radius: 0;
+    color: inherit;
+    background: color-mix(in srgb, var(--thv-theme-surface, #ffffff) 74%, transparent);
+    font: inherit;
+    text-transform: none;
+}
+
+.collectors-register__password {
+    position: relative;
+}
+
+.collectors-register__password input {
+    padding-right: 4.5rem;
+}
+
+.collectors-register__password button {
+    position: absolute;
+    top: 50%;
+    right: 0.8rem;
+    border: 0;
+    color: var(--thv-theme-primary, #d84f34);
+    background: transparent;
+    font-size: 0.68rem;
+    font-weight: 900;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.collectors-register__interests {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.7rem;
+    margin: 1.4rem 0 0;
+    padding: 0;
+    border: 0;
+}
+
+.collectors-register__interests legend {
+    grid-column: 1 / -1;
+    margin-bottom: 0.55rem;
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.collectors-register__interests label {
+    position: relative;
+    display: block;
+}
+
+.collectors-register__interests input {
+    position: absolute;
+    opacity: 0;
+}
+
+.collectors-register__interests label > span {
+    display: grid;
+    gap: 0.35rem;
+    min-height: 7rem;
+    padding: 1rem;
+    border: 1px solid var(--thv-theme-border, #cfc5b8);
+    background: color-mix(in srgb, var(--thv-theme-surface, #ffffff) 55%, transparent);
+    cursor: pointer;
+}
+
+.collectors-register__interests input:checked + span {
+    border-color: var(--thv-theme-primary, #d84f34);
+    background: color-mix(in srgb, var(--thv-theme-primary, #d84f34) 9%, var(--thv-theme-surface, #ffffff));
+}
+
+.collectors-register__interests strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+}
+
+.collectors-register__interests small {
+    color: var(--thv-theme-muted, #6d635b);
+    line-height: 1.45;
+}
+
+.collectors-register__terms {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    margin: 1.2rem 0;
+    color: var(--thv-theme-muted, #6d635b);
+    font-size: 0.76rem;
+    line-height: 1.45;
+}
+
+.collectors-register__submit {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 0;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #d84f34);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.collectors-register__login {
+    margin: 1rem 0 0;
+    color: var(--thv-theme-muted, #6d635b);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.collectors-register__login a {
+    color: var(--thv-theme-primary, #d84f34);
+    font-weight: 850;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .collectors-register {
+        grid-template-columns: 1fr;
+    }
+
+    .collectors-register__poster {
+        min-height: 28rem;
+        transform: none;
+    }
+
+    .collectors-register__poster img {
+        min-height: 28rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .collectors-register__grid,
+    .collectors-register__interests {
+        grid-template-columns: 1fr;
+    }
+
+    .collectors-register__field--wide,
+    .collectors-register__interests legend {
+        grid-column: auto;
+    }
+}

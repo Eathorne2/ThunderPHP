@@ -1,0 +1,20 @@
+{
+  "id": "session-expiry-modal",
+  "name": "Session Expiry Modal",
+  "description": "A session timeout modal with countdown and continuation controls.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Alerts - Modal",
+  "order": 8003,
+  "tags": [
+    "modal",
+    "session",
+    "timeout",
+    "security"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

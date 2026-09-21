@@ -1,0 +1,231 @@
+{
+  "slug": "medicine-cardiology-feature",
+  "name": "Cardiology Feature",
+  "category": "Medicine & Science",
+  "description": "Heart-care feature with service highlights",
+  "keywords": [
+    "cardiology",
+    "heart",
+    "healthcare"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-med-cardiology-feature\"><div class=\"tb-med-cardiology-feature__visual\">{{elements:image}}</div><div class=\"tb-med-cardiology-feature__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}<div class=\"tb-med-cardiology-feature__points\">{{elements:points}}</div></div></section>",
+  "css": ".tb-med-cardiology-feature{display:grid;grid-template-columns:1fr 1fr;background:var(--tb-color-background)}.tb-med-cardiology-feature__visual{padding:clamp(28px,5vw,60px)}.tb-med-cardiology-feature__image{width:100%;height:100%;min-height:500px;object-fit:cover;border-radius:20px}.tb-med-cardiology-feature__copy{padding:clamp(38px,6vw,80px);display:flex;flex-direction:column;justify-content:center}.tb-med-cardiology-feature__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.14em}.tb-med-cardiology-feature__title{font-size:clamp(38px,5vw,64px);line-height:1.02;margin:10px 0 16px;color:var(--tb-color-secondary)}.tb-med-cardiology-feature__text{font-size:17px;line-height:1.75;color:var(--tb-color-muted)}.tb-med-cardiology-feature__points{display:grid;gap:10px;margin-top:20px}.tb-med-cardiology-feature__point{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--tb-color-border)}.tb-med-cardiology-feature__point__icon{color:var(--tb-color-primary);font-weight:900}.tb-med-cardiology-feature__point__title{margin:0;font-size:16px;color:var(--tb-color-secondary)}.tb-med-cardiology-feature__point__text{display:none}@media(max-width:760px){.tb-med-cardiology-feature{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "image",
+      "label": "Cardiology image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Cardiology care"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-med-cardiology-feature__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-med-cardiology-feature__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Heart health"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-med-cardiology-feature__eyebrow\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Advanced cardiac care, clearly explained"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-med-cardiology-feature__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Present cardiology diagnostics, prevention and treatment with a calm, modern visual structure."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-med-cardiology-feature__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "points",
+      "label": "Highlights",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "title": "",
+        "text": "",
+        "icon": "✦"
+      },
+      "schema": [
+        {
+          "key": "icon",
+          "label": "Icon",
+          "type": "text",
+          "selector": ".tb-med-cardiology-feature__point__icon"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-med-cardiology-feature__point__title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-med-cardiology-feature__point__text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-med-cardiology-feature__point\"><span class=\"tb-med-cardiology-feature__point__icon\">{{icon}}</span><h3 class=\"tb-med-cardiology-feature__point__title\">{{title}}</h3><p class=\"tb-med-cardiology-feature__point__text\">{{text}}</p></article>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "icon": "✓",
+          "title": "Cardiac diagnostics",
+          "text": ""
+        },
+        {
+          "icon": "✓",
+          "title": "Preventive cardiology",
+          "text": ""
+        },
+        {
+          "icon": "✓",
+          "title": "Ongoing monitoring",
+          "text": ""
+        }
+      ],
+      "min": 1,
+      "max": 12
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

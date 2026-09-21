@@ -1,0 +1,20 @@
+{
+  "id": "product-site-footer",
+  "name": "Product Site Footer",
+  "description": "A multi-column product footer with newsletter signup and legal links.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Footers",
+  "order": 2500,
+  "tags": [
+    "footer",
+    "product",
+    "newsletter",
+    "links"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

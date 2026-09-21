@@ -1,0 +1,95 @@
+{
+  "type": "view.loop",
+  "label": "Loop",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "LOOP",
+  "color": "#0891b2",
+  "description": "Repeats child view nodes for an iterable variable.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Loop",
+    "collection_path": "items",
+    "item_name": "item",
+    "index_name": "index",
+    "empty_html": "",
+    "widths": {
+      "mobile": 12,
+      "small": 12,
+      "medium": 12,
+      "large": 12
+    },
+    "css_class": "",
+    "inline_style": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "collection_path",
+      "label": "Collection path",
+      "type": "text"
+    },
+    {
+      "name": "item_name",
+      "label": "Item variable",
+      "type": "text"
+    },
+    {
+      "name": "index_name",
+      "label": "Index variable",
+      "type": "text"
+    },
+    {
+      "name": "empty_html",
+      "label": "Empty-state HTML",
+      "type": "textarea"
+    },
+    {
+      "name": "css_class",
+      "label": "Wrapper CSS classes",
+      "type": "text",
+      "help": "Optional. Adding classes creates a div around the complete loop output."
+    },
+    {
+      "name": "inline_style",
+      "label": "Wrapper inline styles",
+      "type": "textarea",
+      "help": "Optional. Adding styles creates a div around the complete loop output."
+    },
+    {
+      "name": "widths",
+      "label": "Responsive width",
+      "type": "breakpoints",
+      "help": "Applied only when wrapper classes or wrapper inline styles are provided."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "children",
+        "label": "Children",
+        "type": "view-child",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\LoopCompiler",
+    "file": "Compiler.php"
+  }
+}

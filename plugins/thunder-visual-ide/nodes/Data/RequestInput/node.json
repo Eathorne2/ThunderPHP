@@ -1,0 +1,55 @@
+{
+  "type": "data.request_input",
+  "label": "Request Input",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "IN",
+  "color": "#0284c7",
+  "description": "Reads POST, GET, or combined input through Core\\Request.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Request Input",
+    "source": "post",
+    "name": "email"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "label": "Source",
+      "type": "select",
+      "options": [
+        "post",
+        "get",
+        "input"
+      ]
+    },
+    {
+      "name": "name",
+      "label": "Input name",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Value",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\RequestInputCompiler",
+    "file": "Compiler.php"
+  }
+}

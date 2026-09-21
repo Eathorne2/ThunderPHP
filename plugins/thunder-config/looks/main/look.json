@@ -1,0 +1,9 @@
+{
+    "name": "Default Config Admin Look",
+    "version": "1.0.0",
+    "plugin": "thunder-config",
+    "plugin_requires": "^1.0.0",
+    "author": "Eathorne Choongo",
+    "thumbnail": "screenshot.png",
+    "description": "Default admin UI for Thunder Config."
+}

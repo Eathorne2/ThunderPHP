@@ -1,0 +1,77 @@
+<section class="dcg-gri" data-dcg-gri="">
+    <div class="dcg-gri__intro">
+        <span>
+            Start a conversation
+        </span>
+        <h2>
+            Department Contact Grid
+        </h2>
+        <p>
+            Share a few details and the right member of our team will respond with a clear next step.
+        </p>
+        <div class="dcg-gri__departments">
+            <button data-dept="Sales" type="button">
+                Sales
+            </button>
+            <button data-dept="Support" type="button">
+                Support
+            </button>
+            <button data-dept="Partnerships" type="button">
+                Partnerships
+            </button>
+            <button data-dept="Media" type="button">
+                Media
+            </button>
+        </div>
+    </div>
+    <form class="dcg-gri__form">
+        <div class="dcg-gri__row">
+            <label>
+                Full name
+                <input name="name" placeholder="Your name" required=""/>
+            </label>
+            <label>
+                Email address
+                <input name="email" placeholder="name@example.com" required="" type="email"/>
+            </label>
+        </div>
+        <div class="dcg-gri__row">
+            <label>
+                Topic
+                <select data-topic="" name="topic">
+                    <option>
+                        General enquiry
+                    </option>
+                    <option>
+                        New project
+                    </option>
+                    <option>
+                        Support
+                    </option>
+                    <option>
+                        Partnership
+                    </option>
+                </select>
+            </label>
+            <label>
+                Preferred timing
+                <input name="timing" placeholder="This week"/>
+            </label>
+        </div>
+        <label>
+            Message
+            <textarea name="message" placeholder="Tell us what you need..." required="" rows="5"></textarea>
+        </label>
+        <div class="dcg-gri__footer">
+            <label class="dcg-gri__check">
+                <input required="" type="checkbox"/>
+                I agree to the privacy notice.
+            </label>
+            <button type="submit">
+                Send enquiry
+            </button>
+        </div>
+        <p data-status="" role="status">
+        </p>
+    </form>
+</section>

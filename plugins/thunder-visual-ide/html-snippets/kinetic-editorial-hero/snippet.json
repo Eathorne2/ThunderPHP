@@ -1,0 +1,18 @@
+{
+  "id": "kinetic-editorial-hero",
+  "name": "Kinetic Editorial Hero",
+  "description": "A high-energy editorial hero with moving headline bands, offset imagery and a strong featured-story statement.",
+  "category": "Magazine & Editorial",
+  "order": 3205,
+  "tags": [
+    "magazine",
+    "hero",
+    "kinetic",
+    "marquee",
+    "modern"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "visual.folder",
+  "label": "Visual Folder",
+  "category": "Visual",
+  "kind": "visual",
+  "icon": "\u25a3",
+  "color": "#475569",
+  "description": "Collapsible editor-only group. Ignored by the compiler.",
+  "allowed_graphs": [
+    "architecture",
+    "flow"
+  ],
+  "defaults": {
+    "title": "Node Group",
+    "collapsed": true,
+    "member_ids": []
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Folder title",
+      "type": "text"
+    },
+    {
+      "name": "collapsed",
+      "label": "Collapsed",
+      "type": "checkbox"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Visual\\FolderCompiler",
+    "file": "Compiler.php"
+  }
+}

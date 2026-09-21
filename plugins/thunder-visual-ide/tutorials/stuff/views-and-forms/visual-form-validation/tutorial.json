@@ -1,0 +1,17 @@
+{
+  "slug": "visual-form-validation",
+  "title": "Create and Validate a Visual Form",
+  "summary": "Design a themed form, read submitted data, configure validation rules and show inline errors beside each input.",
+  "category": "views-and-forms",
+  "order": 10,
+  "level": "Beginner",
+  "duration": "16 min",
+  "tags": ["forms", "validation", "themes", "inline errors"],
+  "thumbnail": "thumbnail.svg",
+  "content": "content.html",
+  "video": {
+    "type": "youtube",
+    "id": ""
+  },
+  "published": true
+}

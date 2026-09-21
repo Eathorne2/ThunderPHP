@@ -1,0 +1,18 @@
+{
+  "id": "board-member-profile-card",
+  "name": "Board Member Profile Card",
+  "description": "A formal board profile card with governance roles, committee memberships and expandable biography.",
+  "category": "User Cards",
+  "order": 3490,
+  "tags": [
+    "board",
+    "leadership",
+    "profile",
+    "governance",
+    "corporate"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

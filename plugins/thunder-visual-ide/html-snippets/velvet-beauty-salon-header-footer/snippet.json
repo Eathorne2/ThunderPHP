@@ -1,0 +1,18 @@
+{
+  "id": "velvet-beauty-salon-header-footer",
+  "name": "Velvet Beauty Salon Header and Footer",
+  "description": "A coordinated responsive header and footer set for VELVET.",
+  "category": "Fashion & Beauty",
+  "order": 4140,
+  "tags": [
+    "header footer",
+    "fashion",
+    "beauty",
+    "responsive",
+    "velvet"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

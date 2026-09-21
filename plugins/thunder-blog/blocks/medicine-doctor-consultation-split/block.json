@@ -1,0 +1,205 @@
+{
+  "slug": "medicine-doctor-consultation-split",
+  "name": "Doctor Consultation Split",
+  "category": "Medicine & Science",
+  "description": "Doctor profile and consultation callout",
+  "keywords": [
+    "doctor",
+    "consultation",
+    "profile"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-med-doctor-consultation-split\">{{elements:image}}<div class=\"tb-med-doctor-consultation-split__panel\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}{{elements:cta}}</div></section>",
+  "css": ".tb-med-doctor-consultation-split{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;background:var(--tb-color-secondary);color:var(--tb-color-surface)}.tb-med-doctor-consultation-split__image{width:100%;height:100%;min-height:540px;object-fit:cover}.tb-med-doctor-consultation-split__panel{padding:clamp(36px,7vw,88px);display:flex;flex-direction:column;justify-content:center}.tb-med-doctor-consultation-split__eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:900;color:var(--tb-color-accent)}.tb-med-doctor-consultation-split__title{font-size:clamp(38px,5vw,64px);line-height:1.05;margin:12px 0 18px}.tb-med-doctor-consultation-split__text{font-size:17px;line-height:1.8;opacity:.84}.tb-med-doctor-consultation-split__cta{align-self:flex-start;margin-top:22px;color:var(--tb-color-secondary);background:var(--tb-color-accent);padding:13px 18px;border-radius:8px;text-decoration:none;font-weight:900}@media(max-width:760px){.tb-med-doctor-consultation-split{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "image",
+      "label": "Doctor image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Doctor consultation"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-med-doctor-consultation-split__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-med-doctor-consultation-split__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Meet your physician"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-med-doctor-consultation-split__eyebrow\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Time to listen. Time to care."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-med-doctor-consultation-split__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Use this section to introduce a physician, explain a care philosophy and guide patients toward a consultation."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-med-doctor-consultation-split__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "cta",
+      "label": "Action",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Schedule a consultation",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-med-doctor-consultation-split__cta\" href=\"{{url}}\">{{text}}</a>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

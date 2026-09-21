@@ -1,0 +1,32 @@
+{
+  "format": "thunder-visual-ide-node-bundle",
+  "format_version": 1,
+  "schema_version": 4,
+  "generated_by": "Thunder Visual IDE 0.12.36",
+  "id": "bundled-content-table",
+  "name": "Content Table",
+  "description": "A reusable content table with title, description, status, and creation date.",
+  "category": "Database",
+  "order": 10,
+  "graph_kind": "migration",
+  "created_at": "2026-07-23T00:00:00Z",
+  "nodes": [
+    {
+      "id": "content-table",
+      "type": "migration.create_table",
+      "x": 0,
+      "y": 0,
+      "data": {
+        "title": "Create Content Table",
+        "table": "plugin_content",
+        "primary_key": "id",
+        "engine": "InnoDB",
+        "charset": "utf8mb4",
+        "collate": "utf8mb4_unicode_ci",
+        "columns_json": "[\n  {\n    \"name\": \"id\",\n    \"type\": \"INT\",\n    \"length\": \"\",\n    \"unsigned\": true,\n    \"nullable\": false,\n    \"auto_increment\": true,\n    \"default\": \"\",\n    \"extra\": \"\"\n  },\n  {\n    \"name\": \"title\",\n    \"type\": \"VARCHAR\",\n    \"length\": \"255\",\n    \"unsigned\": false,\n    \"nullable\": false,\n    \"auto_increment\": false,\n    \"default\": \"\",\n    \"extra\": \"\"\n  },\n  {\n    \"name\": \"description\",\n    \"type\": \"TEXT\",\n    \"length\": \"\",\n    \"unsigned\": false,\n    \"nullable\": true,\n    \"auto_increment\": false,\n    \"default\": \"\",\n    \"extra\": \"\"\n  },\n  {\n    \"name\": \"status\",\n    \"type\": \"VARCHAR\",\n    \"length\": \"30\",\n    \"unsigned\": false,\n    \"nullable\": false,\n    \"auto_increment\": false,\n    \"default\": \"draft\",\n    \"extra\": \"\"\n  },\n  {\n    \"name\": \"date_created\",\n    \"type\": \"DATETIME\",\n    \"length\": \"\",\n    \"unsigned\": false,\n    \"nullable\": false,\n    \"auto_increment\": false,\n    \"default\": \"CURRENT_TIMESTAMP\",\n    \"extra\": \"\"\n  }\n]"
+      }
+    }
+  ],
+  "edges": [],
+  "nested_graphs": {}
+}

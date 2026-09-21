@@ -1,0 +1,153 @@
+{
+  "slug": "wed-testimonials",
+  "name": "Wedding Testimonials",
+  "category": "Wedding",
+  "description": "Large romantic testimonials for planners, photographers and venues",
+  "keywords": [
+    "wedding",
+    "testimonials",
+    "reviews",
+    "couples"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-wed-testimonials\"><div class=\"tb-wed-testimonials__head\">{{elements:eyebrow}}{{elements:title}}</div><div class=\"tb-wed-testimonials__grid\">{{elements:quotes}}</div></div>",
+  "css": ".tb-wed-testimonials{padding:clamp(36px,7vw,86px);background:var(--tb-color-surface)}.tb-wed-testimonials__head{text-align:center;margin-bottom:30px}.tb-wed-testimonials__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-wed-testimonials__title{margin:8px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(38px,5vw,60px);font-weight:400}.tb-wed-testimonials__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.tb-wed-testimonials__quote{padding:36px;border:1px solid var(--tb-color-border);background:var(--tb-color-background)}.tb-wed-testimonials__text{margin:0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(26px,3vw,38px);line-height:1.3}.tb-wed-testimonials__name{display:block;margin-top:28px;color:var(--tb-color-primary);font-weight:900}.tb-wed-testimonials__meta{display:block;margin-top:4px;color:var(--tb-color-muted);font-size:13px}@media(max-width:650px){.tb-wed-testimonials__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Kind words"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-wed-testimonials__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "From our couples"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-wed-testimonials__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "quotes",
+      "label": "Testimonial",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "quote": "Every detail felt like us, only more beautiful than we could have imagined.",
+        "name": "Mia & James",
+        "meta": "Garden wedding · 2026"
+      },
+      "schema": [
+        {
+          "key": "quote",
+          "label": "Quote",
+          "type": "textarea",
+          "selector": ".tb-wed-testimonials__text",
+          "rows": 3
+        },
+        {
+          "key": "name",
+          "label": "Name",
+          "type": "text",
+          "selector": ".tb-wed-testimonials__name"
+        },
+        {
+          "key": "meta",
+          "label": "Details",
+          "type": "text",
+          "selector": ".tb-wed-testimonials__meta"
+        }
+      ],
+      "template": "<blockquote class=\"tb-wed-testimonials__quote\"><p class=\"tb-wed-testimonials__text\">“{{quote}}”</p><span class=\"tb-wed-testimonials__name\">{{name}}</span><span class=\"tb-wed-testimonials__meta\">{{meta}}</span></blockquote>",
+      "min": 1,
+      "max": 8,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "quote": "Every detail felt like us, only more beautiful than we could have imagined.",
+          "name": "Mia & James",
+          "meta": "Garden wedding · 2026"
+        },
+        {
+          "quote": "The whole day felt calm, effortless and completely joyful.",
+          "name": "Grace & Leo",
+          "meta": "Destination wedding · 2025"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

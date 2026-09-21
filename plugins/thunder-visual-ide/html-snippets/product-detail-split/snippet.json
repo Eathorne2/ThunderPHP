@@ -1,0 +1,17 @@
+{
+  "id": "product-detail-split",
+  "name": "Product Detail Split",
+  "description": "A complete single-product layout with gallery, variants, quantity, purchase actions and delivery notes.",
+  "category": "Single Product Pages",
+  "order": 1220,
+  "tags": [
+    "product",
+    "detail",
+    "shop",
+    "ecommerce"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

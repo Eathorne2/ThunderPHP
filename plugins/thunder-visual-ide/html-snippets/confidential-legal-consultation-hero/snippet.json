@@ -1,0 +1,17 @@
+{
+  "id": "confidential-legal-consultation-hero",
+  "name": "Confidential Legal Consultation Hero",
+  "description": "A composed legal-services hero with trust metrics, consultation actions and concise practice highlights.",
+  "category": "Business & Law",
+  "order": 5200,
+  "tags": [
+    "business",
+    "law",
+    "hero",
+    "consultation"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

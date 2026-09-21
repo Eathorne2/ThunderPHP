@@ -1,0 +1,17 @@
+{
+  "id": "quote-card-testimonial-slider",
+  "name": "Quote Card Testimonial Slider",
+  "description": "A clean testimonial carousel with large quotations, customer identity, navigation, and slide counter.",
+  "category": "Testimonial Sliders",
+  "order": 3240,
+  "tags": [
+    "testimonial",
+    "slider",
+    "quote",
+    "reviews"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "artist-newsletter-cta",
+  "name": "Artist Newsletter Call to Action",
+  "description": "A premium artist mailing-list section with release updates, tour alerts and subscription feedback.",
+  "category": "Music & Entertainment",
+  "order": 4400,
+  "tags": [
+    "newsletter",
+    "artist",
+    "fan",
+    "email",
+    "call to action"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

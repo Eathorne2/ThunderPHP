@@ -1,0 +1,84 @@
+<section class="tar">
+    <header>
+        <div>
+            <p>Represented talent</p>
+            <h2>Creative roster</h2>
+        </div>
+
+        <div class="tar__tools">
+            <input aria-label="Search talent" data-search placeholder="Search by name" type="search" />
+            <select aria-label="Filter talent category" data-category>
+                <option value="all">All categories</option>
+                <option value="music">Music</option>
+                <option value="film">Film</option>
+                <option value="presenters">Presenters</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="tar__grid">
+        <article data-talent data-category="music" data-name="Maya Rivers">
+            <figure>
+                <img
+                    alt="Singer Maya Rivers"
+                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                />
+                <span>Available Q4</span>
+            </figure>
+            <div>
+                <small>Recording artist</small>
+                <h3>Maya Rivers</h3>
+                <a href="#">View profile</a>
+            </div>
+        </article>
+
+        <article data-talent data-category="film" data-name="Theo Grant">
+            <figure>
+                <img
+                    alt="Actor Theo Grant"
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                />
+                <span>In production</span>
+            </figure>
+            <div>
+                <small>Actor / director</small>
+                <h3>Theo Grant</h3>
+                <a href="#">View profile</a>
+            </div>
+        </article>
+
+        <article data-talent data-category="presenters" data-name="Imani Cole">
+            <figure>
+                <img
+                    alt="Presenter Imani Cole"
+                    src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                />
+                <span>Available now</span>
+            </figure>
+            <div>
+                <small>Presenter / host</small>
+                <h3>Imani Cole</h3>
+                <a href="#">View profile</a>
+            </div>
+        </article>
+
+        <article data-talent data-category="music" data-name="Arlo North">
+            <figure>
+                <img
+                    alt="Producer Arlo North"
+                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                />
+                <span>Touring</span>
+            </figure>
+            <div>
+                <small>Producer / composer</small>
+                <h3>Arlo North</h3>
+                <a href="#">View profile</a>
+            </div>
+        </article>
+    </div>
+
+    <p class="tar__empty" data-empty hidden>
+        No talent matches your search.
+    </p>
+</section>

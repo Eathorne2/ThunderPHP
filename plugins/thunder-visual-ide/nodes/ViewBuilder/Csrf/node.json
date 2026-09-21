@@ -1,0 +1,49 @@
+{
+  "type": "view.csrf",
+  "label": "CSRF Field",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "CSRF",
+  "color": "#0891b2",
+  "description": "Outputs ThunderPHP\u2019s CSRF hidden field.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "CSRF",
+    "session_key": "csrf",
+    "hours": 1
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "session_key",
+      "label": "Session key",
+      "type": "text"
+    },
+    {
+      "name": "hours",
+      "label": "Lifetime hours",
+      "type": "number"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\CsrfCompiler",
+    "file": "Compiler.php"
+  }
+}

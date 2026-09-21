@@ -1,0 +1,45 @@
+{
+  "type": "data.arguments",
+  "label": "Arguments",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "()",
+  "color": "#0ea5e9",
+  "description": "Builds an ordered argument list for model methods, functions, and helpers.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "dynamic_ports": "arguments",
+  "defaults": {
+    "title": "Arguments",
+    "param_count": 2
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "param_count",
+      "label": "Parameter count",
+      "type": "number"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "arguments",
+        "label": "Arguments",
+        "type": "arguments",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\ArgumentsCompiler",
+    "file": "Compiler.php"
+  }
+}

@@ -1,0 +1,47 @@
+{
+    "name": "Line Minimal",
+    "version": "1.0.0",
+    "plugin": "thunder-authentication",
+    "plugin_requires": "^1.0.0",
+    "author": "Eathorne Choongo",
+    "description": "A sharp editorial layout using fine rules, flat surfaces, and understated typography.",
+    "default_palette": "graphite",
+    "palettes": {
+        "graphite": {
+            "primary": "#18181b",
+            "secondary": "#71717a",
+            "background": "#ffffff",
+            "surface": "#ffffff",
+            "text": "#18181b",
+            "muted_text": "#71717a",
+            "border": "#d4d4d8",
+            "success": "#166534",
+            "warning": "#a16207",
+            "danger": "#b91c1c"
+        },
+        "cobalt": {
+            "primary": "#1d4ed8",
+            "secondary": "#64748b",
+            "background": "#ffffff",
+            "surface": "#ffffff",
+            "text": "#172554",
+            "muted_text": "#64748b",
+            "border": "#cbd5e1",
+            "success": "#15803d",
+            "warning": "#a16207",
+            "danger": "#b91c1c"
+        },
+        "terracotta": {
+            "primary": "#9a3412",
+            "secondary": "#78716c",
+            "background": "#fffdfb",
+            "surface": "#fffdfb",
+            "text": "#431407",
+            "muted_text": "#78716c",
+            "border": "#e7d7cf",
+            "success": "#166534",
+            "warning": "#a16207",
+            "danger": "#b91c1c"
+        }
+    }
+}

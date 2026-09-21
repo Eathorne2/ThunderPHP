@@ -1,0 +1,18 @@
+{
+  "id": "airport-transfer-booking",
+  "name": "Airport Transfer Booking",
+  "description": "A compact airport transfer configurator with vehicle selection, trip details and estimated price.",
+  "category": "Travel & Hotels",
+  "order": 4940,
+  "tags": [
+    "airport",
+    "transfer",
+    "booking",
+    "transport",
+    "hotel"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

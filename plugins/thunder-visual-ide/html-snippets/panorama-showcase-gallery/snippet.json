@@ -1,0 +1,20 @@
+{
+  "id": "panorama-showcase-gallery",
+  "name": "Panorama Showcase Gallery",
+  "description": "A wide-format panorama gallery with selectable scenes and concise location information.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9014,
+  "tags": [
+    "gallery",
+    "panorama",
+    "landscape",
+    "travel"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

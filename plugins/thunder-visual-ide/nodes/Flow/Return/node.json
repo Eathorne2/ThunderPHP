@@ -1,0 +1,51 @@
+{
+  "type": "flow.return",
+  "label": "Return",
+  "category": "Flow",
+  "kind": "flow",
+  "icon": "\u21a9",
+  "color": "#166534",
+  "description": "Returns a connected value from a custom function or ends a controller callback.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Return",
+    "return_value": true
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "return_value",
+      "label": "Return a value",
+      "type": "checkbox"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "value",
+        "label": "Value",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Flow\\ReturnCompiler",
+    "file": "Compiler.php"
+  }
+}

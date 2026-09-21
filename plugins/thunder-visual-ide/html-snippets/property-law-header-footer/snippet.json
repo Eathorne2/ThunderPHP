@@ -1,0 +1,19 @@
+{
+  "id": "property-law-header-footer",
+  "name": "Property Law Header and Footer",
+  "description": "Legal support across acquisitions, developments, leases and real-estate portfolios.",
+  "category": "Business & Law",
+  "order": 5405,
+  "tags": [
+    "header",
+    "footer",
+    "business",
+    "law",
+    "navigation",
+    "property law"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,79 @@
+{
+  "type": "data.variable",
+  "label": "Variable / Constant",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "$",
+  "color": "#1e40af",
+  "description": "Outputs an in-scope PHP variable or a global, namespaced, or class constant, optionally with an object property or array key path.",
+  "allowed_graphs": [
+    "flow",
+    "view"
+  ],
+  "defaults": {
+    "title": "Variable",
+    "variable_name": "value",
+    "path": "",
+    "path_mode": "object",
+    "source_type": "variable",
+    "constant_name": "ROOT"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "source_type",
+      "label": "Value source",
+      "type": "select",
+      "options": [
+        "variable",
+        "constant"
+      ],
+      "help": "Variable generates $name. Constant generates identifiers such as ROOT, PHP_VERSION, App\\Config::NAME, self::STATUS, or \\App\\VERSION."
+    },
+    {
+      "name": "variable_name",
+      "label": "Variable name",
+      "type": "text"
+    },
+    {
+      "name": "constant_name",
+      "label": "Constant name",
+      "type": "text",
+      "help": "Used when Value source is constant. Do not include quotes."
+    },
+    {
+      "name": "path",
+      "label": "Property / key path",
+      "type": "text"
+    },
+    {
+      "name": "path_mode",
+      "label": "Path mode",
+      "type": "select",
+      "options": [
+        "object",
+        "array"
+      ]
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Value",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\VariableCompiler",
+    "file": "Compiler.php"
+  }
+}

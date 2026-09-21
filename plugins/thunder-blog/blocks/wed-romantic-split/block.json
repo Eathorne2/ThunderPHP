@@ -1,0 +1,205 @@
+{
+  "slug": "wed-romantic-split",
+  "name": "Romantic Wedding Split",
+  "category": "Wedding",
+  "description": "Editorial split layout with portrait image and wedding introduction",
+  "keywords": [
+    "wedding",
+    "romantic",
+    "split",
+    "couple"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-wed-romantic-split\"><div class=\"tb-wed-romantic-split__media\">{{elements:image}}</div><div class=\"tb-wed-romantic-split__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}{{elements:cta}}</div></div>",
+  "css": ".tb-wed-romantic-split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);background:var(--tb-color-surface);border:1px solid var(--tb-color-border)}.tb-wed-romantic-split__media{min-height:620px}.tb-wed-romantic-split__image{width:100%;height:100%;min-height:620px;object-fit:cover;display:block}.tb-wed-romantic-split__copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(36px,7vw,92px)}.tb-wed-romantic-split__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}.tb-wed-romantic-split__title{margin:14px 0 20px;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(42px,6vw,72px);font-weight:400;line-height:1}.tb-wed-romantic-split__text{color:var(--tb-color-muted);font-size:17px;line-height:1.8}.tb-wed-romantic-split__cta{align-self:flex-start;margin-top:24px;color:var(--tb-color-primary);font-weight:900;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:5px}@media(max-width:760px){.tb-wed-romantic-split{grid-template-columns:1fr}.tb-wed-romantic-split__media,.tb-wed-romantic-split__image{min-height:430px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "image",
+      "label": "Couple image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Bride and groom"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-wed-romantic-split__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-wed-romantic-split__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Our day"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-wed-romantic-split__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A celebration made for us"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-wed-romantic-split__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Text",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A graceful introduction for your wedding story, destination celebration or elegant ceremony details."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-wed-romantic-split__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Link",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Read our story",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-wed-romantic-split__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

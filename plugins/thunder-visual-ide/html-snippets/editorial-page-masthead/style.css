@@ -1,0 +1,78 @@
+.epm-mas {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.epm-mas *, .epm-mas *::before, .epm-mas *::after {
+    box-sizing: border-box;
+}
+
+.epm-mas button, .epm-mas input, .epm-mas select, .epm-mas textarea {
+    font: inherit;
+}
+
+.epm-mas a {
+    color: inherit;
+}
+
+.epm-mas {
+    max-width: 72rem;
+    padding: clamp(1.5rem, 5vw, 3.5rem);
+    border-top: 0.45rem solid var(--thv-theme-primary);
+    border-bottom: 1px solid var(--thv-theme-border);
+    background: var(--thv-theme-background);
+}
+
+.epm-mas nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    color: var(--thv-theme-muted);
+    font-size: 0.75rem;
+}
+
+.epm-mas nav a {
+    text-decoration: none;
+}
+
+.epm-mas nav strong {
+    color: var(--thv-theme-text);
+}
+
+.epm-mas__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.6fr);
+    gap: 2rem;
+    align-items: end;
+    margin-top: 2rem;
+}
+
+.epm-mas__layout span {
+    color: var(--thv-theme-primary);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.epm-mas h1 {
+    max-width: 14ch;
+    margin: 0.45rem 0 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2.5rem, 7vw, 6rem);
+    line-height: 0.92;
+}
+
+.epm-mas__layout p {
+    margin: 0;
+    color: var(--thv-theme-muted);
+    line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+    .epm-mas__layout {
+        grid-template-columns: 1fr;
+    }
+
+}

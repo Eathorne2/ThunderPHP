@@ -1,0 +1,17 @@
+{
+  "id": "split-screen-login",
+  "name": "Split Screen Login",
+  "description": "A polished two-column login screen with password visibility and remember-me controls.",
+  "category": "Authentication",
+  "order": 200,
+  "tags": [
+    "login",
+    "authentication",
+    "form",
+    "split"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,60 @@
+<section class="split-contact">
+    <div class="split-contact__info">
+        <span>Contact us</span>
+        <h2>Let’s talk about your project</h2>
+        <p>Tell us what you are building and we will respond with practical next steps.</p>
+        <ul>
+            <li>
+                <strong>Email</strong>
+                <a href="mailto:hello@example.com">hello@example.com</a>
+            </li>
+            <li>
+                <strong>Phone</strong>
+                <a href="tel:+260970000000">+260 97 000 0000</a>
+            </li>
+            <li>
+                <strong>Office</strong>
+                <span>Lusaka, Zambia</span>
+            </li>
+        </ul>
+        <div class="split-contact__note">
+            <strong>Typical response time</strong>
+            <span>Within one business day</span>
+        </div>
+    </div>
+    <form class="split-contact__form" action="" method="post" data-contact-form>
+        <div class="field-row">
+            <label>
+                First name
+                <input type="text" name="first_name" required>
+            </label>
+            <label>
+                Last name
+                <input type="text" name="last_name" required>
+            </label>
+        </div>
+        <label>
+            Email address
+            <input type="email" name="email" required>
+        </label>
+        <label>
+            Project type
+            <select name="project_type">
+                <option>New website</option>
+                <option>Internal system</option>
+                <option>Plugin development</option>
+                <option>Consultation</option>
+            </select>
+        </label>
+        <label>
+            How can we help?
+            <textarea name="message" rows="5" required></textarea>
+        </label>
+        <label class="consent">
+            <input type="checkbox" required>
+            I agree to be contacted about this request.
+        </label>
+        <button type="submit">Send enquiry</button>
+        <p class="split-contact__result" data-contact-result aria-live="polite"></p>
+    </form>
+</section>

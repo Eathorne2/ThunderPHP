@@ -1,0 +1,18 @@
+{
+  "id": "alpine-lodge-header-footer",
+  "name": "Alpine Lodge Header and Footer",
+  "description": "A warm mountain lodge shell with seasonal navigation, cabin booking and a coordinated alpine footer.",
+  "category": "Travel & Hotels",
+  "order": 5020,
+  "tags": [
+    "travel",
+    "hotel",
+    "header",
+    "footer",
+    "alpine lodge & cabins"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

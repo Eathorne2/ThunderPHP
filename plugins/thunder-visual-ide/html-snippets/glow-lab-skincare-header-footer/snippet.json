@@ -1,0 +1,18 @@
+{
+  "id": "glow-lab-skincare-header-footer",
+  "name": "Glow Lab Skincare Header and Footer",
+  "description": "A coordinated responsive header and footer set for GLOW / LAB.",
+  "category": "Fashion & Beauty",
+  "order": 4130,
+  "tags": [
+    "header footer",
+    "fashion",
+    "beauty",
+    "responsive",
+    "glow / lab"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

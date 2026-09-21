@@ -1,0 +1,33 @@
+{
+  "type": "authorization.set_permissions",
+  "label": "Set Current Permissions",
+  "category": "Authorization",
+  "kind": "architecture",
+  "icon": "SET P",
+  "color": "#a21caf",
+  "description": "Creates a top-level user_permissions filter for loading the current user's permission slugs.",
+  "allowed_graphs": ["architecture"],
+  "nested_graph": true,
+  "nested_graph_kind": "flow",
+  "nested_graph_label": "Permission Loader",
+  "singleton": true,
+  "defaults": {
+    "title": "Current User Permissions",
+    "literal_permissions": "",
+    "graph_id": ""
+  },
+  "properties": [
+    {"name": "title", "label": "Node title", "type": "text"},
+    {
+      "name": "literal_permissions",
+      "label": "Literal permission slugs",
+      "type": "textarea",
+      "help": "Comma-separated or one per line. For database-backed permissions, open the nested Permission Loader graph and return the merged array."
+    }
+  ],
+  "ports": {"inputs": [], "outputs": []},
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Authorization\\SetPermissionsCompiler",
+    "file": "Compiler.php"
+  }
+}

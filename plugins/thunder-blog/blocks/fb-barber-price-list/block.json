@@ -1,0 +1,240 @@
+{
+  "slug": "fb-barber-price-list",
+  "name": "Barber Price List",
+  "category": "Fashion & Beauty",
+  "description": "Strong barber service menu with image and editable prices.",
+  "keywords": [
+    "barber",
+    "grooming",
+    "price",
+    "services"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-fb-barber\"><div class=\"tb-fb-barber__media\">{{elements:image}}</div><div class=\"tb-fb-barber__copy\">{{elements:eyebrow}}{{elements:title}}<div class=\"tb-fb-barber__prices\">{{elements:prices}}</div>{{elements:cta}}</div></div>",
+  "css": ".tb-fb-barber{display:grid;grid-template-columns:minmax(300px,.85fr) minmax(0,1.15fr);background:var(--tb-color-secondary);color:var(--tb-color-surface)}.tb-fb-barber__media{min-height:620px}.tb-fb-barber__image{width:100%;height:100%;min-height:620px;object-fit:cover;display:block;filter:saturate(.8)}.tb-fb-barber__copy{padding:clamp(32px,6vw,82px)}.tb-fb-barber__eyebrow{color:var(--tb-color-accent);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-fb-barber__title{margin:10px 0 26px;color:var(--tb-color-surface);font-family:Georgia,serif;font-size:clamp(42px,6vw,70px);font-weight:500}.tb-fb-barber__prices{display:grid}.tb-fb-barber__price{display:grid;grid-template-columns:1fr auto;gap:16px;padding:16px 0;border-top:1px solid color-mix(in srgb,var(--tb-color-surface) 24%,transparent)}.tb-fb-barber__service{margin:0;color:var(--tb-color-surface);font-size:18px}.tb-fb-barber__detail{margin:5px 0 0;color:color-mix(in srgb,var(--tb-color-surface) 68%,transparent);font-size:13px}.tb-fb-barber__amount{color:var(--tb-color-accent);font-family:Georgia,serif;font-size:24px}.tb-fb-barber__cta{display:inline-flex;margin-top:24px;padding:12px 18px;background:var(--tb-color-accent);color:var(--tb-color-secondary);text-decoration:none;font-weight:900}@media(max-width:760px){.tb-fb-barber{grid-template-columns:1fr}.tb-fb-barber__media,.tb-fb-barber__image{min-height:400px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "image",
+      "label": "Barber image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Barber working in a grooming studio"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-fb-barber__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-fb-barber__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Grooming studio"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-fb-barber__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Services & prices"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-fb-barber__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "prices",
+      "label": "Price item",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "service": "Signature cut",
+        "detail": "Consultation, cut and finish",
+        "price": "$38"
+      },
+      "schema": [
+        {
+          "key": "service",
+          "label": "Service",
+          "type": "text",
+          "selector": ".tb-fb-barber__service"
+        },
+        {
+          "key": "detail",
+          "label": "Detail",
+          "type": "text",
+          "selector": ".tb-fb-barber__detail"
+        },
+        {
+          "key": "price",
+          "label": "Price",
+          "type": "text",
+          "selector": ".tb-fb-barber__amount"
+        }
+      ],
+      "template": "<div class=\"tb-fb-barber__price\"><div><h3 class=\"tb-fb-barber__service\">{{service}}</h3><p class=\"tb-fb-barber__detail\">{{detail}}</p></div><span class=\"tb-fb-barber__amount\">{{price}}</span></div>",
+      "min": 1,
+      "max": 20,
+      "default_items": [
+        {
+          "service": "Signature cut",
+          "detail": "Consultation, cut and finish",
+          "price": "$38"
+        },
+        {
+          "service": "Cut + beard",
+          "detail": "Full grooming appointment",
+          "price": "$52"
+        },
+        {
+          "service": "Classic shave",
+          "detail": "Hot towel and straight razor",
+          "price": "$30"
+        },
+        {
+          "service": "Skin fade",
+          "detail": "Precision fade and finish",
+          "price": "$42"
+        }
+      ],
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Button",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Book a chair",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-fb-barber__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "webinar-video-player",
+  "name": "Webinar Video Player",
+  "description": "A webinar player with chapter navigation and speaker information.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Video Players",
+  "order": 8069,
+  "tags": [
+    "video",
+    "webinar",
+    "chapters",
+    "player"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "discography-vinyl-grid",
+  "name": "Discography Vinyl Grid",
+  "description": "A record-store-inspired discography grid with album metadata and animated vinyl artwork.",
+  "category": "Music & Entertainment",
+  "order": 4270,
+  "tags": [
+    "music",
+    "discography",
+    "albums",
+    "vinyl",
+    "grid"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

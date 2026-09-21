@@ -1,0 +1,20 @@
+{
+  "id": "photography-proofing-grid",
+  "name": "Photography Proofing Grid",
+  "description": "A client proofing gallery with selection checkboxes, image numbers and a live selected count.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9013,
+  "tags": [
+    "gallery",
+    "proofing",
+    "photography",
+    "selection"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

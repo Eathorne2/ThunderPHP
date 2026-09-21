@@ -1,0 +1,18 @@
+{
+  "id": "corporate-trust-logo-strip",
+  "name": "Corporate Trust Logo Strip",
+  "description": "A professional client and accreditation strip with compact proof metrics and understated brand marks.",
+  "category": "Socials",
+  "order": 3570,
+  "tags": [
+    "logos",
+    "trust",
+    "corporate",
+    "clients",
+    "social proof"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

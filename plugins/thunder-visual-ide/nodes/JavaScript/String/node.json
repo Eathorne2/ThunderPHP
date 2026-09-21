@@ -1,0 +1,44 @@
+{
+  "type": "javascript.string",
+  "label": "JS String",
+  "category": "JavaScript Values",
+  "kind": "expression",
+  "icon": "STR",
+  "color": "#2563eb",
+  "description": "Outputs a browser-side string value.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "JS String",
+    "value": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "value",
+      "label": "String value",
+      "type": "textarea"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "String",
+        "type": "js-string",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\StringCompiler",
+    "file": "Compiler.php"
+  }
+}

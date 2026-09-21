@@ -1,0 +1,20 @@
+{
+  "id": "museum-exhibition-grid",
+  "name": "Museum Exhibition Grid",
+  "description": "A refined museum collection grid with accession labels, dates and object categories.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9005,
+  "tags": [
+    "gallery",
+    "museum",
+    "exhibition",
+    "art"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

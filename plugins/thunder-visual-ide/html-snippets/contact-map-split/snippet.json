@@ -1,0 +1,20 @@
+{
+  "id": "contact-map-split",
+  "name": "Contact Map Split",
+  "description": "A split contact section with office information, form and map-style panel.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Contact Us Forms",
+  "order": 8017,
+  "tags": [
+    "contact",
+    "map",
+    "office",
+    "form"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

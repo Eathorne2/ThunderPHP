@@ -1,0 +1,121 @@
+{
+  "slug": "article-intro",
+  "name": "Article Introduction",
+  "category": "Article",
+  "description": "A centered article heading with kicker, title and lead paragraph.",
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-block--article-intro\">\n  {{elements:kicker}}\n  {{elements:title}}\n  {{elements:lead}}\n</div>",
+  "css": ".tb-block--article-intro{max-width:840px;margin:0 auto;padding:34px 18px;text-align:center}.tb-article-intro__kicker{display:block;margin-bottom:14px;color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.tb-article-intro__title{margin:0;color:var(--tb-color-secondary);font-size:clamp(38px,7vw,72px);line-height:1.03;letter-spacing:-.05em}.tb-article-intro__lead{max-width:700px;margin:20px auto 0;color:var(--tb-color-muted);font-size:20px;line-height:1.7}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "kicker",
+      "label": "Kicker",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Perspective"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-article-intro__kicker\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "The idea worth slowing down to understand"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-article-intro__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "lead",
+      "label": "Lead paragraph",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Frame the subject with a clear, compelling summary that prepares readers for what follows."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 5
+        }
+      ],
+      "template": "<p class=\"tb-article-intro__lead\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

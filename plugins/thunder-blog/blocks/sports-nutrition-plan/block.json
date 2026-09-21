@@ -1,0 +1,211 @@
+{
+  "slug": "sports-nutrition-plan",
+  "name": "Sports Nutrition Plan",
+  "category": "Sports",
+  "description": "Split feature for a sport or club",
+  "keywords": [
+    "sports",
+    "nutrition",
+    "plan",
+    "feature"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-sport-nutrition-plan\"><div class=\"tb-sport-nutrition-plan__copy\">{{elements:kicker}}{{elements:heading}}{{elements:text}}<ul class=\"tb-sport-nutrition-plan__points\">{{elements:points}}</ul></div><div class=\"tb-sport-nutrition-plan__media\">{{elements:image}}</div></section>",
+  "css": ".tb-sport-nutrition-plan{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--tb-color-surface)}.tb-sport-nutrition-plan__copy{padding:clamp(40px,7vw,86px)}.tb-sport-nutrition-plan__kicker{font-size:12px;font-weight:900;color:var(--tb-color-primary);letter-spacing:.14em;text-transform:uppercase}.tb-sport-nutrition-plan__heading{font-size:clamp(38px,5vw,62px);line-height:1.05;margin:12px 0 20px}.tb-sport-nutrition-plan__text{font-size:18px;line-height:1.7;color:var(--tb-color-muted)}.tb-sport-nutrition-plan__points{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px}.tb-sport-nutrition-plan__point{padding:12px 0;border-bottom:1px solid var(--tb-color-border);font-weight:800}.tb-sport-nutrition-plan__media{min-height:560px}.tb-sport-nutrition-plan__image{width:100%;height:100%;min-height:560px;object-fit:cover}@media(max-width:760px){.tb-sport-nutrition-plan{grid-template-columns:1fr}.tb-sport-nutrition-plan__media,.tb-sport-nutrition-plan__image{min-height:390px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "kicker",
+      "label": "Kicker",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Fuel the work"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-sport-nutrition-plan__kicker\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "heading",
+      "label": "Heading",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Performance starts before training"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-sport-nutrition-plan__heading\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Pair sports programming with practical nutrition guidance, recovery habits and sustainable routines."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-sport-nutrition-plan__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "points",
+      "label": "Highlights",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Simple meal structure"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<li class=\"tb-sport-nutrition-plan__point\">{{text}}</li>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8,
+      "default_items": [
+        {
+          "text": "Simple meal structure"
+        },
+        {
+          "text": "Training-day fueling"
+        },
+        {
+          "text": "Recovery and hydration guidance"
+        }
+      ]
+    },
+    {
+      "key": "image",
+      "label": "Feature image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Sports Nutrition Plan"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-sport-nutrition-plan__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-sport-nutrition-plan__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

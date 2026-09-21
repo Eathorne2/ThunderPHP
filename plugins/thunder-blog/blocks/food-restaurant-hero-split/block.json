@@ -1,0 +1,239 @@
+{
+  "slug": "food-restaurant-hero-split",
+  "name": "Restaurant Hero Split",
+  "category": "Food & Restaurant",
+  "description": "Image-led restaurant introduction with opening note and booking action",
+  "keywords": [
+    "food",
+    "restaurant",
+    "hero",
+    "booking",
+    "dining"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-food-hero\"><div class=\"tb-food-hero__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}<div class=\"tb-food-hero__actions\">{{elements:cta}}{{elements:meta}}</div></div><div class=\"tb-food-hero__visual\">{{elements:image}}</div></div>",
+  "css": ".tb-food-hero{display:grid;grid-template-columns:minmax(0,.9fr) minmax(360px,1.1fr);min-height:620px;background:var(--tb-color-surface);overflow:hidden}.tb-food-hero__copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(38px,7vw,96px)}.tb-food-hero__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-food-hero__title{margin:12px 0 18px;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(48px,7vw,86px);line-height:.95}.tb-food-hero__text{max-width:560px;color:var(--tb-color-muted);font-size:18px;line-height:1.75}.tb-food-hero__actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:26px}.tb-food-hero__cta{display:inline-flex;padding:13px 20px;background:var(--tb-color-primary);color:var(--tb-color-surface);text-decoration:none;font-weight:850}.tb-food-hero__meta{font-weight:800;color:var(--tb-color-secondary)}.tb-food-hero__image{width:100%;height:100%;min-height:620px;object-fit:cover;display:block}@media(max-width:780px){.tb-food-hero{grid-template-columns:1fr}.tb-food-hero__image{min-height:420px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Seasonal kitchen"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-food-hero__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Food worth gathering around"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-food-hero__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A warm neighborhood restaurant built around fresh ingredients, generous plates and relaxed evenings."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-food-hero__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Booking button",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Reserve a table",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-food-hero__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "meta",
+      "label": "Opening note",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Dinner · Tue–Sun"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-food-hero__meta\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "image",
+      "label": "Restaurant image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Restaurant dining room"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-food-hero__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-food-hero__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

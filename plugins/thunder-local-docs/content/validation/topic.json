@@ -1,0 +1,11 @@
+{
+    "id": 2,
+    "title": "Form Validation",
+    "slug": "validation",
+    "description": "Validate incoming data using ThunderPHP's Core\\Validate class with built-in rules, custom hooks, file validation, and advanced uniqueness checks.",
+    "icon": "",
+    "type": "reference",
+    "featured": false,
+    "published": true,
+    "order": 1
+}

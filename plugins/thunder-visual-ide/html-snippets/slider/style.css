@@ -1,0 +1,76 @@
+.quote-slider {
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: linear-gradient(135deg, var(--thv-theme-primary, #312e81), var(--thv-theme-secondary, #1d4ed8));
+    box-shadow: 0 22px 55px color-mix(in srgb, var(--thv-theme-secondary, #2563eb) 25%, transparent);
+}
+
+.quote-slider__slide {
+    animation: quote-slide-in 220ms ease-out;
+}
+
+.quote-slider blockquote {
+    margin: 0;
+    font-size: clamp(1.1rem, 2.8vw, 1.55rem);
+    line-height: 1.5;
+}
+
+.quote-slider__slide p {
+    display: grid;
+    gap: 0.2rem;
+    margin: 1.2rem 0 0;
+}
+
+.quote-slider__slide span {
+    color: color-mix(in srgb, var(--thv-theme-secondary, #2563eb) 24%, var(--thv-theme-surface, #ffffff));
+    font-size: 0.85rem;
+}
+
+.quote-slider__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.quote-slider__controls button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    border-radius: 999px;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: rgba(255, 255, 255, 0.12);
+    cursor: pointer;
+}
+
+.quote-slider__dots {
+    display: flex;
+    gap: 0.45rem;
+}
+
+.quote-slider__dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.38);
+}
+
+.quote-slider__dot.is-active {
+    width: 1.5rem;
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+@keyframes quote-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

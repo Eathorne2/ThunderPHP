@@ -1,0 +1,18 @@
+{
+  "id": "black-tie-wedding-header-footer",
+  "name": "Black Tie Wedding Header and Footer",
+  "description": "A luxurious dark wedding shell with formal navigation, champagne accents and an elegant event footer.",
+  "category": "Wedding",
+  "order": 4740,
+  "tags": [
+    "black tie",
+    "luxury wedding",
+    "header",
+    "footer",
+    "formal"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

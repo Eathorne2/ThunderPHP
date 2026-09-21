@@ -1,0 +1,20 @@
+{
+  "id": "product-demo-player",
+  "name": "Product Demo Player",
+  "description": "A product demo player with feature chapters and call-to-action controls.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Video Players",
+  "order": 8070,
+  "tags": [
+    "video",
+    "product",
+    "demo",
+    "player"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

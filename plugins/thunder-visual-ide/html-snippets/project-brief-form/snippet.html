@@ -1,0 +1,63 @@
+<section class="pbf-for" data-pbf-for="">
+    <div class="pbf-for__intro">
+        <span>
+            Start a conversation
+        </span>
+        <h2>
+            Project Brief Form
+        </h2>
+        <p>
+            Share a few details and the right member of our team will respond with a clear next step.
+        </p>
+    </div>
+    <form class="pbf-for__form">
+        <div class="pbf-for__row">
+            <label>
+                Full name
+                <input name="name" placeholder="Your name" required=""/>
+            </label>
+            <label>
+                Email address
+                <input name="email" placeholder="name@example.com" required="" type="email"/>
+            </label>
+        </div>
+        <div class="pbf-for__row">
+            <label>
+                Topic
+                <select data-topic="" name="topic">
+                    <option>
+                        General enquiry
+                    </option>
+                    <option>
+                        New project
+                    </option>
+                    <option>
+                        Support
+                    </option>
+                    <option>
+                        Partnership
+                    </option>
+                </select>
+            </label>
+            <label>
+                Preferred timing
+                <input name="timing" placeholder="This week"/>
+            </label>
+        </div>
+        <label>
+            Message
+            <textarea name="message" placeholder="Tell us what you need..." required="" rows="5"></textarea>
+        </label>
+        <div class="pbf-for__footer">
+            <label class="pbf-for__check">
+                <input required="" type="checkbox"/>
+                I agree to the privacy notice.
+            </label>
+            <button type="submit">
+                Send enquiry
+            </button>
+        </div>
+        <p data-status="" role="status">
+        </p>
+    </form>
+</section>

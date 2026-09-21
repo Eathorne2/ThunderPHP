@@ -1,0 +1,340 @@
+{
+    "name": "Thunder Authentication",
+    "type": "Companion",
+    "version": "1.1.0",
+    "core_requires": "^1.0.0",
+    "id": "thunder-authentication",
+    "description": "Authentication, registration, profiles, users, roles, permissions and custom user fields for ThunderPHP.",
+    "author": "Eathorne Choongo",
+    "website": "thunderphp.com",
+    "thumbnail": "thumbnail.jpg",
+    "active": true,
+    "look": "clean-card",
+    "index": 2,
+    "permissions": [
+        {
+            "name": "View Users",
+            "slug": "auth.view_users",
+            "group": "User Management",
+            "description": "View user accounts and account details."
+        },
+        {
+            "name": "Create Users",
+            "slug": "auth.create_users",
+            "group": "User Management",
+            "description": "Create user accounts."
+        },
+        {
+            "name": "Edit Users",
+            "slug": "auth.edit_users",
+            "group": "User Management",
+            "description": "Edit user accounts and profile data."
+        },
+        {
+            "name": "Delete Users",
+            "slug": "auth.delete_users",
+            "group": "User Management",
+            "description": "Delete user accounts."
+        },
+        {
+            "name": "Disable Users",
+            "slug": "auth.disable_users",
+            "group": "User Management",
+            "description": "Disable and reactivate user accounts."
+        },
+        {
+            "name": "Assign Roles",
+            "slug": "auth.assign_roles",
+            "group": "User Management",
+            "description": "Assign and remove roles on user accounts."
+        },
+        {
+            "name": "Reset User Passwords",
+            "slug": "auth.reset_user_passwords",
+            "group": "User Management",
+            "description": "Set a new password for another user."
+        },
+        {
+            "name": "View Private User Fields",
+            "slug": "auth.view_private_user_fields",
+            "group": "User Management",
+            "description": "View private custom user fields."
+        },
+        {
+            "name": "Edit Private User Fields",
+            "slug": "auth.edit_private_user_fields",
+            "group": "User Management",
+            "description": "Edit private custom user fields."
+        },
+        {
+            "name": "Export Users",
+            "slug": "auth.export_users",
+            "group": "User Management",
+            "description": "Export filtered user records as CSV."
+        },
+        {
+            "name": "View Roles",
+            "slug": "auth.view_roles",
+            "group": "Roles and Permissions",
+            "description": "View roles and assigned permissions."
+        },
+        {
+            "name": "Create Roles",
+            "slug": "auth.create_roles",
+            "group": "Roles and Permissions",
+            "description": "Create user roles."
+        },
+        {
+            "name": "Edit Roles",
+            "slug": "auth.edit_roles",
+            "group": "Roles and Permissions",
+            "description": "Edit user roles."
+        },
+        {
+            "name": "Delete Roles",
+            "slug": "auth.delete_roles",
+            "group": "Roles and Permissions",
+            "description": "Delete unprotected roles."
+        },
+        {
+            "name": "Assign Permissions",
+            "slug": "auth.assign_permissions",
+            "group": "Roles and Permissions",
+            "description": "Assign plugin-provided permissions to roles."
+        },
+        {
+            "name": "View User Fields",
+            "slug": "auth.view_user_fields",
+            "group": "Extra Fields",
+            "description": "View custom user fields."
+        },
+        {
+            "name": "Create User Fields",
+            "slug": "auth.create_user_fields",
+            "group": "Extra Fields",
+            "description": "Create custom user fields."
+        },
+        {
+            "name": "Edit User Fields",
+            "slug": "auth.edit_user_fields",
+            "group": "Extra Fields",
+            "description": "Edit custom user fields."
+        },
+        {
+            "name": "Delete User Fields",
+            "slug": "auth.delete_user_fields",
+            "group": "Extra Fields",
+            "description": "Delete custom user fields."
+        },
+        {
+            "name": "Reorder User Fields",
+            "slug": "auth.reorder_user_fields",
+            "group": "Extra Fields",
+            "description": "Change custom field display order."
+        },
+        {
+            "name": "View Authentication Settings",
+            "slug": "auth.view_settings",
+            "group": "Authentication Settings",
+            "description": "View Thunder Authentication settings."
+        },
+        {
+            "name": "Edit Authentication Settings",
+            "slug": "auth.edit_settings",
+            "group": "Authentication Settings",
+            "description": "Edit Thunder Authentication settings."
+        },
+        {
+            "name": "Manage Authentication Looks",
+            "slug": "auth.manage_looks",
+            "group": "Authentication Settings",
+            "description": "Change the active authentication look."
+        },
+        {
+            "name": "Manage Authentication Palettes",
+            "slug": "auth.manage_palettes",
+            "group": "Authentication Settings",
+            "description": "Change authentication palettes and custom colors."
+        }
+    ],
+    "routes": {
+        "on": [
+            "all"
+        ],
+        "off": [],
+        "routes": [
+            {
+                "method": "GET",
+                "pattern": "/login",
+                "name": "auth.login"
+            },
+            {
+                "method": "POST",
+                "pattern": "/login",
+                "name": "auth.login.submit"
+            },
+            {
+                "method": "GET",
+                "pattern": "/logout",
+                "name": "auth.logout"
+            },
+            {
+                "method": "GET",
+                "pattern": "/signup",
+                "name": "auth.signup"
+            },
+            {
+                "method": "POST",
+                "pattern": "/signup",
+                "name": "auth.signup.submit"
+            },
+            {
+                "method": "GET",
+                "pattern": "/account",
+                "name": "auth.account"
+            },
+            {
+                "method": "POST",
+                "pattern": "/account/profile",
+                "name": "auth.account.profile"
+            },
+            {
+                "method": "POST",
+                "pattern": "/account/password",
+                "name": "auth.account.password"
+            },
+            {
+                "method": "GET",
+                "pattern": "/profile/{username}",
+                "name": "auth.profile"
+            },
+            {
+                "method": "GET",
+                "pattern": "/admin/auth/users",
+                "name": "auth.admin.users"
+            },
+            {
+                "method": "GET",
+                "pattern": "/admin/auth/users/export",
+                "name": "auth.admin.users.export"
+            },
+            {
+                "method": "GET",
+                "pattern": "/admin/auth/users/create",
+                "name": "auth.admin.users.create"
+            },
+            {
+                "method": "POST",
+                "pattern": "/admin/auth/users/create",
+                "name": "auth.admin.users.store"
+            },
+            {
+                "method": "GET",
+                "pattern": "/admin/auth/users/{id}",
+                "name": "auth.admin.users.edit"
+            },
+            {
+                "method": "POST",
+                "pattern": "/admin/auth/users/{id}",
+                "name": "auth.admin.users.update"
+            },
+            {
+                "method": "POST",
+                "pattern": "/admin/auth/users/{id}/toggle",
+                "name": "auth.admin.users.toggle"
+            },
+            {
+                "method": "POST",
+                "pattern": "/admin/auth/users/{id}/delete",
+                "name": "auth.admin.users.delete"
+            },
+            {
+                "method": "GET",
+                "pattern": "/admin/auth/roles",
+                "name": "auth.admin.roles"
+            },
+            {
+                "method": "GET",
+                "pattern": "/admin/auth/roles/create",
+                "name": "auth.admin.roles.create"
+            },
+            {
+                "method": "POST",
+                "pattern": "/admin/auth/roles/create",
+                "name": "auth.admin.roles.store"
+            },
+            {
+                "method": "GET",
+                "pattern": "/admin/auth/roles/{id}",
+                "name": "auth.admin.roles.edit"
+            },
+            {
+                "method": "POST",
+                "pattern": "/admin/auth/roles/{id}",
+                "name": "auth.admin.roles.update"
+            },
+            {
+                "method": "POST",
+                "pattern": "/admin/auth/roles/{id}/duplicate",
+                "name": "auth.admin.roles.duplicate"
+            },
+            {
+                "method": "POST",
+                "pattern": "/admin/auth/roles/{id}/delete",
+                "name": "auth.admin.roles.delete"
+            },
+            {
+                "method": "GET",
+                "pattern": "/admin/auth/fields",
+                "name": "auth.admin.fields"
+            },
+            {
+                "method": "GET",
+                "pattern": "/admin/auth/fields/create",
+                "name": "auth.admin.fields.create"
+            },
+            {
+                "method": "POST",
+                "pattern": "/admin/auth/fields/create",
+                "name": "auth.admin.fields.store"
+            },
+            {
+                "method": "GET",
+                "pattern": "/admin/auth/fields/{id}",
+                "name": "auth.admin.fields.edit"
+            },
+            {
+                "method": "POST",
+                "pattern": "/admin/auth/fields/{id}",
+                "name": "auth.admin.fields.update"
+            },
+            {
+                "method": "POST",
+                "pattern": "/admin/auth/fields/{id}/move",
+                "name": "auth.admin.fields.move"
+            },
+            {
+                "method": "POST",
+                "pattern": "/admin/auth/fields/{id}/delete",
+                "name": "auth.admin.fields.delete"
+            },
+            {
+                "method": "GET",
+                "pattern": "/admin/auth/settings",
+                "name": "auth.admin.settings"
+            },
+            {
+                "method": "POST",
+                "pattern": "/admin/auth/settings",
+                "name": "auth.admin.settings.update"
+            }
+        ]
+    },
+    "dependencies": {
+        "thunder-admin": {
+            "name": "Thunder Admin",
+            "version": "1.5.0",
+            "required": false
+        }
+    }
+}

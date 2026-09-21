@@ -1,0 +1,17 @@
+{
+  "id": "law-firm-practice-areas-grid",
+  "name": "Law Firm Practice Areas Grid",
+  "description": "A six-card practice area section for multidisciplinary law firms.",
+  "category": "Business & Law",
+  "order": 5210,
+  "tags": [
+    "law",
+    "services",
+    "practice areas",
+    "grid"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

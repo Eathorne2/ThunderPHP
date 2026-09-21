@@ -1,0 +1,199 @@
+{
+  "slug": "wed-save-date-hero",
+  "name": "Save the Date Hero",
+  "category": "Wedding",
+  "description": "Romantic full-bleed save-the-date hero with couple names, date and invitation CTA",
+  "keywords": [
+    "wedding",
+    "save the date",
+    "hero",
+    "invitation"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-wed-save-date\"><div class=\"tb-wed-save-date__shade\"></div><div class=\"tb-wed-save-date__content\">{{elements:eyebrow}}{{elements:names}}{{elements:date}}{{elements:text}}{{elements:cta}}</div></div>",
+  "css": ".tb-wed-save-date{position:relative;min-height:680px;display:grid;place-items:center;padding:48px 24px;background:linear-gradient(rgba(20,16,14,.22),rgba(20,16,14,.48)),url(\"https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=82\") center/cover no-repeat;color:#fff;text-align:center;overflow:hidden}.tb-wed-save-date__shade{position:absolute;inset:0;background:radial-gradient(circle at center,transparent 0,rgba(0,0,0,.18) 72%)}.tb-wed-save-date__content{position:relative;z-index:1;max-width:850px}.tb-wed-save-date__eyebrow{display:block;margin-bottom:20px;font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase}.tb-wed-save-date__names{margin:0;font-family:Georgia,serif;font-size:clamp(58px,10vw,118px);font-weight:400;line-height:.88;letter-spacing:-.05em}.tb-wed-save-date__date{margin:24px 0 0;font-size:18px;letter-spacing:.16em;text-transform:uppercase}.tb-wed-save-date__text{max-width:620px;margin:20px auto 0;font-size:18px;line-height:1.7}.tb-wed-save-date__cta{display:inline-flex;margin-top:28px;padding:13px 22px;border:1px solid #fff;color:#fff;text-decoration:none;font-weight:800}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Save the date"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-wed-save-date__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "names",
+      "label": "Couple names",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Amelia & Noah"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-wed-save-date__names\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "date",
+      "label": "Wedding date",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "18 · 10 · 2026"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<p class=\"tb-wed-save-date__date\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Message",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Together with our families, we invite you to celebrate a day filled with love, laughter and unforgettable moments."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-wed-save-date__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Invitation button",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "View invitation",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-wed-save-date__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

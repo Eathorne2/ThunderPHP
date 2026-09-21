@@ -1,0 +1,56 @@
+.cgp-progress {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    font-family: system-ui, sans-serif
+}
+
+.cgp-progress article {
+    padding: 1rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface, #fff);
+    color: var(--thv-theme-text, #0f172a);
+    text-align: center
+}
+
+.cgp-progress article>div {
+    display: grid;
+    place-items: center;
+    width: 5.7rem;
+    height: 5.7rem;
+    margin: auto;
+    border-radius: 50%;
+    background: conic-gradient(var(--thv-theme-primary, #2563eb) calc(var(--cgp-value)*1%), #e2e8f0 0);
+    position: relative
+}
+
+.cgp-progress article>div::after {
+    content: "";
+    position: absolute;
+    inset: .55rem;
+    border-radius: 50%;
+    background: var(--thv-theme-surface, #fff)
+}
+
+.cgp-progress strong {
+    position: relative;
+    z-index: 1;
+    font-size: 1.05rem
+}
+
+.cgp-progress h4 {
+    margin: .7rem 0 .15rem
+}
+
+.cgp-progress p {
+    margin: 0;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .78rem
+}
+
+@media(max-width:620px) {
+    .cgp-progress {
+        grid-template-columns: 1fr
+    }
+}

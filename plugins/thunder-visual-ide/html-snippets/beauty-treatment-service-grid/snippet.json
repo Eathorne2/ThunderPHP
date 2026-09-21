@@ -1,0 +1,17 @@
+{
+  "id": "beauty-treatment-service-grid",
+  "name": "Beauty Treatment Service Grid",
+  "description": "A premium salon treatment grid with service details, duration and booking links.",
+  "category": "Fashion & Beauty",
+  "order": 3930,
+  "tags": [
+    "beauty",
+    "services",
+    "salon",
+    "booking"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

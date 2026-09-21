@@ -1,0 +1,162 @@
+{
+  "type": "view.modal",
+  "label": "Modal",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "MODAL",
+  "color": "#7c3aed",
+  "description": "Creates an accessible modal overlay and compiles connected View children as its dialog content.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Modal",
+    "modal_id": "example-modal",
+    "aria_label": "Dialog",
+    "initial_open": false,
+    "close_on_backdrop": true,
+    "close_on_escape": true,
+    "lock_body_scroll": true,
+    "position_type": "fixed",
+    "content_position": "center",
+    "z_index": 1000,
+    "backdrop_color": "rgba(15, 23, 42, 0.65)",
+    "content_width": "min(92vw, 42rem)",
+    "content_max_height": "min(88vh, 52rem)",
+    "content_css_class": "",
+    "content_style": "",
+    "css_class": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "modal_id",
+      "label": "Modal ID",
+      "type": "text",
+      "help": "Unique HTML ID used by connected Modal Trigger nodes and window.ThunderModal."
+    },
+    {
+      "name": "aria_label",
+      "label": "Accessible label",
+      "type": "text"
+    },
+    {
+      "name": "initial_open",
+      "label": "Initially open",
+      "type": "checkbox",
+      "help": "Fallback used when the Initially Open input port is not connected."
+    },
+    {
+      "name": "close_on_backdrop",
+      "label": "Backdrop click closes",
+      "type": "checkbox"
+    },
+    {
+      "name": "close_on_escape",
+      "label": "Escape key closes",
+      "type": "checkbox"
+    },
+    {
+      "name": "lock_body_scroll",
+      "label": "Lock page scrolling",
+      "type": "checkbox"
+    },
+    {
+      "name": "position_type",
+      "label": "Overlay position",
+      "type": "select",
+      "options": [
+        "fixed",
+        "absolute"
+      ]
+    },
+    {
+      "name": "content_position",
+      "label": "Dialog position",
+      "type": "select",
+      "options": [
+        "center",
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ]
+    },
+    {
+      "name": "z_index",
+      "label": "Z-index",
+      "type": "number"
+    },
+    {
+      "name": "backdrop_color",
+      "label": "Backdrop color",
+      "type": "text"
+    },
+    {
+      "name": "content_width",
+      "label": "Dialog width",
+      "type": "text"
+    },
+    {
+      "name": "content_max_height",
+      "label": "Dialog maximum height",
+      "type": "text"
+    },
+    {
+      "name": "css_class",
+      "label": "Overlay CSS classes",
+      "type": "text"
+    },
+    {
+      "name": "content_css_class",
+      "label": "Dialog CSS classes",
+      "type": "text"
+    },
+    {
+      "name": "content_style",
+      "label": "Dialog inline styles",
+      "type": "textarea"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "initial_open",
+        "label": "Initially Open",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      },
+      {
+        "id": "triggers",
+        "label": "Triggers",
+        "type": "modal-trigger",
+        "direction": "in",
+        "multiple": true
+      }
+    ],
+    "outputs": [
+      {
+        "id": "children",
+        "label": "Modal Content",
+        "type": "view-child",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\ModalCompiler",
+    "file": "Compiler.php"
+  }
+}

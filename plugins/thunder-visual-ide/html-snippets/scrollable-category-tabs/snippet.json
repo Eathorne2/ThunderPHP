@@ -1,0 +1,20 @@
+{
+  "id": "scrollable-category-tabs",
+  "name": "Scrollable Category Tabs",
+  "description": "A horizontally scrollable category tab bar with active-state controls.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Navigation - Tabs",
+  "order": 8048,
+  "tags": [
+    "tabs",
+    "categories",
+    "scrollable",
+    "navigation"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

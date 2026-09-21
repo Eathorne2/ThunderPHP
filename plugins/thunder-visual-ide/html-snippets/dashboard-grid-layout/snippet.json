@@ -1,0 +1,17 @@
+{
+  "id": "dashboard-grid-layout",
+  "name": "Dashboard Grid Layout",
+  "description": "A responsive dashboard grid with summary metrics, activity, progress, and a highlighted task panel.",
+  "category": "Grid Layouts",
+  "order": 3320,
+  "tags": [
+    "grid",
+    "dashboard",
+    "metrics",
+    "layout"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

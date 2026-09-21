@@ -1,0 +1,106 @@
+.responsive-card-grid {
+    max-width: 76rem;
+    margin: 0 auto;
+    padding: clamp(1rem, 4vw, 3rem);
+    color: var(--thv-theme-text, #172033);
+}
+
+.responsive-card-grid__header,
+.responsive-card-grid article footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.responsive-card-grid__header {
+    align-items: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+.responsive-card-grid__header p,
+.responsive-card-grid__header h2 {
+    margin: 0;
+}
+
+.responsive-card-grid__header p {
+    color: var(--thv-theme-primary, #4f46e5);
+    font-size: 0.75rem;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.responsive-card-grid__header h2 {
+    max-width: 40rem;
+    margin-top: 0.4rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    letter-spacing: -0.04em;
+}
+
+.responsive-card-grid__header > a,
+.responsive-card-grid article a {
+    color: var(--thv-theme-primary, #4f46e5);
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.responsive-card-grid__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: 1rem;
+}
+
+.responsive-card-grid article {
+    display: flex;
+    min-height: 16rem;
+    flex-direction: column;
+    padding: 1.3rem;
+    border: 1px solid var(--thv-theme-border, #dce3ec);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface, #ffffff);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.responsive-card-grid article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2.5rem rgba(23, 32, 51, 0.09);
+}
+
+.responsive-card-grid__tag {
+    align-self: flex-start;
+    padding: 0.35rem 0.55rem;
+    border-radius: 999px;
+    color: var(--thv-theme-primary, #4f46e5);
+    background: color-mix(in srgb, var(--thv-theme-primary, #4f46e5) 9%, transparent);
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.responsive-card-grid article h3 {
+    margin: 1rem 0 0.55rem;
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+.responsive-card-grid article p,
+.responsive-card-grid article footer span {
+    color: var(--thv-theme-muted, #667085);
+}
+
+.responsive-card-grid article p {
+    line-height: 1.6;
+}
+
+.responsive-card-grid article footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    font-size: 0.78rem;
+}
+
+@media (max-width: 600px) {
+    .responsive-card-grid__header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

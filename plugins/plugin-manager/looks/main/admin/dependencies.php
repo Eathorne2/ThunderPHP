@@ -1,0 +1,8 @@
+<?php namespace PluginManager; if(!defined('ROOT')) exit('No direct script access allowed');
+$missing = get_value('plugin_manager_missing') ?? []; $outdated = get_value('plugin_manager_outdated') ?? []; $adminRoute = (get_value()['admin_route'] ?? 'admin');
+?>
+<div class="pm-wrap">
+    <div class="pm-head"><div><h1>Plugin Dependencies</h1><p>Required, optional and core compatibility warnings.</p></div><a class="pm-btn" href="<?=ROOT?>/<?=$adminRoute?>/plugins">Back</a></div>
+    <div class="pm-panel"><h2>Missing Dependencies</h2><?php if(empty($missing)): ?><div class="pm-alert pm-alert-success">No missing dependencies found.</div><?php else: ?><table class="pm-table"><tr><th>Name</th><th>ID</th><th>Version</th><th>Required</th><th>Requested By</th></tr><?php foreach($missing as $row): $row = (array)$row;?><tr><td><?=e($row['name'] ?? '')?></td><td><?=e($row['id'] ?? '')?></td><td><?=e($row['version'] ?? '')?></td><td><?=!empty($row['required'])?'Yes':'Optional'?></td><td><?=e($row['requester_name'] ?? '')?> (<?=e($row['requester_id'] ?? '')?>)</td></tr><?php endforeach; ?></table><?php endif; ?></div>
+    <div class="pm-panel"><h2>Core Compatibility</h2><?php if(empty($outdated)): ?><div class="pm-alert pm-alert-success">No core compatibility warnings found.</div><?php else: ?><table class="pm-table"><tr><th>Name</th><th>ID</th><th>Version</th><th>Core Requires</th><th>Core Version</th></tr><?php foreach($outdated as $row): $row = (array)$row;?><tr><td><?=e($row['name'] ?? '')?></td><td><?=e($row['id'] ?? '')?></td><td><?=e($row['version'] ?? '')?></td><td><?=e($row['core_requires'] ?? '')?></td><td><?=e($row['core_version'] ?? '')?></td></tr><?php endforeach; ?></table><?php endif; ?></div>
+</div>

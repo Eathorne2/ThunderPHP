@@ -1,0 +1,17 @@
+{
+  "id": "services-icon-grid",
+  "name": "Services Icon Grid",
+  "description": "A service offering grid with numbered icon tiles, descriptions, details, and individual action links.",
+  "category": "Icon Grids",
+  "order": 3340,
+  "tags": [
+    "icons",
+    "grid",
+    "services",
+    "business"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

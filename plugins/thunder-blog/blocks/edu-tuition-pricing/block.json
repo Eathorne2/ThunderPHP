@@ -1,0 +1,213 @@
+{
+  "slug": "edu-tuition-pricing",
+  "name": "Tuition & Course Pricing",
+  "category": "Education",
+  "description": "Three pricing plans for language centers, tutoring and online programs",
+  "keywords": [
+    "education",
+    "pricing",
+    "tuition",
+    "courses"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-edu-pricing\"><div class=\"tb-edu-pricing__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-edu-pricing__grid\">{{elements:plans}}</div></div>",
+  "css": ".tb-edu-pricing{padding:clamp(34px,6vw,78px);background:var(--tb-color-background)}.tb-edu-pricing__head{max-width:720px;margin:0 auto 30px;text-align:center}.tb-edu-pricing__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.15em}.tb-edu-pricing__title{margin:8px 0;color:var(--tb-color-secondary);font-size:clamp(40px,5vw,60px)}.tb-edu-pricing__text{color:var(--tb-color-muted);line-height:1.7}.tb-edu-pricing__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tb-edu-pricing__plan{padding:28px;border:1px solid var(--tb-color-border);background:var(--tb-color-surface)}.tb-edu-pricing__name{margin:0;color:var(--tb-color-secondary);font-size:26px}.tb-edu-pricing__price{display:inline-block;margin-top:24px;color:var(--tb-color-primary);font-size:38px;font-weight:950}.tb-edu-pricing__period{color:var(--tb-color-muted)}.tb-edu-pricing__plan-text,.tb-edu-pricing__features{color:var(--tb-color-muted);line-height:1.65}.tb-edu-pricing__features{padding-top:18px;border-top:1px solid var(--tb-color-border);font-size:13px}@media(max-width:760px){.tb-edu-pricing__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Simple tuition"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-edu-pricing__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Choose the learning plan that fits"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-edu-pricing__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Use for tuition tiers, tutoring plans, memberships or online learning subscriptions."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-edu-pricing__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "plans",
+      "label": "Pricing plan",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "name": "Starter",
+        "price": "K450",
+        "period": "/ month",
+        "text": "One guided course with community access.",
+        "features": "Weekly lessons · exercises · community"
+      },
+      "schema": [
+        {
+          "key": "name",
+          "label": "Name",
+          "type": "text",
+          "selector": ".tb-edu-pricing__name"
+        },
+        {
+          "key": "price",
+          "label": "Price",
+          "type": "text",
+          "selector": ".tb-edu-pricing__price"
+        },
+        {
+          "key": "period",
+          "label": "Period",
+          "type": "text",
+          "selector": ".tb-edu-pricing__period"
+        },
+        {
+          "key": "text",
+          "label": "Description",
+          "type": "textarea",
+          "selector": ".tb-edu-pricing__plan-text",
+          "rows": 2
+        },
+        {
+          "key": "features",
+          "label": "Features",
+          "type": "textarea",
+          "selector": ".tb-edu-pricing__features",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-edu-pricing__plan\"><h3 class=\"tb-edu-pricing__name\">{{name}}</h3><strong class=\"tb-edu-pricing__price\">{{price}}</strong><span class=\"tb-edu-pricing__period\">{{period}}</span><p class=\"tb-edu-pricing__plan-text\">{{text}}</p><p class=\"tb-edu-pricing__features\">{{features}}</p></article>",
+      "min": 1,
+      "max": 6,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "name": "Starter",
+          "price": "K450",
+          "period": "/ month",
+          "text": "One guided course with community access.",
+          "features": "Weekly lessons · exercises · community"
+        },
+        {
+          "name": "Plus",
+          "price": "K850",
+          "period": "/ month",
+          "text": "Two courses plus instructor feedback.",
+          "features": "Everything in Starter · feedback · certificates"
+        },
+        {
+          "name": "Pro",
+          "price": "K1,500",
+          "period": "/ month",
+          "text": "Focused learning for professional advancement.",
+          "features": "Unlimited courses · mentor sessions · priority support"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

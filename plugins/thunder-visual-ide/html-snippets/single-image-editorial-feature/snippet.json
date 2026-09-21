@@ -1,0 +1,20 @@
+{
+  "id": "single-image-editorial-feature",
+  "name": "Single Image Editorial Feature",
+  "description": "A magazine-style single-image page with headline, byline, metadata and a long-form caption.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9101,
+  "tags": [
+    "single image",
+    "editorial",
+    "detail page",
+    "magazine"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,107 @@
+.bmp-card {
+    width: min(100%, 38rem);
+    padding: clamp(1.25rem, 4vw, 2rem);
+    border: 1px solid var(--thv-theme-border, #d7dee6);
+    border-top: 4px solid var(--thv-theme-primary, #244f7f);
+    color: var(--thv-theme-text, #172238);
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.bmp-card header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bmp-card header img {
+    width: 5.2rem;
+    height: 5.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.bmp-card header span {
+    color: var(--thv-theme-primary, #244f7f);
+    font-size: .65rem;
+    font-weight: 850;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.bmp-card h2 {
+    margin: .35rem 0 .2rem;
+    font-family: Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.bmp-card header p {
+    margin: 0;
+    color: var(--thv-theme-muted, #667386);
+    font-size: .72rem;
+}
+
+.bmp-card__roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid var(--thv-theme-border, #d7dee6);
+    border-bottom: 1px solid var(--thv-theme-border, #d7dee6);
+}
+
+.bmp-card__roles span {
+    padding: .4rem .58rem;
+    border-radius: 999px;
+    color: var(--thv-theme-primary, #244f7f);
+    background: color-mix(in srgb, var(--thv-theme-primary, #244f7f) 9%, transparent);
+    font-size: .67rem;
+    font-weight: 750;
+}
+
+.bmp-card__summary,
+.bmp-card__bio p {
+    color: var(--thv-theme-muted, #667386);
+    font-size: .8rem;
+    line-height: 1.7;
+}
+
+.bmp-card__bio {
+    padding-top: .1rem;
+}
+
+.bmp-card footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.bmp-card footer :where(button, a) {
+    border: 0;
+    color: var(--thv-theme-text, #172238);
+    background: transparent;
+    font: inherit;
+    font-size: .72rem;
+    font-weight: 850;
+    text-decoration: none;
+}
+
+.bmp-card footer button {
+    padding: .65rem .8rem;
+    border: 1px solid var(--thv-theme-border, #d7dee6);
+}
+
+@media (max-width: 480px) {
+    .bmp-card header {
+        grid-template-columns: 1fr;
+    }
+
+    .bmp-card footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

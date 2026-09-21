@@ -1,0 +1,137 @@
+.gradient-hero {
+    position: relative;
+    display: grid;
+    min-height: 42rem;
+    overflow: hidden;
+    place-items: center;
+    padding: clamp(3rem, 9vw, 7rem) 1.2rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: linear-gradient(145deg, var(--thv-theme-primary, #4f46e5), #10142f 72%);
+    isolation: isolate;
+}
+
+.gradient-hero__glow {
+    position: absolute;
+    z-index: -1;
+    width: 28rem;
+    height: 28rem;
+    border-radius: 50%;
+    filter: blur(35px);
+    opacity: 0.35;
+}
+
+.gradient-hero__glow--one {
+    top: -12rem;
+    left: -8rem;
+    background: #22d3ee;
+}
+
+.gradient-hero__glow--two {
+    right: -10rem;
+    bottom: -14rem;
+    background: #f472b6;
+}
+
+.gradient-hero__content {
+    max-width: 62rem;
+    text-align: center;
+}
+
+.gradient-hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+    color: inherit;
+    background: rgba(255, 255, 255, 0.09);
+    font-size: 0.82rem;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+}
+
+.gradient-hero__badge span {
+    padding: 0.2rem 0.45rem;
+    border-radius: 999px;
+    color: #10142f;
+    background: #ffffff;
+    font-size: 0.68rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.gradient-hero h1 {
+    margin: 1.4rem 0 1rem;
+    font-size: clamp(3rem, 8vw, 6.6rem);
+    letter-spacing: -0.065em;
+    line-height: 0.95;
+}
+
+.gradient-hero__content > p {
+    max-width: 46rem;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+.gradient-hero__actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+
+.gradient-hero__actions a {
+    padding: 0.9rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 0.8rem;
+    color: inherit;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.gradient-hero__actions .is-primary {
+    border-color: #ffffff;
+    color: #10142f;
+    background: #ffffff;
+}
+
+.gradient-hero__proof {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    margin-top: 2.3rem;
+}
+
+.gradient-hero__avatars {
+    display: flex;
+}
+
+.gradient-hero__avatars img {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-left: -0.55rem;
+    border: 2px solid #1b2046;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.gradient-hero__avatars img:first-child {
+    margin-left: 0;
+}
+
+.gradient-hero__proof p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 0.82rem;
+    text-align: left;
+}
+
+.gradient-hero__proof strong {
+    display: block;
+    color: #ffffff;
+}

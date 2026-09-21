@@ -1,0 +1,19 @@
+{
+  "id": "corporate-advisory-header-footer",
+  "name": "Corporate Advisory Header and Footer",
+  "description": "Independent legal and strategic counsel for boards and executive teams.",
+  "category": "Business & Law",
+  "order": 5402,
+  "tags": [
+    "header",
+    "footer",
+    "business",
+    "law",
+    "navigation",
+    "corporate advisory"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

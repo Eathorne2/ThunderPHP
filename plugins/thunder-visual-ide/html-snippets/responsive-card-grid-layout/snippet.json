@@ -1,0 +1,17 @@
+{
+  "id": "responsive-card-grid-layout",
+  "name": "Responsive Card Grid Layout",
+  "description": "A flexible responsive card grid with varied content, metadata, and consistent action placement.",
+  "category": "Grid Layouts",
+  "order": 3300,
+  "tags": [
+    "grid",
+    "cards",
+    "responsive",
+    "layout"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

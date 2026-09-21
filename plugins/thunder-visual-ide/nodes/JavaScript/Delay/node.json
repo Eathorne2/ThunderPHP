@@ -1,0 +1,56 @@
+{
+  "type": "javascript.delay",
+  "label": "Delay",
+  "category": "JavaScript Flow",
+  "kind": "flow",
+  "icon": "WAIT",
+  "color": "#7c3aed",
+  "description": "Continues JavaScript execution after a delay.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "Delay",
+    "milliseconds": 250
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "milliseconds",
+      "label": "Fallback milliseconds",
+      "type": "number"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "js-exec",
+        "direction": "in"
+      },
+      {
+        "id": "milliseconds",
+        "label": "Milliseconds",
+        "type": "js-number",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "After delay",
+        "type": "js-exec",
+        "direction": "out"
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\DelayCompiler",
+    "file": "Compiler.php"
+  }
+}

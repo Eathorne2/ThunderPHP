@@ -1,0 +1,62 @@
+{
+  "type": "data.property",
+  "label": "Get Property",
+  "category": "Data",
+  "kind": "expression",
+  "icon": ".",
+  "color": "#0e7490",
+  "description": "Reads an object property or array key from a connected value.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Get Property",
+    "property": "id",
+    "mode": "object"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "property",
+      "label": "Property / key",
+      "type": "text"
+    },
+    {
+      "name": "mode",
+      "label": "Mode",
+      "type": "select",
+      "options": [
+        "object",
+        "array"
+      ]
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "source",
+        "label": "Source",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Value",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\PropertyCompiler",
+    "file": "Compiler.php"
+  }
+}

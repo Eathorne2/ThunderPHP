@@ -1,0 +1,11 @@
+{
+    "id": 8,
+    "title": "Database Migrations",
+    "slug": "database-migrations",
+    "description": "Database migrations are how you create database tables in a reusable manner",
+    "icon": "",
+    "type": "reference",
+    "featured": false,
+    "published": true,
+    "order": 7
+}

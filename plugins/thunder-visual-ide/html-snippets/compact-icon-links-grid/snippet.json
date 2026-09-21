@@ -1,0 +1,17 @@
+{
+  "id": "compact-icon-links-grid",
+  "name": "Compact Icon Links Grid",
+  "description": "A dense icon-link directory suited to settings pages, resource hubs, dashboards, and help centers.",
+  "category": "Icon Grids",
+  "order": 3350,
+  "tags": [
+    "icons",
+    "grid",
+    "links",
+    "directory"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

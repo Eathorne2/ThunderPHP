@@ -1,0 +1,24 @@
+{
+  "type": "data.cast",
+  "label": "Cast Value",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "CAST",
+  "color": "#0369a1",
+  "description": "Converts a connected value to a selected PHP type.",
+  "allowed_graphs": ["flow"],
+  "dynamic_ports": "cast",
+  "defaults": {"title": "Cast Value", "target_type": "array"},
+  "properties": [
+    {"name": "title", "label": "Node title", "type": "text"},
+    {"name": "target_type", "label": "Target type", "type": "select", "options": ["array", "object", "string", "int", "float", "bool", "json_to_array", "json_to_object"]}
+  ],
+  "ports": {
+    "inputs": [{"id": "value", "label": "Value", "type": "mixed", "direction": "in", "multiple": false}],
+    "outputs": [{"id": "value", "label": "Converted", "type": "mixed", "direction": "out", "multiple": true}]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\CastCompiler",
+    "file": "Compiler.php"
+  }
+}

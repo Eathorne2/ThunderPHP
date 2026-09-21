@@ -1,0 +1,25 @@
+{
+    "name": "Home Page",
+    "version": "1.0.0",
+    "id": "home-page",
+    "author": "Eathorne",
+    "core_requires": "^1.0.0",
+    "author website": "www.freephptutorials.com",
+    "thumbnail": "thumbnail.jpg",
+    "active": false,
+    "index": 1,
+    "routes": {
+        "on": [
+            "home"
+        ],
+        "off": [],
+        "routes": [
+            {
+                "method": "GET",
+                "pattern": "/",
+                "name": "home"
+            }
+        ]
+    },
+    "dependencies": {}
+}

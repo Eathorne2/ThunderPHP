@@ -1,0 +1,155 @@
+.wvp-pla {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.wvp-pla *, .wvp-pla *::before, .wvp-pla *::after {
+    box-sizing: border-box;
+}
+
+.wvp-pla button, .wvp-pla input, .wvp-pla select, .wvp-pla textarea {
+    font: inherit;
+}
+
+.wvp-pla a {
+    color: inherit;
+}
+
+.wvp-pla {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.65fr);
+    max-width: 76rem;
+    overflow: hidden;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.3rem;
+    background: var(--thv-theme-surface);
+}
+
+.wvp-pla__video {
+    position: relative;
+    min-height: 31rem;
+    background: var(--thv-theme-text);
+}
+
+.wvp-pla video {
+    width: 100%;
+    height: 100%;
+    min-height: 31rem;
+    object-fit: cover;
+}
+
+.wvp-pla__video > button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: grid;
+    place-items: center;
+    width: 4rem;
+    height: 4rem;
+    transform: translate(-50%, -50%);
+    border: 0;
+    border-radius: 50%;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.wvp-pla__bar {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.7rem;
+    align-items: center;
+    padding: 0.7rem;
+    border-radius: 0.7rem;
+    background: color-mix(in srgb, var(--thv-theme-surface) 88%, transparent);
+    color: var(--thv-theme-text);
+    font-size: 0.72rem;
+}
+
+.wvp-pla__bar input {
+    width: 100%;
+    accent-color: var(--thv-theme-primary);
+}
+
+.wvp-pla aside {
+    padding: 1.4rem;
+}
+
+.wvp-pla aside > span {
+    color: var(--thv-theme-primary);
+    font-size: 0.7rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.wvp-pla aside h2 {
+    margin: 0.4rem 0;
+    font-size: 1.8rem;
+}
+
+.wvp-pla aside > p {
+    color: var(--thv-theme-muted);
+    line-height: 1.6;
+}
+
+.wvp-pla__chapters {
+    display: grid;
+    gap: 0.45rem;
+    margin: 1rem 0;
+}
+
+.wvp-pla__chapters button {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.65rem;
+    text-align: left;
+    padding: 0.7rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.7rem;
+    background: var(--thv-theme-background);
+    color: var(--thv-theme-text);
+    cursor: pointer;
+}
+
+.wvp-pla__chapters button:hover, .wvp-pla__chapters button.is-active {
+    border-color: var(--thv-theme-primary);
+    background: color-mix(in srgb, var(--thv-theme-primary) 8%, var(--thv-theme-background));
+}
+
+.wvp-pla__chapters button > span {
+    color: var(--thv-theme-primary);
+    font-weight: 900;
+}
+
+.wvp-pla__chapters strong, .wvp-pla__chapters small {
+    display: block;
+}
+
+.wvp-pla__chapters small {
+    margin-top: 0.15rem;
+    color: var(--thv-theme-muted);
+}
+
+.wvp-pla aside > a {
+    color: var(--thv-theme-primary);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+@media (max-width: 760px) {
+    .wvp-pla {
+        grid-template-columns: 1fr;
+    }
+
+    .wvp-pla__video, .wvp-pla video {
+        min-height: 20rem;
+    }
+
+}

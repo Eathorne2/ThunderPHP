@@ -1,0 +1,103 @@
+.split-testimonial {
+    position: relative;
+    max-width: 72rem;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid var(--thv-theme-border, #dce3ec);
+    border-radius: 1.3rem;
+    color: var(--thv-theme-text, #172033);
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.split-testimonial article {
+    display: grid;
+    grid-template-columns: minmax(18rem, 0.85fr) minmax(0, 1.15fr);
+    min-height: 34rem;
+}
+
+.split-testimonial article > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.split-testimonial__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(2rem, 7vw, 5rem);
+}
+
+.split-testimonial__eyebrow {
+    margin: 0;
+    color: var(--thv-theme-primary, #4f46e5);
+    font-size: 0.74rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.split-testimonial blockquote {
+    margin: 1rem 0 2rem;
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 1.12;
+}
+
+.split-testimonial footer strong,
+.split-testimonial footer span {
+    display: block;
+}
+
+.split-testimonial footer span {
+    margin-top: 0.25rem;
+    color: var(--thv-theme-muted, #667085);
+}
+
+.split-testimonial__navigation {
+    position: absolute;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.55rem;
+    border: 1px solid var(--thv-theme-border, #dce3ec);
+    border-radius: 0.75rem;
+    background: color-mix(in srgb, var(--thv-theme-surface, #ffffff) 90%, transparent);
+    backdrop-filter: blur(10px);
+}
+
+.split-testimonial__navigation button {
+    padding: 0.5rem 0.65rem;
+    border: 0;
+    border-radius: 0.5rem;
+    color: inherit;
+    background: var(--thv-theme-surface-alt, #f3f5f8);
+    font-weight: 750;
+}
+
+.split-testimonial__navigation span {
+    color: var(--thv-theme-muted, #667085);
+    font-size: 0.74rem;
+    font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 720px) {
+    .split-testimonial article {
+        grid-template-columns: 1fr;
+    }
+
+    .split-testimonial article > img {
+        max-height: 20rem;
+    }
+
+    .split-testimonial__navigation {
+        position: static;
+        justify-content: flex-end;
+        border: 0;
+        border-top: 1px solid var(--thv-theme-border, #dce3ec);
+        border-radius: 0;
+    }
+}

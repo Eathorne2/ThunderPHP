@@ -1,0 +1,18 @@
+{
+  "id": "wedding-memory-gallery",
+  "name": "Wedding Memory Gallery",
+  "description": "A responsive editorial photo mosaic with a simple lightbox for engagement and wedding imagery.",
+  "category": "Wedding",
+  "order": 4580,
+  "tags": [
+    "wedding",
+    "gallery",
+    "photos",
+    "lightbox",
+    "memories"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

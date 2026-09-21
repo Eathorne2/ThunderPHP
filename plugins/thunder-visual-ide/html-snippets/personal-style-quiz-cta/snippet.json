@@ -1,0 +1,17 @@
+{
+  "id": "personal-style-quiz-cta",
+  "name": "Personal Style Quiz Call to Action",
+  "description": "An interactive visual style quiz with a personalized wardrobe direction.",
+  "category": "Fashion & Beauty",
+  "order": 4020,
+  "tags": [
+    "fashion",
+    "style quiz",
+    "call to action",
+    "interactive"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

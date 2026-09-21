@@ -1,0 +1,126 @@
+.wdcg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-surface);
+}
+
+.wdcg *,
+.wdcg *::before,
+.wdcg *::after {
+    box-sizing: border-box;
+}
+
+.wdcg__visual {
+    position: relative;
+    min-height: 42rem;
+}
+
+.wdcg__visual > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wdcg__palette {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    display: flex;
+    padding: .7rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--thv-theme-surface) 90%, transparent);
+    box-shadow: 0 12px 30px color-mix(in srgb, var(--thv-theme-text) 14%, transparent);
+}
+
+.wdcg__palette span {
+    width: 2rem;
+    height: 2rem;
+    margin-left: -.2rem;
+    border: 2px solid var(--thv-theme-border);
+    border-radius: 50%;
+    background: var(--swatch);
+}
+
+.wdcg__copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(2rem, 7vw, 6rem);
+}
+
+.wdcg__copy > p {
+    margin: 0;
+    color: var(--thv-theme-primary);
+    font-size: .68rem;
+    font-weight: 900;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.wdcg h2 {
+    margin: .8rem 0 1rem;
+    font-family: Georgia, serif;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 400;
+    letter-spacing: -.065em;
+    line-height: .85;
+}
+
+.wdcg__rule {
+    width: 6rem;
+    height: 1px;
+    margin: .8rem 0 1.5rem;
+    background: var(--thv-theme-primary);
+}
+
+.wdcg h3 {
+    max-width: 18ch;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.35;
+}
+
+.wdcg ul {
+    margin: 1.4rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wdcg li {
+    padding: .7rem 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--thv-theme-text) 12%, transparent);
+    color: var(--thv-theme-muted);
+}
+
+.wdcg aside {
+    margin-top: 1.5rem;
+    padding: 1.1rem;
+    border-left: 3px solid var(--thv-theme-primary);
+    background: color-mix(in srgb, var(--thv-theme-secondary) 18%, var(--thv-theme-surface));
+}
+
+.wdcg aside strong,
+.wdcg aside span {
+    display: block;
+}
+
+.wdcg aside span {
+    margin-top: .35rem;
+    color: var(--thv-theme-muted);
+    font-size: .9rem;
+}
+
+@media (max-width: 800px) {
+    .wdcg {
+        grid-template-columns: 1fr;
+    }
+
+    .wdcg__visual {
+        min-height: 30rem;
+    }
+}

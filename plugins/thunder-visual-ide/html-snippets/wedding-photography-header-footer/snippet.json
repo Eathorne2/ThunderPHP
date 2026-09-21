@@ -1,0 +1,18 @@
+{
+  "id": "wedding-photography-header-footer",
+  "name": "Wedding Photography Header and Footer",
+  "description": "A cinematic photography-studio shell with portfolio navigation, availability enquiry and image-led footer.",
+  "category": "Wedding",
+  "order": 4800,
+  "tags": [
+    "wedding photography",
+    "portfolio",
+    "header",
+    "footer",
+    "studio"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

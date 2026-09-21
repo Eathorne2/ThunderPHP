@@ -1,0 +1,19 @@
+{
+  "id": "family-law-header-footer",
+  "name": "Family Law Header and Footer",
+  "description": "Compassionate, practical family-law advice delivered in confidence.",
+  "category": "Business & Law",
+  "order": 5403,
+  "tags": [
+    "header",
+    "footer",
+    "business",
+    "law",
+    "navigation",
+    "family law"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

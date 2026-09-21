@@ -1,0 +1,19 @@
+{
+  "id": "local-service-header-footer-set",
+  "name": "Local Service Header and Footer Set",
+  "description": "A trustworthy service-business shell with contact details, booking actions and a practical information-rich footer.",
+  "category": "Header and Footer Sets",
+  "order": 3007,
+  "tags": [
+    "header",
+    "footer",
+    "service",
+    "business",
+    "contact",
+    "booking"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

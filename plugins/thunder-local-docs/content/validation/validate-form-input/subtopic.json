@@ -1,0 +1,14 @@
+{
+    "id": 2,
+    "title": "How to validate form or user input",
+    "slug": "validate-form-input",
+    "description": "Learn how to validate form and request data using Core\\Validate, including basic rules, file/image validation, custom rules, and advanced unique checks.",
+    "type": "reference",
+    "featured": false,
+    "published": true,
+    "order": 0,
+    "meta_title": "",
+    "meta_description": "",
+    "image": "",
+    "video_url": ""
+}

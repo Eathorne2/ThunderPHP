@@ -1,0 +1,53 @@
+{
+  "type": "flow.unset",
+  "label": "Unset Variable",
+  "category": "Flow",
+  "kind": "flow",
+  "icon": "UNSET",
+  "color": "#b45309",
+  "description": "Removes a PHP variable or nested array value using a dot-notation path.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Unset Variable",
+    "variable_path": "data.temp"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "variable_path",
+      "label": "Variable path",
+      "type": "text",
+      "help": "Use a PHP variable name without the dollar sign. Dot notation addresses nested array keys, for example user.profile.avatar or items.0.price."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Flow\\UnsetCompiler",
+    "file": "Compiler.php"
+  }
+}

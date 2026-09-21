@@ -1,0 +1,184 @@
+{
+  "slug": "fb-shop-category-grid",
+  "name": "Fashion & Beauty Shop Grid",
+  "category": "Fashion & Beauty",
+  "description": "Six compact image categories for fashion, beauty or lifestyle navigation.",
+  "keywords": [
+    "fashion",
+    "beauty",
+    "categories",
+    "shop",
+    "grid"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-fb-shop-grid\"><div class=\"tb-fb-shop-grid__head\">{{elements:eyebrow}}{{elements:title}}</div><div class=\"tb-fb-shop-grid__grid\">{{elements:categories}}</div></div>",
+  "css": ".tb-fb-shop-grid{padding:clamp(28px,5vw,68px);background:var(--tb-color-background)}.tb-fb-shop-grid__head{text-align:center;max-width:720px;margin:0 auto 28px}.tb-fb-shop-grid__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-fb-shop-grid__title{margin:9px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(38px,5vw,62px);font-weight:500}.tb-fb-shop-grid__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.tb-fb-shop-grid__card{position:relative;min-height:320px;overflow:hidden;text-decoration:none;background:var(--tb-color-surface)}.tb-fb-shop-grid__image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.tb-fb-shop-grid__shade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.68))}.tb-fb-shop-grid__title-text{position:absolute;left:18px;bottom:16px;color:#fff;font-family:Georgia,serif;font-size:27px}@media(max-width:760px){.tb-fb-shop-grid__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.tb-fb-shop-grid__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Browse the edit"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-fb-shop-grid__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Fashion, beauty and the details between"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-fb-shop-grid__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "categories",
+      "label": "Shop category",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "image": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Dresses fashion category",
+        "title": "Dresses",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "image",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-fb-shop-grid__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-fb-shop-grid__title-text"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-fb-shop-grid__card\" href=\"{{url}}\"><img class=\"tb-fb-shop-grid__image\" src=\"{{image}}\" alt=\"{{alt}}\"><span class=\"tb-fb-shop-grid__shade\"></span><span class=\"tb-fb-shop-grid__title-text\">{{title}}</span></a>",
+      "min": 1,
+      "max": 12,
+      "default_items": [
+        {
+          "image": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Dresses fashion category",
+          "title": "Dresses",
+          "url": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Clothing essentials category",
+          "title": "Essentials",
+          "url": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Jewelry category",
+          "title": "Jewelry",
+          "url": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Fragrance category",
+          "title": "Fragrance",
+          "url": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Beauty category",
+          "title": "Beauty",
+          "url": "#"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Accessories category",
+          "title": "Accessories",
+          "url": "#"
+        }
+      ],
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "magazine-story-layout",
+  "name": "Magazine Story Layout",
+  "description": "A visual magazine article with oversized title, pull quote, facts panel and image pair.",
+  "category": "Single Blog Posts",
+  "order": 1210,
+  "tags": [
+    "blog",
+    "magazine",
+    "single post",
+    "story"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

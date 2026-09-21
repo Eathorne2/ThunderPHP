@@ -1,0 +1,120 @@
+.scc-car {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.scc-car *, .scc-car *::before, .scc-car *::after {
+    box-sizing: border-box;
+}
+
+.scc-car button, .scc-car input, .scc-car select, .scc-car textarea {
+    font: inherit;
+}
+
+.scc-car a {
+    color: inherit;
+}
+
+.scc-car {
+    max-width: 68rem;
+    padding: clamp(1.2rem, 4vw, 2.5rem);
+    border-radius: 1.3rem;
+    background: var(--thv-theme-background);
+}
+
+.scc-car header span {
+    color: var(--thv-theme-primary);
+    font-size: 0.7rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.scc-car header h2 {
+    margin: 0.3rem 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.scc-car header p {
+    color: var(--thv-theme-muted);
+}
+
+.scc-car__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+}
+
+.scc-car__grid article {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem;
+    padding: 1rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.9rem;
+    background: var(--thv-theme-surface);
+}
+
+.scc-car__grid article > span {
+    display: grid;
+    place-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 0.8rem;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.scc-car__grid strong, .scc-car__grid small, .scc-car__grid b {
+    display: block;
+}
+
+.scc-car__grid small {
+    color: var(--thv-theme-muted);
+    font-size: 0.72rem;
+}
+
+.scc-car__grid article > div:nth-of-type(2) {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--thv-theme-border);
+}
+
+.scc-car__grid b {
+    font-size: 1.4rem;
+}
+
+.scc-car__grid button {
+    grid-column: 1 / -1;
+    padding: 0.65rem;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: 0.65rem;
+    background: transparent;
+    color: var(--thv-theme-primary);
+    font-weight: 850;
+    cursor: pointer;
+}
+
+.scc-car__grid button.is-following {
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+}
+
+.scc-car [data-message] {
+    color: var(--thv-theme-primary);
+    font-weight: 750;
+}
+
+@media (max-width: 720px) {
+    .scc-car__grid {
+        grid-template-columns: 1fr;
+    }
+
+}

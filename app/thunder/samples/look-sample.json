@@ -1,0 +1,9 @@
+{
+    "name": "Dark Theme",
+    "version": "1.0.0",
+    "plugin": "new-plugin",
+    "plugin_requires": "^1.2",
+    "author": "Your Name",
+    "thumbnail": "thumbnail.png",
+    "description": "A dark look for the plugin"
+}

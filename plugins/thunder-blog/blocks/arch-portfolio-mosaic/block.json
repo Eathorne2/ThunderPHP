@@ -1,0 +1,155 @@
+{
+  "slug": "arch-portfolio-mosaic",
+  "name": "Architecture Portfolio Mosaic",
+  "category": "Architecture & Building",
+  "description": "Editorial architecture project gallery",
+  "keywords": [
+    "architecture",
+    "portfolio",
+    "mosaic",
+    "gallery"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-arch-portfolio-mosaic\"><div class=\"tb-arch-portfolio-mosaic__head\">{{elements:kicker}}{{elements:title}}</div><div class=\"tb-arch-portfolio-mosaic__gallery\">{{elements:images}}</div></section>",
+  "css": ".tb-arch-portfolio-mosaic{padding:clamp(36px,6vw,76px);background:var(--tb-color-background)}.tb-arch-portfolio-mosaic__head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}.tb-arch-portfolio-mosaic__kicker{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--tb-color-primary)}.tb-arch-portfolio-mosaic__title{font-size:clamp(38px,5vw,62px);line-height:1;margin:10px 0 0;color:var(--tb-color-secondary)}.tb-arch-portfolio-mosaic__gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:240px;gap:14px}.tb-arch-portfolio-mosaic__item{min-height:0}.tb-arch-portfolio-mosaic__item:first-child{grid-row:span 2}.tb-arch-portfolio-mosaic__image{width:100%;height:100%;object-fit:cover}@media(max-width:760px){.tb-arch-portfolio-mosaic__gallery{grid-template-columns:1fr 1fr;grid-auto-rows:220px}.tb-arch-portfolio-mosaic__item:first-child{grid-column:span 2;grid-row:auto}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "kicker",
+      "label": "Kicker",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Selected work"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-arch-portfolio-mosaic__kicker\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "title",
+      "label": "Heading",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "A visual index of recent projects"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-arch-portfolio-mosaic__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "images",
+      "label": "Gallery images",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Architecture Portfolio Mosaic"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-arch-portfolio-mosaic__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<figure class=\"tb-arch-portfolio-mosaic__item\"><img class=\"tb-arch-portfolio-mosaic__image\" src=\"{{url}}\" alt=\"{{alt}}\"></figure>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 12,
+      "default_items": [
+        {
+          "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=82",
+          "alt": "Architecture Portfolio Mosaic 1"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=82",
+          "alt": "Architecture Portfolio Mosaic 2"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=82",
+          "alt": "Architecture Portfolio Mosaic 3"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=82",
+          "alt": "Architecture Portfolio Mosaic 4"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=1600&q=82",
+          "alt": "Architecture Portfolio Mosaic 5"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

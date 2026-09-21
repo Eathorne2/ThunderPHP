@@ -1,0 +1,18 @@
+{
+  "id": "wedding-dress-code-guide",
+  "name": "Wedding Dress Code Guide",
+  "description": "A visual dress-code guide with colour direction, suggested attire and practical venue notes.",
+  "category": "Wedding",
+  "order": 4610,
+  "tags": [
+    "wedding",
+    "dress code",
+    "attire",
+    "colors",
+    "guests"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

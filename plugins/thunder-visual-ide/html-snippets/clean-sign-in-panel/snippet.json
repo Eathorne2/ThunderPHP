@@ -1,0 +1,20 @@
+{
+  "id": "clean-sign-in-panel",
+  "name": "Clean Sign In Panel",
+  "description": "A modern sign-in form with social option, remember-me and reset link.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Authentication",
+  "order": 2800,
+  "tags": [
+    "authentication",
+    "login",
+    "sign-in",
+    "form"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

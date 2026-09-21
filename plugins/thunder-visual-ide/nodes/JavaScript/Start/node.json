@@ -1,0 +1,39 @@
+{
+  "type": "javascript.start",
+  "label": "JS Start",
+  "category": "JavaScript Flow",
+  "kind": "flow",
+  "icon": "JS",
+  "color": "#7c3aed",
+  "description": "Starts browser-side JavaScript execution when the generated View script loads.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "singleton": true,
+  "defaults": {
+    "title": "JS Start"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Run",
+        "type": "js-exec",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\StartCompiler",
+    "file": "Compiler.php"
+  }
+}

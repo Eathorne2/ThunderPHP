@@ -1,0 +1,20 @@
+{
+  "id": "timeline-photo-archive",
+  "name": "Timeline Photo Archive",
+  "description": "A chronological image archive with years, captions and alternating editorial alignment.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9009,
+  "tags": [
+    "gallery",
+    "timeline",
+    "archive",
+    "history"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

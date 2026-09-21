@@ -1,0 +1,17 @@
+{
+  "id": "serum-product-spotlight",
+  "name": "Serum Product Spotlight",
+  "description": "A premium skincare product feature with ingredient and performance details.",
+  "category": "Fashion & Beauty",
+  "order": 3950,
+  "tags": [
+    "fashion",
+    "beauty",
+    "feature",
+    "about"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

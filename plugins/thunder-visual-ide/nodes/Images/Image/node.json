@@ -1,0 +1,101 @@
+{
+  "type": "images.image",
+  "label": "Image Processor",
+  "category": "Images",
+  "kind": "flow",
+  "icon": "IMG",
+  "color": "#0f766e",
+  "description": "Creates and configures a ThunderPHP Core\\Image instance.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Image Processor",
+    "jpeg_quality": 85,
+    "png_compression": 7,
+    "webp_quality": 80,
+    "allow_upscale": false,
+    "use_hashed_names": false,
+    "thumbnail_dir": "",
+    "result_variable": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "result_variable",
+      "label": "Result variable",
+      "type": "text",
+      "help": "Optional PHP variable name. Omit the $ sign. Leave blank to use the automatic node-specific name."
+    },
+    {
+      "name": "jpeg_quality",
+      "label": "JPEG quality (0-100)",
+      "type": "number"
+    },
+    {
+      "name": "png_compression",
+      "label": "PNG compression (0-9)",
+      "type": "number"
+    },
+    {
+      "name": "webp_quality",
+      "label": "WEBP quality (0-100)",
+      "type": "number"
+    },
+    {
+      "name": "allow_upscale",
+      "label": "Allow image upscaling",
+      "type": "checkbox"
+    },
+    {
+      "name": "use_hashed_names",
+      "label": "Use hashed thumbnail names",
+      "type": "checkbox"
+    },
+    {
+      "name": "thumbnail_dir",
+      "label": "Default thumbnail directory",
+      "type": "text",
+      "help": "Optional literal path. A connected value takes precedence."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Previous",
+        "type": "exec",
+        "direction": "in"
+      },
+      {
+        "id": "thumbnail_dir",
+        "label": "Thumbnail Dir",
+        "type": "string",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out"
+      },
+      {
+        "id": "image",
+        "label": "Image",
+        "type": "object",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Images\\ImageCompiler",
+    "file": "Compiler.php"
+  }
+}

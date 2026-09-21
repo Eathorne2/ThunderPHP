@@ -1,0 +1,17 @@
+{
+  "id": "nail-studio-service-menu",
+  "name": "Nail Studio Service Menu",
+  "description": "An editorial nail studio menu with manicure, gel, builder and pedicure services.",
+  "category": "Fashion & Beauty",
+  "order": 4040,
+  "tags": [
+    "beauty",
+    "services",
+    "salon",
+    "booking"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

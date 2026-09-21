@@ -1,0 +1,558 @@
+{
+  "type": "session.method",
+  "label": "Session Method",
+  "category": "Session",
+  "kind": "flow",
+  "icon": "SES()",
+  "color": "#7c3aed",
+  "description": "Calls a documented method on the shared ThunderPHP Core\\Session object.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "dynamic_ports": "session_method",
+  "defaults": {
+    "title": "Session Method",
+    "method": "set",
+    "result_variable": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "result_variable",
+      "label": "Result variable",
+      "type": "text",
+      "help": "Optional PHP variable name. Omit the $ sign. Leave blank to use the automatic node-specific name."
+    },
+    {
+      "name": "method",
+      "label": "Method",
+      "type": "select",
+      "options": [
+        "set",
+        "get",
+        "has",
+        "remove",
+        "pop",
+        "push",
+        "prepend",
+        "all",
+        "clear",
+        "auth",
+        "logout",
+        "is_logged_in",
+        "user",
+        "is_admin",
+        "regenerate",
+        "invalidate",
+        "flash",
+        "get_flash",
+        "has_flash",
+        "clear_flash",
+        "set_old",
+        "get_old",
+        "old",
+        "clear_old",
+        "increment",
+        "decrement",
+        "raw",
+        "pull_user",
+        "message"
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "name": "set",
+      "label": "Set Session Data",
+      "return_type": "void",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key or Data Array",
+          "type": "mixed",
+          "default": "''"
+        },
+        {
+          "name": "value",
+          "label": "Value",
+          "type": "mixed",
+          "default": "null"
+        }
+      ],
+      "group": "Session Data",
+      "description": "Stores a session value by key or stores several values from an associative array.",
+      "help": "Stores a session value by key or stores several values from an associative array.\n\n### Example\n\n```php\n$session->set('username', 'john');\n\n$session->set([\n    'email' => 'john@example.com',\n    'role' => 'admin',\n]);\n```\n\n### Notes\n\n- Pass a key and value, or pass an associative array as the first argument.\n- Nested values can be written with dot notation such as `cart.items`."
+    },
+    {
+      "name": "get",
+      "label": "Get Session Data",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "string",
+          "default": "''"
+        },
+        {
+          "name": "default",
+          "label": "Default",
+          "type": "mixed",
+          "default": "null"
+        }
+      ],
+      "group": "Session Data",
+      "description": "Retrieves a session value and returns the supplied fallback when the key is unavailable.",
+      "help": "Retrieves a session value and returns the supplied fallback when the key is unavailable.\n\n### Example\n\n```php\n$username = $session->get('username', 'guest');\n$total = $session->get('cart.summary.total', 0);\n```\n\n### Notes\n\n- Dot notation can read nested values.\n- The fallback is returned when the key is unavailable."
+    },
+    {
+      "name": "has",
+      "label": "Has Session Key",
+      "return_type": "bool",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "string",
+          "default": "''"
+        }
+      ],
+      "group": "Session Data",
+      "description": "Checks whether a session key exists.",
+      "help": "Checks whether a session key exists.\n\n### Example\n\n```php\nif ($session->has('email')) {\n    echo $session->get('email');\n}\n```\n\n### Notes\n\n- Use this when you only need an existence check before reading the value."
+    },
+    {
+      "name": "remove",
+      "label": "Remove Session Data",
+      "return_type": "void",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "string",
+          "default": "''"
+        }
+      ],
+      "group": "Session Data",
+      "description": "Removes a session value by key.",
+      "help": "Removes a session value by key.\n\n### Example\n\n```php\n$session->remove('username');\n```\n\n### Notes\n\n- This targets one key rather than clearing the complete application session."
+    },
+    {
+      "name": "pop",
+      "label": "Pop Session Value",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "string",
+          "default": "''"
+        }
+      ],
+      "group": "Session Data",
+      "description": "Pulls a value from session using the class pop helper.",
+      "help": "Pulls a value from session using the class pop helper.\n\n### Example\n\n```php\n$message = $session->pop('notice');\n```\n\n### Notes\n\n- Use this for one-time data that should be pulled from session rather than repeatedly read."
+    },
+    {
+      "name": "push",
+      "label": "Append to Session Array",
+      "return_type": "void",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "string",
+          "default": "''"
+        },
+        {
+          "name": "value",
+          "label": "Value",
+          "type": "mixed",
+          "default": "null"
+        }
+      ],
+      "group": "Array Data",
+      "description": "Appends a value to an array stored in session.",
+      "help": "Appends a value to an array stored in session.\n\n### Example\n\n```php\n$session->push('notifications', 'New message');\n\n$session->push('cart.items', [\n    'id' => 1,\n    'qty' => 2,\n]);\n```\n\n### Notes\n\n- The destination key should represent array data.\n- Dot notation is supported for nested arrays such as `cart.items`."
+    },
+    {
+      "name": "prepend",
+      "label": "Prepend to Session Array",
+      "return_type": "void",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "string",
+          "default": "''"
+        },
+        {
+          "name": "value",
+          "label": "Value",
+          "type": "mixed",
+          "default": "null"
+        }
+      ],
+      "group": "Array Data",
+      "description": "Prepends a value to an array stored in session.",
+      "help": "Prepends a value to an array stored in session.\n\n### Example\n\n```php\n$session->prepend('breadcrumbs', 'Home');\n```\n\n### Notes\n\n- The value is inserted at the beginning of the stored array."
+    },
+    {
+      "name": "all",
+      "label": "Get All Session Data",
+      "return_type": "array",
+      "params": [],
+      "group": "Session Data",
+      "description": "Returns all ThunderPHP application session data.",
+      "help": "Returns all ThunderPHP application session data.\n\n### Example\n\n```php\n$data = $session->all();\n```\n\n### Notes\n\n- Session data managed by the class is stored under the `THUNDER` root namespace."
+    },
+    {
+      "name": "clear",
+      "label": "Clear Session Data",
+      "return_type": "void",
+      "params": [],
+      "group": "Session Data",
+      "description": "Clears all ThunderPHP application session data.",
+      "help": "Clears all ThunderPHP application session data.\n\n### Example\n\n```php\n$session->clear();\n```\n\n### Notes\n\n- This clears ThunderPHP application session data. Use `invalidate()` when the complete PHP session must be destroyed."
+    },
+    {
+      "name": "auth",
+      "label": "Authenticate User",
+      "return_type": "void",
+      "params": [
+        {
+          "name": "user_row",
+          "label": "User Row",
+          "type": "object",
+          "default": "null"
+        },
+        {
+          "name": "regenerate",
+          "label": "Regenerate Session ID",
+          "type": "bool",
+          "default": "false"
+        }
+      ],
+      "group": "Authentication",
+      "description": "Stores a user row in session and can optionally regenerate the session ID.",
+      "help": "Stores a user row in session and can optionally regenerate the session ID.\n\n### Example\n\n```php\n$session->auth($user_row, true);\n```\n\n### Notes\n\n- `user_row` must be one user record represented as an object.\n- Set `regenerate` to true after login to regenerate the session ID."
+    },
+    {
+      "name": "logout",
+      "label": "Log Out User",
+      "return_type": "void",
+      "params": [],
+      "group": "Authentication",
+      "description": "Removes the current user row from session.",
+      "help": "Removes the current user row from session.\n\n### Example\n\n```php\n$session->logout();\n```\n\n### Notes\n\n- The documentation describes this as deleting the user row from session."
+    },
+    {
+      "name": "is_logged_in",
+      "label": "Is User Logged In",
+      "return_type": "bool",
+      "params": [],
+      "group": "Authentication",
+      "description": "Checks whether a current user row exists in session.",
+      "help": "Checks whether a current user row exists in session.\n\n### Example\n\n```php\nif ($session->is_logged_in()) {\n    echo 'User is logged in';\n}\n```\n\n### Notes\n\n- Login state is determined by whether the user row exists in session."
+    },
+    {
+      "name": "user",
+      "label": "Get Current User Data",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "key",
+          "label": "Column",
+          "type": "?string",
+          "default": "null"
+        }
+      ],
+      "group": "Authentication",
+      "description": "Returns the complete current user object or one requested user column.",
+      "help": "Returns the complete current user object or one requested user column.\n\n### Example\n\n```php\n$user = $session->user();\n$email = $session->user('email');\n```\n\n### Notes\n\n- Call without a key for the full user object, or provide a column such as `email`."
+    },
+    {
+      "name": "is_admin",
+      "label": "Is Current User Admin",
+      "return_type": "bool",
+      "params": [],
+      "group": "Authentication",
+      "description": "Checks the current user against the Session class admin mechanism.",
+      "help": "Checks the current user against the Session class admin mechanism.\n\n### Example\n\n```php\nif ($session->is_admin()) {\n    echo 'Admin access';\n}\n```\n\n### Notes\n\n- This uses the `before_check_admin` filter internally.\n- The documentation recommends `contains_role('admin')` for role-based systems because it uses the cached `user_roles` mechanism."
+    },
+    {
+      "name": "regenerate",
+      "label": "Regenerate Session ID",
+      "return_type": "void",
+      "params": [],
+      "group": "Session Lifecycle",
+      "description": "Regenerates the PHP session ID.",
+      "help": "Regenerates the PHP session ID.\n\n### Example\n\n```php\n$session->regenerate();\n```\n\n### Notes\n\n- Use after privilege changes or authentication when a new session identifier is required."
+    },
+    {
+      "name": "invalidate",
+      "label": "Invalidate Session",
+      "return_type": "void",
+      "params": [],
+      "group": "Session Lifecycle",
+      "description": "Destroys the session completely.",
+      "help": "Destroys the session completely.\n\n### Example\n\n```php\n$session->invalidate();\n```\n\n### Notes\n\n- This is the destructive lifecycle operation; use `logout()` when only the current user data should be removed."
+    },
+    {
+      "name": "flash",
+      "label": "Set Flash Message",
+      "return_type": "void",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "string",
+          "default": "''"
+        },
+        {
+          "name": "value",
+          "label": "Value",
+          "type": "mixed",
+          "default": "null"
+        }
+      ],
+      "group": "Flash Messages",
+      "description": "Stores temporary flash data under a key.",
+      "help": "Stores temporary flash data under a key.\n\n### Example\n\n```php\n$session->flash('success', 'Saved successfully');\n```\n\n### Notes\n\n- Flash data is intended for temporary cross-request messages."
+    },
+    {
+      "name": "get_flash",
+      "label": "Get Flash Message",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "string",
+          "default": "''"
+        }
+      ],
+      "group": "Flash Messages",
+      "description": "Retrieves flash data for a key.",
+      "help": "Retrieves flash data for a key.\n\n### Example\n\n```php\necho $session->get_flash('success');\n```\n\n### Notes\n\n- Pair with `has_flash()` when the display logic needs an explicit existence check."
+    },
+    {
+      "name": "has_flash",
+      "label": "Has Flash Message",
+      "return_type": "bool",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "string",
+          "default": "''"
+        }
+      ],
+      "group": "Flash Messages",
+      "description": "Checks whether flash data exists for a key.",
+      "help": "Checks whether flash data exists for a key.\n\n### Example\n\n```php\nif ($session->has_flash('error')) {\n    echo $session->get_flash('error');\n}\n```\n\n### Notes\n\n- This lets display code test for a flash entry before retrieving it."
+    },
+    {
+      "name": "clear_flash",
+      "label": "Clear Flash Data",
+      "return_type": "void",
+      "params": [],
+      "group": "Flash Messages",
+      "description": "Clears all flash data.",
+      "help": "Clears all flash data.\n\n### Example\n\n```php\n$session->clear_flash();\n```\n\n### Notes\n\n- Clears every flash entry rather than one named key."
+    },
+    {
+      "name": "set_old",
+      "label": "Store Old Input",
+      "return_type": "void",
+      "params": [
+        {
+          "name": "data",
+          "label": "Form Data",
+          "type": "array",
+          "default": "[]"
+        }
+      ],
+      "group": "Old Input",
+      "description": "Stores form data so it can be recovered on a later request.",
+      "help": "Stores form data so it can be recovered on a later request.\n\n### Example\n\n```php\n$session->set_old($_POST);\n$session->flash('error', 'Validation failed');\nredirect('form');\n```\n\n### Notes\n\n- Commonly called before redirecting after validation failure."
+    },
+    {
+      "name": "get_old",
+      "label": "Get Old Input",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "string",
+          "default": "''"
+        },
+        {
+          "name": "default",
+          "label": "Default",
+          "type": "mixed",
+          "default": "null"
+        }
+      ],
+      "group": "Old Input",
+      "description": "Retrieves one stored old-input value with a fallback.",
+      "help": "Retrieves one stored old-input value with a fallback.\n\n### Example\n\n```php\n$email = $session->get_old('email', '');\n```\n\n### Notes\n\n- Supply a fallback for fields that were not stored."
+    },
+    {
+      "name": "old",
+      "label": "Get Old Input (Shortcut)",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "string",
+          "default": "''"
+        },
+        {
+          "name": "default",
+          "label": "Default",
+          "type": "mixed",
+          "default": "''"
+        }
+      ],
+      "group": "Old Input",
+      "description": "Shortcut for retrieving a stored old-input value.",
+      "help": "Shortcut for retrieving a stored old-input value.\n\n### Example\n\n```php\n$value = $session->old('email');\n```\n\n### Notes\n\n- This is the shorter old-input retrieval helper."
+    },
+    {
+      "name": "clear_old",
+      "label": "Clear Old Input",
+      "return_type": "void",
+      "params": [],
+      "group": "Old Input",
+      "description": "Clears all stored old-input data.",
+      "help": "Clears all stored old-input data.\n\n### Example\n\n```php\n$session->clear_old();\n```\n\n### Notes\n\n- Call after old form values are no longer needed."
+    },
+    {
+      "name": "increment",
+      "label": "Increment Session Value",
+      "return_type": "int|float",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "string",
+          "default": "''"
+        }
+      ],
+      "group": "Counters",
+      "description": "Increments a numeric session value and returns the updated value.",
+      "help": "Increments a numeric session value and returns the updated value.\n\n### Example\n\n```php\n$views = $session->increment('page_views');\n```\n\n### Notes\n\n- Useful for page-view counters and other numeric values."
+    },
+    {
+      "name": "decrement",
+      "label": "Decrement Session Value",
+      "return_type": "int|float",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "string",
+          "default": "''"
+        }
+      ],
+      "group": "Counters",
+      "description": "Decrements a numeric session value and returns the updated value.",
+      "help": "Decrements a numeric session value and returns the updated value.\n\n### Example\n\n```php\n$remaining = $session->decrement('cart_count');\n```\n\n### Notes\n\n- Useful for counts that must be reduced across requests."
+    },
+    {
+      "name": "raw",
+      "label": "Get Raw Session Data",
+      "return_type": "array",
+      "params": [],
+      "group": "Session Data",
+      "description": "Returns the raw ThunderPHP session data array.",
+      "help": "Returns the raw ThunderPHP session data array.\n\n### Example\n\n```php\n$data = $session->raw();\n```\n\n### Notes\n\n- Returns session data without selecting an individual key."
+    },
+    {
+      "name": "pull_user",
+      "label": "Pull Current User",
+      "return_type": "mixed",
+      "params": [],
+      "group": "Authentication",
+      "description": "Pulls the current user value from session.",
+      "help": "Pulls the current user value from session.\n\n### Example\n\n```php\n$user = $session->pull_user();\n```\n\n### Notes\n\n- Use when the current user value needs the class pull behavior rather than a normal `user()` read."
+    },
+    {
+      "name": "message",
+      "label": "Session Message Helper",
+      "return_type": "?string",
+      "params": [
+        {
+          "name": "type",
+          "label": "Type",
+          "type": "string",
+          "default": "''"
+        },
+        {
+          "name": "msg",
+          "label": "Message",
+          "type": "string",
+          "default": "''"
+        },
+        {
+          "name": "erase",
+          "label": "Erase After Reading",
+          "type": "bool",
+          "default": "false"
+        }
+      ],
+      "group": "Flash Messages",
+      "description": "Sets, reads, or erases a flash-style session message by type.",
+      "help": "Sets, reads, or erases a flash-style session message by type.\n\n### Example\n\n```php\n// Check without erasing.\nif ($session->message('success', '', false)) {\n    // Erase only when the message is actually displayed.\n    echo esc($session->message('success', '', true));\n}\n```\n\n### Notes\n\n- Signature: `message(string $type, ?string $msg = '', bool $erase = false): ?string`.\n- Passing a non-empty message sets it.\n- Read with `erase = false` for checks, then use `erase = true` only at the point where the message is actually rendered; otherwise the condition can consume the message before output."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Previous",
+        "type": "exec",
+        "direction": "in"
+      },
+      {
+        "id": "session",
+        "label": "Session",
+        "type": "object",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out"
+      },
+      {
+        "id": "result",
+        "label": "Result",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": true
+      },
+      {
+        "id": "session",
+        "label": "Session",
+        "type": "object",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Session\\SessionMethodCompiler",
+    "file": "Compiler.php"
+  }
+}

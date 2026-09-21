@@ -1,0 +1,18 @@
+{
+  "id": "wedding-planner-testimonials",
+  "name": "Wedding Planner Testimonials",
+  "description": "A refined client testimonial slider for wedding planners, venues and creative studios.",
+  "category": "Wedding",
+  "order": 4660,
+  "tags": [
+    "wedding",
+    "testimonials",
+    "slider",
+    "planner",
+    "reviews"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

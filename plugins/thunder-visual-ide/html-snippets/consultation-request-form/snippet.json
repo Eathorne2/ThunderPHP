@@ -1,0 +1,18 @@
+{
+  "id": "consultation-request-form",
+  "name": "Consultation Request Form",
+  "description": "A professional consultation request form with service selection, project context and contact details.",
+  "category": "Contact Forms",
+  "order": 3520,
+  "tags": [
+    "contact",
+    "consultation",
+    "form",
+    "corporate",
+    "professional"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

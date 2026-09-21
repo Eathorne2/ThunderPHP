@@ -1,0 +1,20 @@
+{
+  "id": "comparison-product-card",
+  "name": "Comparison Product Card",
+  "description": "A product card designed for side-by-side comparison and feature scanning.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Product Cards",
+  "order": 8051,
+  "tags": [
+    "product",
+    "card",
+    "comparison",
+    "commerce"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

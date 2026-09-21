@@ -1,0 +1,69 @@
+{
+  "type": "response.message",
+  "label": "Message",
+  "category": "Response",
+  "kind": "flow",
+  "icon": "!",
+  "color": "#c2410c",
+  "description": "Creates a ThunderPHP success or failure flash message.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Message",
+    "message_type": "success",
+    "message": "Done"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "message_type",
+      "label": "Type",
+      "type": "select",
+      "options": [
+        "success",
+        "fail"
+      ]
+    },
+    {
+      "name": "message",
+      "label": "Message",
+      "type": "textarea"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "dynamic_message",
+        "label": "Dynamic message",
+        "type": "string",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Response\\MessageCompiler",
+    "file": "Compiler.php"
+  }
+}

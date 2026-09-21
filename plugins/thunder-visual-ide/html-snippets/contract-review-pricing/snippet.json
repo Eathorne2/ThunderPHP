@@ -1,0 +1,17 @@
+{
+  "id": "contract-review-pricing",
+  "name": "Contract Review Pricing",
+  "description": "A transparent three-tier legal contract review pricing section.",
+  "category": "Business & Law",
+  "order": 5320,
+  "tags": [
+    "law",
+    "pricing",
+    "contracts",
+    "services"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

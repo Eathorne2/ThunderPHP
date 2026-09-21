@@ -1,0 +1,33 @@
+{
+  "type": "flow.start",
+  "label": "Start",
+  "category": "Flow",
+  "kind": "flow",
+  "icon": "\u25b6",
+  "color": "#16a34a",
+  "description": "Entry point for a controller or function execution graph.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "singleton": true,
+  "defaults": {
+    "title": "Start"
+  },
+  "properties": [],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Flow\\StartCompiler",
+    "file": "Compiler.php"
+  }
+}

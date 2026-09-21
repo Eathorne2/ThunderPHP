@@ -1,0 +1,17 @@
+{
+  "id": "faq-accordion",
+  "name": "FAQ Accordion",
+  "description": "An accessible accordion for frequently asked questions with single-item expansion.",
+  "category": "Content",
+  "order": 530,
+  "tags": [
+    "faq",
+    "accordion",
+    "questions",
+    "content"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

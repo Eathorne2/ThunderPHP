@@ -1,0 +1,60 @@
+{
+  "type": "hooks.action",
+  "label": "Run Action Hook",
+  "category": "Hooks",
+  "kind": "flow",
+  "icon": "ACT",
+  "color": "#9333ea",
+  "description": "Runs a ThunderPHP action hook with do_action() so other plugins can extend the current flow.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Run Action Hook",
+    "hook_name": "plugin_event"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "hook_name",
+      "label": "Hook name",
+      "type": "text",
+      "help": "The public hook name other plugins will register with add_action()."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "data",
+        "label": "Data",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Hooks\\ActionCompiler",
+    "file": "Compiler.php"
+  }
+}

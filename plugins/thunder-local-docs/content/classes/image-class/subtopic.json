@@ -1,0 +1,14 @@
+{
+    "id": 7,
+    "title": "Image Class",
+    "slug": "image-class",
+    "description": "Used to crop and resize images, usually during uploads. Also used to create and manage image thumbnails",
+    "type": "reference",
+    "featured": false,
+    "published": true,
+    "order": 3,
+    "meta_title": "",
+    "meta_description": "",
+    "image": "",
+    "video_url": ""
+}

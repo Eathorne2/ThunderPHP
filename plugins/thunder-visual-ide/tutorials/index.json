@@ -1,0 +1,41 @@
+{
+  "title": "Thunder Visual IDE Tutorials",
+  "description": "Short, practical lessons for building ThunderPHP plugins visually. No internet is required",
+  "categories": [
+    {
+      "id": "getting-started",
+      "name": "Getting Started",
+      "description": "Learn the workspace, graphs, nodes, project files and build workflow.",
+      "order": 10
+    },
+    {
+      "id": "views-and-forms",
+      "name": "Views & Forms",
+      "description": "Create interfaces, themed form controls, validation and reusable components.",
+      "order": 20
+    },
+    {
+      "id": "data-and-models",
+      "name": "Data & Models",
+      "description": "Work with models, migrations, queries and persistence.",
+      "order": 30
+    },
+    {
+      "id": "advanced-workflows",
+      "name": "Advanced Workflows",
+      "description": "Hooks, filters, libraries, reusable presets and deployment workflows.",
+      "order": 40
+    }
+  ],
+  "tutorials": [
+    {
+      "path": "getting-started/welcome-to-the-ide"
+    },
+    {
+      "path": "getting-started/first-route-and-view"
+    },
+    {
+      "path": "views-and-forms/visual-form-validation"
+    }
+  ]
+}

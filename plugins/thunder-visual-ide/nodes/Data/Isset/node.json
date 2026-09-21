@@ -1,0 +1,57 @@
+{
+  "type": "data.isset",
+  "label": "Isset Check",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "ISSET",
+  "color": "#1e40af",
+  "description": "Checks whether a PHP variable or nested value exists and is not null.",
+  "allowed_graphs": [
+    "flow",
+    "view"
+  ],
+  "defaults": {
+    "title": "Isset Check",
+    "variable_path": "value",
+    "access_mode": "array"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "variable_path",
+      "label": "Variable path",
+      "type": "text",
+      "help": "Use a PHP variable name without the dollar sign. Dot notation addresses nested values, for example user.profile.email."
+    },
+    {
+      "name": "access_mode",
+      "label": "Nested access",
+      "type": "select",
+      "options": [
+        "array",
+        "object"
+      ],
+      "help": "Array generates ['key'] access. Object generates ->property access."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Is Set",
+        "type": "boolean",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\IssetCompiler",
+    "file": "Compiler.php"
+  }
+}

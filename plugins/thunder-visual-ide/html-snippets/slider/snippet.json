@@ -1,0 +1,12 @@
+{
+  "id": "testimonial-slider",
+  "name": "Testimonial Slider",
+  "description": "A compact slider with previous/next controls and position dots.",
+  "category": "Sliders",
+  "order": 30,
+  "tags": ["slider", "carousel", "testimonial"],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,45 @@
+.polaroid-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(.5rem, 2vw, 1.5rem);
+    padding: 2rem;
+    border-radius: 1.2rem;
+    background: var(--thv-theme-surface-alt, #f8fafc)
+}
+
+.polaroid-gallery__item {
+    padding: .65rem .65rem 1rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    background: var(--thv-theme-surface, #fff);
+    color: var(--thv-theme-text, #0f172a);
+    box-shadow: 0 16px 35px rgba(15, 23, 42, .14);
+    transform: rotate(var(--rotate));
+    transition: .2s;
+    cursor: pointer
+}
+
+.polaroid-gallery__item:hover, .polaroid-gallery__item.is-focused {
+    z-index: 2;
+    transform: rotate(0) translateY(-.5rem) scale(1.05)
+}
+
+.polaroid-gallery__item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover
+}
+
+.polaroid-gallery__item span {
+    display: block;
+    padding-top: .65rem;
+    font-family: cursive;
+    font-size: .95rem;
+    text-align: center
+}
+
+@media(max-width:760px) {
+    .polaroid-gallery {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}

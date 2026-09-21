@@ -1,0 +1,88 @@
+{
+  "type": "security.validate",
+  "label": "Validate",
+  "category": "Security",
+  "kind": "flow",
+  "icon": "✓",
+  "color": "#b91c1c",
+  "description": "Validates a connected data array through Core\\Validate and branches on success/failure.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Validate",
+    "rules_json": "{}",
+    "validator_variable": "",
+    "errors_variable": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "validator_variable",
+      "label": "Validator variable",
+      "type": "text",
+      "help": "Optional internal validator object variable. Omit the $ sign."
+    },
+    {
+      "name": "errors_variable",
+      "label": "Errors variable",
+      "type": "text",
+      "help": "Optional validation-errors variable. Omit the $ sign."
+    },
+    {
+      "name": "rules_json",
+      "label": "Validation rules",
+      "type": "validation_rules",
+      "help": "Build fields and rules visually. Custom rules and error messages remain supported."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "data",
+        "label": "Data",
+        "type": "array",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "valid",
+        "label": "Valid",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      },
+      {
+        "id": "invalid",
+        "label": "Invalid",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      },
+      {
+        "id": "errors",
+        "label": "Errors",
+        "type": "array",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Security\\ValidateCompiler",
+    "file": "Compiler.php"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "gradient-hero-callout",
+  "name": "Gradient Hero Callout",
+  "description": "A responsive product hero with badges, calls to action and a compact metrics panel.",
+  "category": "Marketing",
+  "order": 500,
+  "tags": [
+    "hero",
+    "marketing",
+    "cta",
+    "landing"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "music-merchandise-grid",
+  "name": "Music Merchandise Grid",
+  "description": "A contemporary artist merchandise section with product options, featured item and cart feedback.",
+  "category": "Music & Entertainment",
+  "order": 4380,
+  "tags": [
+    "music",
+    "merchandise",
+    "shop",
+    "products",
+    "artist"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

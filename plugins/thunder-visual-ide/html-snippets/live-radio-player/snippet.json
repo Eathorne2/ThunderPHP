@@ -1,0 +1,20 @@
+{
+  "id": "live-radio-player",
+  "name": "Live Radio Player",
+  "description": "A live station player with programme details, volume and playback state.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Audio Players",
+  "order": 8005,
+  "tags": [
+    "audio",
+    "radio",
+    "live",
+    "player"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

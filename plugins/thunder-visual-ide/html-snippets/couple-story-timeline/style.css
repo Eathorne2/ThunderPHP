@@ -1,0 +1,118 @@
+.cstl {
+    padding: clamp(2rem, 6vw, 5rem);
+    border-radius: 1.5rem;
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-surface);
+}
+
+.cstl *,
+.cstl *::before,
+.cstl *::after {
+    box-sizing: border-box;
+}
+
+.cstl__header {
+    display: grid;
+    grid-template-columns: .4fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 3rem;
+}
+
+.cstl__header p,
+.cstl article p {
+    margin: 0;
+    color: var(--thv-theme-primary);
+    font-size: .68rem;
+    font-weight: 900;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+}
+
+.cstl__header h2 {
+    max-width: 16ch;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2.6rem, 6vw, 5rem);
+    font-weight: 400;
+    letter-spacing: -.05em;
+    line-height: .98;
+}
+
+.cstl__timeline {
+    position: relative;
+}
+
+.cstl__timeline::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5.5rem;
+    width: 1px;
+    background: color-mix(in srgb, var(--thv-theme-primary) 30%, transparent);
+    content: "";
+}
+
+.cstl article {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7rem minmax(13rem, .65fr) minmax(0, 1fr);
+    gap: clamp(1rem, 4vw, 3.5rem);
+    align-items: center;
+    padding: 1.3rem 0 3.5rem;
+}
+
+.cstl__year {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: 4.25rem;
+    height: 4.25rem;
+    place-items: center;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: 50%;
+    background: var(--thv-theme-surface);
+    font-family: Georgia, serif;
+}
+
+.cstl figure {
+    height: 18rem;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 50% 50% 1rem 1rem;
+}
+
+.cstl figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cstl article h3 {
+    margin: .6rem 0 .8rem;
+    font-family: Georgia, serif;
+    font-size: clamp(1.7rem, 4vw, 3rem);
+    font-weight: 400;
+}
+
+.cstl article div > span {
+    display: block;
+    max-width: 38rem;
+    color: var(--thv-theme-muted);
+    line-height: 1.75;
+}
+
+@media (max-width: 760px) {
+    .cstl__header,
+    .cstl article {
+        grid-template-columns: 1fr;
+    }
+
+    .cstl__timeline::before {
+        display: none;
+    }
+
+    .cstl article {
+        gap: 1rem;
+    }
+}

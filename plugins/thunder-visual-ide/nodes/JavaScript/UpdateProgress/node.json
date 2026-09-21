@@ -1,0 +1,62 @@
+{
+  "type": "javascript.update_progress",
+  "label": "Update AJAX Progress",
+  "category": "JavaScript AJAX",
+  "kind": "flow",
+  "icon": "%",
+  "color": "#0f766e",
+  "description": "Updates an AJAX Progress Bar using an XHR progress value.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "Update AJAX Progress",
+    "target_node_id": "",
+    "hide_when_complete": false
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "target_node_id",
+      "label": "Progress Bar component",
+      "type": "ajax_progress_ref"
+    },
+    {
+      "name": "hide_when_complete",
+      "label": "Hide at 100%",
+      "type": "checkbox"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "js-exec",
+        "direction": "in"
+      },
+      {
+        "id": "progress",
+        "label": "Progress",
+        "type": "js-progress",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "js-exec",
+        "direction": "out"
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\UpdateProgressCompiler",
+    "file": "Compiler.php"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "flow.exit",
+  "label": "Exit",
+  "category": "Flow",
+  "kind": "flow",
+  "icon": "STOP",
+  "color": "#b91c1c",
+  "description": "Stops PHP execution using exit or die, optionally with a connected value.",
+  "allowed_graphs": ["flow"],
+  "defaults": {
+    "title": "Exit",
+    "function": "exit",
+    "use_value": false,
+    "default_value": ""
+  },
+  "properties": [
+    {"name": "title", "label": "Node title", "type": "text"},
+    {"name": "function", "label": "Function", "type": "select", "options": ["exit", "die"]},
+    {"name": "use_value", "label": "Exit with a value", "type": "checkbox"},
+    {"name": "default_value", "label": "Default exit value", "type": "text", "help": "Used when Exit with a value is enabled and no value node is connected."}
+  ],
+  "ports": {
+    "inputs": [
+      {"id": "exec_in", "label": "Run", "type": "exec", "direction": "in", "multiple": false},
+      {"id": "value", "label": "Value", "type": "mixed", "direction": "in", "multiple": false}
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Flow\\ExitCompiler",
+    "file": "Compiler.php"
+  }
+}

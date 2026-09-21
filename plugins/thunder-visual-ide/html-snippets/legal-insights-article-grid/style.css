@@ -1,0 +1,49 @@
+.blai-section {
+    padding: clamp(1.5rem, 5vw, 4.5rem);
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.4rem;
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-surface);
+    box-shadow: 0 1.5rem 4rem color-mix(in srgb, var(--thv-theme-text) 10%, transparent);
+}
+.blai-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    color: var(--thv-theme-primary);
+    font-size: .72rem;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+.blai-eyebrow::before {
+    width: 2rem;
+    height: 2px;
+    content: "";
+    background: var(--thv-theme-primary);
+}
+.blai-section h2 {
+    margin: .65rem 0 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 5vw, 4.3rem);
+    font-weight: 500;
+    line-height: 1.02;
+}
+.blai-section p {
+    color: var(--thv-theme-muted);
+    line-height: 1.75;
+}
+.blai-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .85rem 1.1rem;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: .55rem;
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.blai-section>header{display:flex;justify-content:space-between;align-items:end;gap:1rem}.blai-filters{display:flex;gap:.4rem}.blai-filters button{padding:.55rem .75rem;border:1px solid var(--thv-theme-border);border-radius:999px;color:var(--thv-theme-muted);background:var(--thv-theme-surface);font:inherit;font-size:.75rem;font-weight:800}.blai-filters button.is-active{color:var(--thv-theme-on-primary);background:var(--thv-theme-primary);border-color:var(--thv-theme-primary)}.blai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}.blai-grid article{display:flex;min-height:22rem;flex-direction:column;padding:1.5rem;border:1px solid var(--thv-theme-border);background:var(--thv-theme-surface-alt)}.blai-grid article>span{color:var(--thv-theme-primary);font-size:.7rem;font-weight:850;text-transform:uppercase}.blai-grid h3{margin:3rem 0 1rem;font-family:Georgia,serif;font-size:1.65rem;font-weight:500}.blai-grid a{margin-top:auto;color:var(--thv-theme-text);font-weight:850;text-decoration:none}@media(max-width:760px){.blai-grid{grid-template-columns:1fr}.blai-section>header{align-items:flex-start;flex-direction:column}}

@@ -1,0 +1,19 @@
+{
+  "id": "neo-gazette-header-footer-set",
+  "name": "Neo Gazette Header and Footer Set",
+  "description": "A dark digital-gazette shell with luminous accents, story ticker, compact navigation and matching footer.",
+  "category": "Header and Footer Sets",
+  "order": 3090,
+  "tags": [
+    "header",
+    "footer",
+    "web3",
+    "gazette",
+    "editorial",
+    "dark"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,59 @@
+{
+  "type": "view.action_hook",
+  "label": "Run Action Hook",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "ACT",
+  "color": "#9333ea",
+  "description": "Runs a ThunderPHP action hook exactly where this node is rendered in the View.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Run Action Hook",
+    "hook_name": "view_content",
+    "component_name": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "hook_name",
+      "label": "Hook name",
+      "type": "text",
+      "help": "The public action hook name registered by other plugins with add_action()."
+    },
+    {
+      "name": "component_name",
+      "label": "Reusable component name",
+      "type": "text",
+      "help": "Leave blank to render at this node's position. Set a name while the node is a View root to place it with <tvi-component name=\"...\" />."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "data",
+        "label": "Data",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\ViewActionHookCompiler",
+    "file": "Compiler.php"
+  }
+}

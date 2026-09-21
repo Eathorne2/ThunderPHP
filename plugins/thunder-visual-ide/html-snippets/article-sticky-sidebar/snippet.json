@@ -1,0 +1,17 @@
+{
+  "id": "article-sticky-sidebar",
+  "name": "Article Sticky Sidebar",
+  "description": "A long-form article layout with a sticky author, sharing tools, and reading details.",
+  "category": "Sticky Sidebars",
+  "order": 3170,
+  "tags": [
+    "sticky",
+    "sidebar",
+    "article",
+    "blog"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

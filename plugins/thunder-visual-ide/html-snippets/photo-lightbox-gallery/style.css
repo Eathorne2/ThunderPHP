@@ -1,0 +1,122 @@
+.photo-gallery {
+    color: var(--thv-theme-text, #0f172a);
+}
+
+.photo-gallery header {
+    margin-bottom: 1rem;
+}
+
+.photo-gallery header span {
+    color: var(--thv-theme-secondary, #db2777);
+    font-size: .72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.photo-gallery h2 {
+    margin: .2rem 0;
+}
+
+.photo-gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: .7rem;
+}
+
+.photo-gallery__grid button {
+    position: relative;
+    grid-column: span 4;
+    min-height: 12rem;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 1rem;
+    background: var(--thv-theme-border, #e2e8f0);
+    cursor: pointer;
+}
+
+.photo-gallery__grid button:nth-child(1), .photo-gallery__grid button:nth-child(4) {
+    grid-column: span 8
+}
+
+.photo-gallery__grid button:nth-child(1) {
+    grid-row: span 2
+}
+
+.photo-gallery__grid img {
+    width: 100%;
+    height: 100%;
+    min-height: 12rem;
+    object-fit: cover;
+    transition: transform .3s ease;
+}
+
+.photo-gallery__grid button:hover img {
+    transform: scale(1.04);
+}
+
+.photo-gallery__grid span {
+    position: absolute;
+    left: .7rem;
+    bottom: .7rem;
+    padding: .35rem .55rem;
+    border-radius: .5rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: rgba(15, 23, 42, .72);
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.photo-gallery__dialog {
+    width: min(90vw, 62rem);
+    padding: 0;
+    border: 0;
+    border-radius: 1rem;
+    background: var(--thv-theme-text, #0f172a);
+    color: var(--thv-theme-on-primary, #ffffff);
+    box-shadow: 0 28px 100px rgba(0, 0, 0, .45);
+}
+
+.photo-gallery__dialog::backdrop {
+    background: rgba(2, 6, 23, .82);
+}
+
+.photo-gallery__dialog img {
+    display: block;
+    width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+.photo-gallery__dialog p {
+    margin: 0;
+    padding: .8rem 1rem;
+}
+
+.photo-gallery__dialog button {
+    position: absolute;
+    top: .7rem;
+    right: .7rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 0;
+    border-radius: 50%;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: rgba(15, 23, 42, .7);
+    font-size: 1.4rem;
+}
+
+@media(max-width:680px) {
+    .photo-gallery__grid button, .photo-gallery__grid button:nth-child(1), .photo-gallery__grid button:nth-child(4) {
+        grid-column: span 6
+    }
+    .photo-gallery__grid button:nth-child(1) {
+        grid-row: auto
+    }
+}
+
+@media(max-width:460px) {
+    .photo-gallery__grid button, .photo-gallery__grid button:nth-child(1), .photo-gallery__grid button:nth-child(4) {
+        grid-column: span 12
+    }
+}

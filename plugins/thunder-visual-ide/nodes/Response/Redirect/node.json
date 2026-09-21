@@ -1,0 +1,51 @@
+{
+  "type": "response.redirect",
+  "label": "Redirect",
+  "category": "Response",
+  "kind": "flow",
+  "icon": "\u2192",
+  "color": "#ea580c",
+  "description": "Redirects using ThunderPHP redirect().",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Redirect",
+    "url": "/"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "url",
+      "label": "Default URL",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "dynamic_url",
+        "label": "Dynamic URL",
+        "type": "string",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Response\\RedirectCompiler",
+    "file": "Compiler.php"
+  }
+}

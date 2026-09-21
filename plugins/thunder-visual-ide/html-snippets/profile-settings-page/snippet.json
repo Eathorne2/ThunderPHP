@@ -1,0 +1,17 @@
+{
+  "id": "profile-settings-page",
+  "name": "Profile Settings Page",
+  "description": "An account profile editor with avatar controls, personal information, preferences, and save actions.",
+  "category": "Profiles",
+  "order": 3040,
+  "tags": [
+    "profile",
+    "settings",
+    "form",
+    "account"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

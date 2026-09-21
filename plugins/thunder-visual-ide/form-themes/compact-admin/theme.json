@@ -1,0 +1,76 @@
+{
+  "id": "compact-admin",
+  "name": "Compact Admin",
+  "description": "Dense labels and controls optimized for dashboards, settings pages and data-heavy tools.",
+  "order": 70,
+  "palettes": {
+    "default": {
+      "name": "Slate",
+      "colors": {
+        "primary": "#334155",
+        "secondary": "#475569",
+        "surface": "#ffffff",
+        "surface_alt": "#f8fafc",
+        "text": "#172033",
+        "muted": "#64748b",
+        "border": "#cbd5e1",
+        "danger": "#dc2626",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    },
+    "blue": {
+      "name": "Admin Blue",
+      "colors": {
+        "primary": "#1d4ed8",
+        "secondary": "#2563eb",
+        "surface": "#ffffff",
+        "surface_alt": "#f5f8ff",
+        "text": "#172554",
+        "muted": "#64748b",
+        "border": "#bfdbfe",
+        "danger": "#dc2626",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    },
+    "green": {
+      "name": "Admin Green",
+      "colors": {
+        "primary": "#15803d",
+        "secondary": "#16a34a",
+        "surface": "#ffffff",
+        "surface_alt": "#f4fbf6",
+        "text": "#14532d",
+        "muted": "#64748b",
+        "border": "#bbf7d0",
+        "danger": "#dc2626",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    }
+  },
+  "default_palette": "default",
+  "preview": "preview.html",
+  "css": "style.css",
+  "js": "script.js",
+  "components": {
+    "text_input": "field.html.tpl",
+    "email_input": "field.html.tpl",
+    "password_input": "field.html.tpl",
+    "number_input": "field.html.tpl",
+    "date_input": "field.html.tpl",
+    "file_input": "field.html.tpl",
+    "textarea": "textarea.html.tpl",
+    "select": "select.html.tpl",
+    "checkbox": "checkbox.html.tpl",
+    "button": "button.html.tpl",
+    "form": "form.html.tpl"
+  }
+}

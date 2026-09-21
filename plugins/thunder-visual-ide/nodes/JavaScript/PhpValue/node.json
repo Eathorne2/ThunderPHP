@@ -1,0 +1,52 @@
+{
+  "type": "javascript.php_value",
+  "label": "PHP Value to JS",
+  "category": "JavaScript Values",
+  "kind": "expression",
+  "icon": "PHP→JS",
+  "color": "#2563eb",
+  "description": "Serializes a PHP expression into the page and exposes it as a JavaScript variable.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "PHP Value to JS",
+    "php_expression": "$value ?? null",
+    "js_variable_name": "serverValue"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "php_expression",
+      "label": "PHP expression",
+      "type": "code",
+      "help": "Do not add PHP tags or a trailing semicolon. Examples: $user ?? null, get_value('user'), $rows."
+    },
+    {
+      "name": "js_variable_name",
+      "label": "JavaScript variable name",
+      "type": "text",
+      "help": "A const with this name is created at the top of the owning JavaScript Flow."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "JS value",
+        "type": "js-value",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\PhpValueCompiler",
+    "file": "Compiler.php"
+  }
+}

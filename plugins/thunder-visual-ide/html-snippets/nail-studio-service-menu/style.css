@@ -1,0 +1,107 @@
+.nss-menu {
+    color:var(--thv-theme-text, #211b1e);
+    background:var(--thv-theme-background, #fbf7f4);
+}
+.nss-menu a {
+    color:inherit;
+}
+.nss-menu img {
+    display:block;
+    max-width:100%;
+}
+.nss-menu__eyebrow {
+    color:var(--thv-theme-primary, #92536a);
+    font-size:.68rem;
+    font-weight:900;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+}
+.nss-menu__muted {
+    color:var(--thv-theme-muted, #71656a);
+}
+.nss-menu {
+    padding:clamp(1.25rem, 4vw, 3.5rem)
+}
+.nss-menu>header {
+    display:grid;
+    grid-template-columns:1fr minmax(18rem, .45fr);
+    gap:1rem 3rem;
+    align-items:end;
+    margin-bottom:1.5rem
+}
+.nss-menu>header>.nss-menu__eyebrow {
+    grid-column:1/-1
+}
+.nss-menu h2 {
+    margin:0;
+    font-family:Georgia, serif;
+    font-size:clamp(3rem, 6vw, 6rem);
+    font-weight:500;
+    letter-spacing:-.07em;
+    line-height:.9
+}
+.nss-menu>header p {
+    margin:0;
+    color:var(--thv-theme-muted, #71656a);
+    line-height:1.7
+}
+.nss-menu__grid {
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:.8rem
+}
+.nss-menu article {
+    display:flex;
+    flex-direction:column;
+    min-height:25rem;
+    padding:1.35rem;
+    border:1px solid var(--thv-theme-border, #dfd1d6);
+    background:var(--thv-theme-surface, #fff)
+}
+.nss-menu article>span {
+    font-size:.65rem;
+    font-weight:900
+}
+.nss-menu h3 {
+    margin:auto 0 .7rem;
+    font-family:Georgia, serif;
+    font-size:2rem;
+    font-weight:500
+}
+.nss-menu article p {
+    color:var(--thv-theme-muted, #71656a);
+    line-height:1.6
+}
+.nss-menu dl {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:.7rem;
+    margin:1rem 0;
+    padding-top:.8rem;
+    border-top:1px solid var(--thv-theme-border, #dfd1d6)
+}
+.nss-menu dt {
+    font-size:.6rem;
+    font-weight:900;
+    text-transform:uppercase
+}
+.nss-menu dd {
+    margin:.2rem 0 0;
+    font-weight:800
+}
+.nss-menu article>a {
+    margin-top:auto;
+    font-size:.7rem;
+    font-weight:900;
+    text-transform:uppercase
+}
+@media(max-width:900px) {
+    .nss-menu__grid {
+        grid-template-columns:1fr 1fr
+    }
+}
+@media(max-width:600px) {
+    .nss-menu>header, .nss-menu__grid {
+        grid-template-columns:1fr
+    }
+}

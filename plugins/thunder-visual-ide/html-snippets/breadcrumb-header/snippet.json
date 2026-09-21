@@ -1,0 +1,17 @@
+{
+  "id": "breadcrumb-header",
+  "name": "Breadcrumb Page Header",
+  "description": "A responsive page heading with breadcrumbs, status and contextual action buttons.",
+  "category": "Navigation",
+  "order": 570,
+  "tags": [
+    "breadcrumbs",
+    "navigation",
+    "header",
+    "actions"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "now-showing-movie-grid",
+  "name": "Now Showing Movie Grid",
+  "description": "A cinema programme grid with genre filters, showtimes and booking buttons.",
+  "category": "Music & Entertainment",
+  "order": 4320,
+  "tags": [
+    "movies",
+    "cinema",
+    "grid",
+    "showtimes",
+    "booking"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

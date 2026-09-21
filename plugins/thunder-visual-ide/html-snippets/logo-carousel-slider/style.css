@@ -1,0 +1,127 @@
+.lcs-sli {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.lcs-sli *, .lcs-sli *::before, .lcs-sli *::after {
+    box-sizing: border-box;
+}
+
+.lcs-sli button, .lcs-sli input, .lcs-sli select, .lcs-sli textarea {
+    font: inherit;
+}
+
+.lcs-sli a {
+    color: inherit;
+}
+
+.lcs-sli {
+    max-width: 72rem;
+    padding: 1.2rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.25rem;
+    background: var(--thv-theme-background);
+}
+
+.lcs-sli header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.lcs-sli header span:first-child {
+    color: var(--thv-theme-primary);
+    font-size: 0.7rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.lcs-sli header h2 {
+    margin: 0.25rem 0 0;
+}
+
+.lcs-sli header > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.lcs-sli header button {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.65rem;
+    background: var(--thv-theme-surface);
+    color: var(--thv-theme-text);
+    cursor: pointer;
+}
+
+.lcs-sli__viewport {
+    overflow: hidden;
+}
+
+.lcs-sli__track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.lcs-sli [data-slide] {
+    flex: 0 0 100%;
+    min-height: 17rem;
+    padding: clamp(1.3rem, 4vw, 2.5rem);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface);
+}
+
+.lcs-sli [data-slide] > span {
+    color: var(--thv-theme-primary);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.lcs-sli [data-slide] h3 {
+    max-width: 18ch;
+    margin: 0.65rem 0;
+    font-size: clamp(1.7rem, 4vw, 3.2rem);
+    line-height: 1;
+}
+
+.lcs-sli [data-slide] p {
+    max-width: 48rem;
+    color: var(--thv-theme-muted);
+    line-height: 1.65;
+}
+
+.lcs-sli [data-slide] > strong {
+    color: var(--thv-theme-primary);
+    font-size: 1.5rem;
+}
+
+.lcs-sli [data-slide] img {
+    float: left;
+    width: min(34%, 14rem);
+    height: 14rem;
+    margin-right: 1.3rem;
+    border-radius: 0.9rem;
+    object-fit: cover;
+}
+
+@media (max-width: 620px) {
+    .lcs-sli header {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .lcs-sli [data-slide] img {
+        float: none;
+        width: 100%;
+        height: 13rem;
+        margin: 0 0 1rem;
+    }
+
+}

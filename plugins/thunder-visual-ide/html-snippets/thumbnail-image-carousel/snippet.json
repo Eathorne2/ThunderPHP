@@ -1,0 +1,17 @@
+{
+  "id": "thumbnail-image-carousel",
+  "name": "Thumbnail Image Carousel",
+  "description": "A product-style image carousel with a large stage and clickable thumbnail rail.",
+  "category": "Image Sliders",
+  "order": 1070,
+  "tags": [
+    "slider",
+    "thumbnails",
+    "carousel",
+    "gallery"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

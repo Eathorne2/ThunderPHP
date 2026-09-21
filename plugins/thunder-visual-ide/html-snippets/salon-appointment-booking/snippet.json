@@ -1,0 +1,17 @@
+{
+  "id": "salon-appointment-booking",
+  "name": "Salon Appointment Booking",
+  "description": "A polished appointment request form for hair, skin, makeup or spa studios.",
+  "category": "Fashion & Beauty",
+  "order": 3970,
+  "tags": [
+    "beauty",
+    "form",
+    "booking",
+    "salon"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

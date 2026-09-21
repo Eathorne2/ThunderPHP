@@ -1,0 +1,244 @@
+{
+  "slug": "edu-enrollment-contact",
+  "name": "Enrollment Contact CTA",
+  "category": "Education",
+  "description": "Admissions/enrollment contact section with image and two actions",
+  "keywords": [
+    "education",
+    "enrollment",
+    "admissions",
+    "contact"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-edu-enroll\"><div class=\"tb-edu-enroll__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}<div class=\"tb-edu-enroll__actions\">{{elements:primary}}{{elements:secondary}}</div></div><div class=\"tb-edu-enroll__media\">{{elements:image}}</div></div>",
+  "css": ".tb-edu-enroll{display:grid;grid-template-columns:1fr 1fr;background:var(--tb-color-primary);color:#fff}.tb-edu-enroll__copy{padding:clamp(36px,7vw,88px);align-self:center}.tb-edu-enroll__eyebrow{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.16em}.tb-edu-enroll__title{margin:10px 0;color:inherit;font-size:clamp(44px,6vw,72px);line-height:1}.tb-edu-enroll__text{color:inherit;opacity:.82;line-height:1.7}.tb-edu-enroll__actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.tb-edu-enroll__primary,.tb-edu-enroll__secondary{padding:13px 18px;text-decoration:none;font-weight:900}.tb-edu-enroll__primary{background:#fff;color:var(--tb-color-primary)}.tb-edu-enroll__secondary{border:1px solid rgba(255,255,255,.6);color:#fff}.tb-edu-enroll__media{min-height:540px}.tb-edu-enroll__image{width:100%;height:100%;min-height:540px;object-fit:cover}@media(max-width:760px){.tb-edu-enroll{grid-template-columns:1fr}.tb-edu-enroll__media,.tb-edu-enroll__image{min-height:360px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Admissions"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-edu-enroll__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Ready to take the next step?"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-edu-enroll__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Make it easy for prospective learners or parents to apply, ask a question or schedule a visit."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-edu-enroll__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "primary",
+      "label": "Primary action",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Apply now",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-edu-enroll__primary\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "secondary",
+      "label": "Secondary action",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Talk to admissions",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-edu-enroll__secondary\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "image",
+      "label": "Enrollment image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Students on campus"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-edu-enroll__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-edu-enroll__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

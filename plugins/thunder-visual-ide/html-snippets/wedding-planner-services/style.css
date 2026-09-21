@@ -1,0 +1,116 @@
+.wpls {
+    padding: clamp(2rem, 6vw, 5rem);
+    border-radius: 1.5rem;
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-surface);
+}
+
+.wpls *,
+.wpls *::before,
+.wpls *::after {
+    box-sizing: border-box;
+}
+
+.wpls__heading {
+    display: grid;
+    grid-template-columns: .45fr 1fr .7fr;
+    gap: 2rem;
+    align-items: end;
+    margin-bottom: 2.5rem;
+}
+
+.wpls__heading p,
+.wpls__services article > span {
+    margin: 0;
+    color: var(--thv-theme-primary);
+    font-size: .67rem;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.wpls__heading h2 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2.4rem, 5vw, 4.6rem);
+    font-weight: 400;
+    letter-spacing: -.05em;
+    line-height: 1;
+}
+
+.wpls__heading > span {
+    color: var(--thv-theme-muted);
+    line-height: 1.7;
+}
+
+.wpls__services {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.wpls__services article {
+    min-height: 31rem;
+    padding: 1.5rem;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-text) 14%, transparent);
+    border-radius: 1rem;
+    background: color-mix(in srgb, var(--thv-theme-secondary) 10%, var(--thv-theme-surface));
+}
+
+.wpls__featured {
+    margin-top: 2rem;
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary) !important;
+}
+
+.wpls__featured > span,
+.wpls__featured p,
+.wpls__featured a {
+    color: var(--thv-theme-on-primary) !important;
+}
+
+.wpls h3 {
+    margin: 5.5rem 0 1rem;
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.wpls__services p {
+    min-height: 6.8rem;
+    margin: 0;
+    color: var(--thv-theme-muted);
+    line-height: 1.7;
+}
+
+.wpls ul {
+    margin: 1.2rem 0 1.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    list-style: none;
+    opacity: .8;
+}
+
+.wpls li {
+    padding: .35rem 0;
+}
+
+.wpls a {
+    color: var(--thv-theme-primary);
+    font-size: .7rem;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 850px) {
+    .wpls__heading,
+    .wpls__services {
+        grid-template-columns: 1fr;
+    }
+
+    .wpls__featured {
+        margin-top: 0;
+    }
+}

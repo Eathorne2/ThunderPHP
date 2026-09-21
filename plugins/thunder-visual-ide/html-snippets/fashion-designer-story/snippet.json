@@ -1,0 +1,17 @@
+{
+  "id": "fashion-designer-story",
+  "name": "Fashion Designer Story",
+  "description": "A designer biography section with studio photography and milestone details.",
+  "category": "Fashion & Beauty",
+  "order": 3990,
+  "tags": [
+    "fashion",
+    "beauty",
+    "feature",
+    "about"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

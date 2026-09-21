@@ -1,0 +1,200 @@
+{
+  "slug": "medicine-appointment-cta",
+  "name": "Appointment CTA",
+  "category": "Medicine & Science",
+  "description": "Bold appointment call to action",
+  "keywords": [
+    "appointment",
+    "clinic",
+    "cta"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-med-appointment-cta\"><div>{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-med-appointment-cta__action\">{{elements:cta}}{{elements:phone}}</div></section>",
+  "css": ".tb-med-appointment-cta{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:clamp(36px,6vw,72px);background:var(--tb-color-primary);color:var(--tb-color-surface);border-radius:24px}.tb-med-appointment-cta__eyebrow{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.13em;opacity:.78}.tb-med-appointment-cta__title{font-size:clamp(34px,5vw,58px);margin:8px 0 10px;line-height:1.04}.tb-med-appointment-cta__text{max-width:650px;line-height:1.7;opacity:.88}.tb-med-appointment-cta__action{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:210px}.tb-med-appointment-cta__cta{background:var(--tb-color-surface);color:var(--tb-color-primary);padding:14px 18px;border-radius:999px;text-decoration:none;font-weight:900}.tb-med-appointment-cta__phone{font-weight:800}@media(max-width:760px){.tb-med-appointment-cta{flex-direction:column;align-items:flex-start}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Appointments"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-med-appointment-cta__eyebrow\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Ready to speak with a care team?"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-med-appointment-cta__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Make the next step clear with a focused appointment or consultation callout."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-med-appointment-cta__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "cta",
+      "label": "Action",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Book now",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-med-appointment-cta__cta\" href=\"{{url}}\">{{text}}</a>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "phone",
+      "label": "Phone",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Call +260 000 000 000"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-med-appointment-cta__phone\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

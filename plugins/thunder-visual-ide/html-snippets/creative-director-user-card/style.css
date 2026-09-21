@@ -1,0 +1,183 @@
+.director-card {
+    width: min(100%, 66rem);
+    padding: clamp(1rem, 3vw, 2rem);
+    overflow: hidden;
+    color: #f8f7fb;
+    background:
+        radial-gradient(circle at 82% 20%, color-mix(in srgb, var(--thv-theme-primary, #8b5cf6) 38%, transparent), transparent 24rem),
+        #111119;
+}
+
+.director-card__topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #c7c4d1;
+    font-size: 0.64rem;
+    font-weight: 850;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.director-card__layout {
+    display: grid;
+    grid-template-columns: minmax(19rem, 0.9fr) minmax(22rem, 1.1fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: center;
+    padding: clamp(2rem, 6vw, 5rem) 0 1rem;
+}
+
+.director-card__portrait-stack {
+    position: relative;
+    min-height: 35rem;
+}
+
+.director-card__portrait-stack img {
+    position: absolute;
+    z-index: 2;
+    top: 8%;
+    left: 14%;
+    width: 74%;
+    height: 82%;
+    object-fit: cover;
+    filter: grayscale(1) contrast(1.12);
+}
+
+.director-card__shape {
+    position: absolute;
+}
+
+.director-card__shape--one {
+    inset: 0 14% 20% 0;
+    background: var(--thv-theme-primary, #8b5cf6);
+    transform: rotate(-7deg);
+}
+
+.director-card__shape--two {
+    right: 0;
+    bottom: 0;
+    width: 62%;
+    height: 52%;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--thv-theme-secondary, #dfff62) 90%, white);
+}
+
+.director-card__monogram {
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    bottom: 0;
+    color: #111119;
+    font-size: clamp(4rem, 9vw, 8rem);
+    font-weight: 950;
+    letter-spacing: -0.1em;
+    line-height: 0.75;
+}
+
+.director-card__eyebrow {
+    margin: 0 0 1rem;
+    color: color-mix(in srgb, var(--thv-theme-secondary, #dfff62) 90%, white);
+    font-size: 0.66rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.director-card__name {
+    margin: 0;
+    font-size: clamp(4.2rem, 9vw, 8.5rem);
+    letter-spacing: -0.09em;
+    line-height: 0.72;
+}
+
+.director-card__bio {
+    max-width: 35rem;
+    margin: 2rem 0;
+    color: #c8c5d1;
+    font-size: 1rem;
+    line-height: 1.72;
+}
+
+.director-card__metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.director-card__metrics div {
+    display: grid;
+    gap: 0.4rem;
+    padding: 1.1rem 0;
+}
+
+.director-card__metrics dt {
+    color: #9995a5;
+    font-size: 0.6rem;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.director-card__metrics dd {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+.director-card__actions {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.6rem;
+}
+
+.director-card__actions button {
+    padding: 1rem 1.1rem;
+    border: 0;
+    color: #111119;
+    background: color-mix(in srgb, var(--thv-theme-secondary, #dfff62) 90%, white);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.director-card__actions a {
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 850;
+    text-decoration: none;
+}
+
+.director-card__message {
+    min-height: 1.2rem;
+    margin: 0.9rem 0 0;
+    color: color-mix(in srgb, var(--thv-theme-secondary, #dfff62) 90%, white);
+    font-size: 0.75rem;
+}
+
+@media (max-width: 760px) {
+    .director-card__layout {
+        grid-template-columns: 1fr;
+    }
+
+    .director-card__portrait-stack {
+        min-height: 29rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .director-card__topline,
+    .director-card__actions {
+        align-items: flex-start;
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .director-card__metrics {
+        grid-template-columns: 1fr;
+    }
+}

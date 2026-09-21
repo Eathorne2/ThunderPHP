@@ -1,0 +1,65 @@
+{
+  "type": "data.empty",
+  "label": "Empty Check",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "EMPTY",
+  "color": "#1e40af",
+  "description": "Checks whether a connected PHP value or configured variable path is empty.",
+  "allowed_graphs": [
+    "flow",
+    "view"
+  ],
+  "defaults": {
+    "title": "Empty Check",
+    "variable_path": "value",
+    "access_mode": "array"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "variable_path",
+      "label": "Variable path fallback",
+      "type": "text",
+      "help": "Used only when Value is not connected. Use a PHP variable name without the dollar sign. Dot notation addresses nested values, for example form.email."
+    },
+    {
+      "name": "access_mode",
+      "label": "Nested access",
+      "type": "select",
+      "options": [
+        "array",
+        "object"
+      ],
+      "help": "Used by the variable path fallback. Array generates ['key'] access. Object generates ->property access."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "value",
+        "label": "Value",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Is Empty",
+        "type": "boolean",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\EmptyCheckCompiler",
+    "file": "Compiler.php"
+  }
+}

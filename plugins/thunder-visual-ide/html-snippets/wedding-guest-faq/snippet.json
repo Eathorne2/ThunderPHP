@@ -1,0 +1,18 @@
+{
+  "id": "wedding-guest-faq",
+  "name": "Wedding Guest FAQ",
+  "description": "An accessible accordion for common wedding questions about timing, children, dress code, parking and gifts.",
+  "category": "Wedding",
+  "order": 4600,
+  "tags": [
+    "wedding",
+    "faq",
+    "accordion",
+    "guests",
+    "information"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

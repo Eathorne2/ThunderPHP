@@ -1,0 +1,12 @@
+{
+  "id": "feature-card",
+  "name": "Feature Card",
+  "description": "A polished card with an icon, heading, body copy and action link.",
+  "category": "Cards",
+  "order": 10,
+  "tags": ["card", "content", "call to action"],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

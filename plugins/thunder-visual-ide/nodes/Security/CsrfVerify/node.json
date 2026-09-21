@@ -1,0 +1,66 @@
+{
+  "type": "security.csrf_verify",
+  "label": "CSRF Verify",
+  "category": "Security",
+  "kind": "flow",
+  "icon": "CSRF",
+  "color": "#991b1b",
+  "description": "Verifies a ThunderPHP CSRF token and branches on valid/invalid.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "CSRF Verify",
+    "session_key": "csrf"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "session_key",
+      "label": "Session key",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "data",
+        "label": "POST data",
+        "type": "array",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "valid",
+        "label": "Valid",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      },
+      {
+        "id": "invalid",
+        "label": "Invalid",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Security\\CsrfVerifyCompiler",
+    "file": "Compiler.php"
+  }
+}

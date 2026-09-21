@@ -1,0 +1,114 @@
+.wah-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .65rem .8rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: .9rem;
+    background: var(--thv-theme-surface, #fff);
+    color: var(--thv-theme-text, #0f172a);
+    font-family: system-ui, sans-serif
+}
+
+.wah-header a {
+    color: inherit;
+    text-decoration: none
+}
+
+.wah-header__brand {
+    display: flex;
+    align-items: center;
+    gap: .45rem
+}
+
+.wah-header__brand span {
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: .5rem;
+    background: #2563eb;
+    color: #fff
+}
+
+.wah-header__workspace {
+    padding: .45rem .6rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: .5rem;
+    background: var(--thv-theme-surface-alt, #f8fafc);
+    font-size: .76rem
+}
+
+.wah-header nav {
+    display: flex;
+    gap: .15rem
+}
+
+.wah-header nav a {
+    padding: .5rem .65rem;
+    border-radius: .45rem;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .76rem;
+    font-weight: 750
+}
+
+.wah-header nav a.is-active {
+    background: #eff6ff;
+    color: #1d4ed8
+}
+
+.wah-header__end {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    margin-left: auto
+}
+
+.wah-header__end button {
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    border-radius: .45rem;
+    background: transparent
+}
+
+.wah-header__end img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover
+}
+
+.wah-header__toggle {
+    display: none;
+    margin-left: auto;
+    border: 0;
+    background: none;
+    font-size: 1.2rem
+}
+
+@media(max-width:800px) {
+    .wah-header__workspace, .wah-header__end {
+        display: none
+    }
+    .wah-header__toggle {
+        display: block
+    }
+    .wah-header nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: calc(100% + .4rem);
+        z-index: 20;
+        display: none;
+        padding: .5rem;
+        border: 1px solid var(--thv-theme-border, #dbe4ef);
+        border-radius: .75rem;
+        background: var(--thv-theme-surface, #fff);
+        box-shadow: 0 12px 30px rgba(15, 23, 42, .12)
+    }
+    .wah-header nav.is-open {
+        display: grid
+    }
+}

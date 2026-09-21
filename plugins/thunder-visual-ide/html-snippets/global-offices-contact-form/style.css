@@ -1,0 +1,184 @@
+.gocf-section {
+    padding: clamp(1.5rem, 5vw, 4rem);
+    border-radius: 1.4rem;
+    color: var(--thv-theme-text, #152238);
+    background: var(--thv-theme-surface-alt, #f3f6f8);
+}
+
+.gocf-section > header {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(15rem, .85fr);
+    align-items: end;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.gocf-section > header span {
+    color: var(--thv-theme-primary, #2c5f86);
+    font-size: .7rem;
+    font-weight: 850;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.gocf-section h2 {
+    max-width: 15ch;
+    margin: .55rem 0 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2.1rem, 5vw, 4.3rem);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.gocf-section > header p {
+    margin: 0;
+    color: var(--thv-theme-muted, #667386);
+    line-height: 1.7;
+}
+
+.gocf-section__body {
+    display: grid;
+    grid-template-columns: .7fr 1fr 1.15fr;
+    border: 1px solid var(--thv-theme-border, #d7dee6);
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.gocf-section__offices {
+    display: grid;
+    align-content: start;
+    border-right: 1px solid var(--thv-theme-border, #d7dee6);
+}
+
+.gocf-section__offices button {
+    display: grid;
+    gap: .2rem;
+    padding: 1rem 1.2rem;
+    border: 0;
+    border-bottom: 1px solid var(--thv-theme-border, #d7dee6);
+    color: var(--thv-theme-text, #152238);
+    background: transparent;
+    text-align: left;
+}
+
+.gocf-section__offices button.is-active {
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #2c5f86);
+}
+
+.gocf-section__offices span {
+    font-weight: 850;
+}
+
+.gocf-section__offices small {
+    opacity: .72;
+}
+
+.gocf-section__details {
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border-right: 1px solid var(--thv-theme-border, #d7dee6);
+}
+
+.gocf-section__details article[hidden] {
+    display: none;
+}
+
+.gocf-section__details article > span {
+    color: var(--thv-theme-primary, #2c5f86);
+    font-size: .67rem;
+    font-weight: 850;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.gocf-section__details h3 {
+    margin: .7rem 0;
+    font-family: Georgia, serif;
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+
+.gocf-section__details p,
+.gocf-section__details dd {
+    color: var(--thv-theme-muted, #667386);
+    font-size: .78rem;
+    line-height: 1.65;
+}
+
+.gocf-section__details dl {
+    display: grid;
+    gap: .8rem;
+    margin: 1.5rem 0 0;
+}
+
+.gocf-section__details dt {
+    font-size: .65rem;
+    font-weight: 850;
+    text-transform: uppercase;
+}
+
+.gocf-section__details dd {
+    margin: .2rem 0 0;
+}
+
+.gocf-section form {
+    display: grid;
+    gap: .9rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.gocf-section form label {
+    display: grid;
+    gap: .4rem;
+    font-size: .72rem;
+    font-weight: 800;
+}
+
+.gocf-section form :where(input, textarea) {
+    width: 100%;
+    padding: .78rem;
+    border: 1px solid var(--thv-theme-border, #d7dee6);
+    color: inherit;
+    background: var(--thv-theme-surface-alt, #f5f7f9);
+}
+
+.gocf-section textarea {
+    min-height: 7rem;
+    resize: vertical;
+}
+
+.gocf-section form button {
+    padding: .8rem;
+    border: 0;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #2c5f86);
+    font-weight: 850;
+}
+
+@media (max-width: 850px) {
+    .gocf-section__body {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gocf-section__offices {
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(4, 1fr);
+        border-right: 0;
+        border-bottom: 1px solid var(--thv-theme-border, #d7dee6);
+    }
+}
+
+@media (max-width: 620px) {
+    .gocf-section > header,
+    .gocf-section__body {
+        grid-template-columns: 1fr;
+    }
+
+    .gocf-section__offices {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gocf-section__details {
+        border-right: 0;
+        border-bottom: 1px solid var(--thv-theme-border, #d7dee6);
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "eco-lodge-header-footer",
+  "name": "Eco Lodge Header and Footer",
+  "description": "A calm eco-lodge shell with nature, community, impact and low-footprint stay information.",
+  "category": "Travel & Hotels",
+  "order": 5100,
+  "tags": [
+    "travel",
+    "hotel",
+    "header",
+    "footer",
+    "forest eco lodge"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "floating-section-navigator",
+  "name": "Floating Section Navigator",
+  "description": "A compact floating section navigator for long pages.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Navigation",
+  "order": 8045,
+  "tags": [
+    "navigation",
+    "sections",
+    "floating",
+    "anchors"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

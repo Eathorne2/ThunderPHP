@@ -1,0 +1,20 @@
+{
+  "id": "centered-community-footer",
+  "name": "Centered Community Footer",
+  "description": "A centered community footer with social links and compact navigation.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Footers",
+  "order": 2510,
+  "tags": [
+    "footer",
+    "community",
+    "social",
+    "centered"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

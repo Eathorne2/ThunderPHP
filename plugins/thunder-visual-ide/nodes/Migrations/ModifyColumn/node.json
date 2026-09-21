@@ -1,0 +1,62 @@
+{
+  "type": "migration.modify_column",
+  "label": "Modify Column",
+  "category": "Migrations",
+  "kind": "migration",
+  "icon": "MOD",
+  "color": "#8b5cf6",
+  "description": "Changes an existing column and restores its previous definition on rollback.",
+  "allowed_graphs": [
+    "migration"
+  ],
+  "defaults": {
+    "title": "Modify Column",
+    "table": "users",
+    "new_definition": "name VARCHAR(255) NOT NULL",
+    "old_definition": "name VARCHAR(120) NOT NULL"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "table",
+      "label": "Table",
+      "type": "text"
+    },
+    {
+      "name": "new_definition",
+      "label": "New column definition",
+      "type": "text"
+    },
+    {
+      "name": "old_definition",
+      "label": "Rollback column definition",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Previous",
+        "type": "exec",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out"
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Migrations\\ModifyColumnCompiler",
+    "file": "Compiler.php"
+  }
+}

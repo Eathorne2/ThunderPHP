@@ -1,0 +1,18 @@
+{
+  "id": "chef-story-profile",
+  "name": "Chef Story Profile",
+  "description": "An editorial chef profile with portrait, philosophy, career milestones and a signature quote.",
+  "category": "Food & Restaurant",
+  "order": 3630,
+  "tags": [
+    "chef",
+    "profile",
+    "restaurant",
+    "story",
+    "team"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

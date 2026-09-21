@@ -1,0 +1,101 @@
+{
+  "type": "files.get_contents",
+  "label": "File Get Contents",
+  "category": "Files",
+  "kind": "flow",
+  "icon": "READ",
+  "color": "#475569",
+  "description": "Reads a file or stream URL once with file_get_contents() and exposes the native result and success state.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "File Get Contents",
+    "use_include_path": false,
+    "suppress_warnings": false
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "use_include_path",
+      "label": "Search PHP include path",
+      "type": "checkbox"
+    },
+    {
+      "name": "suppress_warnings",
+      "label": "Suppress PHP warnings",
+      "type": "checkbox",
+      "help": "Adds PHP's @ operator to the file_get_contents() call. The Success output still reports failure."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "path",
+        "label": "Path / URL",
+        "type": "string",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "context",
+        "label": "Stream Context",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "offset",
+        "label": "Offset",
+        "type": "number",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "length",
+        "label": "Length",
+        "type": "number",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      },
+      {
+        "id": "contents",
+        "label": "Contents",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": true
+      },
+      {
+        "id": "success",
+        "label": "Success",
+        "type": "boolean",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Files\\FileGetContentsCompiler",
+    "file": "Compiler.php"
+  }
+}

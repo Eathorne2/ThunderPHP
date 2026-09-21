@@ -1,0 +1,18 @@
+{
+  "id": "neighbourhood-cafe-header-footer",
+  "name": "Neighbourhood Caf\u00e9 Header and Footer",
+  "description": "A coordinated caf\u00e9 header and footer with a friendly brand mark, responsive navigation and opening hours.",
+  "category": "Food & Restaurant",
+  "order": 3650,
+  "tags": [
+    "header footer",
+    "cafe",
+    "navigation",
+    "coffee",
+    "restaurant"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

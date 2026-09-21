@@ -1,0 +1,18 @@
+{
+  "id": "fine-dining-reservation-panel",
+  "name": "Fine Dining Reservation Panel",
+  "description": "An elegant split reservation section with a restaurant photograph, service details and an interactive guest counter.",
+  "category": "Food & Restaurant",
+  "order": 3610,
+  "tags": [
+    "restaurant",
+    "reservation",
+    "fine dining",
+    "booking",
+    "food"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "grand-heritage-hotel-header-footer",
+  "name": "Grand Heritage Hotel Header and Footer",
+  "description": "A classic grand-hotel shell with heritage details, afternoon tea, events and a formal footer.",
+  "category": "Travel & Hotels",
+  "order": 5070,
+  "tags": [
+    "travel",
+    "hotel",
+    "header",
+    "footer",
+    "est. 1926"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

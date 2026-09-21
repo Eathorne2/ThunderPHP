@@ -1,0 +1,124 @@
+.ndm-alert {
+    font-family: system-ui, sans-serif
+}
+
+.ndm-alert__launcher {
+    padding: .7rem 1rem;
+    border: 1px solid #2563eb;
+    border-radius: .65rem;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-weight: 800;
+    cursor: pointer
+}
+
+.ndm-alert__backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    display: grid;
+    place-items: center;
+    padding: 1.25rem;
+    background: rgba(15, 23, 42, .62)
+}
+
+.ndm-alert__backdrop[hidden] {
+    display: none
+}
+
+.ndm-alert__dialog {
+    width: min(34rem, 100%);
+    overflow: hidden;
+    border-radius: 1rem;
+    background: var(--thv-theme-surface, #fff);
+    color: var(--thv-theme-text, #0f172a);
+    box-shadow: 0 24px 70px rgba(15, 23, 42, .35)
+}
+
+.ndm-alert header {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    padding: 1.1rem 1.25rem;
+    border-bottom: 1px solid var(--thv-theme-border, #dbe4ef)
+}
+
+.ndm-alert header>span {
+    display: grid;
+    place-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-weight: 900
+}
+
+.ndm-alert header small {
+    color: #2563eb;
+    font-size: .68rem;
+    font-weight: 900;
+    letter-spacing: .12em
+}
+
+.ndm-alert h2 {
+    margin: .1rem 0 0;
+    font-size: 1.05rem
+}
+
+.ndm-alert header button {
+    margin-left: auto;
+    border: 0;
+    background: none;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: 1.45rem;
+    cursor: pointer
+}
+
+.ndm-alert__dialog>p {
+    padding: 0 1.25rem;
+    color: var(--thv-theme-muted, #64748b);
+    line-height: 1.55
+}
+
+.ndm-alert dl {
+    margin: 1rem 1.25rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: .75rem
+}
+
+.ndm-alert dl div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .7rem .85rem
+}
+
+.ndm-alert dl div+div {
+    border-top: 1px solid var(--thv-theme-border, #dbe4ef)
+}
+
+.ndm-alert dt {
+    color: var(--thv-theme-muted, #64748b)
+}
+
+.ndm-alert dd {
+    margin: 0;
+    font-weight: 750
+}
+
+.ndm-alert footer {
+    padding: 1rem 1.25rem;
+    background: var(--thv-theme-surface-alt, #f8fafc);
+    text-align: right
+}
+
+.ndm-alert footer button {
+    padding: .65rem 1rem;
+    border: 0;
+    border-radius: .55rem;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer
+}

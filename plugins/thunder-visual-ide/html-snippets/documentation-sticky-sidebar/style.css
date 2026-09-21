@@ -1,0 +1,99 @@
+.docs-sidebar-layout {
+    display: grid;
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 5rem);
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: clamp(1rem, 4vw, 3rem);
+    color: var(--thv-theme-text, #172033);
+}
+
+.docs-sidebar-layout__sidebar {
+    position: sticky;
+    top: 1.5rem;
+    align-self: start;
+    padding: 1rem;
+    border: 1px solid var(--thv-theme-border, #dfe5ec);
+    border-radius: 0.9rem;
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.docs-sidebar-layout__sidebar > p {
+    margin: 0 0 0.75rem;
+    color: var(--thv-theme-muted, #667085);
+    font-size: 0.74rem;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.docs-sidebar-layout__sidebar nav {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.docs-sidebar-layout__sidebar a {
+    padding: 0.65rem 0.7rem;
+    border-left: 2px solid transparent;
+    color: var(--thv-theme-muted, #667085);
+    text-decoration: none;
+}
+
+.docs-sidebar-layout__sidebar a.is-active {
+    border-left-color: var(--thv-theme-primary, #4f46e5);
+    color: var(--thv-theme-primary, #4f46e5);
+    background: color-mix(in srgb, var(--thv-theme-primary, #4f46e5) 8%, transparent);
+    font-weight: 750;
+}
+
+.docs-sidebar-layout__content {
+    min-width: 0;
+}
+
+.docs-sidebar-layout__content section {
+    padding-block: 1rem 3.5rem;
+    scroll-margin-top: 2rem;
+}
+
+.docs-sidebar-layout__eyebrow {
+    margin: 0;
+    color: var(--thv-theme-primary, #4f46e5);
+    font-size: 0.76rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.docs-sidebar-layout h1 {
+    margin: 0.6rem 0 1rem;
+    font-size: clamp(2.3rem, 5vw, 4.4rem);
+    letter-spacing: -0.05em;
+}
+
+.docs-sidebar-layout h2 {
+    font-size: 1.7rem;
+}
+
+.docs-sidebar-layout__content p,
+.docs-sidebar-layout__content li {
+    color: var(--thv-theme-muted, #667085);
+    line-height: 1.75;
+}
+
+.docs-sidebar-layout pre {
+    overflow-x: auto;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-text, #172033);
+}
+
+@media (max-width: 720px) {
+    .docs-sidebar-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .docs-sidebar-layout__sidebar {
+        position: static;
+    }
+}

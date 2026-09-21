@@ -1,0 +1,14 @@
+{
+    "id": 5,
+    "title": "Session Class",
+    "slug": "session-class",
+    "description": "The session class provides a wrapper for the $_SESSION global array, making it easier to handle session data. Its also used to set current user data and logged in state.",
+    "type": "reference",
+    "featured": false,
+    "published": true,
+    "order": 1,
+    "meta_title": "",
+    "meta_description": "",
+    "image": "",
+    "video_url": ""
+}

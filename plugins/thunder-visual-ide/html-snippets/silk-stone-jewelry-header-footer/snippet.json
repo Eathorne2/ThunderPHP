@@ -1,0 +1,18 @@
+{
+  "id": "silk-stone-jewelry-header-footer",
+  "name": "Silk and Stone Jewelry Header and Footer",
+  "description": "A coordinated responsive header and footer set for SILK + STONE.",
+  "category": "Fashion & Beauty",
+  "order": 4200,
+  "tags": [
+    "header footer",
+    "fashion",
+    "beauty",
+    "responsive",
+    "silk + stone"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "resort-amenities-icon-grid",
+  "name": "Resort Amenities Icon Grid",
+  "description": "A spacious amenities grid for premium hotel services, facilities and included guest experiences.",
+  "category": "Travel & Hotels",
+  "order": 4850,
+  "tags": [
+    "resort",
+    "amenities",
+    "icons",
+    "facilities",
+    "hotel"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

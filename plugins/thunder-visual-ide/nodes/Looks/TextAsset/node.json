@@ -1,0 +1,68 @@
+{
+  "type": "looks.text_asset",
+  "label": "Code Asset",
+  "category": "Looks",
+  "kind": "architecture",
+  "icon": "</>",
+  "color": "#0284c7",
+  "description": "Creates an editable CSS or JavaScript file inside a connected Look.",
+  "allowed_graphs": [
+    "architecture"
+  ],
+  "defaults": {
+    "title": "Code Asset",
+    "asset_name": "main-styles",
+    "asset_type": "CSS",
+    "filename": "assets/css/main.css",
+    "content": "/* Add styles here */\n"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "asset_name",
+      "label": "Asset marker name",
+      "type": "text",
+      "help": "Use this name when inserting the asset into a View."
+    },
+    {
+      "name": "asset_type",
+      "label": "Asset type",
+      "type": "select",
+      "options": [
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "filename",
+      "label": "Destination path",
+      "type": "text",
+      "help": "Path inside the connected Look, for example assets/css/main.css."
+    },
+    {
+      "name": "content",
+      "label": "CSS / JavaScript source",
+      "type": "code"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "look",
+        "label": "Look",
+        "type": "asset",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Looks\\TextAssetCompiler",
+    "file": "Compiler.php"
+  }
+}

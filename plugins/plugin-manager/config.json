@@ -1,0 +1,111 @@
+{
+  "name": "Plugin Manager",
+  "version": "1.2.0",
+  "core_requires": "^1.0.0",
+  "id": "plugin-manager",
+  "description": "A polished ThunderPHP plugin workspace for installing, inspecting, documenting, exporting and maintaining plugins, looks, dependencies, marketplace packages and migrations.",
+  "author": "Eathorne Choongo",
+  "website": "thunderphp.com",
+  "thumbnail": "assets/images/thumbnail.svg",
+  "active": true,
+  "look": "main",
+  "index": 20,
+  "marketplace_url": "",
+  "permissions": [
+    {
+      "name": "Manage Plugins",
+      "slug": "manage-plugins",
+      "group": "Plugin Manager",
+      "description": "View, install, update, export and disable plugins"
+    },
+    {
+      "name": "Edit Plugin Config",
+      "slug": "edit-plugin-config",
+      "group": "Plugin Manager",
+      "description": "Edit plugin config.json files"
+    },
+    {
+      "name": "Delete Plugins",
+      "slug": "delete-plugins",
+      "group": "Plugin Manager",
+      "description": "Delete plugins and looks"
+    },
+    {
+      "name": "Manage Looks",
+      "slug": "manage-plugin-looks",
+      "group": "Plugin Manager",
+      "description": "Install, activate and delete plugin looks"
+    },
+    {
+      "name": "Install Marketplace Plugins",
+      "slug": "install-marketplace-plugins",
+      "group": "Plugin Manager",
+      "description": "Install and update plugins from a remote marketplace feed"
+    }
+  ],
+  "routes": {
+    "on": [
+      "admin"
+    ],
+    "off": [],
+    "routes": [
+      {
+        "method": "GET",
+        "pattern": "/admin/plugins",
+        "name": "plugin-manager.index"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/plugins/view/{id}",
+        "name": "plugin-manager.view"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/plugins/install",
+        "name": "plugin-manager.install"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/plugins/config/{id}",
+        "name": "plugin-manager.config"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/plugins/looks/{id}",
+        "name": "plugin-manager.looks"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/plugins/dependencies",
+        "name": "plugin-manager.dependencies"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/plugins/migrations",
+        "name": "plugin-manager.migrations"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/plugins/migrations/{id}",
+        "name": "plugin-manager.migration-view"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/plugins/marketplace",
+        "name": "plugin-manager.marketplace"
+      },
+      {
+        "method": "GET",
+        "pattern": "/admin/plugins/marketplace-settings",
+        "name": "plugin-manager.marketplace-settings"
+      }
+    ]
+  },
+  "dependencies": {
+    "thunder-admin": {
+      "name": "Thunder Admin",
+      "version": "1.0.0",
+      "required": true
+    }
+  }
+}

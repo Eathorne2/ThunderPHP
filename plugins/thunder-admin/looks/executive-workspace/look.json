@@ -1,0 +1,88 @@
+{
+    "name": "Executive Workspace",
+    "version": "1.0.0",
+    "plugin": "thunder-admin",
+    "plugin_requires": "^1.5.0",
+    "author": "Eathorne Choongo",
+    "thumbnail": "screenshot.png",
+    "description": "A refined business administration workspace with a floating opaque sidebar, restrained surfaces and executive colour palettes.",
+    "default_palette": "executive-navy",
+    "palettes": {
+        "executive-navy": {
+            "name": "Executive Navy",
+            "description": "Navy, ivory and muted gold for a formal business dashboard.",
+            "colors": {
+                "primary": "#b68742",
+                "primary_dark": "#8d652d",
+                "primary_soft": "#f7ecd9",
+                "sidebar_bg": "#142238",
+                "sidebar_text": "#c4cedd",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f4f1eb",
+                "surface": "#ffffff",
+                "border": "#ded9cf",
+                "text": "#1d2939",
+                "muted": "#6d7480",
+                "success": "#278260",
+                "danger": "#c44747"
+            }
+        },
+        "boardroom-burgundy": {
+            "name": "Boardroom Burgundy",
+            "description": "Deep wine accents with warm neutral surfaces.",
+            "colors": {
+                "primary": "#9a3f55",
+                "primary_dark": "#713043",
+                "primary_soft": "#f7e4e9",
+                "sidebar_bg": "#351d28",
+                "sidebar_text": "#dfc8d0",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f6f0f1",
+                "surface": "#ffffff",
+                "border": "#e4d8dc",
+                "text": "#34252b",
+                "muted": "#806d74",
+                "success": "#2d8062",
+                "danger": "#c43f4e"
+            }
+        },
+        "heritage-olive": {
+            "name": "Heritage Olive",
+            "description": "Earthy olive navigation with understated cream surfaces.",
+            "colors": {
+                "primary": "#6f7b3c",
+                "primary_dark": "#505a2b",
+                "primary_soft": "#eef1df",
+                "sidebar_bg": "#283024",
+                "sidebar_text": "#d0d7c7",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f3f3ec",
+                "surface": "#ffffff",
+                "border": "#dcded1",
+                "text": "#293128",
+                "muted": "#70796e",
+                "success": "#2d8062",
+                "danger": "#bf4949"
+            }
+        },
+        "charcoal-copper": {
+            "name": "Charcoal Copper",
+            "description": "Graphite surfaces and copper accents for a modern corporate workspace.",
+            "colors": {
+                "primary": "#bb6f45",
+                "primary_dark": "#914c2f",
+                "primary_soft": "#f6e7df",
+                "sidebar_bg": "#20252d",
+                "sidebar_text": "#c6cbd2",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f2f3f5",
+                "surface": "#ffffff",
+                "border": "#dce0e5",
+                "text": "#252b33",
+                "muted": "#6e7681",
+                "success": "#278260",
+                "danger": "#c44747"
+            }
+        }
+    }
+}

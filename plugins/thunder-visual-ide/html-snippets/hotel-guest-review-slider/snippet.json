@@ -1,0 +1,18 @@
+{
+  "id": "hotel-guest-review-slider",
+  "name": "Hotel Guest Review Slider",
+  "description": "A refined guest testimonial slider with property ratings, trip type and navigation controls.",
+  "category": "Travel & Hotels",
+  "order": 4890,
+  "tags": [
+    "hotel",
+    "reviews",
+    "testimonial",
+    "slider",
+    "guests"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

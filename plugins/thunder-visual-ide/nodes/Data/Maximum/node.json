@@ -1,0 +1,47 @@
+{
+  "type": "data.maximum",
+  "label": "Maximum",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "MAX",
+  "color": "#0f766e",
+  "description": "Returns the maximum value from two or more connected inputs.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "dynamic_ports": "extreme_values",
+  "defaults": {
+    "title": "Maximum",
+    "input_count": 2
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "input_count",
+      "label": "Number of inputs",
+      "type": "number",
+      "min": 2,
+      "max": 30
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Maximum",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\MaximumCompiler",
+    "file": "Compiler.php"
+  }
+}

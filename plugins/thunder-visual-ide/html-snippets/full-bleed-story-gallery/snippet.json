@@ -1,0 +1,20 @@
+{
+  "id": "full-bleed-story-gallery",
+  "name": "Full-Bleed Story Gallery",
+  "description": "A vertical, full-width photo story with large captions for editorial and travel pages.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9004,
+  "tags": [
+    "gallery",
+    "full bleed",
+    "story",
+    "travel"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

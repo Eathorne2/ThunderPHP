@@ -1,0 +1,18 @@
+{
+  "id": "wedding-venue-travel-cards",
+  "name": "Venue and Travel Cards",
+  "description": "A practical three-card section for ceremony location, transport guidance and accommodation details.",
+  "category": "Wedding",
+  "order": 4560,
+  "tags": [
+    "wedding",
+    "venue",
+    "travel",
+    "accommodation",
+    "directions"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

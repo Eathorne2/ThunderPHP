@@ -1,0 +1,18 @@
+{
+  "id": "grand-stage-theatre-header-footer",
+  "name": "Grand Stage Theatre Header and Footer",
+  "description": "A refined theatre shell with season navigation, ticketing and a formal performance footer.",
+  "category": "Music & Entertainment",
+  "order": 4490,
+  "tags": [
+    "theatre",
+    "stage",
+    "header",
+    "footer",
+    "tickets"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

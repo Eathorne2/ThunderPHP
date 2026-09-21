@@ -1,0 +1,117 @@
+{
+  "type": "view.form",
+  "label": "Form",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "FORM",
+  "color": "#0891b2",
+  "description": "Builds a reusable responsive HTML form.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Form",
+    "component_name": "form",
+    "action": "",
+    "method": "POST",
+    "enctype": "",
+    "css_class": "",
+    "gap": "1rem",
+    "widths": {
+      "mobile": 12,
+      "small": 12,
+      "medium": 12,
+      "large": 12
+    },
+    "schema_name": "",
+    "inline_style": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "component_name",
+      "label": "Component name",
+      "type": "text",
+      "help": "The form becomes a reusable partial when this is set."
+    },
+    {
+      "name": "schema_name",
+      "label": "Schema name",
+      "type": "text",
+      "help": "Optional controller-facing name. Defaults to the component name."
+    },
+    {
+      "name": "action",
+      "label": "Form action",
+      "type": "text"
+    },
+    {
+      "name": "method",
+      "label": "Method",
+      "type": "select",
+      "options": [
+        "POST",
+        "GET"
+      ]
+    },
+    {
+      "name": "enctype",
+      "label": "Encoding",
+      "type": "select",
+      "options": [
+        "",
+        "multipart/form-data",
+        "application/x-www-form-urlencoded"
+      ]
+    },
+    {
+      "name": "gap",
+      "label": "Field gap",
+      "type": "text"
+    },
+    {
+      "name": "css_class",
+      "label": "CSS classes",
+      "type": "text"
+    },
+    {
+      "name": "inline_style",
+      "label": "Inline styles",
+      "type": "textarea",
+      "help": "CSS declarations applied directly to the same element as the custom CSS classes."
+    },
+    {
+      "name": "widths",
+      "label": "Responsive width",
+      "type": "breakpoints",
+      "help": "Choose how many of 12 columns this item occupies at each breakpoint."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "children",
+        "label": "Children",
+        "type": "view-child",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\FormCompiler",
+    "file": "Compiler.php"
+  }
+}

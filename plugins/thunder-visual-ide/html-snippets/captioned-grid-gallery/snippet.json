@@ -1,0 +1,17 @@
+{
+  "id": "captioned-grid-gallery",
+  "name": "Captioned Grid Gallery",
+  "description": "A structured editorial gallery with featured image, captions and responsive masonry-like sizing.",
+  "category": "Image Galleries",
+  "order": 1050,
+  "tags": [
+    "gallery",
+    "grid",
+    "captions",
+    "editorial"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,54 @@
+{
+  "type": "data.concatenate",
+  "label": "Concatenate",
+  "category": "Data",
+  "kind": "expression",
+  "icon": ".+.",
+  "color": "#0891b2",
+  "description": "Joins two or more connected values and outputs one string.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "dynamic_ports": "concatenate",
+  "defaults": {
+    "title": "Concatenate",
+    "input_count": 2,
+    "separator": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "input_count",
+      "label": "Number of inputs",
+      "type": "number",
+      "min": 2,
+      "max": 30
+    },
+    {
+      "name": "separator",
+      "label": "Separator",
+      "type": "text",
+      "help": "Inserted between each connected value. Leave empty for direct concatenation."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "String",
+        "type": "string",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\ConcatenateCompiler",
+    "file": "Compiler.php"
+  }
+}

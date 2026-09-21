@@ -1,0 +1,18 @@
+{
+  "id": "strategy-session-call-to-action",
+  "name": "Strategy Session Call to Action",
+  "description": "A professional consultation CTA with executive positioning, availability and a compact booking form.",
+  "category": "Call to Action",
+  "order": 3560,
+  "tags": [
+    "strategy",
+    "consultation",
+    "corporate",
+    "cta",
+    "booking"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "legal-faq-accordion",
+  "name": "Legal FAQ Accordion",
+  "description": "An accessible accordion for common law-firm engagement questions.",
+  "category": "Business & Law",
+  "order": 5330,
+  "tags": [
+    "law",
+    "faq",
+    "accordion",
+    "questions"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

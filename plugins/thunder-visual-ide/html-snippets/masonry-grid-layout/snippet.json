@@ -1,0 +1,17 @@
+{
+  "id": "masonry-grid-layout",
+  "name": "Masonry Style Grid Layout",
+  "description": "A CSS column-based masonry gallery for mixed-height visual stories, notes, and image cards.",
+  "category": "Grid Layouts",
+  "order": 3310,
+  "tags": [
+    "grid",
+    "masonry",
+    "gallery",
+    "layout"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

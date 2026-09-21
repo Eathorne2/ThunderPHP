@@ -1,0 +1,159 @@
+{
+  "slug": "callout-card",
+  "name": "Callout Card",
+  "category": "Call to Action",
+  "description": "A highlighted message with a primary action.",
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-block--callout-card\">\n  <div class=\"tb-callout-card__content\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div>\n  {{elements:button}}\n</div>",
+  "css": ".tb-block--callout-card{padding:30px 34px;border-radius:20px;background:var(--tb-color-secondary);color:var(--tb-color-background);display:flex;align-items:center;justify-content:space-between;gap:28px}.tb-callout-card__content{max-width:680px}.tb-callout-card__eyebrow{display:block;margin-bottom:7px;color:var(--tb-color-accent);font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.tb-callout-card__title{margin:0;color:var(--tb-color-background);font-size:29px;line-height:1.15}.tb-callout-card__text{margin:10px 0 0;color:color-mix(in srgb,var(--tb-color-background) 75%,transparent);font-size:15px;line-height:1.6}.tb-callout-card__button{flex:0 0 auto;padding:12px 17px;border-radius:10px;background:var(--tb-color-primary);color:#fff;font-weight:850;text-decoration:none}.tb-callout-card__button:hover{background:var(--tb-color-primary-hover)}@media(max-width:680px){.tb-block--callout-card{align-items:flex-start;flex-direction:column}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Continue the conversation"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-callout-card__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Ready to explore the next step?"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<h3 class=\"tb-callout-card__title\">{{text}}</h3>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Text",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Point readers toward a related resource, service or action without interrupting the article."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 4
+        }
+      ],
+      "template": "<p class=\"tb-callout-card__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "button",
+      "label": "Button",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Get started",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Button text",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "Button URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-callout-card__button\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

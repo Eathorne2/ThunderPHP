@@ -1,0 +1,45 @@
+{
+  "type": "view.html_boilerplate",
+  "label": "HTML Boilerplate",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "DOC",
+  "color": "#7c3aed",
+  "description": "Creates an editable HTML5 document shell with social metadata and a content insertion marker.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "HTML Boilerplate",
+    "html_code": "<!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\n    <title><?= esc($page_title ?? 'Page Title') ?></title>\n    <meta name=\"description\" content=\"<?= esc($page_description ?? 'Describe this page') ?>\">\n    <meta name=\"robots\" content=\"<?= esc($robots ?? 'index, follow') ?>\">\n    <link rel=\"canonical\" href=\"<?= esc($canonical_url ?? current_url()) ?>\">\n\n    <!-- Open Graph / Facebook / LinkedIn -->\n    <meta property=\"og:type\" content=\"<?= esc($og_type ?? 'website') ?>\">\n    <meta property=\"og:site_name\" content=\"<?= esc($site_name ?? 'Website Name') ?>\">\n    <meta property=\"og:title\" content=\"<?= esc($social_title ?? $page_title ?? 'Page Title') ?>\">\n    <meta property=\"og:description\" content=\"<?= esc($social_description ?? $page_description ?? 'Describe this page') ?>\">\n    <meta property=\"og:url\" content=\"<?= esc($canonical_url ?? current_url()) ?>\">\n    <meta property=\"og:image\" content=\"<?= esc($social_image ?? '') ?>\">\n    <meta property=\"og:image:alt\" content=\"<?= esc($social_image_alt ?? $social_title ?? $page_title ?? 'Page image') ?>\">\n\n    <!-- X / Twitter -->\n    <meta name=\"twitter:card\" content=\"<?= esc($twitter_card ?? 'summary_large_image') ?>\">\n    <meta name=\"twitter:title\" content=\"<?= esc($social_title ?? $page_title ?? 'Page Title') ?>\">\n    <meta name=\"twitter:description\" content=\"<?= esc($social_description ?? $page_description ?? 'Describe this page') ?>\">\n    <meta name=\"twitter:image\" content=\"<?= esc($social_image ?? '') ?>\">\n    <meta name=\"twitter:image:alt\" content=\"<?= esc($social_image_alt ?? $social_title ?? $page_title ?? 'Page image') ?>\">\n</head>\n<body>\n    <main style=\"margin-left:auto;margin-right:auto;max-width:1200px\">\n        <tvi-content />\n    </main>\n</body>\n</html>\n"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "html_code",
+      "label": "HTML boilerplate",
+      "type": "code",
+      "help": "Edit the full document. <tvi-content /> marks where the owning View source and components connected to Page content are inserted."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "children",
+        "label": "Page content",
+        "type": "view-child",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\HtmlBoilerplateCompiler",
+    "file": "Compiler.php"
+  }
+}

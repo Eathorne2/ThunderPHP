@@ -1,0 +1,18 @@
+{
+  "id": "rustic-barn-wedding-header-footer",
+  "name": "Rustic Barn Wedding Header and Footer",
+  "description": "A warm countryside wedding shell with natural textures, friendly navigation and a relaxed matching footer.",
+  "category": "Wedding",
+  "order": 4750,
+  "tags": [
+    "rustic wedding",
+    "barn",
+    "header",
+    "footer",
+    "country"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

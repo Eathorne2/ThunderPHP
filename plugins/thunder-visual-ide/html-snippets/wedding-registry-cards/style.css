@@ -1,0 +1,116 @@
+.wrgc {
+    padding: clamp(2rem, 6vw, 5rem);
+    border-radius: 1.5rem;
+    color: var(--thv-theme-text);
+    background: color-mix(in srgb, var(--thv-theme-secondary) 16%, var(--thv-theme-surface));
+}
+
+.wrgc *,
+.wrgc *::before,
+.wrgc *::after {
+    box-sizing: border-box;
+}
+
+.wrgc header {
+    max-width: 47rem;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.wrgc header p {
+    margin: 0;
+    color: var(--thv-theme-primary);
+    font-size: .68rem;
+    font-weight: 900;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.wrgc h2 {
+    margin: .7rem 0 1rem;
+    font-family: Georgia, serif;
+    font-size: clamp(2.6rem, 6vw, 5rem);
+    font-weight: 400;
+    letter-spacing: -.05em;
+    line-height: 1;
+}
+
+.wrgc header > span {
+    color: var(--thv-theme-muted);
+    line-height: 1.7;
+}
+
+.wrgc__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.wrgc article {
+    min-height: 25rem;
+    padding: 1.5rem;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-text) 13%, transparent);
+    border-radius: 50% 50% 1rem 1rem;
+    background: var(--thv-theme-surface);
+    text-align: center;
+}
+
+.wrgc article > span {
+    font-size: .65rem;
+    font-weight: 900;
+    letter-spacing: .12em;
+}
+
+.wrgc__symbol {
+    display: grid;
+    width: 5rem;
+    height: 5rem;
+    margin: 3rem auto 1.2rem;
+    place-items: center;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: 50%;
+    color: var(--thv-theme-primary);
+    font-size: 1.8rem;
+}
+
+.wrgc h3 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.wrgc article p {
+    margin: .9rem 0 1.4rem;
+    color: var(--thv-theme-muted);
+    line-height: 1.7;
+}
+
+.wrgc article a {
+    color: var(--thv-theme-primary);
+    font-size: .7rem;
+    font-weight: 900;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+.wrgc__featured {
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary) !important;
+}
+
+.wrgc__featured .wrgc__symbol,
+.wrgc__featured a {
+    border-color: var(--thv-theme-border);
+    color: var(--thv-theme-on-primary);
+}
+
+.wrgc__featured p {
+    color: color-mix(in srgb, var(--thv-theme-on-primary) 78%, transparent) !important;
+}
+
+@media (max-width: 820px) {
+    .wrgc__grid {
+        grid-template-columns: 1fr;
+    }
+}

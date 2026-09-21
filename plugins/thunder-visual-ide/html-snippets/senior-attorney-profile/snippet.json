@@ -1,0 +1,17 @@
+{
+  "id": "senior-attorney-profile",
+  "name": "Senior Attorney Profile",
+  "description": "An editorial managing-partner profile with expertise, metrics and contact actions.",
+  "category": "Business & Law",
+  "order": 5230,
+  "tags": [
+    "attorney",
+    "profile",
+    "law",
+    "leadership"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

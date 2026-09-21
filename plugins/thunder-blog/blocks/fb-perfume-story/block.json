@@ -1,0 +1,238 @@
+{
+  "slug": "fb-perfume-story",
+  "name": "Perfume Story",
+  "category": "Fashion & Beauty",
+  "description": "Centered fragrance story with a product image and poetic editorial copy.",
+  "keywords": [
+    "perfume",
+    "fragrance",
+    "beauty",
+    "product"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-fb-perfume\"><div class=\"tb-fb-perfume__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-fb-perfume__media\">{{elements:image}}<div class=\"tb-fb-perfume__note\">{{elements:note}}</div></div>{{elements:cta}}</div>",
+  "css": ".tb-fb-perfume{padding:clamp(34px,7vw,90px);text-align:center;background:var(--tb-color-surface);border:1px solid var(--tb-color-border)}.tb-fb-perfume__copy{max-width:760px;margin:0 auto}.tb-fb-perfume__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}.tb-fb-perfume__title{margin:12px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(46px,7vw,82px);font-weight:500}.tb-fb-perfume__text{max-width:620px;margin:0 auto 28px;color:var(--tb-color-muted);line-height:1.8}.tb-fb-perfume__media{position:relative;max-width:760px;margin:0 auto 24px}.tb-fb-perfume__image{width:100%;max-height:520px;object-fit:cover;display:block}.tb-fb-perfume__note{position:absolute;right:18px;bottom:18px;padding:14px 16px;background:var(--tb-color-surface);color:var(--tb-color-secondary);font-family:Georgia,serif;font-style:italic}.tb-fb-perfume__cta{display:inline-flex;padding:11px 18px;border:1px solid var(--tb-color-secondary);color:var(--tb-color-secondary);text-decoration:none;font-weight:800}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Where scent meets soul"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-fb-perfume__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A fragrance with memory"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-fb-perfume__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Build a sensory story around a fragrance, candle or beauty product with generous space and a single focal image."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-fb-perfume__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "image",
+      "label": "Fragrance image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Perfume bottle in an elegant setting"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-fb-perfume__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-fb-perfume__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "note",
+      "label": "Image note",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Soft woods · warm skin · night air"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<div class=\"tb-fb-perfume__note\">{{text}}</div>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Button",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Discover the scent",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-fb-perfume__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

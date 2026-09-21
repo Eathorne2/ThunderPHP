@@ -1,0 +1,55 @@
+{
+  "render_mode": "shortcode",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "content",
+      "label": "Shortcode",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "shortcode": "[thunder-blog.posts layout=\"medium\" order=\"latest\" limit=\"6\"]"
+      },
+      "schema": [
+        {
+          "key": "shortcode",
+          "label": "Shortcode text",
+          "type": "shortcode",
+          "rows": 5,
+          "help": "Use a registered dotted shortcode such as thunder-blog.posts."
+        }
+      ],
+      "template": "{{shortcode}}",
+      "min": 1,
+      "max": 1
+    }
+  ],
+  "html": "{{elements:content}}",
+  "css": ".tb-shortcode-placeholder{padding:22px;border:2px dashed var(--tb-color-border);border-radius:14px;background:var(--tb-color-surface);color:var(--tb-color-muted);font-family:monospace;word-break:break-word}",
+  "js": "",
+  "slug": "shortcode",
+  "name": "Shortcode",
+  "category": "Dynamic Content",
+  "description": "Paste a ThunderPHP dotted shortcode that is replaced when the page is rendered.",
+  "keywords": [
+    "shortcode",
+    "dynamic",
+    "plugin",
+    "listing"
+  ],
+  "contexts": [
+    "post",
+    "page",
+    "header",
+    "footer"
+  ],
+  "version": "1.0.0"
+}

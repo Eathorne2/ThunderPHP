@@ -1,0 +1,108 @@
+.csip-auth {
+    width: min(27rem, 100%);
+    padding: 1.5rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: 1.1rem;
+    background: var(--thv-theme-surface, #fff);
+    color: var(--thv-theme-text, #0f172a);
+    font-family: system-ui, sans-serif;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, .08)
+}
+
+.csip-auth header {
+    display: flex;
+    align-items: center;
+    gap: .8rem
+}
+
+.csip-auth header>span {
+    display: grid;
+    place-items: center;
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: .7rem;
+    background: #2563eb;
+    color: #fff
+}
+
+.csip-auth h2 {
+    margin: 0
+}
+
+.csip-auth header p {
+    margin: .2rem 0 0;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .8rem
+}
+
+.csip-auth button {
+    width: 100%;
+    padding: .72rem;
+    border-radius: .6rem;
+    font-weight: 800
+}
+
+.csip-auth__social {
+    margin-top: 1.2rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    background: var(--thv-theme-surface, #fff)
+}
+
+.csip-auth__divider {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    margin: 1rem 0;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .7rem
+}
+
+.csip-auth__divider::before, .csip-auth__divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: var(--thv-theme-border, #dbe4ef)
+}
+
+.csip-auth form {
+    display: grid;
+    gap: .8rem
+}
+
+.csip-auth form>label {
+    display: grid;
+    gap: .35rem;
+    font-size: .75rem;
+    font-weight: 750
+}
+
+.csip-auth input[type=email], .csip-auth input[type=password] {
+    padding: .72rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: .55rem
+}
+
+.csip-auth__options {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: .72rem
+}
+
+.csip-auth a {
+    color: var(--thv-theme-primary, #2563eb);
+    text-decoration: none
+}
+
+.csip-auth__submit {
+    border: 0;
+    background: var(--thv-theme-primary, #2563eb);
+    color: #fff
+}
+
+.csip-auth footer {
+    margin-top: 1rem;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .75rem;
+    text-align: center
+}

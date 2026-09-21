@@ -1,0 +1,70 @@
+{
+  "type": "view.reusable_view",
+  "label": "Render Reusable View",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "USE",
+  "color": "#a855f7",
+  "description": "Includes a reusable architecture View partial at this position.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Reusable View",
+    "reusable_view_node_id": "",
+    "css_class": "",
+    "widths": {
+      "mobile": 12,
+      "small": 12,
+      "medium": 12,
+      "large": 12
+    },
+    "inline_style": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "reusable_view_node_id",
+      "label": "Reusable view",
+      "type": "reusable_view_ref",
+      "help": "Select a Reusable View from the architecture graph."
+    },
+    {
+      "name": "css_class",
+      "label": "Wrapper CSS classes",
+      "type": "text",
+      "help": "Optional. Leave both wrapper fields empty to emit only the partial include."
+    },
+    {
+      "name": "inline_style",
+      "label": "Wrapper inline styles",
+      "type": "textarea",
+      "help": "Optional. Leave both wrapper fields empty to emit only the partial include."
+    },
+    {
+      "name": "widths",
+      "label": "Responsive width",
+      "type": "breakpoints",
+      "help": "Applied only when wrapper classes or wrapper inline styles are provided."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\ReusableViewCompiler",
+    "file": "Compiler.php"
+  }
+}

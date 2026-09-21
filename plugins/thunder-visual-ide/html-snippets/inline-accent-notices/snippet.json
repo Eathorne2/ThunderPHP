@@ -1,0 +1,20 @@
+{
+  "id": "inline-accent-notices",
+  "name": "Inline Accent Notices",
+  "description": "Slim left-accent notices designed for dense forms and settings pages.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Alerts - Inline",
+  "order": 2110,
+  "tags": [
+    "alert",
+    "inline",
+    "notice",
+    "compact"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

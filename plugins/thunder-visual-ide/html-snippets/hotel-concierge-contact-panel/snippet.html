@@ -1,0 +1,51 @@
+<section class="hccp">
+    <div class="hccp__intro">
+        <p>Before and during your stay</p>
+        <h2>Your concierge, whenever plans change.</h2>
+        <span>Dining, transfers, celebrations, family arrangements and local experiences—send one message and we will coordinate the details.</span>
+        <div class="hccp__channels">
+            <button class="is-active" data-channel="message" type="button">
+                <strong>Message</strong>
+                <small>Reply within 2 hours</small>
+            </button>
+            <button data-channel="call" type="button">
+                <strong>Call</strong>
+                <small>Available 24 hours</small>
+            </button>
+            <button data-channel="whatsapp" type="button">
+                <strong>WhatsApp</strong>
+                <small>For current guests</small>
+            </button>
+        </div>
+    </div>
+    <form>
+        <div>
+            <label>
+                <span>Name</span>
+                <input required type="text">
+            </label>
+            <label>
+                <span>Email</span>
+                <input required type="email">
+            </label>
+        </div>
+        <label>
+            <span>How can we help?</span>
+            <select>
+                <option>Plan my stay</option>
+                <option>Airport transfer</option>
+                <option>Dining reservation</option>
+                <option>Celebration arrangement</option>
+                <option>Current guest support</option>
+            </select>
+        </label>
+        <label>
+            <span>Message</span>
+            <textarea placeholder="Share dates, preferences and anything we should know" rows="6">
+            </textarea>
+        </label>
+        <button type="submit">Send to concierge</button>
+        <p data-concierge-status>
+        </p>
+    </form>
+</section>

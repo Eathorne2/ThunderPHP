@@ -1,0 +1,17 @@
+{
+  "id": "dashboard-product-hero-section",
+  "name": "Dashboard Product Hero",
+  "description": "A software-product hero with announcement, feature bullets, signup form, and dashboard preview.",
+  "category": "Hero Sections",
+  "order": 3110,
+  "tags": [
+    "hero",
+    "dashboard",
+    "software",
+    "signup"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

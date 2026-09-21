@@ -1,0 +1,73 @@
+{
+  "type": "models.method_call",
+  "label": "Model Method Call",
+  "category": "Models",
+  "kind": "flow",
+  "icon": "M()",
+  "color": "#075985",
+  "description": "Calls a method defined by a Model node. Parameter ports follow the selected method signature.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "dynamic_ports": "model_method",
+  "defaults": {
+    "title": "Model Call",
+    "model_node_id": "",
+    "method_name": "",
+    "result_variable": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "result_variable",
+      "label": "Result variable",
+      "type": "text",
+      "help": "Optional PHP variable name. Omit the $ sign. Leave blank to use the automatic node-specific name."
+    },
+    {
+      "name": "model_node_id",
+      "label": "Model",
+      "type": "model_ref"
+    },
+    {
+      "name": "method_name",
+      "label": "Method",
+      "type": "model_method"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      },
+      {
+        "id": "result",
+        "label": "Result",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Models\\MethodCallCompiler",
+    "file": "Compiler.php"
+  }
+}

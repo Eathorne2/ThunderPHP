@@ -1,0 +1,300 @@
+.midnight-shell {
+    --midnight-panel: #111827;
+    --midnight-border: #263244;
+    color: #e5edf8;
+    background: #080d16;
+}
+
+.midnight-shell__header,
+.midnight-shell__footer {
+    width: min(100% - 2rem, 80rem);
+    margin-inline: auto;
+}
+
+.midnight-shell__header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    min-height: 5rem;
+    border-bottom: 1px solid var(--midnight-border);
+}
+
+.midnight-shell__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: inherit;
+    font-size: 1.05rem;
+    font-weight: 850;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+}
+
+.midnight-shell__brand-mark {
+    position: relative;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.7rem;
+    background: linear-gradient(145deg, var(--thv-theme-primary, #38bdf8), var(--thv-theme-secondary, #8b5cf6));
+    box-shadow: 0 0 1.8rem color-mix(in srgb, var(--thv-theme-primary, #38bdf8) 30%, transparent);
+}
+
+.midnight-shell__brand-mark span {
+    position: absolute;
+    width: 0.38rem;
+    border-radius: 999px;
+    background: #ffffff;
+}
+
+.midnight-shell__brand-mark span:first-child {
+    top: 0.45rem;
+    bottom: 0.45rem;
+    left: 0.55rem;
+}
+
+.midnight-shell__brand-mark span:last-child {
+    top: 0.7rem;
+    right: 0.55rem;
+    bottom: 0.7rem;
+}
+
+.midnight-shell__nav,
+.midnight-shell__actions {
+    display: flex;
+    align-items: center;
+}
+
+.midnight-shell__nav {
+    justify-content: center;
+    gap: clamp(1rem, 3vw, 2rem);
+    flex: 1;
+}
+
+.midnight-shell__actions {
+    gap: 0.9rem;
+}
+
+.midnight-shell__nav a,
+.midnight-shell__sign-in,
+.midnight-shell__status,
+.midnight-shell__footer a {
+    color: #9ba9bd;
+    text-decoration: none;
+}
+
+.midnight-shell__nav a:hover,
+.midnight-shell__footer a:hover {
+    color: #ffffff;
+}
+
+.midnight-shell__status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.74rem;
+}
+
+.midnight-shell__status span {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: var(--thv-theme-success, #22c55e);
+    box-shadow: 0 0 0 0.25rem rgba(34, 197, 94, 0.12);
+}
+
+.midnight-shell__start {
+    display: inline-flex;
+    justify-content: center;
+    padding: 0.76rem 1rem;
+    border-radius: 0.7rem;
+    color: #06111c;
+    background: var(--thv-theme-primary, #38bdf8);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.midnight-shell__menu-button {
+    display: none;
+    margin-left: auto;
+    border: 0;
+    color: inherit;
+    background: transparent;
+    font-size: 1.3rem;
+}
+
+.midnight-shell__demo {
+    display: grid;
+    min-height: 24rem;
+    place-items: center;
+    padding: 4rem 1rem;
+    color: #7f8da1;
+    background:
+        linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.midnight-shell__footer {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.midnight-shell__footer-cta {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 2rem;
+    padding: clamp(2rem, 5vw, 4rem);
+    border: 1px solid var(--midnight-border);
+    border-radius: 1.4rem;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.15), transparent 35%),
+        var(--midnight-panel);
+}
+
+.midnight-shell__eyebrow {
+    margin: 0 0 0.65rem;
+    color: var(--thv-theme-primary, #38bdf8);
+    font-size: 0.73rem;
+    font-weight: 850;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.midnight-shell__footer-cta h2 {
+    max-width: 43rem;
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 4.4rem);
+    letter-spacing: -0.055em;
+    line-height: 1;
+}
+
+.midnight-shell__cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.midnight-shell__secondary-action {
+    padding: 0.76rem 1rem;
+    border: 1px solid var(--midnight-border);
+    border-radius: 0.7rem;
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.midnight-shell__footer-grid {
+    display: grid;
+    grid-template-columns: minmax(16rem, 1.5fr) repeat(3, minmax(8rem, 0.65fr));
+    gap: 2.5rem;
+    padding-block: 3.5rem;
+}
+
+.midnight-shell__footer-about p {
+    max-width: 26rem;
+    color: #7f8da1;
+    line-height: 1.7;
+}
+
+.midnight-shell__footer-grid nav {
+    display: grid;
+    align-content: start;
+    gap: 0.75rem;
+}
+
+.midnight-shell__footer-grid h2 {
+    margin: 0 0 0.3rem;
+    color: #e5edf8;
+    font-size: 0.74rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.midnight-shell__footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--midnight-border);
+    color: #7f8da1;
+    font-size: 0.82rem;
+}
+
+.midnight-shell__footer-bottom div {
+    display: flex;
+    gap: 1rem;
+}
+
+.midnight-shell__sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+@media (max-width: 960px) {
+    .midnight-shell__status {
+        display: none;
+    }
+}
+
+@media (max-width: 780px) {
+    .midnight-shell__header {
+        flex-wrap: wrap;
+        padding-block: 0.8rem;
+    }
+
+    .midnight-shell__menu-button {
+        display: block;
+    }
+
+    .midnight-shell__actions {
+        margin-left: auto;
+    }
+
+    .midnight-shell__sign-in {
+        display: none;
+    }
+
+    .midnight-shell__nav {
+        display: none;
+        order: 4;
+        width: 100%;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        padding-top: 0.4rem;
+    }
+
+    .midnight-shell__nav.is-open {
+        display: flex;
+    }
+
+    .midnight-shell__nav a {
+        padding: 0.85rem 0;
+        border-top: 1px solid var(--midnight-border);
+    }
+
+    .midnight-shell__footer-cta,
+    .midnight-shell__footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .midnight-shell__footer-cta {
+        align-items: start;
+    }
+}
+
+@media (max-width: 520px) {
+    .midnight-shell__cta-actions,
+    .midnight-shell__footer-bottom {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .midnight-shell__footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

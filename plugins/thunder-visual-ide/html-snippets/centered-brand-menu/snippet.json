@@ -1,0 +1,20 @@
+{
+  "id": "centered-brand-menu",
+  "name": "Centered Brand Menu",
+  "description": "A centered brand navigation with balanced links and a primary action.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Menus",
+  "order": 8041,
+  "tags": [
+    "menu",
+    "navigation",
+    "brand",
+    "header"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

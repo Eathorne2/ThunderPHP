@@ -1,0 +1,56 @@
+{
+  "type": "lifecycle.reusable_view",
+  "label": "Reusable View",
+  "category": "Lifecycle",
+  "kind": "architecture",
+  "icon": "INC",
+  "color": "#a855f7",
+  "description": "Creates a reusable look partial with its own View Builder graph, but no route or action hook It can also own a separate browser-side JavaScript Flow.",
+  "allowed_graphs": [
+    "architecture"
+  ],
+  "defaults": {
+    "title": "Reusable View",
+    "filename": "frontend/includes/reusable-view.php",
+    "content": "",
+    "javascript_graph_id": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Reusable view name",
+      "type": "text"
+    },
+    {
+      "name": "filename",
+      "label": "Partial path",
+      "type": "text",
+      "help": "Path inside the connected Look. This file is generated without a route or action hook."
+    },
+    {
+      "name": "content",
+      "label": "HTML / PHP",
+      "type": "code",
+      "help": "Optional source around visual children. Use <tvi-component name=\"component-name\" /> markers just like a normal View."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "look",
+        "label": "Look",
+        "type": "view",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Lifecycle\\ReusableViewCompiler",
+    "file": "Compiler.php"
+  },
+  "nested_graph": true,
+  "nested_graph_kind": "view",
+  "nested_graph_label": "Reusable View Builder"
+}

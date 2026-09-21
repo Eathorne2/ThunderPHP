@@ -1,0 +1,18 @@
+{
+  "id": "podcast-episode-library",
+  "name": "Podcast Episode Library",
+  "description": "A clean podcast episode browser with topic filtering, durations and playback actions.",
+  "category": "Music & Entertainment",
+  "order": 4280,
+  "tags": [
+    "podcast",
+    "episodes",
+    "audio",
+    "filter",
+    "media"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

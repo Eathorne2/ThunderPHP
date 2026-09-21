@@ -1,0 +1,104 @@
+.wcdp {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(2rem, 6vw, 5rem);
+    border: 1px solid color-mix(in srgb, var(--thv-theme-primary) 25%, transparent);
+    border-radius: 1.5rem;
+    text-align: center;
+    color: var(--thv-theme-text);
+    background:
+        radial-gradient(circle at 15% 10%, color-mix(in srgb, var(--thv-theme-secondary) 38%, transparent), transparent 18rem),
+        var(--thv-theme-surface);
+}
+
+.wcdp *,
+.wcdp *::before,
+.wcdp *::after {
+    box-sizing: border-box;
+}
+
+.wcdp::after {
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    right: -7rem;
+    bottom: -8rem;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-primary) 30%, transparent);
+    border-radius: 50%;
+    content: "";
+}
+
+.wcdp__heading p,
+.wcdp__heading span {
+    margin: 0;
+    color: var(--thv-theme-muted);
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.wcdp__heading h2 {
+    margin: .75rem 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2.3rem, 6vw, 5.2rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+}
+
+.wcdp__clock {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    max-width: 56rem;
+    margin: 2.6rem auto;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-text) 12%, transparent);
+    border-radius: 1rem;
+    background: color-mix(in srgb, var(--thv-theme-text) 12%, transparent);
+}
+
+.wcdp__clock div {
+    display: flex;
+    min-height: 8.5rem;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--thv-theme-surface);
+}
+
+.wcdp__clock strong {
+    font-family: Georgia, serif;
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.wcdp__clock span {
+    margin-top: .55rem;
+    color: var(--thv-theme-primary);
+    font-size: .65rem;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.wcdp__calendar {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    padding: .9rem 1.2rem;
+    border-radius: 999px;
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary);
+    font-size: .72rem;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+    .wcdp__clock {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

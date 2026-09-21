@@ -1,0 +1,61 @@
+{
+  "type": "response.json",
+  "label": "JSON Response",
+  "category": "Response",
+  "kind": "flow",
+  "icon": "JSON",
+  "color": "#7c3aed",
+  "description": "Sends a JSON response, sets the status code and exits execution.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "JSON Response",
+    "status_code": 200,
+    "pretty_print": false,
+    "unescaped_slashes": true
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "status_code",
+      "label": "HTTP status code",
+      "type": "number"
+    },
+    {
+      "name": "pretty_print",
+      "label": "Pretty print JSON",
+      "type": "checkbox"
+    },
+    {
+      "name": "unescaped_slashes",
+      "label": "Do not escape slashes",
+      "type": "checkbox"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in"
+      },
+      {
+        "id": "data",
+        "label": "Data",
+        "type": "mixed",
+        "direction": "in"
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Response\\JsonCompiler",
+    "file": "Compiler.php"
+  }
+}

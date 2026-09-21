@@ -1,0 +1,96 @@
+.editorial-blog-card {
+    max-width: 34rem;
+    overflow: hidden;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: 1.1rem;
+    background: var(--thv-theme-surface, #fff);
+    color: var(--thv-theme-text, #0f172a)
+}
+
+.editorial-blog-card__image {
+    position: relative;
+    display: block;
+    aspect-ratio: 16/9;
+    overflow: hidden
+}
+
+.editorial-blog-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s
+}
+
+.editorial-blog-card:hover .editorial-blog-card__image img {
+    transform: scale(1.04)
+}
+
+.editorial-blog-card__image span {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    padding: .35rem .6rem;
+    border-radius: 999px;
+    background: var(--thv-theme-primary, #2563eb);
+    color: var(--thv-theme-on-primary, #fff);
+    font-size: .7rem;
+    font-weight: 850
+}
+
+.editorial-blog-card__body {
+    padding: 1.2rem
+}
+
+.editorial-blog-card__meta {
+    display: flex;
+    gap: .8rem;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .72rem
+}
+
+.editorial-blog-card h3 {
+    margin: .55rem 0;
+    font-size: 1.4rem;
+    line-height: 1.25
+}
+
+.editorial-blog-card h3 a {
+    color: inherit;
+    text-decoration: none
+}
+
+.editorial-blog-card__body>p {
+    color: var(--thv-theme-muted, #64748b);
+    line-height: 1.6
+}
+
+.editorial-blog-card footer {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--thv-theme-border, #dbe4ef)
+}
+
+.editorial-blog-card footer img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover
+}
+
+.editorial-blog-card footer strong, .editorial-blog-card footer small {
+    display: block
+}
+
+.editorial-blog-card footer small {
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .68rem
+}
+
+.editorial-blog-card footer>a {
+    margin-left: auto;
+    color: var(--thv-theme-primary, #2563eb);
+    font-size: 1.4rem;
+    text-decoration: none
+}

@@ -1,0 +1,119 @@
+{
+  "type": "looks.look",
+  "label": "Look",
+  "category": "Looks",
+  "kind": "architecture",
+  "icon": "L",
+  "color": "#0f766e",
+  "description": "Defines an editable look.json, owns the shared form theme, and groups view/asset files structurally.",
+  "allowed_graphs": [
+    "architecture"
+  ],
+  "defaults": {
+    "title": "Main Look",
+    "folder": "main",
+    "name": "Main Look",
+    "version": "1.0.0",
+    "plugin_requires": "^1.0.0",
+    "author": "",
+    "thumbnail": "",
+    "description": "",
+    "form_theme_id": "classic",
+    "form_theme_palette_id": "default",
+    "form_theme_colors": {},
+    "load_theme_css": true,
+    "theme_css_path": "frontend/theme-colors.php",
+    "theme_hook_name": "before_view",
+    "theme_hook_priority": 100,
+    "form_theme_palette_selection": "theme:default"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "folder",
+      "label": "Folder",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "label": "Look name",
+      "type": "text"
+    },
+    {
+      "name": "version",
+      "label": "Version",
+      "type": "text"
+    },
+    {
+      "name": "plugin_requires",
+      "label": "Plugin requirement",
+      "type": "text"
+    },
+    {
+      "name": "author",
+      "label": "Author",
+      "type": "text"
+    },
+    {
+      "name": "thumbnail",
+      "label": "Thumbnail",
+      "type": "text"
+    },
+    {
+      "name": "description",
+      "label": "Description",
+      "type": "textarea"
+    },
+    {
+      "name": "load_theme_css",
+      "label": "Load form theme CSS",
+      "type": "checkbox",
+      "help": "Adds a hook that includes the generated theme file once from the active Look."
+    },
+    {
+      "name": "theme_css_path",
+      "label": "Theme CSS file path",
+      "type": "text",
+      "help": "Path inside this Look. The generated PHP file outputs the selected theme CSS."
+    },
+    {
+      "name": "theme_hook_name",
+      "label": "Theme hook name",
+      "type": "text",
+      "help": "Defaults to before_view so the shared theme is loaded before any View output."
+    },
+    {
+      "name": "theme_hook_priority",
+      "label": "Theme hook priority",
+      "type": "number",
+      "help": "Defaults to 100 so the theme output is added after earlier before_view callbacks."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "view",
+        "label": "Views",
+        "type": "view",
+        "direction": "in",
+        "multiple": true
+      },
+      {
+        "id": "asset",
+        "label": "Assets",
+        "type": "asset",
+        "direction": "in",
+        "multiple": true
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Looks\\LookCompiler",
+    "file": "Compiler.php"
+  }
+}

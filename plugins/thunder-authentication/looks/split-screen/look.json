@@ -1,0 +1,47 @@
+{
+    "name": "Split Screen",
+    "version": "1.0.0",
+    "plugin": "thunder-authentication",
+    "plugin_requires": "^1.0.0",
+    "author": "Eathorne Choongo",
+    "description": "A high-impact split layout with a full visual side and compact form surface.",
+    "default_palette": "indigo",
+    "palettes": {
+        "indigo": {
+            "primary": "#4f46e5",
+            "secondary": "#64748b",
+            "background": "#eef2ff",
+            "surface": "#ffffff",
+            "text": "#111827",
+            "muted_text": "#6b7280",
+            "border": "#d9def5",
+            "success": "#15803d",
+            "warning": "#b45309",
+            "danger": "#b91c1c"
+        },
+        "sunset": {
+            "primary": "#ea580c",
+            "secondary": "#7c2d12",
+            "background": "#fff7ed",
+            "surface": "#ffffff",
+            "text": "#431407",
+            "muted_text": "#78716c",
+            "border": "#fed7aa",
+            "success": "#15803d",
+            "warning": "#c2410c",
+            "danger": "#b91c1c"
+        },
+        "midnight": {
+            "primary": "#60a5fa",
+            "secondary": "#94a3b8",
+            "background": "#0f172a",
+            "surface": "#172033",
+            "text": "#f8fafc",
+            "muted_text": "#a5b4c8",
+            "border": "#334155",
+            "success": "#4ade80",
+            "warning": "#fbbf24",
+            "danger": "#fb7185"
+        }
+    }
+}

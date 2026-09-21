@@ -1,0 +1,17 @@
+{
+  "id": "album-audio-player",
+  "name": "Album Audio Player",
+  "description": "A visual album player with cover art, track details, custom controls, and listening metadata.",
+  "category": "Audio Players",
+  "order": 3210,
+  "tags": [
+    "audio",
+    "player",
+    "album",
+    "music"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

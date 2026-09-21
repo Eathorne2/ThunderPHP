@@ -1,0 +1,51 @@
+{
+  "type": "custom.function_definition",
+  "label": "Function Definition",
+  "category": "Custom",
+  "kind": "architecture",
+  "icon": "\u0192",
+  "color": "#475569",
+  "description": "Defines a reusable namespaced function with a nested execution graph.",
+  "allowed_graphs": [
+    "architecture"
+  ],
+  "nested_graph": "flow",
+  "defaults": {
+    "title": "Custom Function",
+    "function_name": "custom_function",
+    "parameters": "",
+    "return_type": "",
+    "graph_id": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "function_name",
+      "label": "Function name",
+      "type": "text"
+    },
+    {
+      "name": "parameters",
+      "label": "Parameters",
+      "type": "text",
+      "help": "Comma-separated names, without $. "
+    },
+    {
+      "name": "return_type",
+      "label": "Return type",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Custom\\FunctionDefinitionCompiler",
+    "file": "Compiler.php"
+  }
+}

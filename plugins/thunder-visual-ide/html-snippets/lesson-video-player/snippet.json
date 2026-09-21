@@ -1,0 +1,17 @@
+{
+  "id": "lesson-video-player",
+  "name": "Lesson Video Player",
+  "description": "An educational video player with lesson information, completion status, resources, and custom controls.",
+  "category": "Video Players",
+  "order": 3190,
+  "tags": [
+    "video",
+    "player",
+    "lesson",
+    "course"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

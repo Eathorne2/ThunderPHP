@@ -1,0 +1,17 @@
+{
+  "id": "toast-notifications",
+  "name": "Toast Notifications",
+  "description": "A demonstration panel that launches success, warning and error toast messages.",
+  "category": "Feedback",
+  "order": 550,
+  "tags": [
+    "toast",
+    "notification",
+    "feedback",
+    "alerts"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

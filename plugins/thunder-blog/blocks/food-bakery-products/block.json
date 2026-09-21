@@ -1,0 +1,163 @@
+{
+  "slug": "food-bakery-products",
+  "name": "Bakery Product Cards",
+  "category": "Food & Restaurant",
+  "description": "Compact bakery shop grid with product descriptions and prices",
+  "keywords": [
+    "food",
+    "restaurant",
+    "bakery",
+    "products",
+    "bread"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-food-bakery-products\"><div class=\"tb-food-bakery-products__head\">{{elements:title}}{{elements:text}}</div><div class=\"tb-food-bakery-products__grid\">{{elements:items}}</div></div>",
+  "css": ".tb-food-bakery-products{padding:clamp(34px,6vw,78px);background:var(--tb-color-background)}.tb-food-bakery-products__head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:28px}.tb-food-bakery-products__title{margin:0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(40px,5vw,64px)}.tb-food-bakery-products__text{max-width:480px;margin:0;color:var(--tb-color-muted);line-height:1.65}.tb-food-bakery-products__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.tb-food-bakery-products__item{padding:24px;border:1px solid var(--tb-color-border);background:var(--tb-color-surface)}.tb-food-bakery-products__item h3{margin:0 0 9px;color:var(--tb-color-secondary)}.tb-food-bakery-products__item p{margin:0 0 22px;color:var(--tb-color-muted)}.tb-food-bakery-products__price{font-weight:950;color:var(--tb-color-primary)}@media(max-width:900px){.tb-food-bakery-products__grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:540px){.tb-food-bakery-products__grid{grid-template-columns:1fr}.tb-food-bakery-products__head{display:block}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "From the bakery"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<h2 class=\"tb-food-bakery-products__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Daily staples and small indulgences, ready from early morning until sold out."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-food-bakery-products__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "items",
+      "label": "Bakery product",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "name": "Country sourdough",
+        "text": "48-hour fermentation",
+        "price": "K65"
+      },
+      "schema": [
+        {
+          "key": "name",
+          "label": "Product",
+          "type": "text",
+          "selector": ".tb-food-bakery-products__item h3"
+        },
+        {
+          "key": "text",
+          "label": "Description",
+          "type": "text",
+          "selector": ".tb-food-bakery-products__item p"
+        },
+        {
+          "key": "price",
+          "label": "Price",
+          "type": "text",
+          "selector": ".tb-food-bakery-products__price"
+        }
+      ],
+      "template": "<article class=\"tb-food-bakery-products__item\"><h3>{{name}}</h3><p>{{text}}</p><strong class=\"tb-food-bakery-products__price\">{{price}}</strong></article>",
+      "min": 1,
+      "max": 12,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "name": "Country sourdough",
+          "text": "48-hour fermentation",
+          "price": "K65"
+        },
+        {
+          "name": "Butter croissant",
+          "text": "Laminated by hand",
+          "price": "K35"
+        },
+        {
+          "name": "Cinnamon roll",
+          "text": "Brown sugar glaze",
+          "price": "K40"
+        },
+        {
+          "name": "Chocolate loaf",
+          "text": "Dark cocoa · sea salt",
+          "price": "K70"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

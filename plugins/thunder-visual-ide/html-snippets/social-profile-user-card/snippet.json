@@ -1,0 +1,17 @@
+{
+  "id": "social-profile-user-card",
+  "name": "Social Profile User Card",
+  "description": "A visual profile card with cover, biography, follower metrics, and social links.",
+  "category": "User Cards",
+  "order": 3070,
+  "tags": [
+    "user",
+    "card",
+    "social",
+    "profile"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

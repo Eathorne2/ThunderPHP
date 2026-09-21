@@ -1,0 +1,56 @@
+{
+  "type": "data.array_combine",
+  "label": "Merge Arrays",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "\u21c9[]",
+  "color": "#0e7490",
+  "description": "Combines two or more arrays. Later arrays can override earlier form-data fields.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "dynamic_ports": "array_combine",
+  "defaults": {
+    "title": "Merge Arrays",
+    "mode": "replace",
+    "array_count": 2
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "mode",
+      "label": "Merge mode",
+      "type": "select",
+      "options": [
+        "replace",
+        "merge"
+      ],
+      "help": "replace: later associative values override earlier ones. merge: PHP array_merge behavior."
+    },
+    {
+      "name": "array_count",
+      "label": "Array count",
+      "type": "number"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Combined Array",
+        "type": "array",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\ArrayCombineCompiler",
+    "file": "Compiler.php"
+  }
+}

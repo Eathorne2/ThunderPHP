@@ -1,0 +1,17 @@
+{
+  "id": "project-timeline",
+  "name": "Project Timeline",
+  "description": "A clean vertical project timeline with completed, current and upcoming milestones.",
+  "category": "Content",
+  "order": 540,
+  "tags": [
+    "timeline",
+    "milestones",
+    "project",
+    "steps"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

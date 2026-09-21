@@ -1,0 +1,17 @@
+{
+  "id": "filterable-portfolio-gallery",
+  "name": "Filterable Portfolio Gallery",
+  "description": "A category-filtered gallery for portfolios, products or project screenshots.",
+  "category": "Galleries",
+  "order": 510,
+  "tags": [
+    "gallery",
+    "portfolio",
+    "filter",
+    "projects"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

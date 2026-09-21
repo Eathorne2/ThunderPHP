@@ -1,0 +1,200 @@
+.ept-section {
+    padding: clamp(1.5rem, 5vw, 4rem);
+    border-radius: 1.4rem;
+    color: var(--thv-theme-text, #152238);
+    background: var(--thv-theme-surface-alt, #f2f5f7);
+}
+
+.ept-section > header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.ept-section > header > div > span {
+    color: var(--thv-theme-primary, #2b5d91);
+    font-size: .7rem;
+    font-weight: 850;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.ept-section h2 {
+    max-width: 17ch;
+    margin: .55rem 0 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 5vw, 4.2rem);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.ept-section__toggle {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    color: var(--thv-theme-muted, #667386);
+    font-size: .72rem;
+    font-weight: 800;
+}
+
+.ept-section__toggle input {
+    position: absolute;
+    opacity: 0;
+}
+
+.ept-section__toggle i {
+    position: relative;
+    width: 2.8rem;
+    height: 1.45rem;
+    border-radius: 999px;
+    background: var(--thv-theme-border, #cbd4df);
+}
+
+.ept-section__toggle i::after {
+    content: '';
+    position: absolute;
+    top: .18rem;
+    left: .18rem;
+    width: 1.09rem;
+    height: 1.09rem;
+    border-radius: 50%;
+    background: #ffffff;
+    transition: transform .2s ease;
+}
+
+.ept-section__toggle input:checked + i {
+    background: var(--thv-theme-primary, #2b5d91);
+}
+
+.ept-section__toggle input:checked + i::after {
+    transform: translateX(1.35rem);
+}
+
+.ept-section__table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.ept-section__table article {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 1.5rem;
+    border: 1px solid var(--thv-theme-border, #d6dde6);
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.ept-section__table article.is-featured {
+    border-top: 4px solid var(--thv-theme-primary, #2b5d91);
+    box-shadow: 0 22px 55px rgba(15, 23, 42, .1);
+}
+
+.ept-plan__badge {
+    position: absolute;
+    top: .75rem;
+    right: .75rem;
+    color: var(--thv-theme-primary, #2b5d91);
+    font-size: .62rem;
+    font-weight: 850;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.ept-plan__head > span {
+    color: var(--thv-theme-primary, #2b5d91);
+    font-size: .7rem;
+    font-weight: 850;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.ept-plan__head h3 {
+    margin: 1.1rem 0 .65rem;
+    font-size: 2.25rem;
+}
+
+.ept-plan__head h3 small,
+.ept-plan__head h3 em {
+    color: var(--thv-theme-muted, #667386);
+    font-size: .75rem;
+    font-style: normal;
+}
+
+.ept-plan__head p {
+    min-height: 4rem;
+    color: var(--thv-theme-muted, #667386);
+    font-size: .78rem;
+    line-height: 1.65;
+}
+
+.ept-plan__head a {
+    display: block;
+    margin: 1.2rem 0 1.5rem;
+    padding: .78rem;
+    border: 1px solid var(--thv-theme-primary, #2b5d91);
+    color: var(--thv-theme-primary, #2b5d91);
+    text-align: center;
+    font-size: .74rem;
+    font-weight: 850;
+    text-decoration: none;
+}
+
+.ept-section__table .is-featured .ept-plan__head a {
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #2b5d91);
+}
+
+.ept-section ul {
+    display: grid;
+    align-content: start;
+    gap: .7rem;
+    margin: 0;
+    padding: 1.2rem 0 0;
+    border-top: 1px solid var(--thv-theme-border, #d6dde6);
+    list-style: none;
+}
+
+.ept-section li {
+    color: var(--thv-theme-muted, #667386);
+    font-size: .75rem;
+}
+
+.ept-section li::before {
+    content: '✓';
+    margin-right: .55rem;
+    color: var(--thv-theme-success, #15803d);
+    font-weight: 900;
+}
+
+.ept-section > footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    color: var(--thv-theme-muted, #667386);
+    font-size: .72rem;
+}
+
+.ept-section > footer a {
+    color: var(--thv-theme-primary, #2b5d91);
+    font-weight: 850;
+    text-decoration: none;
+}
+
+@media (max-width: 820px) {
+    .ept-section__table {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 620px) {
+    .ept-section > header,
+    .ept-section > footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

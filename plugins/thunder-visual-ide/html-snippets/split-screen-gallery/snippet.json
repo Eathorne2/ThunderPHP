@@ -1,0 +1,20 @@
+{
+  "id": "split-screen-gallery",
+  "name": "Split-Screen Gallery",
+  "description": "A large active image paired with an interactive list of stories and compact thumbnails.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9011,
+  "tags": [
+    "gallery",
+    "split screen",
+    "interactive",
+    "portfolio"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

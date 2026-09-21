@@ -1,0 +1,17 @@
+{
+  "id": "legal-case-results-metrics",
+  "name": "Legal Case Results Metrics",
+  "description": "A dark case-results section with prominent matter outcomes and responsible disclaimer text.",
+  "category": "Business & Law",
+  "order": 5250,
+  "tags": [
+    "law",
+    "results",
+    "metrics",
+    "trust"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "event-catering-services",
+  "name": "Event Catering Services",
+  "description": "A premium catering services section with event types, package details and a visual enquiry callout.",
+  "category": "Food & Restaurant",
+  "order": 3690,
+  "tags": [
+    "catering",
+    "events",
+    "services",
+    "weddings",
+    "food"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

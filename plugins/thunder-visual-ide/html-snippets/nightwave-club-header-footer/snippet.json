@@ -1,0 +1,18 @@
+{
+  "id": "nightwave-club-header-footer",
+  "name": "Nightwave Club Header and Footer",
+  "description": "A neon nightclub shell with event navigation, guest-list action and a matching after-dark footer.",
+  "category": "Music & Entertainment",
+  "order": 4440,
+  "tags": [
+    "nightclub",
+    "header",
+    "footer",
+    "dj",
+    "events"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

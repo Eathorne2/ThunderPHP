@@ -1,0 +1,114 @@
+.rch-hero {
+    color:var(--thv-theme-text, #211b1e);
+    background:var(--thv-theme-background, #fbf7f4);
+}
+.rch-hero a {
+    color:inherit;
+}
+.rch-hero img {
+    display:block;
+    max-width:100%;
+}
+.rch-hero__eyebrow {
+    color:var(--thv-theme-primary, #95516a);
+    font-size:.68rem;
+    font-weight:900;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+}
+.rch-hero__muted {
+    color:var(--thv-theme-muted, #71656a);
+}
+.rch-hero {
+    position:relative;
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    min-height:44rem;
+    overflow:hidden;
+    border-radius:1.5rem
+}
+.rch-hero__copy {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:clamp(2rem, 6vw, 5rem)
+}
+.rch-hero h1 {
+    max-width:9ch;
+    margin:.7rem 0 1.2rem;
+    font-family:Georgia, serif;
+    font-size:clamp(4rem, 8vw, 8rem);
+    font-weight:500;
+    letter-spacing:-.075em;
+    line-height:.85
+}
+.rch-hero__copy>p {
+    max-width:34rem;
+    color:var(--thv-theme-muted, #71656a);
+    line-height:1.75
+}
+.rch-hero__actions {
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+    align-items:center;
+    margin-top:1.5rem
+}
+.rch-hero__actions a {
+    font-size:.72rem;
+    font-weight:900;
+    text-transform:uppercase
+}
+.rch-hero__primary {
+    padding:.9rem 1.1rem;
+    color:var(--thv-theme-on-primary, #fff)!important;
+    background:var(--thv-theme-primary, #95516a);
+    text-decoration:none
+}
+.rch-hero figure {
+    position:relative;
+    margin:0;
+    min-height:44rem
+}
+.rch-hero figure:after {
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, .6))
+}
+.rch-hero figure img {
+    width:100%;
+    height:100%;
+    object-fit:cover
+}
+.rch-hero figcaption {
+    position:absolute;
+    z-index:1;
+    right:1.2rem;
+    bottom:1.2rem;
+    left:1.2rem;
+    color:#fff;
+    font-size:.65rem;
+    font-weight:900;
+    letter-spacing:.12em;
+    text-transform:uppercase
+}
+.rch-hero__number {
+    position:absolute;
+    right:47%;
+    bottom:1.2rem;
+    font-family:Georgia, serif;
+    font-size:5rem;
+    color:var(--thv-theme-primary, #95516a)
+}
+@media(max-width:780px) {
+    .rch-hero {
+        grid-template-columns:1fr
+    }
+    .rch-hero figure {
+        min-height:30rem
+    }
+    .rch-hero__number {
+        display:none
+    }
+}

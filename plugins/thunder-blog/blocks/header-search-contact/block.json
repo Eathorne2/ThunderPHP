@@ -1,0 +1,148 @@
+{
+  "settings": {
+    "defaults": {
+      "menu_id": "0",
+      "width": "1200",
+      "search_placeholder": "Search the blog"
+    },
+    "schema": [
+      {
+        "key": "menu_id",
+        "label": "Saved menu",
+        "type": "menu",
+        "default": "0"
+      },
+      {
+        "key": "width",
+        "label": "Content width",
+        "type": "select",
+        "options": {
+          "1040": "Compact",
+          "1200": "Standard",
+          "1360": "Wide",
+          "1480": "Extra wide"
+        },
+        "default": "1200"
+      },
+      {
+        "key": "search_placeholder",
+        "label": "Search placeholder",
+        "type": "text",
+        "default": "Search the blog"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "key": "brand",
+      "label": "Brand",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "name": "{{app_name}}",
+        "logo": "{{app_logo}}",
+        "url": "{{root}}/"
+      },
+      "schema": [
+        {
+          "key": "name",
+          "label": "Brand name",
+          "type": "text",
+          "selector": ".tb-h-search-contact__brand-name"
+        },
+        {
+          "key": "logo",
+          "label": "Logo",
+          "type": "image",
+          "selector": ".tb-h-search-contact__logo"
+        },
+        {
+          "key": "url",
+          "label": "Home URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-h-search-contact__brand\" href=\"{{url}}\"><img class=\"tb-h-search-contact__logo\" src=\"{{logo}}\" alt=\"\"><span class=\"tb-h-search-contact__brand-name\">{{name}}</span></a>",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "secondary"
+        }
+      }
+    },
+    {
+      "key": "contact",
+      "label": "Contact link",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": true,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "hello@example.com",
+        "url": "mailto:hello@example.com"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Contact text",
+          "type": "text",
+          "selector": ".tb-h-search-contact__contact"
+        },
+        {
+          "key": "url",
+          "label": "Contact URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-h-search-contact__contact\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 1,
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "text"
+        }
+      }
+    }
+  ],
+  "menu_sources": [
+    {
+      "setting": "menu_id",
+      "token": "primary",
+      "empty": "",
+      "container": "<nav class=\"tb-h-search-contact__nav\" aria-label=\"{{menu_name}}\">{{items}}</nav>",
+      "item": "<a class=\"tb-h-search-contact__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}}</a>",
+      "parent": "<div class=\"tb-h-search-contact__parent\"><a class=\"tb-h-search-contact__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}}<span class=\"tb-h-search-contact__chevron\">⌄</span></a><div class=\"tb-h-search-contact__submenu\">{{children}}</div></div>",
+      "empty_preview": "<nav class=\"tb-h-search-contact__nav tb-menu-empty\">Select a menu</nav>"
+    }
+  ],
+  "html": "<header class=\"tb-block tb-h-search-contact\"><div class=\"tb-h-search-contact__utility\"><div class=\"tb-h-search-contact__inner\" style=\"--tb-h-search-contact-width:{{width}}px\">{{elements:contact}}<form class=\"tb-h-search-contact__search\" action=\"{{root}}/blog/search\" method=\"get\"><input class=\"tb-h-search-contact__search-input\" name=\"q\" placeholder=\"{{search_placeholder}}\"><button class=\"tb-h-search-contact__search-button\" type=\"submit\">Search</button></form></div></div><div class=\"tb-h-search-contact__inner\" style=\"--tb-h-search-contact-width:{{width}}px\"><div class=\"tb-h-search-contact__row\">{{elements:brand}}{{menu:primary}}</div></div></header>",
+  "css": ".tb-h-search-contact{position:relative;background:var(--tb-color-surface);color:var(--tb-color-text)}.tb-h-search-contact__inner{max-width:var(--tb-h-search-contact-width);margin:auto;padding:0 24px}.tb-h-search-contact__brand{display:flex;align-items:center;gap:10px;color:var(--tb-color-secondary);text-decoration:none;font-weight:900}.tb-h-search-contact__logo{width:38px;height:38px;object-fit:contain}.tb-h-search-contact__brand-name{letter-spacing:-.025em}.tb-h-search-contact__nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.tb-h-search-contact__link{display:inline-flex;align-items:center;gap:5px;padding:9px 11px;color:inherit;text-decoration:none;font-weight:750}.tb-h-search-contact__link:hover{color:var(--tb-color-primary)}.tb-h-search-contact__parent{position:relative}.tb-h-search-contact__submenu{position:absolute;z-index:20;top:100%;left:0;min-width:190px;padding:8px;border:1px solid var(--tb-color-border);border-radius:12px;background:var(--tb-color-surface);display:none;box-shadow:0 16px 38px color-mix(in srgb,var(--tb-color-secondary) 14%,transparent)}.tb-h-search-contact__submenu .tb-h-search-contact__link{display:flex}.tb-h-search-contact__parent:hover>.tb-h-search-contact__submenu,.tb-h-search-contact__parent:focus-within>.tb-h-search-contact__submenu{display:grid}.tb-h-search-contact__chevron{font-size:10px;opacity:.65}.tb-h-search-contact__utility{background:var(--tb-color-background);border-bottom:1px solid var(--tb-color-border)}.tb-h-search-contact__utility .tb-h-search-contact__inner{min-height:42px;display:flex;align-items:center;justify-content:space-between;gap:22px}.tb-h-search-contact__contact{color:var(--tb-color-muted);text-decoration:none;font-size:12px}.tb-h-search-contact__search{display:flex;align-items:center;gap:6px}.tb-h-search-contact__search-input{width:210px;padding:6px 8px;border:1px solid var(--tb-color-border);border-radius:6px;background:var(--tb-color-surface);color:var(--tb-color-text)}.tb-h-search-contact__search-button{padding:7px 10px;border:0;border-radius:6px;background:var(--tb-color-primary);color:var(--tb-color-background);font-weight:800}.tb-h-search-contact__row{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:22px}@media(max-width:820px){.tb-h-search-contact__row,.tb-h-search-contact__top,.tb-h-search-contact__glass,.tb-h-search-contact__frame,.tb-h-search-contact__pill{flex-wrap:wrap;height:auto;padding-top:14px;padding-bottom:14px}.tb-h-search-contact__nav{width:100%;order:5}.tb-h-search-contact__submenu{position:static;box-shadow:none}}@media(max-width:560px){.tb-h-search-contact__inner{padding-left:16px;padding-right:16px}.tb-h-search-contact__row{grid-template-columns:1fr!important}.tb-h-search-contact__search{width:100%!important}}",
+  "js": "",
+  "slug": "header-search-contact",
+  "name": "Search and Contact Header",
+  "category": "Headers",
+  "description": "A utility-rich header combining contact, search, menu and a concise brand row.",
+  "keywords": [
+    "header",
+    "navigation",
+    "menu",
+    "searchcontact"
+  ],
+  "contexts": [
+    "header"
+  ],
+  "version": "1.0.0"
+}

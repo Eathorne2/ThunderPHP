@@ -1,0 +1,121 @@
+{
+  "type": "javascript.event_listener",
+  "label": "Event Listener",
+  "category": "JavaScript Events",
+  "kind": "flow",
+  "icon": "EVT",
+  "color": "#c2410c",
+  "description": "Starts a JS Flow when a DOM event occurs on a View component or selector.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "Event Listener",
+    "target_node_id": "",
+    "target_selector": "",
+    "selector_inside": "",
+    "event_name": "click",
+    "prevent_default": false,
+    "stop_propagation": false,
+    "capture": false,
+    "once": false,
+    "passive": false,
+    "event_variable_name": "e"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "target_node_id",
+      "label": "Target View component",
+      "type": "view_component_ref"
+    },
+    {
+      "name": "target_selector",
+      "label": "Manual selector",
+      "type": "text",
+      "help": "Used when no target component is selected."
+    },
+    {
+      "name": "selector_inside",
+      "label": "Selector inside target",
+      "type": "text",
+      "help": "Optional descendant selector."
+    },
+    {
+      "name": "event_name",
+      "label": "Event name",
+      "type": "text"
+    },
+    {
+      "name": "event_variable_name",
+      "label": "Event variable name",
+      "type": "text",
+      "help": "JavaScript identifier available inside this listener callback. Defaults to e."
+    },
+    {
+      "name": "prevent_default",
+      "label": "Prevent default",
+      "type": "checkbox"
+    },
+    {
+      "name": "stop_propagation",
+      "label": "Stop propagation",
+      "type": "checkbox"
+    },
+    {
+      "name": "capture",
+      "label": "Capture phase",
+      "type": "checkbox"
+    },
+    {
+      "name": "once",
+      "label": "Run once",
+      "type": "checkbox"
+    },
+    {
+      "name": "passive",
+      "label": "Passive listener",
+      "type": "checkbox"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "event",
+        "label": "On event",
+        "type": "js-exec",
+        "direction": "out"
+      },
+      {
+        "id": "event_value",
+        "label": "Event",
+        "type": "js-event",
+        "direction": "out",
+        "multiple": true
+      },
+      {
+        "id": "element",
+        "label": "Element",
+        "type": "js-element",
+        "direction": "out",
+        "multiple": true
+      },
+      {
+        "id": "value",
+        "label": "Element value",
+        "type": "js-value",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\EventListenerCompiler",
+    "file": "Compiler.php"
+  }
+}

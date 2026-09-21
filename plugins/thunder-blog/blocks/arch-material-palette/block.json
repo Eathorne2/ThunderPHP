@@ -1,0 +1,192 @@
+{
+  "slug": "arch-material-palette",
+  "name": "Materials Palette",
+  "category": "Architecture & Building",
+  "description": "Responsive architecture/building card section",
+  "keywords": [
+    "materials",
+    "palette",
+    "cards"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-arch-material-palette\"><div class=\"tb-arch-material-palette__head\">{{elements:kicker}}{{elements:title}}{{elements:intro}}</div><div class=\"tb-arch-material-palette__grid\">{{elements:cards}}</div></section>",
+  "css": ".tb-arch-material-palette{padding:clamp(40px,7vw,86px);background:var(--tb-color-background)}.tb-arch-material-palette__head{max-width:760px;margin-bottom:36px}.tb-arch-material-palette__kicker{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--tb-color-primary)}.tb-arch-material-palette__title{font-size:clamp(38px,5vw,64px);line-height:1;margin:12px 0;color:var(--tb-color-secondary)}.tb-arch-material-palette__intro{font-size:17px;line-height:1.7;color:var(--tb-color-muted)}.tb-arch-material-palette__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.tb-arch-material-palette__card{padding:28px;border-top:3px solid var(--tb-color-primary);background:var(--tb-color-surface)}.tb-arch-material-palette__index{display:block;color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.12em;margin-bottom:32px}.tb-arch-material-palette__card-title{font-size:23px;margin:0 0 10px;color:var(--tb-color-secondary)}.tb-arch-material-palette__card-text{margin:0;color:var(--tb-color-muted);line-height:1.65}@media(max-width:860px){.tb-arch-material-palette__grid{grid-template-columns:1fr 1fr}}@media(max-width:580px){.tb-arch-material-palette__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "kicker",
+      "label": "Kicker",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Material study"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-arch-material-palette__kicker\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "title",
+      "label": "Heading",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Texture, tone and durability"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-arch-material-palette__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "intro",
+      "label": "Introduction",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Present a project material palette using editable cards."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-arch-material-palette__intro\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "cards",
+      "label": "Cards",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "number": "01",
+        "title": "Concrete",
+        "text": "Thermal mass and a calm mineral finish."
+      },
+      "schema": [
+        {
+          "key": "number",
+          "label": "Number / label",
+          "type": "text",
+          "selector": ".tb-arch-material-palette__index"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-arch-material-palette__card-title"
+        },
+        {
+          "key": "text",
+          "label": "Description",
+          "type": "textarea",
+          "selector": ".tb-arch-material-palette__card-text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-arch-material-palette__card\"><span class=\"tb-arch-material-palette__index\">{{number}}</span><h3 class=\"tb-arch-material-palette__card-title\">{{title}}</h3><p class=\"tb-arch-material-palette__card-text\">{{text}}</p></article>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 12,
+      "default_items": [
+        {
+          "number": "01",
+          "title": "Concrete",
+          "text": "Thermal mass and a calm mineral finish."
+        },
+        {
+          "number": "02",
+          "title": "Timber",
+          "text": "Warmth, tactility and renewable character."
+        },
+        {
+          "number": "03",
+          "title": "Metal",
+          "text": "Precise detailing for screens, roofs and edges."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

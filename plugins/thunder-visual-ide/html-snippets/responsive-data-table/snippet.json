@@ -1,0 +1,17 @@
+{
+  "id": "responsive-data-table",
+  "name": "Responsive Data Table",
+  "description": "A searchable, responsive records table with status badges and mobile-friendly overflow.",
+  "category": "Tables",
+  "order": 100,
+  "tags": [
+    "table",
+    "data",
+    "search",
+    "responsive"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

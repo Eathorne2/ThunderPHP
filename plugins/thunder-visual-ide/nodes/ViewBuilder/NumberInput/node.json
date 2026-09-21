@@ -1,0 +1,160 @@
+{
+  "type": "view.number_input",
+  "label": "Number Input",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "123",
+  "color": "#0891b2",
+  "description": "Creates an HTML number input with a responsive wrapper.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Number Input",
+    "name": "number",
+    "label": "Number Input",
+    "placeholder": "",
+    "value_path": "",
+    "required": false,
+    "autocomplete": "",
+    "css_class": "",
+    "widths": {
+      "mobile": 12,
+      "small": 12,
+      "medium": 6,
+      "large": 6
+    },
+    "validation_rules": "",
+    "control_css_class": "",
+    "show_inline_error": true,
+    "error_path": "",
+    "error_display": "first",
+    "error_css_class": "",
+    "wrapper_style": "",
+    "control_style": "",
+    "error_style": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "label": "Input name",
+      "type": "text"
+    },
+    {
+      "name": "label",
+      "label": "Label",
+      "type": "text"
+    },
+    {
+      "name": "placeholder",
+      "label": "Placeholder",
+      "type": "text"
+    },
+    {
+      "name": "value_path",
+      "label": "Value variable path",
+      "type": "text",
+      "help": "Example: user.email. Leave empty for no generated value."
+    },
+    {
+      "name": "required",
+      "label": "Required",
+      "type": "checkbox"
+    },
+    {
+      "name": "autocomplete",
+      "label": "Autocomplete",
+      "type": "text"
+    },
+    {
+      "name": "validation_rules",
+      "label": "Additional validation rules",
+      "type": "text",
+      "help": "Comma-separated ThunderPHP rules, for example min:3,max:100. Required and field-type rules are inferred."
+    },
+    {
+      "name": "show_inline_error",
+      "label": "Show inline error",
+      "type": "checkbox",
+      "help": "Displays validation errors next to this field when the configured error value is not empty."
+    },
+    {
+      "name": "error_path",
+      "label": "Error variable path",
+      "type": "text",
+      "help": "Leave empty to use errors.<input name>, for example errors.email."
+    },
+    {
+      "name": "error_display",
+      "label": "Errors to display",
+      "type": "select",
+      "options": [
+        "first",
+        "all"
+      ],
+      "help": "Show only the first message or every message stored for this field."
+    },
+    {
+      "name": "error_css_class",
+      "label": "Error CSS classes",
+      "type": "text",
+      "help": "Additional classes added to each inline error message."
+    },
+    {
+      "name": "error_style",
+      "label": "Error inline styles",
+      "type": "textarea",
+      "help": "CSS declarations applied directly to each inline error message, for example margin-top:.5rem; font-weight:700;"
+    },
+    {
+      "name": "css_class",
+      "label": "Wrapper CSS classes",
+      "type": "text",
+      "help": "Added to the responsive .thv-field wrapper. Use this for selectors such as .my-field input."
+    },
+    {
+      "name": "wrapper_style",
+      "label": "Wrapper inline styles",
+      "type": "textarea",
+      "help": "CSS declarations applied directly to the responsive field wrapper."
+    },
+    {
+      "name": "control_css_class",
+      "label": "Control CSS classes",
+      "type": "text",
+      "help": "Added only to the input, textarea, select, or checkbox element."
+    },
+    {
+      "name": "control_style",
+      "label": "Control inline styles",
+      "type": "textarea",
+      "help": "CSS declarations applied directly to the input, textarea, select, or checkbox element."
+    },
+    {
+      "name": "widths",
+      "label": "Responsive width",
+      "type": "breakpoints",
+      "help": "Choose how many of 12 columns this item occupies at each breakpoint."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\NumberInputCompiler",
+    "file": "Compiler.php"
+  }
+}

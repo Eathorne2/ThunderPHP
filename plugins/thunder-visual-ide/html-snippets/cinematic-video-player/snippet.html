@@ -1,0 +1,29 @@
+<section class="cinematic-player" data-media-player>
+    <div class="cinematic-player__screen">
+        <video
+            preload="metadata"
+            poster="https://picsum.photos/id/1041/1280/720"
+            src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+        ></video>
+
+        <div class="cinematic-player__title">
+            <span>Featured film</span>
+            <h2>Landscapes in Motion</h2>
+        </div>
+    </div>
+
+    <div class="cinematic-player__controls">
+        <button type="button" data-media-play>Play</button>
+        <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            step="0.1"
+            aria-label="Video progress"
+            data-media-progress
+        >
+        <span data-media-time>0:00 / 0:00</span>
+        <button type="button" data-media-mute>Mute</button>
+    </div>
+</section>

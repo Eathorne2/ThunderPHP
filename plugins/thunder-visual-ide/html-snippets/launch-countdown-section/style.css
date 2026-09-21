@@ -1,0 +1,220 @@
+.lcs-sec {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.lcs-sec *, .lcs-sec *::before, .lcs-sec *::after {
+    box-sizing: border-box;
+}
+
+.lcs-sec button, .lcs-sec input, .lcs-sec select, .lcs-sec textarea {
+    font: inherit;
+}
+
+.lcs-sec a {
+    color: inherit;
+}
+
+.lcs-sec {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.8fr);
+    gap: 2rem;
+    align-items: center;
+    max-width: 72rem;
+    padding: clamp(1.5rem, 5vw, 3.5rem);
+    overflow: hidden;
+    border-radius: 1.5rem;
+    background: color-mix(in srgb, var(--thv-theme-primary) 12%, var(--thv-theme-background));
+}
+
+.lcs-sec::after {
+    content: '';
+    position: absolute;
+    right: -8rem;
+    top: -8rem;
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--thv-theme-secondary) 22%, transparent);
+}
+
+.lcs-sec > * {
+    position: relative;
+    z-index: 1;
+}
+
+.lcs-sec__copy > span, .lcs-sec__guide > span {
+    color: var(--thv-theme-primary);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.lcs-sec__copy h2 {
+    margin: 0.45rem 0;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 0.98;
+}
+
+.lcs-sec__copy p, .lcs-sec__guide p {
+    color: var(--thv-theme-muted);
+    line-height: 1.65;
+}
+
+.lcs-sec form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lcs-sec input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.8rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.7rem;
+    background: var(--thv-theme-surface);
+    color: var(--thv-theme-text);
+}
+
+.lcs-sec button {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: 0.7rem;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+    font-weight: 850;
+    cursor: pointer;
+}
+
+.lcs-sec__guide {
+    padding: 1.2rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface);
+}
+
+.lcs-sec__guide h3 {
+    margin: 0.35rem 0;
+}
+
+.lcs-sec__timer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.lcs-sec__timer div {
+    padding: 0.8rem 0.5rem;
+    text-align: center;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.8rem;
+    background: var(--thv-theme-surface);
+}
+
+.lcs-sec__timer strong, .lcs-sec__timer span {
+    display: block;
+}
+
+.lcs-sec__timer strong {
+    font-size: 1.5rem;
+}
+
+.lcs-sec__timer span {
+    color: var(--thv-theme-muted);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+}
+
+.lcs-sec__timer + form {
+    margin-top: 0.8rem;
+}
+
+.lcs-sec__referral {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 0.8rem;
+    align-items: end;
+}
+
+.lcs-sec__referral label {
+    display: grid;
+    gap: 0.35rem;
+    color: var(--thv-theme-muted);
+}
+
+.lcs-sec__referral label span {
+    display: flex;
+}
+
+.lcs-sec__referral label input {
+    border-radius: 0.7rem 0 0 0.7rem;
+}
+
+.lcs-sec__referral label button {
+    border-radius: 0 0.7rem 0.7rem 0;
+}
+
+.lcs-sec__referral > div {
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 0.8rem;
+    background: var(--thv-theme-surface);
+}
+
+.lcs-sec__referral strong, .lcs-sec__referral small {
+    display: block;
+}
+
+.lcs-sec__referral small {
+    color: var(--thv-theme-muted);
+}
+
+.lcs-sec__announcements p {
+    display: none;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.8rem;
+    background: var(--thv-theme-surface);
+}
+
+.lcs-sec__announcements p.is-active {
+    display: block;
+}
+
+.lcs-sec__announcements + button {
+    margin-top: 0.7rem;
+}
+
+.lcs-sec [data-status] {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: var(--thv-theme-success);
+    font-weight: 750;
+}
+
+@media (max-width: 760px) {
+    .lcs-sec {
+        grid-template-columns: 1fr;
+    }
+
+    .lcs-sec form {
+        flex-direction: column;
+    }
+
+    .lcs-sec__timer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lcs-sec__referral {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lcs-sec__referral label {
+        grid-column: 1 / -1;
+    }
+
+}

@@ -1,0 +1,20 @@
+{
+  "id": "featured-story-stack",
+  "name": "Featured Story Stack",
+  "description": "A layered editorial story card with related article links.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Blog Post Cards",
+  "order": 8007,
+  "tags": [
+    "blog",
+    "featured",
+    "editorial",
+    "articles"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

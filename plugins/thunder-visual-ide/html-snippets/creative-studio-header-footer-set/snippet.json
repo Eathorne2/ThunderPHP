@@ -1,0 +1,19 @@
+{
+  "id": "creative-studio-header-footer-set",
+  "name": "Creative Studio Header and Footer Set",
+  "description": "An expressive agency shell with oversized typography, project-focused navigation and a bold matching footer.",
+  "category": "Header and Footer Sets",
+  "order": 3005,
+  "tags": [
+    "header",
+    "footer",
+    "creative",
+    "studio",
+    "agency",
+    "portfolio"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

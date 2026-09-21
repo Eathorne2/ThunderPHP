@@ -1,0 +1,18 @@
+{
+  "id": "airwave-radio-header-footer",
+  "name": "Airwave Radio Header and Footer",
+  "description": "A broadcast-focused radio shell with live programme status, show navigation and a coordinated station footer.",
+  "category": "Music & Entertainment",
+  "order": 4480,
+  "tags": [
+    "radio",
+    "broadcast",
+    "header",
+    "footer",
+    "live"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

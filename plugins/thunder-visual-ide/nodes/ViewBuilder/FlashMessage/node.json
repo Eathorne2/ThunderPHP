@@ -1,0 +1,79 @@
+{
+  "type": "view.flash_message",
+  "label": "Flash Message",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "MSG",
+  "color": "#0891b2",
+  "description": "Displays a ThunderPHP flash message and can erase it after rendering.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Flash Message",
+    "message_type": "success",
+    "css_class": "",
+    "widths": {
+      "mobile": 12,
+      "small": 12,
+      "medium": 12,
+      "large": 12
+    },
+    "inline_style": "",
+    "erase": true
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "message_type",
+      "label": "Message type",
+      "type": "select",
+      "options": [
+        "success",
+        "fail"
+      ]
+    },
+    {
+      "name": "erase",
+      "label": "Erase after display",
+      "type": "checkbox",
+      "help": "Checks for the message without erasing it, then erases it only when the message is rendered."
+    },
+    {
+      "name": "css_class",
+      "label": "CSS classes",
+      "type": "text"
+    },
+    {
+      "name": "inline_style",
+      "label": "Inline styles",
+      "type": "textarea",
+      "help": "CSS declarations applied directly to the same element as the custom CSS classes."
+    },
+    {
+      "name": "widths",
+      "label": "Responsive width",
+      "type": "breakpoints",
+      "help": "Choose how many of 12 columns this item occupies at each breakpoint."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\FlashMessageCompiler",
+    "file": "Compiler.php"
+  }
+}

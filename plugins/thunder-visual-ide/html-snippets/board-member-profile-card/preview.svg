@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="380" viewBox="0 0 620 380">
+    <rect width="620" height="380" rx="24" fill="#eef2f7"/>
+    <text x="38" y="42" fill="#111827" font-family="Arial, sans-serif" font-size="19" font-weight="700">Board Member Profile Card</text>
+    <text x="38" y="67" fill="#64748b" font-family="Arial, sans-serif" font-size="12">User Cards</text>
+    <rect x="38" y="92" width="544" height="240" rx="18" fill="#ffffff"/>
+    <rect x="62" y="116" width="246" height="192" rx="12" fill="#f6f7fb"/>
+    <rect x="338" y="116" width="220" height="192" rx="12" fill="#244f7f" opacity=".16"/>
+    <rect x="84" y="146" width="178" height="18" rx="9" fill="#111827"/>
+    <rect x="84" y="178" width="142" height="10" rx="5" fill="#94a3b8"/>
+    <rect x="84" y="200" width="170" height="10" rx="5" fill="#94a3b8"/>
+    <rect x="84" y="244" width="104" height="34" rx="17" fill="#244f7f"/>
+</svg>

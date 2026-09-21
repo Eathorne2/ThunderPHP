@@ -1,0 +1,63 @@
+.iba-banner {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: .85rem;
+    padding: .8rem 1rem;
+    border-radius: .8rem;
+    background: linear-gradient(110deg, #1e3a8a, #2563eb);
+    color: #fff;
+    font-family: system-ui, sans-serif;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, .18)
+}
+
+.iba-banner__badge {
+    padding: .24rem .45rem;
+    border-radius: .35rem;
+    background: rgba(255, 255, 255, .18);
+    font-size: .65rem;
+    font-weight: 900;
+    letter-spacing: .08em
+}
+
+.iba-banner strong {
+    display: block;
+    font-size: .88rem
+}
+
+.iba-banner p {
+    margin: .1rem 0 0;
+    color: #dbeafe;
+    font-size: .78rem
+}
+
+.iba-banner a {
+    padding: .5rem .7rem;
+    border-radius: .45rem;
+    background: #fff;
+    color: #1d4ed8;
+    font-size: .78rem;
+    font-weight: 850;
+    text-decoration: none
+}
+
+.iba-banner button {
+    border: 0;
+    background: none;
+    color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer
+}
+
+@media(max-width:640px) {
+    .iba-banner {
+        grid-template-columns: auto 1fr auto
+    }
+    .iba-banner a {
+        grid-column: 2
+    }
+    .iba-banner button {
+        grid-column: 3;
+        grid-row: 1
+    }
+}

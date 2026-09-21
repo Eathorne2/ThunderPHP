@@ -1,0 +1,17 @@
+{
+  "slug": "welcome-to-the-ide",
+  "title": "Welcome to Thunder Visual IDE",
+  "summary": "A quick tour of the workspace, node library, Inspector, nested graphs, project saving and plugin compilation.",
+  "category": "getting-started",
+  "order": 10,
+  "level": "Beginner",
+  "duration": "7 min",
+  "tags": ["workspace", "nodes", "projects", "build"],
+  "thumbnail": "thumbnail.svg",
+  "content": "content.html",
+  "video": {
+    "type": "youtube",
+    "id": ""
+  },
+  "published": true
+}

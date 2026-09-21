@@ -1,0 +1,108 @@
+.btc-slider {
+    color:var(--thv-theme-text, #211b1e);
+    background:var(--thv-theme-background, #fbf7f4);
+}
+.btc-slider a {
+    color:inherit;
+}
+.btc-slider img {
+    display:block;
+    max-width:100%;
+}
+.btc-slider__eyebrow {
+    color:var(--thv-theme-primary, #92536a);
+    font-size:.68rem;
+    font-weight:900;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+}
+.btc-slider__muted {
+    color:var(--thv-theme-muted, #71656a);
+}
+.btc-slider {
+    display:grid;
+    grid-template-columns:.75fr 1.25fr;
+    min-height:38rem;
+    overflow:hidden
+}
+.btc-slider>figure {
+    position:relative;
+    margin:0;
+    min-height:38rem
+}
+.btc-slider>figure:after {
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, .65))
+}
+.btc-slider>figure img {
+    width:100%;
+    height:100%;
+    object-fit:cover
+}
+.btc-slider figcaption {
+    position:absolute;
+    z-index:1;
+    right:1rem;
+    bottom:1rem;
+    left:1rem;
+    color:#fff;
+    font-size:.65rem;
+    font-weight:900;
+    text-transform:uppercase
+}
+.btc-slider__content {
+    display:flex;
+    flex-direction:column;
+    padding:clamp(1.5rem, 5vw, 4rem);
+    background:color-mix(in srgb, var(--thv-theme-secondary, #ead2dc) 25%, var(--thv-theme-surface, #fff))
+}
+.btc-slider__content>header {
+    display:flex;
+    justify-content:space-between
+}
+.btc-slider__slides {
+    margin:auto 0
+}
+.btc-slider article[hidden] {
+    display:none
+}
+.btc-slider blockquote {
+    max-width:18ch;
+    margin:2rem 0;
+    font-family:Georgia, serif;
+    font-size:clamp(2.4rem, 5vw, 4.6rem);
+    letter-spacing:-.04em;
+    line-height:1.04
+}
+.btc-slider article footer {
+    display:grid;
+    gap:.25rem
+}
+.btc-slider article footer span {
+    color:var(--thv-theme-muted, #71656a)
+}
+.btc-slider__controls {
+    display:flex;
+    gap:.5rem
+}
+.btc-slider__controls button {
+    display:grid;
+    width:3rem;
+    height:3rem;
+    place-items:center;
+    border:1px solid var(--thv-theme-border, #ddd1d5);
+    border-radius:50%;
+    background:transparent;
+    font:inherit;
+    cursor:pointer
+}
+@media(max-width:760px) {
+    .btc-slider {
+        grid-template-columns:1fr
+    }
+    .btc-slider>figure {
+        min-height:26rem
+    }
+}

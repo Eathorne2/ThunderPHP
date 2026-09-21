@@ -1,0 +1,17 @@
+{
+  "id": "limited-fashion-drop-countdown",
+  "name": "Limited Fashion Drop Countdown",
+  "description": "A dramatic capsule collection launch with live countdown and early-access form.",
+  "category": "Fashion & Beauty",
+  "order": 4100,
+  "tags": [
+    "fashion",
+    "countdown",
+    "launch",
+    "collection"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,23 @@
+{
+  "type": "custom.example",
+  "label": "Example",
+  "category": "Custom",
+  "kind": "expression",
+  "icon": "E",
+  "color": "#475569",
+  "description": "A copyable node package template.",
+  "allowed_graphs": ["flow"],
+  "defaults": {"title": "Example", "value": ""},
+  "properties": [
+    {"name": "title", "label": "Node title", "type": "text"},
+    {"name": "value", "label": "Value", "type": "text"}
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [{"id": "value", "label": "Value", "type": "mixed", "direction": "out"}]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Custom\\ExampleCompiler",
+    "file": "Compiler.php"
+  }
+}

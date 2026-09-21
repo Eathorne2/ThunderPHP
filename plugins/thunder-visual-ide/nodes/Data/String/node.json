@@ -1,0 +1,44 @@
+{
+  "type": "data.string",
+  "label": "String",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "S",
+  "color": "#2563eb",
+  "description": "Outputs a PHP string literal.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "String",
+    "value": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "value",
+      "label": "String value",
+      "type": "textarea"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "String",
+        "type": "string",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\StringCompiler",
+    "file": "Compiler.php"
+  }
+}

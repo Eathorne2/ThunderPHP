@@ -1,0 +1,62 @@
+{
+  "type": "view.hidden_input",
+  "label": "Hidden Input",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "HID",
+  "color": "#0891b2",
+  "description": "Creates a hidden form input.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Hidden Input",
+    "name": "id",
+    "value": "",
+    "value_path": "",
+    "validation_rules": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "label": "Input name",
+      "type": "text"
+    },
+    {
+      "name": "value",
+      "label": "Static value",
+      "type": "text"
+    },
+    {
+      "name": "value_path",
+      "label": "Value variable path",
+      "type": "text"
+    },
+    {
+      "name": "validation_rules",
+      "label": "Additional validation rules",
+      "type": "text",
+      "help": "Comma-separated ThunderPHP rules, for example min:3,max:100. Required and field-type rules are inferred."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\HiddenInputCompiler",
+    "file": "Compiler.php"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "callback-request-form",
+  "name": "Callback Request Form",
+  "description": "A concise callback form with preferred contact time and topic.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Contact Forms",
+  "order": 8016,
+  "tags": [
+    "contact",
+    "form",
+    "callback",
+    "lead"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

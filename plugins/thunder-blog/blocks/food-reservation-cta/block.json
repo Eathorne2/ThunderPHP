@@ -1,0 +1,232 @@
+{
+  "slug": "food-reservation-cta",
+  "name": "Reservation CTA",
+  "category": "Food & Restaurant",
+  "description": "Centered reservation callout with service times and booking action",
+  "keywords": [
+    "food",
+    "restaurant",
+    "reservation",
+    "booking",
+    "cta"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-food-reserve\"><div class=\"tb-food-reserve__inner\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}<div class=\"tb-food-reserve__meta\">{{elements:hours}}{{elements:phone}}</div>{{elements:cta}}</div></div>",
+  "css": ".tb-food-reserve{padding:clamp(48px,9vw,120px) 24px;background:linear-gradient(135deg,var(--tb-color-secondary),color-mix(in srgb,var(--tb-color-secondary) 75%,var(--tb-color-primary)));color:var(--tb-color-surface);text-align:center}.tb-food-reserve__inner{max-width:820px;margin:auto}.tb-food-reserve__eyebrow{font-size:12px;font-weight:950;letter-spacing:.18em;text-transform:uppercase;color:var(--tb-color-primary)}.tb-food-reserve__title{margin:12px 0;color:inherit;font-family:Georgia,serif;font-size:clamp(46px,7vw,82px)}.tb-food-reserve__text{max-width:650px;margin:0 auto;color:color-mix(in srgb,var(--tb-color-surface) 78%,transparent);font-size:18px;line-height:1.7}.tb-food-reserve__meta{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin:24px 0;font-weight:850}.tb-food-reserve__hours,.tb-food-reserve__phone{color:inherit}.tb-food-reserve__cta{display:inline-flex;padding:14px 23px;background:var(--tb-color-primary);color:var(--tb-color-surface);text-decoration:none;font-weight:950}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Your table is waiting"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-food-reserve__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Make a reservation"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<h2 class=\"tb-food-reserve__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Join us for an easy lunch, a long dinner or a celebration around the table."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-food-reserve__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "hours",
+      "label": "Hours",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Tue–Sun · 12:00–22:00"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-food-reserve__hours\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "phone",
+      "label": "Phone",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "+260 000 000000"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-food-reserve__phone\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Reserve button",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Book a table",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-food-reserve__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

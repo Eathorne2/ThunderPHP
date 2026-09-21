@@ -1,0 +1,47 @@
+{
+    "name": "Dark Access",
+    "version": "1.0.0",
+    "plugin": "thunder-authentication",
+    "plugin_requires": "^1.0.0",
+    "author": "Eathorne Choongo",
+    "description": "A high-contrast dark authentication workspace with luminous focus states.",
+    "default_palette": "midnight",
+    "palettes": {
+        "midnight": {
+            "primary": "#60a5fa",
+            "secondary": "#94a3b8",
+            "background": "#070b14",
+            "surface": "#111827",
+            "text": "#f8fafc",
+            "muted_text": "#94a3b8",
+            "border": "#263244",
+            "success": "#4ade80",
+            "warning": "#fbbf24",
+            "danger": "#fb7185"
+        },
+        "violet": {
+            "primary": "#c084fc",
+            "secondary": "#a1a1aa",
+            "background": "#09070f",
+            "surface": "#181121",
+            "text": "#faf5ff",
+            "muted_text": "#a1a1aa",
+            "border": "#352540",
+            "success": "#4ade80",
+            "warning": "#fbbf24",
+            "danger": "#fb7185"
+        },
+        "teal": {
+            "primary": "#2dd4bf",
+            "secondary": "#94a3b8",
+            "background": "#061211",
+            "surface": "#0f211f",
+            "text": "#f0fdfa",
+            "muted_text": "#94a3b8",
+            "border": "#24423e",
+            "success": "#4ade80",
+            "warning": "#fbbf24",
+            "danger": "#fb7185"
+        }
+    }
+}

@@ -1,0 +1,125 @@
+.wmnp {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-surface);
+}
+
+.wmnp *,
+.wmnp *::before,
+.wmnp *::after {
+    box-sizing: border-box;
+}
+
+.wmnp__image {
+    position: relative;
+    min-height: 42rem;
+}
+
+.wmnp__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wmnp__image span {
+    position: absolute;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    padding: .65rem .85rem;
+    border-radius: 999px;
+    color: var(--thv-theme-on-primary);
+    background: color-mix(in srgb, var(--thv-theme-text) 75%, transparent);
+    font-size: .65rem;
+    font-weight: 900;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.wmnp__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(2rem, 7vw, 6rem);
+}
+
+.wmnp__eyebrow,
+.wmnp__panels small {
+    margin: 0;
+    color: var(--thv-theme-primary);
+    font-size: .68rem;
+    font-weight: 900;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.wmnp h2 {
+    margin: .7rem 0 1.8rem;
+    font-family: Georgia, serif;
+    font-size: clamp(2.8rem, 6vw, 5.3rem);
+    font-weight: 400;
+    letter-spacing: -.05em;
+    line-height: .95;
+}
+
+.wmnp__tabs {
+    display: flex;
+    gap: .4rem;
+    flex-wrap: wrap;
+}
+
+.wmnp__tabs button {
+    padding: .65rem .85rem;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-text) 18%, transparent);
+    border-radius: 999px;
+    color: inherit;
+    background: transparent;
+    font-size: .65rem;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.wmnp__tabs button[aria-selected="true"] {
+    border-color: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary);
+}
+
+.wmnp__panels {
+    min-height: 11rem;
+    margin-top: 2rem;
+}
+
+.wmnp__panels h3 {
+    max-width: 18ch;
+    margin: .55rem 0 .75rem;
+    font-family: Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.wmnp__panels p,
+.wmnp__note {
+    color: var(--thv-theme-muted);
+    line-height: 1.7;
+}
+
+.wmnp__note {
+    padding-top: 1.2rem;
+    border-top: 1px solid color-mix(in srgb, var(--thv-theme-text) 13%, transparent);
+    font-size: .82rem;
+}
+
+@media (max-width: 800px) {
+    .wmnp {
+        grid-template-columns: 1fr;
+    }
+
+    .wmnp__image {
+        min-height: 28rem;
+    }
+}

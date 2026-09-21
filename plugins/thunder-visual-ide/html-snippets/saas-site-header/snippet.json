@@ -1,0 +1,17 @@
+{
+  "id": "saas-site-header",
+  "name": "SaaS Site Header",
+  "description": "A clean product header with announcement bar, responsive navigation and account actions.",
+  "category": "Headers",
+  "order": 1140,
+  "tags": [
+    "header",
+    "saas",
+    "navigation",
+    "announcement"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "centered-breadcrumb-title",
+  "name": "Centered Breadcrumb Title",
+  "description": "A centered page heading with breadcrumbs and supporting text.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Page Title Headings",
+  "order": 8050,
+  "tags": [
+    "heading",
+    "page title",
+    "breadcrumb",
+    "centered"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

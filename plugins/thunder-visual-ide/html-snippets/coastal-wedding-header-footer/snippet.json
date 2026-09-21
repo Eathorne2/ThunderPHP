@@ -1,0 +1,18 @@
+{
+  "id": "coastal-wedding-header-footer",
+  "name": "Coastal Wedding Header and Footer",
+  "description": "A breezy destination-wedding shell with ocean tones, travel navigation and a relaxed matching footer.",
+  "category": "Wedding",
+  "order": 4720,
+  "tags": [
+    "coastal wedding",
+    "destination",
+    "header",
+    "footer",
+    "travel"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "content-tabs",
+  "name": "Content Tabs",
+  "description": "Accessible tabs with keyboard-friendly buttons and animated panels.",
+  "category": "Navigation",
+  "order": 20,
+  "tags": ["tabs", "navigation", "interactive"],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

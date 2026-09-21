@@ -1,0 +1,20 @@
+{
+  "id": "activity-timeline-panel",
+  "name": "Activity Timeline Panel",
+  "description": "A dashboard timeline for recent events, updates and approvals.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Dashboard",
+  "order": 8022,
+  "tags": [
+    "dashboard",
+    "activity",
+    "timeline",
+    "events"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

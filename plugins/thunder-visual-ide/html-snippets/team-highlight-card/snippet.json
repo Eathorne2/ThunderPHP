@@ -1,0 +1,20 @@
+{
+  "id": "team-highlight-card",
+  "name": "Team Highlight Card",
+  "description": "A people-focused card with profile details and expertise tags.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Cards",
+  "order": 8010,
+  "tags": [
+    "card",
+    "team",
+    "profile",
+    "people"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

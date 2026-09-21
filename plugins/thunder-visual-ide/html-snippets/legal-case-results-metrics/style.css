@@ -1,0 +1,57 @@
+.blcr-section {
+    padding: clamp(1.5rem, 5vw, 4.5rem);
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.4rem;
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-surface);
+    box-shadow: 0 1.5rem 4rem color-mix(in srgb, var(--thv-theme-text) 10%, transparent);
+}
+.blcr-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    color: var(--thv-theme-primary);
+    font-size: .72rem;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+.blcr-eyebrow::before {
+    width: 2rem;
+    height: 2px;
+    content: "";
+    background: var(--thv-theme-primary);
+}
+.blcr-section h2 {
+    margin: .65rem 0 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 5vw, 4.3rem);
+    font-weight: 500;
+    line-height: 1.02;
+}
+.blcr-section p {
+    color: var(--thv-theme-muted);
+    line-height: 1.75;
+}
+.blcr-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .85rem 1.1rem;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: .55rem;
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.blcr-section { background:var(--thv-theme-text); color:var(--thv-theme-background); }
+.blcr-section h2 { max-width:18ch; color:var(--thv-theme-background); }
+.blcr-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; margin:2rem 0; background:color-mix(in srgb,var(--thv-theme-background) 22%,transparent); }
+.blcr-grid article { min-height:18rem; padding:1.4rem; background:var(--thv-theme-text); }
+.blcr-grid strong { display:block; color:var(--thv-theme-secondary); font-family:Georgia,serif; font-size:clamp(2.5rem,5vw,4.5rem); font-weight:500; }
+.blcr-grid span { display:block; margin:.7rem 0 1.4rem; color:var(--thv-theme-background); font-size:.72rem; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
+.blcr-grid p { color:color-mix(in srgb,var(--thv-theme-background) 66%,transparent); font-size:.86rem; }
+.blcr-section small { color:color-mix(in srgb,var(--thv-theme-background) 58%,transparent); }
+@media(max-width:850px){.blcr-grid{grid-template-columns:repeat(2,1fr)}} @media(max-width:560px){.blcr-grid{grid-template-columns:1fr}}

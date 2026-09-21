@@ -1,0 +1,48 @@
+<section class="split-login">
+    <div class="split-login__brand">
+        <span class="split-login__logo">T</span>
+        <div>
+            <p class="split-login__kicker">ThunderPHP Workspace</p>
+            <h2>Build useful tools without fighting boilerplate.</h2>
+            <p>Sign in to continue creating plugins, managing projects and shipping updates.</p>
+        </div>
+        <small>Secure • Fast • Extensible</small>
+    </div>
+    <form class="split-login__form" action="" method="post">
+        <div class="split-login__intro">
+            <span>Welcome back</span>
+            <h3>Sign in to your account</h3>
+            <p>Enter your details below to continue.</p>
+        </div>
+        <label>
+            Email address
+            <input type="email" name="email" placeholder="name@example.com" autocomplete="email" required>
+        </label>
+        <label>
+            Password
+            <span class="password-field">
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Your password"
+                    autocomplete="current-password"
+                    required
+                    data-login-password
+                >
+                <button type="button" data-toggle-password>Show</button>
+            </span>
+        </label>
+        <div class="split-login__options">
+            <label class="check">
+                <input type="checkbox" name="remember">
+                Remember me
+            </label>
+            <a href="#">Forgot password?</a>
+        </div>
+        <button class="split-login__submit" type="submit">Sign in</button>
+        <p class="split-login__signup">
+            No account yet?
+            <a href="#">Create one</a>
+        </p>
+    </form>
+</section>

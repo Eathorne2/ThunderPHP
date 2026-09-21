@@ -1,0 +1,18 @@
+{
+  "id": "wedding-day-schedule",
+  "name": "Wedding Day Schedule",
+  "description": "A refined wedding-day timeline with ceremony, cocktail hour, dinner and dancing details.",
+  "category": "Wedding",
+  "order": 4540,
+  "tags": [
+    "wedding",
+    "schedule",
+    "timeline",
+    "ceremony",
+    "reception"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "featured-travel-destinations",
+  "name": "Featured Travel Destinations",
+  "description": "A filterable editorial destination grid for beach, city, mountain and safari travel.",
+  "category": "Travel & Hotels",
+  "order": 4830,
+  "tags": [
+    "destinations",
+    "grid",
+    "travel",
+    "filter",
+    "gallery"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

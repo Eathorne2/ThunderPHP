@@ -1,0 +1,17 @@
+{
+  "id": "beauty-testimonial-carousel",
+  "name": "Beauty Testimonial Carousel",
+  "description": "A refined image-led testimonial carousel for salons, spas and beauty studios.",
+  "category": "Fashion & Beauty",
+  "order": 4050,
+  "tags": [
+    "beauty",
+    "testimonials",
+    "slider",
+    "reviews"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

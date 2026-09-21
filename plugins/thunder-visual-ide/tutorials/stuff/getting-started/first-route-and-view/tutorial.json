@@ -1,0 +1,17 @@
+{
+  "slug": "first-route-and-view",
+  "title": "Build Your First Route and View",
+  "summary": "Create a public GET route, connect a Controller and View, pass page data and compile the first working plugin page.",
+  "category": "getting-started",
+  "order": 20,
+  "level": "Beginner",
+  "duration": "12 min",
+  "tags": ["route", "controller", "view", "set_value"],
+  "thumbnail": "thumbnail.svg",
+  "content": "content.html",
+  "video": {
+    "type": "youtube",
+    "id": ""
+  },
+  "published": true
+}

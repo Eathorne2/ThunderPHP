@@ -1,0 +1,19 @@
+{
+  "id": "startup-legal-header-footer",
+  "name": "Startup Legal Header and Footer",
+  "description": "Practical legal support from incorporation through investment and scale.",
+  "category": "Business & Law",
+  "order": 5407,
+  "tags": [
+    "header",
+    "footer",
+    "business",
+    "law",
+    "navigation",
+    "startup law"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

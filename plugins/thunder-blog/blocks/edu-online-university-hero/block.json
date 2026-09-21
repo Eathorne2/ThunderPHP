@@ -1,0 +1,205 @@
+{
+  "slug": "edu-online-university-hero",
+  "name": "Online University Hero",
+  "category": "Education",
+  "description": "Image-backed online university hero with enrollment message",
+  "keywords": [
+    "education",
+    "online university",
+    "hero",
+    "elearning"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-edu-online-university\">{{elements:image}}<div class=\"tb-edu-online-university__shade\"></div><div class=\"tb-edu-online-university__content\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}{{elements:cta}}</div></div>",
+  "css": ".tb-edu-online-university{position:relative;min-height:650px;overflow:hidden;display:grid;align-items:end}.tb-edu-online-university__image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.tb-edu-online-university__shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,20,38,.88),rgba(8,20,38,.22))}.tb-edu-online-university__content{position:relative;z-index:1;width:min(720px,90%);padding:clamp(38px,7vw,88px);color:#fff}.tb-edu-online-university__eyebrow{font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-edu-online-university__title{margin:12px 0;font-size:clamp(48px,7vw,84px);line-height:.95}.tb-edu-online-university__text{font-size:18px;line-height:1.7}.tb-edu-online-university__cta{display:inline-flex;margin-top:24px;padding:13px 20px;background:var(--tb-color-primary);color:#fff;text-decoration:none;font-weight:900}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "image",
+      "label": "Background image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Students studying"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-edu-online-university__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-edu-online-university__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Study anywhere"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-edu-online-university__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A university experience built for real life"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-edu-online-university__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Flexible learning, expert instruction and practical programs designed around your schedule."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-edu-online-university__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Enrollment button",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Start your application",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-edu-online-university__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "type": "view.html_component",
+  "label": "HTML Design Component",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "DESIGN",
+  "color": "#db2777",
+  "description": "A reusable HTML, CSS and JavaScript component designed in an isolated live-preview studio.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "HTML Component",
+    "component_name": "custom-component",
+    "html_code": "",
+    "css_code": "",
+    "js_code": "",
+    "widths": {
+      "mobile": 12,
+      "small": 12,
+      "medium": 12,
+      "large": 12
+    }
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "component_name",
+      "label": "Component name",
+      "type": "text",
+      "help": "Use this name with a <tvi-component> marker in the View source."
+    },
+    {
+      "name": "widths",
+      "label": "Responsive width",
+      "type": "breakpoints"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\HtmlComponentCompiler",
+    "file": "Compiler.php"
+  }
+}

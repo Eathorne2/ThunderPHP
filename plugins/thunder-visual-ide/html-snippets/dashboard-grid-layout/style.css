@@ -1,0 +1,213 @@
+.dashboard-grid {
+    max-width: 76rem;
+    margin: 0 auto;
+    padding: clamp(1rem, 4vw, 3rem);
+    color: var(--thv-theme-text, #172033);
+    background: var(--thv-theme-surface-alt, #f5f7fa);
+}
+
+.dashboard-grid__header,
+.dashboard-grid__progress header,
+.dashboard-grid__activity header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.dashboard-grid__header {
+    margin-bottom: 1.2rem;
+}
+
+.dashboard-grid__header p,
+.dashboard-grid__header h2 {
+    margin: 0;
+}
+
+.dashboard-grid__header p {
+    color: var(--thv-theme-muted, #667085);
+    font-size: 0.78rem;
+}
+
+.dashboard-grid__header h2 {
+    margin-top: 0.2rem;
+}
+
+.dashboard-grid__header button {
+    padding: 0.75rem 0.95rem;
+    border: 0;
+    border-radius: 0.7rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #4f46e5);
+    font-weight: 800;
+}
+
+.dashboard-grid__layout {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.dashboard-grid__layout > article {
+    padding: 1.2rem;
+    border: 1px solid var(--thv-theme-border, #dce3ec);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.dashboard-grid__metric {
+    grid-column: span 4;
+}
+
+.dashboard-grid__metric span,
+.dashboard-grid__metric strong,
+.dashboard-grid__metric small {
+    display: block;
+}
+
+.dashboard-grid__metric span,
+.dashboard-grid__metric small {
+    color: var(--thv-theme-muted, #667085);
+}
+
+.dashboard-grid__metric strong {
+    margin-block: 0.45rem;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+}
+
+.dashboard-grid__metric small {
+    font-size: 0.75rem;
+}
+
+.dashboard-grid__progress {
+    grid-column: span 7;
+}
+
+.dashboard-grid__progress header span,
+.dashboard-grid__progress header strong {
+    display: block;
+}
+
+.dashboard-grid__progress header span {
+    color: var(--thv-theme-muted, #667085);
+    font-size: 0.78rem;
+}
+
+.dashboard-grid__progress header strong {
+    margin-top: 0.25rem;
+    font-size: 1.6rem;
+}
+
+.dashboard-grid__progress a,
+.dashboard-grid__activity a {
+    color: var(--thv-theme-primary, #4f46e5);
+    font-size: 0.78rem;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.dashboard-grid__chart {
+    display: flex;
+    align-items: end;
+    gap: 0.65rem;
+    height: 13rem;
+    margin-top: 1rem;
+}
+
+.dashboard-grid__chart span {
+    flex: 1;
+    min-height: 0.5rem;
+    border-radius: 0.45rem 0.45rem 0 0;
+    background: var(--thv-theme-primary, #4f46e5);
+}
+
+.dashboard-grid__activity {
+    grid-column: span 5;
+}
+
+.dashboard-grid__activity h3 {
+    margin: 0;
+}
+
+.dashboard-grid__activity ul {
+    display: grid;
+    gap: 1rem;
+    margin: 1.2rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dashboard-grid__activity li {
+    display: grid;
+    grid-template-columns: 2.3rem 1fr;
+    gap: 0.75rem;
+}
+
+.dashboard-grid__activity li > span {
+    display: grid;
+    width: 2.2rem;
+    height: 2.2rem;
+    place-items: center;
+    border-radius: 0.65rem;
+    color: var(--thv-theme-primary, #4f46e5);
+    background: color-mix(in srgb, var(--thv-theme-primary, #4f46e5) 9%, transparent);
+    font-weight: 850;
+}
+
+.dashboard-grid__activity strong,
+.dashboard-grid__activity small {
+    display: block;
+}
+
+.dashboard-grid__activity small {
+    margin-top: 0.2rem;
+    color: var(--thv-theme-muted, #667085);
+}
+
+.dashboard-grid__priority {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 1rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #4f46e5) !important;
+}
+
+.dashboard-grid__priority p,
+.dashboard-grid__priority h3,
+.dashboard-grid__priority span {
+    margin: 0;
+}
+
+.dashboard-grid__priority p {
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.dashboard-grid__priority span {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.dashboard-grid__priority a {
+    padding: 0.65rem 0.8rem;
+    border-radius: 0.65rem;
+    color: var(--thv-theme-primary, #4f46e5);
+    background: #ffffff;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    .dashboard-grid__metric,
+    .dashboard-grid__progress,
+    .dashboard-grid__activity {
+        grid-column: 1 / -1;
+    }
+
+    .dashboard-grid__priority {
+        grid-template-columns: 1fr;
+    }
+}

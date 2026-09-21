@@ -1,0 +1,133 @@
+.workspace-shell {
+    color: var(--thv-theme-text, #182235);
+    background: var(--thv-theme-surface-alt, #f5f7fb);
+}
+
+.workspace-shell__header,
+.workspace-shell__footer {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0.9rem clamp(1rem, 3vw, 2rem);
+    border-color: var(--thv-theme-border, #dbe2ea);
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.workspace-shell__header {
+    border-bottom: 1px solid var(--thv-theme-border, #dbe2ea);
+}
+
+.workspace-shell__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.workspace-shell__brand > span {
+    display: grid;
+    width: 2.2rem;
+    height: 2.2rem;
+    place-items: center;
+    border-radius: 0.65rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #4f46e5);
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.workspace-shell__search {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: min(38rem, 55vw);
+    margin-inline: auto;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--thv-theme-border, #dbe2ea);
+    border-radius: 0.75rem;
+    color: var(--thv-theme-muted, #6b7280);
+    background: var(--thv-theme-surface-alt, #f5f7fb);
+}
+
+.workspace-shell__search input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    color: inherit;
+    background: transparent;
+}
+
+.workspace-shell__actions,
+.workspace-shell__profile,
+.workspace-shell__footer,
+.workspace-shell__footer > div,
+.workspace-shell__footer nav {
+    display: flex;
+    align-items: center;
+}
+
+.workspace-shell__actions {
+    gap: 0.65rem;
+}
+
+.workspace-shell__actions button {
+    border: 0;
+    background: transparent;
+}
+
+.workspace-shell__profile {
+    gap: 0.5rem;
+    color: inherit;
+    font-weight: 700;
+}
+
+.workspace-shell__profile img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.workspace-shell__demo {
+    display: grid;
+    min-height: 23rem;
+    place-items: center;
+    padding: 3rem 1rem;
+    color: var(--thv-theme-muted, #6b7280);
+}
+
+.workspace-shell__footer {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--thv-theme-border, #dbe2ea);
+    color: var(--thv-theme-muted, #6b7280);
+    font-size: 0.82rem;
+}
+
+.workspace-shell__footer > div,
+.workspace-shell__footer nav {
+    gap: 0.7rem;
+}
+
+.workspace-shell__footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.workspace-shell__status-dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: var(--thv-theme-success, #16a34a);
+}
+
+@media (max-width: 720px) {
+    .workspace-shell__search {
+        display: none;
+    }
+
+    .workspace-shell__actions {
+        margin-left: auto;
+    }
+}

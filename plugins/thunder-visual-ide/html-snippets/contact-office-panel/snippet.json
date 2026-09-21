@@ -1,0 +1,17 @@
+{
+  "id": "contact-office-panel",
+  "name": "Contact Office Panel",
+  "description": "A complete contact section with office details, opening hours and enquiry form.",
+  "category": "Contact Us Forms",
+  "order": 1080,
+  "tags": [
+    "contact",
+    "form",
+    "office",
+    "support"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "enterprise-client-testimonial-slider",
+  "name": "Enterprise Client Testimonial Slider",
+  "description": "A boardroom-style client testimonial slider with company context, outcome metrics and accessible controls.",
+  "category": "Testimonial Sliders",
+  "order": 3500,
+  "tags": [
+    "testimonials",
+    "corporate",
+    "clients",
+    "slider",
+    "enterprise"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,88 @@
+{
+    "name": "Glass Dashboard",
+    "version": "1.0.0",
+    "plugin": "thunder-admin",
+    "plugin_requires": "^1.4.0",
+    "author": "Eathorne Choongo",
+    "thumbnail": "screenshot.png",
+    "description": "A luminous glassmorphism administration layout with floating navigation, frosted surfaces and soft gradient backdrops.",
+    "default_palette": "aurora-glass",
+    "palettes": {
+        "aurora-glass": {
+            "name": "Aurora Glass",
+            "description": "Violet and cyan highlights over a cool translucent workspace.",
+            "colors": {
+                "primary": "#7c5cff",
+                "primary_dark": "#5b3fd6",
+                "primary_soft": "#ece8ff",
+                "sidebar_bg": "#17223d",
+                "sidebar_text": "#d4dcf0",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#e9eefb",
+                "surface": "#ffffff",
+                "border": "#d8e0f0",
+                "text": "#19233a",
+                "muted": "#66738d",
+                "success": "#15956f",
+                "danger": "#dc4c64"
+            }
+        },
+        "arctic-blue": {
+            "name": "Arctic Blue",
+            "description": "Icy blue glass panels with crisp navy navigation.",
+            "colors": {
+                "primary": "#2f7df4",
+                "primary_dark": "#155dc7",
+                "primary_soft": "#dcecff",
+                "sidebar_bg": "#123257",
+                "sidebar_text": "#d5e4f6",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#e8f2fb",
+                "surface": "#ffffff",
+                "border": "#d3e2ef",
+                "text": "#17304a",
+                "muted": "#657d94",
+                "success": "#128e68",
+                "danger": "#d64d58"
+            }
+        },
+        "emerald-mist": {
+            "name": "Emerald Mist",
+            "description": "Fresh green accents with soft mint glass surfaces.",
+            "colors": {
+                "primary": "#16a37b",
+                "primary_dark": "#0d7a5c",
+                "primary_soft": "#d9f7ee",
+                "sidebar_bg": "#153b35",
+                "sidebar_text": "#d3e9e4",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#e8f5f1",
+                "surface": "#ffffff",
+                "border": "#d2e6df",
+                "text": "#183a32",
+                "muted": "#648077",
+                "success": "#138765",
+                "danger": "#d14c58"
+            }
+        },
+        "sunset-rose": {
+            "name": "Sunset Rose",
+            "description": "Warm rose and amber tones over a soft blush workspace.",
+            "colors": {
+                "primary": "#d95783",
+                "primary_dark": "#b73b67",
+                "primary_soft": "#fde4ee",
+                "sidebar_bg": "#4a2638",
+                "sidebar_text": "#f0d9e3",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f8eaf0",
+                "surface": "#ffffff",
+                "border": "#ead6df",
+                "text": "#3b2330",
+                "muted": "#846b77",
+                "success": "#238b67",
+                "danger": "#c83f52"
+            }
+        }
+    }
+}

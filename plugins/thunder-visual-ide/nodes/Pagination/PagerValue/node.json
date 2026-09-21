@@ -1,0 +1,64 @@
+{
+  "type": "pagination.value",
+  "label": "Pager Method",
+  "category": "Pagination",
+  "kind": "expression",
+  "icon": "PGM",
+  "color": "#2563eb",
+  "description": "Calls a value-returning method on a Core\\Pager object.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Pager Method",
+    "method": "render"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "method",
+      "label": "Method",
+      "type": "select",
+      "options": [
+        "render",
+        "current_page",
+        "prev_page",
+        "next_page",
+        "has_prev",
+        "has_next",
+        "showing_from",
+        "showing_to",
+        "summary_text",
+        "limit",
+        "offset"
+      ]
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "pager",
+        "label": "Pager",
+        "type": "object",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Result",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Pagination\\PagerValueCompiler",
+    "file": "Compiler.php"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "stats-overview-grid",
+  "name": "Stats Overview Grid",
+  "description": "A four-card KPI summary with trends, progress bars and compact contextual labels.",
+  "category": "Dashboard",
+  "order": 520,
+  "tags": [
+    "dashboard",
+    "stats",
+    "kpi",
+    "analytics"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

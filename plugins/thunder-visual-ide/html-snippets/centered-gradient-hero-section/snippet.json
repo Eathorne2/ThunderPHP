@@ -1,0 +1,17 @@
+{
+  "id": "centered-gradient-hero-section",
+  "name": "Centered Gradient Hero",
+  "description": "A centered campaign hero with gradient background, badge, dual actions, and a compact social-proof row.",
+  "category": "Hero Sections",
+  "order": 3100,
+  "tags": [
+    "hero",
+    "centered",
+    "gradient",
+    "campaign"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

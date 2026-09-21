@@ -1,0 +1,17 @@
+{
+  "id": "editorial-fade-slider",
+  "name": "Editorial Fade Slider",
+  "description": "A large image slider with fade transitions, captions, arrows and progress dots.",
+  "category": "Image Sliders",
+  "order": 1060,
+  "tags": [
+    "slider",
+    "carousel",
+    "images",
+    "fade"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

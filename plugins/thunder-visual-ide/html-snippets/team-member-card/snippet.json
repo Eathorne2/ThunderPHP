@@ -1,0 +1,17 @@
+{
+  "id": "team-member-card",
+  "name": "Team Member Card",
+  "description": "A modern user card with role, skills, follow state and direct-message action.",
+  "category": "User Cards",
+  "order": 400,
+  "tags": [
+    "user",
+    "card",
+    "team",
+    "follow"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

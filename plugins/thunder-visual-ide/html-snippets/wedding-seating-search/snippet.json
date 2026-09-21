@@ -1,0 +1,18 @@
+{
+  "id": "wedding-seating-search",
+  "name": "Wedding Seating Search",
+  "description": "An interactive guest lookup for finding table assignments at the reception.",
+  "category": "Wedding",
+  "order": 4690,
+  "tags": [
+    "wedding",
+    "seating plan",
+    "search",
+    "reception",
+    "guests"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

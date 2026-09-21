@@ -1,0 +1,44 @@
+{
+  "type": "javascript.boolean",
+  "label": "JS Boolean",
+  "category": "JavaScript Values",
+  "kind": "expression",
+  "icon": "TF",
+  "color": "#2563eb",
+  "description": "Outputs a browser-side boolean value.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "JS Boolean",
+    "value": false
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "value",
+      "label": "True",
+      "type": "checkbox"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Boolean",
+        "type": "js-boolean",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\BooleanCompiler",
+    "file": "Compiler.php"
+  }
+}

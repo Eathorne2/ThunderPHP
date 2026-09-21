@@ -1,0 +1,88 @@
+{
+    "name": "Dark Control Panel",
+    "version": "1.0.1",
+    "plugin": "thunder-admin",
+    "plugin_requires": "^1.3.0",
+    "author": "Eathorne Choongo",
+    "thumbnail": "screenshot.png",
+    "description": "A dark command-centre administration layout with a collapsible sidebar, high-contrast surfaces and control-panel styling.",
+    "default_palette": "obsidian-violet",
+    "palettes": {
+        "obsidian-violet": {
+            "name": "Obsidian Violet",
+            "description": "Deep charcoal surfaces with vivid Thunder violet controls.",
+            "colors": {
+                "primary": "#8b7cf6",
+                "primary_dark": "#6d5ce7",
+                "primary_soft": "#292448",
+                "sidebar_bg": "#080b12",
+                "sidebar_text": "#aab4c7",
+                "sidebar_heading": "#f8fafc",
+                "page_bg": "#0d111a",
+                "surface": "#151b27",
+                "border": "#293244",
+                "text": "#edf2f8",
+                "muted": "#8f9aad",
+                "success": "#35c78a",
+                "danger": "#f05d68"
+            }
+        },
+        "terminal-green": {
+            "name": "Terminal Green",
+            "description": "A command-line inspired dark palette with green highlights.",
+            "colors": {
+                "primary": "#36d399",
+                "primary_dark": "#17a673",
+                "primary_soft": "#14372d",
+                "sidebar_bg": "#07110e",
+                "sidebar_text": "#9fb9af",
+                "sidebar_heading": "#ecfff8",
+                "page_bg": "#0a1512",
+                "surface": "#111f1b",
+                "border": "#274039",
+                "text": "#e9f7f2",
+                "muted": "#88a39a",
+                "success": "#36d399",
+                "danger": "#f16f76"
+            }
+        },
+        "midnight-blue": {
+            "name": "Midnight Blue",
+            "description": "Cool navy control surfaces with electric blue highlights.",
+            "colors": {
+                "primary": "#4d9cff",
+                "primary_dark": "#2877de",
+                "primary_soft": "#172d4b",
+                "sidebar_bg": "#07101d",
+                "sidebar_text": "#9eafc7",
+                "sidebar_heading": "#f2f7ff",
+                "page_bg": "#0b1422",
+                "surface": "#121f30",
+                "border": "#293b52",
+                "text": "#edf5ff",
+                "muted": "#8fa0b7",
+                "success": "#2fc38b",
+                "danger": "#ef6673"
+            }
+        },
+        "crimson-command": {
+            "name": "Crimson Command",
+            "description": "A restrained dark red palette for high-impact control rooms.",
+            "colors": {
+                "primary": "#f05a67",
+                "primary_dark": "#cb3948",
+                "primary_soft": "#402126",
+                "sidebar_bg": "#14090c",
+                "sidebar_text": "#bea7ab",
+                "sidebar_heading": "#fff4f5",
+                "page_bg": "#180d10",
+                "surface": "#241519",
+                "border": "#4a2b32",
+                "text": "#fff0f2",
+                "muted": "#b09298",
+                "success": "#36c88c",
+                "danger": "#ff6874"
+            }
+        }
+    }
+}

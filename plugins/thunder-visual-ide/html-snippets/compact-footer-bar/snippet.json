@@ -1,0 +1,17 @@
+{
+  "id": "compact-footer-bar",
+  "name": "Compact Footer Bar",
+  "description": "A slim footer with brand, navigation, language selector and back-to-top action.",
+  "category": "Footers",
+  "order": 1170,
+  "tags": [
+    "footer",
+    "compact",
+    "navigation",
+    "legal"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

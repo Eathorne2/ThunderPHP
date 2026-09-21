@@ -1,0 +1,18 @@
+{
+  "id": "wedding-accommodation-cards",
+  "name": "Wedding Accommodation Cards",
+  "description": "A hotel recommendation grid with distance, rate, booking deadline and reservation links.",
+  "category": "Wedding",
+  "order": 4620,
+  "tags": [
+    "wedding",
+    "hotel",
+    "accommodation",
+    "travel",
+    "guests"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

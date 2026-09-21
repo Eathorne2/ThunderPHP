@@ -1,0 +1,17 @@
+<h2>Goal</h2>
+<p>Create a plugin page available at <code>/hello-thunder</code>. The Controller will set a title and the View will display it.</p>
+<h2>1. Add the architecture nodes</h2>
+<ol>
+    <li>Add a <strong>Route</strong> node and select the GET method.</li>
+    <li>Set the route name to <code>hello.index</code> and the path to <code>/hello-thunder</code>.</li>
+    <li>Add a <strong>Controller Hook</strong> and a <strong>View</strong>.</li>
+    <li>Connect the Route to both nodes.</li>
+</ol>
+<h2>2. Build the Controller flow</h2>
+<p>Open the Controller graph and use a String node with <code>Hello from Thunder Visual IDE</code>. Connect it to the node that writes a value into page state using the key <code>page_title</code>.</p>
+<h2>3. Build the View</h2>
+<p>Open the View Builder and add a container, heading or HTML block. Read <code>page_title</code> using the View variable system.</p>
+<pre><code>&lt;h1&gt;{{ page_title }}&lt;/h1&gt;</code></pre>
+<h2>4. Compile and test</h2>
+<p>Validate first, preview the generated files, then use <strong>Deploy Test Plugin</strong> if your development installation is safe for local test deployment.</p>
+<div class="tvi-tutorial-callout"><strong>Why connect the Route?</strong><p>The route connection lets the compiler register the Controller and View callbacks only for that named route.</p></div>

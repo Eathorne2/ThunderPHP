@@ -1,0 +1,20 @@
+{
+  "id": "subscription-plan-comparison",
+  "name": "Subscription Plan Comparison",
+  "description": "A clear subscription comparison with monthly and annual billing controls.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Commerce",
+  "order": 8012,
+  "tags": [
+    "commerce",
+    "pricing",
+    "subscription",
+    "plans"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

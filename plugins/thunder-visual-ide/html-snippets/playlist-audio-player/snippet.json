@@ -1,0 +1,17 @@
+{
+  "id": "playlist-audio-player",
+  "name": "Playlist Audio Player",
+  "description": "A compact audio player with selectable tracks, active-track state, timeline, and playback controls.",
+  "category": "Audio Players",
+  "order": 3230,
+  "tags": [
+    "audio",
+    "player",
+    "playlist",
+    "tracks"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

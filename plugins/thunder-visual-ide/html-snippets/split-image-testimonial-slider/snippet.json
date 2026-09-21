@@ -1,0 +1,17 @@
+{
+  "id": "split-image-testimonial-slider",
+  "name": "Split Image Testimonial Slider",
+  "description": "A large split-layout testimonial carousel with customer photography, quotation, role, and controls.",
+  "category": "Testimonial Sliders",
+  "order": 3260,
+  "tags": [
+    "testimonial",
+    "slider",
+    "image",
+    "customer"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

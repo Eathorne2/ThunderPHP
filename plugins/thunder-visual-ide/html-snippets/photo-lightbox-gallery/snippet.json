@@ -1,0 +1,17 @@
+{
+  "id": "photo-lightbox-gallery",
+  "name": "Photo Lightbox Gallery",
+  "description": "A responsive photo gallery with captions and a keyboard-friendly lightbox dialog.",
+  "category": "Galleries",
+  "order": 500,
+  "tags": [
+    "gallery",
+    "photos",
+    "lightbox",
+    "images"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

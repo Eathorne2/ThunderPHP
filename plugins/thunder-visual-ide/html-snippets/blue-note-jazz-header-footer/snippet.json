@@ -1,0 +1,18 @@
+{
+  "id": "blue-note-jazz-header-footer",
+  "name": "Blue Note Jazz Club Header and Footer",
+  "description": "An elegant jazz-club shell with serif branding, reservations and a refined late-night footer.",
+  "category": "Music & Entertainment",
+  "order": 4420,
+  "tags": [
+    "jazz",
+    "club",
+    "header",
+    "footer",
+    "reservations"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "profile-summary-panel",
+  "name": "Profile Summary Panel",
+  "description": "A compact profile summary with completion progress, contact details and skills.",
+  "category": "Profiles",
+  "order": 310,
+  "tags": [
+    "profile",
+    "summary",
+    "skills",
+    "completion"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

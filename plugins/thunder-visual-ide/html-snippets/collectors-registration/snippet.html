@@ -1,0 +1,86 @@
+<section class="collectors-register" data-collectors-register>
+    <div class="collectors-register__poster" aria-hidden="true">
+        <div class="collectors-register__poster-number">01</div>
+        <div class="collectors-register__poster-title">PRIVATE<br>EDITION</div>
+        <div class="collectors-register__poster-label">Collectors Circle / 2026</div>
+        <img src="https://picsum.photos/id/1027/900/1200" alt="">
+    </div>
+
+    <div class="collectors-register__content">
+        <header class="collectors-register__header">
+            <a href="#">OBSERVER / CLUB</a>
+            <span>Applications open</span>
+        </header>
+
+        <form class="collectors-register__form" action="" method="post">
+            <p class="collectors-register__eyebrow">Create a reader profile</p>
+            <h1 class="collectors-register__title">Join the people behind the margin notes.</h1>
+
+            <div class="collectors-register__grid">
+                <label class="collectors-register__field">
+                    <span>First name</span>
+                    <input type="text" name="first_name" placeholder="Amara" autocomplete="given-name" required>
+                </label>
+
+                <label class="collectors-register__field">
+                    <span>Last name</span>
+                    <input type="text" name="last_name" placeholder="Nkhoma" autocomplete="family-name" required>
+                </label>
+
+                <label class="collectors-register__field collectors-register__field--wide">
+                    <span>Email address</span>
+                    <input type="email" name="email" placeholder="amara@example.com" autocomplete="email" required>
+                </label>
+
+                <label class="collectors-register__field collectors-register__field--wide">
+                    <span>Create password</span>
+                    <span class="collectors-register__password">
+                        <input
+                            type="password"
+                            name="password"
+                            minlength="8"
+                            placeholder="At least 8 characters"
+                            autocomplete="new-password"
+                            required
+                            data-collectors-password
+                        >
+                        <button type="button" data-collectors-password-toggle>Show</button>
+                    </span>
+                </label>
+            </div>
+
+            <fieldset class="collectors-register__interests">
+                <legend>Choose your first reading shelf</legend>
+                <label>
+                    <input type="radio" name="shelf" value="design" checked>
+                    <span>
+                        <strong>Design & objects</strong>
+                        <small>Studios, spaces and useful things.</small>
+                    </span>
+                </label>
+                <label>
+                    <input type="radio" name="shelf" value="culture">
+                    <span>
+                        <strong>Culture & people</strong>
+                        <small>Interviews, essays and field notes.</small>
+                    </span>
+                </label>
+                <label>
+                    <input type="radio" name="shelf" value="future">
+                    <span>
+                        <strong>Future systems</strong>
+                        <small>Technology, work and new institutions.</small>
+                    </span>
+                </label>
+            </fieldset>
+
+            <label class="collectors-register__terms">
+                <input type="checkbox" name="terms" required>
+                <span>I agree to the membership terms and privacy policy.</span>
+            </label>
+
+            <button class="collectors-register__submit" type="submit">Create my profile ↗</button>
+            <p class="collectors-register__login">Already a member? <a href="#">Sign in</a></p>
+        </form>
+    </div>
+</section>

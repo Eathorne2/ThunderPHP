@@ -1,0 +1,153 @@
+{
+  "slug": "edu-student-reviews",
+  "name": "Student Reviews",
+  "category": "Education",
+  "description": "Large learner testimonials with course or program context",
+  "keywords": [
+    "education",
+    "reviews",
+    "testimonials",
+    "students"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-edu-reviews\"><div class=\"tb-edu-reviews__head\">{{elements:eyebrow}}{{elements:title}}</div><div class=\"tb-edu-reviews__grid\">{{elements:reviews}}</div></div>",
+  "css": ".tb-edu-reviews{padding:clamp(36px,7vw,86px);background:var(--tb-color-surface)}.tb-edu-reviews__head{text-align:center;margin-bottom:26px}.tb-edu-reviews__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.15em}.tb-edu-reviews__title{margin:8px 0;color:var(--tb-color-secondary);font-size:clamp(40px,5vw,60px)}.tb-edu-reviews__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.tb-edu-reviews__review{padding:32px;border:1px solid var(--tb-color-border);background:var(--tb-color-background)}.tb-edu-reviews__quote{margin:0;color:var(--tb-color-secondary);font-size:clamp(24px,3vw,36px);line-height:1.35}.tb-edu-reviews__name{display:block;margin-top:26px;color:var(--tb-color-primary);font-weight:900}.tb-edu-reviews__meta{display:block;color:var(--tb-color-muted);font-size:13px;margin-top:3px}@media(max-width:650px){.tb-edu-reviews__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Student voices"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-edu-reviews__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "What learning feels like here"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-edu-reviews__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "reviews",
+      "label": "Review",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "quote": "The lessons were practical enough to use immediately, and the feedback kept me moving.",
+        "name": "Tasha M.",
+        "meta": "Digital Business graduate"
+      },
+      "schema": [
+        {
+          "key": "quote",
+          "label": "Quote",
+          "type": "textarea",
+          "selector": ".tb-edu-reviews__quote",
+          "rows": 3
+        },
+        {
+          "key": "name",
+          "label": "Name",
+          "type": "text",
+          "selector": ".tb-edu-reviews__name"
+        },
+        {
+          "key": "meta",
+          "label": "Details",
+          "type": "text",
+          "selector": ".tb-edu-reviews__meta"
+        }
+      ],
+      "template": "<blockquote class=\"tb-edu-reviews__review\"><p class=\"tb-edu-reviews__quote\">“{{quote}}”</p><span class=\"tb-edu-reviews__name\">{{name}}</span><span class=\"tb-edu-reviews__meta\">{{meta}}</span></blockquote>",
+      "min": 1,
+      "max": 8,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "quote": "The lessons were practical enough to use immediately, and the feedback kept me moving.",
+          "name": "Tasha M.",
+          "meta": "Digital Business graduate"
+        },
+        {
+          "quote": "I found a real community here, not just a collection of online lessons.",
+          "name": "Brian K.",
+          "meta": "Language learner"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

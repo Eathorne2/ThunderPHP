@@ -1,0 +1,134 @@
+.photo-essay {
+    padding: clamp(1rem, 3vw, 2.5rem);
+    color: var(--thv-theme-text, #101010);
+    background: var(--thv-theme-surface, #f7f5f0);
+}
+
+.photo-essay__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.42fr);
+    gap: 2rem;
+    align-items: end;
+    padding: clamp(1.5rem, 4vw, 3.5rem) 0;
+}
+
+.photo-essay__header span,
+.photo-essay__overlay small,
+.photo-essay__overlay > span {
+    font-size: 0.67rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.photo-essay__header h2 {
+    max-width: 62rem;
+    margin: 0.7rem 0 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3.2rem, 8vw, 8rem);
+    font-weight: 500;
+    letter-spacing: -0.075em;
+    line-height: 0.88;
+}
+
+.photo-essay__header p {
+    margin: 0;
+    color: var(--thv-theme-muted, #66615b);
+    line-height: 1.7;
+}
+
+.photo-essay__stage {
+    position: relative;
+    min-height: 42rem;
+    overflow: hidden;
+    background: #121212;
+}
+
+.photo-essay__stage > img {
+    width: 100%;
+    height: 100%;
+    min-height: 42rem;
+    object-fit: cover;
+    transition: opacity 240ms ease, transform 650ms ease;
+}
+
+.photo-essay__stage.is-changing > img {
+    opacity: 0.35;
+    transform: scale(1.025);
+}
+
+.photo-essay__stage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.06) 20%, rgba(0, 0, 0, 0.78));
+}
+
+.photo-essay__overlay {
+    position: absolute;
+    z-index: 1;
+    inset: auto clamp(1.5rem, 4vw, 4rem) clamp(1.5rem, 4vw, 3.5rem);
+    display: grid;
+    grid-template-columns: 8rem minmax(0, 1fr);
+    gap: 2rem;
+    align-items: end;
+    color: #ffffff;
+}
+
+.photo-essay__overlay h3 {
+    max-width: 55rem;
+    margin: 0.5rem 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 5vw, 5rem);
+    font-weight: 500;
+    line-height: 0.96;
+}
+
+.photo-essay__overlay p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.75rem;
+}
+
+.photo-essay__controls {
+    display: grid;
+    grid-template-columns: auto minmax(8rem, 1fr) auto;
+    gap: 1.2rem;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.photo-essay__controls button {
+    padding: 0;
+    border: 0;
+    color: inherit;
+    background: transparent;
+    font-weight: 850;
+    cursor: pointer;
+}
+
+.photo-essay__progress {
+    height: 2px;
+    overflow: hidden;
+    background: var(--thv-theme-border, #d2cdc5);
+}
+
+.photo-essay__progress span {
+    display: block;
+    width: 33.333%;
+    height: 100%;
+    background: var(--thv-theme-primary, #ef4a2f);
+    transition: width 240ms ease;
+}
+
+@media (max-width: 700px) {
+    .photo-essay__header,
+    .photo-essay__overlay {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-essay__stage,
+    .photo-essay__stage > img {
+        min-height: 32rem;
+    }
+}

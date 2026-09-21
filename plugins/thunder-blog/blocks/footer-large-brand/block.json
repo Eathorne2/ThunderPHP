@@ -1,0 +1,136 @@
+{
+  "settings": {
+    "defaults": {
+      "menu_id": "0",
+      "width": "1200"
+    },
+    "schema": [
+      {
+        "key": "menu_id",
+        "label": "Saved menu",
+        "type": "menu",
+        "default": "0"
+      },
+      {
+        "key": "width",
+        "label": "Content width",
+        "type": "select",
+        "options": {
+          "1040": "Compact",
+          "1200": "Standard",
+          "1360": "Wide",
+          "1480": "Extra wide"
+        },
+        "default": "1200"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "key": "brand",
+      "label": "Brand statement",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": true,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "name": "{{app_name}}",
+        "text": "{{app_description}}",
+        "logo": "{{app_logo}}"
+      },
+      "schema": [
+        {
+          "key": "name",
+          "label": "Brand name",
+          "type": "text",
+          "selector": ".tb-f-large-brand__brand-name"
+        },
+        {
+          "key": "text",
+          "label": "Brand text",
+          "type": "textarea",
+          "selector": ".tb-f-large-brand__brand-text"
+        },
+        {
+          "key": "logo",
+          "label": "Logo",
+          "type": "image",
+          "selector": ".tb-f-large-brand__logo"
+        }
+      ],
+      "template": "<div class=\"tb-f-large-brand__brand\"><img class=\"tb-f-large-brand__logo\" src=\"{{logo}}\" alt=\"\"><strong class=\"tb-f-large-brand__brand-name\">{{name}}</strong><p class=\"tb-f-large-brand__brand-text\">{{text}}</p></div>",
+      "min": 0,
+      "max": 1,
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "text"
+        }
+      }
+    },
+    {
+      "key": "copyright",
+      "label": "Copyright",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": true,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "© {{year}} {{app_name}}. All rights reserved."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Copyright text",
+          "type": "text",
+          "selector": ".tb-f-large-brand__copyright"
+        }
+      ],
+      "template": "<div class=\"tb-f-large-brand__copyright\">{{text}}</div>",
+      "min": 0,
+      "max": 1,
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "muted"
+        }
+      }
+    }
+  ],
+  "menu_sources": [
+    {
+      "setting": "menu_id",
+      "token": "primary",
+      "empty": "",
+      "container": "<nav class=\"tb-f-large-brand__nav\" aria-label=\"{{menu_name}}\">{{items}}</nav>",
+      "item": "<a class=\"tb-f-large-brand__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}}</a>",
+      "parent": "<div class=\"tb-f-large-brand__parent\"><a class=\"tb-f-large-brand__link\" href=\"{{url}}\" target=\"{{target}}\" rel=\"noopener\">{{title}}<span class=\"tb-f-large-brand__chevron\">⌄</span></a><div class=\"tb-f-large-brand__submenu\">{{children}}</div></div>",
+      "empty_preview": "<nav class=\"tb-f-large-brand__nav tb-menu-empty\">Select a menu</nav>"
+    }
+  ],
+  "html": "<footer class=\"tb-block tb-f-large-brand\"><div class=\"tb-f-large-brand__inner\" style=\"--tb-f-large-brand-width:{{width}}px\"><div class=\"tb-f-large-brand__hero\">{{elements:brand}}</div><div class=\"tb-f-large-brand__menu\">{{menu:primary}}</div><div class=\"tb-f-large-brand__legal\">{{elements:copyright}}</div></div></footer>",
+  "css": ".tb-f-large-brand{background:var(--tb-color-surface);color:var(--tb-color-text)}.tb-f-large-brand__inner{max-width:var(--tb-f-large-brand-width);margin:auto;padding:52px 24px 24px}.tb-f-large-brand__brand{display:grid;gap:10px;align-content:start}.tb-f-large-brand__logo{width:42px;height:42px;object-fit:contain}.tb-f-large-brand__brand-name{font-size:20px}.tb-f-large-brand__brand-text{max-width:360px;margin:0;color:var(--tb-color-muted);line-height:1.65}.tb-f-large-brand__copyright{color:var(--tb-color-muted);font-size:12px}.tb-f-large-brand__nav{display:grid;gap:10px}.tb-f-large-brand__link{color:inherit;text-decoration:none;opacity:.78}.tb-f-large-brand__link:hover{opacity:1;color:var(--tb-color-primary)}.tb-f-large-brand__parent{display:grid;gap:8px}.tb-f-large-brand__parent>.tb-f-large-brand__link{font-weight:850;opacity:1}.tb-f-large-brand__submenu{display:grid;gap:7px;padding-left:0}.tb-f-large-brand__chevron{display:none}.tb-f-large-brand__hero{padding:18px 0 46px}.tb-f-large-brand__brand-name{font-size:clamp(46px,8vw,92px);line-height:.9;letter-spacing:-.06em}.tb-f-large-brand__brand-text{max-width:520px;font-size:17px}.tb-f-large-brand__logo{width:56px;height:56px}.tb-f-large-brand__menu{padding:18px 0;border-top:1px solid var(--tb-color-border);border-bottom:1px solid var(--tb-color-border)}.tb-f-large-brand__nav{display:flex;flex-wrap:wrap;gap:20px}.tb-f-large-brand__legal{padding-top:16px}@media(max-width:820px){.tb-f-large-brand__grid,.tb-f-large-brand__top,.tb-f-large-brand__row,.tb-f-large-brand__bottom{grid-template-columns:1fr;flex-wrap:wrap}.tb-f-large-brand__nav{grid-template-columns:repeat(2,minmax(0,1fr))}.tb-f-large-brand__contacts{grid-template-columns:1fr}}@media(max-width:520px){.tb-f-large-brand__inner{padding-left:16px;padding-right:16px}.tb-f-large-brand__nav{grid-template-columns:1fr}.tb-f-large-brand__search{width:100%!important}}",
+  "js": "",
+  "slug": "footer-large-brand",
+  "name": "Large Brand Footer",
+  "category": "Footers",
+  "description": "A large brand statement dominates above a lightweight navigation row.",
+  "keywords": [
+    "footer",
+    "navigation",
+    "menu",
+    "largebrand"
+  ],
+  "contexts": [
+    "footer"
+  ],
+  "version": "1.0.0"
+}

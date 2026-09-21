@@ -1,0 +1,18 @@
+{
+  "id": "venue-experience-features",
+  "name": "Venue Experience Features",
+  "description": "A premium venue overview with visual feature cards, capacity facts and event enquiry action.",
+  "category": "Music & Entertainment",
+  "order": 4360,
+  "tags": [
+    "venue",
+    "events",
+    "features",
+    "concert",
+    "experience"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,72 @@
+{
+  "type": "migration.add_index",
+  "label": "Add Index",
+  "category": "Migrations",
+  "kind": "migration",
+  "icon": "ADD",
+  "color": "#8b5cf6",
+  "description": "Adds a normal, unique, or full-text index to an existing table.",
+  "allowed_graphs": [
+    "migration"
+  ],
+  "defaults": {
+    "title": "Add Index",
+    "table": "users",
+    "columns": "email",
+    "index_name": "idx_users_email",
+    "index_type": "normal"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "table",
+      "label": "Table",
+      "type": "text"
+    },
+    {
+      "name": "columns",
+      "label": "Columns",
+      "type": "text"
+    },
+    {
+      "name": "index_name",
+      "label": "Index name",
+      "type": "text"
+    },
+    {
+      "name": "index_type",
+      "label": "Index type",
+      "type": "select",
+      "options": [
+        "normal",
+        "unique"
+      ]
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Previous",
+        "type": "exec",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out"
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Migrations\\AddIndexCompiler",
+    "file": "Compiler.php"
+  }
+}

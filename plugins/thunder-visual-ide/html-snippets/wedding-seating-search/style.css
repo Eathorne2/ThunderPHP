@@ -1,0 +1,120 @@
+.wsts {
+    position: relative;
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: clamp(2rem, 7vw, 7rem);
+    padding: clamp(2rem, 7vw, 6rem);
+    overflow: hidden;
+    border-radius: 1.5rem;
+    color: var(--thv-theme-text);
+    background: color-mix(in srgb, var(--thv-theme-secondary) 18%, var(--thv-theme-surface));
+}
+
+.wsts *,
+.wsts *::before,
+.wsts *::after {
+    box-sizing: border-box;
+}
+
+.wsts__intro,
+.wsts__search {
+    position: relative;
+    z-index: 1;
+}
+
+.wsts__intro p,
+.wsts label {
+    margin: 0;
+    color: var(--thv-theme-primary);
+    font-size: .68rem;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.wsts h2 {
+    margin: .7rem 0 1rem;
+    font-family: Georgia, serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 400;
+    letter-spacing: -.055em;
+    line-height: .9;
+}
+
+.wsts__intro > span {
+    color: var(--thv-theme-muted);
+    line-height: 1.7;
+}
+
+.wsts__search {
+    align-self: center;
+    padding: 1.4rem;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-text) 14%, transparent);
+    border-radius: 1rem;
+    background: color-mix(in srgb, var(--thv-theme-surface) 82%, transparent);
+}
+
+.wsts__search > div {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: .65rem;
+    margin-top: .6rem;
+}
+
+.wsts input {
+    min-width: 0;
+    min-height: 3.4rem;
+    padding: .85rem 1rem;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-text) 18%, transparent);
+    border-radius: .7rem;
+    color: inherit;
+    background: var(--thv-theme-surface);
+    font: inherit;
+}
+
+.wsts button {
+    padding: .85rem 1.1rem;
+    border: 0;
+    border-radius: .7rem;
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.wsts__search p {
+    min-height: 1.5rem;
+    margin: 1rem 0 0;
+    color: var(--thv-theme-muted);
+}
+
+.wsts__tables {
+    position: absolute;
+    right: -4rem;
+    bottom: -4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 5rem);
+    gap: .8rem;
+    opacity: .12;
+    transform: rotate(-8deg);
+}
+
+.wsts__tables span {
+    display: grid;
+    width: 5rem;
+    height: 5rem;
+    place-items: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    font-family: Georgia, serif;
+}
+
+@media (max-width: 760px) {
+    .wsts {
+        grid-template-columns: 1fr;
+    }
+
+    .wsts__search > div {
+        grid-template-columns: 1fr;
+    }
+}

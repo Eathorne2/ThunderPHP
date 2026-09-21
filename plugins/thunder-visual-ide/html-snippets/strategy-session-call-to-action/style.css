@@ -1,0 +1,135 @@
+.sscta-section {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(20rem, .95fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    overflow: hidden;
+    padding: clamp(1.5rem, 6vw, 5rem);
+    border: 1px solid var(--thv-theme-border, #d8e0e8);
+    border-radius: 1.4rem;
+    color: var(--thv-theme-text, #152238);
+    background:
+        radial-gradient(circle at 8% 110%, color-mix(in srgb, var(--thv-theme-secondary, #75a7d8) 20%, transparent), transparent 26rem),
+        var(--thv-theme-surface, #ffffff);
+}
+
+.sscta-section::after {
+    content: '';
+    position: absolute;
+    top: -5rem;
+    right: -5rem;
+    width: 15rem;
+    height: 15rem;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-primary, #285d91) 24%, transparent);
+    border-radius: 50%;
+}
+
+.sscta-section__copy,
+.sscta-section form {
+    position: relative;
+    z-index: 1;
+}
+
+.sscta-section__copy > span {
+    color: var(--thv-theme-primary, #285d91);
+    font-size: .7rem;
+    font-weight: 850;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.sscta-section h2 {
+    max-width: 12ch;
+    margin: .75rem 0 1rem;
+    font-family: Georgia, serif;
+    font-size: clamp(2.3rem, 5vw, 4.9rem);
+    font-weight: 500;
+    letter-spacing: -.05em;
+    line-height: .98;
+}
+
+.sscta-section__copy > p {
+    max-width: 39rem;
+    color: var(--thv-theme-muted, #667386);
+    line-height: 1.75;
+}
+
+.sscta-section__advisor {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin-top: 1.8rem;
+}
+
+.sscta-section__advisor img {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sscta-section__advisor div {
+    display: grid;
+    gap: .2rem;
+}
+
+.sscta-section__advisor span {
+    color: var(--thv-theme-muted, #667386);
+    font-size: .72rem;
+}
+
+.sscta-section form {
+    display: grid;
+    align-content: center;
+    gap: 1rem;
+    padding: clamp(1.25rem, 4vw, 2.2rem);
+    border: 1px solid var(--thv-theme-border, #d8e0e8);
+    background: var(--thv-theme-surface-alt, #f5f7f9);
+    box-shadow: 0 22px 55px rgba(15, 23, 42, .08);
+}
+
+.sscta-section form > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .8rem;
+}
+
+.sscta-section form label {
+    display: grid;
+    gap: .4rem;
+    font-size: .72rem;
+    font-weight: 800;
+}
+
+.sscta-section form :where(input, select) {
+    width: 100%;
+    padding: .8rem;
+    border: 1px solid var(--thv-theme-border, #d8e0e8);
+    color: inherit;
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.sscta-section form button {
+    padding: .85rem 1rem;
+    border: 0;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #285d91);
+    font-weight: 850;
+}
+
+.sscta-section form small {
+    color: var(--thv-theme-muted, #667386);
+    line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+    .sscta-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .sscta-section form > div {
+        grid-template-columns: 1fr;
+    }
+}

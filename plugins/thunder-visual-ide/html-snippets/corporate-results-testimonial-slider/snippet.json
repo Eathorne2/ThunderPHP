@@ -1,0 +1,18 @@
+{
+  "id": "corporate-results-testimonial-slider",
+  "name": "Corporate Results Testimonial Slider",
+  "description": "A light corporate testimonial slider with portrait, project summary and result callouts.",
+  "category": "Testimonial Sliders",
+  "order": 3510,
+  "tags": [
+    "testimonials",
+    "corporate",
+    "results",
+    "slider",
+    "business"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

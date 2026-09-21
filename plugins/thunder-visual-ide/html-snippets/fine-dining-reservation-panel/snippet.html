@@ -1,0 +1,52 @@
+<section class="fdr-panel">
+    <div class="fdr-panel__image">
+        <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+            alt="Elegant restaurant dining room"
+        >
+        <div class="fdr-panel__award">
+            <span>Chef's table</span>
+            <strong>12 seats · one nightly service</strong>
+        </div>
+    </div>
+
+    <form class="fdr-panel__form" data-fdr-form>
+        <span class="fdr-panel__eyebrow">Reserve your table</span>
+        <h2>An evening designed around the season.</h2>
+        <p>Join us for a seven-course tasting menu shaped by the day's best produce.</p>
+
+        <div class="fdr-panel__fields">
+            <label>
+                <span>Date</span>
+                <input type="date" name="date">
+            </label>
+            <label>
+                <span>Time</span>
+                <select name="time">
+                    <option>18:30</option>
+                    <option>19:00</option>
+                    <option>19:30</option>
+                    <option>20:00</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="fdr-panel__guests">
+            <span>Guests</span>
+            <div>
+                <button type="button" aria-label="Remove guest" data-fdr-minus>−</button>
+                <strong data-fdr-count>2</strong>
+                <button type="button" aria-label="Add guest" data-fdr-plus>+</button>
+            </div>
+        </div>
+
+        <button class="fdr-panel__submit" type="submit">Check availability</button>
+        <output data-fdr-message aria-live="polite"></output>
+
+        <footer>
+            <span>Tuesday–Saturday</span>
+            <span>Smart casual</span>
+            <span>Dietary menus available</span>
+        </footer>
+    </form>
+</section>

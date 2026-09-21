@@ -1,0 +1,16 @@
+{
+  "name": "Studio Cards",
+  "version": "1.4.0",
+  "plugin": "thunder-blog",
+  "plugin_requires": "^1.3.0",
+  "author": "Eathorne Choongo",
+  "thumbnail": "../../assets/images/thumbnail.svg",
+  "description": "A friendly modern card-based look with soft surfaces, generous radius and an airy content grid.",
+  "palettes": [
+    "indigo",
+    "forest",
+    "sunset",
+    "ocean",
+    "charcoal"
+  ]
+}

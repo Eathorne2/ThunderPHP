@@ -1,0 +1,20 @@
+{
+  "id": "selectable-user-card",
+  "name": "Selectable User Card",
+  "description": "A selectable team-member card suitable for assignment or invitation lists.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "User Cards",
+  "order": 2310,
+  "tags": [
+    "user",
+    "selectable",
+    "team",
+    "assignment"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

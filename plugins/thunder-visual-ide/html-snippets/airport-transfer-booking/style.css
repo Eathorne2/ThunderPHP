@@ -1,0 +1,171 @@
+.atb {
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-background);
+}
+
+.atb *, .atb *::before, .atb *::after {
+    box-sizing: border-box;
+}
+
+.atb a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.atb button, .atb input, .atb select, .atb textarea {
+    font: inherit;
+}
+
+.atb {
+    display: grid;
+    grid-template-columns: minmax(17rem, .65fr) minmax(0, 1.35fr);
+    gap: clamp(2rem, 6vw, 5rem);
+    padding: clamp(2rem, 6vw, 5rem);
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.6rem;
+    background: var(--thv-theme-surface);
+}
+
+.atb header p {
+    margin: 0;
+    color: var(--thv-theme-primary);
+    font-size: .68rem;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.atb h2 {
+    margin: .7rem 0 1rem;
+    font-family: Georgia, serif;
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    font-weight: 400;
+    letter-spacing: -.05em;
+    line-height: 1;
+}
+
+.atb header span {
+    color: var(--thv-theme-muted);
+    line-height: 1.7;
+}
+
+.atb form {
+    padding: 1.2rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.2rem;
+    background: var(--thv-theme-background);
+}
+
+.atb__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .8rem;
+}
+
+.atb label {
+    display: grid;
+    gap: .35rem;
+}
+
+.atb label > span, .atb legend, .atb footer span {
+    color: var(--thv-theme-muted);
+    font-size: .65rem;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.atb input, .atb select {
+    width: 100%;
+    padding: .82rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: .75rem;
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-surface);
+}
+
+.atb fieldset {
+    display: grid;
+    gap: .6rem;
+    margin: 1rem 0;
+    padding: 0;
+    border: 0;
+}
+
+.atb legend {
+    margin-bottom: .6rem;
+}
+
+.atb fieldset label {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: .8rem;
+    align-items: center;
+    padding: .85rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: .8rem;
+    cursor: pointer;
+}
+
+.atb fieldset label:has(input:checked) {
+    border-color: var(--thv-theme-primary);
+    background: color-mix(in srgb, var(--thv-theme-primary) 8%, transparent);
+}
+
+.atb fieldset label span {
+    display: grid;
+    gap: .2rem;
+    color: var(--thv-theme-text);
+    text-transform: none;
+}
+
+.atb fieldset small {
+    color: var(--thv-theme-muted);
+    font-weight: 400;
+}
+
+.atb fieldset b {
+    color: var(--thv-theme-primary);
+}
+
+.atb footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--thv-theme-border);
+}
+
+.atb footer div {
+    display: grid;
+    gap: .25rem;
+}
+
+.atb footer strong {
+    font-size: 1.45rem;
+}
+
+.atb footer button {
+    padding: .85rem 1rem;
+    border: 0;
+    border-radius: .8rem;
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+@media (max-width: 760px) {
+    .atb {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .atb__fields {
+        grid-template-columns: 1fr;
+    }
+
+}

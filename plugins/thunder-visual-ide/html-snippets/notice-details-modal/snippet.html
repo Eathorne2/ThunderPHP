@@ -1,0 +1,33 @@
+<section class="ndm-alert" data-ndm-alert>
+    <button class="ndm-alert__launcher" type="button" data-ndm-open>View notice</button>
+    <div class="ndm-alert__backdrop" data-ndm-modal hidden>
+        <article class="ndm-alert__dialog" role="dialog" aria-modal="true" aria-labelledby="ndm-title">
+            <header>
+                <span aria-hidden="true">i</span>
+                <div>
+                    <small>SYSTEM NOTICE</small>
+                    <h2 id="ndm-title">Scheduled maintenance</h2>
+                </div>
+                <button type="button" data-ndm-close aria-label="Close">×</button>
+            </header>
+            <p>Services may briefly reconnect during the maintenance window.</p>
+            <dl>
+                <div>
+                    <dt>Date</dt>
+                    <dd>Sunday, 02:00</dd>
+                </div>
+                <div>
+                    <dt>Expected duration</dt>
+                    <dd>20 minutes</dd>
+                </div>
+                <div>
+                    <dt>Impact</dt>
+                    <dd>Low</dd>
+                </div>
+            </dl>
+            <footer>
+                <button type="button" data-ndm-close>I understand</button>
+            </footer>
+        </article>
+    </div>
+</section>

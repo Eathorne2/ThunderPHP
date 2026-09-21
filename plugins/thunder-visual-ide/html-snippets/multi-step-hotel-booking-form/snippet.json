@@ -1,0 +1,18 @@
+{
+  "id": "multi-step-hotel-booking-form",
+  "name": "Multi-Step Hotel Booking Form",
+  "description": "A three-step hotel reservation form for dates, room selection and guest details.",
+  "category": "Travel & Hotels",
+  "order": 4860,
+  "tags": [
+    "hotel",
+    "booking",
+    "form",
+    "multi-step",
+    "reservation"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

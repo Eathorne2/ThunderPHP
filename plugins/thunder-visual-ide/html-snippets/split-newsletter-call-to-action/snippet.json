@@ -1,0 +1,17 @@
+{
+  "id": "split-newsletter-call-to-action",
+  "name": "Split Newsletter Call to Action",
+  "description": "A two-column newsletter callout with benefit copy, an email form, and privacy reassurance.",
+  "category": "Call to Action",
+  "order": 3120,
+  "tags": [
+    "cta",
+    "newsletter",
+    "form",
+    "email"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

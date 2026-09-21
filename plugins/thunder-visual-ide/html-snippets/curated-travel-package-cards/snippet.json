@@ -1,0 +1,18 @@
+{
+  "id": "curated-travel-package-cards",
+  "name": "Curated Travel Package Cards",
+  "description": "A responsive collection of destination packages with duration filters, inclusions and trip pricing.",
+  "category": "Travel & Hotels",
+  "order": 4870,
+  "tags": [
+    "travel",
+    "packages",
+    "cards",
+    "tours",
+    "pricing"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

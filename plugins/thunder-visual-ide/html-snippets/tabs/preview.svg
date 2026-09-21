@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#eef2ff"/>
+  <rect x="72" y="55" width="496" height="250" rx="22" fill="#fff" stroke="#dbe4ef"/>
+  <rect x="88" y="72" width="464" height="62" rx="14" fill="#f1f5f9"/>
+  <rect x="98" y="82" width="140" height="42" rx="11" fill="#4f46e5"/>
+  <text x="168" y="108" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#fff">Overview</text>
+  <text x="325" y="108" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#64748b">Features</text>
+  <text x="472" y="108" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="#64748b">Support</text>
+  <rect x="106" y="166" width="150" height="21" rx="8" fill="#0f172a"/>
+  <rect x="106" y="211" width="390" height="11" rx="5" fill="#94a3b8"/>
+  <rect x="106" y="234" width="340" height="11" rx="5" fill="#cbd5e1"/>
+</svg>

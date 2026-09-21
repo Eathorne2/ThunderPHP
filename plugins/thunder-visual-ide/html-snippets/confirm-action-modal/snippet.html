@@ -1,0 +1,14 @@
+<section class="cam-alert" data-cam-alert>
+    <button class="cam-alert__launcher" type="button" data-cam-open>Delete record</button>
+    <div class="cam-alert__backdrop" data-cam-modal hidden>
+        <div class="cam-alert__dialog" role="alertdialog" aria-modal="true" aria-labelledby="cam-title">
+            <span class="cam-alert__icon" aria-hidden="true">!</span>
+            <h2 id="cam-title">Delete this record?</h2>
+            <p>This action cannot be undone. Related activity remains in the audit log.</p>
+            <div class="cam-alert__actions">
+                <button type="button" data-cam-close>Cancel</button>
+                <button class="is-danger" type="button" data-cam-confirm>Delete</button>
+            </div>
+        </div>
+    </div>
+</section>

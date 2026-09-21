@@ -1,0 +1,20 @@
+{
+  "id": "quick-actions-dashboard",
+  "name": "Quick Actions Dashboard",
+  "description": "A practical action grid with tasks, shortcuts and notification counts.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Dashboard",
+  "order": 8024,
+  "tags": [
+    "dashboard",
+    "actions",
+    "shortcuts",
+    "tasks"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

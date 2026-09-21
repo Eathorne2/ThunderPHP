@@ -1,0 +1,17 @@
+{
+  "id": "support-ticket-form",
+  "name": "Support Ticket Form",
+  "description": "A compact support request form with priority selection, character count and attachment area.",
+  "category": "Contact Forms",
+  "order": 610,
+  "tags": [
+    "support",
+    "contact",
+    "ticket",
+    "form"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

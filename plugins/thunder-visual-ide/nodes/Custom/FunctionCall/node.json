@@ -1,0 +1,67 @@
+{
+  "type": "custom.function_call",
+  "label": "Function Call",
+  "category": "Custom",
+  "kind": "flow",
+  "icon": "ƒ()",
+  "color": "#64748b",
+  "description": "Calls a Function Definition node and exposes its declared parameters.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "dynamic_ports": "function_call",
+  "defaults": {
+    "title": "Function Call",
+    "function_node_id": "",
+    "result_variable": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "result_variable",
+      "label": "Result variable",
+      "type": "text",
+      "help": "Optional PHP variable name. Omit the $ sign. Leave blank to use the automatic node-specific name."
+    },
+    {
+      "name": "function_node_id",
+      "label": "Function",
+      "type": "function_ref"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      },
+      {
+        "id": "result",
+        "label": "Result",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Custom\\FunctionCallCompiler",
+    "file": "Compiler.php"
+  }
+}

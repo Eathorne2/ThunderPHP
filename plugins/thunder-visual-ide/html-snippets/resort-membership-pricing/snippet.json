@@ -1,0 +1,18 @@
+{
+  "id": "resort-membership-pricing",
+  "name": "Resort Membership Pricing",
+  "description": "A premium resort membership comparison with annual toggle, included nights and member benefits.",
+  "category": "Travel & Hotels",
+  "order": 4960,
+  "tags": [
+    "resort",
+    "membership",
+    "pricing",
+    "hotel",
+    "loyalty"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

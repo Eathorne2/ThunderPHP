@@ -1,0 +1,20 @@
+{
+  "id": "quote-and-facts-story",
+  "name": "Quote and Facts Story",
+  "description": "An editorial content block combining narrative, quote and key facts.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Content",
+  "order": 8021,
+  "tags": [
+    "content",
+    "story",
+    "quote",
+    "facts"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,112 @@
+.dcs-she {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.dcs-she *, .dcs-she *::before, .dcs-she *::after {
+    box-sizing: border-box;
+}
+
+.dcs-she button, .dcs-she input, .dcs-she select, .dcs-she textarea {
+    font: inherit;
+}
+
+.dcs-she a {
+    color: inherit;
+}
+
+.dcs-she__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 2.75rem;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: 0.75rem;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dcs-she__button--quiet {
+    border-color: var(--thv-theme-border);
+    background: var(--thv-theme-surface);
+    color: var(--thv-theme-text);
+}
+
+.dcs-she__backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: color-mix(in srgb, var(--thv-theme-text) 68%, transparent);
+}
+
+.dcs-she__backdrop[hidden] {
+    display: none;
+}
+
+.dcs-she__dialog {
+    width: min(100%, 30rem);
+    padding: 1.5rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.35rem;
+    background: var(--thv-theme-surface);
+    box-shadow: 0 1.5rem 4rem color-mix(in srgb, var(--thv-theme-text) 22%, transparent);
+}
+
+.dcs-she__icon {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--thv-theme-warning) 18%, var(--thv-theme-surface));
+    color: var(--thv-theme-warning);
+    font-size: 1.35rem;
+    font-weight: 900;
+}
+
+.dcs-she__eyebrow {
+    margin: 1rem 0 0.25rem;
+    color: var(--thv-theme-primary);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.dcs-she__dialog h2 {
+    margin: 0;
+}
+
+.dcs-she__dialog > p:not(.dcs-she__eyebrow) {
+    color: var(--thv-theme-muted);
+    line-height: 1.6;
+}
+
+.dcs-she__details {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.65rem;
+    padding: 1rem;
+    border-radius: 0.9rem;
+    background: var(--thv-theme-surface-alt);
+}
+
+.dcs-she__details span {
+    color: var(--thv-theme-muted);
+}
+
+.dcs-she__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.65rem;
+    margin-top: 1.2rem;
+}

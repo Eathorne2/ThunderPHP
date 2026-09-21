@@ -1,0 +1,238 @@
+{
+  "slug": "food-seafood-feature",
+  "name": "Seafood Feature",
+  "category": "Food & Restaurant",
+  "description": "Coastal seafood story with large photo, catch note and booking action",
+  "keywords": [
+    "food",
+    "restaurant",
+    "seafood",
+    "fish",
+    "coastal"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-food-seafood\"><div class=\"tb-food-seafood__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}{{elements:catch}}{{elements:cta}}</div><div class=\"tb-food-seafood__visual\">{{elements:image}}</div></div>",
+  "css": ".tb-food-seafood{display:grid;grid-template-columns:.85fr 1.15fr;background:var(--tb-color-background);align-items:stretch}.tb-food-seafood__copy{padding:clamp(40px,7vw,96px);display:flex;flex-direction:column;justify-content:center}.tb-food-seafood__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:950;text-transform:uppercase;letter-spacing:.16em}.tb-food-seafood__title{margin:10px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(46px,6vw,76px)}.tb-food-seafood__text{color:var(--tb-color-muted);line-height:1.8}.tb-food-seafood__catch{display:block;margin:20px 0;color:var(--tb-color-secondary);font-weight:900}.tb-food-seafood__cta{align-self:flex-start;padding:12px 18px;background:var(--tb-color-primary);color:var(--tb-color-surface);text-decoration:none;font-weight:900}.tb-food-seafood__image{width:100%;height:100%;min-height:650px;object-fit:cover;display:block}@media(max-width:720px){.tb-food-seafood{grid-template-columns:1fr}.tb-food-seafood__image{min-height:380px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "From the water"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-food-seafood__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Seafood, simply handled"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<h2 class=\"tb-food-seafood__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A clean, ingredient-first approach to fish and shellfish, with preparations that change as the catch changes."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-food-seafood__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "catch",
+      "label": "Catch note",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Today’s catch · Ask your server"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-food-seafood__catch\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cta",
+      "label": "Menu button",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "View seafood menu",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-food-seafood__cta\" href=\"{{url}}\">{{text}}</a>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "image",
+      "label": "Seafood image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Seafood dish"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-food-seafood__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-food-seafood__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

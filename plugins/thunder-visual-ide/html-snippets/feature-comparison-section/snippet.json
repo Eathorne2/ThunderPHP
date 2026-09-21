@@ -1,0 +1,20 @@
+{
+  "id": "feature-comparison-section",
+  "name": "Feature Comparison Section",
+  "description": "A readable feature comparison for two service or product options.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Content",
+  "order": 8020,
+  "tags": [
+    "content",
+    "comparison",
+    "features",
+    "table"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

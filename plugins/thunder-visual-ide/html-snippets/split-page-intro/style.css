@@ -1,0 +1,55 @@
+.split-page-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(18rem, .65fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: end;
+    padding: clamp(1.5rem, 5vw, 4rem) 0;
+    border-block: 1px solid var(--thv-theme-border, #dbe4ef);
+    color: var(--thv-theme-text, #0f172a)
+}
+
+.split-page-intro__label {
+    color: var(--thv-theme-primary, #2563eb);
+    font-size: .75rem;
+    font-weight: 850;
+    letter-spacing: .1em;
+    text-transform: uppercase
+}
+
+.split-page-intro h1 {
+    max-width: 58rem;
+    margin: .8rem 0 0;
+    font-size: clamp(2.4rem, 6vw, 5.3rem);
+    line-height: .96
+}
+
+.split-page-intro__aside>p {
+    margin: 0;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: 1.05rem;
+    line-height: 1.7
+}
+
+.split-page-intro dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0 0
+}
+
+.split-page-intro dt {
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .7rem;
+    text-transform: uppercase
+}
+
+.split-page-intro dd {
+    margin: .3rem 0 0;
+    font-weight: 750
+}
+
+@media(max-width:760px) {
+    .split-page-intro {
+        grid-template-columns: 1fr
+    }
+}

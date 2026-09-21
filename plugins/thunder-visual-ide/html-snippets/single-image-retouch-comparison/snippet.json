@@ -1,0 +1,20 @@
+{
+  "id": "single-image-retouch-comparison",
+  "name": "Single Image Retouch Comparison",
+  "description": "A dedicated single-image comparison page for retouching, restoration or design revisions.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9109,
+  "tags": [
+    "single image",
+    "before after",
+    "retouch",
+    "comparison"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

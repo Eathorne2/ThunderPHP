@@ -1,0 +1,206 @@
+{
+  "slug": "medicine-medical-center-hero",
+  "name": "Medical Center Hero",
+  "category": "Medicine & Science",
+  "description": "Modern healthcare hero with appointment action",
+  "keywords": [
+    "hospital",
+    "clinic",
+    "doctor",
+    "hero"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-med-medical-center-hero\"><div class=\"tb-med-medical-center-hero__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}<div class=\"tb-med-medical-center-hero__actions\">{{elements:cta}}</div></div><div class=\"tb-med-medical-center-hero__media\">{{elements:image}}<div class=\"tb-med-medical-center-hero__badge\">24/7 care</div></div></section>",
+  "css": ".tb-med-medical-center-hero{display:grid;grid-template-columns:1fr 1fr;min-height:610px;background:var(--tb-color-surface);overflow:hidden}.tb-med-medical-center-hero__copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(38px,7vw,92px)}.tb-med-medical-center-hero__eyebrow{color:var(--tb-color-primary);font-weight:900;letter-spacing:.14em;text-transform:uppercase;font-size:12px}.tb-med-medical-center-hero__title{font-size:clamp(44px,6vw,76px);line-height:1;margin:14px 0 20px;color:var(--tb-color-secondary)}.tb-med-medical-center-hero__text{font-size:18px;line-height:1.75;color:var(--tb-color-muted);max-width:620px}.tb-med-medical-center-hero__cta{display:inline-block;margin-top:24px;padding:14px 20px;background:var(--tb-color-primary);color:var(--tb-color-surface);text-decoration:none;font-weight:900;border-radius:999px}.tb-med-medical-center-hero__media{position:relative}.tb-med-medical-center-hero__image{width:100%;height:100%;min-height:610px;object-fit:cover}.tb-med-medical-center-hero__badge{position:absolute;left:24px;bottom:24px;background:var(--tb-color-surface);color:var(--tb-color-secondary);padding:12px 18px;border-radius:999px;font-weight:900}@media(max-width:780px){.tb-med-medical-center-hero{grid-template-columns:1fr}.tb-med-medical-center-hero__image{min-height:390px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Compassion meets expertise"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-med-medical-center-hero__eyebrow\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Care designed around you"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-med-medical-center-hero__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "A reassuring medical-center introduction for primary care, diagnostics, specialists and coordinated patient support."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-med-medical-center-hero__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "cta",
+      "label": "Action",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Book an appointment",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-med-medical-center-hero__cta\" href=\"{{url}}\">{{text}}</a>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "image",
+      "label": "Hero image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Modern medical center"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-med-medical-center-hero__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-med-medical-center-hero__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

@@ -1,0 +1,142 @@
+.wvtc {
+    padding: clamp(2rem, 6vw, 5rem);
+    border-radius: 1.5rem;
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-surface);
+}
+
+.wvtc *,
+.wvtc *::before,
+.wvtc *::after {
+    box-sizing: border-box;
+}
+
+.wvtc a {
+    color: inherit;
+}
+
+.wvtc header {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: end;
+    margin-bottom: 2.4rem;
+}
+
+.wvtc header p {
+    margin: 0;
+    color: var(--thv-theme-primary);
+    font-size: .7rem;
+    font-weight: 900;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.wvtc header h2 {
+    max-width: 15ch;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: 1;
+}
+
+.wvtc__grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr .8fr;
+    gap: 1rem;
+}
+
+.wvtc__card {
+    position: relative;
+    display: flex;
+    min-height: 28rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-text) 13%, transparent);
+    border-radius: 1rem;
+    background: color-mix(in srgb, var(--thv-theme-secondary) 14%, var(--thv-theme-surface));
+}
+
+.wvtc__card--accent {
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+}
+
+.wvtc__card--image {
+    color: var(--thv-theme-on-primary);
+}
+
+.wvtc__card--image::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 35%, color-mix(in srgb, var(--thv-theme-text) 78%, transparent));
+    content: "";
+}
+
+.wvtc__card--image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wvtc__card > *:not(img) {
+    position: relative;
+    z-index: 1;
+}
+
+.wvtc__icon {
+    position: absolute;
+    top: 1.3rem;
+    right: 1.3rem;
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    place-items: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.wvtc small,
+.wvtc__card--image span {
+    font-size: .65rem;
+    font-weight: 900;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.wvtc h3 {
+    margin: .65rem 0;
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.wvtc__card p {
+    margin: 0 0 1.2rem;
+    line-height: 1.65;
+    opacity: .78;
+}
+
+.wvtc__card a {
+    font-size: .72rem;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+    .wvtc__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wvtc__card {
+        min-height: 22rem;
+    }
+}

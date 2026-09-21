@@ -1,0 +1,26 @@
+<section class="podcast-player" data-media-player>
+    <header class="podcast-player__header">
+        <img src="https://picsum.photos/id/1062/300/300" alt="Podcast cover artwork">
+        <div>
+            <p class="podcast-player__show">The Better Systems Podcast</p>
+            <h2>Designing software around real working days</h2>
+            <p>Episode 42 · 38 minutes</p>
+        </div>
+        <button type="button" data-follow-podcast>Follow show</button>
+    </header>
+
+    <audio preload="metadata" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+
+    <div class="podcast-player__controls">
+        <button class="is-primary" type="button" data-media-play>Play</button>
+        <button type="button" data-skip-back>−15s</button>
+        <input type="range" min="0" max="100" value="0" step="0.1" aria-label="Episode progress" data-media-progress>
+        <span data-media-time>0:00 / 0:00</span>
+        <button type="button" data-media-mute>Mute</button>
+    </div>
+
+    <details class="podcast-player__notes">
+        <summary>Episode notes</summary>
+        <p>A practical conversation about observing real workflows, reducing unnecessary status changes, and choosing useful operating metrics.</p>
+    </details>
+</section>

@@ -1,0 +1,18 @@
+{
+  "id": "wedding-menu-preview",
+  "name": "Wedding Menu Preview",
+  "description": "An editorial reception-menu section with selectable courses and dietary notes.",
+  "category": "Wedding",
+  "order": 4630,
+  "tags": [
+    "wedding",
+    "menu",
+    "reception",
+    "food",
+    "dinner"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

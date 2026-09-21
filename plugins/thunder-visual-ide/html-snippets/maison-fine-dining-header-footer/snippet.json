@@ -1,0 +1,18 @@
+{
+  "id": "maison-fine-dining-header-footer",
+  "name": "Maison Fine Dining Header and Footer",
+  "description": "An elegant restaurant shell with a reservation-led menu, refined serif typography and a coordinated multi-column footer.",
+  "category": "Food & Restaurant",
+  "order": 3800,
+  "tags": [
+    "header footer",
+    "fine dining",
+    "restaurant",
+    "menu",
+    "reservation"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

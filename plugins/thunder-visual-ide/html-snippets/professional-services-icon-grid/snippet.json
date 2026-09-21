@@ -1,0 +1,18 @@
+{
+  "id": "professional-services-icon-grid",
+  "name": "Professional Services Icon Grid",
+  "description": "A clean professional-services grid with compact line icons, service details and contact action.",
+  "category": "Icon Grids",
+  "order": 3450,
+  "tags": [
+    "professional",
+    "services",
+    "corporate",
+    "icons",
+    "business"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,55 @@
+{
+  "type": "data.hook_argument",
+  "label": "Hook Data Argument",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "$in",
+  "color": "#1d4ed8",
+  "description": "Outputs the data argument supplied to the current Controller Hook callback, using that controller's configured variable name.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Hook Data",
+    "path": "",
+    "path_mode": "object"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "path",
+      "label": "Property / key path",
+      "type": "text",
+      "help": "Optional dot-separated path, for example user.email or settings.theme."
+    },
+    {
+      "name": "path_mode",
+      "label": "Path mode",
+      "type": "select",
+      "options": [
+        "object",
+        "array"
+      ]
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Hook Data",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\HookArgumentCompiler",
+    "file": "Compiler.php"
+  }
+}

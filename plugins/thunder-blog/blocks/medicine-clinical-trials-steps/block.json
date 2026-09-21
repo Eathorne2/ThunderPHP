@@ -1,0 +1,197 @@
+{
+  "slug": "medicine-clinical-trials-steps",
+  "name": "Clinical Trial Steps",
+  "category": "Medicine & Science",
+  "description": "Four-step clinical research participation flow",
+  "keywords": [
+    "clinical trials",
+    "research",
+    "process"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-med-clinical-trials-steps\"><header>{{elements:eyebrow}}{{elements:title}}{{elements:text}}</header><div class=\"tb-med-clinical-trials-steps__grid\">{{elements:steps}}</div></section>",
+  "css": ".tb-med-clinical-trials-steps{padding:clamp(42px,7vw,88px);background:var(--tb-color-secondary);color:var(--tb-color-surface)}.tb-med-clinical-trials-steps header{max-width:780px;margin-bottom:34px}.tb-med-clinical-trials-steps__eyebrow{color:var(--tb-color-accent);font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:900}.tb-med-clinical-trials-steps__title{font-size:clamp(38px,5vw,62px);margin:10px 0 14px}.tb-med-clinical-trials-steps__text{line-height:1.7;opacity:.82}.tb-med-clinical-trials-steps__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:color-mix(in srgb,var(--tb-color-surface) 25%,transparent)}.tb-med-clinical-trials-steps__step{padding:26px;background:var(--tb-color-secondary)}.tb-med-clinical-trials-steps__step__number{font-size:34px;color:var(--tb-color-accent)}.tb-med-clinical-trials-steps__step__title{font-size:20px;margin:16px 0 8px}.tb-med-clinical-trials-steps__step__text{opacity:.76;line-height:1.65}@media(max-width:800px){.tb-med-clinical-trials-steps__grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.tb-med-clinical-trials-steps__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Clinical research"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-med-clinical-trials-steps__eyebrow\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "How participation works"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-med-clinical-trials-steps__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "A straightforward process block for clinical trials, research studies or participant onboarding."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-med-clinical-trials-steps__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "steps",
+      "label": "Steps",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "number": "",
+        "title": "",
+        "text": ""
+      },
+      "schema": [
+        {
+          "key": "number",
+          "label": "Number",
+          "type": "text",
+          "selector": ".tb-med-clinical-trials-steps__step__number"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-med-clinical-trials-steps__step__title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-med-clinical-trials-steps__step__text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-med-clinical-trials-steps__step\"><strong class=\"tb-med-clinical-trials-steps__step__number\">{{number}}</strong><h3 class=\"tb-med-clinical-trials-steps__step__title\">{{title}}</h3><p class=\"tb-med-clinical-trials-steps__step__text\">{{text}}</p></article>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "number": "01",
+          "title": "Screening",
+          "text": "Confirm eligibility and answer participant questions."
+        },
+        {
+          "number": "02",
+          "title": "Enrollment",
+          "text": "Review consent and establish the study baseline."
+        },
+        {
+          "number": "03",
+          "title": "Study visits",
+          "text": "Follow the protocol with scheduled assessments."
+        },
+        {
+          "number": "04",
+          "title": "Follow-up",
+          "text": "Track outcomes and close the study safely."
+        }
+      ],
+      "min": 1,
+      "max": 12
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

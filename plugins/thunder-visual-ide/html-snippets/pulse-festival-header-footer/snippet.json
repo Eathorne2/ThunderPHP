@@ -1,0 +1,18 @@
+{
+  "id": "pulse-festival-header-footer",
+  "name": "Pulse Festival Header and Footer",
+  "description": "A vibrant festival shell with ticket-first navigation, bold event branding and a coordinated information footer.",
+  "category": "Music & Entertainment",
+  "order": 4410,
+  "tags": [
+    "festival",
+    "header",
+    "footer",
+    "tickets",
+    "events"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "wedding-planner-services",
+  "name": "Wedding Planner Services",
+  "description": "A luxury service overview for full planning, partial planning and wedding-day coordination.",
+  "category": "Wedding",
+  "order": 4650,
+  "tags": [
+    "wedding",
+    "planner",
+    "services",
+    "agency",
+    "coordination"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

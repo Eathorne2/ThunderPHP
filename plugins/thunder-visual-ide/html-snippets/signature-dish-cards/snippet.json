@@ -1,0 +1,18 @@
+{
+  "id": "signature-dish-cards",
+  "name": "Signature Dish Cards",
+  "description": "A three-card culinary showcase with strong food photography, ingredient notes and restaurant-style pricing.",
+  "category": "Food & Restaurant",
+  "order": 3640,
+  "tags": [
+    "dish cards",
+    "menu",
+    "restaurant",
+    "food photography",
+    "cards"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

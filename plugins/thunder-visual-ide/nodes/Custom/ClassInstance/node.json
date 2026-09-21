@@ -1,0 +1,67 @@
+{
+  "type": "custom.class_instance",
+  "label": "New Class Instance",
+  "category": "Custom",
+  "kind": "flow",
+  "icon": "new",
+  "color": "#6d28d9",
+  "description": "Creates an object from a Class Definition. Constructor parameter ports follow __construct().",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "dynamic_ports": "class_constructor",
+  "defaults": {
+    "title": "New Class",
+    "class_node_id": "",
+    "result_variable": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "result_variable",
+      "label": "Result variable",
+      "type": "text",
+      "help": "Optional PHP variable name. Omit the $ sign. Leave blank to use the automatic node-specific name."
+    },
+    {
+      "name": "class_node_id",
+      "label": "Class",
+      "type": "class_ref"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      },
+      {
+        "id": "object",
+        "label": "Object",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Custom\\ClassInstanceCompiler",
+    "file": "Compiler.php"
+  }
+}

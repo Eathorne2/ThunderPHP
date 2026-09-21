@@ -1,0 +1,40 @@
+<div class="docs-sidebar-layout" data-docs-layout>
+    <aside class="docs-sidebar-layout__sidebar">
+        <p>On this page</p>
+        <nav aria-label="Table of contents">
+            <a class="is-active" href="#docs-overview">Overview</a>
+            <a href="#docs-installation">Installation</a>
+            <a href="#docs-configuration">Configuration</a>
+            <a href="#docs-examples">Examples</a>
+        </nav>
+    </aside>
+
+    <main class="docs-sidebar-layout__content">
+        <section id="docs-overview" data-doc-section>
+            <p class="docs-sidebar-layout__eyebrow">Guide</p>
+            <h1>Build a reusable plugin workflow</h1>
+            <p>This layout keeps the documentation index visible while readers move through long technical content.</p>
+        </section>
+
+        <section id="docs-installation" data-doc-section>
+            <h2>Installation</h2>
+            <p>Copy the plugin into your application, activate it, and run any migrations required by the project.</p>
+            <pre><code>thunder migrate all</code></pre>
+        </section>
+
+        <section id="docs-configuration" data-doc-section>
+            <h2>Configuration</h2>
+            <p>Update the plugin metadata, route definitions, active look, and permissions before deployment.</p>
+            <ul>
+                <li>Choose a unique plugin identifier.</li>
+                <li>Define only the routes the plugin needs.</li>
+                <li>Keep permissions grouped by responsibility.</li>
+            </ul>
+        </section>
+
+        <section id="docs-examples" data-doc-section>
+            <h2>Examples</h2>
+            <p>Add practical examples that show generated output, expected input, and common integration patterns.</p>
+        </section>
+    </main>
+</div>

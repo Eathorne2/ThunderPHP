@@ -1,0 +1,195 @@
+{
+  "slug": "edu-school-life-gallery",
+  "name": "Our School Life Gallery",
+  "category": "Education",
+  "description": "Editorial school-life photo mosaic with captions",
+  "keywords": [
+    "education",
+    "school",
+    "gallery",
+    "students"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-edu-school-life\"><div class=\"tb-edu-school-life__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-edu-school-life__grid\">{{elements:photos}}</div></div>",
+  "css": ".tb-edu-school-life{padding:clamp(34px,6vw,76px);background:var(--tb-color-surface)}.tb-edu-school-life__head{max-width:780px;margin-bottom:28px}.tb-edu-school-life__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}.tb-edu-school-life__title{margin:8px 0;color:var(--tb-color-secondary);font-size:clamp(40px,5vw,60px)}.tb-edu-school-life__text{color:var(--tb-color-muted);line-height:1.7}.tb-edu-school-life__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.tb-edu-school-life__item{position:relative;min-height:300px;overflow:hidden}.tb-edu-school-life__photo{width:100%;height:100%;min-height:300px;object-fit:cover;transition:transform .3s ease}.tb-edu-school-life__item:hover .tb-edu-school-life__photo{transform:scale(1.03)}.tb-edu-school-life__caption{position:absolute;left:16px;bottom:16px;padding:8px 11px;background:var(--tb-color-surface);color:var(--tb-color-text);font-weight:900}@media(max-width:650px){.tb-edu-school-life__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Campus life"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-edu-school-life__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Learning happens everywhere"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-edu-school-life__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Show classrooms, clubs, events, libraries and everyday school moments."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-edu-school-life__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "photos",
+      "label": "Gallery photo",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1400&q=82",
+        "alt": "School building",
+        "caption": "A place to belong"
+      },
+      "schema": [
+        {
+          "key": "image",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-edu-school-life__photo"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        },
+        {
+          "key": "caption",
+          "label": "Caption",
+          "type": "text",
+          "selector": ".tb-edu-school-life__caption"
+        }
+      ],
+      "template": "<figure class=\"tb-edu-school-life__item\"><img class=\"tb-edu-school-life__photo\" src=\"{{image}}\" alt=\"{{alt}}\"><figcaption class=\"tb-edu-school-life__caption\">{{caption}}</figcaption></figure>",
+      "min": 1,
+      "max": 12,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1400&q=82",
+          "alt": "School building",
+          "caption": "A place to belong"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Students together",
+          "caption": "Learning together"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Science lesson",
+          "caption": "Curiosity in action"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Library books",
+          "caption": "Room to explore"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "empty-state-feedback",
+  "name": "Empty State Feedback",
+  "description": "A friendly empty-state panel that invites users to suggest an improvement.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Feedback",
+  "order": 8027,
+  "tags": [
+    "feedback",
+    "empty state",
+    "suggestion",
+    "message"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

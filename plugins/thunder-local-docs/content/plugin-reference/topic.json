@@ -1,0 +1,11 @@
+{
+    "id": 7,
+    "title": "Plugin Reference",
+    "slug": "plugin-reference",
+    "description": "Learn how plugin development works",
+    "icon": "",
+    "type": "reference",
+    "featured": false,
+    "published": true,
+    "order": 6
+}

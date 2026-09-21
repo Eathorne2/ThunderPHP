@@ -1,0 +1,18 @@
+{
+  "id": "couple-story-timeline",
+  "name": "Couple Story Timeline",
+  "description": "A photo-led relationship timeline for sharing milestones from the first meeting to the proposal.",
+  "category": "Wedding",
+  "order": 4530,
+  "tags": [
+    "wedding",
+    "couple story",
+    "timeline",
+    "photos",
+    "proposal"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

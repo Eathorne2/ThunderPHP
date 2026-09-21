@@ -1,0 +1,49 @@
+.uct-tabs {
+    font-family: system-ui, sans-serif;
+    color: var(--thv-theme-text, #0f172a)
+}
+
+.uct-tabs__list {
+    display: flex;
+    gap: 1.2rem;
+    border-bottom: 1px solid var(--thv-theme-border, #dbe4ef)
+}
+
+.uct-tabs__list button {
+    position: relative;
+    padding: .7rem .1rem;
+    border: 0;
+    background: none;
+    color: var(--thv-theme-muted, #64748b);
+    font-weight: 800;
+    cursor: pointer
+}
+
+.uct-tabs__list button.is-active {
+    color: var(--thv-theme-primary, #2563eb)
+}
+
+.uct-tabs__list button.is-active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: var(--thv-theme-primary, #2563eb)
+}
+
+.uct-tabs__panel {
+    padding: 1rem 0
+}
+
+.uct-tabs__panel h3 {
+    margin: 0 0 .35rem
+}
+
+.uct-tabs__panel p {
+    margin: 0;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .83rem;
+    line-height: 1.5
+}

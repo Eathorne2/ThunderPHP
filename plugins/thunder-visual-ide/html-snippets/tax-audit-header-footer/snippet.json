@@ -1,0 +1,19 @@
+{
+  "id": "tax-audit-header-footer",
+  "name": "Tax and Audit Header and Footer",
+  "description": "Integrated tax, assurance and legal support for growing organisations.",
+  "category": "Business & Law",
+  "order": 5406,
+  "tags": [
+    "header",
+    "footer",
+    "business",
+    "law",
+    "navigation",
+    "tax advisory"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

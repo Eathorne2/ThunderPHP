@@ -1,0 +1,20 @@
+{
+  "id": "underline-content-tabs",
+  "name": "Underline Content Tabs",
+  "description": "Accessible underline tabs for switching compact content panels.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Navigation - Tabs",
+  "order": 2900,
+  "tags": [
+    "navigation",
+    "tabs",
+    "underline",
+    "accessible"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

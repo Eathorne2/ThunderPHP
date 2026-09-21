@@ -1,0 +1,231 @@
+{
+  "slug": "medicine-diagnostics-panel",
+  "name": "Diagnostic Medicine Panel",
+  "category": "Medicine & Science",
+  "description": "Diagnostic capabilities overview",
+  "keywords": [
+    "diagnostics",
+    "medical",
+    "testing"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-med-diagnostics-panel\"><div class=\"tb-med-diagnostics-panel__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-med-diagnostics-panel__split\">{{elements:image}}<div class=\"tb-med-diagnostics-panel__grid\">{{elements:items}}</div></div></section>",
+  "css": ".tb-med-diagnostics-panel{padding:clamp(42px,7vw,88px);background:var(--tb-color-background)}.tb-med-diagnostics-panel__head{max-width:780px;margin-bottom:34px}.tb-med-diagnostics-panel__eyebrow{display:block;color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.tb-med-diagnostics-panel__title{font-size:clamp(36px,5vw,60px);line-height:1.05;margin:10px 0 14px;color:var(--tb-color-secondary)}.tb-med-diagnostics-panel__text{color:var(--tb-color-muted);font-size:17px;line-height:1.7}.tb-med-diagnostics-panel__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.tb-med-diagnostics-panel__card{padding:26px;background:var(--tb-color-surface);border:1px solid var(--tb-color-border);border-radius:16px}.tb-med-diagnostics-panel__card__icon{font-size:24px;color:var(--tb-color-primary)}.tb-med-diagnostics-panel__card__title{font-size:20px;margin:14px 0 8px;color:var(--tb-color-secondary)}.tb-med-diagnostics-panel__card__text{margin:0;color:var(--tb-color-muted);line-height:1.65}.tb-med-diagnostics-panel__split{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;align-items:stretch}.tb-med-diagnostics-panel__image{width:100%;height:100%;min-height:420px;object-fit:cover;border-radius:18px}@media(max-width:900px){.tb-med-diagnostics-panel__grid{grid-template-columns:repeat(2,1fr)}.tb-med-diagnostics-panel__split{grid-template-columns:1fr}}@media(max-width:560px){.tb-med-diagnostics-panel__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Diagnostics"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-med-diagnostics-panel__eyebrow\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Faster answers. Clearer decisions."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-med-diagnostics-panel__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "text",
+      "label": "Introduction",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Diagnostic capabilities overview"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-med-diagnostics-panel__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "image",
+      "label": "Feature image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Diagnostic Medicine Panel"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-med-diagnostics-panel__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-med-diagnostics-panel__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "items",
+      "label": "Items",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "title": "",
+        "text": "",
+        "icon": "✦"
+      },
+      "schema": [
+        {
+          "key": "icon",
+          "label": "Icon",
+          "type": "text",
+          "selector": ".tb-med-diagnostics-panel__card__icon"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-med-diagnostics-panel__card__title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-med-diagnostics-panel__card__text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-med-diagnostics-panel__card\"><span class=\"tb-med-diagnostics-panel__card__icon\">{{icon}}</span><h3 class=\"tb-med-diagnostics-panel__card__title\">{{title}}</h3><p class=\"tb-med-diagnostics-panel__card__text\">{{text}}</p></article>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "icon": "◉",
+          "title": "Imaging",
+          "text": "Modern diagnostic imaging pathways."
+        },
+        {
+          "icon": "▦",
+          "title": "Laboratory",
+          "text": "Integrated specimen and blood testing."
+        },
+        {
+          "icon": "⌁",
+          "title": "Monitoring",
+          "text": "Follow-up tools for ongoing health tracking."
+        }
+      ],
+      "min": 1,
+      "max": 12
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

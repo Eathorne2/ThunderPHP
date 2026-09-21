@@ -1,0 +1,74 @@
+{
+  "type": "hooks.filter",
+  "label": "Run Filter Hook",
+  "category": "Hooks",
+  "kind": "flow",
+  "icon": "FLT",
+  "color": "#7e22ce",
+  "description": "Runs a ThunderPHP filter with do_filter() and exposes the filtered result.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Run Filter Hook",
+    "hook_name": "plugin_data",
+    "result_variable": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "result_variable",
+      "label": "Result variable",
+      "type": "text",
+      "help": "Optional PHP variable name. Omit the $ sign. Leave blank to use the automatic node-specific name."
+    },
+    {
+      "name": "hook_name",
+      "label": "Hook name",
+      "type": "text",
+      "help": "The public hook name other plugins will register with add_filter()."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "data",
+        "label": "Data",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      },
+      {
+        "id": "value",
+        "label": "Filtered Value",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Hooks\\FilterCompiler",
+    "file": "Compiler.php"
+  }
+}

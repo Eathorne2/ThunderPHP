@@ -1,0 +1,97 @@
+{
+  "type": "pagination.pager",
+  "label": "Create Pager",
+  "category": "Pagination",
+  "kind": "flow",
+  "icon": "PG",
+  "color": "#1d4ed8",
+  "description": "Creates Core\\Pager and exposes its object, limit, offset and current page.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Create Pager",
+    "items_per_page": 20,
+    "extra_links": 2,
+    "result_variable": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "result_variable",
+      "label": "Result variable",
+      "type": "text",
+      "help": "Optional PHP variable name. Omit the $ sign. Leave blank to use the automatic node-specific name."
+    },
+    {
+      "name": "items_per_page",
+      "label": "Items per page",
+      "type": "number"
+    },
+    {
+      "name": "extra_links",
+      "label": "Extra page links",
+      "type": "number"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Previous",
+        "type": "exec",
+        "direction": "in"
+      },
+      {
+        "id": "total_rows",
+        "label": "Total Rows",
+        "type": "number",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out"
+      },
+      {
+        "id": "pager",
+        "label": "Pager",
+        "type": "object",
+        "direction": "out",
+        "multiple": true
+      },
+      {
+        "id": "limit",
+        "label": "Limit",
+        "type": "number",
+        "direction": "out",
+        "multiple": true
+      },
+      {
+        "id": "offset",
+        "label": "Offset",
+        "type": "number",
+        "direction": "out",
+        "multiple": true
+      },
+      {
+        "id": "current_page",
+        "label": "Current Page",
+        "type": "number",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Pagination\\PagerCompiler",
+    "file": "Compiler.php"
+  }
+}

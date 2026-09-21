@@ -1,0 +1,649 @@
+{
+  "type": "request.method",
+  "label": "Request Method",
+  "category": "Request",
+  "kind": "flow",
+  "icon": "REQ()",
+  "color": "#0284c7",
+  "description": "Calls a documented method on the shared ThunderPHP Core\\Request object.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "dynamic_ports": "request_method",
+  "defaults": {
+    "title": "Request Method",
+    "method": "post",
+    "result_variable": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "result_variable",
+      "label": "Result variable",
+      "type": "text",
+      "help": "Optional PHP variable name. Omit the $ sign. Leave blank to use the automatic node-specific name."
+    },
+    {
+      "name": "method",
+      "label": "Method",
+      "type": "select",
+      "options": [
+        "method",
+        "posted",
+        "is_get",
+        "is_ajax",
+        "post",
+        "input",
+        "get",
+        "all",
+        "has_post",
+        "has_get",
+        "has_file",
+        "files",
+        "set_upload_folder",
+        "set_upload_max_size",
+        "set_upload_file_types",
+        "set_upload_extensions",
+        "set_file_prefix",
+        "set_verify_images",
+        "set_image_dimensions",
+        "set_upload_rule",
+        "get_upload_rule",
+        "set_filename_callback",
+        "upload_files",
+        "upload_files_detailed",
+        "has_upload_errors",
+        "get_upload_errors",
+        "get_upload_error_code",
+        "clear_upload_errors",
+        "ip",
+        "uri",
+        "server",
+        "header"
+      ],
+      "help": "Selecting a method rebuilds the parameter connectors and updates the Result connector type from the documented signature."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Previous",
+        "type": "exec",
+        "direction": "in"
+      },
+      {
+        "id": "request",
+        "label": "Request",
+        "type": "object",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out"
+      },
+      {
+        "id": "result",
+        "label": "Result",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": true
+      },
+      {
+        "id": "request",
+        "label": "Request",
+        "type": "object",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "methods": [
+    {
+      "name": "method",
+      "label": "Request Method",
+      "return_type": "string",
+      "params": [],
+      "group": "Request State",
+      "description": "Returns the current HTTP request method as an uppercase string such as GET, POST, PUT, or DELETE.",
+      "help": "Returns the current HTTP request method as an uppercase string such as GET, POST, PUT, or DELETE.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\necho $req->method(); // GET, POST, PUT, DELETE etc\n```\n\n### Notes\n\n- Use this when a controller needs to distinguish GET, POST, PUT, DELETE, or another HTTP method.",
+      "chainable": false
+    },
+    {
+      "name": "posted",
+      "label": "Is POST Request",
+      "return_type": "bool",
+      "params": [],
+      "group": "Request State",
+      "description": "Returns true only when the current HTTP request method is POST.",
+      "help": "Returns true only when the current HTTP request method is POST.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\n\nif ($req->posted()) {\n    echo 'Form submitted';\n}\n```\n\n### Notes\n\n- This is a convenience check for POST submissions.",
+      "chainable": false
+    },
+    {
+      "name": "is_get",
+      "label": "Is GET Request",
+      "return_type": "bool",
+      "params": [],
+      "group": "Request State",
+      "description": "Returns true when the current HTTP request method is GET.",
+      "help": "Returns true when the current HTTP request method is GET.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\n\nif ($req->is_get()) {\n    echo 'Page loaded normally';\n}\n```\n\n### Notes\n\n- Useful for separating normal page loads from submitted forms.",
+      "chainable": false
+    },
+    {
+      "name": "is_ajax",
+      "label": "Is AJAX Request",
+      "return_type": "bool",
+      "params": [],
+      "group": "Request State",
+      "description": "Detects AJAX requests by inspecting the HTTP_X_REQUESTED_WITH header.",
+      "help": "Detects AJAX requests by inspecting the HTTP_X_REQUESTED_WITH header.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\n\nif ($req->is_ajax()) {\n    echo 'AJAX request detected';\n}\n```\n\n### Notes\n\n- Detection depends on the `HTTP_X_REQUESTED_WITH` header.",
+      "chainable": false
+    },
+    {
+      "name": "post",
+      "label": "Read POST Value",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "?string",
+          "default": "null"
+        },
+        {
+          "name": "default",
+          "label": "Default",
+          "type": "mixed",
+          "default": "null"
+        }
+      ],
+      "group": "Request Input",
+      "description": "Reads one POST value with a fallback, or returns the full POST array when no key is supplied.",
+      "help": "Reads one POST value with a fallback, or returns the full POST array when no key is supplied.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\n\n$name = $req->post('name');\n$status = $req->post('status', 1);\n$all_posted = $req->post();\n```\n\n### Notes\n\n- Calling without a key returns the complete POST array.\n- Key-existence checks preserve valid values such as `0` and `'0'` instead of treating them as missing.",
+      "chainable": false
+    },
+    {
+      "name": "input",
+      "label": "Read Input Value",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "?string",
+          "default": "null"
+        },
+        {
+          "name": "default",
+          "label": "Default",
+          "type": "mixed",
+          "default": "null"
+        }
+      ],
+      "group": "Request Input",
+      "description": "Convenience alias for reading posted input with a default fallback.",
+      "help": "Convenience alias for reading posted input with a default fallback.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\n\n$email = $req->input('email');\n$role = $req->input('role', 'user');\n```\n\n### Notes\n\n- This is an alias for posted input rather than a combined GET/POST lookup.\n- It preserves valid zero values.",
+      "chainable": false
+    },
+    {
+      "name": "get",
+      "label": "Read GET Value",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "?string",
+          "default": "null"
+        },
+        {
+          "name": "default",
+          "label": "Default",
+          "type": "mixed",
+          "default": "null"
+        }
+      ],
+      "group": "Request Input",
+      "description": "Reads one query-string value with a fallback, or returns the full GET array when no key is supplied.",
+      "help": "Reads one query-string value with a fallback, or returns the full GET array when no key is supplied.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\n\n$page = (int) $req->get('page', 1);\n$sort = $req->get('sort', 'latest');\n$keyword = trim($req->get('q', ''));\n```\n\n### Notes\n\n- Calling without a key returns the complete GET array.\n- Common uses include pagination, filters, search terms, and sorting.\n- Valid zero values are preserved.",
+      "chainable": false
+    },
+    {
+      "name": "all",
+      "label": "Read All Request Data",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "?string",
+          "default": "null"
+        },
+        {
+          "name": "default",
+          "label": "Default",
+          "type": "mixed",
+          "default": "null"
+        }
+      ],
+      "group": "Request Input",
+      "description": "Reads one value or the complete data set from REQUEST.",
+      "help": "Reads one value or the complete data set from REQUEST.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\n\n$data = $req->all();\n$tab = $req->all('tab', 'general');\n```\n\n### Notes\n\n- Reads from `$_REQUEST`, which may combine GET, POST, and, depending on PHP configuration, cookies.\n- Prefer `post()` or `get()` when the expected source is known so controller behavior remains explicit.",
+      "chainable": false
+    },
+    {
+      "name": "has_post",
+      "label": "Has POST Key",
+      "return_type": "bool",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "string",
+          "default": "''"
+        }
+      ],
+      "group": "Request Input",
+      "description": "Checks whether a POST key exists without treating valid zero values as missing.",
+      "help": "Checks whether a POST key exists without treating valid zero values as missing.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\n\nif ($req->has_post('email')) {\n    echo 'Email field was submitted';\n}\n```\n\n### Notes\n\n- This checks whether the key exists, not whether its value is non-empty.",
+      "chainable": false
+    },
+    {
+      "name": "has_get",
+      "label": "Has GET Key",
+      "return_type": "bool",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "string",
+          "default": "''"
+        }
+      ],
+      "group": "Request Input",
+      "description": "Checks whether a GET key exists without treating valid zero values as missing.",
+      "help": "Checks whether a GET key exists without treating valid zero values as missing.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\n\nif ($req->has_get('page')) {\n    echo 'Page parameter exists';\n}\n```\n\n### Notes\n\n- This checks whether the key exists, not whether its value is non-empty.",
+      "chainable": false
+    },
+    {
+      "name": "has_file",
+      "label": "Has Uploaded File",
+      "return_type": "bool",
+      "params": [
+        {
+          "name": "key",
+          "label": "Field",
+          "type": "string",
+          "default": "''"
+        }
+      ],
+      "group": "Uploaded Files",
+      "description": "Checks whether a single or array-style file input contains at least one uploaded file.",
+      "help": "Checks whether a single or array-style file input contains at least one uploaded file.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\n\nif ($req->has_file('photos')) {\n    echo 'At least one photo exists';\n}\n```\n\n### Notes\n\n- A FILES entry does not always mean the user selected a file; this helper checks the upload content.\n- It also supports inputs such as `photos[]`.",
+      "chainable": false
+    },
+    {
+      "name": "files",
+      "label": "Read Uploaded Files",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "key",
+          "label": "Field",
+          "type": "?string",
+          "default": "null"
+        }
+      ],
+      "group": "Uploaded Files",
+      "description": "Returns raw uploaded-file data from FILES for one field or all fields.",
+      "help": "Returns raw uploaded-file data from FILES for one field or all fields.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\n\n$avatar = $req->files('avatar');\n$all_files = $req->files();\n```\n\n### Notes\n\n- This exposes PHP file-array data before upload processing.\n- Single and multiple file inputs have different raw shapes; the upload processor normalizes them internally.",
+      "chainable": false
+    },
+    {
+      "name": "set_upload_folder",
+      "label": "Set Upload Folder",
+      "return_type": "object",
+      "params": [
+        {
+          "name": "folder",
+          "label": "Folder",
+          "type": "string",
+          "default": "''"
+        }
+      ],
+      "group": "Upload Configuration",
+      "description": "Sets the default destination folder used by uploaded fields that do not override it with a field rule.",
+      "help": "Sets the default destination folder used by uploaded fields that do not override it with a field rule.\n\n### Example\n\n```php\n$req->set_upload_folder('uploads/users');\n```\n\n### Notes\n\n- All upload setters return the current Request object and can be chained.\n- A per-field `folder` rule overrides this global value.",
+      "chainable": true
+    },
+    {
+      "name": "set_upload_max_size",
+      "label": "Set Upload Max Size",
+      "return_type": "object",
+      "params": [
+        {
+          "name": "max_size",
+          "label": "Max Size (MB)",
+          "type": "int|float",
+          "default": "5"
+        }
+      ],
+      "group": "Upload Configuration",
+      "description": "Sets the default maximum upload size and returns the Request object for chaining.",
+      "help": "Sets the default maximum upload size and returns the Request object for chaining.\n\n### Example\n\n```php\n$req->set_upload_max_size(5);\n```\n\n### Notes\n\n- Per-field `max_size` overrides this global value.\n- Keep limits appropriate for the field and server configuration.",
+      "chainable": true
+    },
+    {
+      "name": "set_upload_file_types",
+      "label": "Set Allowed MIME Types",
+      "return_type": "object",
+      "params": [
+        {
+          "name": "types",
+          "label": "MIME Types",
+          "type": "array",
+          "default": "[]"
+        }
+      ],
+      "group": "Upload Configuration",
+      "description": "Sets the allowed MIME types used by global upload validation.",
+      "help": "Sets the allowed MIME types used by global upload validation.\n\n### Example\n\n```php\n$req->set_upload_file_types([\n    'image/jpeg',\n    'image/png',\n    'image/webp',\n]);\n```\n\n### Notes\n\n- MIME type is detected from the temporary file using `finfo_file()` or `mime_content_type()`.\n- Validate MIME type and extension together.\n- `any` is supported but should be used very carefully, especially for public uploads.",
+      "chainable": true
+    },
+    {
+      "name": "set_upload_extensions",
+      "label": "Set Allowed Extensions",
+      "return_type": "object",
+      "params": [
+        {
+          "name": "extensions",
+          "label": "Extensions",
+          "type": "array",
+          "default": "[]"
+        }
+      ],
+      "group": "Upload Configuration",
+      "description": "Sets the allowed original filename extensions used by global upload validation.",
+      "help": "Sets the allowed original filename extensions used by global upload validation.\n\n### Example\n\n```php\n$req->set_upload_extensions([\n    'jpg',\n    'jpeg',\n    'png',\n    'webp',\n]);\n```\n\n### Notes\n\n- Extensions are checked from the original filename.\n- Validate extensions together with real MIME types.\n- Avoid `any` unless the workflow is controlled.",
+      "chainable": true
+    },
+    {
+      "name": "set_file_prefix",
+      "label": "Set Filename Prefix",
+      "return_type": "object",
+      "params": [
+        {
+          "name": "prefix",
+          "label": "Prefix",
+          "type": "string",
+          "default": "''"
+        }
+      ],
+      "group": "Upload Configuration",
+      "description": "Sets a prefix that is added to generated upload filenames.",
+      "help": "Sets a prefix that is added to generated upload filenames.\n\n### Example\n\n```php\n$req->set_file_prefix('user_');\n```\n\n### Notes\n\n- The upload system also sanitizes the base name and adds a randomized value to reduce collisions and filename guessing.",
+      "chainable": true
+    },
+    {
+      "name": "set_verify_images",
+      "label": "Verify Uploaded Images",
+      "return_type": "object",
+      "params": [
+        {
+          "name": "verify",
+          "label": "Verify",
+          "type": "bool",
+          "default": "true"
+        }
+      ],
+      "group": "Upload Configuration",
+      "description": "Enables or disables real-image verification for uploads intended to contain images.",
+      "help": "Enables or disables real-image verification for uploads intended to contain images.\n\n### Example\n\n```php\n$req->set_verify_images(true);\n```\n\n### Notes\n\n- Image verification uses `getimagesize()` to check that a file behaves like a real image.\n- Enable this for avatars, logos, gallery images, thumbnails, and cover art.",
+      "chainable": true
+    },
+    {
+      "name": "set_image_dimensions",
+      "label": "Set Image Dimensions",
+      "return_type": "object",
+      "params": [
+        {
+          "name": "min_width",
+          "label": "Minimum Width",
+          "type": "?int",
+          "default": "null"
+        },
+        {
+          "name": "min_height",
+          "label": "Minimum Height",
+          "type": "?int",
+          "default": "null"
+        },
+        {
+          "name": "max_width",
+          "label": "Maximum Width",
+          "type": "?int",
+          "default": "null"
+        },
+        {
+          "name": "max_height",
+          "label": "Maximum Height",
+          "type": "?int",
+          "default": "null"
+        }
+      ],
+      "group": "Upload Configuration",
+      "description": "Sets global minimum and maximum image dimensions.",
+      "help": "Sets global minimum and maximum image dimensions.\n\n### Example\n\n```php\n$req->set_image_dimensions(200, 200, 3000, 3000);\n```\n\n### Notes\n\n- Arguments represent minimum width, minimum height, maximum width, and maximum height.\n- Failed dimension checks prevent the file from being moved and add an upload error.",
+      "chainable": true
+    },
+    {
+      "name": "set_upload_rule",
+      "label": "Set Field Upload Rule",
+      "return_type": "object",
+      "params": [
+        {
+          "name": "field",
+          "label": "Field",
+          "type": "string",
+          "default": "''"
+        },
+        {
+          "name": "rule",
+          "label": "Rule",
+          "type": "array",
+          "default": "[]"
+        }
+      ],
+      "group": "Upload Configuration",
+      "description": "Defines a complete upload configuration for one named file field.",
+      "help": "Defines a complete upload configuration for one named file field.\n\n### Example\n\n```php\n$req->set_upload_rule('avatar', [\n    'folder' => 'uploads/avatars',\n    'max_size' => 5,\n    'mime_types' => ['image/jpeg', 'image/png', 'image/webp'],\n    'extensions' => ['jpg', 'jpeg', 'png', 'webp'],\n    'verify_image' => true,\n    'min_width' => 150,\n    'min_height' => 150,\n    'max_width' => 3000,\n    'max_height' => 3000,\n    'prefix' => 'avatar_',\n]);\n```\n\n### Notes\n\n- Supported keys: `folder`, `max_size`, `mime_types`, `extensions`, `verify_image`, `min_width`, `min_height`, `max_width`, `max_height`, and `prefix`.\n- Per-field values override global upload settings for that field.",
+      "chainable": true
+    },
+    {
+      "name": "get_upload_rule",
+      "label": "Get Field Upload Rule",
+      "return_type": "array",
+      "params": [
+        {
+          "name": "field",
+          "label": "Field",
+          "type": "string",
+          "default": "''"
+        }
+      ],
+      "group": "Upload Configuration",
+      "description": "Returns the configured upload rule for one named field.",
+      "help": "Returns the configured upload rule for one named field.\n\n### Example\n\n```php\n$rule = $req->get_upload_rule('avatar');\nprint_r($rule);\n```\n\n### Notes\n\n- Useful for inspecting the effective configuration of a field before processing.",
+      "chainable": false
+    },
+    {
+      "name": "set_filename_callback",
+      "label": "Set Filename Callback",
+      "return_type": "object",
+      "params": [
+        {
+          "name": "callback",
+          "label": "Callback",
+          "type": "callable",
+          "default": "null"
+        }
+      ],
+      "group": "Upload Configuration",
+      "description": "Registers a callback for custom upload filename generation.",
+      "help": "Registers a callback for custom upload filename generation.\n\n### Example\n\n```php\n$req->set_filename_callback(function (\n    $original_name,\n    $safe_name,\n    $extension,\n    $field_name,\n    $file_info\n) {\n    $id = rand(1000, 9999);\n    return $field_name . '_' . $id . '.' . $extension;\n});\n```\n\n### Notes\n\n- The callback receives original name, safe base name, extension, field name, and file information.\n- Return a safe and unique filename; the built-in randomized naming is the safer default for most cases.",
+      "chainable": true
+    },
+    {
+      "name": "upload_files",
+      "label": "Upload Files",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "field",
+          "label": "Field",
+          "type": "?string",
+          "default": "null"
+        }
+      ],
+      "group": "Upload Execution",
+      "description": "Processes one upload field or every uploaded field and returns saved path information.",
+      "help": "Processes one upload field or every uploaded field and returns saved path information.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\n\n$req->set_upload_rule('avatar', [\n    'folder' => 'uploads/avatars',\n    'max_size' => 5,\n    'mime_types' => ['image/jpeg', 'image/png'],\n    'extensions' => ['jpg', 'jpeg', 'png'],\n    'verify_image' => true,\n]);\n\n$avatar = $req->upload_files('avatar');\n```\n\n### Notes\n\n- A single file from one named field returns a string path.\n- A multiple field returns an array of paths.\n- With no field argument, results are grouped by field name.\n- Check `has_upload_errors()` after processing.",
+      "chainable": false
+    },
+    {
+      "name": "upload_files_detailed",
+      "label": "Upload Files with Details",
+      "return_type": "array",
+      "params": [
+        {
+          "name": "field",
+          "label": "Field",
+          "type": "?string",
+          "default": "null"
+        }
+      ],
+      "group": "Upload Execution",
+      "description": "Processes uploads and returns detailed metadata such as original name, saved path, MIME type, extension, size, and image dimensions.",
+      "help": "Processes uploads and returns detailed metadata such as original name, saved path, MIME type, extension, size, and image dimensions.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\n\n$req->set_upload_rule('document', [\n    'folder' => 'uploads/documents',\n    'max_size' => 10,\n    'mime_types' => ['application/pdf'],\n    'extensions' => ['pdf'],\n]);\n\n$result = $req->upload_files_detailed('document');\n```\n\n### Notes\n\n- Detailed results can include `success`, `field_name`, `original_name`, `path`, `mime_type`, `extension`, `size`, `size_text`, and image `width`/`height`.\n- Prefer this method when upload metadata will be stored in the database.",
+      "chainable": false
+    },
+    {
+      "name": "has_upload_errors",
+      "label": "Has Upload Errors",
+      "return_type": "bool",
+      "params": [],
+      "group": "Upload Errors",
+      "description": "Returns true when validation, folder, or move errors were collected during upload processing.",
+      "help": "Returns true when validation, folder, or move errors were collected during upload processing.\n\n### Example\n\n```php\n$req->upload_files('avatar');\n\nif ($req->has_upload_errors()) {\n    print_r($req->get_upload_errors());\n}\n```\n\n### Notes\n\n- Errors include validation failures, move failures, and system-level folder problems.",
+      "chainable": false
+    },
+    {
+      "name": "get_upload_errors",
+      "label": "Get Upload Errors",
+      "return_type": "array",
+      "params": [],
+      "group": "Upload Errors",
+      "description": "Returns all collected upload errors grouped by field name.",
+      "help": "Returns all collected upload errors grouped by field name.\n\n### Example\n\n```php\n$errors = $req->get_upload_errors();\nprint_r($errors);\n```\n\n### Notes\n\n- Errors are grouped by field name. System-level errors may appear under `_system`.",
+      "chainable": false
+    },
+    {
+      "name": "get_upload_error_code",
+      "label": "Get Upload Error Code",
+      "return_type": "mixed",
+      "params": [],
+      "group": "Upload Errors",
+      "description": "Returns the latest upload error code recorded by the request upload system.",
+      "help": "Returns the latest upload error code recorded by the request upload system.\n\n### Example\n\n```php\n$code = $req->get_upload_error_code();\necho $code;\n```\n\n### Notes\n\n- This provides the most recent upload code alongside the human-readable error collection.",
+      "chainable": false
+    },
+    {
+      "name": "clear_upload_errors",
+      "label": "Clear Upload Errors",
+      "return_type": "void",
+      "params": [],
+      "group": "Upload Errors",
+      "description": "Clears the upload error messages and error-code state.",
+      "help": "Clears the upload error messages and error-code state.\n\n### Example\n\n```php\n$req->clear_upload_errors();\n```\n\n### Notes\n\n- Use when reusing the Request object for another independent upload operation.",
+      "chainable": false
+    },
+    {
+      "name": "ip",
+      "label": "Client IP Address",
+      "return_type": "string",
+      "params": [],
+      "group": "Request Metadata",
+      "description": "Returns the client IP address detected for the current request.",
+      "help": "Returns the client IP address detected for the current request.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\necho $req->ip();\n```\n\n### Notes\n\n- Useful for logging and request diagnostics.",
+      "chainable": false
+    },
+    {
+      "name": "uri",
+      "label": "Request URI",
+      "return_type": "string",
+      "params": [],
+      "group": "Request Metadata",
+      "description": "Returns the current request URI.",
+      "help": "Returns the current request URI.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\necho $req->uri();\n```\n\n### Notes\n\n- Useful for route diagnostics and logging.",
+      "chainable": false
+    },
+    {
+      "name": "server",
+      "label": "Read Server Value",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "type": "?string",
+          "default": "null"
+        },
+        {
+          "name": "default",
+          "label": "Default",
+          "type": "mixed",
+          "default": "null"
+        }
+      ],
+      "group": "Request Metadata",
+      "description": "Reads one SERVER value with a fallback, or returns all server data when no key is supplied.",
+      "help": "Reads one SERVER value with a fallback, or returns all server data when no key is supplied.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\n\n$agent = $req->server('HTTP_USER_AGENT');\n$all_server_data = $req->server();\n```\n\n### Notes\n\n- Call without a key to return all SERVER data.\n- Provide a fallback for optional keys.",
+      "chainable": false
+    },
+    {
+      "name": "header",
+      "label": "Read Header",
+      "return_type": "mixed",
+      "params": [
+        {
+          "name": "name",
+          "label": "Header Name",
+          "type": "string",
+          "default": "''"
+        },
+        {
+          "name": "default",
+          "label": "Default",
+          "type": "mixed",
+          "default": "null"
+        }
+      ],
+      "group": "Request Metadata",
+      "description": "Reads a request header by converting its name to the corresponding SERVER key.",
+      "help": "Reads a request header by converting its name to the corresponding SERVER key.\n\n### Example\n\n```php\n$req = new \\Core\\Request();\n$token = $req->header('Authorization');\n```\n\n### Notes\n\n- Names such as `Authorization` are converted internally to their SERVER-style header key.\n- Useful for API tokens and middleware-style checks.",
+      "chainable": false
+    }
+  ],
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Request\\RequestMethodCompiler",
+    "file": "Compiler.php"
+  }
+}

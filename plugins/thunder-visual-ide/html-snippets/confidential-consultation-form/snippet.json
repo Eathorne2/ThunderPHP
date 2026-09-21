@@ -1,0 +1,17 @@
+{
+  "id": "confidential-consultation-form",
+  "name": "Confidential Consultation Form",
+  "description": "A professional consultation request form with service selection and legal disclaimer.",
+  "category": "Business & Law",
+  "order": 5280,
+  "tags": [
+    "law",
+    "contact",
+    "consultation",
+    "form"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

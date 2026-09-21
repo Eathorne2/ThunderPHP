@@ -1,0 +1,114 @@
+{
+  "type": "project.plugin",
+  "label": "Plugin",
+  "category": "Project",
+  "kind": "architecture",
+  "icon": "P",
+  "color": "#7c3aed",
+  "description": "Defines config.json metadata. Routes and permissions are supplied by separate nodes.",
+  "allowed_graphs": [
+    "architecture"
+  ],
+  "defaults": {
+    "name": "My Plugin",
+    "id": "my-plugin",
+    "namespace": "MyPlugin",
+    "type": "Companion",
+    "version": "1.0.0",
+    "core_requires": "^1.0.0",
+    "description": "",
+    "author": "",
+    "website": "",
+    "thumbnail": "",
+    "active": true,
+    "look": "main",
+    "index": 10,
+    "dependencies": "{}"
+  },
+  "properties": [
+    {
+      "name": "name",
+      "label": "Plugin name",
+      "type": "text"
+    },
+    {
+      "name": "id",
+      "label": "Plugin ID",
+      "type": "text"
+    },
+    {
+      "name": "namespace",
+      "label": "PHP namespace",
+      "type": "text"
+    },
+    {
+      "name": "type",
+      "label": "Plugin type",
+      "type": "select",
+      "options": [
+        "Foundation",
+        "Embedded",
+        "Companion"
+      ]
+    },
+    {
+      "name": "version",
+      "label": "Version",
+      "type": "text"
+    },
+    {
+      "name": "core_requires",
+      "label": "Core requirement",
+      "type": "text"
+    },
+    {
+      "name": "description",
+      "label": "Description",
+      "type": "textarea"
+    },
+    {
+      "name": "author",
+      "label": "Author",
+      "type": "text"
+    },
+    {
+      "name": "website",
+      "label": "Website",
+      "type": "text"
+    },
+    {
+      "name": "thumbnail",
+      "label": "Thumbnail filename",
+      "type": "text"
+    },
+    {
+      "name": "active",
+      "label": "Active",
+      "type": "checkbox"
+    },
+    {
+      "name": "look",
+      "label": "Default look",
+      "type": "text"
+    },
+    {
+      "name": "index",
+      "label": "Load priority",
+      "type": "number"
+    },
+    {
+      "name": "dependencies",
+      "label": "Plugin dependencies",
+      "type": "dependency_list",
+      "help": "Dependencies are written to config.json and keyed by plugin ID."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Project\\PluginCompiler",
+    "file": "Compiler.php"
+  }
+}

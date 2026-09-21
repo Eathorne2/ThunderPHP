@@ -1,0 +1,11 @@
+{
+    "id": 1,
+    "title": "Getting Started",
+    "slug": "getting-started",
+    "description": "Quick starter guide",
+    "icon": "user",
+    "type": "guide",
+    "featured": true,
+    "published": true,
+    "order": 0
+}

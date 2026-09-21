@@ -1,0 +1,205 @@
+{
+  "slug": "medicine-telemedicine-feature",
+  "name": "Virtual Care Feature",
+  "category": "Medicine & Science",
+  "description": "Telemedicine and online consultation section",
+  "keywords": [
+    "telemedicine",
+    "virtual care",
+    "doctor"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-med-telemedicine-feature\"><div class=\"tb-med-telemedicine-feature__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}{{elements:cta}}</div><div class=\"tb-med-telemedicine-feature__device\">{{elements:image}}<div class=\"tb-med-telemedicine-feature__status\">● Doctor online</div></div></section>",
+  "css": ".tb-med-telemedicine-feature{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;padding:clamp(42px,7vw,88px);background:linear-gradient(135deg,var(--tb-color-background),var(--tb-color-surface))}.tb-med-telemedicine-feature__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.tb-med-telemedicine-feature__title{font-size:clamp(40px,5vw,66px);margin:10px 0 16px;color:var(--tb-color-secondary);line-height:1}.tb-med-telemedicine-feature__text{color:var(--tb-color-muted);font-size:17px;line-height:1.75}.tb-med-telemedicine-feature__cta{display:inline-block;margin-top:22px;padding:14px 19px;background:var(--tb-color-primary);color:var(--tb-color-surface);text-decoration:none;border-radius:12px;font-weight:900}.tb-med-telemedicine-feature__device{position:relative;padding:18px;background:var(--tb-color-secondary);border-radius:30px;box-shadow:0 24px 70px rgba(0,0,0,.16)}.tb-med-telemedicine-feature__image{display:block;width:100%;height:430px;object-fit:cover;border-radius:18px}.tb-med-telemedicine-feature__status{position:absolute;left:36px;bottom:34px;padding:9px 13px;border-radius:999px;background:var(--tb-color-surface);color:var(--tb-color-secondary);font-weight:800}@media(max-width:760px){.tb-med-telemedicine-feature{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Virtual care"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-med-telemedicine-feature__eyebrow\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "A consultation, wherever you are"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-med-telemedicine-feature__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Introduce telemedicine, online follow-ups or remote specialist consultations with a friendly digital-care layout."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-med-telemedicine-feature__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "cta",
+      "label": "Action",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Start virtual visit",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-med-telemedicine-feature__cta\" href=\"{{url}}\">{{text}}</a>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "image",
+      "label": "Virtual care image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Virtual doctor consultation"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-med-telemedicine-feature__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-med-telemedicine-feature__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

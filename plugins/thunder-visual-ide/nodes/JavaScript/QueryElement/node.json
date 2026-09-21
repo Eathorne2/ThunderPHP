@@ -1,0 +1,62 @@
+{
+  "type": "javascript.query_element",
+  "label": "Query Element",
+  "category": "JavaScript DOM",
+  "kind": "expression",
+  "icon": "DOM",
+  "color": "#0369a1",
+  "description": "Finds a DOM element using a selector or selected View component.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "Query Element",
+    "target_node_id": "",
+    "target_selector": "",
+    "selector_inside": "",
+    "all": false
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "target_node_id",
+      "label": "Target View component",
+      "type": "view_component_ref"
+    },
+    {
+      "name": "target_selector",
+      "label": "Manual selector",
+      "type": "text"
+    },
+    {
+      "name": "selector_inside",
+      "label": "Selector inside target",
+      "type": "text"
+    },
+    {
+      "name": "all",
+      "label": "Return all matches",
+      "type": "checkbox"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "element",
+        "label": "Element(s)",
+        "type": "js-element",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\QueryElementCompiler",
+    "file": "Compiler.php"
+  }
+}

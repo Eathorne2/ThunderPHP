@@ -1,0 +1,192 @@
+{
+  "slug": "medicine-medical-pricing",
+  "name": "Medical Pricing Cards",
+  "category": "Medicine & Science",
+  "description": "Transparent healthcare service pricing cards",
+  "keywords": [
+    "pricing",
+    "clinic",
+    "healthcare"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-med-medical-pricing\"><header>{{elements:eyebrow}}{{elements:title}}{{elements:text}}</header><div class=\"tb-med-medical-pricing__grid\">{{elements:plans}}</div></section>",
+  "css": ".tb-med-medical-pricing{padding:clamp(42px,7vw,88px);background:var(--tb-color-background)}.tb-med-medical-pricing header{text-align:center;max-width:760px;margin:0 auto 34px}.tb-med-medical-pricing__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.14em}.tb-med-medical-pricing__title{font-size:clamp(36px,5vw,60px);margin:10px 0 14px;color:var(--tb-color-secondary)}.tb-med-medical-pricing__text{color:var(--tb-color-muted);line-height:1.7}.tb-med-medical-pricing__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1050px;margin:auto}.tb-med-medical-pricing__plan{padding:30px;background:var(--tb-color-surface);border:1px solid var(--tb-color-border);border-radius:18px}.tb-med-medical-pricing__plan__title{font-size:22px;color:var(--tb-color-secondary);margin:0 0 10px}.tb-med-medical-pricing__plan__text{color:var(--tb-color-muted);line-height:1.65;min-height:52px}.tb-med-medical-pricing__plan__price{display:block;margin-top:24px;font-size:34px;color:var(--tb-color-primary)}@media(max-width:700px){.tb-med-medical-pricing__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Transparent pricing"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-med-medical-pricing__eyebrow\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Know what to expect"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-med-medical-pricing__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "A flexible starting point for consultations, screening packages or wellness programs."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-med-medical-pricing__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "plans",
+      "label": "Plans",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "title": "",
+        "text": "",
+        "price": ""
+      },
+      "schema": [
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-med-medical-pricing__plan__title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-med-medical-pricing__plan__text",
+          "rows": 3
+        },
+        {
+          "key": "price",
+          "label": "Price",
+          "type": "text",
+          "selector": ".tb-med-medical-pricing__plan__price"
+        }
+      ],
+      "template": "<article class=\"tb-med-medical-pricing__plan\"><h3 class=\"tb-med-medical-pricing__plan__title\">{{title}}</h3><p class=\"tb-med-medical-pricing__plan__text\">{{text}}</p><strong class=\"tb-med-medical-pricing__plan__price\">{{price}}</strong></article>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "title": "Basic checkup",
+          "text": "Consultation and routine assessment.",
+          "price": "K350"
+        },
+        {
+          "title": "Health screening",
+          "text": "Consultation plus core screening tests.",
+          "price": "K750"
+        },
+        {
+          "title": "Comprehensive",
+          "text": "Extended screening and review.",
+          "price": "K1,250"
+        }
+      ],
+      "min": 1,
+      "max": 12
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

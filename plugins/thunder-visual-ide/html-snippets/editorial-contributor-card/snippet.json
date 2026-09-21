@@ -1,0 +1,18 @@
+{
+  "id": "editorial-contributor-card",
+  "name": "Editorial Contributor Card",
+  "description": "A magazine contributor card with portrait crop, issue credits, expertise and a follow interaction.",
+  "category": "User Cards",
+  "order": 2390,
+  "tags": [
+    "user",
+    "card",
+    "editorial",
+    "author",
+    "contributor"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

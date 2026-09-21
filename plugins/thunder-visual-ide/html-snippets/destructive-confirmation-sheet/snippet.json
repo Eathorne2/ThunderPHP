@@ -1,0 +1,20 @@
+{
+  "id": "destructive-confirmation-sheet",
+  "name": "Destructive Confirmation Sheet",
+  "description": "A focused confirmation modal for high-impact destructive actions.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Alerts - Modal",
+  "order": 8002,
+  "tags": [
+    "modal",
+    "confirm",
+    "destructive",
+    "dialog"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

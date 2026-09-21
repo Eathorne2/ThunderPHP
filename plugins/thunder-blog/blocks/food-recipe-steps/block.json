@@ -1,0 +1,231 @@
+{
+  "slug": "food-recipe-steps",
+  "name": "Recipe Steps",
+  "category": "Food & Restaurant",
+  "description": "Editorial recipe-method section with image and numbered cooking steps",
+  "keywords": [
+    "food",
+    "restaurant",
+    "recipe",
+    "cooking",
+    "steps"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-food-recipe\"><div class=\"tb-food-recipe__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-food-recipe__content\"><div class=\"tb-food-recipe__visual\">{{elements:image}}</div><div class=\"tb-food-recipe__steps\">{{elements:items}}</div></div></div>",
+  "css": ".tb-food-recipe{padding:clamp(34px,6vw,80px);background:var(--tb-color-surface)}.tb-food-recipe__head{max-width:800px;margin-bottom:28px}.tb-food-recipe__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:950;letter-spacing:.16em;text-transform:uppercase}.tb-food-recipe__title{margin:8px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(42px,6vw,70px)}.tb-food-recipe__text{color:var(--tb-color-muted);line-height:1.7}.tb-food-recipe__content{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(26px,5vw,66px);align-items:start}.tb-food-recipe__image{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.tb-food-recipe__step{display:grid;grid-template-columns:52px 1fr;gap:14px;padding:20px 0;border-top:1px solid var(--tb-color-border)}.tb-food-recipe__num{color:var(--tb-color-primary);font-weight:950}.tb-food-recipe__step h3{margin:0 0 5px;color:var(--tb-color-secondary)}.tb-food-recipe__step p{margin:0;color:var(--tb-color-muted);line-height:1.6}@media(max-width:700px){.tb-food-recipe__content{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "From our recipe notebook"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-food-recipe__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Cook it in three steps"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<h2 class=\"tb-food-recipe__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Introduction",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A flexible recipe-method layout for food blogs, cooking classes or restaurant stories."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-food-recipe__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "image",
+      "label": "Recipe image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Cooking ingredients"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-food-recipe__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-food-recipe__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "items",
+      "label": "Recipe step",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "num": "01",
+        "title": "Prepare",
+        "text": "Wash, chop and measure everything before the pan gets hot."
+      },
+      "schema": [
+        {
+          "key": "num",
+          "label": "Step number",
+          "type": "text",
+          "selector": ".tb-food-recipe__num"
+        },
+        {
+          "key": "title",
+          "label": "Step title",
+          "type": "text",
+          "selector": ".tb-food-recipe__step h3"
+        },
+        {
+          "key": "text",
+          "label": "Instructions",
+          "type": "textarea",
+          "selector": ".tb-food-recipe__step p",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-food-recipe__step\"><span class=\"tb-food-recipe__num\">{{num}}</span><div><h3>{{title}}</h3><p>{{text}}</p></div></article>",
+      "min": 1,
+      "max": 12,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "num": "01",
+          "title": "Prepare",
+          "text": "Wash, chop and measure everything before the pan gets hot."
+        },
+        {
+          "num": "02",
+          "title": "Build flavor",
+          "text": "Cook aromatics first, then layer the main ingredients gradually."
+        },
+        {
+          "num": "03",
+          "title": "Finish",
+          "text": "Adjust seasoning, add fresh herbs and serve while everything is at its best."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

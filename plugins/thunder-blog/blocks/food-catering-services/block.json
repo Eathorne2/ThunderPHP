@@ -1,0 +1,232 @@
+{
+  "slug": "food-catering-services",
+  "name": "Catering Services",
+  "category": "Food & Restaurant",
+  "description": "Numbered catering service list paired with event photography",
+  "keywords": [
+    "food",
+    "restaurant",
+    "catering",
+    "events",
+    "services"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-food-catering\"><div class=\"tb-food-catering__visual\">{{elements:image}}</div><div class=\"tb-food-catering__body\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}<div class=\"tb-food-catering__list\">{{elements:services}}</div></div></div>",
+  "css": ".tb-food-catering{display:grid;grid-template-columns:.9fr 1.1fr;background:var(--tb-color-surface)}.tb-food-catering__visual{min-height:650px}.tb-food-catering__image{width:100%;height:100%;object-fit:cover;display:block}.tb-food-catering__body{padding:clamp(36px,7vw,90px)}.tb-food-catering__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-food-catering__title{margin:10px 0;color:var(--tb-color-secondary);font-size:clamp(42px,6vw,70px)}.tb-food-catering__text{color:var(--tb-color-muted);line-height:1.7}.tb-food-catering__list{margin-top:28px}.tb-food-catering__service{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--tb-color-border)}.tb-food-catering__num{color:var(--tb-color-primary);font-weight:950}.tb-food-catering__service h3{margin:0 0 5px;color:var(--tb-color-secondary)}.tb-food-catering__service p{margin:0;color:var(--tb-color-muted);line-height:1.55}@media(max-width:760px){.tb-food-catering{grid-template-columns:1fr}.tb-food-catering__visual{min-height:380px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "image",
+      "label": "Catering image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Catered event table"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-food-catering__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-food-catering__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Events & catering"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-food-catering__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Food for every kind of gathering"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-food-catering__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "From simple drop-off lunches to full-service celebrations, build a catering offer around the event."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-food-catering__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "services",
+      "label": "Catering service",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "num": "01",
+        "title": "Office lunches",
+        "text": "Fresh, practical menus for meetings and team days."
+      },
+      "schema": [
+        {
+          "key": "num",
+          "label": "Number",
+          "type": "text",
+          "selector": ".tb-food-catering__num"
+        },
+        {
+          "key": "title",
+          "label": "Service",
+          "type": "text",
+          "selector": ".tb-food-catering__service h3"
+        },
+        {
+          "key": "text",
+          "label": "Description",
+          "type": "textarea",
+          "selector": ".tb-food-catering__service p",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-food-catering__service\"><span class=\"tb-food-catering__num\">{{num}}</span><div><h3>{{title}}</h3><p>{{text}}</p></div></article>",
+      "min": 1,
+      "max": 12,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "num": "01",
+          "title": "Office lunches",
+          "text": "Fresh, practical menus for meetings and team days."
+        },
+        {
+          "num": "02",
+          "title": "Private celebrations",
+          "text": "Flexible menus for birthdays, anniversaries and family gatherings."
+        },
+        {
+          "num": "03",
+          "title": "Large events",
+          "text": "Full-service food planning for launches, conferences and receptions."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

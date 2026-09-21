@@ -1,0 +1,197 @@
+{
+  "slug": "edu-course-curriculum",
+  "name": "Course Curriculum",
+  "category": "Education",
+  "description": "Structured course curriculum/module list",
+  "keywords": [
+    "education",
+    "curriculum",
+    "course",
+    "modules"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-edu-curriculum\"><div class=\"tb-edu-curriculum__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-edu-curriculum__list\">{{elements:units}}</div></div>",
+  "css": ".tb-edu-curriculum{display:grid;grid-template-columns:.75fr 1.25fr;gap:42px;padding:clamp(34px,6vw,78px);background:var(--tb-color-surface)}.tb-edu-curriculum__copy{position:sticky;top:24px;align-self:start}.tb-edu-curriculum__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.15em}.tb-edu-curriculum__title{margin:8px 0;color:var(--tb-color-secondary);font-size:clamp(40px,5vw,58px)}.tb-edu-curriculum__text{color:var(--tb-color-muted);line-height:1.7}.tb-edu-curriculum__unit{padding:22px 0;border-top:1px solid var(--tb-color-border)}.tb-edu-curriculum__week{color:var(--tb-color-primary);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.1em}.tb-edu-curriculum__unit-title{margin:7px 0;color:var(--tb-color-secondary);font-size:25px}.tb-edu-curriculum__unit-text{margin:0;color:var(--tb-color-muted);line-height:1.65}@media(max-width:760px){.tb-edu-curriculum{grid-template-columns:1fr}.tb-edu-curriculum__copy{position:static}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Course outline"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-edu-curriculum__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "What you will learn"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-edu-curriculum__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A clean curriculum view for courses, workshops, modules or lesson sequences."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-edu-curriculum__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "units",
+      "label": "Curriculum module",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "week": "Module 01",
+        "title": "Foundations",
+        "text": "Core concepts, vocabulary and a practical baseline."
+      },
+      "schema": [
+        {
+          "key": "week",
+          "label": "Module label",
+          "type": "text",
+          "selector": ".tb-edu-curriculum__week"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-edu-curriculum__unit-title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-edu-curriculum__unit-text",
+          "rows": 2
+        }
+      ],
+      "template": "<article class=\"tb-edu-curriculum__unit\"><span class=\"tb-edu-curriculum__week\">{{week}}</span><h3 class=\"tb-edu-curriculum__unit-title\">{{title}}</h3><p class=\"tb-edu-curriculum__unit-text\">{{text}}</p></article>",
+      "min": 1,
+      "max": 16,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "week": "Module 01",
+          "title": "Foundations",
+          "text": "Core concepts, vocabulary and a practical baseline."
+        },
+        {
+          "week": "Module 02",
+          "title": "Applied practice",
+          "text": "Exercises and projects that turn concepts into skill."
+        },
+        {
+          "week": "Module 03",
+          "title": "Feedback & refinement",
+          "text": "Review, improve and deepen your work."
+        },
+        {
+          "week": "Module 04",
+          "title": "Final project",
+          "text": "Create an outcome you can demonstrate or publish."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

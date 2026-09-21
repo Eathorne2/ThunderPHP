@@ -1,0 +1,104 @@
+.quote-testimonial {
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: clamp(1.5rem, 5vw, 3rem);
+    border: 1px solid var(--thv-theme-border, #dce3ec);
+    border-radius: 1.25rem;
+    color: var(--thv-theme-text, #172033);
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.quote-testimonial__header,
+.quote-testimonial__navigation,
+.quote-testimonial figcaption {
+    display: flex;
+    align-items: center;
+}
+
+.quote-testimonial__header {
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--thv-theme-border, #dce3ec);
+}
+
+.quote-testimonial__header p,
+.quote-testimonial__header h2 {
+    margin: 0;
+}
+
+.quote-testimonial__header p {
+    color: var(--thv-theme-primary, #4f46e5);
+    font-size: 0.75rem;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.quote-testimonial__header h2 {
+    margin-top: 0.35rem;
+    font-size: clamp(1.5rem, 4vw, 2.4rem);
+}
+
+.quote-testimonial__navigation {
+    gap: 0.65rem;
+}
+
+.quote-testimonial__navigation button {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--thv-theme-border, #dce3ec);
+    border-radius: 0.65rem;
+    color: inherit;
+    background: transparent;
+    font-weight: 750;
+}
+
+.quote-testimonial__navigation span {
+    color: var(--thv-theme-muted, #667085);
+    font-size: 0.78rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.quote-testimonial figure {
+    margin: 0;
+    padding-top: clamp(2rem, 6vw, 4rem);
+}
+
+.quote-testimonial blockquote {
+    max-width: 58rem;
+    margin: 0;
+    font-size: clamp(1.8rem, 5vw, 3.7rem);
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    line-height: 1.13;
+}
+
+.quote-testimonial figcaption {
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+.quote-testimonial figcaption img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.quote-testimonial figcaption strong,
+.quote-testimonial figcaption span {
+    display: block;
+}
+
+.quote-testimonial figcaption span {
+    margin-top: 0.2rem;
+    color: var(--thv-theme-muted, #667085);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 620px) {
+    .quote-testimonial__header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

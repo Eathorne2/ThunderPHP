@@ -1,0 +1,117 @@
+{
+  "slug": "sports-club-achievements",
+  "name": "Club Achievements",
+  "category": "Sports",
+  "description": "Bold sports statistics and achievements",
+  "keywords": [
+    "club",
+    "achievements",
+    "stats"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-sport-club-achievements\">{{elements:heading}}<div class=\"tb-sport-club-achievements__grid\">{{elements:stats}}</div></section>",
+  "css": ".tb-sport-club-achievements{padding:clamp(42px,7vw,84px);background:var(--tb-color-secondary);color:var(--tb-color-surface)}.tb-sport-club-achievements__heading{font-size:clamp(32px,5vw,52px);margin:0 0 30px;max-width:760px}.tb-sport-club-achievements__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:color-mix(in srgb,var(--tb-color-surface) 25%,transparent)}.tb-sport-club-achievements__stat{padding:30px;background:var(--tb-color-secondary);display:flex;flex-direction:column;gap:8px}.tb-sport-club-achievements__value{font-size:clamp(38px,6vw,70px);line-height:1;color:var(--tb-color-primary)}.tb-sport-club-achievements__label{font-size:13px;text-transform:uppercase;letter-spacing:.1em}@media(max-width:760px){.tb-sport-club-achievements__grid{grid-template-columns:1fr 1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "heading",
+      "label": "Heading",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "A tradition built on results"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-sport-club-achievements__heading\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "stats",
+      "label": "Statistics",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "value": "18",
+        "label": "Championships"
+      },
+      "schema": [
+        {
+          "key": "value",
+          "label": "Value",
+          "type": "text",
+          "selector": ".tb-sport-club-achievements__value"
+        },
+        {
+          "key": "label",
+          "label": "Label",
+          "type": "text",
+          "selector": ".tb-sport-club-achievements__label"
+        }
+      ],
+      "template": "<div class=\"tb-sport-club-achievements__stat\"><strong class=\"tb-sport-club-achievements__value\">{{value}}</strong><span class=\"tb-sport-club-achievements__label\">{{label}}</span></div>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8,
+      "default_items": [
+        {
+          "value": "18",
+          "label": "Championships"
+        },
+        {
+          "value": "42",
+          "label": "Coaches"
+        },
+        {
+          "value": "1.8K",
+          "label": "Members"
+        },
+        {
+          "value": "27",
+          "label": "Years active"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

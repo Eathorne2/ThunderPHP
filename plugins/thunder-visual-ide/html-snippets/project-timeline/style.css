@@ -1,0 +1,92 @@
+.timeline-card {
+    padding: 1.5rem;
+    border: 1px solid var(--thv-theme-border, #e2e8f0);
+    border-radius: 1.2rem;
+    background: var(--thv-theme-surface, #ffffff);
+    color: var(--thv-theme-text, #0f172a);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, .06);
+}
+
+.timeline-card header span {
+    color: var(--thv-theme-primary, #7c3aed);
+    font-size: .72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.timeline-card h2 {
+    margin: .25rem 0 1.5rem;
+}
+
+.timeline-list {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline-list li {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2.4rem 1fr;
+    gap: 1rem;
+    padding-bottom: 1.4rem;
+}
+
+.timeline-list li:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    top: 2.35rem;
+    bottom: 0;
+    left: 1.15rem;
+    width: 2px;
+    background: var(--thv-theme-border, #e2e8f0);
+}
+
+.timeline-list i {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 2.35rem;
+    height: 2.35rem;
+    border: 2px solid var(--thv-theme-border, #cbd5e1);
+    border-radius: 50%;
+    color: var(--thv-theme-muted, #64748b);
+    background: var(--thv-theme-surface, #ffffff);
+    font-style: normal;
+    font-weight: 800;
+}
+
+.timeline-list .is-complete i {
+    border-color: var(--thv-theme-success, #16a34a);
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-success, #16a34a);
+}
+
+.timeline-list .is-current i {
+    border-color: var(--thv-theme-primary, #7c3aed);
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #7c3aed);
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--thv-theme-primary, #7c3aed) 14%, var(--thv-theme-surface,
+        #ffffff));
+}
+
+.timeline-list small {
+    color: var(--thv-theme-primary, #7c3aed);
+    font-size: .72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.timeline-list h3 {
+    margin: .22rem 0;
+    font-size: 1rem;
+}
+
+.timeline-list p {
+    margin: 0;
+    color: var(--thv-theme-muted, #64748b);
+    line-height: 1.55;
+}

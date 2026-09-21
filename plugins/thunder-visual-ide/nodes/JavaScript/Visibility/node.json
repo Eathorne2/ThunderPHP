@@ -1,0 +1,79 @@
+{
+  "type": "javascript.visibility",
+  "label": "Element Visibility",
+  "category": "JavaScript DOM",
+  "kind": "flow",
+  "icon": "SHOW",
+  "color": "#0369a1",
+  "description": "Shows, hides, or toggles a target element.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "Element Visibility",
+    "target_node_id": "",
+    "target_selector": "",
+    "selector_inside": "",
+    "action": "Show"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "target_node_id",
+      "label": "Target View component",
+      "type": "view_component_ref"
+    },
+    {
+      "name": "target_selector",
+      "label": "Manual selector",
+      "type": "text"
+    },
+    {
+      "name": "selector_inside",
+      "label": "Selector inside target",
+      "type": "text"
+    },
+    {
+      "name": "action",
+      "label": "Action",
+      "type": "select",
+      "options": [
+        "Show",
+        "Hide",
+        "Toggle"
+      ]
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "js-exec",
+        "direction": "in"
+      },
+      {
+        "id": "element",
+        "label": "Element",
+        "type": "js-element",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "js-exec",
+        "direction": "out"
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\VisibilityCompiler",
+    "file": "Compiler.php"
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "id": 12,
+    "title": "Getting started with thunder CLI",
+    "slug": "getting-started-with-thunder-cli",
+    "description": "A step by step beginner's guide on how to user the `thunder` CLI tool that comes with ThunderPHP.",
+    "type": "guide",
+    "featured": false,
+    "published": true,
+    "order": 0,
+    "meta_title": "",
+    "meta_description": "",
+    "image": "",
+    "video_url": ""
+}

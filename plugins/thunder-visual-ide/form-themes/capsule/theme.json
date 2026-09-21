@@ -1,0 +1,76 @@
+{
+  "id": "capsule",
+  "name": "Capsule Forms",
+  "description": "Friendly pill-shaped controls and buttons with spacious touch targets for public-facing forms.",
+  "order": 100,
+  "palettes": {
+    "default": {
+      "name": "Sky",
+      "colors": {
+        "primary": "#0284c7",
+        "secondary": "#0ea5e9",
+        "surface": "#ffffff",
+        "surface_alt": "#f0f9ff",
+        "text": "#0c4a6e",
+        "muted": "#64748b",
+        "border": "#bae6fd",
+        "danger": "#dc2626",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    },
+    "peach": {
+      "name": "Peach",
+      "colors": {
+        "primary": "#ea580c",
+        "secondary": "#f97316",
+        "surface": "#fffaf5",
+        "surface_alt": "#fff7ed",
+        "text": "#7c2d12",
+        "muted": "#9a6a55",
+        "border": "#fed7aa",
+        "danger": "#dc2626",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    },
+    "berry": {
+      "name": "Berry",
+      "colors": {
+        "primary": "#be185d",
+        "secondary": "#db2777",
+        "surface": "#fff8fb",
+        "surface_alt": "#fdf2f8",
+        "text": "#500724",
+        "muted": "#9d5575",
+        "border": "#fbcfe8",
+        "danger": "#dc2626",
+        "on_primary": "#ffffff",
+        "success": "#16a34a",
+        "warning": "#d97706",
+        "info": "#0891b2"
+      }
+    }
+  },
+  "default_palette": "default",
+  "preview": "preview.html",
+  "css": "style.css",
+  "js": "script.js",
+  "components": {
+    "text_input": "field.html.tpl",
+    "email_input": "field.html.tpl",
+    "password_input": "field.html.tpl",
+    "number_input": "field.html.tpl",
+    "date_input": "field.html.tpl",
+    "file_input": "field.html.tpl",
+    "textarea": "textarea.html.tpl",
+    "select": "select.html.tpl",
+    "checkbox": "checkbox.html.tpl",
+    "button": "button.html.tpl",
+    "form": "form.html.tpl"
+  }
+}

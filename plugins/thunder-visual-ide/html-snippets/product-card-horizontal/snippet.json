@@ -1,0 +1,17 @@
+{
+  "id": "product-card-horizontal",
+  "name": "Horizontal Product Card",
+  "description": "A compact product row with availability, quantity controls and a strong call to action.",
+  "category": "Product Cards",
+  "order": 1010,
+  "tags": [
+    "product",
+    "horizontal",
+    "cart",
+    "quantity"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

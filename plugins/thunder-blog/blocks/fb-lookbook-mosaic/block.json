@@ -1,0 +1,188 @@
+{
+  "slug": "fb-lookbook-mosaic",
+  "name": "Lookbook Mosaic",
+  "category": "Fashion & Beauty",
+  "description": "A mixed-size image mosaic for fashion editorials and lookbooks.",
+  "keywords": [
+    "fashion",
+    "lookbook",
+    "gallery",
+    "mosaic"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-fb-lookbook\"><div class=\"tb-fb-lookbook__intro\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-fb-lookbook__grid\">{{elements:images}}</div></div>",
+  "css": ".tb-fb-lookbook{padding:clamp(28px,5vw,66px);background:var(--tb-color-background)}.tb-fb-lookbook__intro{max-width:700px;margin-bottom:28px}.tb-fb-lookbook__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.tb-fb-lookbook__title{margin:8px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(40px,6vw,70px);font-weight:500}.tb-fb-lookbook__text{max-width:580px;color:var(--tb-color-muted);line-height:1.7}.tb-fb-lookbook__grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:180px;gap:12px}.tb-fb-lookbook__item{margin:0;overflow:hidden;grid-column:span 2;grid-row:span 2}.tb-fb-lookbook__item:nth-child(1){grid-column:span 4;grid-row:span 3}.tb-fb-lookbook__item:nth-child(4){grid-column:span 4;grid-row:span 2}.tb-fb-lookbook__image{width:100%;height:100%;object-fit:cover;display:block}@media(max-width:760px){.tb-fb-lookbook__grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:240px}.tb-fb-lookbook__item,.tb-fb-lookbook__item:nth-child(1),.tb-fb-lookbook__item:nth-child(4){grid-column:span 1;grid-row:span 1}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Lookbook"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-fb-lookbook__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "The season in five frames"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-fb-lookbook__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Create a visual story with a flexible, repeatable mosaic of campaign or editorial images."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-fb-lookbook__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "images",
+      "label": "Lookbook image",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Fashion lookbook image"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-fb-lookbook__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<figure class=\"tb-fb-lookbook__item\"><img class=\"tb-fb-lookbook__image\" src=\"{{url}}\" alt=\"{{alt}}\"></figure>",
+      "min": 1,
+      "max": 12,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "url": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Fashion portrait one"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Fashion portrait two"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Fashion portrait three"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Fashion collection detail"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Fashion portrait four"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

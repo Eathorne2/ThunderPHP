@@ -1,0 +1,53 @@
+{
+  "type": "security.password_verify",
+  "label": "Password Verify",
+  "category": "Security",
+  "kind": "expression",
+  "icon": "?P",
+  "color": "#7f1d1d",
+  "description": "Checks a plain password against a stored hash.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Password Verify"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "password",
+        "label": "Password",
+        "type": "string",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "hash",
+        "label": "Hash",
+        "type": "string",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Valid",
+        "type": "boolean",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Security\\PasswordVerifyCompiler",
+    "file": "Compiler.php"
+  }
+}

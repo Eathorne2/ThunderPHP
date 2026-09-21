@@ -1,0 +1,118 @@
+.fnas-arrivals {
+    color:var(--thv-theme-text, #211b1e);
+    background:var(--thv-theme-background, #fbf7f4);
+}
+.fnas-arrivals a {
+    color:inherit;
+}
+.fnas-arrivals img {
+    display:block;
+    max-width:100%;
+}
+.fnas-arrivals__eyebrow {
+    color:var(--thv-theme-primary, #92536a);
+    font-size:.68rem;
+    font-weight:900;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+}
+.fnas-arrivals__muted {
+    color:var(--thv-theme-muted, #71656a);
+}
+.fnas-arrivals {
+    padding:clamp(1.25rem, 4vw, 3.5rem)
+}
+.fnas-arrivals>header {
+    display:flex;
+    justify-content:space-between;
+    gap:2rem;
+    align-items:end;
+    margin-bottom:1.5rem
+}
+.fnas-arrivals h2 {
+    margin:.5rem 0 0;
+    font-family:Georgia, serif;
+    font-size:clamp(3rem, 6vw, 5.8rem);
+    font-weight:500;
+    letter-spacing:-.07em;
+    line-height:.9
+}
+.fnas-arrivals>header>a {
+    font-size:.72rem;
+    font-weight:900;
+    text-transform:uppercase
+}
+.fnas-arrivals__grid {
+    display:grid;
+    grid-template-columns:1.2fr .8fr .8fr;
+    gap:.8rem
+}
+.fnas-arrivals__card {
+    position:relative;
+    min-height:22rem;
+    overflow:hidden;
+    color:#fff;
+    text-decoration:none
+}
+.fnas-arrivals__card--wide {
+    grid-row:span 2;
+    min-height:45rem
+}
+.fnas-arrivals__card:after {
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, .75))
+}
+.fnas-arrivals__card img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .45s ease
+}
+.fnas-arrivals__card:hover img {
+    transform:scale(1.03)
+}
+.fnas-arrivals__card span, .fnas-arrivals__card strong, .fnas-arrivals__card small {
+    position:absolute;
+    z-index:1;
+    right:1rem;
+    left:1rem
+}
+.fnas-arrivals__card span {
+    top:1rem;
+    font-size:.65rem;
+    font-weight:900
+}
+.fnas-arrivals__card strong {
+    bottom:2.4rem;
+    font-family:Georgia, serif;
+    font-size:2rem;
+    font-weight:500
+}
+.fnas-arrivals__card small {
+    bottom:1rem;
+    opacity:.75
+}
+@media(max-width:760px) {
+    .fnas-arrivals__grid {
+        grid-template-columns:1fr 1fr
+    }
+    .fnas-arrivals__card--wide {
+        grid-column:span 2;
+        grid-row:auto;
+        min-height:30rem
+    }
+}
+@media(max-width:520px) {
+    .fnas-arrivals>header {
+        align-items:start;
+        flex-direction:column
+    }
+    .fnas-arrivals__grid {
+        grid-template-columns:1fr
+    }
+    .fnas-arrivals__card--wide {
+        grid-column:auto
+    }
+}

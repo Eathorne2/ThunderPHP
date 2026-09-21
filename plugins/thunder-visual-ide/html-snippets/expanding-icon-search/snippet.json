@@ -1,0 +1,20 @@
+{
+  "id": "expanding-icon-search",
+  "name": "Expanding Icon Search",
+  "description": "A compact icon search that expands on focus for constrained toolbars.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Search Bars",
+  "order": 2420,
+  "tags": [
+    "search",
+    "compact",
+    "expanding",
+    "toolbar"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

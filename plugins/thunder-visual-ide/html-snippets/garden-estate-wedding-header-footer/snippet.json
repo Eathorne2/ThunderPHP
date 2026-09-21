@@ -1,0 +1,18 @@
+{
+  "id": "garden-estate-wedding-header-footer",
+  "name": "Garden Estate Wedding Header and Footer",
+  "description": "A romantic garden-estate shell with delicate serif branding, RSVP action and a refined guest-information footer.",
+  "category": "Wedding",
+  "order": 4710,
+  "tags": [
+    "garden wedding",
+    "couple",
+    "header",
+    "footer",
+    "rsvp"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,220 @@
+.lmb-ban {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.lmb-ban *, .lmb-ban *::before, .lmb-ban *::after {
+    box-sizing: border-box;
+}
+
+.lmb-ban button, .lmb-ban input, .lmb-ban select, .lmb-ban textarea {
+    font: inherit;
+}
+
+.lmb-ban a {
+    color: inherit;
+}
+
+.lmb-ban {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.8fr);
+    gap: 2rem;
+    align-items: center;
+    max-width: 72rem;
+    padding: clamp(1.5rem, 5vw, 3.5rem);
+    overflow: hidden;
+    border-radius: 1.5rem;
+    background: color-mix(in srgb, var(--thv-theme-primary) 12%, var(--thv-theme-background));
+}
+
+.lmb-ban::after {
+    content: '';
+    position: absolute;
+    right: -8rem;
+    top: -8rem;
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--thv-theme-secondary) 22%, transparent);
+}
+
+.lmb-ban > * {
+    position: relative;
+    z-index: 1;
+}
+
+.lmb-ban__copy > span, .lmb-ban__guide > span {
+    color: var(--thv-theme-primary);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.lmb-ban__copy h2 {
+    margin: 0.45rem 0;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 0.98;
+}
+
+.lmb-ban__copy p, .lmb-ban__guide p {
+    color: var(--thv-theme-muted);
+    line-height: 1.65;
+}
+
+.lmb-ban form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lmb-ban input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.8rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.7rem;
+    background: var(--thv-theme-surface);
+    color: var(--thv-theme-text);
+}
+
+.lmb-ban button {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: 0.7rem;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+    font-weight: 850;
+    cursor: pointer;
+}
+
+.lmb-ban__guide {
+    padding: 1.2rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface);
+}
+
+.lmb-ban__guide h3 {
+    margin: 0.35rem 0;
+}
+
+.lmb-ban__timer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.lmb-ban__timer div {
+    padding: 0.8rem 0.5rem;
+    text-align: center;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.8rem;
+    background: var(--thv-theme-surface);
+}
+
+.lmb-ban__timer strong, .lmb-ban__timer span {
+    display: block;
+}
+
+.lmb-ban__timer strong {
+    font-size: 1.5rem;
+}
+
+.lmb-ban__timer span {
+    color: var(--thv-theme-muted);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+}
+
+.lmb-ban__timer + form {
+    margin-top: 0.8rem;
+}
+
+.lmb-ban__referral {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 0.8rem;
+    align-items: end;
+}
+
+.lmb-ban__referral label {
+    display: grid;
+    gap: 0.35rem;
+    color: var(--thv-theme-muted);
+}
+
+.lmb-ban__referral label span {
+    display: flex;
+}
+
+.lmb-ban__referral label input {
+    border-radius: 0.7rem 0 0 0.7rem;
+}
+
+.lmb-ban__referral label button {
+    border-radius: 0 0.7rem 0.7rem 0;
+}
+
+.lmb-ban__referral > div {
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 0.8rem;
+    background: var(--thv-theme-surface);
+}
+
+.lmb-ban__referral strong, .lmb-ban__referral small {
+    display: block;
+}
+
+.lmb-ban__referral small {
+    color: var(--thv-theme-muted);
+}
+
+.lmb-ban__announcements p {
+    display: none;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.8rem;
+    background: var(--thv-theme-surface);
+}
+
+.lmb-ban__announcements p.is-active {
+    display: block;
+}
+
+.lmb-ban__announcements + button {
+    margin-top: 0.7rem;
+}
+
+.lmb-ban [data-status] {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: var(--thv-theme-success);
+    font-weight: 750;
+}
+
+@media (max-width: 760px) {
+    .lmb-ban {
+        grid-template-columns: 1fr;
+    }
+
+    .lmb-ban form {
+        flex-direction: column;
+    }
+
+    .lmb-ban__timer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lmb-ban__referral {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lmb-ban__referral label {
+        grid-column: 1 / -1;
+    }
+
+}

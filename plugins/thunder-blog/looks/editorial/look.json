@@ -1,0 +1,16 @@
+{
+  "name": "Editorial",
+  "version": "1.4.0",
+  "plugin": "thunder-blog",
+  "plugin_requires": "^1.1.0",
+  "author": "Eathorne Choongo",
+  "thumbnail": "../../assets/images/thumbnail.svg",
+  "description": "A spacious magazine-inspired blog look with strong article typography.",
+  "palettes": [
+    "indigo",
+    "forest",
+    "sunset",
+    "ocean",
+    "charcoal"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "mercado-street-food-header-footer",
+  "name": "Mercado Street Food Header and Footer",
+  "description": "A colourful market-inspired navigation and footer set for street-food halls, pop-ups and casual dining brands.",
+  "category": "Food & Restaurant",
+  "order": 3880,
+  "tags": [
+    "header footer",
+    "street food",
+    "market",
+    "casual dining",
+    "colourful"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

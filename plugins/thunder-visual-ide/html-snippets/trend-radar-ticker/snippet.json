@@ -1,0 +1,18 @@
+{
+  "id": "trend-radar-ticker",
+  "name": "Trend Radar Ticker",
+  "description": "A futuristic magazine trend board with a scrolling headline band, ranked signals and a pause control.",
+  "category": "Magazine & Editorial",
+  "order": 3209,
+  "tags": [
+    "magazine",
+    "trends",
+    "ticker",
+    "web3",
+    "interactive"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

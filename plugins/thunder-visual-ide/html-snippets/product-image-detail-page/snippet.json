@@ -1,0 +1,20 @@
+{
+  "id": "product-image-detail-page",
+  "name": "Product Image Detail Page",
+  "description": "A premium single-product image page with colour selectors, image metadata and purchase action.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9104,
+  "tags": [
+    "single image",
+    "product",
+    "commerce",
+    "detail page"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

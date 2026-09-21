@@ -1,0 +1,270 @@
+{
+  "slug": "medicine-prescription-delivery",
+  "name": "Prescription Delivery",
+  "category": "Medicine & Science",
+  "description": "Pharmacy delivery feature with simple steps",
+  "keywords": [
+    "pharmacy",
+    "delivery",
+    "prescription"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-med-prescription-delivery\"><div class=\"tb-med-prescription-delivery__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}<div class=\"tb-med-prescription-delivery__steps\">{{elements:steps}}</div>{{elements:cta}}</div>{{elements:image}}</section>",
+  "css": ".tb-med-prescription-delivery{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:clamp(42px,7vw,88px);background:var(--tb-color-background)}.tb-med-prescription-delivery__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.14em}.tb-med-prescription-delivery__title{font-size:clamp(38px,5vw,62px);margin:10px 0 15px;color:var(--tb-color-secondary)}.tb-med-prescription-delivery__text{color:var(--tb-color-muted);font-size:17px;line-height:1.7}.tb-med-prescription-delivery__steps{display:grid;gap:10px;margin:22px 0}.tb-med-prescription-delivery__step{display:grid;grid-template-columns:38px 1fr;gap:12px;align-items:center;padding:12px;background:var(--tb-color-surface);border:1px solid var(--tb-color-border);border-radius:12px}.tb-med-prescription-delivery__step__icon{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--tb-color-primary);color:var(--tb-color-surface);font-weight:900}.tb-med-prescription-delivery__step__title{margin:0;font-size:16px;color:var(--tb-color-secondary)}.tb-med-prescription-delivery__step__text{display:none}.tb-med-prescription-delivery__cta{display:inline-block;padding:13px 18px;background:var(--tb-color-secondary);color:var(--tb-color-surface);text-decoration:none;border-radius:8px;font-weight:900}.tb-med-prescription-delivery__image{width:100%;height:520px;object-fit:cover;border-radius:24px}@media(max-width:760px){.tb-med-prescription-delivery{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Pharmacy delivery"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-med-prescription-delivery__eyebrow\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Medication, without the extra trip"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-med-prescription-delivery__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Explain a pharmacy ordering and delivery flow in a simple, reassuring format."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-med-prescription-delivery__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "steps",
+      "label": "Steps",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "title": "",
+        "text": "",
+        "icon": "✦"
+      },
+      "schema": [
+        {
+          "key": "icon",
+          "label": "Icon",
+          "type": "text",
+          "selector": ".tb-med-prescription-delivery__step__icon"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-med-prescription-delivery__step__title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-med-prescription-delivery__step__text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-med-prescription-delivery__step\"><span class=\"tb-med-prescription-delivery__step__icon\">{{icon}}</span><h3 class=\"tb-med-prescription-delivery__step__title\">{{title}}</h3><p class=\"tb-med-prescription-delivery__step__text\">{{text}}</p></article>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "icon": "1",
+          "title": "Send prescription",
+          "text": ""
+        },
+        {
+          "icon": "2",
+          "title": "We prepare it",
+          "text": ""
+        },
+        {
+          "icon": "3",
+          "title": "Receive delivery",
+          "text": ""
+        }
+      ],
+      "min": 1,
+      "max": 12
+    },
+    {
+      "key": "cta",
+      "label": "Action",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Start an order",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-med-prescription-delivery__cta\" href=\"{{url}}\">{{text}}</a>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "image",
+      "label": "Pharmacy image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Prescription delivery"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-med-prescription-delivery__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-med-prescription-delivery__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

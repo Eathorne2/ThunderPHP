@@ -1,0 +1,20 @@
+{
+  "id": "museum-object-detail-page",
+  "name": "Museum Object Detail Page",
+  "description": "A scholarly object-detail page with a large isolated image, catalogue fields and expandable curatorial note.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9107,
+  "tags": [
+    "single image",
+    "museum",
+    "object",
+    "catalogue"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

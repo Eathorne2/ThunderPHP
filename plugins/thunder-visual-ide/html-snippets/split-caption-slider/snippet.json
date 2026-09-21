@@ -1,0 +1,20 @@
+{
+  "id": "split-caption-slider",
+  "name": "Split Caption Slider",
+  "description": "A two-column image slider with rich captions and navigation.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Sliders",
+  "order": 8034,
+  "tags": [
+    "slider",
+    "images",
+    "caption",
+    "split"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

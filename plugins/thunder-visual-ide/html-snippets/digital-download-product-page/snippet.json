@@ -1,0 +1,20 @@
+{
+  "id": "digital-download-product-page",
+  "name": "Digital Download Product Page",
+  "description": "A digital product page with file details, licence options and purchase summary.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Single Product Pages",
+  "order": 8061,
+  "tags": [
+    "product",
+    "digital",
+    "download",
+    "commerce"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

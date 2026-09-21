@@ -1,0 +1,18 @@
+{
+  "id": "hotel-concierge-contact-panel",
+  "name": "Hotel Concierge Contact Panel",
+  "description": "A guest concierge contact section with service channels, enquiry form and response expectations.",
+  "category": "Travel & Hotels",
+  "order": 5000,
+  "tags": [
+    "hotel",
+    "concierge",
+    "contact",
+    "form",
+    "guest service"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

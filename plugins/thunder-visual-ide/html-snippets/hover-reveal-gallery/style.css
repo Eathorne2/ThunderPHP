@@ -1,0 +1,45 @@
+.ig-hover-reveal {
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.ig-hover-reveal *,
+.ig-hover-reveal *::before,
+.ig-hover-reveal *::after {
+    box-sizing: border-box;
+}
+
+.ig-hover-reveal button,
+.ig-hover-reveal input,
+.ig-hover-reveal select,
+.ig-hover-reveal textarea {
+    font: inherit;
+}
+
+.ig-hover-reveal a {
+    color: inherit;
+}
+
+.ig-hover-reveal img {
+    display: block;
+    max-width: 100%;
+}
+.ig-hover-reveal { padding: clamp(1.2rem, 4vw, 3rem); background: var(--thv-theme-surface); }
+.ig-hover-reveal header { margin-bottom: 1.2rem; }
+.ig-hover-reveal header p { margin: 0; color: var(--thv-theme-primary); font-size: .68rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+.ig-hover-reveal h2 { margin: .3rem 0 0; font-size: clamp(2.2rem, 6vw, 4.7rem); letter-spacing: -.055em; }
+.ig-hover-reveal__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .65rem; }
+.ig-hover-reveal__grid a { position: relative; min-height: 26rem; overflow: hidden; border-radius: .8rem; background: var(--thv-theme-surface-alt); text-decoration: none; }
+.ig-hover-reveal__grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease, opacity .3s ease; }
+.ig-hover-reveal__grid span { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: end; padding: 1.1rem; color: var(--thv-theme-on-primary); background: linear-gradient(transparent 25%, color-mix(in srgb, var(--thv-theme-text) 82%, transparent)); transform: translateY(32%); transition: transform .3s ease; }
+.ig-hover-reveal__grid a:hover span,
+.ig-hover-reveal__grid a:focus-visible span { transform: translateY(0); }
+.ig-hover-reveal__grid a:hover img,
+.ig-hover-reveal__grid a:focus-visible img { transform: scale(1.05); opacity: .82; }
+.ig-hover-reveal__grid small { font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.ig-hover-reveal__grid strong { margin-top: .3rem; font-family: Georgia, serif; font-size: 2rem; font-weight: 400; }
+.ig-hover-reveal__grid b { margin-top: .75rem; color: var(--thv-theme-secondary); font-size: .82rem; }
+@media (max-width: 800px) { .ig-hover-reveal__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .ig-hover-reveal__grid { grid-template-columns: 1fr; } .ig-hover-reveal__grid a { min-height: 22rem; } }

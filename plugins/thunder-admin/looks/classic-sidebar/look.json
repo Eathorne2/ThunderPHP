@@ -1,0 +1,88 @@
+{
+    "name": "Classic Sidebar",
+    "version": "1.0.6",
+    "plugin": "thunder-admin",
+    "plugin_requires": "^1.0.0",
+    "author": "Eathorne Choongo",
+    "thumbnail": "screenshot.png",
+    "description": "A responsive administration layout with a classic sidebar, topbar, nested navigation and dashboard widgets.",
+    "default_palette": "thunder-violet",
+    "palettes": {
+        "thunder-violet": {
+            "name": "Thunder Violet",
+            "description": "The default Thunder Admin violet palette.",
+            "colors": {
+                "primary": "#5b4ce6",
+                "primary_dark": "#4338ca",
+                "primary_soft": "#eeecff",
+                "sidebar_bg": "#111827",
+                "sidebar_text": "#aeb8ca",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f4f7fb",
+                "surface": "#ffffff",
+                "border": "#e5eaf1",
+                "text": "#172033",
+                "muted": "#6b7280",
+                "success": "#16845b",
+                "danger": "#dc2626"
+            }
+        },
+        "ocean-blue": {
+            "name": "Ocean Blue",
+            "description": "A clean blue control-panel palette.",
+            "colors": {
+                "primary": "#2563eb",
+                "primary_dark": "#1d4ed8",
+                "primary_soft": "#dbeafe",
+                "sidebar_bg": "#0f172a",
+                "sidebar_text": "#b8c4d8",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f3f7fc",
+                "surface": "#ffffff",
+                "border": "#dce5f0",
+                "text": "#172033",
+                "muted": "#64748b",
+                "success": "#0f9f6e",
+                "danger": "#dc2626"
+            }
+        },
+        "emerald": {
+            "name": "Emerald",
+            "description": "A calm green palette with a deep sidebar.",
+            "colors": {
+                "primary": "#059669",
+                "primary_dark": "#047857",
+                "primary_soft": "#d1fae5",
+                "sidebar_bg": "#062f2a",
+                "sidebar_text": "#b7d6ce",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f2f8f6",
+                "surface": "#ffffff",
+                "border": "#dce9e5",
+                "text": "#17322d",
+                "muted": "#607a74",
+                "success": "#07875f",
+                "danger": "#d14343"
+            }
+        },
+        "graphite": {
+            "name": "Graphite",
+            "description": "A restrained neutral palette for business applications.",
+            "colors": {
+                "primary": "#475569",
+                "primary_dark": "#334155",
+                "primary_soft": "#e2e8f0",
+                "sidebar_bg": "#111827",
+                "sidebar_text": "#b6becb",
+                "sidebar_heading": "#ffffff",
+                "page_bg": "#f5f6f8",
+                "surface": "#ffffff",
+                "border": "#e1e5ea",
+                "text": "#1f2937",
+                "muted": "#6b7280",
+                "success": "#16845b",
+                "danger": "#c93b3b"
+            }
+        }
+    }
+}

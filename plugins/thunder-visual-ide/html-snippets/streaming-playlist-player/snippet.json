@@ -1,0 +1,18 @@
+{
+  "id": "streaming-playlist-player",
+  "name": "Streaming Playlist Player",
+  "description": "A polished playlist interface with active-track switching, progress display and playback controls.",
+  "category": "Music & Entertainment",
+  "order": 4240,
+  "tags": [
+    "music",
+    "playlist",
+    "player",
+    "streaming",
+    "audio"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

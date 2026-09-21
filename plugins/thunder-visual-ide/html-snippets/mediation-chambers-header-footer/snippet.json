@@ -1,0 +1,19 @@
+{
+  "id": "mediation-chambers-header-footer",
+  "name": "Mediation Chambers Header and Footer",
+  "description": "Independent mediation and facilitated negotiation for complex disputes.",
+  "category": "Business & Law",
+  "order": 5408,
+  "tags": [
+    "header",
+    "footer",
+    "business",
+    "law",
+    "navigation",
+    "mediation"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

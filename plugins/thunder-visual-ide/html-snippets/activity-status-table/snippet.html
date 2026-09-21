@@ -1,0 +1,106 @@
+<section class="activity-table">
+    <header class="activity-table__head">
+        <div>
+            <span>Recent activity</span>
+            <h2>Team workload</h2>
+        </div>
+        <button type="button" class="activity-table__export">Export CSV</button>
+    </header>
+    <div class="activity-table__wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" aria-label="Select all" data-select-all>
+                    </th>
+                    <th>Member</th>
+                    <th>Task</th>
+                    <th>Due</th>
+                    <th>Progress</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" data-row-check>
+                    </td>
+                    <td>
+                        <div class="member">
+                            <span class="avatar avatar--violet">AM</span>
+                            <div>
+                                <strong>Alice M.</strong>
+                                <small>Design</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Dashboard review</td>
+                    <td>Today</td>
+                    <td>
+                        <div class="meter">
+                            <span style="width:82%"></span>
+                        </div>
+                        <small>82%</small>
+                    </td>
+                    <td>
+                        <button class="more" type="button" aria-label="More options">•••</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" data-row-check>
+                    </td>
+                    <td>
+                        <div class="member">
+                            <span class="avatar avatar--blue">BK</span>
+                            <div>
+                                <strong>Brian K.</strong>
+                                <small>Engineering</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td>API integration</td>
+                    <td>Tomorrow</td>
+                    <td>
+                        <div class="meter">
+                            <span style="width:55%"></span>
+                        </div>
+                        <small>55%</small>
+                    </td>
+                    <td>
+                        <button class="more" type="button" aria-label="More options">•••</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" data-row-check>
+                    </td>
+                    <td>
+                        <div class="member">
+                            <span class="avatar avatar--green">CN</span>
+                            <div>
+                                <strong>Chipo N.</strong>
+                                <small>Content</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Help articles</td>
+                    <td>Friday</td>
+                    <td>
+                        <div class="meter">
+                            <span style="width:94%"></span>
+                        </div>
+                        <small>94%</small>
+                    </td>
+                    <td>
+                        <button class="more" type="button" aria-label="More options">•••</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer class="activity-table__footer">
+        <span data-selected-count>0 selected</span>
+        <span>Showing 3 of 18 members</span>
+    </footer>
+</section>

@@ -1,0 +1,18 @@
+{
+  "id": "print-club-call-to-action",
+  "name": "Print Club Call to Action",
+  "description": "A premium magazine-club subscription section with stacked issue covers, benefits and inline signup feedback.",
+  "category": "Call to Action",
+  "order": 2470,
+  "tags": [
+    "call to action",
+    "magazine",
+    "membership",
+    "subscription",
+    "editorial"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

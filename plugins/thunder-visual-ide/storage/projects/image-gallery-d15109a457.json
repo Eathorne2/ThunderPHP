@@ -1,0 +1,106 @@
+{
+    "id": "image-gallery-d15109a457",
+    "name": "Image gallery",
+    "created_at": "2026-07-30T12:36:26+02:00",
+    "modified_at": "2026-07-30T12:40:25+02:00",
+    "project": {
+        "schema_version": 4,
+        "generated_by": "Thunder Visual IDE 0.12.85",
+        "active_graph_id": "main",
+        "graphs": {
+            "main": {
+                "id": "main",
+                "name": "Plugin Architecture",
+                "kind": "architecture",
+                "nodes": [
+                    {
+                        "id": "project-plugin-887ebd91-8cb0-493d-9fb1-0541012551a1",
+                        "type": "project.plugin",
+                        "x": -53,
+                        "y": -73,
+                        "data": {
+                            "name": "My Plugin",
+                            "id": "my-plugin",
+                            "namespace": "MyPlugin",
+                            "type": "Companion",
+                            "version": "1.0.0",
+                            "core_requires": "^1.0.0",
+                            "description": "",
+                            "author": "",
+                            "website": "",
+                            "thumbnail": "",
+                            "active": true,
+                            "look": "main",
+                            "index": 10,
+                            "dependencies": "{}"
+                        }
+                    },
+                    {
+                        "id": "lifecycle-view-2e110256-a219-4f1e-8fd5-1cf63d19d622",
+                        "type": "lifecycle.view",
+                        "x": 213.87093153759815,
+                        "y": 72.08529741863077,
+                        "data": {
+                            "title": "View",
+                            "filename": "frontend/page-template.php",
+                            "hook_name": "view",
+                            "priority": 10,
+                            "content": "<h1>Page</h1>\n",
+                            "javascript_graph_id": "",
+                            "graph_id": "graph-186eeddb-d3f1-4550-b523-166a05a1b7ea"
+                        }
+                    },
+                    {
+                        "id": "looks-look-e45f0c6e-3ac5-4f76-90f7-ddad3a42b043",
+                        "type": "looks.look",
+                        "x": -45.38832772166106,
+                        "y": 251.65881032547702,
+                        "data": {
+                            "title": "Main Look",
+                            "folder": "main",
+                            "name": "Main Look",
+                            "version": "1.0.0",
+                            "plugin_requires": "^1.0.0",
+                            "author": "",
+                            "thumbnail": "",
+                            "description": "",
+                            "form_theme_id": "classic",
+                            "form_theme_palette_id": "default",
+                            "form_theme_colors": [],
+                            "load_theme_css": true,
+                            "theme_css_path": "frontend/theme-colors.php",
+                            "theme_hook_name": "before_view",
+                            "theme_hook_priority": 100,
+                            "form_theme_palette_selection": "theme:default"
+                        }
+                    }
+                ],
+                "edges": [],
+                "viewport": {
+                    "x": 96.431,
+                    "y": 86.13199999999998,
+                    "zoom": 0.8910000000000001
+                },
+                "hidden_node_ids": []
+            },
+            "graph-186eeddb-d3f1-4550-b523-166a05a1b7ea": {
+                "id": "graph-186eeddb-d3f1-4550-b523-166a05a1b7ea",
+                "name": "View View Builder",
+                "kind": "view",
+                "owner_node_id": "lifecycle-view-2e110256-a219-4f1e-8fd5-1cf63d19d622",
+                "nodes": [],
+                "edges": [],
+                "viewport": {
+                    "x": 80,
+                    "y": 80,
+                    "zoom": 1
+                },
+                "hidden_node_ids": []
+            }
+        },
+        "workspace": {
+            "project_id": "image-gallery-d15109a457",
+            "project_name": "Image gallery"
+        }
+    }
+}

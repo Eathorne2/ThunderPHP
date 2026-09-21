@@ -1,0 +1,197 @@
+{
+  "slug": "edu-study-departments",
+  "name": "Study Departments",
+  "category": "Education",
+  "description": "Numbered academic departments grid for colleges and universities",
+  "keywords": [
+    "education",
+    "departments",
+    "university",
+    "faculties"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-edu-departments\"><div class=\"tb-edu-departments__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-edu-departments__grid\">{{elements:departments}}</div></div>",
+  "css": ".tb-edu-departments{padding:clamp(34px,6vw,78px);background:var(--tb-color-background)}.tb-edu-departments__head{max-width:750px;margin-bottom:30px}.tb-edu-departments__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.15em}.tb-edu-departments__title{margin:8px 0;color:var(--tb-color-secondary);font-size:clamp(40px,5vw,60px)}.tb-edu-departments__text{color:var(--tb-color-muted);line-height:1.7}.tb-edu-departments__grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--tb-color-border);border-left:1px solid var(--tb-color-border)}.tb-edu-departments__card{padding:28px;border-right:1px solid var(--tb-color-border);border-bottom:1px solid var(--tb-color-border);background:var(--tb-color-surface)}.tb-edu-departments__number{color:var(--tb-color-primary);font-size:12px;font-weight:950}.tb-edu-departments__card-title{margin:34px 0 8px;color:var(--tb-color-secondary);font-size:28px}.tb-edu-departments__card-text{margin:0;color:var(--tb-color-muted);line-height:1.65}@media(max-width:650px){.tb-edu-departments__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Academic areas"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-edu-departments__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Our study departments"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-edu-departments__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Organize faculties, departments, subject areas or training divisions."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-edu-departments__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "departments",
+      "label": "Department",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "number": "01",
+        "title": "Science & Technology",
+        "text": "Research, computing and applied sciences."
+      },
+      "schema": [
+        {
+          "key": "number",
+          "label": "Number",
+          "type": "text",
+          "selector": ".tb-edu-departments__number"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-edu-departments__card-title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-edu-departments__card-text",
+          "rows": 2
+        }
+      ],
+      "template": "<article class=\"tb-edu-departments__card\"><span class=\"tb-edu-departments__number\">{{number}}</span><h3 class=\"tb-edu-departments__card-title\">{{title}}</h3><p class=\"tb-edu-departments__card-text\">{{text}}</p></article>",
+      "min": 1,
+      "max": 12,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "number": "01",
+          "title": "Science & Technology",
+          "text": "Research, computing and applied sciences."
+        },
+        {
+          "number": "02",
+          "title": "Business",
+          "text": "Management, finance and entrepreneurship."
+        },
+        {
+          "number": "03",
+          "title": "Arts & Humanities",
+          "text": "Language, culture, writing and creative practice."
+        },
+        {
+          "number": "04",
+          "title": "Education",
+          "text": "Teaching, leadership and child development."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

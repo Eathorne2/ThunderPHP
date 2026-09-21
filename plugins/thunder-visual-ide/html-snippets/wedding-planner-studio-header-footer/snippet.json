@@ -1,0 +1,18 @@
+{
+  "id": "wedding-planner-studio-header-footer",
+  "name": "Wedding Planner Studio Header and Footer",
+  "description": "A refined agency shell for wedding planners with services navigation, enquiry action and editorial footer.",
+  "category": "Wedding",
+  "order": 4780,
+  "tags": [
+    "wedding planner",
+    "agency",
+    "header",
+    "footer",
+    "services"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

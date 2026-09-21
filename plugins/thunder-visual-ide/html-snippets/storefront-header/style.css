@@ -1,0 +1,128 @@
+.store-header {
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    background: var(--thv-theme-surface, #fff);
+    color: var(--thv-theme-text, #0f172a)
+}
+
+.store-header__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .45rem 1rem;
+    background: var(--thv-theme-text, #0f172a);
+    color: var(--thv-theme-on-primary, #fff);
+    font-size: .72rem
+}
+
+.store-header__top nav {
+    display: flex;
+    gap: 1rem
+}
+
+.store-header a {
+    color: inherit;
+    text-decoration: none
+}
+
+.store-header__main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem
+}
+
+.store-header__brand {
+    font-size: 1.15rem;
+    font-weight: 900;
+    letter-spacing: .05em
+}
+
+.store-header__brand span {
+    color: var(--thv-theme-primary, #2563eb)
+}
+
+.store-header__search {
+    display: flex;
+    flex: 1;
+    max-width: 42rem;
+    margin: auto
+}
+
+.store-header__search input {
+    flex: 1;
+    min-width: 0;
+    padding: .7rem .8rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: .55rem 0 0 .55rem;
+    background: var(--thv-theme-surface-alt, #f8fafc);
+    color: var(--thv-theme-text, #0f172a)
+}
+
+.store-header__search button {
+    padding: .7rem .9rem;
+    border: 0;
+    border-radius: 0 .55rem .55rem 0;
+    background: var(--thv-theme-primary, #2563eb);
+    color: var(--thv-theme-on-primary, #fff);
+    font-weight: 800
+}
+
+.store-header__icons {
+    display: flex;
+    gap: .8rem;
+    font-size: .82rem;
+    font-weight: 750
+}
+
+.store-header__icons b {
+    display: inline-grid;
+    place-items: center;
+    min-width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: var(--thv-theme-danger, #dc2626);
+    color: #fff;
+    font-size: .65rem
+}
+
+.store-header__categories {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: .65rem 1rem;
+    border-top: 1px solid var(--thv-theme-border, #dbe4ef);
+    font-size: .8rem;
+    font-weight: 750
+}
+
+.store-header__menu {
+    display: none;
+    border: 0;
+    background: transparent;
+    font-size: 1.2rem
+}
+
+@media(max-width:760px) {
+    .store-header__top nav, .store-header__icons {
+        display: none
+    }
+    .store-header__menu {
+        display: block
+    }
+    .store-header__main {
+        flex-wrap: wrap
+    }
+    .store-header__search {
+        order: 3;
+        flex-basis: 100%;
+        max-width: none
+    }
+    .store-header__categories {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start
+    }
+    .store-header__categories.is-open {
+        display: flex
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "corporate-capabilities-icon-grid",
+  "name": "Corporate Capabilities Icon Grid",
+  "description": "An executive capabilities grid with numbered services, concise descriptions and outcome links.",
+  "category": "Icon Grids",
+  "order": 3440,
+  "tags": [
+    "corporate",
+    "services",
+    "capabilities",
+    "icons",
+    "consulting"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

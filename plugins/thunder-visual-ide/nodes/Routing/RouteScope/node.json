@@ -1,0 +1,48 @@
+{
+  "type": "routing.route_scope",
+  "label": "Route Scope",
+  "category": "Routing",
+  "kind": "architecture",
+  "icon": "SCOPE",
+  "color": "#0f766e",
+  "description": "Writes explicit top-level route prefixes to config.json routes.on or routes.off.",
+  "allowed_graphs": [
+    "architecture"
+  ],
+  "defaults": {
+    "title": "Route Scope",
+    "route_list": "on",
+    "paths": "page"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "route_list",
+      "label": "Configuration list",
+      "type": "select",
+      "options": [
+        "on",
+        "off"
+      ],
+      "help": "on enables the plugin for matching first URL segments. off excludes matching first URL segments."
+    },
+    {
+      "name": "paths",
+      "label": "Route prefixes",
+      "type": "textarea",
+      "help": "Comma-separated or one per line. /page and page both compile as page. Use one Route Scope node for routes.on and another for routes.off."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Routing\\RouteScopeCompiler",
+    "file": "Compiler.php"
+  }
+}

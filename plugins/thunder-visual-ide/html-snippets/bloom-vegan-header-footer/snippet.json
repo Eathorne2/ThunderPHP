@@ -1,0 +1,18 @@
+{
+  "id": "bloom-vegan-header-footer",
+  "name": "Bloom Vegan Café Header and Footer",
+  "description": "A playful plant-based café shell with pill navigation, order actions and a bright community-focused footer.",
+  "category": "Food & Restaurant",
+  "order": 3860,
+  "tags": [
+    "header footer",
+    "vegan",
+    "cafe",
+    "plant based",
+    "healthy"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

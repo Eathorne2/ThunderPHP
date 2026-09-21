@@ -1,0 +1,23 @@
+{
+    "name": "Thunder Local Docs",
+    "type": "Companion",
+    "version": "1.0.3",
+    "core_requires": "^1.0.0",
+    "id": "thunder-local-docs",
+    "description": "Fast, database-free local documentation for ThunderPHP using Markdown files and a generated search index.",
+    "author": "Eathorne Choongo",
+    "website": "thunderphp.com",
+    "thumbnail": "thumbnail.png",
+    "active": true,
+    "look": "main",
+    "index": 20,
+    "permissions": [],
+    "routes": {
+        "on": [
+            "docs"
+        ],
+        "off": [],
+        "routes": []
+    },
+    "dependencies": {}
+}

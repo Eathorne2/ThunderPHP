@@ -1,0 +1,20 @@
+{
+  "id": "confirm-action-modal",
+  "name": "Confirm Action Modal",
+  "description": "A focused confirmation dialog with cancel and destructive actions.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Alerts - Modal",
+  "order": 2000,
+  "tags": [
+    "alert",
+    "modal",
+    "confirmation",
+    "dialog"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,88 @@
+.ig-fullbleed-story {
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.ig-fullbleed-story *,
+.ig-fullbleed-story *::before,
+.ig-fullbleed-story *::after {
+    box-sizing: border-box;
+}
+
+.ig-fullbleed-story button,
+.ig-fullbleed-story input,
+.ig-fullbleed-story select,
+.ig-fullbleed-story textarea {
+    font: inherit;
+}
+
+.ig-fullbleed-story a {
+    color: inherit;
+}
+
+.ig-fullbleed-story img {
+    display: block;
+    max-width: 100%;
+}
+.ig-fullbleed-story { background: var(--thv-theme-background); }
+
+.ig-fullbleed-story header {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: clamp(2rem, 7vw, 6rem) clamp(1rem, 4vw, 3rem);
+    text-align: center;
+}
+
+.ig-fullbleed-story header p {
+    margin: 0;
+    color: var(--thv-theme-primary);
+    font-size: .72rem;
+    font-weight: 850;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.ig-fullbleed-story header h2 {
+    margin: .75rem 0;
+    font-family: Georgia, serif;
+    font-size: clamp(3rem, 9vw, 7.5rem);
+    font-weight: 400;
+    letter-spacing: -.065em;
+    line-height: .92;
+}
+
+.ig-fullbleed-story header span { color: var(--thv-theme-muted); }
+
+.ig-fullbleed-story figure {
+    position: relative;
+    min-height: min(76vh, 52rem);
+    margin: 0;
+    overflow: hidden;
+}
+
+.ig-fullbleed-story figure + figure { margin-top: .45rem; }
+.ig-fullbleed-story figure img { width: 100%; height: 100%; min-height: inherit; object-fit: cover; }
+
+.ig-fullbleed-story figcaption {
+    position: absolute;
+    right: clamp(1rem, 4vw, 3rem);
+    bottom: clamp(1rem, 4vw, 3rem);
+    left: clamp(1rem, 4vw, 3rem);
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+    max-width: 40rem;
+    padding: 1rem;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-on-primary) 28%, transparent);
+    border-radius: .9rem;
+    color: var(--thv-theme-on-primary);
+    background: color-mix(in srgb, var(--thv-theme-text) 62%, transparent);
+    backdrop-filter: blur(12px);
+}
+
+.ig-fullbleed-story figcaption b { color: var(--thv-theme-secondary); font-size: 1.4rem; }
+.ig-fullbleed-story figcaption strong,
+.ig-fullbleed-story figcaption span { display: block; }
+.ig-fullbleed-story figcaption span { margin-top: .2rem; opacity: .82; font-size: .88rem; }

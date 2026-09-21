@@ -1,0 +1,203 @@
+{
+  "slug": "wed-pricing-packages",
+  "name": "Wedding Planning Packages",
+  "category": "Wedding",
+  "description": "Three editable pricing packages for planners and coordinators",
+  "keywords": [
+    "wedding",
+    "pricing",
+    "planner",
+    "packages"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-wed-packages\"><div class=\"tb-wed-packages__head\">{{elements:eyebrow}}{{elements:title}}{{elements:intro}}</div><div class=\"tb-wed-packages__grid\">{{elements:packages}}</div></div>",
+  "css": ".tb-wed-packages{padding:clamp(34px,6vw,80px);background:var(--tb-color-background)}.tb-wed-packages__head{max-width:720px;margin-bottom:28px}.tb-wed-packages__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-wed-packages__title{margin:8px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(40px,5vw,60px);font-weight:400}.tb-wed-packages__intro{color:var(--tb-color-muted);line-height:1.7}.tb-wed-packages__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tb-wed-packages__package{padding:28px;border:1px solid var(--tb-color-border);background:var(--tb-color-surface)}.tb-wed-packages__name{margin:0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:30px;font-weight:400}.tb-wed-packages__price{display:block;margin:20px 0;color:var(--tb-color-primary);font-size:28px;font-weight:900}.tb-wed-packages__text,.tb-wed-packages__features{color:var(--tb-color-muted);line-height:1.65}.tb-wed-packages__features{padding-top:18px;border-top:1px solid var(--tb-color-border);font-size:13px}@media(max-width:760px){.tb-wed-packages__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Planning packages"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-wed-packages__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Choose the support you need"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-wed-packages__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "intro",
+      "label": "Intro",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Clear options for different stages of the wedding planning journey."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-wed-packages__intro\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "packages",
+      "label": "Package",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "name": "Essential",
+        "price": "K8,500",
+        "text": "Day-of coordination for couples who have the planning covered.",
+        "features": "Timeline · vendor liaison · ceremony coordination"
+      },
+      "schema": [
+        {
+          "key": "name",
+          "label": "Package name",
+          "type": "text",
+          "selector": ".tb-wed-packages__name"
+        },
+        {
+          "key": "price",
+          "label": "Price",
+          "type": "text",
+          "selector": ".tb-wed-packages__price"
+        },
+        {
+          "key": "text",
+          "label": "Description",
+          "type": "textarea",
+          "selector": ".tb-wed-packages__text",
+          "rows": 3
+        },
+        {
+          "key": "features",
+          "label": "Features",
+          "type": "textarea",
+          "selector": ".tb-wed-packages__features",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-wed-packages__package\"><h3 class=\"tb-wed-packages__name\">{{name}}</h3><span class=\"tb-wed-packages__price\">{{price}}</span><p class=\"tb-wed-packages__text\">{{text}}</p><p class=\"tb-wed-packages__features\">{{features}}</p></article>",
+      "min": 1,
+      "max": 6,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "name": "Essential",
+          "price": "K8,500",
+          "text": "Day-of coordination for couples who have the planning covered.",
+          "features": "Timeline · vendor liaison · ceremony coordination"
+        },
+        {
+          "name": "Signature",
+          "price": "K18,000",
+          "text": "Planning and styling support from the middle of your journey.",
+          "features": "Design direction · vendor support · coordination"
+        },
+        {
+          "name": "Full Service",
+          "price": "K32,000",
+          "text": "A complete planning partnership from first concept to final send-off.",
+          "features": "Planning · design · budget · suppliers · wedding day"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

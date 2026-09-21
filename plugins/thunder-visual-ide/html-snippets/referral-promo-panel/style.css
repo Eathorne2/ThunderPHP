@@ -1,0 +1,220 @@
+.rpp-pan {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.rpp-pan *, .rpp-pan *::before, .rpp-pan *::after {
+    box-sizing: border-box;
+}
+
+.rpp-pan button, .rpp-pan input, .rpp-pan select, .rpp-pan textarea {
+    font: inherit;
+}
+
+.rpp-pan a {
+    color: inherit;
+}
+
+.rpp-pan {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.8fr);
+    gap: 2rem;
+    align-items: center;
+    max-width: 72rem;
+    padding: clamp(1.5rem, 5vw, 3.5rem);
+    overflow: hidden;
+    border-radius: 1.5rem;
+    background: color-mix(in srgb, var(--thv-theme-primary) 12%, var(--thv-theme-background));
+}
+
+.rpp-pan::after {
+    content: '';
+    position: absolute;
+    right: -8rem;
+    top: -8rem;
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--thv-theme-secondary) 22%, transparent);
+}
+
+.rpp-pan > * {
+    position: relative;
+    z-index: 1;
+}
+
+.rpp-pan__copy > span, .rpp-pan__guide > span {
+    color: var(--thv-theme-primary);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.rpp-pan__copy h2 {
+    margin: 0.45rem 0;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 0.98;
+}
+
+.rpp-pan__copy p, .rpp-pan__guide p {
+    color: var(--thv-theme-muted);
+    line-height: 1.65;
+}
+
+.rpp-pan form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.rpp-pan input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.8rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.7rem;
+    background: var(--thv-theme-surface);
+    color: var(--thv-theme-text);
+}
+
+.rpp-pan button {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: 0.7rem;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+    font-weight: 850;
+    cursor: pointer;
+}
+
+.rpp-pan__guide {
+    padding: 1.2rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface);
+}
+
+.rpp-pan__guide h3 {
+    margin: 0.35rem 0;
+}
+
+.rpp-pan__timer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.rpp-pan__timer div {
+    padding: 0.8rem 0.5rem;
+    text-align: center;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.8rem;
+    background: var(--thv-theme-surface);
+}
+
+.rpp-pan__timer strong, .rpp-pan__timer span {
+    display: block;
+}
+
+.rpp-pan__timer strong {
+    font-size: 1.5rem;
+}
+
+.rpp-pan__timer span {
+    color: var(--thv-theme-muted);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+}
+
+.rpp-pan__timer + form {
+    margin-top: 0.8rem;
+}
+
+.rpp-pan__referral {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 0.8rem;
+    align-items: end;
+}
+
+.rpp-pan__referral label {
+    display: grid;
+    gap: 0.35rem;
+    color: var(--thv-theme-muted);
+}
+
+.rpp-pan__referral label span {
+    display: flex;
+}
+
+.rpp-pan__referral label input {
+    border-radius: 0.7rem 0 0 0.7rem;
+}
+
+.rpp-pan__referral label button {
+    border-radius: 0 0.7rem 0.7rem 0;
+}
+
+.rpp-pan__referral > div {
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 0.8rem;
+    background: var(--thv-theme-surface);
+}
+
+.rpp-pan__referral strong, .rpp-pan__referral small {
+    display: block;
+}
+
+.rpp-pan__referral small {
+    color: var(--thv-theme-muted);
+}
+
+.rpp-pan__announcements p {
+    display: none;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.8rem;
+    background: var(--thv-theme-surface);
+}
+
+.rpp-pan__announcements p.is-active {
+    display: block;
+}
+
+.rpp-pan__announcements + button {
+    margin-top: 0.7rem;
+}
+
+.rpp-pan [data-status] {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: var(--thv-theme-success);
+    font-weight: 750;
+}
+
+@media (max-width: 760px) {
+    .rpp-pan {
+        grid-template-columns: 1fr;
+    }
+
+    .rpp-pan form {
+        flex-direction: column;
+    }
+
+    .rpp-pan__timer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rpp-pan__referral {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rpp-pan__referral label {
+        grid-column: 1 / -1;
+    }
+
+}

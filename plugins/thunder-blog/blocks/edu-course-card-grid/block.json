@@ -1,0 +1,201 @@
+{
+  "slug": "edu-course-card-grid",
+  "name": "Course Card Grid",
+  "category": "Education",
+  "description": "Course category cards with descriptions, counts and links",
+  "keywords": [
+    "education",
+    "courses",
+    "cards",
+    "learning"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-edu-course-grid\"><div class=\"tb-edu-course-grid__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-edu-course-grid__grid\">{{elements:cards}}</div></div>",
+  "css": ".tb-edu-course-grid{padding:clamp(34px,6vw,78px);background:var(--tb-color-surface)}.tb-edu-course-grid__head{max-width:760px;margin-bottom:28px}.tb-edu-course-grid__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.15em}.tb-edu-course-grid__title{margin:8px 0;color:var(--tb-color-secondary);font-size:clamp(38px,5vw,58px)}.tb-edu-course-grid__text{color:var(--tb-color-muted);line-height:1.7}.tb-edu-course-grid__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.tb-edu-course-grid__card{padding:28px;border:1px solid var(--tb-color-border);background:var(--tb-color-background)}.tb-edu-course-grid__card-title{margin:0 0 12px;color:var(--tb-color-secondary);font-size:26px}.tb-edu-course-grid__card-text{color:var(--tb-color-muted);line-height:1.65}.tb-edu-course-grid__meta{display:block;margin:24px 0 10px;color:var(--tb-color-primary);font-weight:900;font-size:12px;text-transform:uppercase}.tb-edu-course-grid__link{color:var(--tb-color-text);font-weight:900;text-decoration:none}@media(max-width:760px){.tb-edu-course-grid__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Find your path"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-edu-course-grid__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Popular areas of study"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-edu-course-grid__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Use these cards for faculties, course categories or learning tracks."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-edu-course-grid__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "cards",
+      "label": "Course card",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "title": "Business & Leadership",
+        "text": "Practical learning for modern teams and founders.",
+        "meta": "12 courses",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-edu-course-grid__card-title"
+        },
+        {
+          "key": "text",
+          "label": "Description",
+          "type": "textarea",
+          "selector": ".tb-edu-course-grid__card-text",
+          "rows": 3
+        },
+        {
+          "key": "meta",
+          "label": "Meta",
+          "type": "text",
+          "selector": ".tb-edu-course-grid__meta"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<article class=\"tb-edu-course-grid__card\"><h3 class=\"tb-edu-course-grid__card-title\">{{title}}</h3><p class=\"tb-edu-course-grid__card-text\">{{text}}</p><span class=\"tb-edu-course-grid__meta\">{{meta}}</span><a class=\"tb-edu-course-grid__link\" href=\"{{url}}\">View courses →</a></article>",
+      "min": 1,
+      "max": 12,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "title": "Business & Leadership",
+          "text": "Practical learning for modern teams and founders.",
+          "meta": "12 courses",
+          "url": "#"
+        },
+        {
+          "title": "Technology",
+          "text": "Build useful digital skills from fundamentals to projects.",
+          "meta": "18 courses",
+          "url": "#"
+        },
+        {
+          "title": "Creative Arts",
+          "text": "Develop a portfolio through guided creative practice.",
+          "meta": "9 courses",
+          "url": "#"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

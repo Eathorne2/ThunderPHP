@@ -1,0 +1,18 @@
+{
+  "id": "luxury-resort-booking-hero",
+  "name": "Luxury Resort Booking Hero",
+  "description": "A cinematic resort hero with a compact availability form, property highlights and image-led booking call to action.",
+  "category": "Travel & Hotels",
+  "order": 4810,
+  "tags": [
+    "hotel",
+    "resort",
+    "hero",
+    "booking",
+    "luxury"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

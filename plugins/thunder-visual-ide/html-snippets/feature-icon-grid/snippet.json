@@ -1,0 +1,17 @@
+{
+  "id": "feature-icon-grid",
+  "name": "Feature Icon Grid",
+  "description": "A spacious six-item feature grid with simple inline SVG icons and supporting descriptions.",
+  "category": "Icon Grids",
+  "order": 3330,
+  "tags": [
+    "icons",
+    "grid",
+    "features",
+    "svg"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

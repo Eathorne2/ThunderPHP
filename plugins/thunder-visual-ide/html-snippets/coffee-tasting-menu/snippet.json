@@ -1,0 +1,18 @@
+{
+  "id": "coffee-tasting-menu",
+  "name": "Coffee Tasting Menu",
+  "description": "A specialty coffee menu with origin filters, tasting notes, roast details and brew recommendations.",
+  "category": "Food & Restaurant",
+  "order": 3700,
+  "tags": [
+    "coffee",
+    "cafe",
+    "menu",
+    "tasting",
+    "filter"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

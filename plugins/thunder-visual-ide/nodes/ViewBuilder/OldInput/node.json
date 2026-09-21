@@ -1,0 +1,92 @@
+{
+  "type": "view.old_input",
+  "label": "Old Input",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "OLD",
+  "color": "#0891b2",
+  "description": "Displays a ThunderPHP old input value, usually after validation failure.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Old Input",
+    "field": "email",
+    "fallback": "",
+    "escape": true,
+    "wrapper_tag": "span",
+    "css_class": "",
+    "widths": {
+      "mobile": 12,
+      "small": 12,
+      "medium": 12,
+      "large": 12
+    },
+    "inline_style": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "field",
+      "label": "Input field",
+      "type": "text"
+    },
+    {
+      "name": "fallback",
+      "label": "Fallback",
+      "type": "text"
+    },
+    {
+      "name": "escape",
+      "label": "Escape output",
+      "type": "checkbox"
+    },
+    {
+      "name": "wrapper_tag",
+      "label": "Wrapper tag",
+      "type": "select",
+      "options": [
+        "span",
+        "p",
+        "div",
+        "small",
+        "none"
+      ]
+    },
+    {
+      "name": "css_class",
+      "label": "CSS classes",
+      "type": "text"
+    },
+    {
+      "name": "inline_style",
+      "label": "Inline styles",
+      "type": "textarea",
+      "help": "CSS declarations applied directly to the same element as the custom CSS classes."
+    },
+    {
+      "name": "widths",
+      "label": "Responsive width",
+      "type": "breakpoints"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\OldInputCompiler",
+    "file": "Compiler.php"
+  }
+}

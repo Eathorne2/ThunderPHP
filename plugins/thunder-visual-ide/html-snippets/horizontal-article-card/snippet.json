@@ -1,0 +1,17 @@
+{
+  "id": "horizontal-article-card",
+  "name": "Horizontal Article Card",
+  "description": "A compact landscape article card suitable for news lists and related content.",
+  "category": "Blog Post Cards",
+  "order": 1190,
+  "tags": [
+    "blog",
+    "article",
+    "horizontal",
+    "news"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

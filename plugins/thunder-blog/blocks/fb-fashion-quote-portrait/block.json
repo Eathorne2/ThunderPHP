@@ -1,0 +1,165 @@
+{
+  "slug": "fb-fashion-quote-portrait",
+  "name": "Fashion Quote Portrait",
+  "category": "Fashion & Beauty",
+  "description": "Large portrait and editorial quotation for designers or stylists.",
+  "keywords": [
+    "fashion",
+    "quote",
+    "portrait",
+    "designer"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-fb-quote\">{{elements:image}}<div class=\"tb-fb-quote__copy\"><span class=\"tb-fb-quote__mark\">“</span>{{elements:quote}}{{elements:name}}{{elements:role}}</div></div>",
+  "css": ".tb-fb-quote{display:grid;grid-template-columns:minmax(300px,.9fr) minmax(0,1.1fr);background:var(--tb-color-secondary);color:var(--tb-color-surface)}.tb-fb-quote__image{width:100%;height:100%;min-height:560px;object-fit:cover;display:block}.tb-fb-quote__copy{padding:clamp(34px,7vw,92px);display:flex;flex-direction:column;justify-content:center}.tb-fb-quote__mark{color:var(--tb-color-accent);font-family:Georgia,serif;font-size:88px;line-height:.6}.tb-fb-quote__text{margin:20px 0;color:var(--tb-color-surface);font-family:Georgia,serif;font-size:clamp(34px,5vw,58px);font-weight:500;line-height:1.12}.tb-fb-quote__name{margin-top:18px;color:var(--tb-color-accent);font-weight:900}.tb-fb-quote__role{margin-top:5px;color:color-mix(in srgb,var(--tb-color-surface) 65%,transparent);font-size:13px}@media(max-width:760px){.tb-fb-quote{grid-template-columns:1fr}.tb-fb-quote__image{min-height:420px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "image",
+      "label": "Portrait",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Fashion designer or stylist portrait"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-fb-quote__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-fb-quote__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "quote",
+      "label": "Quote",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Style is strongest when it still feels like the person wearing it."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<blockquote class=\"tb-fb-quote__text\">{{text}}</blockquote>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "name",
+      "label": "Name",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Amara Cole"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<div class=\"tb-fb-quote__name\">{{text}}</div>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "role",
+      "label": "Role",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Creative Director"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<div class=\"tb-fb-quote__role\">{{text}}</div>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

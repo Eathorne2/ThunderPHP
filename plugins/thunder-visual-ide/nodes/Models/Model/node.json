@@ -1,0 +1,61 @@
+{
+  "type": "models.model",
+  "label": "Model",
+  "category": "Models",
+  "kind": "architecture",
+  "icon": "M",
+  "color": "#0369a1",
+  "description": "Defines a ThunderPHP model. Custom methods become available to Model Method Call nodes.",
+  "allowed_graphs": [
+    "architecture"
+  ],
+  "defaults": {
+    "title": "User Model",
+    "class_name": "User",
+    "table": "users",
+    "fillable_insert": "name,email,password",
+    "fillable_update": "name,email",
+    "methods_json": "[\n  {\n    \"name\": \"all\",\n    \"params\": [],\n    \"return_type\": \"array\",\n    \"implementation\": \"body\",\n    \"body\": \"return $this->get();\",\n    \"help\": \"Returns every row from this model table.\\n\\n### Example\\n\\n```php\\n$rows = $model->all();\\n```\"\n  },\n  {\n    \"name\": \"findById\",\n    \"params\": [\n      {\n        \"name\": \"id\",\n        \"type\": \"int|string\"\n      }\n    ],\n    \"return_type\": \"?object\",\n    \"implementation\": \"body\",\n    \"body\": \"return $this->where('id', $id)->first();\",\n    \"help\": \"Finds one row by its `id` column. Returns the row object when found, otherwise `null`.\\n\\n```php\\n$user = $model->findById(12);\\n```\"\n  },\n  {\n    \"name\": \"findBy\",\n    \"params\": [\n      {\n        \"name\": \"column\",\n        \"type\": \"string\"\n      },\n      {\n        \"name\": \"value\",\n        \"type\": \"mixed\"\n      }\n    ],\n    \"return_type\": \"?object\",\n    \"implementation\": \"body\",\n    \"body\": \"return $this->where($column, $value)->first();\",\n    \"help\": \"Finds the first row whose selected column matches the supplied value.\\n\\n```php\\n$user = $model->findBy('email', $email);\\n```\"\n  },\n  {\n    \"name\": \"createRecord\",\n    \"params\": [\n      {\n        \"name\": \"data\",\n        \"type\": \"array\"\n      }\n    ],\n    \"return_type\": \"mixed\",\n    \"implementation\": \"body\",\n    \"body\": \"$data = $this->filterInsertData($data);\\n$this->insert($data);\\nreturn $this->getLastInsertId();\",\n    \"help\": \"Filters the input through `$fillableInsert`, inserts the permitted values, and returns the last insert ID.\\n\\n```php\\n$id = $model->createRecord([\\n    'name' => 'Jane',\\n    'email' => 'jane@example.com',\\n]);\\n```\"\n  },\n  {\n    \"name\": \"updateById\",\n    \"params\": [\n      {\n        \"name\": \"id\",\n        \"type\": \"int|string\"\n      },\n      {\n        \"name\": \"data\",\n        \"type\": \"array\"\n      }\n    ],\n    \"return_type\": \"int\",\n    \"implementation\": \"body\",\n    \"body\": \"$data = $this->filterUpdateData($data);\\nreturn $this->where('id', $id)->update($data);\",\n    \"help\": \"Filters the input through `$fillableUpdate`, updates the row matching the ID, and returns the affected-row count.\\n\\n```php\\n$changed = $model->updateById(12, ['name' => 'Jane Doe']);\\n```\"\n  },\n  {\n    \"name\": \"deleteById\",\n    \"params\": [\n      {\n        \"name\": \"id\",\n        \"type\": \"int|string\"\n      }\n    ],\n    \"return_type\": \"int\",\n    \"implementation\": \"body\",\n    \"body\": \"return $this->where('id', $id)->delete();\",\n    \"help\": \"Deletes the row matching the supplied `id` and returns the affected-row count.\\n\\n```php\\n$deleted = $model->deleteById(12);\\n```\"\n  },\n  {\n    \"name\": \"countAll\",\n    \"params\": [],\n    \"return_type\": \"int\",\n    \"implementation\": \"body\",\n    \"body\": \"return $this->count();\",\n    \"help\": \"Counts all rows in this model table.\\n\\n```php\\n$total = $model->countAll();\\n```\"\n  }\n]"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "class_name",
+      "label": "Class name",
+      "type": "text"
+    },
+    {
+      "name": "table",
+      "label": "Table",
+      "type": "text"
+    },
+    {
+      "name": "fillable_insert",
+      "label": "Insert fillable fields",
+      "type": "text"
+    },
+    {
+      "name": "fillable_update",
+      "label": "Update fillable fields",
+      "type": "text"
+    },
+    {
+      "name": "methods_json",
+      "label": "Custom methods",
+      "type": "model_methods",
+      "help": "Use the visual method manager to add, edit, remove, and document methods. Help information supports Markdown and appears in the Method Browser."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Models\\ModelCompiler",
+    "file": "Compiler.php"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "slug": "wed-schedule-tiles",
+  "name": "Wedding Schedule Tiles",
+  "category": "Wedding",
+  "description": "Numbered timeline tiles for ceremony and reception schedule",
+  "keywords": [
+    "wedding",
+    "schedule",
+    "timeline",
+    "day"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-wed-schedule\"><div class=\"tb-wed-schedule__head\">{{elements:eyebrow}}{{elements:title}}</div><div class=\"tb-wed-schedule__grid\">{{elements:items}}</div></div>",
+  "css": ".tb-wed-schedule{padding:clamp(30px,6vw,74px);background:var(--tb-color-secondary);color:var(--tb-color-background)}.tb-wed-schedule__head{margin-bottom:28px}.tb-wed-schedule__eyebrow{color:var(--tb-color-accent);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-wed-schedule__title{margin:8px 0;font-family:Georgia,serif;font-size:clamp(40px,5vw,62px);font-weight:400}.tb-wed-schedule__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.tb-wed-schedule__item{padding:24px;border:1px solid color-mix(in srgb,var(--tb-color-background) 28%,transparent)}.tb-wed-schedule__number{font-size:12px;font-weight:900;opacity:.55}.tb-wed-schedule__time{display:block;margin:34px 0 7px;color:var(--tb-color-accent);font-weight:900}.tb-wed-schedule__item-title{margin:0;font-family:Georgia,serif;font-size:28px;font-weight:400}.tb-wed-schedule__text{margin:8px 0 0;opacity:.72;line-height:1.6}@media(max-width:800px){.tb-wed-schedule__grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.tb-wed-schedule__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Order of the day"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-wed-schedule__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A day to remember"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-wed-schedule__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "items",
+      "label": "Schedule step",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "number": "01",
+        "time": "2:00 PM",
+        "title": "Ceremony",
+        "text": "Please arrive 30 minutes early."
+      },
+      "schema": [
+        {
+          "key": "number",
+          "label": "Number",
+          "type": "text",
+          "selector": ".tb-wed-schedule__number"
+        },
+        {
+          "key": "time",
+          "label": "Time",
+          "type": "text",
+          "selector": ".tb-wed-schedule__time"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-wed-schedule__item-title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-wed-schedule__text",
+          "rows": 2
+        }
+      ],
+      "template": "<article class=\"tb-wed-schedule__item\"><span class=\"tb-wed-schedule__number\">{{number}}</span><span class=\"tb-wed-schedule__time\">{{time}}</span><h3 class=\"tb-wed-schedule__item-title\">{{title}}</h3><p class=\"tb-wed-schedule__text\">{{text}}</p></article>",
+      "min": 1,
+      "max": 8,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "number": "01",
+          "time": "2:00 PM",
+          "title": "Ceremony",
+          "text": "Please arrive 30 minutes early."
+        },
+        {
+          "number": "02",
+          "time": "4:00 PM",
+          "title": "Cocktails",
+          "text": "Drinks and canapés on the terrace."
+        },
+        {
+          "number": "03",
+          "time": "6:00 PM",
+          "title": "Reception",
+          "text": "Dinner, speeches and dancing."
+        },
+        {
+          "number": "04",
+          "time": "11:30 PM",
+          "title": "Farewell",
+          "text": "One last toast before we call it a night."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

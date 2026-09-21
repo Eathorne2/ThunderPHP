@@ -1,0 +1,18 @@
+{
+  "id": "nova-record-label-header-footer",
+  "name": "Nova Record Label Header and Footer",
+  "description": "A minimal record-label shell with catalogue navigation, artist links and a clean release-focused footer.",
+  "category": "Music & Entertainment",
+  "order": 4430,
+  "tags": [
+    "record label",
+    "header",
+    "footer",
+    "artists",
+    "catalogue"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

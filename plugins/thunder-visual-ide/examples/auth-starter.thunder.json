@@ -1,0 +1,2512 @@
+{
+  "schema_version": 4,
+  "generated_by": "Thunder Visual IDE 0.12.36",
+  "active_graph_id": "main",
+  "graphs": {
+    "main": {
+      "id": "main",
+      "name": "Plugin Architecture",
+      "kind": "architecture",
+      "nodes": [
+        {
+          "id": "plugin",
+          "type": "project.plugin",
+          "x": 50,
+          "y": 40,
+          "data": {
+            "name": "Visual Auth Starter",
+            "id": "visual-auth-starter",
+            "namespace": "VisualAuthStarter",
+            "type": "Companion",
+            "version": "1.0.0",
+            "core_requires": "^1.0.0",
+            "description": "Login, signup and profile management generated from small programming nodes.",
+            "author": "",
+            "website": "",
+            "thumbnail": "",
+            "active": true,
+            "look": "main",
+            "index": 10,
+            "dependencies": "{}"
+          }
+        },
+        {
+          "id": "look",
+          "type": "looks.look",
+          "x": 50,
+          "y": 260,
+          "data": {
+            "title": "Main Look",
+            "folder": "main",
+            "name": "Auth Look",
+            "version": "1.0.0",
+            "plugin_requires": "^1.0.0",
+            "author": "",
+            "thumbnail": "",
+            "description": "Frontend authentication views"
+          }
+        },
+        {
+          "id": "user-model",
+          "type": "models.model",
+          "x": 50,
+          "y": 480,
+          "data": {
+            "title": "User Model",
+            "class_name": "User",
+            "table": "visual_auth_users",
+            "fillable_insert": "name,email,password",
+            "fillable_update": "name,email",
+            "methods_json": "[\n  {\n    \"name\": \"findByEmail\",\n    \"params\": [\n      {\n        \"name\": \"email\",\n        \"type\": \"string\"\n      }\n    ],\n    \"body\": \"return $this->where('email', $email)->first();\",\n    \"return_type\": \"?object\"\n  },\n  {\n    \"name\": \"findById\",\n    \"params\": [\n      {\n        \"name\": \"id\",\n        \"type\": \"int|string\"\n      }\n    ],\n    \"body\": \"return $this->where('id', $id)->first();\",\n    \"return_type\": \"?object\"\n  },\n  {\n    \"name\": \"createUser\",\n    \"params\": [\n      {\n        \"name\": \"data\",\n        \"type\": \"array\"\n      }\n    ],\n    \"body\": \"$data = $this->filterInsertData($data);\\nreturn $this->insert($data);\",\n    \"return_type\": \"\"\n  },\n  {\n    \"name\": \"updateUser\",\n    \"params\": [\n      {\n        \"name\": \"id\",\n        \"type\": \"int|string\"\n      },\n      {\n        \"name\": \"data\",\n        \"type\": \"array\"\n      }\n    ],\n    \"body\": \"$data = $this->filterUpdateData($data);\\nreturn $this->where('id', $id)->update($data);\",\n    \"return_type\": \"\"\n  },\n  {\n    \"name\": \"deleteUser\",\n    \"params\": [\n      {\n        \"name\": \"id\",\n        \"type\": \"int|string\"\n      }\n    ],\n    \"body\": \"return $this->where('id', $id)->delete();\",\n    \"return_type\": \"\"\n  }\n]"
+          }
+        },
+        {
+          "id": "route-login-get",
+          "type": "routing.route",
+          "x": 420,
+          "y": 40,
+          "data": {
+            "title": "auth.login",
+            "method": "GET",
+            "path": "/login",
+            "route_name": "auth.login"
+          }
+        },
+        {
+          "id": "view-login-get",
+          "type": "lifecycle.view",
+          "x": 720,
+          "y": 40,
+          "data": {
+            "title": "auth.login View",
+            "filename": "frontend/login.php",
+            "hook_name": "view",
+            "priority": 10,
+            "content": "<tvi-asset name=\"auth-styles\" />\n<link rel=\"stylesheet\" href=\"<?= current_look_http('assets/css/auth.css') ?>\">\n<div class=\"auth-page\">\n    <h1>Login</h1>\n    {% if errors %}<div class=\"auth-errors\">Please correct the form.</div>{% endif %}\n    <tvi-component name=\"login-form\" />\n</div>\n",
+            "graph_id": "view-login-builder"
+          }
+        },
+        {
+          "id": "route-login-post",
+          "type": "routing.route",
+          "x": 420,
+          "y": 200,
+          "data": {
+            "title": "auth.login.submit",
+            "method": "POST",
+            "path": "/login",
+            "route_name": "auth.login.submit"
+          }
+        },
+        {
+          "id": "controller-login-post",
+          "type": "lifecycle.controller",
+          "x": 720,
+          "y": 200,
+          "data": {
+            "title": "auth.login.submit Controller",
+            "hook_name": "controller",
+            "priority": 10,
+            "graph_id": "flow-login"
+          }
+        },
+        {
+          "id": "route-signup-get",
+          "type": "routing.route",
+          "x": 420,
+          "y": 360,
+          "data": {
+            "title": "auth.signup",
+            "method": "GET",
+            "path": "/signup",
+            "route_name": "auth.signup"
+          }
+        },
+        {
+          "id": "view-signup-get",
+          "type": "lifecycle.view",
+          "x": 720,
+          "y": 360,
+          "data": {
+            "title": "auth.signup View",
+            "filename": "frontend/signup.php",
+            "hook_name": "view",
+            "priority": 10,
+            "content": "<tvi-asset name=\"auth-styles\" />\n<link rel=\"stylesheet\" href=\"<?= current_look_http('assets/css/auth.css') ?>\">\n<div class=\"auth-page\">\n    <h1>Create account</h1>\n    {% if errors %}<div class=\"auth-errors\">Please correct the form.</div>{% endif %}\n    <tvi-component name=\"signup-form\" />\n</div>\n",
+            "graph_id": "view-signup-builder"
+          }
+        },
+        {
+          "id": "route-signup-post",
+          "type": "routing.route",
+          "x": 420,
+          "y": 520,
+          "data": {
+            "title": "auth.signup.submit",
+            "method": "POST",
+            "path": "/signup",
+            "route_name": "auth.signup.submit"
+          }
+        },
+        {
+          "id": "controller-signup-post",
+          "type": "lifecycle.controller",
+          "x": 720,
+          "y": 520,
+          "data": {
+            "title": "auth.signup.submit Controller",
+            "hook_name": "controller",
+            "priority": 10,
+            "graph_id": "flow-signup"
+          }
+        },
+        {
+          "id": "route-profile-get",
+          "type": "routing.route",
+          "x": 1020,
+          "y": 40,
+          "data": {
+            "title": "profile.view",
+            "method": "GET",
+            "path": "/profile",
+            "route_name": "profile.view"
+          }
+        },
+        {
+          "id": "view-profile-get",
+          "type": "lifecycle.view",
+          "x": 1320,
+          "y": 40,
+          "data": {
+            "title": "profile.view View",
+            "filename": "frontend/profile.php",
+            "hook_name": "view",
+            "priority": 10,
+            "content": "<tvi-asset name=\"auth-styles\" />\n<link rel=\"stylesheet\" href=\"<?= current_look_http('assets/css/auth.css') ?>\">\n<?php $user = get_value('user'); ?>\n<div class=\"auth-page\"><h1>Profile</h1><?= message('success') ?><?= message('fail') ?>\n<?php if ($user): ?><p><strong>Name:</strong> <?= esc($user->name ?? '') ?></p><p><strong>Email:</strong> <?= esc($user->email ?? '') ?></p>\n<p><a href=\"<?= ROOT ?>/profile/edit\">Edit profile</a></p><form method=\"post\" action=\"<?= ROOT ?>/profile/delete\"><?= csrf('profile_delete') ?><button type=\"submit\">Delete account</button></form><?php else: ?><p>User not found.</p><?php endif; ?></div>"
+          }
+        },
+        {
+          "id": "controller-profile-load",
+          "type": "lifecycle.controller",
+          "x": 1320,
+          "y": 200,
+          "data": {
+            "title": "profile.load Controller",
+            "hook_name": "controller",
+            "priority": 10,
+            "graph_id": "flow-profile"
+          }
+        },
+        {
+          "id": "route-edit-get",
+          "type": "routing.route",
+          "x": 1020,
+          "y": 360,
+          "data": {
+            "title": "profile.edit",
+            "method": "GET",
+            "path": "/profile/edit",
+            "route_name": "profile.edit"
+          }
+        },
+        {
+          "id": "view-edit-get",
+          "type": "lifecycle.view",
+          "x": 1320,
+          "y": 360,
+          "data": {
+            "title": "profile.edit View",
+            "filename": "frontend/edit.php",
+            "hook_name": "view",
+            "priority": 10,
+            "content": "<tvi-asset name=\"auth-styles\" />\n<link rel=\"stylesheet\" href=\"<?= current_look_http('assets/css/auth.css') ?>\">\n<div class=\"auth-page\">\n    <h1>Edit profile</h1>\n    {% if errors %}<div class=\"auth-errors\">Please correct the form.</div>{% endif %}\n    <tvi-component name=\"profile-edit-form\" />\n</div>\n",
+            "graph_id": "view-edit-builder"
+          }
+        },
+        {
+          "id": "controller-edit-load",
+          "type": "lifecycle.controller",
+          "x": 1320,
+          "y": 520,
+          "data": {
+            "title": "profile.edit.load Controller",
+            "hook_name": "controller",
+            "priority": 10,
+            "graph_id": "flow-profile-edit-load"
+          }
+        },
+        {
+          "id": "route-edit-post",
+          "type": "routing.route",
+          "x": 1620,
+          "y": 40,
+          "data": {
+            "title": "profile.update",
+            "method": "POST",
+            "path": "/profile/edit",
+            "route_name": "profile.update"
+          }
+        },
+        {
+          "id": "controller-edit-post",
+          "type": "lifecycle.controller",
+          "x": 1920,
+          "y": 40,
+          "data": {
+            "title": "profile.update Controller",
+            "hook_name": "controller",
+            "priority": 10,
+            "graph_id": "flow-profile-update"
+          }
+        },
+        {
+          "id": "route-delete-post",
+          "type": "routing.route",
+          "x": 1620,
+          "y": 200,
+          "data": {
+            "title": "profile.delete",
+            "method": "POST",
+            "path": "/profile/delete",
+            "route_name": "profile.delete"
+          }
+        },
+        {
+          "id": "controller-delete-post",
+          "type": "lifecycle.controller",
+          "x": 1920,
+          "y": 200,
+          "data": {
+            "title": "profile.delete Controller",
+            "hook_name": "controller",
+            "priority": 10,
+            "graph_id": "flow-profile-delete"
+          }
+        },
+        {
+          "id": "auth-css",
+          "type": "looks.text_asset",
+          "x": 50,
+          "y": 700,
+          "data": {
+            "title": "Authentication Styles",
+            "asset_name": "auth-styles",
+            "asset_type": "CSS",
+            "filename": "assets/css/auth.css",
+            "content": ".auth-page{max-width:560px;margin:50px auto;padding:24px;border:1px solid #ddd;border-radius:10px;font-family:Arial,sans-serif}.auth-page form{display:grid;gap:14px}.auth-page label{display:grid;gap:5px}.auth-page input{padding:10px}.auth-page button{padding:10px 14px;cursor:pointer}\n"
+          }
+        },
+        {
+          "id": "migration-users",
+          "type": "migration.definition",
+          "x": 80,
+          "y": 780,
+          "data": {
+            "title": "Create visual auth users",
+            "timestamp": "2026-07-20_120000",
+            "filename_slug": "create_visual_auth_users_table",
+            "graph_id": "migration-users-flow"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "e-login-get-vr",
+          "from": "view-login-get",
+          "from_port": "route",
+          "to": "route-login-get",
+          "to_port": "view",
+          "port_type": "view"
+        },
+        {
+          "id": "e-login-get-vl",
+          "from": "view-login-get",
+          "from_port": "look",
+          "to": "look",
+          "to_port": "view",
+          "port_type": "view"
+        },
+        {
+          "id": "e-login-post-cr",
+          "from": "controller-login-post",
+          "from_port": "route",
+          "to": "route-login-post",
+          "to_port": "controller",
+          "port_type": "controller"
+        },
+        {
+          "id": "e-signup-get-vr",
+          "from": "view-signup-get",
+          "from_port": "route",
+          "to": "route-signup-get",
+          "to_port": "view",
+          "port_type": "view"
+        },
+        {
+          "id": "e-signup-get-vl",
+          "from": "view-signup-get",
+          "from_port": "look",
+          "to": "look",
+          "to_port": "view",
+          "port_type": "view"
+        },
+        {
+          "id": "e-signup-post-cr",
+          "from": "controller-signup-post",
+          "from_port": "route",
+          "to": "route-signup-post",
+          "to_port": "controller",
+          "port_type": "controller"
+        },
+        {
+          "id": "e-profile-get-vr",
+          "from": "view-profile-get",
+          "from_port": "route",
+          "to": "route-profile-get",
+          "to_port": "view",
+          "port_type": "view"
+        },
+        {
+          "id": "e-profile-get-vl",
+          "from": "view-profile-get",
+          "from_port": "look",
+          "to": "look",
+          "to_port": "view",
+          "port_type": "view"
+        },
+        {
+          "id": "e-profile-load-cr",
+          "from": "controller-profile-load",
+          "from_port": "route",
+          "to": "route-profile-get",
+          "to_port": "controller",
+          "port_type": "controller"
+        },
+        {
+          "id": "e-edit-get-vr",
+          "from": "view-edit-get",
+          "from_port": "route",
+          "to": "route-edit-get",
+          "to_port": "view",
+          "port_type": "view"
+        },
+        {
+          "id": "e-edit-get-vl",
+          "from": "view-edit-get",
+          "from_port": "look",
+          "to": "look",
+          "to_port": "view",
+          "port_type": "view"
+        },
+        {
+          "id": "e-edit-load-cr",
+          "from": "controller-edit-load",
+          "from_port": "route",
+          "to": "route-edit-get",
+          "to_port": "controller",
+          "port_type": "controller"
+        },
+        {
+          "id": "e-edit-post-cr",
+          "from": "controller-edit-post",
+          "from_port": "route",
+          "to": "route-edit-post",
+          "to_port": "controller",
+          "port_type": "controller"
+        },
+        {
+          "id": "e-delete-post-cr",
+          "from": "controller-delete-post",
+          "from_port": "route",
+          "to": "route-delete-post",
+          "to_port": "controller",
+          "port_type": "controller"
+        },
+        {
+          "id": "e-auth-css-look",
+          "from": "auth-css",
+          "from_port": "look",
+          "to": "look",
+          "to_port": "asset",
+          "port_type": "asset"
+        }
+      ],
+      "viewport": {
+        "x": 30,
+        "y": 45,
+        "zoom": 0.72
+      }
+    },
+    "flow-login": {
+      "id": "flow-login",
+      "name": "Login POST Flow",
+      "kind": "flow",
+      "nodes": [
+        {
+          "id": "s",
+          "type": "flow.start",
+          "x": 20,
+          "y": 200,
+          "data": {
+            "title": "Start"
+          }
+        },
+        {
+          "id": "post",
+          "type": "data.request_input",
+          "x": 20,
+          "y": 420,
+          "data": {
+            "title": "All POST",
+            "source": "post",
+            "name": ""
+          }
+        },
+        {
+          "id": "email",
+          "type": "data.request_input",
+          "x": 240,
+          "y": 390,
+          "data": {
+            "title": "Email",
+            "source": "post",
+            "name": "email"
+          }
+        },
+        {
+          "id": "pw",
+          "type": "data.request_input",
+          "x": 240,
+          "y": 520,
+          "data": {
+            "title": "Password",
+            "source": "post",
+            "name": "password"
+          }
+        },
+        {
+          "id": "csrf",
+          "type": "security.csrf_verify",
+          "x": 240,
+          "y": 190,
+          "data": {
+            "title": "Verify Login CSRF",
+            "session_key": "auth_login"
+          }
+        },
+        {
+          "id": "arr",
+          "type": "data.array",
+          "x": 470,
+          "y": 430,
+          "data": {
+            "title": "Login Data",
+            "mode": "associative",
+            "item_count": 2,
+            "keys": "email,password"
+          }
+        },
+        {
+          "id": "val",
+          "type": "security.validate",
+          "x": 500,
+          "y": 180,
+          "data": {
+            "title": "Validate Login",
+            "rules_json": "{\n  \"email\": [\n    \"required\",\n    \"email\"\n  ],\n  \"password\": [\n    \"required\"\n  ]\n}"
+          }
+        },
+        {
+          "id": "call",
+          "type": "models.method_call",
+          "x": 760,
+          "y": 180,
+          "data": {
+            "title": "Find User",
+            "model_node_id": "user-model",
+            "method_name": "findByEmail",
+            "result_variable": "existing_user"
+          }
+        },
+        {
+          "id": "hash",
+          "type": "data.property",
+          "x": 770,
+          "y": 430,
+          "data": {
+            "title": "Stored Hash",
+            "property": "password",
+            "mode": "object"
+          }
+        },
+        {
+          "id": "verify",
+          "type": "security.password_verify",
+          "x": 990,
+          "y": 430,
+          "data": {
+            "title": "Verify Password"
+          }
+        },
+        {
+          "id": "password-if",
+          "type": "logic.if",
+          "x": 1040,
+          "y": 180,
+          "data": {
+            "title": "Password Valid"
+          }
+        },
+        {
+          "id": "uid",
+          "type": "data.property",
+          "x": 1020,
+          "y": 520,
+          "data": {
+            "title": "User ID",
+            "property": "id",
+            "mode": "object"
+          }
+        },
+        {
+          "id": "sess",
+          "type": "session.set",
+          "x": 1290,
+          "y": 110,
+          "data": {
+            "title": "Set Login Session",
+            "key": "user_id"
+          }
+        },
+        {
+          "id": "ok",
+          "type": "response.message",
+          "x": 1520,
+          "y": 90,
+          "data": {
+            "title": "Welcome",
+            "message_type": "success",
+            "message": "Welcome back"
+          }
+        },
+        {
+          "id": "go",
+          "type": "response.redirect",
+          "x": 1750,
+          "y": 90,
+          "data": {
+            "title": "Profile",
+            "url": "/profile"
+          }
+        },
+        {
+          "id": "bad",
+          "type": "response.message",
+          "x": 1290,
+          "y": 300,
+          "data": {
+            "title": "Login Failed",
+            "message_type": "fail",
+            "message": "Invalid email or password"
+          }
+        },
+        {
+          "id": "back",
+          "type": "response.redirect",
+          "x": 1520,
+          "y": 300,
+          "data": {
+            "title": "Back to Login",
+            "url": "/login"
+          }
+        },
+        {
+          "id": "csrfbad",
+          "type": "response.message",
+          "x": 500,
+          "y": 40,
+          "data": {
+            "title": "CSRF Failed",
+            "message_type": "fail",
+            "message": "Invalid request token"
+          }
+        },
+        {
+          "id": "csrfback",
+          "type": "response.redirect",
+          "x": 730,
+          "y": 40,
+          "data": {
+            "title": "Back to Login",
+            "url": "/login"
+          }
+        },
+        {
+          "id": "invalid",
+          "type": "response.message",
+          "x": 760,
+          "y": 300,
+          "data": {
+            "title": "Validation Failed",
+            "message_type": "fail",
+            "message": "Please check the submitted values"
+          }
+        },
+        {
+          "id": "invalidback",
+          "type": "response.redirect",
+          "x": 990,
+          "y": 300,
+          "data": {
+            "title": "Back to Login",
+            "url": "/login"
+          }
+        },
+        {
+          "id": "null",
+          "type": "data.null",
+          "x": 990,
+          "y": 610,
+          "data": {
+            "title": "Null"
+          }
+        },
+        {
+          "id": "exists",
+          "type": "logic.compare",
+          "x": 1010,
+          "y": 520,
+          "data": {
+            "title": "User Exists",
+            "operator": "!=="
+          }
+        },
+        {
+          "id": "exists-if",
+          "type": "logic.if",
+          "x": 1030,
+          "y": 180,
+          "data": {
+            "title": "User Found"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "1",
+          "from": "s",
+          "from_port": "exec",
+          "to": "csrf",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "2",
+          "from": "post",
+          "from_port": "value",
+          "to": "csrf",
+          "to_port": "data",
+          "port_type": "array"
+        },
+        {
+          "id": "3",
+          "from": "csrf",
+          "from_port": "valid",
+          "to": "val",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "4",
+          "from": "csrf",
+          "from_port": "invalid",
+          "to": "csrfbad",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "5",
+          "from": "csrfbad",
+          "from_port": "exec",
+          "to": "csrfback",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "6",
+          "from": "email",
+          "from_port": "value",
+          "to": "arr",
+          "to_port": "item_1",
+          "port_type": "mixed"
+        },
+        {
+          "id": "7",
+          "from": "pw",
+          "from_port": "value",
+          "to": "arr",
+          "to_port": "item_2",
+          "port_type": "mixed"
+        },
+        {
+          "id": "8",
+          "from": "arr",
+          "from_port": "value",
+          "to": "val",
+          "to_port": "data",
+          "port_type": "array"
+        },
+        {
+          "id": "9",
+          "from": "val",
+          "from_port": "valid",
+          "to": "call",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "10",
+          "from": "val",
+          "from_port": "invalid",
+          "to": "invalid",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "11",
+          "from": "invalid",
+          "from_port": "exec",
+          "to": "invalidback",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "12",
+          "from": "email",
+          "from_port": "value",
+          "to": "call",
+          "to_port": "param_email",
+          "port_type": "mixed"
+        },
+        {
+          "id": "13",
+          "from": "call",
+          "from_port": "exec",
+          "to": "exists-if",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "14",
+          "from": "call",
+          "from_port": "result",
+          "to": "hash",
+          "to_port": "source",
+          "port_type": "mixed"
+        },
+        {
+          "id": "15",
+          "from": "pw",
+          "from_port": "value",
+          "to": "verify",
+          "to_port": "password",
+          "port_type": "mixed"
+        },
+        {
+          "id": "16",
+          "from": "hash",
+          "from_port": "value",
+          "to": "verify",
+          "to_port": "hash",
+          "port_type": "mixed"
+        },
+        {
+          "id": "17",
+          "from": "verify",
+          "from_port": "value",
+          "to": "password-if",
+          "to_port": "condition",
+          "port_type": "boolean"
+        },
+        {
+          "id": "18",
+          "from": "password-if",
+          "from_port": "true",
+          "to": "sess",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "19",
+          "from": "call",
+          "from_port": "result",
+          "to": "uid",
+          "to_port": "source",
+          "port_type": "mixed"
+        },
+        {
+          "id": "20",
+          "from": "uid",
+          "from_port": "value",
+          "to": "sess",
+          "to_port": "value",
+          "port_type": "mixed"
+        },
+        {
+          "id": "21",
+          "from": "sess",
+          "from_port": "exec",
+          "to": "ok",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "22",
+          "from": "ok",
+          "from_port": "exec",
+          "to": "go",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "23",
+          "from": "password-if",
+          "from_port": "false",
+          "to": "bad",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "24",
+          "from": "bad",
+          "from_port": "exec",
+          "to": "back",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "25",
+          "from": "call",
+          "from_port": "result",
+          "to": "exists",
+          "to_port": "left",
+          "port_type": "mixed"
+        },
+        {
+          "id": "26",
+          "from": "null",
+          "from_port": "value",
+          "to": "exists",
+          "to_port": "right",
+          "port_type": "mixed"
+        },
+        {
+          "id": "27",
+          "from": "exists",
+          "from_port": "value",
+          "to": "exists-if",
+          "to_port": "condition",
+          "port_type": "boolean"
+        },
+        {
+          "id": "28",
+          "from": "exists-if",
+          "from_port": "true",
+          "to": "password-if",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "29",
+          "from": "exists-if",
+          "from_port": "false",
+          "to": "bad",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        }
+      ],
+      "viewport": {
+        "x": 70,
+        "y": 60,
+        "zoom": 0.85
+      }
+    },
+    "flow-signup": {
+      "id": "flow-signup",
+      "name": "Signup POST Flow",
+      "kind": "flow",
+      "nodes": [
+        {
+          "id": "s",
+          "type": "flow.start",
+          "x": 20,
+          "y": 200,
+          "data": {
+            "title": "Start"
+          }
+        },
+        {
+          "id": "post",
+          "type": "data.request_input",
+          "x": 20,
+          "y": 430,
+          "data": {
+            "title": "All POST",
+            "source": "post",
+            "name": ""
+          }
+        },
+        {
+          "id": "name",
+          "type": "data.request_input",
+          "x": 230,
+          "y": 420,
+          "data": {
+            "title": "Name",
+            "source": "post",
+            "name": "name"
+          }
+        },
+        {
+          "id": "email",
+          "type": "data.request_input",
+          "x": 230,
+          "y": 530,
+          "data": {
+            "title": "Email",
+            "source": "post",
+            "name": "email"
+          }
+        },
+        {
+          "id": "pw",
+          "type": "data.request_input",
+          "x": 230,
+          "y": 640,
+          "data": {
+            "title": "Password",
+            "source": "post",
+            "name": "password"
+          }
+        },
+        {
+          "id": "csrf",
+          "type": "security.csrf_verify",
+          "x": 230,
+          "y": 180,
+          "data": {
+            "title": "Verify Signup CSRF",
+            "session_key": "auth_signup"
+          }
+        },
+        {
+          "id": "vdata",
+          "type": "data.array",
+          "x": 470,
+          "y": 470,
+          "data": {
+            "title": "Validation Data",
+            "mode": "associative",
+            "item_count": 3,
+            "keys": "name,email,password"
+          }
+        },
+        {
+          "id": "val",
+          "type": "security.validate",
+          "x": 500,
+          "y": 180,
+          "data": {
+            "title": "Validate Signup",
+            "rules_json": "{\n  \"name\": [\n    \"required\",\n    \"min:2\"\n  ],\n  \"email\": [\n    \"required\",\n    \"email\"\n  ],\n  \"password\": [\n    \"required\",\n    \"min:6\"\n  ]\n}"
+          }
+        },
+        {
+          "id": "hash",
+          "type": "security.password_hash",
+          "x": 720,
+          "y": 590,
+          "data": {
+            "title": "Hash Password"
+          }
+        },
+        {
+          "id": "call",
+          "type": "models.method_call",
+          "x": 800,
+          "y": 180,
+          "data": {
+            "title": "Create User",
+            "model_node_id": "user-model",
+            "method_name": "createUser",
+            "result_variable": "created_user"
+          }
+        },
+        {
+          "id": "ok",
+          "type": "response.message",
+          "x": 1050,
+          "y": 160,
+          "data": {
+            "title": "Created",
+            "message_type": "success",
+            "message": "Account created. Please log in."
+          }
+        },
+        {
+          "id": "go",
+          "type": "response.redirect",
+          "x": 1290,
+          "y": 160,
+          "data": {
+            "title": "Login",
+            "url": "/login"
+          }
+        },
+        {
+          "id": "bad",
+          "type": "response.message",
+          "x": 790,
+          "y": 300,
+          "data": {
+            "title": "Invalid Signup",
+            "message_type": "fail",
+            "message": "Please check the submitted values"
+          }
+        },
+        {
+          "id": "back",
+          "type": "response.redirect",
+          "x": 1040,
+          "y": 300,
+          "data": {
+            "title": "Back",
+            "url": "/signup"
+          }
+        },
+        {
+          "id": "csrfbad",
+          "type": "response.message",
+          "x": 490,
+          "y": 40,
+          "data": {
+            "title": "CSRF Failed",
+            "message_type": "fail",
+            "message": "Invalid request token"
+          }
+        },
+        {
+          "id": "csrfback",
+          "type": "response.redirect",
+          "x": 730,
+          "y": 40,
+          "data": {
+            "title": "Back",
+            "url": "/signup"
+          }
+        },
+        {
+          "id": "signup-form-data",
+          "type": "forms.data",
+          "x": 860,
+          "y": 170,
+          "data": {
+            "title": "Read Signup Form Data",
+            "view_node_id": "view-signup-get",
+            "form_name": "signup-form",
+            "source": "post",
+            "result_variable": "signup_data"
+          }
+        },
+        {
+          "id": "signup-password-extra",
+          "type": "data.array",
+          "x": 890,
+          "y": 410,
+          "data": {
+            "title": "Hashed Password Field",
+            "mode": "associative",
+            "item_count": 1,
+            "keys": "password"
+          }
+        },
+        {
+          "id": "signup-merge-data",
+          "type": "data.array_combine",
+          "x": 1160,
+          "y": 270,
+          "data": {
+            "title": "Merge Signup Data",
+            "mode": "replace",
+            "array_count": 2
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "1",
+          "from": "s",
+          "from_port": "exec",
+          "to": "csrf",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "2",
+          "from": "post",
+          "from_port": "value",
+          "to": "csrf",
+          "to_port": "data",
+          "port_type": "array"
+        },
+        {
+          "id": "3",
+          "from": "csrf",
+          "from_port": "valid",
+          "to": "val",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "4",
+          "from": "csrf",
+          "from_port": "invalid",
+          "to": "csrfbad",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "5",
+          "from": "csrfbad",
+          "from_port": "exec",
+          "to": "csrfback",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "6",
+          "from": "name",
+          "from_port": "value",
+          "to": "vdata",
+          "to_port": "item_1",
+          "port_type": "mixed"
+        },
+        {
+          "id": "7",
+          "from": "email",
+          "from_port": "value",
+          "to": "vdata",
+          "to_port": "item_2",
+          "port_type": "mixed"
+        },
+        {
+          "id": "8",
+          "from": "pw",
+          "from_port": "value",
+          "to": "vdata",
+          "to_port": "item_3",
+          "port_type": "mixed"
+        },
+        {
+          "id": "9",
+          "from": "vdata",
+          "from_port": "value",
+          "to": "val",
+          "to_port": "data",
+          "port_type": "array"
+        },
+        {
+          "id": "11",
+          "from": "val",
+          "from_port": "invalid",
+          "to": "bad",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "12",
+          "from": "bad",
+          "from_port": "exec",
+          "to": "back",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "13",
+          "from": "pw",
+          "from_port": "value",
+          "to": "hash",
+          "to_port": "password",
+          "port_type": "mixed"
+        },
+        {
+          "id": "18",
+          "from": "call",
+          "from_port": "exec",
+          "to": "ok",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "19",
+          "from": "ok",
+          "from_port": "exec",
+          "to": "go",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "sf-exec",
+          "from": "val",
+          "from_port": "valid",
+          "to": "signup-form-data",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "sf-next",
+          "from": "signup-form-data",
+          "from_port": "exec",
+          "to": "call",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "sf-arr1",
+          "from": "signup-form-data",
+          "from_port": "data",
+          "to": "signup-merge-data",
+          "to_port": "array_1",
+          "port_type": "array"
+        },
+        {
+          "id": "sf-hash-extra",
+          "from": "hash",
+          "from_port": "value",
+          "to": "signup-password-extra",
+          "to_port": "item_1",
+          "port_type": "mixed"
+        },
+        {
+          "id": "sf-arr2",
+          "from": "signup-password-extra",
+          "from_port": "value",
+          "to": "signup-merge-data",
+          "to_port": "array_2",
+          "port_type": "array"
+        },
+        {
+          "id": "sf-call-data",
+          "from": "signup-merge-data",
+          "from_port": "value",
+          "to": "call",
+          "to_port": "param_data",
+          "port_type": "array"
+        }
+      ],
+      "viewport": {
+        "x": 70,
+        "y": 60,
+        "zoom": 0.85
+      }
+    },
+    "flow-profile": {
+      "id": "flow-profile",
+      "name": "Profile Load Flow",
+      "kind": "flow",
+      "nodes": [
+        {
+          "id": "s",
+          "type": "flow.start",
+          "x": 30,
+          "y": 160,
+          "data": {
+            "title": "Start"
+          }
+        },
+        {
+          "id": "sid",
+          "type": "session.get",
+          "x": 250,
+          "y": 330,
+          "data": {
+            "title": "Current User ID",
+            "key": "user_id"
+          }
+        },
+        {
+          "id": "call",
+          "type": "models.method_call",
+          "x": 270,
+          "y": 150,
+          "data": {
+            "title": "Load User",
+            "model_node_id": "user-model",
+            "method_name": "findById",
+            "result_variable": "user"
+          }
+        },
+        {
+          "id": "set",
+          "type": "data.page_value_set",
+          "x": 560,
+          "y": 150,
+          "data": {
+            "title": "Expose User to View",
+            "key": "user"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "1",
+          "from": "s",
+          "from_port": "exec",
+          "to": "call",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "2",
+          "from": "sid",
+          "from_port": "value",
+          "to": "call",
+          "to_port": "param_id",
+          "port_type": "mixed"
+        },
+        {
+          "id": "3",
+          "from": "call",
+          "from_port": "exec",
+          "to": "set",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "4",
+          "from": "call",
+          "from_port": "result",
+          "to": "set",
+          "to_port": "value",
+          "port_type": "mixed"
+        }
+      ],
+      "viewport": {
+        "x": 70,
+        "y": 60,
+        "zoom": 0.85
+      }
+    },
+    "flow-profile-edit-load": {
+      "id": "flow-profile-edit-load",
+      "name": "Profile Edit Load Flow",
+      "kind": "flow",
+      "nodes": [
+        {
+          "id": "s",
+          "type": "flow.start",
+          "x": 30,
+          "y": 160,
+          "data": {
+            "title": "Start"
+          }
+        },
+        {
+          "id": "sid",
+          "type": "session.get",
+          "x": 250,
+          "y": 330,
+          "data": {
+            "title": "Current User ID",
+            "key": "user_id"
+          }
+        },
+        {
+          "id": "call",
+          "type": "models.method_call",
+          "x": 270,
+          "y": 150,
+          "data": {
+            "title": "Load User",
+            "model_node_id": "user-model",
+            "method_name": "findById",
+            "result_variable": "user"
+          }
+        },
+        {
+          "id": "set",
+          "type": "data.page_value_set",
+          "x": 560,
+          "y": 150,
+          "data": {
+            "title": "Expose User to View",
+            "key": "user"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "1",
+          "from": "s",
+          "from_port": "exec",
+          "to": "call",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "2",
+          "from": "sid",
+          "from_port": "value",
+          "to": "call",
+          "to_port": "param_id",
+          "port_type": "mixed"
+        },
+        {
+          "id": "3",
+          "from": "call",
+          "from_port": "exec",
+          "to": "set",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "4",
+          "from": "call",
+          "from_port": "result",
+          "to": "set",
+          "to_port": "value",
+          "port_type": "mixed"
+        }
+      ],
+      "viewport": {
+        "x": 70,
+        "y": 60,
+        "zoom": 0.85
+      }
+    },
+    "flow-profile-update": {
+      "id": "flow-profile-update",
+      "name": "Profile Update Flow",
+      "kind": "flow",
+      "nodes": [
+        {
+          "id": "s",
+          "type": "flow.start",
+          "x": 20,
+          "y": 180,
+          "data": {
+            "title": "Start"
+          }
+        },
+        {
+          "id": "post",
+          "type": "data.request_input",
+          "x": 20,
+          "y": 420,
+          "data": {
+            "title": "All POST",
+            "source": "post",
+            "name": ""
+          }
+        },
+        {
+          "id": "name",
+          "type": "data.request_input",
+          "x": 250,
+          "y": 430,
+          "data": {
+            "title": "Name",
+            "source": "post",
+            "name": "name"
+          }
+        },
+        {
+          "id": "email",
+          "type": "data.request_input",
+          "x": 250,
+          "y": 550,
+          "data": {
+            "title": "Email",
+            "source": "post",
+            "name": "email"
+          }
+        },
+        {
+          "id": "sid",
+          "type": "session.get",
+          "x": 690,
+          "y": 520,
+          "data": {
+            "title": "Current User ID",
+            "key": "user_id"
+          }
+        },
+        {
+          "id": "csrf",
+          "type": "security.csrf_verify",
+          "x": 240,
+          "y": 180,
+          "data": {
+            "title": "Verify Update CSRF",
+            "session_key": "profile_update"
+          }
+        },
+        {
+          "id": "arr",
+          "type": "data.array",
+          "x": 480,
+          "y": 450,
+          "data": {
+            "title": "Profile Data",
+            "mode": "associative",
+            "item_count": 2,
+            "keys": "name,email"
+          }
+        },
+        {
+          "id": "val",
+          "type": "security.validate",
+          "x": 500,
+          "y": 180,
+          "data": {
+            "title": "Validate Profile",
+            "rules_json": "{\n  \"name\": [\n    \"required\",\n    \"min:2\"\n  ],\n  \"email\": [\n    \"required\",\n    \"email\"\n  ]\n}"
+          }
+        },
+        {
+          "id": "call",
+          "type": "models.method_call",
+          "x": 770,
+          "y": 180,
+          "data": {
+            "title": "Update User",
+            "model_node_id": "user-model",
+            "method_name": "updateUser",
+            "result_variable": "updated_user"
+          }
+        },
+        {
+          "id": "ok",
+          "type": "response.message",
+          "x": 1040,
+          "y": 150,
+          "data": {
+            "title": "Updated",
+            "message_type": "success",
+            "message": "Profile updated"
+          }
+        },
+        {
+          "id": "go",
+          "type": "response.redirect",
+          "x": 1280,
+          "y": 150,
+          "data": {
+            "title": "Profile",
+            "url": "/profile"
+          }
+        },
+        {
+          "id": "bad",
+          "type": "response.message",
+          "x": 770,
+          "y": 310,
+          "data": {
+            "title": "Invalid Data",
+            "message_type": "fail",
+            "message": "Please check the submitted values"
+          }
+        },
+        {
+          "id": "back",
+          "type": "response.redirect",
+          "x": 1010,
+          "y": 310,
+          "data": {
+            "title": "Back to Edit",
+            "url": "/profile/edit"
+          }
+        },
+        {
+          "id": "csrfbad",
+          "type": "response.message",
+          "x": 480,
+          "y": 40,
+          "data": {
+            "title": "CSRF Failed",
+            "message_type": "fail",
+            "message": "Invalid request token"
+          }
+        },
+        {
+          "id": "csrfback",
+          "type": "response.redirect",
+          "x": 720,
+          "y": 40,
+          "data": {
+            "title": "Back",
+            "url": "/profile/edit"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "1",
+          "from": "s",
+          "from_port": "exec",
+          "to": "csrf",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "2",
+          "from": "post",
+          "from_port": "value",
+          "to": "csrf",
+          "to_port": "data",
+          "port_type": "array"
+        },
+        {
+          "id": "3",
+          "from": "csrf",
+          "from_port": "valid",
+          "to": "val",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "4",
+          "from": "csrf",
+          "from_port": "invalid",
+          "to": "csrfbad",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "5",
+          "from": "csrfbad",
+          "from_port": "exec",
+          "to": "csrfback",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "6",
+          "from": "name",
+          "from_port": "value",
+          "to": "arr",
+          "to_port": "item_1",
+          "port_type": "mixed"
+        },
+        {
+          "id": "7",
+          "from": "email",
+          "from_port": "value",
+          "to": "arr",
+          "to_port": "item_2",
+          "port_type": "mixed"
+        },
+        {
+          "id": "8",
+          "from": "arr",
+          "from_port": "value",
+          "to": "val",
+          "to_port": "data",
+          "port_type": "array"
+        },
+        {
+          "id": "9",
+          "from": "val",
+          "from_port": "valid",
+          "to": "call",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "10",
+          "from": "val",
+          "from_port": "invalid",
+          "to": "bad",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "11",
+          "from": "bad",
+          "from_port": "exec",
+          "to": "back",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "12",
+          "from": "sid",
+          "from_port": "value",
+          "to": "call",
+          "to_port": "param_id",
+          "port_type": "mixed"
+        },
+        {
+          "id": "13",
+          "from": "arr",
+          "from_port": "value",
+          "to": "call",
+          "to_port": "param_data",
+          "port_type": "mixed"
+        },
+        {
+          "id": "14",
+          "from": "call",
+          "from_port": "exec",
+          "to": "ok",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "15",
+          "from": "ok",
+          "from_port": "exec",
+          "to": "go",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        }
+      ],
+      "viewport": {
+        "x": 70,
+        "y": 60,
+        "zoom": 0.85
+      }
+    },
+    "flow-profile-delete": {
+      "id": "flow-profile-delete",
+      "name": "Profile Delete Flow",
+      "kind": "flow",
+      "nodes": [
+        {
+          "id": "s",
+          "type": "flow.start",
+          "x": 20,
+          "y": 180,
+          "data": {
+            "title": "Start"
+          }
+        },
+        {
+          "id": "post",
+          "type": "data.request_input",
+          "x": 20,
+          "y": 400,
+          "data": {
+            "title": "All POST",
+            "source": "post",
+            "name": ""
+          }
+        },
+        {
+          "id": "sid",
+          "type": "session.get",
+          "x": 500,
+          "y": 390,
+          "data": {
+            "title": "Current User ID",
+            "key": "user_id"
+          }
+        },
+        {
+          "id": "csrf",
+          "type": "security.csrf_verify",
+          "x": 240,
+          "y": 180,
+          "data": {
+            "title": "Verify Delete CSRF",
+            "session_key": "profile_delete"
+          }
+        },
+        {
+          "id": "call",
+          "type": "models.method_call",
+          "x": 520,
+          "y": 180,
+          "data": {
+            "title": "Delete User",
+            "model_node_id": "user-model",
+            "method_name": "deleteUser",
+            "result_variable": "deleted_user"
+          }
+        },
+        {
+          "id": "empty",
+          "type": "data.string",
+          "x": 760,
+          "y": 400,
+          "data": {
+            "title": "Empty Session",
+            "value": ""
+          }
+        },
+        {
+          "id": "sess",
+          "type": "session.set",
+          "x": 790,
+          "y": 180,
+          "data": {
+            "title": "Clear Session",
+            "key": "user_id"
+          }
+        },
+        {
+          "id": "ok",
+          "type": "response.message",
+          "x": 1020,
+          "y": 160,
+          "data": {
+            "title": "Deleted",
+            "message_type": "success",
+            "message": "Account deleted"
+          }
+        },
+        {
+          "id": "go",
+          "type": "response.redirect",
+          "x": 1260,
+          "y": 160,
+          "data": {
+            "title": "Login",
+            "url": "/login"
+          }
+        },
+        {
+          "id": "bad",
+          "type": "response.message",
+          "x": 500,
+          "y": 40,
+          "data": {
+            "title": "CSRF Failed",
+            "message_type": "fail",
+            "message": "Invalid request token"
+          }
+        },
+        {
+          "id": "back",
+          "type": "response.redirect",
+          "x": 740,
+          "y": 40,
+          "data": {
+            "title": "Profile",
+            "url": "/profile"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "1",
+          "from": "s",
+          "from_port": "exec",
+          "to": "csrf",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "2",
+          "from": "post",
+          "from_port": "value",
+          "to": "csrf",
+          "to_port": "data",
+          "port_type": "array"
+        },
+        {
+          "id": "3",
+          "from": "csrf",
+          "from_port": "valid",
+          "to": "call",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "4",
+          "from": "csrf",
+          "from_port": "invalid",
+          "to": "bad",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "5",
+          "from": "bad",
+          "from_port": "exec",
+          "to": "back",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "6",
+          "from": "sid",
+          "from_port": "value",
+          "to": "call",
+          "to_port": "param_id",
+          "port_type": "mixed"
+        },
+        {
+          "id": "7",
+          "from": "call",
+          "from_port": "exec",
+          "to": "sess",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "8",
+          "from": "empty",
+          "from_port": "value",
+          "to": "sess",
+          "to_port": "value",
+          "port_type": "mixed"
+        },
+        {
+          "id": "9",
+          "from": "sess",
+          "from_port": "exec",
+          "to": "ok",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        },
+        {
+          "id": "10",
+          "from": "ok",
+          "from_port": "exec",
+          "to": "go",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        }
+      ],
+      "viewport": {
+        "x": 70,
+        "y": 60,
+        "zoom": 0.85
+      }
+    },
+    "view-login-builder": {
+      "id": "view-login-builder",
+      "name": "auth.login View Builder",
+      "kind": "view",
+      "owner_node_id": "view-login-get",
+      "nodes": [
+        {
+          "id": "view-login-builder-form",
+          "type": "view.form",
+          "x": 80,
+          "y": 100,
+          "data": {
+            "title": "Login Form",
+            "component_name": "login-form",
+            "action": "/login",
+            "method": "POST",
+            "enctype": "",
+            "css_class": "",
+            "gap": "1rem",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            }
+          }
+        },
+        {
+          "id": "view-login-builder-csrf",
+          "type": "view.csrf",
+          "x": 390,
+          "y": 80,
+          "data": {
+            "title": "CSRF",
+            "session_key": "auth_login",
+            "hours": 1
+          }
+        },
+        {
+          "id": "view-login-builder-field-0",
+          "type": "view.email_input",
+          "x": 390,
+          "y": 190,
+          "data": {
+            "title": "Email",
+            "name": "email",
+            "label": "Email",
+            "placeholder": "you@example.com",
+            "value_path": "",
+            "required": true,
+            "autocomplete": "email",
+            "css_class": "",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            }
+          }
+        },
+        {
+          "id": "view-login-builder-field-1",
+          "type": "view.password_input",
+          "x": 390,
+          "y": 320,
+          "data": {
+            "title": "Password",
+            "name": "password",
+            "label": "Password",
+            "placeholder": "",
+            "value_path": "",
+            "required": true,
+            "autocomplete": "current-password",
+            "css_class": "",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            }
+          }
+        },
+        {
+          "id": "view-login-builder-button",
+          "type": "view.button",
+          "x": 390,
+          "y": 450,
+          "data": {
+            "title": "Submit Button",
+            "text": "Login",
+            "button_type": "submit",
+            "style": "primary",
+            "name": "",
+            "value": "",
+            "css_class": "",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 6,
+              "large": 4
+            }
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "view-login-builder-edge-0",
+          "from": "view-login-builder-form",
+          "from_port": "children",
+          "to": "view-login-builder-csrf",
+          "to_port": "parent",
+          "port_type": "view-child"
+        },
+        {
+          "id": "view-login-builder-edge-1",
+          "from": "view-login-builder-form",
+          "from_port": "children",
+          "to": "view-login-builder-field-0",
+          "to_port": "parent",
+          "port_type": "view-child"
+        },
+        {
+          "id": "view-login-builder-edge-2",
+          "from": "view-login-builder-form",
+          "from_port": "children",
+          "to": "view-login-builder-field-1",
+          "to_port": "parent",
+          "port_type": "view-child"
+        },
+        {
+          "id": "view-login-builder-edge-3",
+          "from": "view-login-builder-form",
+          "from_port": "children",
+          "to": "view-login-builder-button",
+          "to_port": "parent",
+          "port_type": "view-child"
+        }
+      ],
+      "viewport": {
+        "x": 90,
+        "y": 70,
+        "zoom": 1
+      }
+    },
+    "view-signup-builder": {
+      "id": "view-signup-builder",
+      "name": "auth.signup View Builder",
+      "kind": "view",
+      "owner_node_id": "view-signup-get",
+      "nodes": [
+        {
+          "id": "view-signup-builder-form",
+          "type": "view.form",
+          "x": 80,
+          "y": 100,
+          "data": {
+            "title": "Signup Form",
+            "component_name": "signup-form",
+            "action": "/signup",
+            "method": "POST",
+            "enctype": "",
+            "css_class": "",
+            "gap": "1rem",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            }
+          }
+        },
+        {
+          "id": "view-signup-builder-csrf",
+          "type": "view.csrf",
+          "x": 390,
+          "y": 80,
+          "data": {
+            "title": "CSRF",
+            "session_key": "auth_signup",
+            "hours": 1
+          }
+        },
+        {
+          "id": "view-signup-builder-field-0",
+          "type": "view.text_input",
+          "x": 390,
+          "y": 190,
+          "data": {
+            "title": "Name",
+            "name": "name",
+            "label": "Name",
+            "placeholder": "Your name",
+            "value_path": "",
+            "required": true,
+            "autocomplete": "name",
+            "css_class": "",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            }
+          }
+        },
+        {
+          "id": "view-signup-builder-field-1",
+          "type": "view.email_input",
+          "x": 390,
+          "y": 320,
+          "data": {
+            "title": "Email",
+            "name": "email",
+            "label": "Email",
+            "placeholder": "you@example.com",
+            "value_path": "",
+            "required": true,
+            "autocomplete": "email",
+            "css_class": "",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            }
+          }
+        },
+        {
+          "id": "view-signup-builder-field-2",
+          "type": "view.password_input",
+          "x": 390,
+          "y": 450,
+          "data": {
+            "title": "Password",
+            "name": "password",
+            "label": "Password",
+            "placeholder": "",
+            "value_path": "",
+            "required": true,
+            "autocomplete": "new-password",
+            "css_class": "",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            }
+          }
+        },
+        {
+          "id": "view-signup-builder-button",
+          "type": "view.button",
+          "x": 390,
+          "y": 580,
+          "data": {
+            "title": "Submit Button",
+            "text": "Create account",
+            "button_type": "submit",
+            "style": "primary",
+            "name": "",
+            "value": "",
+            "css_class": "",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 6,
+              "large": 4
+            }
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "view-signup-builder-edge-0",
+          "from": "view-signup-builder-form",
+          "from_port": "children",
+          "to": "view-signup-builder-csrf",
+          "to_port": "parent",
+          "port_type": "view-child"
+        },
+        {
+          "id": "view-signup-builder-edge-1",
+          "from": "view-signup-builder-form",
+          "from_port": "children",
+          "to": "view-signup-builder-field-0",
+          "to_port": "parent",
+          "port_type": "view-child"
+        },
+        {
+          "id": "view-signup-builder-edge-2",
+          "from": "view-signup-builder-form",
+          "from_port": "children",
+          "to": "view-signup-builder-field-1",
+          "to_port": "parent",
+          "port_type": "view-child"
+        },
+        {
+          "id": "view-signup-builder-edge-3",
+          "from": "view-signup-builder-form",
+          "from_port": "children",
+          "to": "view-signup-builder-field-2",
+          "to_port": "parent",
+          "port_type": "view-child"
+        },
+        {
+          "id": "view-signup-builder-edge-4",
+          "from": "view-signup-builder-form",
+          "from_port": "children",
+          "to": "view-signup-builder-button",
+          "to_port": "parent",
+          "port_type": "view-child"
+        }
+      ],
+      "viewport": {
+        "x": 90,
+        "y": 70,
+        "zoom": 1
+      }
+    },
+    "view-edit-builder": {
+      "id": "view-edit-builder",
+      "name": "profile.edit View Builder",
+      "kind": "view",
+      "owner_node_id": "view-edit-get",
+      "nodes": [
+        {
+          "id": "view-edit-builder-form",
+          "type": "view.form",
+          "x": 80,
+          "y": 100,
+          "data": {
+            "title": "Profile Edit Form",
+            "component_name": "profile-edit-form",
+            "action": "/profile/edit",
+            "method": "POST",
+            "enctype": "",
+            "css_class": "",
+            "gap": "1rem",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            }
+          }
+        },
+        {
+          "id": "view-edit-builder-csrf",
+          "type": "view.csrf",
+          "x": 390,
+          "y": 80,
+          "data": {
+            "title": "CSRF",
+            "session_key": "profile_update",
+            "hours": 1
+          }
+        },
+        {
+          "id": "view-edit-builder-field-0",
+          "type": "view.text_input",
+          "x": 390,
+          "y": 190,
+          "data": {
+            "title": "Name",
+            "name": "name",
+            "label": "Name",
+            "placeholder": "Your name",
+            "value_path": "user.name",
+            "required": true,
+            "autocomplete": "name",
+            "css_class": "",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            }
+          }
+        },
+        {
+          "id": "view-edit-builder-field-1",
+          "type": "view.email_input",
+          "x": 390,
+          "y": 320,
+          "data": {
+            "title": "Email",
+            "name": "email",
+            "label": "Email",
+            "placeholder": "you@example.com",
+            "value_path": "user.email",
+            "required": true,
+            "autocomplete": "email",
+            "css_class": "",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 12,
+              "large": 12
+            }
+          }
+        },
+        {
+          "id": "view-edit-builder-button",
+          "type": "view.button",
+          "x": 390,
+          "y": 450,
+          "data": {
+            "title": "Submit Button",
+            "text": "Save profile",
+            "button_type": "submit",
+            "style": "primary",
+            "name": "",
+            "value": "",
+            "css_class": "",
+            "widths": {
+              "mobile": 12,
+              "small": 12,
+              "medium": 6,
+              "large": 4
+            }
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "view-edit-builder-edge-0",
+          "from": "view-edit-builder-form",
+          "from_port": "children",
+          "to": "view-edit-builder-csrf",
+          "to_port": "parent",
+          "port_type": "view-child"
+        },
+        {
+          "id": "view-edit-builder-edge-1",
+          "from": "view-edit-builder-form",
+          "from_port": "children",
+          "to": "view-edit-builder-field-0",
+          "to_port": "parent",
+          "port_type": "view-child"
+        },
+        {
+          "id": "view-edit-builder-edge-2",
+          "from": "view-edit-builder-form",
+          "from_port": "children",
+          "to": "view-edit-builder-field-1",
+          "to_port": "parent",
+          "port_type": "view-child"
+        },
+        {
+          "id": "view-edit-builder-edge-3",
+          "from": "view-edit-builder-form",
+          "from_port": "children",
+          "to": "view-edit-builder-button",
+          "to_port": "parent",
+          "port_type": "view-child"
+        }
+      ],
+      "viewport": {
+        "x": 90,
+        "y": 70,
+        "zoom": 1
+      }
+    },
+    "migration-users-flow": {
+      "id": "migration-users-flow",
+      "name": "Create visual auth users Migration Graph",
+      "kind": "migration",
+      "owner_node_id": "migration-users",
+      "nodes": [
+        {
+          "id": "migration-start",
+          "type": "migration.start",
+          "x": 70,
+          "y": 110,
+          "data": {
+            "title": "Migration Start"
+          }
+        },
+        {
+          "id": "migration-form-table",
+          "type": "migration.form_table",
+          "x": 330,
+          "y": 90,
+          "data": {
+            "title": "Create Users From Signup Form",
+            "view_node_id": "view-signup-get",
+            "form_name": "signup-form",
+            "table": "visual_auth_users",
+            "include_id": true,
+            "include_timestamps": true,
+            "unique_fields": "email"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "migration-edge-1",
+          "from": "migration-start",
+          "from_port": "exec",
+          "to": "migration-form-table",
+          "to_port": "exec_in",
+          "port_type": "exec"
+        }
+      ],
+      "viewport": {
+        "x": 80,
+        "y": 80,
+        "zoom": 1
+      }
+    }
+  },
+  "sample": {
+    "id": "auth-starter",
+    "name": "Authentication & Profiles",
+    "order": 1,
+    "level": "Intermediate",
+    "description": "A complete login, signup, profile, edit, and delete workflow built from forms, validation, sessions, models, migrations, and responsive views.",
+    "focus": [
+      "Forms",
+      "Validation",
+      "Sessions",
+      "Models",
+      "Migrations"
+    ]
+  }
+}

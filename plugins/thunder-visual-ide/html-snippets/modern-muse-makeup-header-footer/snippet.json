@@ -1,0 +1,18 @@
+{
+  "id": "modern-muse-makeup-header-footer",
+  "name": "Modern Muse Makeup Header and Footer",
+  "description": "A coordinated responsive header and footer set for MODERN MUSE.",
+  "category": "Fashion & Beauty",
+  "order": 4190,
+  "tags": [
+    "header footer",
+    "fashion",
+    "beauty",
+    "responsive",
+    "modern muse"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,45 @@
+{
+  "type": "javascript.variable",
+  "label": "JS Variable",
+  "category": "JavaScript Values",
+  "kind": "expression",
+  "icon": "VAR",
+  "color": "#2563eb",
+  "description": "References an existing JavaScript variable or property path.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "JS Variable",
+    "name": "value"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "label": "Variable / property path",
+      "type": "text",
+      "help": "Examples: userId, event.target, window.app.state"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Value",
+        "type": "js-value",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\VariableCompiler",
+    "file": "Compiler.php"
+  }
+}

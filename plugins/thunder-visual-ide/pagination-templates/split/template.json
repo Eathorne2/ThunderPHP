@@ -1,0 +1,42 @@
+{
+  "id": "split",
+  "name": "Split Navigation",
+  "description": "Previous and next actions separated from a compact page counter.",
+  "order": 40,
+  "defaults": {
+    "component_name": "pagination",
+    "pager_variable": "pager",
+    "show_summary": true,
+    "first_label": "«",
+    "prev_label": "← Previous",
+    "next_label": "Next →",
+    "last_label": "»",
+    "wrapper_class": "tvi-pager-split",
+    "buttons_class": "tvi-pager-split__buttons",
+    "button_class": "tvi-pager-split__button",
+    "active_class": "is-active",
+    "disabled_class": "is-disabled",
+    "ellipsis_class": "is-ellipsis",
+    "summary_class": "tvi-pager-split__summary",
+    "base_styles": true,
+    "custom_css": "",
+    "widths": {
+      "mobile": 12,
+      "small": 12,
+      "medium": 12,
+      "large": 12
+    }
+  },
+  "palette": {
+    "button_background": "#ffffff",
+    "button_text": "#0f172a",
+    "button_border": "#cbd5e1",
+    "hover_background": "#f8fafc",
+    "hover_text": "#0f172a",
+    "active_background": "#0f172a",
+    "active_text": "#ffffff",
+    "disabled_background": "#f8fafc",
+    "disabled_text": "#64748b",
+    "summary_text": "#64748b"
+  }
+}

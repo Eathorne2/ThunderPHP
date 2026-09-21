@@ -1,0 +1,116 @@
+.editorial-slider {
+    position: relative;
+    min-height: 32rem;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    background: var(--thv-theme-text, #0f172a)
+}
+
+.editorial-slider__slides, .editorial-slider__slides article {
+    position: absolute;
+    inset: 0
+}
+
+.editorial-slider__slides article {
+    opacity: 0;
+    transition: opacity .45s;
+    pointer-events: none
+}
+
+.editorial-slider__slides article.is-active {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.editorial-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.editorial-slider article>div {
+    position: absolute;
+    left: clamp(1.5rem, 6vw, 5rem);
+    right: clamp(1.5rem, 6vw, 5rem);
+    bottom: clamp(3.5rem, 8vw, 6rem);
+    max-width: 38rem;
+    color: var(--thv-theme-on-primary, #fff);
+    text-shadow: 0 2px 18px rgba(0, 0, 0, .55)
+}
+
+.editorial-slider article::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(15, 23, 42, .76), rgba(15, 23, 42, .04) 75%)
+}
+
+.editorial-slider article>div {
+    z-index: 1
+}
+
+.editorial-slider article span {
+    color: #bfdbfe;
+    font-size: .74rem;
+    font-weight: 850;
+    letter-spacing: .12em;
+    text-transform: uppercase
+}
+
+.editorial-slider h2 {
+    margin: .55rem 0;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1
+}
+
+.editorial-slider p {
+    margin: 0;
+    color: #e2e8f0;
+    line-height: 1.6
+}
+
+.editorial-slider__arrow {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    width: 2.8rem;
+    height: 2.8rem;
+    border: 1px solid rgba(255, 255, 255, .45);
+    border-radius: 50%;
+    background: rgba(15, 23, 42, .35);
+    color: #fff;
+    font-size: 1.7rem;
+    backdrop-filter: blur(6px)
+}
+
+.editorial-slider__arrow.is-prev {
+    left: 1rem
+}
+
+.editorial-slider__arrow.is-next {
+    right: 1rem
+}
+
+.editorial-slider__dots {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 1.2rem;
+    display: flex;
+    gap: .45rem;
+    transform: translateX(-50%)
+}
+
+.editorial-slider__dots button {
+    width: .6rem;
+    height: .6rem;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .48)
+}
+
+.editorial-slider__dots button.is-active {
+    width: 1.7rem;
+    background: var(--thv-theme-on-primary, #fff)
+}

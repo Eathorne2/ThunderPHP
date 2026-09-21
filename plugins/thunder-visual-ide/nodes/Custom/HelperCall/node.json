@@ -1,0 +1,79 @@
+{
+  "type": "custom.helper_call",
+  "label": "Helper Call",
+  "category": "Custom",
+  "kind": "flow",
+  "icon": "H()",
+  "color": "#52525b",
+  "description": "Calls a ThunderPHP/global helper function with an Arguments node.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Helper Call",
+    "function_name": "helper_name",
+    "assign_result": true,
+    "result_variable": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "result_variable",
+      "label": "Result variable",
+      "type": "text",
+      "help": "Optional PHP variable name. Omit the $ sign. Leave blank to use the automatic node-specific name."
+    },
+    {
+      "name": "function_name",
+      "label": "Function name",
+      "type": "text"
+    },
+    {
+      "name": "assign_result",
+      "label": "Store result",
+      "type": "checkbox"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "arguments",
+        "label": "Arguments",
+        "type": "arguments",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      },
+      {
+        "id": "result",
+        "label": "Result",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Custom\\HelperCallCompiler",
+    "file": "Compiler.php"
+  }
+}

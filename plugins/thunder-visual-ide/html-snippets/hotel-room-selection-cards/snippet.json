@@ -1,0 +1,18 @@
+{
+  "id": "hotel-room-selection-cards",
+  "name": "Hotel Room Selection Cards",
+  "description": "A polished room and suite comparison grid with occupancy, amenities, rates and quick selection.",
+  "category": "Travel & Hotels",
+  "order": 4840,
+  "tags": [
+    "hotel",
+    "rooms",
+    "cards",
+    "booking",
+    "suite"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

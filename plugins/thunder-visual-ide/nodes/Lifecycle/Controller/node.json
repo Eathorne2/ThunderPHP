@@ -1,0 +1,96 @@
+{
+  "type": "lifecycle.controller",
+  "label": "Controller Hook",
+  "category": "Lifecycle",
+  "kind": "architecture",
+  "icon": "C/F",
+  "color": "#be123c",
+  "description": "Creates an action or filter callback with an ordered nested flow graph. Connect a Route to scope it, or leave it unconnected to register the hook globally.",
+  "allowed_graphs": [
+    "architecture"
+  ],
+  "nested_graph": "flow",
+  "defaults": {
+    "title": "Controller",
+    "hook_type": "action",
+    "hook_name": "controller",
+    "data_variable": "data",
+    "priority": 10,
+    "graph_id": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Controller name",
+      "type": "text"
+    },
+    {
+      "name": "hook_type",
+      "label": "Hook type",
+      "type": "select",
+      "options": [
+        "action",
+        "filter"
+      ],
+      "help": "Actions run code. Filters receive a value and must return the value, optionally after changing it."
+    },
+    {
+      "name": "hook_name",
+      "label": "Hook name",
+      "type": "editable_select",
+      "suggestions_by": {
+        "property": "hook_type",
+        "values": {
+          "action": [
+            "before_controller",
+            "controller",
+            "after_controller",
+            "before_view",
+            "view",
+            "before_404_redirect",
+            "after_view"
+          ],
+          "filter": [
+            "before_db_connect",
+            "before_query_query",
+            "before_query_data",
+            "after_query",
+            "user_roles",
+            "user_permissions",
+            "before_check_admin"
+          ]
+        }
+      },
+      "help": "Select a standard framework hook or type any custom hook name.",
+      "include_project_action_hooks": true
+    },
+    {
+      "name": "data_variable",
+      "label": "Callback data variable",
+      "type": "text",
+      "help": "PHP variable name for the value passed into the callback. Enter data or $data. Defaults to data."
+    },
+    {
+      "name": "priority",
+      "label": "Fallback priority",
+      "type": "number",
+      "help": "Used directly for unscoped hooks. When connected to a Route, top-to-bottom order generates route-specific priorities."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "route",
+        "label": "Route",
+        "type": "controller",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Lifecycle\\ControllerCompiler",
+    "file": "Compiler.php"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "user-status-card",
+  "name": "User Status Card",
+  "description": "A compact directory card with presence, contact details and an overflow action menu.",
+  "category": "User Cards",
+  "order": 1030,
+  "tags": [
+    "user",
+    "directory",
+    "status",
+    "compact"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,71 @@
+{
+  "slug": "two-column-text",
+  "name": "Two Column Text",
+  "category": "Layout",
+  "description": "Two balanced text columns with independent headings.",
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-block--two-column-text\">{{elements:columns}}</div>",
+  "css": ".tb-block--two-column-text{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:clamp(24px,5vw,56px)}.tb-two-column-text__column{min-width:0}.tb-two-column-text__title{margin:0 0 12px;color:var(--tb-color-secondary);font-size:25px;letter-spacing:-.025em}.tb-two-column-text__body{color:var(--tb-color-muted);font-size:16px;line-height:1.75}@media(max-width:680px){.tb-block--two-column-text{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "columns",
+      "label": "Text column",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "title": "What changed",
+        "content": "<p>Explain the first side of the story with enough detail to stand on its own.</p>"
+      },
+      "schema": [
+        {
+          "key": "title",
+          "label": "Heading",
+          "type": "text",
+          "selector": ".tb-two-column-text__title"
+        },
+        {
+          "key": "content",
+          "label": "Content",
+          "type": "richtext",
+          "selector": ".tb-two-column-text__body",
+          "rows": 8
+        }
+      ],
+      "template": "<section class=\"tb-two-column-text__column\"><h3 class=\"tb-two-column-text__title\">{{title}}</h3><div class=\"tb-two-column-text__body\">{{content}}</div></section>",
+      "min": 1,
+      "max": 6,
+      "default_items": [
+        {
+          "title": "What changed",
+          "content": "<p>Explain the first side of the story with enough detail to stand on its own.</p>"
+        },
+        {
+          "title": "Why it matters",
+          "content": "<p>Use the second column for context, implications or a useful comparison.</p>"
+        }
+      ],
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

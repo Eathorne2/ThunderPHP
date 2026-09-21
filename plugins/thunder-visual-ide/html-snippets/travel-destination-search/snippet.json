@@ -1,0 +1,18 @@
+{
+  "id": "travel-destination-search",
+  "name": "Travel Destination Search",
+  "description": "A tabbed travel search component for hotel stays, guided tours and multi-day escapes.",
+  "category": "Travel & Hotels",
+  "order": 4820,
+  "tags": [
+    "travel",
+    "search",
+    "booking",
+    "destination",
+    "tabs"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

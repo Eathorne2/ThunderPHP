@@ -1,0 +1,18 @@
+{
+  "id": "atelier-noir-fashion-header-footer",
+  "name": "Atelier Noir Fashion Header and Footer",
+  "description": "A coordinated responsive header and footer set for ATELIER / NOIR.",
+  "category": "Fashion & Beauty",
+  "order": 4110,
+  "tags": [
+    "header footer",
+    "fashion",
+    "beauty",
+    "responsive",
+    "atelier / noir"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

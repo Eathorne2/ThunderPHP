@@ -1,0 +1,18 @@
+{
+  "id": "organic-market-promo-grid",
+  "name": "Organic Market Promo Grid",
+  "description": "A bright grocery and farm-shop promotional grid with produce offers, category cards and a newsletter tile.",
+  "category": "Food & Restaurant",
+  "order": 3790,
+  "tags": [
+    "organic market",
+    "grocery",
+    "promotion",
+    "grid",
+    "produce"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

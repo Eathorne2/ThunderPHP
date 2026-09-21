@@ -1,0 +1,17 @@
+{
+  "id": "legal-team-profile-grid",
+  "name": "Legal Team Profile Grid",
+  "description": "A responsive people grid for attorneys, advisors and senior consultants.",
+  "category": "Business & Law",
+  "order": 5240,
+  "tags": [
+    "team",
+    "attorneys",
+    "profiles",
+    "grid"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

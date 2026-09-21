@@ -1,0 +1,192 @@
+{
+  "slug": "arch-residential-projects",
+  "name": "Residential Projects",
+  "category": "Architecture & Building",
+  "description": "Responsive architecture/building card section",
+  "keywords": [
+    "residential",
+    "projects",
+    "cards"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-arch-residential-projects\"><div class=\"tb-arch-residential-projects__head\">{{elements:kicker}}{{elements:title}}{{elements:intro}}</div><div class=\"tb-arch-residential-projects__grid\">{{elements:cards}}</div></section>",
+  "css": ".tb-arch-residential-projects{padding:clamp(40px,7vw,86px);background:var(--tb-color-background)}.tb-arch-residential-projects__head{max-width:760px;margin-bottom:36px}.tb-arch-residential-projects__kicker{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--tb-color-primary)}.tb-arch-residential-projects__title{font-size:clamp(38px,5vw,64px);line-height:1;margin:12px 0;color:var(--tb-color-secondary)}.tb-arch-residential-projects__intro{font-size:17px;line-height:1.7;color:var(--tb-color-muted)}.tb-arch-residential-projects__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.tb-arch-residential-projects__card{border:1px solid var(--tb-color-border);background:var(--tb-color-surface)}.tb-arch-residential-projects__card-image{width:100%;height:240px;object-fit:cover}.tb-arch-residential-projects__card-body{padding:22px}.tb-arch-residential-projects__card-title{font-size:23px;margin:0 0 10px;color:var(--tb-color-secondary)}.tb-arch-residential-projects__card-text{margin:0;color:var(--tb-color-muted);line-height:1.65}@media(max-width:860px){.tb-arch-residential-projects__grid{grid-template-columns:1fr 1fr}}@media(max-width:580px){.tb-arch-residential-projects__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "kicker",
+      "label": "Kicker",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Selected homes"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-arch-residential-projects__kicker\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "title",
+      "label": "Heading",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Residential work with a distinct point of view"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-arch-residential-projects__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "intro",
+      "label": "Introduction",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Showcase houses, villas and residential developments in an image-led project grid"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-arch-residential-projects__intro\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "cards",
+      "label": "Cards",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=82",
+        "title": "Courtyard House",
+        "text": "A private home organized around light and landscape."
+      },
+      "schema": [
+        {
+          "key": "image",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-arch-residential-projects__card-image"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-arch-residential-projects__card-title"
+        },
+        {
+          "key": "text",
+          "label": "Description",
+          "type": "textarea",
+          "selector": ".tb-arch-residential-projects__card-text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-arch-residential-projects__card\"><img class=\"tb-arch-residential-projects__card-image\" src=\"{{image}}\" alt=\"{{title}}\"><div class=\"tb-arch-residential-projects__card-body\"><h3 class=\"tb-arch-residential-projects__card-title\">{{title}}</h3><p class=\"tb-arch-residential-projects__card-text\">{{text}}</p></div></article>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 12,
+      "default_items": [
+        {
+          "title": "Courtyard House",
+          "text": "A private home organized around light and landscape.",
+          "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=82"
+        },
+        {
+          "title": "Ridge Residence",
+          "text": "A compact house shaped by views and terrain.",
+          "image": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=82"
+        },
+        {
+          "title": "Urban Townhouse",
+          "text": "Dense-city living with generous interior daylight.",
+          "image": "https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=1600&q=82"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "slug": "arch-project-faq",
+  "name": "Architecture Project FAQ",
+  "category": "Architecture & Building",
+  "description": "Architecture/building FAQ section",
+  "keywords": [
+    "architecture",
+    "project",
+    "faq",
+    "faq"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-arch-project-faq\"><div class=\"tb-arch-project-faq__intro\">{{elements:kicker}}{{elements:title}}</div><div class=\"tb-arch-project-faq__list\">{{elements:faqs}}</div></section>",
+  "css": ".tb-arch-project-faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;padding:clamp(40px,7vw,86px);background:var(--tb-color-background)}.tb-arch-project-faq__kicker{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--tb-color-primary)}.tb-arch-project-faq__title{font-size:clamp(38px,5vw,60px);line-height:1.04;margin:12px 0;color:var(--tb-color-secondary)}.tb-arch-project-faq__list{border-top:2px solid var(--tb-color-secondary)}.tb-arch-project-faq__item{padding:22px 0;border-bottom:1px solid var(--tb-color-border)}.tb-arch-project-faq__q{font-size:20px;margin:0 0 8px;color:var(--tb-color-secondary)}.tb-arch-project-faq__a{margin:0;color:var(--tb-color-muted);line-height:1.65}@media(max-width:760px){.tb-arch-project-faq{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "kicker",
+      "label": "Kicker",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Before we begin"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-arch-project-faq__kicker\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "title",
+      "label": "Heading",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Common questions before starting a project"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-arch-project-faq__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "faqs",
+      "label": "FAQ items",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "question": "When should an architect join?",
+        "answer": "As early as possible—before major site, budget or planning decisions are locked in."
+      },
+      "schema": [
+        {
+          "key": "question",
+          "label": "Question",
+          "type": "text",
+          "selector": ".tb-arch-project-faq__q"
+        },
+        {
+          "key": "answer",
+          "label": "Answer",
+          "type": "textarea",
+          "selector": ".tb-arch-project-faq__a",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-arch-project-faq__item\"><h3 class=\"tb-arch-project-faq__q\">{{question}}</h3><p class=\"tb-arch-project-faq__a\">{{answer}}</p></article>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 10,
+      "default_items": [
+        {
+          "question": "When should an architect join?",
+          "answer": "As early as possible—before major site, budget or planning decisions are locked in."
+        },
+        {
+          "question": "How long does design take?",
+          "answer": "It depends on complexity and approvals, but the work is usually staged from concept through documentation."
+        },
+        {
+          "question": "Can you work with our contractor?",
+          "answer": "Yes. The block is designed for practices that coordinate closely with contractors and consultants."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

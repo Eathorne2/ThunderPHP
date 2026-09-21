@@ -1,0 +1,54 @@
+{
+  "name": "Thunder Visual IDE",
+  "type": "Companion",
+  "version": "0.12.97",
+  "core_requires": "^1.0.0",
+  "id": "thunder-visual-ide",
+  "description": "A node-based visual programming IDE for ThunderPHP with editable node compilers, live HTML component design, marketplace asset authoring, visual Views, migrations and safe test deployment.",
+  "author": "Eathorne Choongo",
+  "email": "eathorne2012@yahoo.com",
+  "website": "https://thunderphp.com",
+  "thumbnail": "plugin.jpg",
+  "active": true,
+  "look": "main",
+  "index": 20,
+  "routes": {
+    "on": [
+      "thunder-ide"
+    ],
+    "off": [],
+    "routes": [
+      {
+        "method": "GET",
+        "pattern": "/thunder-ide",
+        "name": "thunder_ide.index"
+      },
+      {
+        "method": "POST",
+        "pattern": "/thunder-ide/api/{action}",
+        "name": "thunder_ide.api"
+      },
+      {
+        "method": "GET",
+        "pattern": "/thunder-ide/tutorials",
+        "name": "thunder_ide.tutorials"
+      },
+      {
+        "method": "GET",
+        "pattern": "/thunder-ide/tutorials/{slug}/download",
+        "name": "thunder_ide.tutorial_download"
+      },
+      {
+        "method": "GET",
+        "pattern": "/thunder-ide/tutorials/{slug}/media",
+        "name": "thunder_ide.tutorial_media"
+      },
+      {
+        "method": "GET",
+        "pattern": "/thunder-ide/tutorials/{slug}",
+        "name": "thunder_ide.tutorial"
+      }
+    ]
+  },
+  "dependencies": {}
+}

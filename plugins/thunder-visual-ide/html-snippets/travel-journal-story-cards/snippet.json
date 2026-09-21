@@ -1,0 +1,18 @@
+{
+  "id": "travel-journal-story-cards",
+  "name": "Travel Journal Story Cards",
+  "description": "An editorial travel journal grid with destination filters, article metadata and image-led cards.",
+  "category": "Travel & Hotels",
+  "order": 4980,
+  "tags": [
+    "travel",
+    "journal",
+    "articles",
+    "cards",
+    "editorial"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

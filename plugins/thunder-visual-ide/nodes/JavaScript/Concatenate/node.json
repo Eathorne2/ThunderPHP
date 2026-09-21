@@ -1,0 +1,51 @@
+{
+  "type": "javascript.concatenate",
+  "label": "JS Concatenate",
+  "category": "JavaScript Values",
+  "kind": "expression",
+  "icon": "JOIN",
+  "color": "#2563eb",
+  "description": "Joins several browser-side values into one string.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "dynamic_ports": "js_concatenate",
+  "defaults": {
+    "title": "JS Concatenate",
+    "input_count": 2,
+    "separator": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "input_count",
+      "label": "Input count",
+      "type": "number"
+    },
+    {
+      "name": "separator",
+      "label": "Separator",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "String",
+        "type": "js-string",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\ConcatenateCompiler",
+    "file": "Compiler.php"
+  }
+}

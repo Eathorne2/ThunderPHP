@@ -1,0 +1,20 @@
+{
+  "id": "department-contact-grid",
+  "name": "Department Contact Grid",
+  "description": "A department directory paired with a targeted enquiry form.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Contact Us Forms",
+  "order": 8018,
+  "tags": [
+    "contact",
+    "departments",
+    "directory",
+    "form"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

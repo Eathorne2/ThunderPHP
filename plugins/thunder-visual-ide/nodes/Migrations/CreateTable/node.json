@@ -1,0 +1,82 @@
+{
+  "type": "migration.create_table",
+  "label": "Create Table",
+  "category": "Migrations",
+  "kind": "migration",
+  "icon": "CRE",
+  "color": "#8b5cf6",
+  "description": "Creates a new table from explicit ThunderPHP migration column definitions.",
+  "allowed_graphs": [
+    "migration"
+  ],
+  "defaults": {
+    "title": "Create Table",
+    "table": "plugin_items",
+    "primary_key": "id",
+    "engine": "InnoDB",
+    "charset": "utf8mb4",
+    "collate": "utf8mb4_unicode_ci",
+    "columns_json": "[\n  {\n    \"name\": \"id\",\n    \"type\": \"INT\",\n    \"length\": \"\",\n    \"unsigned\": true,\n    \"nullable\": false,\n    \"auto_increment\": true,\n    \"default\": \"\",\n    \"extra\": \"\"\n  },\n  {\n    \"name\": \"name\",\n    \"type\": \"VARCHAR\",\n    \"length\": \"255\",\n    \"unsigned\": false,\n    \"nullable\": false,\n    \"auto_increment\": false,\n    \"default\": \"\",\n    \"extra\": \"\"\n  },\n  {\n    \"name\": \"date_created\",\n    \"type\": \"DATETIME\",\n    \"length\": \"\",\n    \"unsigned\": false,\n    \"nullable\": false,\n    \"auto_increment\": false,\n    \"default\": \"CURRENT_TIMESTAMP\",\n    \"extra\": \"\"\n  }\n]"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "table",
+      "label": "Table",
+      "type": "text"
+    },
+    {
+      "name": "columns_json",
+      "label": "Columns",
+      "type": "migration_columns",
+      "help": "Use the structured manager to reduce SQL definition mistakes. Extra SQL remains available for advanced column modifiers."
+    },
+    {
+      "name": "primary_key",
+      "label": "Primary key columns",
+      "type": "text",
+      "help": "Comma-separated. Leave empty for no primary key."
+    },
+    {
+      "name": "engine",
+      "label": "Engine",
+      "type": "text"
+    },
+    {
+      "name": "charset",
+      "label": "Charset",
+      "type": "text"
+    },
+    {
+      "name": "collate",
+      "label": "Collation",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Previous",
+        "type": "exec",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out"
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Migrations\\CreateTableCompiler",
+    "file": "Compiler.php"
+  }
+}

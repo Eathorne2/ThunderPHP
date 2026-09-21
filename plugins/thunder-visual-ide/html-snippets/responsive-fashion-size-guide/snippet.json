@@ -1,0 +1,17 @@
+{
+  "id": "responsive-fashion-size-guide",
+  "name": "Responsive Fashion Size Guide",
+  "description": "A responsive clothing size table with metric and imperial measurement switching.",
+  "category": "Fashion & Beauty",
+  "order": 4010,
+  "tags": [
+    "fashion",
+    "size guide",
+    "table",
+    "measurements"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

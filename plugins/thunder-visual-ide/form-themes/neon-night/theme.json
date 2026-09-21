@@ -1,0 +1,76 @@
+{
+  "id": "neon-night",
+  "name": "Neon Night",
+  "description": "A dark high-contrast theme with luminous focus states for developer and media interfaces.",
+  "order": 80,
+  "palettes": {
+    "default": {
+      "name": "Electric Cyan",
+      "colors": {
+        "primary": "#22d3ee",
+        "secondary": "#8b5cf6",
+        "surface": "#0b1220",
+        "surface_alt": "#111b2e",
+        "text": "#f8fafc",
+        "muted": "#94a3b8",
+        "border": "#26364f",
+        "danger": "#fb7185",
+        "on_primary": "#061018",
+        "success": "#22c55e",
+        "warning": "#f59e0b",
+        "info": "#22d3ee"
+      }
+    },
+    "lime": {
+      "name": "Lime Circuit",
+      "colors": {
+        "primary": "#a3e635",
+        "secondary": "#22c55e",
+        "surface": "#08110d",
+        "surface_alt": "#101d17",
+        "text": "#f7fee7",
+        "muted": "#a3b5aa",
+        "border": "#294438",
+        "danger": "#fb7185",
+        "on_primary": "#102006",
+        "success": "#22c55e",
+        "warning": "#facc15",
+        "info": "#38bdf8"
+      }
+    },
+    "magenta": {
+      "name": "Magenta Pulse",
+      "colors": {
+        "primary": "#f472b6",
+        "secondary": "#a78bfa",
+        "surface": "#130b19",
+        "surface_alt": "#21112b",
+        "text": "#fdf4ff",
+        "muted": "#c4a7cc",
+        "border": "#4a2857",
+        "danger": "#fb7185",
+        "on_primary": "#1f0717",
+        "success": "#34d399",
+        "warning": "#fbbf24",
+        "info": "#38bdf8"
+      }
+    }
+  },
+  "default_palette": "default",
+  "preview": "preview.html",
+  "css": "style.css",
+  "js": "script.js",
+  "components": {
+    "text_input": "field.html.tpl",
+    "email_input": "field.html.tpl",
+    "password_input": "field.html.tpl",
+    "number_input": "field.html.tpl",
+    "date_input": "field.html.tpl",
+    "file_input": "field.html.tpl",
+    "textarea": "textarea.html.tpl",
+    "select": "select.html.tpl",
+    "checkbox": "checkbox.html.tpl",
+    "button": "button.html.tpl",
+    "form": "form.html.tpl"
+  }
+}

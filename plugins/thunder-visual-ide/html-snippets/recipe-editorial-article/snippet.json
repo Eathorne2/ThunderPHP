@@ -1,0 +1,20 @@
+{
+  "id": "recipe-editorial-article",
+  "name": "Recipe Editorial Article",
+  "description": "An editorial recipe page with ingredients, method and serving controls.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Single Blog Posts",
+  "order": 8057,
+  "tags": [
+    "blog",
+    "recipe",
+    "article",
+    "food"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "compact-waveform-player",
+  "name": "Compact Waveform Player",
+  "description": "A compact audio player with a decorative waveform and accessible controls.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Audio Players",
+  "order": 8004,
+  "tags": [
+    "audio",
+    "player",
+    "waveform",
+    "compact"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "collectors-newsletter",
+  "name": "Collectors Newsletter",
+  "description": "A premium editorial subscription callout with stacked issue covers, bold typography and an inline success state.",
+  "category": "Magazine & Editorial",
+  "order": 3210,
+  "tags": [
+    "magazine",
+    "newsletter",
+    "call to action",
+    "subscription",
+    "editorial"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

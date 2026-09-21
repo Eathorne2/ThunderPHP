@@ -1,0 +1,18 @@
+{
+  "id": "band-member-profiles",
+  "name": "Band Member Profiles",
+  "description": "An editorial band roster with portrait cards, roles and short artist biographies.",
+  "category": "Music & Entertainment",
+  "order": 4260,
+  "tags": [
+    "band",
+    "artists",
+    "team",
+    "profiles",
+    "music"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,14 @@
+{
+    "id": 4,
+    "title": "Query Builder Beginner Guide",
+    "slug": "query-builder-beginner-guide",
+    "description": "For Beginners / First-time ThunderPHP users.\r\nLearn how to use the Query Builder step-by-step",
+    "type": "guide",
+    "featured": false,
+    "published": true,
+    "order": 1,
+    "meta_title": "",
+    "meta_description": "",
+    "image": "",
+    "video_url": ""
+}

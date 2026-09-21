@@ -1,0 +1,20 @@
+{
+  "id": "feature-comparison-slider",
+  "name": "Feature Comparison Slider",
+  "description": "A horizontal feature slider for comparing product capabilities.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Sliders",
+  "order": 8064,
+  "tags": [
+    "slider",
+    "features",
+    "comparison",
+    "product"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

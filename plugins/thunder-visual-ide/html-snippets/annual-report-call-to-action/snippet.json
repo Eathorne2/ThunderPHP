@@ -1,0 +1,18 @@
+{
+  "id": "annual-report-call-to-action",
+  "name": "Annual Report Call to Action",
+  "description": "An executive annual-report download section with key figures, publication cover and clear action.",
+  "category": "Call to Action",
+  "order": 3550,
+  "tags": [
+    "annual report",
+    "corporate",
+    "download",
+    "cta",
+    "investor"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

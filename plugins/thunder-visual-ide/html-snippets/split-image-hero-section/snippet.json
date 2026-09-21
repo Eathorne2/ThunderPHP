@@ -1,0 +1,17 @@
+{
+  "id": "split-image-hero-section",
+  "name": "Split Image Hero",
+  "description": "A balanced two-column hero with persuasive copy, actions, trust details, and a product image.",
+  "category": "Hero Sections",
+  "order": 3090,
+  "tags": [
+    "hero",
+    "split",
+    "image",
+    "landing"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

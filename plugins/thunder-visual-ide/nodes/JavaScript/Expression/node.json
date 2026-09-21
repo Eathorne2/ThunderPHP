@@ -1,0 +1,45 @@
+{
+  "type": "javascript.expression",
+  "label": "JS Expression",
+  "category": "JavaScript Values",
+  "kind": "expression",
+  "icon": "EX",
+  "color": "#2563eb",
+  "description": "Outputs a raw JavaScript expression.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "JS Expression",
+    "expression": "null"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "expression",
+      "label": "JavaScript expression",
+      "type": "code",
+      "help": "Do not add a trailing semicolon."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Value",
+        "type": "js-value",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\ExpressionCompiler",
+    "file": "Compiler.php"
+  }
+}

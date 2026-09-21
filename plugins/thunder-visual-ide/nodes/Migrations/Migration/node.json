@@ -1,0 +1,48 @@
+{
+  "type": "migration.definition",
+  "label": "Migration File",
+  "category": "Migrations",
+  "kind": "architecture",
+  "icon": "MIG",
+  "color": "#7c3aed",
+  "description": "Creates one ThunderPHP migration file and owns its ordered migration graph.",
+  "allowed_graphs": [
+    "architecture"
+  ],
+  "nested_graph": true,
+  "nested_graph_kind": "migration",
+  "nested_graph_label": "Migration Graph",
+  "defaults": {
+    "title": "Create users table",
+    "timestamp": "",
+    "filename_slug": "create_users_table",
+    "graph_id": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Migration title",
+      "type": "text"
+    },
+    {
+      "name": "timestamp",
+      "label": "Timestamp",
+      "type": "text",
+      "help": "YYYY-MM-DD_HHMMSS. Keep old migration timestamps unchanged."
+    },
+    {
+      "name": "filename_slug",
+      "label": "Filename description",
+      "type": "text",
+      "help": "Example: create_users_table or add_status_to_users."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Migrations\\MigrationCompiler",
+    "file": "Compiler.php"
+  }
+}

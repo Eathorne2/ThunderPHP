@@ -1,0 +1,207 @@
+{
+  "slug": "food-menu-columns",
+  "name": "Restaurant Menu Columns",
+  "category": "Food & Restaurant",
+  "description": "Clean restaurant menu list with section labels, descriptions and prices",
+  "keywords": [
+    "food",
+    "restaurant",
+    "menu",
+    "prices",
+    "dishes"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-food-menu\"><div class=\"tb-food-menu__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-food-menu__list\">{{elements:items}}</div></div>",
+  "css": ".tb-food-menu{padding:clamp(36px,7vw,90px);background:var(--tb-color-background)}.tb-food-menu__head{text-align:center;max-width:720px;margin:0 auto 34px}.tb-food-menu__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}.tb-food-menu__title{margin:10px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(44px,6vw,72px)}.tb-food-menu__text{color:var(--tb-color-muted);line-height:1.7}.tb-food-menu__list{display:grid;grid-template-columns:1fr 1fr;gap:0 46px;max-width:1050px;margin:auto}.tb-food-menu__item{display:grid;grid-template-columns:1fr auto;gap:5px 18px;padding:20px 0;border-bottom:1px solid var(--tb-color-border)}.tb-food-menu__group{grid-column:1/-1;color:var(--tb-color-primary);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.14em}.tb-food-menu__name{margin:0;color:var(--tb-color-secondary);font-size:19px}.tb-food-menu__detail{margin:0;color:var(--tb-color-muted);font-size:14px}.tb-food-menu__price{grid-column:2;grid-row:2/4;font-weight:900;color:var(--tb-color-secondary)}@media(max-width:700px){.tb-food-menu__list{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "À la carte"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-food-menu__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "The menu"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<h2 class=\"tb-food-menu__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Simple ingredients, thoughtful cooking and a menu that follows the season."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-food-menu__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "items",
+      "label": "Menu item",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "group": "Starters",
+        "name": "Tomato bruschetta",
+        "detail": "Basil · garlic · olive oil",
+        "price": "K85"
+      },
+      "schema": [
+        {
+          "key": "group",
+          "label": "Section",
+          "type": "text",
+          "selector": ".tb-food-menu__group"
+        },
+        {
+          "key": "name",
+          "label": "Dish name",
+          "type": "text",
+          "selector": ".tb-food-menu__name"
+        },
+        {
+          "key": "detail",
+          "label": "Description",
+          "type": "text",
+          "selector": ".tb-food-menu__detail"
+        },
+        {
+          "key": "price",
+          "label": "Price",
+          "type": "text",
+          "selector": ".tb-food-menu__price"
+        }
+      ],
+      "template": "<article class=\"tb-food-menu__item\"><span class=\"tb-food-menu__group\">{{group}}</span><h3 class=\"tb-food-menu__name\">{{name}}</h3><p class=\"tb-food-menu__detail\">{{detail}}</p><strong class=\"tb-food-menu__price\">{{price}}</strong></article>",
+      "min": 1,
+      "max": 30,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "group": "Starters",
+          "name": "Tomato bruschetta",
+          "detail": "Basil · garlic · olive oil",
+          "price": "K85"
+        },
+        {
+          "group": "Mains",
+          "name": "Herb chicken",
+          "detail": "Roast potatoes · garden jus",
+          "price": "K195"
+        },
+        {
+          "group": "Dessert",
+          "name": "Lemon cheesecake",
+          "detail": "Berry compote",
+          "price": "K95"
+        },
+        {
+          "group": "Drinks",
+          "name": "House lemonade",
+          "detail": "Fresh citrus · mint",
+          "price": "K45"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

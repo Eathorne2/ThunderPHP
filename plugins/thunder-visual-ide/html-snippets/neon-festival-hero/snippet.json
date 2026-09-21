@@ -1,0 +1,18 @@
+{
+  "id": "neon-festival-hero",
+  "name": "Neon Festival Hero",
+  "description": "A high-energy festival landing hero with layered typography, ticket actions and event statistics.",
+  "category": "Music & Entertainment",
+  "order": 4210,
+  "tags": [
+    "music",
+    "festival",
+    "hero",
+    "tickets",
+    "neon"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

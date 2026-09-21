@@ -1,0 +1,185 @@
+{
+  "slug": "cars-dealership-stats",
+  "name": "Dealership Trust Numbers",
+  "category": "Cars & Transportation",
+  "description": "Automotive dealership confidence statistics",
+  "keywords": [
+    "cars",
+    "transportation",
+    "statistics",
+    "numbers"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-auto-dealership-stats\"><header class=\"tb-auto-dealership-stats__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</header><div class=\"tb-auto-dealership-stats__grid\">{{elements:items}}</div></section>",
+  "css": ".tb-auto-dealership-stats{padding:clamp(34px,6vw,76px);background:var(--tb-color-background)}.tb-auto-dealership-stats__head{text-align:center;max-width:800px;margin:0 auto 28px}.tb-auto-dealership-stats__eyebrow{color:var(--tb-color-primary);font-size:11px;font-weight:950;letter-spacing:.15em;text-transform:uppercase}.tb-auto-dealership-stats__title{margin:8px 0;color:var(--tb-color-secondary);font-size:clamp(38px,5vw,62px)}.tb-auto-dealership-stats__text{color:var(--tb-color-muted);line-height:1.7}.tb-auto-dealership-stats__grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--tb-color-border);background:var(--tb-color-surface)}.tb-auto-dealership-stats__stat{padding:28px;text-align:center;border-right:1px solid var(--tb-color-border)}.tb-auto-dealership-stats__value{display:block;color:var(--tb-color-primary);font-size:clamp(34px,5vw,56px);font-weight:950}.tb-auto-dealership-stats__label{display:block;margin-top:8px;color:var(--tb-color-secondary);font-weight:800}@media(max-width:700px){.tb-auto-dealership-stats__grid{grid-template-columns:1fr 1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Why drivers choose us"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-auto-dealership-stats__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Trust measured over time"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-auto-dealership-stats__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Show customer, inventory and service milestones in a clean numerical band."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-auto-dealership-stats__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "items",
+      "label": "Statistic",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "value": "24/7",
+        "label": "Support"
+      },
+      "schema": [
+        {
+          "key": "value",
+          "label": "Value",
+          "type": "text",
+          "selector": ".tb-auto-dealership-stats__value"
+        },
+        {
+          "key": "label",
+          "label": "Label",
+          "type": "text",
+          "selector": ".tb-auto-dealership-stats__label"
+        }
+      ],
+      "template": "<div class=\"tb-auto-dealership-stats__stat\"><span class=\"tb-auto-dealership-stats__value\">{{value}}</span><span class=\"tb-auto-dealership-stats__label\">{{label}}</span></div>",
+      "min": 1,
+      "max": 12,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "value": "1,200+",
+          "label": "Vehicles delivered"
+        },
+        {
+          "value": "18",
+          "label": "Brands sourced"
+        },
+        {
+          "value": "9 yrs",
+          "label": "Local experience"
+        },
+        {
+          "value": "4.8/5",
+          "label": "Customer rating"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

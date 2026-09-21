@@ -1,0 +1,17 @@
+{
+  "id": "editorial-header-footer-set",
+  "name": "Editorial Header and Footer Set",
+  "description": "A refined publication header paired with a newsletter-focused editorial footer.",
+  "category": "Header and Footer Sets",
+  "order": 3010,
+  "tags": [
+    "header",
+    "footer",
+    "editorial",
+    "publication"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

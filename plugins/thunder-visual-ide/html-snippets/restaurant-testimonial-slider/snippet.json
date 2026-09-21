@@ -1,0 +1,18 @@
+{
+  "id": "restaurant-testimonial-slider",
+  "name": "Restaurant Testimonial Slider",
+  "description": "A warm dining testimonial carousel with guest quotes, occasion labels and simple navigation controls.",
+  "category": "Food & Restaurant",
+  "order": 3730,
+  "tags": [
+    "testimonials",
+    "restaurant",
+    "slider",
+    "reviews",
+    "food"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,134 @@
+{
+  "slug": "image-gallery",
+  "name": "Image Gallery",
+  "category": "Media",
+  "description": "A responsive, repeatable image gallery whose individual images can be edited, reordered, duplicated or deleted.",
+  "keywords": [
+    "gallery",
+    "images",
+    "photos",
+    "grid",
+    "repeatable"
+  ],
+  "settings": {
+    "defaults": {
+      "columns": "4",
+      "gap": 16,
+      "aspect_ratio": "4/3"
+    },
+    "schema": [
+      {
+        "key": "columns",
+        "label": "Desktop columns",
+        "type": "select",
+        "options": {
+          "2": "2 columns",
+          "3": "3 columns",
+          "4": "4 columns",
+          "5": "5 columns",
+          "6": "6 columns"
+        },
+        "default": "4"
+      },
+      {
+        "key": "gap",
+        "label": "Image gap",
+        "type": "range",
+        "min": 0,
+        "max": 48,
+        "step": 2,
+        "default": 16
+      },
+      {
+        "key": "aspect_ratio",
+        "label": "Image ratio",
+        "type": "select",
+        "options": {
+          "1/1": "Square",
+          "4/3": "Landscape 4:3",
+          "3/2": "Landscape 3:2",
+          "16/9": "Wide 16:9"
+        },
+        "default": "4/3"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "key": "images",
+      "label": "Gallery image",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80",
+        "alt": "Scenic landscape",
+        "caption": "Add a helpful caption"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-gallery__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        },
+        {
+          "key": "caption",
+          "label": "Caption",
+          "type": "text",
+          "selector": ".tb-gallery__caption"
+        }
+      ],
+      "template": "<figure class=\"tb-gallery__item\"><img class=\"tb-gallery__image\" src=\"{{url}}\" alt=\"{{alt}}\"><figcaption class=\"tb-gallery__caption\">{{caption}}</figcaption></figure>",
+      "min": 1,
+      "max": 30,
+      "default_items": [
+        {
+          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80",
+          "alt": "Mountain landscape at sunrise",
+          "caption": "Mountain light"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=80",
+          "alt": "Path through a green forest",
+          "caption": "Forest path"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=80",
+          "alt": "Lake surrounded by mountains",
+          "caption": "Quiet lake"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80",
+          "alt": "Hiker overlooking a valley",
+          "caption": "Open horizon"
+        }
+      ],
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    }
+  ],
+  "html": "<div class=\"tb-block tb-block--gallery\" style=\"--tb-gallery-columns:{{columns}};--tb-gallery-gap:{{gap}}px;--tb-gallery-ratio:{{aspect_ratio}}\">{{elements:images}}</div>",
+  "css": ".tb-block--gallery{display:grid;grid-template-columns:repeat(var(--tb-gallery-columns),minmax(0,1fr));gap:var(--tb-gallery-gap)}.tb-gallery__item{min-width:0;margin:0;overflow:hidden;border:1px solid var(--tb-color-border);border-radius:14px;background:var(--tb-color-surface)}.tb-gallery__image{width:100%;aspect-ratio:var(--tb-gallery-ratio);display:block;object-fit:cover}.tb-gallery__caption{padding:10px 12px;color:var(--tb-color-muted);font-size:12px;line-height:1.45}@media(max-width:900px){.tb-block--gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.tb-block--gallery{grid-template-columns:1fr}}",
+  "js": "",
+  "version": "1.0.0",
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+    "id": 1,
+    "title": "Installation",
+    "slug": "installation",
+    "description": "Shows how to install ThunderPHP Framework",
+    "type": "guide",
+    "featured": false,
+    "published": true,
+    "order": 0,
+    "meta_title": "",
+    "meta_description": "",
+    "image": "",
+    "video_url": ""
+}

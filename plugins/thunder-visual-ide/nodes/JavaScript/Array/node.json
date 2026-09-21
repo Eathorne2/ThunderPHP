@@ -1,0 +1,45 @@
+{
+  "type": "javascript.array",
+  "label": "JS Array",
+  "category": "JavaScript Values",
+  "kind": "expression",
+  "icon": "[]",
+  "color": "#2563eb",
+  "description": "Builds a JavaScript array from dynamic inputs.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "dynamic_ports": "js_array",
+  "defaults": {
+    "title": "JS Array",
+    "item_count": 3
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "item_count",
+      "label": "Item count",
+      "type": "number"
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Array",
+        "type": "js-array",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\ArrayCompiler",
+    "file": "Compiler.php"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "fashion-campaign-image-page",
+  "name": "Fashion Campaign Image Page",
+  "description": "A fashion campaign image page with issue typography, look details and next-look navigation.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9108,
+  "tags": [
+    "single image",
+    "fashion",
+    "campaign",
+    "lookbook"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

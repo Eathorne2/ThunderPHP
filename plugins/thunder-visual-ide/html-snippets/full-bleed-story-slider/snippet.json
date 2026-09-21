@@ -1,0 +1,20 @@
+{
+  "id": "full-bleed-story-slider",
+  "name": "Full Bleed Story Slider",
+  "description": "A full-width image story slider with overlay text and progress.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Sliders",
+  "order": 8035,
+  "tags": [
+    "slider",
+    "images",
+    "story",
+    "full width"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

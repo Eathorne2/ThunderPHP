@@ -1,0 +1,9 @@
+{
+  "name": "Visual IDE",
+  "version": "0.12.97",
+  "plugin": "thunder-visual-ide",
+  "plugin_requires": "^0.12.47",
+  "author": "Eathorne Choongo",
+  "thumbnail": "plugin.jpg",
+  "description": "Default full-screen visual programming interface"
+}

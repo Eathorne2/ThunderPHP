@@ -1,0 +1,200 @@
+{
+  "slug": "wed-wedding-party",
+  "name": "Wedding Party Portraits",
+  "category": "Wedding",
+  "description": "Portrait cards for bridesmaids, groomsmen or the wedding party",
+  "keywords": [
+    "wedding",
+    "party",
+    "bridesmaids",
+    "groomsmen"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-wed-party\"><div class=\"tb-wed-party__head\">{{elements:eyebrow}}{{elements:title}}{{elements:intro}}</div><div class=\"tb-wed-party__grid\">{{elements:people}}</div></div>",
+  "css": ".tb-wed-party{padding:clamp(30px,5vw,70px);background:var(--tb-color-background)}.tb-wed-party__head{max-width:720px;margin-bottom:30px}.tb-wed-party__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-wed-party__title{margin:8px 0;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(38px,5vw,58px);font-weight:400}.tb-wed-party__intro{color:var(--tb-color-muted);line-height:1.7}.tb-wed-party__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.tb-wed-party__image{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.tb-wed-party__name{margin:14px 0 3px;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:28px;font-weight:400}.tb-wed-party__role{margin:0;color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}@media(max-width:700px){.tb-wed-party__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Meet our people"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-wed-party__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "The wedding party"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-wed-party__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "intro",
+      "label": "Intro",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "The friends and family standing beside us on the day."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-wed-party__intro\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "people",
+      "label": "Person",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "image": "https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Wedding party member",
+        "name": "Maya",
+        "role": "Maid of Honor"
+      },
+      "schema": [
+        {
+          "key": "image",
+          "label": "Photo",
+          "type": "image",
+          "selector": ".tb-wed-party__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        },
+        {
+          "key": "name",
+          "label": "Name",
+          "type": "text",
+          "selector": ".tb-wed-party__name"
+        },
+        {
+          "key": "role",
+          "label": "Role",
+          "type": "text",
+          "selector": ".tb-wed-party__role"
+        }
+      ],
+      "template": "<article class=\"tb-wed-party__person\"><img class=\"tb-wed-party__image\" src=\"{{image}}\" alt=\"{{alt}}\"><h3 class=\"tb-wed-party__name\">{{name}}</h3><p class=\"tb-wed-party__role\">{{role}}</p></article>",
+      "min": 1,
+      "max": 8,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "image": "https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Wedding party member",
+          "name": "Maya",
+          "role": "Maid of Honor"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Wedding party member",
+          "name": "Daniel",
+          "role": "Best Man"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Wedding party member",
+          "name": "Lena",
+          "role": "Bridesmaid"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

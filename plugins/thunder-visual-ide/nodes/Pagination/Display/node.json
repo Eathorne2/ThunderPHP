@@ -1,0 +1,50 @@
+{
+  "type": "pagination.display",
+  "label": "Display Pager",
+  "category": "Pagination",
+  "kind": "flow",
+  "icon": "PGV",
+  "color": "#1e40af",
+  "description": "Outputs pagination controls using Core\\Pager::display().",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Display Pager"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Previous",
+        "type": "exec",
+        "direction": "in"
+      },
+      {
+        "id": "pager",
+        "label": "Pager",
+        "type": "object",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out"
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Pagination\\DisplayPagerCompiler",
+    "file": "Compiler.php"
+  }
+}

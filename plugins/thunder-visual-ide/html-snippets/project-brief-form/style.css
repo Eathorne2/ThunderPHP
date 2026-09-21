@@ -1,0 +1,184 @@
+.pbf-for {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.pbf-for *, .pbf-for *::before, .pbf-for *::after {
+    box-sizing: border-box;
+}
+
+.pbf-for button, .pbf-for input, .pbf-for select, .pbf-for textarea {
+    font: inherit;
+}
+
+.pbf-for a {
+    color: inherit;
+}
+
+.pbf-for {
+    display: grid;
+    grid-template-columns: minmax(15rem, 0.85fr) minmax(0, 1.15fr);
+    max-width: 68rem;
+    overflow: hidden;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.4rem;
+    background: var(--thv-theme-surface);
+}
+
+.pbf-for__intro {
+    padding: clamp(1.4rem, 4vw, 2.5rem);
+    background: color-mix(in srgb, var(--thv-theme-primary) 12%, var(--thv-theme-surface-alt));
+}
+
+.pbf-for__intro > span {
+    color: var(--thv-theme-primary);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.pbf-for__intro h2 {
+    margin: 0.5rem 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.05;
+}
+
+.pbf-for__intro > p {
+    color: var(--thv-theme-muted);
+    line-height: 1.65;
+}
+
+.pbf-for__map {
+    position: relative;
+    min-height: 13rem;
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    overflow: hidden;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface);
+}
+
+.pbf-for__map span, .pbf-for__map strong {
+    display: block;
+}
+
+.pbf-for__map p {
+    color: var(--thv-theme-muted);
+    line-height: 1.6;
+}
+
+.pbf-for__map i {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.5rem;
+    color: var(--thv-theme-primary);
+    font-size: 5rem;
+    font-style: normal;
+    opacity: 0.45;
+}
+
+.pbf-for__departments {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 1.4rem;
+}
+
+.pbf-for__departments button {
+    padding: 0.75rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.65rem;
+    background: var(--thv-theme-surface);
+    color: var(--thv-theme-text);
+    cursor: pointer;
+}
+
+.pbf-for__departments button.is-active {
+    border-color: var(--thv-theme-primary);
+    color: var(--thv-theme-primary);
+}
+
+.pbf-for__form {
+    display: grid;
+    gap: 1rem;
+    padding: clamp(1.4rem, 4vw, 2.5rem);
+}
+
+.pbf-for__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.pbf-for label {
+    display: grid;
+    gap: 0.4rem;
+    color: var(--thv-theme-muted);
+    font-size: 0.82rem;
+    font-weight: 750;
+}
+
+.pbf-for input, .pbf-for select, .pbf-for textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.75rem;
+    background: var(--thv-theme-background);
+    color: var(--thv-theme-text);
+}
+
+.pbf-for textarea {
+    resize: vertical;
+}
+
+.pbf-for__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.pbf-for__check {
+    display: flex !important;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.pbf-for__check input {
+    width: auto;
+}
+
+.pbf-for__footer button {
+    padding: 0.8rem 1.1rem;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: 0.75rem;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+    font-weight: 850;
+    cursor: pointer;
+}
+
+.pbf-for [data-status] {
+    margin: 0;
+    color: var(--thv-theme-success);
+    font-weight: 750;
+}
+
+@media (max-width: 760px) {
+    .pbf-for {
+        grid-template-columns: 1fr;
+    }
+
+    .pbf-for__row {
+        grid-template-columns: 1fr;
+    }
+
+    .pbf-for__footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+}

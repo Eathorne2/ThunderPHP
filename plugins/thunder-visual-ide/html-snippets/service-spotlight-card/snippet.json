@@ -1,0 +1,20 @@
+{
+  "id": "service-spotlight-card",
+  "name": "Service Spotlight Card",
+  "description": "A polished service card with benefits, icon and call to action.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Cards",
+  "order": 8008,
+  "tags": [
+    "card",
+    "service",
+    "business",
+    "feature"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

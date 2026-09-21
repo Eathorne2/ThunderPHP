@@ -1,0 +1,73 @@
+<section class="members-login" data-members-login>
+    <aside class="members-login__cover">
+        <div class="members-login__cover-topline">
+            <span>Edition 12</span>
+            <span>Members only</span>
+        </div>
+
+        <div class="members-login__cover-copy">
+            <p class="members-login__eyebrow">The private reading room</p>
+            <h2 class="members-login__cover-title">Ideas deserve more than a scroll.</h2>
+            <p class="members-login__cover-summary">
+                Sign in for complete issues, annotated interviews and the monthly archive.
+            </p>
+        </div>
+
+        <figure class="members-login__cover-image">
+            <img src="https://picsum.photos/id/1033/1000/1200" alt="Architectural interior with natural light">
+            <figcaption>Inside Issue 12 · Spaces for attention</figcaption>
+        </figure>
+    </aside>
+
+    <div class="members-login__panel">
+        <a class="members-login__brand" href="#">FORM / QUARTERLY</a>
+
+        <form class="members-login__form" action="" method="post">
+            <div class="members-login__intro">
+                <span>Member access</span>
+                <h1>Welcome back.</h1>
+                <p>Enter the details connected to your subscription.</p>
+            </div>
+
+            <label class="members-login__field">
+                <span>Email address</span>
+                <input type="email" name="email" placeholder="reader@example.com" autocomplete="email" required>
+            </label>
+
+            <label class="members-login__field">
+                <span>Password</span>
+                <span class="members-login__password">
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Your password"
+                        autocomplete="current-password"
+                        required
+                        data-members-password
+                    >
+                    <button type="button" data-members-password-toggle>Show</button>
+                </span>
+            </label>
+
+            <div class="members-login__options">
+                <label class="members-login__remember">
+                    <input type="checkbox" name="remember">
+                    <span>Keep me signed in</span>
+                </label>
+                <a href="#">Reset password</a>
+            </div>
+
+            <button class="members-login__submit" type="submit">Enter the archive</button>
+
+            <p class="members-login__join">
+                New reader?
+                <a href="#">Choose a membership</a>
+            </p>
+        </form>
+
+        <footer class="members-login__footer">
+            <span>Independent since 2018</span>
+            <span>Privacy-first membership</span>
+        </footer>
+    </div>
+</section>

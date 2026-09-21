@@ -1,0 +1,197 @@
+{
+  "slug": "cars-repair-process",
+  "name": "Vehicle Repair Process",
+  "category": "Cars & Transportation",
+  "description": "Workshop process from diagnosis to handover",
+  "keywords": [
+    "cars",
+    "transportation",
+    "process",
+    "steps"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-auto-repair-process\"><header class=\"tb-auto-repair-process__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</header><div class=\"tb-auto-repair-process__steps\">{{elements:items}}</div></section>",
+  "css": ".tb-auto-repair-process{padding:clamp(36px,6vw,84px);background:var(--tb-color-surface)}.tb-auto-repair-process__head{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;margin-bottom:34px}.tb-auto-repair-process__eyebrow{color:var(--tb-color-primary);font-size:11px;font-weight:950;letter-spacing:.15em;text-transform:uppercase}.tb-auto-repair-process__title{grid-column:1;margin:8px 0;color:var(--tb-color-secondary);font-size:clamp(38px,5vw,62px)}.tb-auto-repair-process__text{grid-column:2;grid-row:1/3;align-self:end;color:var(--tb-color-muted);line-height:1.7}.tb-auto-repair-process__steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--tb-color-border)}.tb-auto-repair-process__step{padding:24px 18px;border-right:1px solid var(--tb-color-border)}.tb-auto-repair-process__number{display:block;color:var(--tb-color-primary);font-size:30px;font-weight:950}.tb-auto-repair-process__step-title{margin:16px 0 7px;color:var(--tb-color-secondary);font-size:20px}.tb-auto-repair-process__step-text{margin:0;color:var(--tb-color-muted);line-height:1.6}@media(max-width:780px){.tb-auto-repair-process__head{grid-template-columns:1fr}.tb-auto-repair-process__text{grid-column:1;grid-row:auto}.tb-auto-repair-process__steps{grid-template-columns:1fr 1fr}}@media(max-width:480px){.tb-auto-repair-process__steps{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "How it works"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-auto-repair-process__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Clear service from check-in to collection"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-auto-repair-process__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Show customers what happens after they bring a vehicle into the workshop."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-auto-repair-process__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "items",
+      "label": "Step",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "number": "01",
+        "title": "Choose",
+        "text": "Start with the option that suits your trip."
+      },
+      "schema": [
+        {
+          "key": "number",
+          "label": "Number",
+          "type": "text",
+          "selector": ".tb-auto-repair-process__number"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-auto-repair-process__step-title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-auto-repair-process__step-text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-auto-repair-process__step\"><span class=\"tb-auto-repair-process__number\">{{number}}</span><h3 class=\"tb-auto-repair-process__step-title\">{{title}}</h3><p class=\"tb-auto-repair-process__step-text\">{{text}}</p></article>",
+      "min": 1,
+      "max": 12,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "number": "01",
+          "title": "Inspect",
+          "text": "We listen, inspect and record the concern."
+        },
+        {
+          "number": "02",
+          "title": "Diagnose",
+          "text": "Technicians identify the fault and required work."
+        },
+        {
+          "number": "03",
+          "title": "Repair",
+          "text": "Approved repairs are completed and tested."
+        },
+        {
+          "number": "04",
+          "title": "Handover",
+          "text": "We explain the work and return the vehicle."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "type": "view.filter_hook",
+  "label": "Run Filter Hook",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "FLT",
+  "color": "#7e22ce",
+  "description": "Runs a ThunderPHP filter and renders its returned value at this position in the View.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Run Filter Hook",
+    "hook_name": "view_content",
+    "escape_output": false,
+    "component_name": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "hook_name",
+      "label": "Hook name",
+      "type": "text",
+      "help": "The public filter hook name registered by other plugins with add_filter()."
+    },
+    {
+      "name": "escape_output",
+      "label": "Escape filtered output",
+      "type": "checkbox",
+      "help": "Enable for plain text. Leave disabled when the filter intentionally returns trusted HTML."
+    },
+    {
+      "name": "component_name",
+      "label": "Reusable component name",
+      "type": "text",
+      "help": "Leave blank to render at this node's position. Set a name while the node is a View root to place it with <tvi-component name=\"...\" />."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "data",
+        "label": "Data",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\ViewFilterHookCompiler",
+    "file": "Compiler.php"
+  }
+}

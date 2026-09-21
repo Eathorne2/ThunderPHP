@@ -1,0 +1,79 @@
+{
+  "type": "view.empty_state",
+  "label": "Empty State",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "EMPTY",
+  "color": "#0891b2",
+  "description": "Displays text or HTML only when a variable path is empty.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Empty State",
+    "path": "items",
+    "content": "No records found.",
+    "allow_html": false,
+    "css_class": "",
+    "widths": {
+      "mobile": 12,
+      "small": 12,
+      "medium": 12,
+      "large": 12
+    },
+    "inline_style": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "path",
+      "label": "Variable path",
+      "type": "text"
+    },
+    {
+      "name": "content",
+      "label": "Empty-state content",
+      "type": "textarea"
+    },
+    {
+      "name": "allow_html",
+      "label": "Allow HTML",
+      "type": "checkbox"
+    },
+    {
+      "name": "css_class",
+      "label": "CSS classes",
+      "type": "text"
+    },
+    {
+      "name": "inline_style",
+      "label": "Inline styles",
+      "type": "textarea",
+      "help": "CSS declarations applied directly to the same element as the custom CSS classes."
+    },
+    {
+      "name": "widths",
+      "label": "Responsive width",
+      "type": "breakpoints"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\EmptyStateCompiler",
+    "file": "Compiler.php"
+  }
+}

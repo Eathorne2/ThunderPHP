@@ -1,0 +1,18 @@
+{
+  "id": "case-study-metrics-grid",
+  "name": "Case Study Metrics Grid",
+  "description": "A professional case-study grid that combines project summaries, outcome metrics and sector tags.",
+  "category": "Grid Layouts",
+  "order": 3470,
+  "tags": [
+    "case studies",
+    "corporate",
+    "metrics",
+    "projects",
+    "grid"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

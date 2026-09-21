@@ -1,0 +1,79 @@
+{
+  "type": "javascript.set_variable",
+  "label": "Set JS Variable",
+  "category": "JavaScript Flow",
+  "kind": "flow",
+  "icon": "SET",
+  "color": "#7c3aed",
+  "description": "Declares a JavaScript variable or assigns a value to an existing variable or property path.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "Set JS Variable",
+    "variable_name": "value",
+    "assignment_mode": "Declare let"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "variable_name",
+      "label": "Variable / property path",
+      "type": "text",
+      "help": "Declarations require a simple identifier such as total. Assign mode also supports paths such as app.user.name."
+    },
+    {
+      "name": "assignment_mode",
+      "label": "Assignment mode",
+      "type": "select",
+      "options": [
+        "Declare let",
+        "Declare const",
+        "Declare var",
+        "Assign existing"
+      ]
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "js-exec",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "value",
+        "label": "Value",
+        "type": "js-value",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "js-exec",
+        "direction": "out",
+        "multiple": false
+      },
+      {
+        "id": "value",
+        "label": "Variable value",
+        "type": "js-value",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\SetVariableCompiler",
+    "file": "Compiler.php"
+  }
+}

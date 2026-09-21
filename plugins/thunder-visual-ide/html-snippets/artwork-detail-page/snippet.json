@@ -1,0 +1,20 @@
+{
+  "id": "artwork-detail-page",
+  "name": "Artwork Detail Page",
+  "description": "A museum-style single artwork page with provenance, dimensions, medium and exhibition notes.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9102,
+  "tags": [
+    "single image",
+    "artwork",
+    "museum",
+    "detail page"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

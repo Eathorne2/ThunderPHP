@@ -1,0 +1,18 @@
+{
+  "id": "wedding-registry-cards",
+  "name": "Wedding Registry Cards",
+  "description": "A tasteful registry section with contribution options for home, honeymoon and charitable giving.",
+  "category": "Wedding",
+  "order": 4590,
+  "tags": [
+    "wedding",
+    "registry",
+    "gifts",
+    "honeymoon",
+    "charity"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

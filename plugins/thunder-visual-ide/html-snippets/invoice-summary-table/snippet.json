@@ -1,0 +1,20 @@
+{
+  "id": "invoice-summary-table",
+  "name": "Invoice Summary Table",
+  "description": "A responsive invoice table with totals and status badges.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Tables",
+  "order": 2700,
+  "tags": [
+    "table",
+    "invoice",
+    "billing",
+    "responsive"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

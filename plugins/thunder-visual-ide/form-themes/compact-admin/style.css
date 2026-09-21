@@ -1,0 +1,10 @@
+{{scope}}{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--thv-theme-text);font-size:.9rem}
+{{scope}}.thv-form,{{scope}} .thv-form{padding:1rem;border:1px solid var(--thv-theme-border);border-radius:.55rem;background:var(--thv-theme-surface)}
+{{scope}} .thv-grid,{{scope}}.thv-grid{gap:.7rem!important}
+{{scope}} .thv-field,{{scope}}.thv-field{gap:.25rem}
+{{scope}} .thv-field>label,{{scope}}.thv-field>label,{{scope}} .thv-label{color:var(--thv-theme-muted);font-size:.72rem;font-weight:800;letter-spacing:.045em;text-transform:uppercase}
+{{scope}} .thv-field :where(input:not([type=checkbox]):not([type=radio]),textarea,select),{{scope}}.thv-field :where(input:not([type=checkbox]):not([type=radio]),textarea,select){min-height:2.25rem;padding:.45rem .58rem;border:1px solid var(--thv-theme-border);border-radius:.35rem;background:var(--thv-theme-surface);color:var(--thv-theme-text);font-size:.86rem}
+{{scope}} .thv-field textarea,{{scope}}.thv-field textarea{min-height:5.5rem}
+{{scope}} .thv-field :where(input,textarea,select):focus,{{scope}}.thv-field :where(input,textarea,select):focus{outline:0;border-color:var(--thv-theme-primary);box-shadow:0 0 0 2px color-mix(in srgb,var(--thv-theme-primary) 14%,transparent)}
+{{scope}} .thv-button,{{scope}}.thv-button{min-height:2.25rem;padding:.45rem .75rem;border-radius:.35rem}
+{{scope}} .thv-button--primary,{{scope}}.thv-button--primary{background:var(--thv-theme-primary);color:var(--thv-theme-on-primary);border-color:var(--thv-theme-primary)}

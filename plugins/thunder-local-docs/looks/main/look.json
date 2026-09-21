@@ -1,0 +1,9 @@
+{
+    "name": "Local Docs Light",
+    "version": "1.0.0",
+    "plugin": "thunder-local-docs",
+    "plugin_requires": "^1.0.0",
+    "author": "Eathorne Choongo",
+    "thumbnail": "screenshot.png",
+    "description": "A clean responsive documentation interface optimized for local use."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "pill-dashboard-tabs",
+  "name": "Pill Dashboard Tabs",
+  "description": "Pill-style tabs with counts and responsive horizontal scrolling.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Navigation - Tabs",
+  "order": 2910,
+  "tags": [
+    "navigation",
+    "tabs",
+    "pills",
+    "dashboard"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

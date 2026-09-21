@@ -1,0 +1,20 @@
+{
+  "id": "photography-detail-page",
+  "name": "Photography Detail Page",
+  "description": "A focused photography detail view with metadata, zoom controls and next-project navigation.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9103,
+  "tags": [
+    "single image",
+    "photography",
+    "zoom",
+    "detail page"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

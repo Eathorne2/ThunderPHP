@@ -1,0 +1,39 @@
+<section class="vst-tabs" data-vst-tabs>
+    <nav role="tablist">
+        <button class="is-active" data-vst-tab="profile">
+            <span>◎</span>
+            <div>
+                <strong>Profile</strong>
+                <small>Personal information</small>
+            </div>
+        </button>
+        <button data-vst-tab="security">
+            <span>◇</span>
+            <div>
+                <strong>Security</strong>
+                <small>Password and sessions</small>
+            </div>
+        </button>
+        <button data-vst-tab="notifications">
+            <span>◉</span>
+            <div>
+                <strong>Notifications</strong>
+                <small>Email and browser</small>
+            </div>
+        </button>
+    </nav>
+    <div class="vst-tabs__content">
+        <article data-vst-panel="profile">
+            <h3>Profile settings</h3>
+            <p>Update your name, photo and contact information.</p>
+        </article>
+        <article data-vst-panel="security" hidden>
+            <h3>Security settings</h3>
+            <p>Change your password and review active sessions.</p>
+        </article>
+        <article data-vst-panel="notifications" hidden>
+            <h3>Notification settings</h3>
+            <p>Choose which events should contact you.</p>
+        </article>
+    </div>
+</section>

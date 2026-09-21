@@ -1,0 +1,18 @@
+{
+  "id": "album-release-spotlight",
+  "name": "Album Release Spotlight",
+  "description": "An editorial album launch section with cover artwork, track preview controls and streaming links.",
+  "category": "Music & Entertainment",
+  "order": 4220,
+  "tags": [
+    "music",
+    "album",
+    "release",
+    "artist",
+    "streaming"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

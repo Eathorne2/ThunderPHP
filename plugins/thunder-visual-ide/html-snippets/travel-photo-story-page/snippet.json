@@ -1,0 +1,20 @@
+{
+  "id": "travel-photo-story-page",
+  "name": "Travel Photo Story Page",
+  "description": "A destination-focused single-image page with location notes, map-style coordinates and related journey links.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9105,
+  "tags": [
+    "single image",
+    "travel",
+    "story",
+    "detail page"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

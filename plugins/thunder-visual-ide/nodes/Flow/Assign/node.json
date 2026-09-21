@@ -1,0 +1,66 @@
+{
+  "type": "flow.assign",
+  "label": "Assign Variable",
+  "category": "Flow",
+  "kind": "flow",
+  "icon": "=",
+  "color": "#15803d",
+  "description": "Assigns a connected value to a PHP variable.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Assign",
+    "variable_name": "value"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "variable_name",
+      "label": "Variable name",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "value",
+        "label": "Value",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      },
+      {
+        "id": "result",
+        "label": "Variable",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Flow\\AssignCompiler",
+    "file": "Compiler.php"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "fashion-new-arrivals-strip",
+  "name": "Fashion New Arrivals Strip",
+  "description": "A polished new-arrivals section for fashion retail and capsule collections.",
+  "category": "Fashion & Beauty",
+  "order": 4000,
+  "tags": [
+    "fashion",
+    "beauty",
+    "grid",
+    "gallery"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "cinema-house-header-footer",
+  "name": "Cinema House Header and Footer",
+  "description": "A modern independent-cinema shell with showtime navigation, membership action and film-focused footer.",
+  "category": "Music & Entertainment",
+  "order": 4460,
+  "tags": [
+    "cinema",
+    "film",
+    "header",
+    "footer",
+    "showtimes"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

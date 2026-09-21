@@ -1,0 +1,18 @@
+{
+  "id": "hotel-special-offers-banner",
+  "name": "Hotel Special Offers Banner",
+  "description": "A premium promotional banner with selectable hotel offers, countdown and direct booking action.",
+  "category": "Travel & Hotels",
+  "order": 4970,
+  "tags": [
+    "hotel",
+    "offers",
+    "banner",
+    "promotion",
+    "booking"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "fan-club-membership-pricing",
+  "name": "Fan Club Membership Pricing",
+  "description": "A fan-community membership section with monthly and yearly pricing, benefits and featured tier.",
+  "category": "Music & Entertainment",
+  "order": 4370,
+  "tags": [
+    "fan club",
+    "membership",
+    "pricing",
+    "community",
+    "artist"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

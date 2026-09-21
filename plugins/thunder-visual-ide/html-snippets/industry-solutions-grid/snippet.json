@@ -1,0 +1,18 @@
+{
+  "id": "industry-solutions-grid",
+  "name": "Industry Solutions Grid",
+  "description": "An image-led corporate industry grid with layered labels and concise sector positioning.",
+  "category": "Grid Layouts",
+  "order": 3460,
+  "tags": [
+    "corporate",
+    "industries",
+    "grid",
+    "business",
+    "solutions"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

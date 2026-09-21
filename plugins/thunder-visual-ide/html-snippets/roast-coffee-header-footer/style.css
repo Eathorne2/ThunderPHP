@@ -1,0 +1,312 @@
+.rchf-shell {
+    overflow: hidden;
+    border-radius: 1.3rem;
+    color: var(--thv-theme-text, #2a211c);
+    background: var(--thv-theme-background, #f3eee6);
+    box-shadow: 0 24px 60px rgba(42, 30, 22, .12);
+}
+
+.rchf-header {
+    color: #f4eee6;
+    background: #201a17;
+}
+
+.rchf-header__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .62rem clamp(1.2rem, 4vw, 3rem);
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
+    color: rgba(255, 255, 255, .58);
+    font-size: .66rem;
+}
+
+.rchf-header__top div {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.rchf-header a,
+.rchf-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.rchf-header__main {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.15rem clamp(1.2rem, 4vw, 3rem);
+}
+
+.rchf-brand {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    column-gap: .65rem;
+}
+
+.rchf-brand > span {
+    grid-row: 1 / 3;
+    display: grid;
+    width: 2.6rem;
+    height: 2.6rem;
+    place-items: center;
+    border-radius: 50%;
+    color: #201a17;
+    background: #d79b5b;
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+}
+
+.rchf-brand strong {
+    font-size: 1rem;
+    letter-spacing: .18em;
+}
+
+.rchf-brand small {
+    color: rgba(255, 255, 255, .5);
+    font-size: .52rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.rchf-nav {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 2.3vw, 2rem);
+}
+
+.rchf-nav a {
+    font-size: .76rem;
+    font-weight: 760;
+}
+
+.rchf-cart {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .75rem;
+    font-weight: 850;
+}
+
+.rchf-cart span {
+    display: grid;
+    width: 1.65rem;
+    height: 1.65rem;
+    place-items: center;
+    border-radius: 50%;
+    color: #201a17;
+    background: #d79b5b;
+    font-size: .65rem;
+}
+
+.rchf-menu-button {
+    display: none;
+    border: 0;
+    color: inherit;
+    background: transparent;
+    font: inherit;
+    font-size: .75rem;
+    font-weight: 850;
+}
+
+.rchf-page-slot {
+    display: grid;
+    min-height: 15rem;
+    place-items: center;
+    background:
+        linear-gradient(rgba(30, 20, 15, .16), rgba(30, 20, 15, .16)),
+        url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=82') center / cover;
+}
+
+.rchf-page-slot span {
+    padding: .65rem 1rem;
+    border-radius: 999px;
+    color: #ffffff;
+    background: rgba(34, 24, 18, .68);
+    font-size: .68rem;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.rchf-footer {
+    padding: clamp(2rem, 5vw, 4rem);
+    color: #f0e9e0;
+    background: #171310;
+}
+
+.rchf-footer__subscribe {
+    display: grid;
+    grid-template-columns: 1fr minmax(18rem, .8fr);
+    align-items: end;
+    gap: 2rem;
+    padding-bottom: 2.3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .13);
+}
+
+.rchf-footer__subscribe span {
+    color: #d79b5b;
+    font-size: .65rem;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.rchf-footer__subscribe h2 {
+    max-width: 18ch;
+    margin: .7rem 0 0;
+    font-family: Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 3.3rem);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.rchf-footer__subscribe form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.rchf-footer__subscribe input {
+    min-width: 0;
+    min-height: 3rem;
+    padding: 0 .9rem;
+    border: 1px solid rgba(255, 255, 255, .2);
+    color: #ffffff;
+    background: rgba(255, 255, 255, .06);
+    font: inherit;
+}
+
+.rchf-footer__subscribe input::placeholder {
+    color: rgba(255, 255, 255, .4);
+}
+
+.rchf-footer__subscribe button {
+    border: 0;
+    padding: 0 1rem;
+    color: #201a17;
+    background: #d79b5b;
+    font: inherit;
+    font-size: .75rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.rchf-footer__subscribe output {
+    grid-column: 1 / -1;
+    min-height: 1.1rem;
+    margin-top: .45rem;
+    color: #d79b5b;
+    font-size: .7rem;
+}
+
+.rchf-footer__grid {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2.3rem 0;
+}
+
+.rchf-footer__grid section {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .55rem;
+}
+
+.rchf-brand--footer small {
+    color: rgba(255, 255, 255, .46);
+}
+
+.rchf-footer__about p {
+    max-width: 25rem;
+    color: rgba(255, 255, 255, .57);
+    line-height: 1.7;
+}
+
+.rchf-footer h3 {
+    margin: 0;
+    color: #d79b5b;
+    font-size: .65rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.rchf-footer__grid a {
+    color: rgba(255, 255, 255, .76);
+    font-size: .8rem;
+}
+
+.rchf-footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, .13);
+    color: rgba(255, 255, 255, .42);
+    font-size: .67rem;
+}
+
+.rchf-footer__bottom div {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 920px) {
+    .rchf-header__main {
+        grid-template-columns: 1fr auto;
+    }
+
+    .rchf-menu-button {
+        display: block;
+    }
+
+    .rchf-nav {
+        display: none;
+        grid-column: 1 / -1;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .rchf-nav.is-open {
+        display: flex;
+    }
+
+    .rchf-cart {
+        display: none;
+    }
+
+    .rchf-footer__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rchf-footer__about {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 650px) {
+    .rchf-header__top,
+    .rchf-footer__subscribe,
+    .rchf-footer__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rchf-header__top div {
+        display: none;
+    }
+
+    .rchf-footer__about {
+        grid-column: auto;
+    }
+
+    .rchf-footer__bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

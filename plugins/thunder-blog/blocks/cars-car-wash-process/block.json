@@ -1,0 +1,197 @@
+{
+  "slug": "cars-car-wash-process",
+  "name": "Car Wash Process",
+  "category": "Cars & Transportation",
+  "description": "Step-by-step wash and detailing process",
+  "keywords": [
+    "cars",
+    "transportation",
+    "process",
+    "steps"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-auto-car-wash-process\"><header class=\"tb-auto-car-wash-process__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</header><div class=\"tb-auto-car-wash-process__steps\">{{elements:items}}</div></section>",
+  "css": ".tb-auto-car-wash-process{padding:clamp(36px,6vw,84px);background:var(--tb-color-surface)}.tb-auto-car-wash-process__head{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;margin-bottom:34px}.tb-auto-car-wash-process__eyebrow{color:var(--tb-color-primary);font-size:11px;font-weight:950;letter-spacing:.15em;text-transform:uppercase}.tb-auto-car-wash-process__title{grid-column:1;margin:8px 0;color:var(--tb-color-secondary);font-size:clamp(38px,5vw,62px)}.tb-auto-car-wash-process__text{grid-column:2;grid-row:1/3;align-self:end;color:var(--tb-color-muted);line-height:1.7}.tb-auto-car-wash-process__steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--tb-color-border)}.tb-auto-car-wash-process__step{padding:24px 18px;border-right:1px solid var(--tb-color-border)}.tb-auto-car-wash-process__number{display:block;color:var(--tb-color-primary);font-size:30px;font-weight:950}.tb-auto-car-wash-process__step-title{margin:16px 0 7px;color:var(--tb-color-secondary);font-size:20px}.tb-auto-car-wash-process__step-text{margin:0;color:var(--tb-color-muted);line-height:1.6}@media(max-width:780px){.tb-auto-car-wash-process__head{grid-template-columns:1fr}.tb-auto-car-wash-process__text{grid-column:1;grid-row:auto}.tb-auto-car-wash-process__steps{grid-template-columns:1fr 1fr}}@media(max-width:480px){.tb-auto-car-wash-process__steps{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Our process"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-auto-car-wash-process__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A better clean, step by step"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-auto-car-wash-process__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Show how a professional car wash or detailing workflow protects the vehicle finish."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-auto-car-wash-process__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "items",
+      "label": "Step",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "number": "01",
+        "title": "Choose",
+        "text": "Start with the option that suits your trip."
+      },
+      "schema": [
+        {
+          "key": "number",
+          "label": "Number",
+          "type": "text",
+          "selector": ".tb-auto-car-wash-process__number"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-auto-car-wash-process__step-title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-auto-car-wash-process__step-text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-auto-car-wash-process__step\"><span class=\"tb-auto-car-wash-process__number\">{{number}}</span><h3 class=\"tb-auto-car-wash-process__step-title\">{{title}}</h3><p class=\"tb-auto-car-wash-process__step-text\">{{text}}</p></article>",
+      "min": 1,
+      "max": 12,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "number": "01",
+          "title": "Pre-rinse",
+          "text": "Loose dirt is removed safely before contact washing."
+        },
+        {
+          "number": "02",
+          "title": "Deep clean",
+          "text": "Body, wheels and details are carefully washed."
+        },
+        {
+          "number": "03",
+          "title": "Protect",
+          "text": "Finish protection and tyre dressing are applied."
+        },
+        {
+          "number": "04",
+          "title": "Final check",
+          "text": "The vehicle is inspected before handover."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

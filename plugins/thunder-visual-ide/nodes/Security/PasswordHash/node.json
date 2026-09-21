@@ -1,0 +1,46 @@
+{
+  "type": "security.password_hash",
+  "label": "Password Hash",
+  "category": "Security",
+  "kind": "expression",
+  "icon": "#P",
+  "color": "#7f1d1d",
+  "description": "Hashes a connected password using password_hash().",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Password Hash"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "password",
+        "label": "Password",
+        "type": "string",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Hash",
+        "type": "string",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Security\\PasswordHashCompiler",
+    "file": "Compiler.php"
+  }
+}

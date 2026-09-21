@@ -1,0 +1,17 @@
+{
+  "id": "social-proof-strip",
+  "name": "Social Proof Strip",
+  "description": "A compact social proof section with customer avatars, rating, platform mentions, and community action.",
+  "category": "Socials",
+  "order": 3290,
+  "tags": [
+    "social",
+    "proof",
+    "rating",
+    "community"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

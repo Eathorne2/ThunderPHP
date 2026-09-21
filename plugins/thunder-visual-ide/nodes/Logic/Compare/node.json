@@ -1,0 +1,69 @@
+{
+  "type": "logic.compare",
+  "label": "Compare",
+  "category": "Logic",
+  "kind": "expression",
+  "icon": "\u225f",
+  "color": "#a16207",
+  "description": "Compares two connected values and outputs a boolean expression.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "Compare",
+    "operator": "==="
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "operator",
+      "label": "Operator",
+      "type": "select",
+      "options": [
+        "===",
+        "!==",
+        "==",
+        "!=",
+        ">",
+        ">=",
+        "<",
+        "<="
+      ]
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "left",
+        "label": "Left",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "right",
+        "label": "Right",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Boolean",
+        "type": "boolean",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Logic\\CompareCompiler",
+    "file": "Compiler.php"
+  }
+}

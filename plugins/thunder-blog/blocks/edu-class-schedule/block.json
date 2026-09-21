@@ -1,0 +1,196 @@
+{
+  "slug": "edu-class-schedule",
+  "name": "Class Schedule",
+  "category": "Education",
+  "description": "Compact timetable/session list for schools, courses and workshops",
+  "keywords": [
+    "education",
+    "schedule",
+    "classes",
+    "timetable"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-edu-schedule\"><div class=\"tb-edu-schedule__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</div><div class=\"tb-edu-schedule__list\">{{elements:sessions}}</div></div>",
+  "css": ".tb-edu-schedule{padding:clamp(34px,6vw,78px);background:var(--tb-color-surface)}.tb-edu-schedule__head{max-width:720px;margin-bottom:24px}.tb-edu-schedule__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.15em}.tb-edu-schedule__title{margin:8px 0;color:var(--tb-color-secondary);font-size:clamp(40px,5vw,58px)}.tb-edu-schedule__text{color:var(--tb-color-muted);line-height:1.7}.tb-edu-schedule__session{display:grid;grid-template-columns:100px 1fr auto;gap:18px;align-items:center;padding:18px 0;border-top:1px solid var(--tb-color-border)}.tb-edu-schedule__time{color:var(--tb-color-primary);font-size:20px;font-weight:950}.tb-edu-schedule__session-title{margin:0;color:var(--tb-color-secondary);font-size:22px}.tb-edu-schedule__meta{color:var(--tb-color-muted);font-size:12px;font-weight:800}@media(max-width:620px){.tb-edu-schedule__session{grid-template-columns:1fr;gap:4px}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Today at a glance"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-edu-schedule__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Class schedule"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-edu-schedule__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Use for school timetables, workshop agendas, open lessons or recurring class sessions."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-edu-schedule__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "sessions",
+      "label": "Session",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "time": "08:30",
+        "title": "Mathematics",
+        "meta": "Room 4 · Grade 8"
+      },
+      "schema": [
+        {
+          "key": "time",
+          "label": "Time",
+          "type": "text",
+          "selector": ".tb-edu-schedule__time"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-edu-schedule__session-title"
+        },
+        {
+          "key": "meta",
+          "label": "Details",
+          "type": "text",
+          "selector": ".tb-edu-schedule__meta"
+        }
+      ],
+      "template": "<article class=\"tb-edu-schedule__session\"><time class=\"tb-edu-schedule__time\">{{time}}</time><h3 class=\"tb-edu-schedule__session-title\">{{title}}</h3><span class=\"tb-edu-schedule__meta\">{{meta}}</span></article>",
+      "min": 1,
+      "max": 16,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "time": "08:30",
+          "title": "Mathematics",
+          "meta": "Room 4 · Grade 8"
+        },
+        {
+          "time": "10:00",
+          "title": "English Language",
+          "meta": "Room 2 · Grade 8"
+        },
+        {
+          "time": "12:30",
+          "title": "Science Lab",
+          "meta": "Lab A · Grade 8"
+        },
+        {
+          "time": "14:00",
+          "title": "Creative Arts",
+          "meta": "Studio · Mixed group"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

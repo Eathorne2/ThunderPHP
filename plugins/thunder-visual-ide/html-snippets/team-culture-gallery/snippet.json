@@ -1,0 +1,20 @@
+{
+  "id": "team-culture-gallery",
+  "name": "Team Culture Gallery",
+  "description": "A workplace culture gallery with moments, labels and varied image ratios.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 8033,
+  "tags": [
+    "gallery",
+    "team",
+    "culture",
+    "photos"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

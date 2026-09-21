@@ -1,0 +1,88 @@
+{
+  "type": "view.text",
+  "label": "Plain Text",
+  "category": "View Builder",
+  "kind": "view",
+  "icon": "TEXT",
+  "color": "#0891b2",
+  "description": "Displays ordinary escaped text without requiring HTML code.",
+  "allowed_graphs": [
+    "view"
+  ],
+  "defaults": {
+    "title": "Plain Text",
+    "text": "Display text",
+    "wrapper_tag": "p",
+    "css_class": "",
+    "widths": {
+      "mobile": 12,
+      "small": 12,
+      "medium": 12,
+      "large": 12
+    },
+    "inline_style": ""
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "text",
+      "label": "Display text",
+      "type": "textarea"
+    },
+    {
+      "name": "wrapper_tag",
+      "label": "Wrapper tag",
+      "type": "select",
+      "options": [
+        "p",
+        "span",
+        "div",
+        "small",
+        "strong",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "none"
+      ]
+    },
+    {
+      "name": "css_class",
+      "label": "CSS classes",
+      "type": "text"
+    },
+    {
+      "name": "inline_style",
+      "label": "Inline styles",
+      "type": "textarea",
+      "help": "CSS declarations applied directly to the same element as the custom CSS classes."
+    },
+    {
+      "name": "widths",
+      "label": "Responsive width",
+      "type": "breakpoints",
+      "help": "Choose how many of 12 columns this item occupies at each breakpoint."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "parent",
+        "label": "Parent",
+        "type": "view-child",
+        "direction": "in"
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\ViewBuilder\\TextCompiler",
+    "file": "Compiler.php"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "slug": "food-gallery-mosaic",
+  "name": "Food Gallery Mosaic",
+  "category": "Food & Restaurant",
+  "description": "Editorial food photography mosaic for restaurant and café pages",
+  "keywords": [
+    "food",
+    "restaurant",
+    "gallery",
+    "photos",
+    "food"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-food-gallery\"><header class=\"tb-food-gallery__head\">{{elements:eyebrow}}{{elements:title}}</header><div class=\"tb-food-gallery__grid\">{{elements:images}}</div></div>",
+  "css": ".tb-food-gallery{padding:clamp(30px,5vw,70px);background:var(--tb-color-background)}.tb-food-gallery__head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:22px}.tb-food-gallery__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.16em}.tb-food-gallery__title{margin:6px 0 0;color:var(--tb-color-secondary);font-size:clamp(38px,5vw,60px)}.tb-food-gallery__grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:250px;gap:12px}.tb-food-gallery__item{overflow:hidden}.tb-food-gallery__item:first-child{grid-row:span 2}.tb-food-gallery__item:nth-child(4){grid-column:span 2}.tb-food-gallery__photo{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}.tb-food-gallery__item:hover .tb-food-gallery__photo{transform:scale(1.035)}@media(max-width:720px){.tb-food-gallery__grid{grid-template-columns:1fr;grid-auto-rows:260px}.tb-food-gallery__item:first-child,.tb-food-gallery__item:nth-child(4){grid-row:auto;grid-column:auto}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "From the kitchen"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-food-gallery__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "A look around"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<h2 class=\"tb-food-gallery__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "images",
+      "label": "Gallery image",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Plated dish"
+      },
+      "schema": [
+        {
+          "key": "image",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-food-gallery__photo"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<figure class=\"tb-food-gallery__item\"><img class=\"tb-food-gallery__photo\" src=\"{{image}}\" alt=\"{{alt}}\"></figure>",
+      "min": 1,
+      "max": 12,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Plated dish"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Dining table"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Fresh bread"
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=82",
+          "alt": "Coffee"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

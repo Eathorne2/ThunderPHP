@@ -1,0 +1,47 @@
+{
+    "name": "Soft Rounded",
+    "version": "1.0.0",
+    "plugin": "thunder-authentication",
+    "plugin_requires": "^1.0.0",
+    "author": "Eathorne Choongo",
+    "description": "A friendly rounded interface with soft surfaces, roomy controls, and gentle gradients.",
+    "default_palette": "lavender",
+    "palettes": {
+        "lavender": {
+            "primary": "#7c3aed",
+            "secondary": "#7c7190",
+            "background": "#f5f1ff",
+            "surface": "#ffffff",
+            "text": "#2e174f",
+            "muted_text": "#77698b",
+            "border": "#e4d9f3",
+            "success": "#15803d",
+            "warning": "#b45309",
+            "danger": "#be123c"
+        },
+        "peach": {
+            "primary": "#ea580c",
+            "secondary": "#78716c",
+            "background": "#fff4ed",
+            "surface": "#fffdfa",
+            "text": "#431407",
+            "muted_text": "#78716c",
+            "border": "#f1d8c8",
+            "success": "#15803d",
+            "warning": "#b45309",
+            "danger": "#be123c"
+        },
+        "aqua": {
+            "primary": "#0891b2",
+            "secondary": "#64748b",
+            "background": "#ecfeff",
+            "surface": "#ffffff",
+            "text": "#164e63",
+            "muted_text": "#64748b",
+            "border": "#ccebf0",
+            "success": "#15803d",
+            "warning": "#b45309",
+            "danger": "#be123c"
+        }
+    }
+}

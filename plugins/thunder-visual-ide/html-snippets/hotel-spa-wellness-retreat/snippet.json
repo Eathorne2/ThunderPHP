@@ -1,0 +1,18 @@
+{
+  "id": "hotel-spa-wellness-retreat",
+  "name": "Hotel Spa and Wellness Retreat",
+  "description": "A premium spa section with treatment tabs, wellness details and booking action.",
+  "category": "Travel & Hotels",
+  "order": 4920,
+  "tags": [
+    "spa",
+    "wellness",
+    "hotel",
+    "treatments",
+    "tabs"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,192 @@
+{
+  "slug": "arch-building-safety",
+  "name": "Building Safety",
+  "category": "Architecture & Building",
+  "description": "Responsive architecture/building card section",
+  "keywords": [
+    "building",
+    "safety",
+    "cards"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-arch-building-safety\"><div class=\"tb-arch-building-safety__head\">{{elements:kicker}}{{elements:title}}{{elements:intro}}</div><div class=\"tb-arch-building-safety__grid\">{{elements:cards}}</div></section>",
+  "css": ".tb-arch-building-safety{padding:clamp(40px,7vw,86px);background:var(--tb-color-background)}.tb-arch-building-safety__head{max-width:760px;margin-bottom:36px}.tb-arch-building-safety__kicker{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--tb-color-primary)}.tb-arch-building-safety__title{font-size:clamp(38px,5vw,64px);line-height:1;margin:12px 0;color:var(--tb-color-secondary)}.tb-arch-building-safety__intro{font-size:17px;line-height:1.7;color:var(--tb-color-muted)}.tb-arch-building-safety__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.tb-arch-building-safety__card{padding:28px;border-top:3px solid var(--tb-color-primary);background:var(--tb-color-surface)}.tb-arch-building-safety__index{display:block;color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.12em;margin-bottom:32px}.tb-arch-building-safety__card-title{font-size:23px;margin:0 0 10px;color:var(--tb-color-secondary)}.tb-arch-building-safety__card-text{margin:0;color:var(--tb-color-muted);line-height:1.65}@media(max-width:860px){.tb-arch-building-safety__grid{grid-template-columns:1fr 1fr}}@media(max-width:580px){.tb-arch-building-safety__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "kicker",
+      "label": "Kicker",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Safety first"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-arch-building-safety__kicker\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "title",
+      "label": "Heading",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Safe sites are well-planned sites"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-arch-building-safety__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "intro",
+      "label": "Introduction",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Use a concise grid to communicate practical safety commitments."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-arch-building-safety__intro\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "cards",
+      "label": "Cards",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "number": "01",
+        "title": "Plan the work",
+        "text": "Risk reviews, sequencing and method statements before activity starts."
+      },
+      "schema": [
+        {
+          "key": "number",
+          "label": "Number / label",
+          "type": "text",
+          "selector": ".tb-arch-building-safety__index"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-arch-building-safety__card-title"
+        },
+        {
+          "key": "text",
+          "label": "Description",
+          "type": "textarea",
+          "selector": ".tb-arch-building-safety__card-text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-arch-building-safety__card\"><span class=\"tb-arch-building-safety__index\">{{number}}</span><h3 class=\"tb-arch-building-safety__card-title\">{{title}}</h3><p class=\"tb-arch-building-safety__card-text\">{{text}}</p></article>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 12,
+      "default_items": [
+        {
+          "number": "01",
+          "title": "Plan the work",
+          "text": "Risk reviews, sequencing and method statements before activity starts."
+        },
+        {
+          "number": "02",
+          "title": "Protect people",
+          "text": "Clear access, PPE, supervision and daily briefings."
+        },
+        {
+          "number": "03",
+          "title": "Verify quality",
+          "text": "Inspections and documentation at critical stages."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

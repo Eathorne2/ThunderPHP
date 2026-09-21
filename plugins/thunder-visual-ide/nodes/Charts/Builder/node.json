@@ -1,0 +1,196 @@
+{
+  "type": "charts.builder",
+  "label": "Chart Builder",
+  "category": "Charts",
+  "kind": "flow",
+  "icon": "CH",
+  "color": "#6d28d9",
+  "description": "Combines labels, datasets and common Chart.js options, then stores the chart configuration for a View.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "dynamic_ports": "chart_datasets",
+  "defaults": {
+    "title": "Chart Builder",
+    "chart_type": "bar",
+    "dataset_count": 1,
+    "data_key": "chart",
+    "result_variable": "chart_config",
+    "responsive": true,
+    "maintain_aspect_ratio": false,
+    "show_legend": true,
+    "legend_position": "top",
+    "show_title": false,
+    "chart_title": "Chart",
+    "begin_at_zero": true,
+    "index_axis": "x",
+    "stacked": false,
+    "animation": true,
+    "interaction_mode": "nearest",
+    "tooltip_enabled": true
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "chart_type",
+      "label": "Chart type",
+      "type": "select",
+      "options": [
+        "bar",
+        "line",
+        "pie",
+        "doughnut",
+        "polarArea",
+        "radar",
+        "scatter",
+        "bubble"
+      ]
+    },
+    {
+      "name": "dataset_count",
+      "label": "Dataset count",
+      "type": "number",
+      "help": "Use the Add Dataset and Remove Dataset buttons below for convenience."
+    },
+    {
+      "name": "data_key",
+      "label": "Page value key",
+      "type": "text",
+      "help": "The Chart View node reads this key with get_value()."
+    },
+    {
+      "name": "result_variable",
+      "label": "Result variable",
+      "type": "text"
+    },
+    {
+      "name": "responsive",
+      "label": "Responsive",
+      "type": "checkbox"
+    },
+    {
+      "name": "maintain_aspect_ratio",
+      "label": "Maintain aspect ratio",
+      "type": "checkbox"
+    },
+    {
+      "name": "show_legend",
+      "label": "Show legend",
+      "type": "checkbox"
+    },
+    {
+      "name": "legend_position",
+      "label": "Legend position",
+      "type": "select",
+      "options": [
+        "top",
+        "left",
+        "bottom",
+        "right",
+        "chartArea"
+      ]
+    },
+    {
+      "name": "show_title",
+      "label": "Show title",
+      "type": "checkbox"
+    },
+    {
+      "name": "chart_title",
+      "label": "Chart title",
+      "type": "text"
+    },
+    {
+      "name": "begin_at_zero",
+      "label": "Begin Y axis at zero",
+      "type": "checkbox"
+    },
+    {
+      "name": "index_axis",
+      "label": "Index axis",
+      "type": "select",
+      "options": [
+        "x",
+        "y"
+      ],
+      "help": "Use y for horizontal bars."
+    },
+    {
+      "name": "stacked",
+      "label": "Stacked axes",
+      "type": "checkbox"
+    },
+    {
+      "name": "animation",
+      "label": "Enable animation",
+      "type": "checkbox"
+    },
+    {
+      "name": "interaction_mode",
+      "label": "Interaction mode",
+      "type": "select",
+      "options": [
+        "nearest",
+        "index",
+        "dataset",
+        "point",
+        "x",
+        "y"
+      ]
+    },
+    {
+      "name": "tooltip_enabled",
+      "label": "Enable tooltips",
+      "type": "checkbox"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "labels",
+        "label": "Labels",
+        "type": "array",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "advanced_options",
+        "label": "Advanced Chart Options",
+        "type": "array",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      },
+      {
+        "id": "config",
+        "label": "Chart Config",
+        "type": "array",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Charts\\BuilderCompiler",
+    "file": "Compiler.php"
+  }
+}

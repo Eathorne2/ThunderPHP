@@ -1,0 +1,17 @@
+{
+  "id": "minimal-contact-form",
+  "name": "Minimal Contact Form",
+  "description": "A calm single-column enquiry form with large typography and understated controls.",
+  "category": "Contact Us Forms",
+  "order": 1090,
+  "tags": [
+    "contact",
+    "minimal",
+    "form",
+    "message"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

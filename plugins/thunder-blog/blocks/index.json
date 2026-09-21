@@ -1,0 +1,5013 @@
+[
+  {
+    "slug": "raw-html",
+    "name": "HTML",
+    "category": "Advanced",
+    "description": "Insert trusted plain HTML directly into the designed document.",
+    "keywords": [
+      "html",
+      "custom",
+      "embed",
+      "code"
+    ],
+    "contexts": [
+      "post",
+      "page",
+      "header",
+      "footer"
+    ]
+  },
+  {
+    "slug": "article-intro",
+    "name": "Article Introduction",
+    "category": "Article",
+    "description": "A centered article heading with kicker, title and lead paragraph.",
+    "keywords": null,
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "pull-quote",
+    "name": "Pull Quote",
+    "category": "Article",
+    "description": "A prominent quotation with attribution.",
+    "keywords": null,
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "rich-text",
+    "name": "Rich Text",
+    "category": "Article",
+    "description": "A readable body-text block for paragraphs, lists and emphasis.",
+    "keywords": null,
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "callout-card",
+    "name": "Callout Card",
+    "category": "Call to Action",
+    "description": "A highlighted message with a primary action.",
+    "keywords": null,
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "newsletter-banner",
+    "name": "Newsletter Banner",
+    "category": "Call to Action",
+    "description": "An email-style subscription prompt that other plugins can later connect to.",
+    "keywords": null,
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "stats-row",
+    "name": "Statistics Row",
+    "category": "Data",
+    "description": "A row of three numerical highlights.",
+    "keywords": null,
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "shortcode",
+    "name": "Shortcode",
+    "category": "Dynamic Content",
+    "description": "Paste a ThunderPHP dotted shortcode that is replaced when the page is rendered.",
+    "keywords": [
+      "shortcode",
+      "dynamic",
+      "plugin",
+      "listing"
+    ],
+    "contexts": [
+      "post",
+      "page",
+      "header",
+      "footer"
+    ]
+  },
+  {
+    "slug": "hero-split",
+    "name": "Split Hero",
+    "category": "Hero",
+    "description": "A bold two-column opening with heading, copy, action and image.",
+    "keywords": null,
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "faq-accordion",
+    "name": "FAQ Accordion",
+    "category": "Interactive",
+    "description": "An accessible three-question accordion with editable answers.",
+    "keywords": null,
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "divider-space",
+    "name": "Divider and Space",
+    "category": "Layout",
+    "description": "A configurable divider for separating article sections.",
+    "keywords": null,
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "two-column-text",
+    "name": "Two Column Text",
+    "category": "Layout",
+    "description": "Two balanced text columns with independent headings.",
+    "keywords": null,
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "image-gallery",
+    "name": "Image Gallery",
+    "category": "Media",
+    "description": "A responsive, repeatable image gallery whose individual images can be edited, reordered, duplicated or deleted.",
+    "keywords": [
+      "gallery",
+      "images",
+      "photos",
+      "grid",
+      "repeatable"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "image-caption",
+    "name": "Image with Caption",
+    "category": "Media",
+    "description": "A wide image with an optional caption and credit.",
+    "keywords": null,
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "menu-horizontal",
+    "name": "Horizontal Menu",
+    "category": "Menus",
+    "description": "A reusable horizontal navigation block sourced from a saved menu.",
+    "keywords": [
+      "menu",
+      "navigation",
+      "horizontal",
+      "links"
+    ],
+    "contexts": [
+      "post",
+      "page",
+      "header",
+      "footer"
+    ]
+  },
+  {
+    "slug": "menu-pills",
+    "name": "Pill Menu",
+    "category": "Menus",
+    "description": "A compact rounded menu for landing pages, category links and footers.",
+    "keywords": [
+      "menu",
+      "pills",
+      "tags",
+      "navigation"
+    ],
+    "contexts": [
+      "post",
+      "page",
+      "header",
+      "footer"
+    ]
+  },
+  {
+    "slug": "menu-vertical",
+    "name": "Vertical Menu",
+    "category": "Menus",
+    "description": "A sidebar-friendly vertical menu with visible nested hierarchy.",
+    "keywords": [
+      "menu",
+      "sidebar",
+      "vertical",
+      "navigation"
+    ],
+    "contexts": [
+      "post",
+      "page",
+      "header",
+      "footer"
+    ]
+  },
+  {
+    "slug": "page-feature-feed-layout",
+    "name": "Page: Feature and Feed",
+    "category": "Page Layouts",
+    "description": "A page layout with a large feature region followed by repeatable dynamic feed sections.",
+    "keywords": [
+      "page",
+      "layout",
+      "feature",
+      "feed",
+      "shortcode"
+    ],
+    "contexts": [
+      "page"
+    ]
+  },
+  {
+    "slug": "page-sidebar-layout",
+    "name": "Page: Main and Sidebar",
+    "category": "Page Layouts",
+    "description": "A two-column page shell with separate shortcode regions for main content and a sidebar.",
+    "keywords": [
+      "page",
+      "layout",
+      "sidebar",
+      "shortcode"
+    ],
+    "contexts": [
+      "page"
+    ]
+  },
+  {
+    "slug": "page-three-column-layout",
+    "name": "Page: Three Dynamic Columns",
+    "category": "Page Layouts",
+    "description": "Three responsive repeatable columns intended for shortcodes and plugin output.",
+    "keywords": [
+      "page",
+      "layout",
+      "columns",
+      "shortcode"
+    ],
+    "contexts": [
+      "page"
+    ]
+  },
+  {
+    "slug": "header-accent-strip",
+    "name": "Accent Strip Header",
+    "category": "Headers",
+    "description": "A slim accent band adds visual identity to a straightforward navigation row.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "accent"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-announcement-bar",
+    "name": "Announcement Bar Header",
+    "category": "Headers",
+    "description": "A slim announcement strip paired with a clean brand and menu row.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "announcement"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-borderless",
+    "name": "Borderless Header",
+    "category": "Headers",
+    "description": "An airy borderless header that relies on spacing and typography.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "borderless"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-brand-nav",
+    "name": "Brand and Navigation Header",
+    "category": "Headers",
+    "description": "A clean responsive header whose navigation is sourced from a saved menu.",
+    "keywords": [
+      "header",
+      "navigation",
+      "logo",
+      "menu"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-centered",
+    "name": "Centered Editorial Header",
+    "category": "Headers",
+    "description": "A centered publication masthead with navigation sourced from a saved menu.",
+    "keywords": [
+      "header",
+      "centered",
+      "masthead",
+      "navigation"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-centered-logo-menu",
+    "name": "Centered Logo Menu Header",
+    "category": "Headers",
+    "description": "A centered brand masthead with the menu arranged beneath it.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "centered"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-compact-sticky",
+    "name": "Compact Sticky Header",
+    "category": "Headers",
+    "description": "A dense sticky navigation bar designed for content-heavy sites.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "compact"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-contact-cards",
+    "name": "Contact Cards Header",
+    "category": "Headers",
+    "description": "A business header with compact contact chips above the navigation.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "contactcards"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-corporate-utility",
+    "name": "Corporate Utility Header",
+    "category": "Headers",
+    "description": "A professional multi-row header with utility text, menu and action.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "utility"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-cta-banner",
+    "name": "CTA Banner Header",
+    "category": "Headers",
+    "description": "A prominent action message sits beside the brand and saved navigation.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "ctabanner"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-dark-contrast",
+    "name": "Dark Contrast Header",
+    "category": "Headers",
+    "description": "A high-contrast dark header with bright navigation and call-to-action.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "dark"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-double-row-contact",
+    "name": "Double Row Contact Header",
+    "category": "Headers",
+    "description": "A two-row header with contact information above the primary navigation.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "topcontact"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-framed",
+    "name": "Framed Header",
+    "category": "Headers",
+    "description": "A boxed header panel with rounded corners and generous breathing room.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "framed"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-glass-panel",
+    "name": "Glass Panel Header",
+    "category": "Headers",
+    "description": "A translucent floating header panel with soft borders and backdrop blur.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "glass"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-logo-search",
+    "name": "Logo and Search Header",
+    "category": "Headers",
+    "description": "A logo-led header with a wide blog search field and menu below.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "logosearch"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-logo-menu-cta",
+    "name": "Logo, Menu and CTA Header",
+    "category": "Headers",
+    "description": "A polished sticky header with a saved menu and editable call-to-action button.",
+    "keywords": [
+      "header",
+      "logo",
+      "menu",
+      "cta",
+      "sticky"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-magazine-masthead",
+    "name": "Magazine Masthead Header",
+    "category": "Headers",
+    "description": "A publication-style masthead with large centered brand and navigation rule.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "magazine"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-menu-logo-cta",
+    "name": "Menu Logo CTA Header",
+    "category": "Headers",
+    "description": "Menu on the left, centered brand, and call-to-action on the right.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "menulogoc"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-menu-toggle-style",
+    "name": "Menu Toggle Style Header",
+    "category": "Headers",
+    "description": "A minimal header with a bold menu label treatment and compact navigation.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "toggle"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-minimal-center-menu",
+    "name": "Minimal Center Menu Header",
+    "category": "Headers",
+    "description": "A quiet centered navigation header with compact branding above.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "mincenter"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-minimal-line",
+    "name": "Minimal Line Header",
+    "category": "Headers",
+    "description": "A crisp single-row header with a slim divider and compact navigation.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "minimal"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-rounded-pill",
+    "name": "Rounded Pill Header",
+    "category": "Headers",
+    "description": "A floating pill-shaped navigation header with compact brand and action.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "pill"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-search-contact",
+    "name": "Search and Contact Header",
+    "category": "Headers",
+    "description": "A utility-rich header combining contact, search, menu and a concise brand row.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "searchcontact"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-search-first",
+    "name": "Search First Header",
+    "category": "Headers",
+    "description": "A search-forward header with navigation and an always-visible blog search field.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "search"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-social-contact",
+    "name": "Social Contact Header",
+    "category": "Headers",
+    "description": "A social/contact utility row above a classic brand and navigation row.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "social"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-split-brand",
+    "name": "Split Brand Header",
+    "category": "Headers",
+    "description": "A balanced split header with brand, menu and a strong action at opposite edges.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "split"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-tall-editorial",
+    "name": "Tall Editorial Header",
+    "category": "Headers",
+    "description": "A tall editorial masthead with brand statement and centered navigation.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "tall"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-topbar-search",
+    "name": "Top Bar, Menu and Search Header",
+    "category": "Headers",
+    "description": "A publication header with a saved menu and blog search form.",
+    "keywords": [
+      "header",
+      "topbar",
+      "menu",
+      "search",
+      "publication"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-two-tone",
+    "name": "Two Tone Header",
+    "category": "Headers",
+    "description": "A two-tone header separating branding from navigation and actions.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "twotone"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "header-wide-navigation",
+    "name": "Wide Navigation Header",
+    "category": "Headers",
+    "description": "A broad navigation-first header with generous spacing for larger menus.",
+    "keywords": [
+      "header",
+      "navigation",
+      "menu",
+      "wide"
+    ],
+    "contexts": [
+      "header"
+    ]
+  },
+  {
+    "slug": "footer-accent",
+    "name": "Accent Footer",
+    "category": "Footers",
+    "description": "A strong accent band introduces a clean navigation footer.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "accent"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-address",
+    "name": "Address Footer",
+    "category": "Footers",
+    "description": "A location-focused footer with contact details, menu and copyright.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "address"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-app-promo",
+    "name": "App Promo Footer",
+    "category": "Footers",
+    "description": "A promotional footer with action copy and menu links.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "apppromo"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-boxed",
+    "name": "Boxed Footer",
+    "category": "Footers",
+    "description": "A structured boxed footer with strong column boundaries.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "boxed"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-brand-columns",
+    "name": "Brand Columns Footer",
+    "category": "Footers",
+    "description": "A brand statement beside a multi-column saved menu.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "brandcols"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-centered-menu",
+    "name": "Centered Menu Footer",
+    "category": "Footers",
+    "description": "A centered brand footer with a reusable saved menu.",
+    "keywords": [
+      "footer",
+      "centered",
+      "menu",
+      "brand"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-centered-social",
+    "name": "Centered Social Footer",
+    "category": "Footers",
+    "description": "A centered brand, saved menu and repeatable social links.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "centersocial"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-closing-statement",
+    "name": "Closing Statement Footer",
+    "category": "Footers",
+    "description": "A large closing statement followed by navigation and legal details.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "closing"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-compact",
+    "name": "Compact Footer",
+    "category": "Footers",
+    "description": "A dense footer for applications and information-heavy sites.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "compact"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-contact-grid",
+    "name": "Contact Grid Footer",
+    "category": "Footers",
+    "description": "A contact-focused footer with repeatable contact cards and menu.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "contactgrid"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-corporate",
+    "name": "Corporate Footer",
+    "category": "Footers",
+    "description": "A structured business footer with brand, menu, contact and legal row.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "corporate"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-cta-above",
+    "name": "CTA Above Footer",
+    "category": "Footers",
+    "description": "A strong callout panel sits above a compact footer navigation.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "ctaabove"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-dark-contact",
+    "name": "Dark Contact Footer",
+    "category": "Footers",
+    "description": "A dark high-contrast footer with contact details and navigation.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "darkcontact"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-editorial",
+    "name": "Editorial Footer",
+    "category": "Footers",
+    "description": "A refined serif footer for journals and long-form publications.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "editorial"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-large-brand",
+    "name": "Large Brand Footer",
+    "category": "Footers",
+    "description": "A large brand statement dominates above a lightweight navigation row.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "largebrand"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-legal-bar",
+    "name": "Legal Bar Footer",
+    "category": "Footers",
+    "description": "A compact navigation area capped by a distinct legal strip.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "legalbar"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-logo-menu",
+    "name": "Logo Menu Footer",
+    "category": "Footers",
+    "description": "A clean logo-led footer with horizontal navigation and copyright.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "logomenu"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-magazine",
+    "name": "Magazine Footer",
+    "category": "Footers",
+    "description": "A publication-style footer with masthead, menu rule and legal line.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "magazine"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-menu-cards",
+    "name": "Menu Cards Footer",
+    "category": "Footers",
+    "description": "A menu rendered as spacious linked groups inside a card-like footer.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "menucards"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-minimal-line",
+    "name": "Minimal Line Footer",
+    "category": "Footers",
+    "description": "A restrained single-row footer with brand, menu and copyright.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "minimal"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-columns",
+    "name": "Multi-column Footer",
+    "category": "Footers",
+    "description": "A multi-column footer that turns saved menu hierarchy into link groups.",
+    "keywords": [
+      "footer",
+      "columns",
+      "navigation",
+      "business"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-newsletter-menu",
+    "name": "Newsletter and Menu Footer",
+    "category": "Footers",
+    "description": "A strong newsletter callout paired with saved menu groups.",
+    "keywords": [
+      "footer",
+      "newsletter",
+      "menu",
+      "columns"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-newsletter-split",
+    "name": "Newsletter Split Footer",
+    "category": "Footers",
+    "description": "A split newsletter and navigation footer with a quiet legal row.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "newssplit"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-rounded-panel",
+    "name": "Rounded Panel Footer",
+    "category": "Footers",
+    "description": "A floating rounded footer panel on a contrasting page background.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "rounded"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-search-newsletter",
+    "name": "Search Newsletter Footer",
+    "category": "Footers",
+    "description": "A footer combining blog search, newsletter copy and saved links.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "searchnews"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-simple",
+    "name": "Simple Site Footer",
+    "category": "Footers",
+    "description": "A compact footer whose links come from a saved menu.",
+    "keywords": [
+      "footer",
+      "copyright",
+      "links"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-sitemap",
+    "name": "Sitemap Footer",
+    "category": "Footers",
+    "description": "A spacious sitemap-style footer built around a hierarchical saved menu.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "sitemap"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-social-menu",
+    "name": "Social Menu Footer",
+    "category": "Footers",
+    "description": "A flexible social-links footer with menu and legal text.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "socialmenu"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-stats",
+    "name": "Stats Footer",
+    "category": "Footers",
+    "description": "A footer with repeatable highlight metrics above navigation.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "stats"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "footer-two-tone",
+    "name": "Two Tone Footer",
+    "category": "Footers",
+    "description": "A two-tone footer separating primary links from copyright information.",
+    "keywords": [
+      "footer",
+      "navigation",
+      "menu",
+      "twotone"
+    ],
+    "contexts": [
+      "footer"
+    ]
+  },
+  {
+    "slug": "fb-editorial-fashion-hero",
+    "name": "Editorial Fashion Hero",
+    "category": "Fashion & Beauty",
+    "description": "Oversized editorial headline paired with a tall fashion image and CTA.",
+    "keywords": [
+      "fashion",
+      "hero",
+      "editorial",
+      "collection"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-beauty-welcome-grid",
+    "name": "Beauty Welcome Grid",
+    "category": "Fashion & Beauty",
+    "description": "A welcoming beauty image with a checkerboard of treatment cards.",
+    "keywords": [
+      "beauty",
+      "salon",
+      "spa",
+      "services",
+      "grid"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-new-collection-split",
+    "name": "New Collection Split",
+    "category": "Fashion & Beauty",
+    "description": "Minimal collection announcement with layered image framing.",
+    "keywords": [
+      "fashion",
+      "collection",
+      "split",
+      "editorial"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-color-story",
+    "name": "Seasonal Color Story",
+    "category": "Fashion & Beauty",
+    "description": "Two editorial fashion panels for seasonal colour storytelling.",
+    "keywords": [
+      "fashion",
+      "color",
+      "trend",
+      "editorial"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-runway-feature",
+    "name": "Runway Feature",
+    "category": "Fashion & Beauty",
+    "description": "Full-width fashion photograph with a floating editorial note.",
+    "keywords": [
+      "fashion",
+      "runway",
+      "feature",
+      "full image"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-fashion-category-trio",
+    "name": "Fashion Category Trio",
+    "category": "Fashion & Beauty",
+    "description": "Three tall visual category cards for a boutique or fashion landing page.",
+    "keywords": [
+      "fashion",
+      "categories",
+      "shop",
+      "boutique"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-lookbook-mosaic",
+    "name": "Lookbook Mosaic",
+    "category": "Fashion & Beauty",
+    "description": "A mixed-size image mosaic for fashion editorials and lookbooks.",
+    "keywords": [
+      "fashion",
+      "lookbook",
+      "gallery",
+      "mosaic"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-beauty-treatments",
+    "name": "Beauty Treatment Cards",
+    "category": "Fashion & Beauty",
+    "description": "Elegant treatment cards with circular imagery and service descriptions.",
+    "keywords": [
+      "beauty",
+      "treatments",
+      "spa",
+      "salon",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-skincare-spotlight",
+    "name": "Skincare Spotlight",
+    "category": "Fashion & Beauty",
+    "description": "Soft skincare feature with product/lifestyle image and benefit list.",
+    "keywords": [
+      "beauty",
+      "skincare",
+      "product",
+      "benefits"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-makeup-services",
+    "name": "Makeup Artist Services",
+    "category": "Fashion & Beauty",
+    "description": "Portrait-led makeup services with a clean numbered list.",
+    "keywords": [
+      "beauty",
+      "makeup",
+      "artist",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-barber-price-list",
+    "name": "Barber Price List",
+    "category": "Fashion & Beauty",
+    "description": "Strong barber service menu with image and editable prices.",
+    "keywords": [
+      "barber",
+      "grooming",
+      "price",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-spa-ritual",
+    "name": "Spa Ritual Feature",
+    "category": "Fashion & Beauty",
+    "description": "Large spa imagery with a calm three-step restorative ritual.",
+    "keywords": [
+      "spa",
+      "wellness",
+      "beauty",
+      "ritual"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-perfume-story",
+    "name": "Perfume Story",
+    "category": "Fashion & Beauty",
+    "description": "Centered fragrance story with a product image and poetic editorial copy.",
+    "keywords": [
+      "perfume",
+      "fragrance",
+      "beauty",
+      "product"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-accessories-showcase",
+    "name": "Accessories Showcase",
+    "category": "Fashion & Beauty",
+    "description": "Four polished accessory cards with imagery, text and links.",
+    "keywords": [
+      "fashion",
+      "accessories",
+      "shop",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-style-tips",
+    "name": "Numbered Style Tips",
+    "category": "Fashion & Beauty",
+    "description": "Editorial numbered style advice with a clean magazine rhythm.",
+    "keywords": [
+      "fashion",
+      "tips",
+      "stylist",
+      "numbered"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-fashion-quote-portrait",
+    "name": "Fashion Quote Portrait",
+    "category": "Fashion & Beauty",
+    "description": "Large portrait and editorial quotation for designers or stylists.",
+    "keywords": [
+      "fashion",
+      "quote",
+      "portrait",
+      "designer"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-model-portfolio-grid",
+    "name": "Model Portfolio Grid",
+    "category": "Fashion & Beauty",
+    "description": "Clean six-image portfolio grid with an editorial introduction.",
+    "keywords": [
+      "fashion",
+      "model",
+      "portfolio",
+      "gallery"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-boutique-promo-banner",
+    "name": "Boutique Promo Banner",
+    "category": "Fashion & Beauty",
+    "description": "High-impact boutique promotion with discount badge and fashion image.",
+    "keywords": [
+      "fashion",
+      "boutique",
+      "promo",
+      "sale",
+      "banner"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-fashion-trend-cards",
+    "name": "Fashion Trend Cards",
+    "category": "Fashion & Beauty",
+    "description": "Three magazine-style trend stories with imagery and links.",
+    "keywords": [
+      "fashion",
+      "trends",
+      "cards",
+      "magazine"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-beauty-price-list",
+    "name": "Beauty Service Price List",
+    "category": "Fashion & Beauty",
+    "description": "Minimal salon pricing table with service, duration and price.",
+    "keywords": [
+      "beauty",
+      "price",
+      "services",
+      "salon"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-beauty-results-pair",
+    "name": "Beauty Results Pair",
+    "category": "Fashion & Beauty",
+    "description": "Two-image beauty story with a central results statement.",
+    "keywords": [
+      "beauty",
+      "results",
+      "before after",
+      "treatment"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-nail-service-tiles",
+    "name": "Nail Service Tiles",
+    "category": "Fashion & Beauty",
+    "description": "Bold four-tile nail service section with a large supporting image.",
+    "keywords": [
+      "beauty",
+      "nails",
+      "services",
+      "salon"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-hair-studio-team",
+    "name": "Hair Studio Team",
+    "category": "Fashion & Beauty",
+    "description": "Editorial team cards for salons, stylists and beauty studios.",
+    "keywords": [
+      "hair",
+      "salon",
+      "team",
+      "stylists"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-designer-story",
+    "name": "Designer Story Timeline",
+    "category": "Fashion & Beauty",
+    "description": "Fashion brand story told through a compact editorial timeline.",
+    "keywords": [
+      "fashion",
+      "designer",
+      "story",
+      "timeline"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-fashion-week-schedule",
+    "name": "Fashion Week Schedule",
+    "category": "Fashion & Beauty",
+    "description": "Elegant event schedule for runway shows, launches and fashion-week programming.",
+    "keywords": [
+      "fashion",
+      "event",
+      "schedule",
+      "runway"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-capsule-wardrobe",
+    "name": "Capsule Wardrobe Steps",
+    "category": "Fashion & Beauty",
+    "description": "Four-step fashion guide for capsule wardrobes and styling advice.",
+    "keywords": [
+      "fashion",
+      "capsule",
+      "wardrobe",
+      "steps"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-beauty-testimonials",
+    "name": "Beauty Testimonials",
+    "category": "Fashion & Beauty",
+    "description": "Soft testimonial cards for salons, stylists and beauty brands.",
+    "keywords": [
+      "beauty",
+      "testimonials",
+      "reviews",
+      "salon"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-social-gallery",
+    "name": "Fashion Social Gallery",
+    "category": "Fashion & Beauty",
+    "description": "Six-tile social-style gallery for campaign, beauty and fashion imagery.",
+    "keywords": [
+      "fashion",
+      "beauty",
+      "social",
+      "gallery",
+      "instagram"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-beauty-newsletter",
+    "name": "Beauty Editorial Newsletter",
+    "category": "Fashion & Beauty",
+    "description": "Image-led newsletter signup block for fashion and beauty audiences.",
+    "keywords": [
+      "fashion",
+      "beauty",
+      "newsletter",
+      "signup"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "fb-shop-category-grid",
+    "name": "Fashion & Beauty Shop Grid",
+    "category": "Fashion & Beauty",
+    "description": "Six compact image categories for fashion, beauty or lifestyle navigation.",
+    "keywords": [
+      "fashion",
+      "beauty",
+      "categories",
+      "shop",
+      "grid"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-save-date-hero",
+    "name": "Save the Date Hero",
+    "category": "Wedding",
+    "description": "Romantic full-bleed save-the-date hero with couple names, date and invitation CTA",
+    "keywords": [
+      "wedding",
+      "save the date",
+      "hero",
+      "invitation"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-romantic-split",
+    "name": "Romantic Wedding Split",
+    "category": "Wedding",
+    "description": "Editorial split layout with portrait image and wedding introduction",
+    "keywords": [
+      "wedding",
+      "romantic",
+      "split",
+      "couple"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-couple-story",
+    "name": "Our Love Story",
+    "category": "Wedding",
+    "description": "Three-card love story sequence with dates and editable milestones",
+    "keywords": [
+      "wedding",
+      "love story",
+      "timeline",
+      "couple"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-countdown-banner",
+    "name": "Wedding Countdown Banner",
+    "category": "Wedding",
+    "description": "Elegant countdown-style number row for a wedding date",
+    "keywords": [
+      "wedding",
+      "countdown",
+      "date",
+      "numbers"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-event-details",
+    "name": "Wedding Day Details",
+    "category": "Wedding",
+    "description": "Schedule cards for ceremony, reception and wedding-day logistics",
+    "keywords": [
+      "wedding",
+      "schedule",
+      "ceremony",
+      "reception"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-venue-feature",
+    "name": "Wedding Venue Feature",
+    "category": "Wedding",
+    "description": "Large venue image with address, description and directions link",
+    "keywords": [
+      "wedding",
+      "venue",
+      "location",
+      "directions"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-rsvp-callout",
+    "name": "RSVP Invitation Callout",
+    "category": "Wedding",
+    "description": "Centered invitation panel with RSVP deadline and action",
+    "keywords": [
+      "wedding",
+      "rsvp",
+      "invitation",
+      "cta"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-photo-mosaic",
+    "name": "Wedding Photo Mosaic",
+    "category": "Wedding",
+    "description": "Asymmetric editable wedding gallery for memories and photography portfolios",
+    "keywords": [
+      "wedding",
+      "gallery",
+      "photos",
+      "memories"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-love-story-timeline",
+    "name": "Love Story Timeline",
+    "category": "Wedding",
+    "description": "Vertical romantic timeline for milestones from first meeting to engagement",
+    "keywords": [
+      "wedding",
+      "timeline",
+      "story",
+      "engagement"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-wedding-party",
+    "name": "Wedding Party Portraits",
+    "category": "Wedding",
+    "description": "Portrait cards for bridesmaids, groomsmen or the wedding party",
+    "keywords": [
+      "wedding",
+      "party",
+      "bridesmaids",
+      "groomsmen"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-bride-groom-profile",
+    "name": "Bride & Groom Profiles",
+    "category": "Wedding",
+    "description": "Two large profile panels for the couple",
+    "keywords": [
+      "wedding",
+      "bride",
+      "groom",
+      "profiles"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-schedule-tiles",
+    "name": "Wedding Schedule Tiles",
+    "category": "Wedding",
+    "description": "Numbered timeline tiles for ceremony and reception schedule",
+    "keywords": [
+      "wedding",
+      "schedule",
+      "timeline",
+      "day"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-gift-registry",
+    "name": "Gift Registry Cards",
+    "category": "Wedding",
+    "description": "Simple registry choices for gifts, honeymoon funds or charities",
+    "keywords": [
+      "wedding",
+      "registry",
+      "gifts",
+      "honeymoon"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-travel-stay",
+    "name": "Travel & Stay",
+    "category": "Wedding",
+    "description": "Travel notes and hotel cards for destination wedding guests",
+    "keywords": [
+      "wedding",
+      "travel",
+      "hotel",
+      "guests"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-dress-gallery",
+    "name": "Bridal Dress Gallery",
+    "category": "Wedding",
+    "description": "Editorial bridal fashion cards for gowns and bridal boutiques",
+    "keywords": [
+      "wedding",
+      "dress",
+      "bridal",
+      "fashion"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-bouquet-feature",
+    "name": "Bridal Bouquet Feature",
+    "category": "Wedding",
+    "description": "Large floral image with bouquet story and florist CTA",
+    "keywords": [
+      "wedding",
+      "bouquet",
+      "flowers",
+      "florist"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-floral-services",
+    "name": "Wedding Floral Services",
+    "category": "Wedding",
+    "description": "Elegant service list for florists and wedding decorators",
+    "keywords": [
+      "wedding",
+      "flowers",
+      "florist",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-cake-showcase",
+    "name": "Wedding Cake Showcase",
+    "category": "Wedding",
+    "description": "Wedding cake image with editable cake or dessert packages",
+    "keywords": [
+      "wedding",
+      "cake",
+      "dessert",
+      "bakery"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-planner-services",
+    "name": "Wedding Planner Services",
+    "category": "Wedding",
+    "description": "Numbered services layout for planners and event agencies",
+    "keywords": [
+      "wedding",
+      "planner",
+      "services",
+      "agency"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-luxury-planner-hero",
+    "name": "Luxury Wedding Planner Hero",
+    "category": "Wedding",
+    "description": "Dark luxury wedding-planner hero with image, statement and CTA",
+    "keywords": [
+      "wedding",
+      "planner",
+      "luxury",
+      "hero"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-photographer-portfolio",
+    "name": "Wedding Photographer Portfolio",
+    "category": "Wedding",
+    "description": "Editorial image portfolio for wedding photographers and photo stories",
+    "keywords": [
+      "wedding",
+      "photographer",
+      "portfolio",
+      "gallery"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-testimonials",
+    "name": "Wedding Testimonials",
+    "category": "Wedding",
+    "description": "Large romantic testimonials for planners, photographers and venues",
+    "keywords": [
+      "wedding",
+      "testimonials",
+      "reviews",
+      "couples"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-pricing-packages",
+    "name": "Wedding Planning Packages",
+    "category": "Wedding",
+    "description": "Three editable pricing packages for planners and coordinators",
+    "keywords": [
+      "wedding",
+      "pricing",
+      "planner",
+      "packages"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-wedding-checklist",
+    "name": "Wedding Planning Checklist",
+    "category": "Wedding",
+    "description": "Four-step wedding planning checklist with editorial numbering",
+    "keywords": [
+      "wedding",
+      "checklist",
+      "planning",
+      "tips"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-theme-palette",
+    "name": "Wedding Theme Palette",
+    "category": "Wedding",
+    "description": "Wedding mood board with editable named color swatches and styling notes",
+    "keywords": [
+      "wedding",
+      "theme",
+      "colors",
+      "moodboard"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-invitation-card",
+    "name": "Formal Wedding Invitation",
+    "category": "Wedding",
+    "description": "Classic centered invitation card with names, venue and date",
+    "keywords": [
+      "wedding",
+      "invitation",
+      "formal",
+      "save the date"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-location-cards",
+    "name": "Ceremony & Reception Locations",
+    "category": "Wedding",
+    "description": "Two visual venue cards for ceremony and reception locations",
+    "keywords": [
+      "wedding",
+      "venue",
+      "ceremony",
+      "reception"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-guest-faq",
+    "name": "Wedding Guest FAQ",
+    "category": "Wedding",
+    "description": "Clean wedding guest FAQ list for practical information",
+    "keywords": [
+      "wedding",
+      "faq",
+      "guests",
+      "information"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-memory-quote",
+    "name": "Wedding Memory Quote",
+    "category": "Wedding",
+    "description": "Full image romantic quote block for vows, memories or couple statements",
+    "keywords": [
+      "wedding",
+      "quote",
+      "vows",
+      "memory"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "wed-agency-contact",
+    "name": "Wedding Agency Contact CTA",
+    "category": "Wedding",
+    "description": "Image-backed closing CTA for wedding planners, venues and creative suppliers",
+    "keywords": [
+      "wedding",
+      "agency",
+      "contact",
+      "cta"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-learning-center-hero",
+    "name": "Teaching & Learning Center Hero",
+    "category": "Education",
+    "description": "Modern split education hero for schools, academies and learning centers",
+    "keywords": [
+      "education",
+      "hero",
+      "school",
+      "academy"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-course-card-grid",
+    "name": "Course Card Grid",
+    "category": "Education",
+    "description": "Course category cards with descriptions, counts and links",
+    "keywords": [
+      "education",
+      "courses",
+      "cards",
+      "learning"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-online-university-hero",
+    "name": "Online University Hero",
+    "category": "Education",
+    "description": "Image-backed online university hero with enrollment message",
+    "keywords": [
+      "education",
+      "online university",
+      "hero",
+      "elearning"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-language-programs",
+    "name": "Language Programs",
+    "category": "Education",
+    "description": "Language-center layout with course list and learning image",
+    "keywords": [
+      "education",
+      "language",
+      "courses",
+      "school"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-school-life-gallery",
+    "name": "Our School Life Gallery",
+    "category": "Education",
+    "description": "Editorial school-life photo mosaic with captions",
+    "keywords": [
+      "education",
+      "school",
+      "gallery",
+      "students"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-quality-education",
+    "name": "Quality Education Statement",
+    "category": "Education",
+    "description": "Large education mission statement with supporting metrics",
+    "keywords": [
+      "education",
+      "quality",
+      "mission",
+      "statistics"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-certificate-courses",
+    "name": "Certificate Courses",
+    "category": "Education",
+    "description": "Certificate program cards with duration and concise outcomes",
+    "keywords": [
+      "education",
+      "certificate",
+      "courses",
+      "online"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-learning-process",
+    "name": "How Learning Works",
+    "category": "Education",
+    "description": "Four-step learning process with strong editorial numbering",
+    "keywords": [
+      "education",
+      "process",
+      "steps",
+      "learning"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-teacher-profiles",
+    "name": "Teacher Profiles",
+    "category": "Education",
+    "description": "Instructor profile cards with portraits and teaching areas",
+    "keywords": [
+      "education",
+      "teachers",
+      "faculty",
+      "team"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-school-statistics",
+    "name": "Education Statistics",
+    "category": "Education",
+    "description": "Bold statistic strip for school, university or training outcomes",
+    "keywords": [
+      "education",
+      "statistics",
+      "numbers",
+      "school"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-student-reviews",
+    "name": "Student Reviews",
+    "category": "Education",
+    "description": "Large learner testimonials with course or program context",
+    "keywords": [
+      "education",
+      "reviews",
+      "testimonials",
+      "students"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-study-departments",
+    "name": "Study Departments",
+    "category": "Education",
+    "description": "Numbered academic departments grid for colleges and universities",
+    "keywords": [
+      "education",
+      "departments",
+      "university",
+      "faculties"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-library-feature",
+    "name": "College Library Feature",
+    "category": "Education",
+    "description": "Large library image with reading, research and resource copy",
+    "keywords": [
+      "education",
+      "library",
+      "books",
+      "research"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-campus-experience",
+    "name": "Campus Experience",
+    "category": "Education",
+    "description": "Three large image cards for campus spaces, clubs and student support",
+    "keywords": [
+      "education",
+      "campus",
+      "student life",
+      "college"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-kids-learning",
+    "name": "Fun Learning for Kids",
+    "category": "Education",
+    "description": "Bright elementary/kindergarten learning cards with playful symbols",
+    "keywords": [
+      "education",
+      "kids",
+      "kindergarten",
+      "primary school"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-after-school-programs",
+    "name": "After School Programs",
+    "category": "Education",
+    "description": "Program cards with schedule labels for clubs and activities",
+    "keywords": [
+      "education",
+      "after school",
+      "clubs",
+      "programs"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-science-project",
+    "name": "Science Project Feature",
+    "category": "Education",
+    "description": "Image-led science/research project section with key result callout",
+    "keywords": [
+      "education",
+      "science",
+      "project",
+      "research"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-creative-crafts",
+    "name": "Creative Learning Activities",
+    "category": "Education",
+    "description": "Playful creative-learning image cards for children and workshops",
+    "keywords": [
+      "education",
+      "creative",
+      "kids",
+      "activities"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-tuition-pricing",
+    "name": "Tuition & Course Pricing",
+    "category": "Education",
+    "description": "Three pricing plans for language centers, tutoring and online programs",
+    "keywords": [
+      "education",
+      "pricing",
+      "tuition",
+      "courses"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-course-curriculum",
+    "name": "Course Curriculum",
+    "category": "Education",
+    "description": "Structured course curriculum/module list",
+    "keywords": [
+      "education",
+      "curriculum",
+      "course",
+      "modules"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-free-course-cta",
+    "name": "Start Learning Free CTA",
+    "category": "Education",
+    "description": "Simple high-impact enrollment CTA for a free course or trial lesson",
+    "keywords": [
+      "education",
+      "free course",
+      "cta",
+      "enrollment"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-online-learning-features",
+    "name": "Online Learning Features",
+    "category": "Education",
+    "description": "Four-feature grid for online learning platforms and academies",
+    "keywords": [
+      "education",
+      "online",
+      "features",
+      "elearning"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-career-forward",
+    "name": "Drive Your Career Forward",
+    "category": "Education",
+    "description": "Career-focused education split with outcomes and CTA",
+    "keywords": [
+      "education",
+      "career",
+      "training",
+      "professional"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-alumni-achievements",
+    "name": "Alumni Achievements",
+    "category": "Education",
+    "description": "Editorial alumni achievement timeline",
+    "keywords": [
+      "education",
+      "alumni",
+      "achievements",
+      "graduates"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-quiz-challenge",
+    "name": "Quiz Challenge",
+    "category": "Education",
+    "description": "Interactive-looking quiz topic cards and challenge CTA",
+    "keywords": [
+      "education",
+      "quiz",
+      "knowledge",
+      "test"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-study-travel",
+    "name": "Study & Travel Program",
+    "category": "Education",
+    "description": "Study-abroad and educational tour cards with destinations and dates",
+    "keywords": [
+      "education",
+      "study abroad",
+      "travel",
+      "tours"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-research-spotlight",
+    "name": "Learning & Research Spotlight",
+    "category": "Education",
+    "description": "Research spotlight with two editorial research summaries",
+    "keywords": [
+      "education",
+      "research",
+      "university",
+      "learning"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-learning-faq",
+    "name": "Education FAQ",
+    "category": "Education",
+    "description": "Clean FAQ list for admissions, courses or online learning questions",
+    "keywords": [
+      "education",
+      "faq",
+      "admissions",
+      "courses"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-enrollment-contact",
+    "name": "Enrollment Contact CTA",
+    "category": "Education",
+    "description": "Admissions/enrollment contact section with image and two actions",
+    "keywords": [
+      "education",
+      "enrollment",
+      "admissions",
+      "contact"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "edu-class-schedule",
+    "name": "Class Schedule",
+    "category": "Education",
+    "description": "Compact timetable/session list for schools, courses and workshops",
+    "keywords": [
+      "education",
+      "schedule",
+      "classes",
+      "timetable"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-restaurant-hero-split",
+    "name": "Restaurant Hero Split",
+    "category": "Food & Restaurant",
+    "description": "Image-led restaurant introduction with opening note and booking action",
+    "keywords": [
+      "food",
+      "restaurant",
+      "hero",
+      "booking",
+      "dining"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-chefs-special",
+    "name": "Chef's Special",
+    "category": "Food & Restaurant",
+    "description": "Editorial daily-special section with featured dish and compact menu",
+    "keywords": [
+      "food",
+      "restaurant",
+      "chef",
+      "special",
+      "menu"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-signature-dishes",
+    "name": "Signature Dishes Grid",
+    "category": "Food & Restaurant",
+    "description": "Three-column image cards for featured plates and restaurant favorites",
+    "keywords": [
+      "food",
+      "restaurant",
+      "dishes",
+      "cards",
+      "menu"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-menu-columns",
+    "name": "Restaurant Menu Columns",
+    "category": "Food & Restaurant",
+    "description": "Clean restaurant menu list with section labels, descriptions and prices",
+    "keywords": [
+      "food",
+      "restaurant",
+      "menu",
+      "prices",
+      "dishes"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-pizza-menu",
+    "name": "Pizza Menu Cards",
+    "category": "Food & Restaurant",
+    "description": "Bold pizzeria section with large pizza image and menu cards",
+    "keywords": [
+      "food",
+      "restaurant",
+      "pizza",
+      "pizzeria",
+      "menu"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-burger-combo",
+    "name": "Burger Combo Banner",
+    "category": "Food & Restaurant",
+    "description": "High-impact fast-food combo promotion with price, image and CTA",
+    "keywords": [
+      "food",
+      "restaurant",
+      "burger",
+      "fast food",
+      "promotion"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-bakery-hero",
+    "name": "Fresh Bakery Hero",
+    "category": "Food & Restaurant",
+    "description": "Warm bakery hero with oversized typography and bread photography",
+    "keywords": [
+      "food",
+      "restaurant",
+      "bakery",
+      "bread",
+      "pastry"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-bakery-products",
+    "name": "Bakery Product Cards",
+    "category": "Food & Restaurant",
+    "description": "Compact bakery shop grid with product descriptions and prices",
+    "keywords": [
+      "food",
+      "restaurant",
+      "bakery",
+      "products",
+      "bread"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-coffee-feature",
+    "name": "Coffee Shop Feature",
+    "category": "Food & Restaurant",
+    "description": "Dark coffeehouse feature with origin notes and a large lifestyle image",
+    "keywords": [
+      "food",
+      "restaurant",
+      "coffee",
+      "cafe",
+      "roastery"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-coffee-menu",
+    "name": "Coffee Menu Price List",
+    "category": "Food & Restaurant",
+    "description": "Minimal café price board for coffee, tea and specialty drinks",
+    "keywords": [
+      "food",
+      "restaurant",
+      "coffee",
+      "menu",
+      "prices"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-fine-dining-story",
+    "name": "Fine Dining Story",
+    "category": "Food & Restaurant",
+    "description": "Elegant restaurant story section with overlapping image and editorial copy",
+    "keywords": [
+      "food",
+      "restaurant",
+      "fine dining",
+      "story",
+      "about"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-chef-profile",
+    "name": "Executive Chef Profile",
+    "category": "Food & Restaurant",
+    "description": "Chef biography layout with portrait, philosophy and signature",
+    "keywords": [
+      "food",
+      "restaurant",
+      "chef",
+      "profile",
+      "team"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-chef-team",
+    "name": "Meet the Chefs",
+    "category": "Food & Restaurant",
+    "description": "Portrait grid introducing the kitchen team and roles",
+    "keywords": [
+      "food",
+      "restaurant",
+      "chef",
+      "team",
+      "staff"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-reservation-cta",
+    "name": "Reservation CTA",
+    "category": "Food & Restaurant",
+    "description": "Centered reservation callout with service times and booking action",
+    "keywords": [
+      "food",
+      "restaurant",
+      "reservation",
+      "booking",
+      "cta"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-hours-location",
+    "name": "Opening Hours & Location",
+    "category": "Food & Restaurant",
+    "description": "Restaurant contact panel with opening hours, address and directions action",
+    "keywords": [
+      "food",
+      "restaurant",
+      "hours",
+      "location",
+      "contact"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-gallery-mosaic",
+    "name": "Food Gallery Mosaic",
+    "category": "Food & Restaurant",
+    "description": "Editorial food photography mosaic for restaurant and café pages",
+    "keywords": [
+      "food",
+      "restaurant",
+      "gallery",
+      "photos",
+      "food"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-customer-reviews",
+    "name": "Customer Reviews",
+    "category": "Food & Restaurant",
+    "description": "Restaurant testimonial cards with guest attribution and visit context",
+    "keywords": [
+      "food",
+      "restaurant",
+      "reviews",
+      "testimonials",
+      "guests"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-catering-services",
+    "name": "Catering Services",
+    "category": "Food & Restaurant",
+    "description": "Numbered catering service list paired with event photography",
+    "keywords": [
+      "food",
+      "restaurant",
+      "catering",
+      "events",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-catering-packages",
+    "name": "Catering Packages",
+    "category": "Food & Restaurant",
+    "description": "Three pricing cards for catering tiers, inclusions and custom quotes",
+    "keywords": [
+      "food",
+      "restaurant",
+      "catering",
+      "pricing",
+      "packages"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-healthy-hero",
+    "name": "Healthy Food Hero",
+    "category": "Food & Restaurant",
+    "description": "Fresh health-focused food hero with image, benefits and action",
+    "keywords": [
+      "food",
+      "restaurant",
+      "healthy",
+      "nutrition",
+      "organic"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-nutrition-benefits",
+    "name": "Nutrition Benefits Grid",
+    "category": "Food & Restaurant",
+    "description": "Numbered nutrition principles for healthy cafés, coaches and food brands",
+    "keywords": [
+      "food",
+      "restaurant",
+      "nutrition",
+      "benefits",
+      "healthy"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-organic-farm-story",
+    "name": "Organic Farm Story",
+    "category": "Food & Restaurant",
+    "description": "Farm-to-table storytelling section with sourcing highlights",
+    "keywords": [
+      "food",
+      "restaurant",
+      "organic",
+      "farm",
+      "sourcing"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-seasonal-produce",
+    "name": "Seasonal Produce Grid",
+    "category": "Food & Restaurant",
+    "description": "Produce-led seasonal grid for farm-to-table restaurants and healthy food brands",
+    "keywords": [
+      "food",
+      "restaurant",
+      "seasonal",
+      "produce",
+      "ingredients"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-dessert-showcase",
+    "name": "Dessert Showcase",
+    "category": "Food & Restaurant",
+    "description": "Playful dessert feature with large image and sweet menu list",
+    "keywords": [
+      "food",
+      "restaurant",
+      "dessert",
+      "cake",
+      "sweets"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-ice-cream-flavors",
+    "name": "Ice Cream Flavors",
+    "category": "Food & Restaurant",
+    "description": "Colorful ice-cream flavor board with image and editable flavor chips",
+    "keywords": [
+      "food",
+      "restaurant",
+      "ice cream",
+      "dessert",
+      "flavors"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-seafood-feature",
+    "name": "Seafood Feature",
+    "category": "Food & Restaurant",
+    "description": "Coastal seafood story with large photo, catch note and booking action",
+    "keywords": [
+      "food",
+      "restaurant",
+      "seafood",
+      "fish",
+      "coastal"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-grill-menu",
+    "name": "Grill House Menu",
+    "category": "Food & Restaurant",
+    "description": "Dark grill-house menu with smoky image backdrop and price list",
+    "keywords": [
+      "food",
+      "restaurant",
+      "grill",
+      "meat",
+      "menu"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-recipe-steps",
+    "name": "Recipe Steps",
+    "category": "Food & Restaurant",
+    "description": "Editorial recipe-method section with image and numbered cooking steps",
+    "keywords": [
+      "food",
+      "restaurant",
+      "recipe",
+      "cooking",
+      "steps"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-online-ordering",
+    "name": "Online Ordering CTA",
+    "category": "Food & Restaurant",
+    "description": "Food-ordering section with three-step explanation and strong action",
+    "keywords": [
+      "food",
+      "restaurant",
+      "ordering",
+      "delivery",
+      "takeaway"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "food-restaurant-locations",
+    "name": "Restaurant Locations",
+    "category": "Food & Restaurant",
+    "description": "Multi-location restaurant cards with address, hours and directions links",
+    "keywords": [
+      "food",
+      "restaurant",
+      "locations",
+      "contact",
+      "restaurant"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-premium-vehicle-hero",
+    "name": "Premium Vehicle Hero",
+    "category": "Cars & Transportation",
+    "description": "Large luxury vehicle hero with bold product positioning",
+    "keywords": [
+      "cars",
+      "transportation",
+      "hero",
+      "image",
+      "cta"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-rental-hero",
+    "name": "Car Rental Hero",
+    "category": "Cars & Transportation",
+    "description": "Rental-focused hero with large vehicle image and reservation action",
+    "keywords": [
+      "cars",
+      "transportation",
+      "hero",
+      "image",
+      "cta"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-electric-mobility-hero",
+    "name": "Electric Mobility Hero",
+    "category": "Cars & Transportation",
+    "description": "EV-focused hero for clean modern transportation brands",
+    "keywords": [
+      "cars",
+      "transportation",
+      "hero",
+      "image",
+      "cta"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-logistics-hero",
+    "name": "Logistics Company Hero",
+    "category": "Cars & Transportation",
+    "description": "Freight and logistics introduction with service-led copy",
+    "keywords": [
+      "cars",
+      "transportation",
+      "hero",
+      "image",
+      "cta"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-taxi-booking-hero",
+    "name": "Taxi Booking Hero",
+    "category": "Cars & Transportation",
+    "description": "Taxi service hero with prominent booking action",
+    "keywords": [
+      "cars",
+      "transportation",
+      "hero",
+      "image",
+      "cta"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-bus-travel-hero",
+    "name": "Modern Bus Travel Hero",
+    "category": "Cars & Transportation",
+    "description": "Comfortable coach and intercity travel hero",
+    "keywords": [
+      "cars",
+      "transportation",
+      "hero",
+      "image",
+      "cta"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-dealership-inventory",
+    "name": "Dealership Inventory",
+    "category": "Cars & Transportation",
+    "description": "Vehicle inventory cards for dealership highlights",
+    "keywords": [
+      "cars",
+      "transportation",
+      "cards",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-model-comparison",
+    "name": "Vehicle Model Comparison",
+    "category": "Cars & Transportation",
+    "description": "Side-by-side model cards for quick comparison",
+    "keywords": [
+      "cars",
+      "transportation",
+      "cards",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-rental-fleet",
+    "name": "Rental Fleet Cards",
+    "category": "Cars & Transportation",
+    "description": "Image cards for car rental categories",
+    "keywords": [
+      "cars",
+      "transportation",
+      "cards",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-detailing-services",
+    "name": "Car Detailing Services",
+    "category": "Cars & Transportation",
+    "description": "Premium detailing service cards",
+    "keywords": [
+      "cars",
+      "transportation",
+      "cards",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-auto-repair-services",
+    "name": "Auto Repair Services",
+    "category": "Cars & Transportation",
+    "description": "Service cards for mechanical and workshop offerings",
+    "keywords": [
+      "cars",
+      "transportation",
+      "cards",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-mechanic-team",
+    "name": "Mechanic Team",
+    "category": "Cars & Transportation",
+    "description": "Automotive team cards for technicians and specialists",
+    "keywords": [
+      "cars",
+      "transportation",
+      "cards",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-taxi-fleet",
+    "name": "Taxi Fleet Cards",
+    "category": "Cars & Transportation",
+    "description": "Taxi and transfer vehicle categories",
+    "keywords": [
+      "cars",
+      "transportation",
+      "cards",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-logistics-services",
+    "name": "Logistics Services Grid",
+    "category": "Cars & Transportation",
+    "description": "Service grid for freight and transport capabilities",
+    "keywords": [
+      "cars",
+      "transportation",
+      "cards",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-trucking-fleet",
+    "name": "Trucking Fleet",
+    "category": "Cars & Transportation",
+    "description": "Heavy transport vehicle cards",
+    "keywords": [
+      "cars",
+      "transportation",
+      "cards",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-motorcycle-service",
+    "name": "Motorcycle Services",
+    "category": "Cars & Transportation",
+    "description": "Motorcycle repair and maintenance cards",
+    "keywords": [
+      "cars",
+      "transportation",
+      "cards",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-parking-features",
+    "name": "Smart Parking Features",
+    "category": "Cars & Transportation",
+    "description": "Feature cards for parking and mobility platforms",
+    "keywords": [
+      "cars",
+      "transportation",
+      "cards",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-roadside-services",
+    "name": "Roadside Assistance Services",
+    "category": "Cars & Transportation",
+    "description": "Emergency roadside service cards",
+    "keywords": [
+      "cars",
+      "transportation",
+      "cards",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-transfer-steps",
+    "name": "Airport Transfer in 4 Steps",
+    "category": "Cars & Transportation",
+    "description": "Simple booking process for transfer services",
+    "keywords": [
+      "cars",
+      "transportation",
+      "process",
+      "steps"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-repair-process",
+    "name": "Vehicle Repair Process",
+    "category": "Cars & Transportation",
+    "description": "Workshop process from diagnosis to handover",
+    "keywords": [
+      "cars",
+      "transportation",
+      "process",
+      "steps"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-shipping-process",
+    "name": "Shipping Process",
+    "category": "Cars & Transportation",
+    "description": "Freight workflow for cargo and parcel operations",
+    "keywords": [
+      "cars",
+      "transportation",
+      "process",
+      "steps"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-car-wash-process",
+    "name": "Car Wash Process",
+    "category": "Cars & Transportation",
+    "description": "Step-by-step wash and detailing process",
+    "keywords": [
+      "cars",
+      "transportation",
+      "process",
+      "steps"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-car-wash-pricing",
+    "name": "Car Wash Pricing",
+    "category": "Cars & Transportation",
+    "description": "Pricing cards for wash and detailing packages",
+    "keywords": [
+      "cars",
+      "transportation",
+      "pricing",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-rental-pricing",
+    "name": "Car Rental Pricing",
+    "category": "Cars & Transportation",
+    "description": "Rental package cards for daily vehicle hire",
+    "keywords": [
+      "cars",
+      "transportation",
+      "pricing",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-service-packages",
+    "name": "Vehicle Service Packages",
+    "category": "Cars & Transportation",
+    "description": "Maintenance package cards for scheduled servicing",
+    "keywords": [
+      "cars",
+      "transportation",
+      "pricing",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-logistics-stats",
+    "name": "Logistics Statistics",
+    "category": "Cars & Transportation",
+    "description": "Operational statistics for transport and freight companies",
+    "keywords": [
+      "cars",
+      "transportation",
+      "statistics",
+      "numbers"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-dealership-stats",
+    "name": "Dealership Trust Numbers",
+    "category": "Cars & Transportation",
+    "description": "Automotive dealership confidence statistics",
+    "keywords": [
+      "cars",
+      "transportation",
+      "statistics",
+      "numbers"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-vehicle-gallery",
+    "name": "Vehicle Gallery Mosaic",
+    "category": "Cars & Transportation",
+    "description": "Large automotive image mosaic for models, events or dealership stock",
+    "keywords": [
+      "cars",
+      "transportation",
+      "gallery",
+      "images"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-motorcycle-gallery",
+    "name": "Motorcycle Gallery",
+    "category": "Cars & Transportation",
+    "description": "Editorial image mosaic for motorcycles and motorsport",
+    "keywords": [
+      "cars",
+      "transportation",
+      "gallery",
+      "images"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "cars-transport-contact-cta",
+    "name": "Transportation Contact CTA",
+    "category": "Cars & Transportation",
+    "description": "Bold contact call-to-action for transport, rental or automotive services",
+    "keywords": [
+      "cars",
+      "transportation",
+      "cta",
+      "booking"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-medical-center-hero",
+    "name": "Medical Center Hero",
+    "category": "Medicine & Science",
+    "description": "Modern healthcare hero with appointment action",
+    "keywords": [
+      "hospital",
+      "clinic",
+      "doctor",
+      "hero"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-doctor-consultation-split",
+    "name": "Doctor Consultation Split",
+    "category": "Medicine & Science",
+    "description": "Doctor profile and consultation callout",
+    "keywords": [
+      "doctor",
+      "consultation",
+      "profile"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-clinic-services-grid",
+    "name": "Clinic Services Grid",
+    "category": "Medicine & Science",
+    "description": "Clean medical services card grid",
+    "keywords": [
+      "clinic",
+      "services",
+      "healthcare"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-doctor-team-cards",
+    "name": "Medical Team Cards",
+    "category": "Medicine & Science",
+    "description": "Profile-style overview for a medical team",
+    "keywords": [
+      "doctors",
+      "team",
+      "medical"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-dental-services",
+    "name": "Dental Care Services",
+    "category": "Medicine & Science",
+    "description": "Dentistry service overview",
+    "keywords": [
+      "dental",
+      "dentist",
+      "services"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-therapy-services",
+    "name": "Therapy & Counseling Services",
+    "category": "Medicine & Science",
+    "description": "Mental-health and therapy services section",
+    "keywords": [
+      "therapy",
+      "psychology",
+      "mental health"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-pharmacy-services",
+    "name": "Pharmacy Services",
+    "category": "Medicine & Science",
+    "description": "Pharmacy and prescription support cards",
+    "keywords": [
+      "pharmacy",
+      "medicine",
+      "prescription"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-lab-testing-services",
+    "name": "Laboratory Testing Services",
+    "category": "Medicine & Science",
+    "description": "Diagnostic laboratory service cards",
+    "keywords": [
+      "laboratory",
+      "diagnostics",
+      "testing"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-research-project-cards",
+    "name": "Research Project Cards",
+    "category": "Medicine & Science",
+    "description": "Scientific research areas and programs",
+    "keywords": [
+      "science",
+      "research",
+      "laboratory"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-biotechnology-process",
+    "name": "Biotechnology Process",
+    "category": "Medicine & Science",
+    "description": "Biotechnology workflow and capabilities",
+    "keywords": [
+      "biotechnology",
+      "science",
+      "process"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-diagnostics-panel",
+    "name": "Diagnostic Medicine Panel",
+    "category": "Medicine & Science",
+    "description": "Diagnostic capabilities overview",
+    "keywords": [
+      "diagnostics",
+      "medical",
+      "testing"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-pediatric-care",
+    "name": "Pediatric Care",
+    "category": "Medicine & Science",
+    "description": "Friendly pediatric service section",
+    "keywords": [
+      "pediatric",
+      "child",
+      "healthcare"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-womens-health",
+    "name": "Women’s Health Services",
+    "category": "Medicine & Science",
+    "description": "Women-focused health services section",
+    "keywords": [
+      "women",
+      "pregnancy",
+      "health"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-appointment-cta",
+    "name": "Appointment CTA",
+    "category": "Medicine & Science",
+    "description": "Bold appointment call to action",
+    "keywords": [
+      "appointment",
+      "clinic",
+      "cta"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-emergency-care-banner",
+    "name": "Emergency Care Banner",
+    "category": "Medicine & Science",
+    "description": "High-visibility urgent care information banner",
+    "keywords": [
+      "emergency",
+      "urgent care",
+      "banner"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-healthcare-stats",
+    "name": "Healthcare Statistics",
+    "category": "Medicine & Science",
+    "description": "Healthcare trust and outcomes statistics",
+    "keywords": [
+      "statistics",
+      "hospital",
+      "healthcare"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-patient-testimonials",
+    "name": "Patient Testimonials",
+    "category": "Medicine & Science",
+    "description": "Patient experience testimonial cards",
+    "keywords": [
+      "patients",
+      "testimonials",
+      "healthcare"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-dental-before-after",
+    "name": "Dental Before & After",
+    "category": "Medicine & Science",
+    "description": "Two-image cosmetic dentistry comparison",
+    "keywords": [
+      "dental",
+      "before after",
+      "treatment"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-psychologist-profile",
+    "name": "Psychologist Profile",
+    "category": "Medicine & Science",
+    "description": "Warm therapist profile with credentials",
+    "keywords": [
+      "psychology",
+      "therapist",
+      "profile"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-wellness-programs",
+    "name": "Wellness Programs",
+    "category": "Medicine & Science",
+    "description": "Preventive wellness and lifestyle programs",
+    "keywords": [
+      "wellness",
+      "nutrition",
+      "health"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-prescription-delivery",
+    "name": "Prescription Delivery",
+    "category": "Medicine & Science",
+    "description": "Pharmacy delivery feature with simple steps",
+    "keywords": [
+      "pharmacy",
+      "delivery",
+      "prescription"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-laboratory-research-hero",
+    "name": "Laboratory Research Hero",
+    "category": "Medicine & Science",
+    "description": "Science laboratory hero with research metrics",
+    "keywords": [
+      "laboratory",
+      "research",
+      "science",
+      "hero"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-science-discovery-feature",
+    "name": "Science Discovery Feature",
+    "category": "Medicine & Science",
+    "description": "Editorial scientific discovery feature",
+    "keywords": [
+      "science",
+      "discovery",
+      "research"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-clinical-trials-steps",
+    "name": "Clinical Trial Steps",
+    "category": "Medicine & Science",
+    "description": "Four-step clinical research participation flow",
+    "keywords": [
+      "clinical trials",
+      "research",
+      "process"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-cardiology-feature",
+    "name": "Cardiology Feature",
+    "category": "Medicine & Science",
+    "description": "Heart-care feature with service highlights",
+    "keywords": [
+      "cardiology",
+      "heart",
+      "healthcare"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-telemedicine-feature",
+    "name": "Virtual Care Feature",
+    "category": "Medicine & Science",
+    "description": "Telemedicine and online consultation section",
+    "keywords": [
+      "telemedicine",
+      "virtual care",
+      "doctor"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-medical-pricing",
+    "name": "Medical Pricing Cards",
+    "category": "Medicine & Science",
+    "description": "Transparent healthcare service pricing cards",
+    "keywords": [
+      "pricing",
+      "clinic",
+      "healthcare"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-medical-faq",
+    "name": "Medical FAQ",
+    "category": "Medicine & Science",
+    "description": "Patient frequently asked questions section",
+    "keywords": [
+      "faq",
+      "patients",
+      "medical"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-health-contact-location",
+    "name": "Clinic Contact & Location",
+    "category": "Medicine & Science",
+    "description": "Contact details with medical-center image",
+    "keywords": [
+      "contact",
+      "clinic",
+      "location"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "medicine-science-publications",
+    "name": "Science Publications",
+    "category": "Medicine & Science",
+    "description": "Research publication and journal listing",
+    "keywords": [
+      "science",
+      "publications",
+      "research"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-athlete-profile",
+    "name": "Athlete Profile",
+    "category": "Sports",
+    "description": "Editorial athlete spotlight",
+    "keywords": [
+      "athlete",
+      "profile",
+      "bio"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-basketball-team-roster",
+    "name": "Basketball Team Roster",
+    "category": "Sports",
+    "description": "Player cards for basketball clubs and school teams",
+    "keywords": [
+      "basketball",
+      "team",
+      "roster",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-boxing-club-hero",
+    "name": "Boxing Club Hero",
+    "category": "Sports",
+    "description": "High-impact sports hero section",
+    "keywords": [
+      "boxing",
+      "club",
+      "hero",
+      "hero"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-club-achievements",
+    "name": "Club Achievements",
+    "category": "Sports",
+    "description": "Bold sports statistics and achievements",
+    "keywords": [
+      "club",
+      "achievements",
+      "stats"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-coach-trainer-cards",
+    "name": "Coaches & Trainers",
+    "category": "Sports",
+    "description": "Team grid for coaches, trainers and instructors",
+    "keywords": [
+      "coaches",
+      "&",
+      "trainers",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-cycling-club",
+    "name": "Cycling Club Feature",
+    "category": "Sports",
+    "description": "Split feature for a sport or club",
+    "keywords": [
+      "cycling",
+      "club",
+      "feature",
+      "feature"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-football-team-roster",
+    "name": "Football Team Roster",
+    "category": "Sports",
+    "description": "Player cards for football and soccer teams",
+    "keywords": [
+      "football",
+      "team",
+      "roster",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-golf-club-feature",
+    "name": "Golf Club Feature",
+    "category": "Sports",
+    "description": "Split feature for a sport or club",
+    "keywords": [
+      "golf",
+      "club",
+      "feature",
+      "feature"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-gym-facilities",
+    "name": "Gym Facilities",
+    "category": "Sports",
+    "description": "Facility highlights for a gym or sports complex",
+    "keywords": [
+      "gym",
+      "facilities",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-martial-arts-classes",
+    "name": "Martial Arts Classes",
+    "category": "Sports",
+    "description": "Class cards for martial arts schools",
+    "keywords": [
+      "martial",
+      "arts",
+      "classes",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-match-scoreboard",
+    "name": "Match Scoreboard",
+    "category": "Sports",
+    "description": "Prominent latest-result scoreboard",
+    "keywords": [
+      "score",
+      "match",
+      "team",
+      "result"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-performance-statistics",
+    "name": "Performance Statistics",
+    "category": "Sports",
+    "description": "Bold sports statistics and achievements",
+    "keywords": [
+      "performance",
+      "statistics",
+      "stats"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-fitness-training-hero",
+    "name": "Performance Training Hero",
+    "category": "Sports",
+    "description": "High-impact sports hero section",
+    "keywords": [
+      "performance",
+      "training",
+      "hero",
+      "hero"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-running-community-hero",
+    "name": "Running Community Hero",
+    "category": "Sports",
+    "description": "High-impact sports hero section",
+    "keywords": [
+      "running",
+      "community",
+      "hero",
+      "hero"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-class-schedule",
+    "name": "Sports Class Schedule",
+    "category": "Sports",
+    "description": "Sports schedule or fixtures listing",
+    "keywords": [
+      "sports",
+      "class",
+      "schedule",
+      "schedule"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-contact-location",
+    "name": "Sports Club Contact & Location",
+    "category": "Sports",
+    "description": "Contact and location panel for sports venues",
+    "keywords": [
+      "contact",
+      "location",
+      "club",
+      "venue"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-club-hero",
+    "name": "Sports Club Hero",
+    "category": "Sports",
+    "description": "High-impact sports hero section",
+    "keywords": [
+      "sports",
+      "club",
+      "hero",
+      "hero"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-gallery-mosaic",
+    "name": "Sports Gallery Mosaic",
+    "category": "Sports",
+    "description": "Image-forward sports gallery",
+    "keywords": [
+      "gallery",
+      "photos",
+      "sports"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-membership-pricing",
+    "name": "Sports Membership Pricing",
+    "category": "Sports",
+    "description": "Sports membership and package pricing",
+    "keywords": [
+      "sports",
+      "membership",
+      "pricing",
+      "pricing"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-news-grid",
+    "name": "Sports News Grid",
+    "category": "Sports",
+    "description": "Editorial cards for sports news and updates",
+    "keywords": [
+      "sports",
+      "news",
+      "grid",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-nutrition-plan",
+    "name": "Sports Nutrition Plan",
+    "category": "Sports",
+    "description": "Split feature for a sport or club",
+    "keywords": [
+      "sports",
+      "nutrition",
+      "plan",
+      "feature"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-sportswear-promo",
+    "name": "Sportswear Collection Promo",
+    "category": "Sports",
+    "description": "Image-led sportswear promotion",
+    "keywords": [
+      "sportswear",
+      "apparel",
+      "training",
+      "shop"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-swimming-programs",
+    "name": "Swimming Programs",
+    "category": "Sports",
+    "description": "Swimming program cards for clubs and pools",
+    "keywords": [
+      "swimming",
+      "programs",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-team-hero",
+    "name": "Team Season Hero",
+    "category": "Sports",
+    "description": "High-impact sports hero section",
+    "keywords": [
+      "team",
+      "season",
+      "hero",
+      "hero"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-tennis-lessons",
+    "name": "Tennis Lessons",
+    "category": "Sports",
+    "description": "Lesson cards for tennis clubs and coaches",
+    "keywords": [
+      "tennis",
+      "lessons",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-tournament-registration",
+    "name": "Tournament Registration CTA",
+    "category": "Sports",
+    "description": "Bold event registration callout",
+    "keywords": [
+      "tournament",
+      "event",
+      "registration",
+      "cta"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-training-program-cards",
+    "name": "Training Programs",
+    "category": "Sports",
+    "description": "Service cards for sports and fitness programs",
+    "keywords": [
+      "training",
+      "programs",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-upcoming-fixtures",
+    "name": "Upcoming Fixtures",
+    "category": "Sports",
+    "description": "Sports schedule or fixtures listing",
+    "keywords": [
+      "upcoming",
+      "fixtures",
+      "schedule"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-workout-plan-steps",
+    "name": "Workout Plan Steps",
+    "category": "Sports",
+    "description": "Step-by-step sports or training process",
+    "keywords": [
+      "workout",
+      "plan",
+      "steps",
+      "steps"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "sports-yoga-wellness-hero",
+    "name": "Yoga & Movement Hero",
+    "category": "Sports",
+    "description": "High-impact sports hero section",
+    "keywords": [
+      "yoga",
+      "&",
+      "movement",
+      "hero",
+      "hero"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-studio-hero",
+    "name": "Architecture Studio Hero",
+    "category": "Architecture & Building",
+    "description": "Large architecture/building hero with image and CTA",
+    "keywords": [
+      "architecture",
+      "studio",
+      "hero",
+      "hero"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-construction-company-hero",
+    "name": "Construction Company Hero",
+    "category": "Architecture & Building",
+    "description": "Large architecture/building hero with image and CTA",
+    "keywords": [
+      "construction",
+      "company",
+      "hero",
+      "hero"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-interior-design-split",
+    "name": "Interior Design Split",
+    "category": "Architecture & Building",
+    "description": "Split image and content architecture section",
+    "keywords": [
+      "interior",
+      "design",
+      "split",
+      "split"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-sustainable-design-feature",
+    "name": "Sustainable Architecture Feature",
+    "category": "Architecture & Building",
+    "description": "Split image and content architecture section",
+    "keywords": [
+      "sustainable",
+      "architecture",
+      "feature",
+      "split"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-residential-projects",
+    "name": "Residential Projects",
+    "category": "Architecture & Building",
+    "description": "Responsive architecture/building card section",
+    "keywords": [
+      "residential",
+      "projects",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-commercial-projects",
+    "name": "Commercial Architecture Grid",
+    "category": "Architecture & Building",
+    "description": "Responsive architecture/building card section",
+    "keywords": [
+      "commercial",
+      "architecture",
+      "grid",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-portfolio-mosaic",
+    "name": "Architecture Portfolio Mosaic",
+    "category": "Architecture & Building",
+    "description": "Editorial architecture project gallery",
+    "keywords": [
+      "architecture",
+      "portfolio",
+      "mosaic",
+      "gallery"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-general-contractor-services",
+    "name": "General Contractor Services",
+    "category": "Architecture & Building",
+    "description": "Responsive architecture/building card section",
+    "keywords": [
+      "general",
+      "contractor",
+      "services",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-roofing-services",
+    "name": "Roofing Services",
+    "category": "Architecture & Building",
+    "description": "Responsive architecture/building card section",
+    "keywords": [
+      "roofing",
+      "services",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-engineering-expertise",
+    "name": "Engineering Expertise",
+    "category": "Architecture & Building",
+    "description": "Responsive architecture/building card section",
+    "keywords": [
+      "engineering",
+      "expertise",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-design-build-process",
+    "name": "Design Build Process",
+    "category": "Architecture & Building",
+    "description": "Architecture or construction process section",
+    "keywords": [
+      "design",
+      "build",
+      "process",
+      "process"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-construction-process",
+    "name": "Construction Process",
+    "category": "Architecture & Building",
+    "description": "Architecture or construction process section",
+    "keywords": [
+      "construction",
+      "process",
+      "process"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-project-statistics",
+    "name": "Project Statistics",
+    "category": "Architecture & Building",
+    "description": "Architecture/building statistics section",
+    "keywords": [
+      "project",
+      "statistics",
+      "statistics"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-building-safety",
+    "name": "Building Safety",
+    "category": "Architecture & Building",
+    "description": "Responsive architecture/building card section",
+    "keywords": [
+      "building",
+      "safety",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-architect-profile",
+    "name": "Architect Profile",
+    "category": "Architecture & Building",
+    "description": "Split image and content architecture section",
+    "keywords": [
+      "architect",
+      "profile",
+      "split"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-project-team",
+    "name": "Architecture Project Team",
+    "category": "Architecture & Building",
+    "description": "Responsive architecture/building card section",
+    "keywords": [
+      "architecture",
+      "project",
+      "team",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-featured-project",
+    "name": "Featured Project Case Study",
+    "category": "Architecture & Building",
+    "description": "Split image and content architecture section",
+    "keywords": [
+      "featured",
+      "project",
+      "case",
+      "study",
+      "split"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-renovation-before-after",
+    "name": "Renovation Before & After",
+    "category": "Architecture & Building",
+    "description": "Editorial architecture project gallery",
+    "keywords": [
+      "renovation",
+      "before",
+      "&",
+      "after",
+      "gallery"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-material-palette",
+    "name": "Materials Palette",
+    "category": "Architecture & Building",
+    "description": "Responsive architecture/building card section",
+    "keywords": [
+      "materials",
+      "palette",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-interior-spaces",
+    "name": "Interior Spaces Showcase",
+    "category": "Architecture & Building",
+    "description": "Editorial architecture project gallery",
+    "keywords": [
+      "interior",
+      "spaces",
+      "showcase",
+      "gallery"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-urban-planning",
+    "name": "Urban Planning Feature",
+    "category": "Architecture & Building",
+    "description": "Split image and content architecture section",
+    "keywords": [
+      "urban",
+      "planning",
+      "feature",
+      "split"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-property-development",
+    "name": "Property Development Feature",
+    "category": "Architecture & Building",
+    "description": "Split image and content architecture section",
+    "keywords": [
+      "property",
+      "development",
+      "feature",
+      "split"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-building-maintenance",
+    "name": "Building Maintenance Services",
+    "category": "Architecture & Building",
+    "description": "Responsive architecture/building card section",
+    "keywords": [
+      "building",
+      "maintenance",
+      "services",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-workshop-capabilities",
+    "name": "Workshop & Fabrication",
+    "category": "Architecture & Building",
+    "description": "Responsive architecture/building card section",
+    "keywords": [
+      "workshop",
+      "&",
+      "fabrication",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-awards-recognition",
+    "name": "Architecture Awards",
+    "category": "Architecture & Building",
+    "description": "Architecture/building statistics section",
+    "keywords": [
+      "architecture",
+      "awards",
+      "statistics"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-client-testimonial",
+    "name": "Architecture Client Testimonial",
+    "category": "Architecture & Building",
+    "description": "Large quote or testimonial with architecture image",
+    "keywords": [
+      "architecture",
+      "client",
+      "testimonial",
+      "testimonial"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-project-timeline",
+    "name": "Project Timeline",
+    "category": "Architecture & Building",
+    "description": "Architecture or construction process section",
+    "keywords": [
+      "project",
+      "timeline",
+      "process"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-project-faq",
+    "name": "Architecture Project FAQ",
+    "category": "Architecture & Building",
+    "description": "Architecture/building FAQ section",
+    "keywords": [
+      "architecture",
+      "project",
+      "faq",
+      "faq"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-consultation-cta",
+    "name": "Architecture Consultation CTA",
+    "category": "Architecture & Building",
+    "description": "Architecture/building call-to-action section",
+    "keywords": [
+      "architecture",
+      "consultation",
+      "cta",
+      "cta"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  },
+  {
+    "slug": "arch-project-locations",
+    "name": "Project Locations",
+    "category": "Architecture & Building",
+    "description": "Responsive architecture/building card section",
+    "keywords": [
+      "project",
+      "locations",
+      "cards"
+    ],
+    "contexts": [
+      "post",
+      "page"
+    ]
+  }
+]

@@ -1,0 +1,192 @@
+{
+  "slug": "cars-logistics-services",
+  "name": "Logistics Services Grid",
+  "category": "Cars & Transportation",
+  "description": "Service grid for freight and transport capabilities",
+  "keywords": [
+    "cars",
+    "transportation",
+    "cards",
+    "services"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-auto-logistics-services\"><header class=\"tb-auto-logistics-services__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</header><div class=\"tb-auto-logistics-services__grid\">{{elements:items}}</div></section>",
+  "css": ".tb-auto-logistics-services{padding:clamp(34px,6vw,82px);background:var(--tb-color-background)}.tb-auto-logistics-services__head{max-width:780px;margin-bottom:30px}.tb-auto-logistics-services__eyebrow{color:var(--tb-color-primary);font-size:11px;font-weight:950;letter-spacing:.15em;text-transform:uppercase}.tb-auto-logistics-services__title{margin:9px 0 12px;color:var(--tb-color-secondary);font-size:clamp(38px,5vw,64px);line-height:1.02}.tb-auto-logistics-services__text{margin:0;color:var(--tb-color-muted);font-size:16px;line-height:1.7}.tb-auto-logistics-services__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.tb-auto-logistics-services__card{overflow:hidden;border:1px solid var(--tb-color-border);border-radius:18px;background:var(--tb-color-surface)}.tb-auto-logistics-services__card-body{padding:22px}.tb-auto-logistics-services__card-title{margin:0 0 8px;color:var(--tb-color-secondary);font-size:23px}.tb-auto-logistics-services__card-text{margin:0;color:var(--tb-color-muted);line-height:1.65}.tb-auto-logistics-services__meta{display:block;margin-top:13px;color:var(--tb-color-primary);font-weight:900}.tb-auto-logistics-services__image{width:100%;height:230px;object-fit:cover;display:block}@media(max-width:760px){.tb-auto-logistics-services__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "What we move"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-auto-logistics-services__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Transportation without the guesswork"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-auto-logistics-services__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "text",
+      "label": "Description",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Present core logistics capabilities in a strong modular service grid."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-auto-logistics-services__text\">{{text}}</p>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "items",
+      "label": "Card",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "title": "Reliable service",
+        "text": "A clear benefit or service description for customers.",
+        "meta": "Available daily"
+      },
+      "schema": [
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-auto-logistics-services__card-title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-auto-logistics-services__card-text",
+          "rows": 3
+        },
+        {
+          "key": "meta",
+          "label": "Meta",
+          "type": "text",
+          "selector": ".tb-auto-logistics-services__meta"
+        }
+      ],
+      "template": "<article class=\"tb-auto-logistics-services__card\"><div class=\"tb-auto-logistics-services__card-body\"><h3 class=\"tb-auto-logistics-services__card-title\">{{title}}</h3><p class=\"tb-auto-logistics-services__card-text\">{{text}}</p><span class=\"tb-auto-logistics-services__meta\">{{meta}}</span></div></article>",
+      "min": 1,
+      "max": 18,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "title": "Road Freight",
+          "text": "Flexible regional transport for full and partial loads.",
+          "meta": "Domestic & cross-border"
+        },
+        {
+          "title": "Warehousing",
+          "text": "Secure storage, handling and inventory support.",
+          "meta": "Short & long term"
+        },
+        {
+          "title": "Last Mile",
+          "text": "Reliable delivery from hub to final destination.",
+          "meta": "Tracked dispatch"
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

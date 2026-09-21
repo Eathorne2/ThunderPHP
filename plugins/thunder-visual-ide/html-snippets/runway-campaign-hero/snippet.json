@@ -1,0 +1,17 @@
+{
+  "id": "runway-campaign-hero",
+  "name": "Runway Campaign Hero",
+  "description": "A cinematic collection hero with oversized editorial typography and layered campaign photography.",
+  "category": "Fashion & Beauty",
+  "order": 3900,
+  "tags": [
+    "fashion",
+    "hero",
+    "campaign",
+    "collection"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

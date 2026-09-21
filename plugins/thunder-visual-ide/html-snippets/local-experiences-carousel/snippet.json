@@ -1,0 +1,18 @@
+{
+  "id": "local-experiences-carousel",
+  "name": "Local Experiences Carousel",
+  "description": "A horizontally navigable collection of bookable local experiences hosted by specialists.",
+  "category": "Travel & Hotels",
+  "order": 4910,
+  "tags": [
+    "experiences",
+    "carousel",
+    "travel",
+    "activities",
+    "tours"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

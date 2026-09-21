@@ -1,0 +1,17 @@
+{
+  "id": "documentation-sticky-sidebar",
+  "name": "Documentation Sticky Sidebar",
+  "description": "A documentation layout with a sticky table of contents that highlights the visible section.",
+  "category": "Sticky Sidebars",
+  "order": 3150,
+  "tags": [
+    "sticky",
+    "sidebar",
+    "documentation",
+    "navigation"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

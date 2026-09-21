@@ -1,0 +1,20 @@
+{
+  "id": "horizontal-filmstrip-gallery",
+  "name": "Horizontal Filmstrip Gallery",
+  "description": "A horizontally scrollable cinematic gallery with snap points, captions and arrow controls.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9002,
+  "tags": [
+    "gallery",
+    "filmstrip",
+    "horizontal",
+    "cinematic"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

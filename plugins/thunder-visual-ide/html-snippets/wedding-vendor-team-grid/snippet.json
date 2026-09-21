@@ -1,0 +1,18 @@
+{
+  "id": "wedding-vendor-team-grid",
+  "name": "Wedding Vendor Team Grid",
+  "description": "A professional vendor-credit grid for wedding planners, photographers, florists, caterers and entertainers.",
+  "category": "Wedding",
+  "order": 4640,
+  "tags": [
+    "wedding",
+    "vendors",
+    "planner",
+    "photographer",
+    "supplier"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

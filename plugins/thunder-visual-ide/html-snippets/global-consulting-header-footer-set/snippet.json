@@ -1,0 +1,18 @@
+{
+  "id": "global-consulting-header-footer-set",
+  "name": "Global Consulting Header and Footer Set",
+  "description": "A coordinated consulting navigation and footer with service menu, office selector and mobile behavior.",
+  "category": "Header and Footer Sets",
+  "order": 3420,
+  "tags": [
+    "header",
+    "footer",
+    "corporate",
+    "consulting",
+    "navigation"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

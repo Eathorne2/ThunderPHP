@@ -1,0 +1,17 @@
+{
+  "id": "editorial-blog-card",
+  "name": "Editorial Blog Card",
+  "description": "A large image-led article card with category, author, reading time and hover treatment.",
+  "category": "Blog Post Cards",
+  "order": 1180,
+  "tags": [
+    "blog",
+    "article",
+    "card",
+    "editorial"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

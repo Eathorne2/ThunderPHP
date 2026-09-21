@@ -1,0 +1,17 @@
+{
+  "id": "beauty-journal-article-grid",
+  "name": "Beauty Journal Article Grid",
+  "description": "An editorial story grid for beauty advice, interviews, fashion and fragrance.",
+  "category": "Fashion & Beauty",
+  "order": 4060,
+  "tags": [
+    "fashion",
+    "beauty",
+    "grid",
+    "gallery"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

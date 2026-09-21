@@ -1,0 +1,17 @@
+{
+  "id": "profile-dashboard",
+  "name": "Profile Dashboard",
+  "description": "A full profile header with editable details, statistics and tabbed content panels.",
+  "category": "Profiles",
+  "order": 300,
+  "tags": [
+    "profile",
+    "dashboard",
+    "tabs",
+    "stats"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

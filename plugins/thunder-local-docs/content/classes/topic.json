@@ -1,0 +1,11 @@
+{
+    "id": 5,
+    "title": "Classes",
+    "slug": "classes",
+    "description": "How to use ThunderPHP classes like Session, Request, Image etc",
+    "icon": "",
+    "type": "reference",
+    "featured": false,
+    "published": true,
+    "order": 2
+}

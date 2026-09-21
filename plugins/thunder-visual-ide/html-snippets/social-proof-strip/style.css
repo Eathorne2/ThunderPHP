@@ -1,0 +1,101 @@
+.social-proof-strip {
+    display: grid;
+    grid-template-columns: minmax(16rem, 1.2fr) auto auto auto;
+    align-items: center;
+    gap: clamp(1rem, 4vw, 2.5rem);
+    max-width: 76rem;
+    margin: 0 auto;
+    padding: 1.2rem clamp(1rem, 4vw, 2rem);
+    border-top: 1px solid var(--thv-theme-border, #dce3ec);
+    border-bottom: 1px solid var(--thv-theme-border, #dce3ec);
+    color: var(--thv-theme-text, #172033);
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.social-proof-strip__people,
+.social-proof-strip__rating,
+.social-proof-strip__avatars {
+    display: flex;
+    align-items: center;
+}
+
+.social-proof-strip__people,
+.social-proof-strip__rating {
+    gap: 0.8rem;
+}
+
+.social-proof-strip__avatars img,
+.social-proof-strip__avatars > span {
+    width: 2.35rem;
+    height: 2.35rem;
+    margin-left: -0.55rem;
+    border: 2px solid var(--thv-theme-surface, #ffffff);
+    border-radius: 50%;
+}
+
+.social-proof-strip__avatars img:first-child {
+    margin-left: 0;
+}
+
+.social-proof-strip__avatars img {
+    object-fit: cover;
+}
+
+.social-proof-strip__avatars > span {
+    display: grid;
+    place-items: center;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #4f46e5);
+    font-size: 0.65rem;
+    font-weight: 850;
+}
+
+.social-proof-strip strong,
+.social-proof-strip p,
+.social-proof-strip small {
+    display: block;
+    margin: 0;
+}
+
+.social-proof-strip p,
+.social-proof-strip small,
+.social-proof-strip__mentions > span {
+    margin-top: 0.2rem;
+    color: var(--thv-theme-muted, #667085);
+    font-size: 0.72rem;
+}
+
+.social-proof-strip__rating > span {
+    color: var(--thv-theme-warning, #eab308);
+    letter-spacing: 0.08em;
+}
+
+.social-proof-strip__mentions {
+    display: grid;
+    gap: 0.18rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.07em;
+}
+
+.social-proof-strip > a {
+    padding: 0.7rem 0.9rem;
+    border-radius: 0.7rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #4f46e5);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-decoration: none;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .social-proof-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .social-proof-strip {
+        grid-template-columns: 1fr;
+    }
+}

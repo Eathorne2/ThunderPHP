@@ -1,0 +1,107 @@
+{
+  "type": "files.put_contents",
+  "label": "File Put Contents",
+  "category": "Files",
+  "kind": "flow",
+  "icon": "WRITE",
+  "color": "#475569",
+  "description": "Writes data once with file_put_contents() and exposes bytes written plus a strict success state.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "defaults": {
+    "title": "File Put Contents",
+    "append": false,
+    "exclusive_lock": false,
+    "use_include_path": false,
+    "suppress_warnings": false
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "append",
+      "label": "Append instead of replace",
+      "type": "checkbox"
+    },
+    {
+      "name": "exclusive_lock",
+      "label": "Use exclusive lock",
+      "type": "checkbox",
+      "help": "Adds LOCK_EX while writing. This can reduce concurrent-write corruption for local files."
+    },
+    {
+      "name": "use_include_path",
+      "label": "Search PHP include path",
+      "type": "checkbox"
+    },
+    {
+      "name": "suppress_warnings",
+      "label": "Suppress PHP warnings",
+      "type": "checkbox",
+      "help": "Adds PHP's @ operator to the file_put_contents() call. The Success output still reports failure."
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Run",
+        "type": "exec",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "path",
+        "label": "Path / URL",
+        "type": "string",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "data",
+        "label": "Data",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      },
+      {
+        "id": "context",
+        "label": "Stream Context",
+        "type": "mixed",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out",
+        "multiple": false
+      },
+      {
+        "id": "bytes",
+        "label": "Bytes Written",
+        "type": "mixed",
+        "direction": "out",
+        "multiple": true
+      },
+      {
+        "id": "success",
+        "label": "Success",
+        "type": "boolean",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Files\\FilePutContentsCompiler",
+    "file": "Compiler.php"
+  }
+}

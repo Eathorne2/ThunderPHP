@@ -1,0 +1,123 @@
+.account-sidebar-layout {
+    display: grid;
+    grid-template-columns: minmax(15rem, 0.55fr) minmax(0, 1.45fr);
+    gap: 1.5rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: clamp(1rem, 4vw, 3rem);
+    color: var(--thv-theme-text, #172033);
+    background: var(--thv-theme-surface-alt, #f6f8fb);
+}
+
+.account-sidebar-layout__sidebar {
+    position: sticky;
+    top: 1.5rem;
+    align-self: start;
+    padding: 1.1rem;
+    border: 1px solid var(--thv-theme-border, #dfe5ec);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface, #ffffff);
+}
+
+.account-sidebar-layout__identity {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--thv-theme-border, #dfe5ec);
+}
+
+.account-sidebar-layout__identity img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.8rem;
+    object-fit: cover;
+}
+
+.account-sidebar-layout__identity strong,
+.account-sidebar-layout__identity span {
+    display: block;
+}
+
+.account-sidebar-layout__identity span {
+    margin-top: 0.2rem;
+    color: var(--thv-theme-muted, #667085);
+    font-size: 0.76rem;
+}
+
+.account-sidebar-layout__sidebar nav {
+    display: grid;
+    gap: 0.3rem;
+    margin-block: 1rem;
+}
+
+.account-sidebar-layout__sidebar nav a {
+    padding: 0.7rem 0.8rem;
+    border-radius: 0.65rem;
+    color: var(--thv-theme-muted, #667085);
+    text-decoration: none;
+}
+
+.account-sidebar-layout__sidebar nav a.is-active {
+    color: var(--thv-theme-primary, #4f46e5);
+    background: color-mix(in srgb, var(--thv-theme-primary, #4f46e5) 9%, transparent);
+    font-weight: 750;
+}
+
+.account-sidebar-layout button {
+    padding: 0.7rem 0.85rem;
+    border: 1px solid var(--thv-theme-border, #dfe5ec);
+    border-radius: 0.65rem;
+    color: inherit;
+    background: transparent;
+    font-weight: 750;
+}
+
+.account-sidebar-layout__content {
+    display: grid;
+    gap: 1rem;
+}
+
+.account-sidebar-layout__content section {
+    padding: clamp(1.2rem, 4vw, 2rem);
+    border: 1px solid var(--thv-theme-border, #dfe5ec);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface, #ffffff);
+    scroll-margin-top: 1.5rem;
+}
+
+.account-sidebar-layout__content h1,
+.account-sidebar-layout__content h2 {
+    margin-top: 0;
+}
+
+.account-sidebar-layout__content p {
+    color: var(--thv-theme-muted, #667085);
+    line-height: 1.65;
+}
+
+.account-sidebar-layout__content label {
+    display: grid;
+    gap: 0.45rem;
+    margin-top: 1rem;
+    font-size: 0.86rem;
+    font-weight: 750;
+}
+
+.account-sidebar-layout__content input {
+    padding: 0.8rem 0.9rem;
+    border: 1px solid var(--thv-theme-border, #d3dae4);
+    border-radius: 0.7rem;
+    color: inherit;
+    font: inherit;
+}
+
+@media (max-width: 720px) {
+    .account-sidebar-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .account-sidebar-layout__sidebar {
+        position: static;
+    }
+}

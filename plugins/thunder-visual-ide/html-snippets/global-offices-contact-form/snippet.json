@@ -1,0 +1,18 @@
+{
+  "id": "global-offices-contact-form",
+  "name": "Global Offices Contact Form",
+  "description": "A corporate contact section with office selector, regional details and a concise enquiry form.",
+  "category": "Contact Us Forms",
+  "order": 3530,
+  "tags": [
+    "contact",
+    "offices",
+    "global",
+    "corporate",
+    "form"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

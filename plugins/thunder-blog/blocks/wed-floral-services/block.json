@@ -1,0 +1,187 @@
+{
+  "slug": "wed-floral-services",
+  "name": "Wedding Floral Services",
+  "category": "Wedding",
+  "description": "Elegant service list for florists and wedding decorators",
+  "keywords": [
+    "wedding",
+    "flowers",
+    "florist",
+    "services"
+  ],
+  "version": "1.0.0",
+  "html": "<div class=\"tb-block tb-wed-floral\"><div class=\"tb-wed-floral__image-wrap\">{{elements:image}}</div><div class=\"tb-wed-floral__content\">{{elements:eyebrow}}{{elements:title}}<div class=\"tb-wed-floral__list\">{{elements:services}}</div></div></div>",
+  "css": ".tb-wed-floral{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px);align-items:center;padding:clamp(30px,6vw,76px);background:var(--tb-color-background)}.tb-wed-floral__image{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.tb-wed-floral__eyebrow{color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.tb-wed-floral__title{margin:8px 0 24px;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:clamp(40px,5vw,62px);font-weight:400}.tb-wed-floral__service{padding:18px 0;border-top:1px solid var(--tb-color-border)}.tb-wed-floral__service-title{margin:0 0 6px;color:var(--tb-color-secondary);font-family:Georgia,serif;font-size:27px;font-weight:400}.tb-wed-floral__service-text{margin:0;color:var(--tb-color-muted);line-height:1.65}@media(max-width:760px){.tb-wed-floral{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "image",
+      "label": "Floral image",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1400&q=82",
+        "alt": "Wedding floral arrangement"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-wed-floral__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-wed-floral__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "min": 1,
+      "max": 1,
+      "appearance": {
+        "color": false,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Floral studio"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope"
+        }
+      ],
+      "template": "<span class=\"tb-wed-floral__eyebrow\">{{text}}</span>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Flowers that set the mood"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-wed-floral__title\">{{text}}</h2>",
+      "min": 0,
+      "max": 20,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      }
+    },
+    {
+      "key": "services",
+      "label": "Service",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "title": "Bridal bouquets",
+        "text": "Personal flowers shaped around your palette and season."
+      },
+      "schema": [
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-wed-floral__service-title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-wed-floral__service-text",
+          "rows": 2
+        }
+      ],
+      "template": "<article class=\"tb-wed-floral__service\"><h3 class=\"tb-wed-floral__service-title\">{{title}}</h3><p class=\"tb-wed-floral__service-text\">{{text}}</p></article>",
+      "min": 1,
+      "max": 8,
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "title": "Bridal bouquets",
+          "text": "Personal flowers shaped around your palette and season."
+        },
+        {
+          "title": "Ceremony florals",
+          "text": "Aisle, arch and altar arrangements with natural movement."
+        },
+        {
+          "title": "Reception styling",
+          "text": "Table flowers, statement installations and candlelight."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

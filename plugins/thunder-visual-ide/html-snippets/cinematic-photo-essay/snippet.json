@@ -1,0 +1,18 @@
+{
+  "id": "cinematic-photo-essay",
+  "name": "Cinematic Photo Essay",
+  "description": "An interactive full-width photo essay with chapter controls, cinematic captions and editorial pacing.",
+  "category": "Magazine & Editorial",
+  "order": 3208,
+  "tags": [
+    "magazine",
+    "photo essay",
+    "cinematic",
+    "gallery",
+    "interactive"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

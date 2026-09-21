@@ -1,0 +1,18 @@
+{
+  "id": "elegant-wedding-rsvp",
+  "name": "Elegant Wedding RSVP",
+  "description": "A polished RSVP form with attendance, guest count, meal preferences and song request fields.",
+  "category": "Wedding",
+  "order": 4550,
+  "tags": [
+    "wedding",
+    "rsvp",
+    "form",
+    "guests",
+    "meal"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

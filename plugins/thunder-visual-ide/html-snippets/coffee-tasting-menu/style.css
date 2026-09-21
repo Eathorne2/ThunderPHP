@@ -1,0 +1,126 @@
+.ctm-coffee {
+    padding: clamp(1.5rem, 5vw, 4rem);
+    border-radius: 1.5rem;
+    color: var(--thv-theme-text, #241f1a);
+    background: var(--thv-theme-background, #f0e9df);
+}
+
+.ctm-coffee > header {
+    display: grid;
+    grid-template-columns: 1fr minmax(16rem, .55fr);
+    gap: 2rem;
+    align-items: end;
+}
+
+.ctm-coffee > header span {
+    color: var(--thv-theme-primary, #6f432d);
+    font-size: .7rem;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.ctm-coffee h2 {
+    margin: .6rem 0 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2.7rem, 6vw, 5.3rem);
+    font-weight: 500;
+    letter-spacing: -.055em;
+}
+
+.ctm-coffee > header p {
+    margin: 0;
+    color: var(--thv-theme-muted, #6a6058);
+    line-height: 1.7;
+}
+
+.ctm-coffee__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: 2rem 0 1rem;
+}
+
+.ctm-coffee__filters button {
+    padding: .65rem .9rem;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-text, #241f1a) 20%, transparent);
+    border-radius: 999px;
+    color: inherit;
+    background: transparent;
+    font: inherit;
+    font-size: .75rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.ctm-coffee__filters button.is-active {
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: var(--thv-theme-primary, #6f432d);
+}
+
+.ctm-coffee__list {
+    border-top: 1px solid color-mix(in srgb, var(--thv-theme-text, #241f1a) 20%, transparent);
+}
+
+.ctm-coffee__list article {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1.2fr) minmax(14rem, .8fr) auto;
+    gap: 1.25rem;
+    align-items: center;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--thv-theme-text, #241f1a) 20%, transparent);
+}
+
+.ctm-coffee__list article[hidden] {
+    display: none;
+}
+
+.ctm-coffee__number {
+    color: var(--thv-theme-primary, #6f432d);
+    font-size: .72rem;
+    font-weight: 850;
+}
+
+.ctm-coffee__list span,
+.ctm-coffee dt {
+    color: var(--thv-theme-muted, #6a6058);
+    font-size: .66rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.ctm-coffee h3 {
+    margin: .25rem 0;
+    font-family: Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+
+.ctm-coffee__list p {
+    margin: 0;
+    color: var(--thv-theme-muted, #6a6058);
+}
+
+.ctm-coffee dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 0;
+}
+
+.ctm-coffee dd {
+    margin: .2rem 0 0;
+    font-weight: 800;
+}
+
+@media (max-width: 760px) {
+    .ctm-coffee > header,
+    .ctm-coffee__list article {
+        grid-template-columns: 1fr;
+    }
+
+    .ctm-coffee__number {
+        display: none;
+    }
+}

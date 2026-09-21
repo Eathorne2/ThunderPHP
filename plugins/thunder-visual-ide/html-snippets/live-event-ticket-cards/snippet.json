@@ -1,0 +1,18 @@
+{
+  "id": "live-event-ticket-cards",
+  "name": "Live Event Ticket Cards",
+  "description": "A responsive set of concert ticket tiers with highlighted availability and purchase actions.",
+  "category": "Music & Entertainment",
+  "order": 4250,
+  "tags": [
+    "event",
+    "tickets",
+    "concert",
+    "pricing",
+    "festival"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

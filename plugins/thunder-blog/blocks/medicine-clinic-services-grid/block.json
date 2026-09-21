@@ -1,0 +1,197 @@
+{
+  "slug": "medicine-clinic-services-grid",
+  "name": "Clinic Services Grid",
+  "category": "Medicine & Science",
+  "description": "Clean medical services card grid",
+  "keywords": [
+    "clinic",
+    "services",
+    "healthcare"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-med-clinic-services-grid\"><header class=\"tb-med-clinic-services-grid__head\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}</header><div class=\"tb-med-clinic-services-grid__grid\">{{elements:services}}</div></section>",
+  "css": ".tb-med-clinic-services-grid{padding:clamp(42px,7vw,90px);background:var(--tb-color-background)}.tb-med-clinic-services-grid__head{max-width:760px;margin:0 auto 34px;text-align:center}.tb-med-clinic-services-grid__eyebrow{color:var(--tb-color-primary);font-weight:900;text-transform:uppercase;letter-spacing:.13em;font-size:12px}.tb-med-clinic-services-grid__title{font-size:clamp(38px,5vw,62px);margin:10px 0 14px;color:var(--tb-color-secondary)}.tb-med-clinic-services-grid__text{color:var(--tb-color-muted);font-size:17px;line-height:1.7}.tb-med-clinic-services-grid__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.tb-med-clinic-services-grid__card{padding:28px;background:var(--tb-color-surface);border:1px solid var(--tb-color-border);border-radius:18px}.tb-med-clinic-services-grid__card__icon{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--tb-color-primary);color:var(--tb-color-surface);font-size:20px}.tb-med-clinic-services-grid__card__title{font-size:21px;margin:18px 0 8px;color:var(--tb-color-secondary)}.tb-med-clinic-services-grid__card__text{margin:0;color:var(--tb-color-muted);line-height:1.65}@media(max-width:900px){.tb-med-clinic-services-grid__grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.tb-med-clinic-services-grid__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Our services"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-med-clinic-services-grid__eyebrow\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Complete care, one connected team"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-med-clinic-services-grid__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "text",
+      "label": "Introduction",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Present a clear overview of the healthcare services available at your clinic or medical center."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-med-clinic-services-grid__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "services",
+      "label": "Services",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "title": "",
+        "text": "",
+        "icon": "✦"
+      },
+      "schema": [
+        {
+          "key": "icon",
+          "label": "Icon",
+          "type": "text",
+          "selector": ".tb-med-clinic-services-grid__card__icon"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-med-clinic-services-grid__card__title"
+        },
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ".tb-med-clinic-services-grid__card__text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-med-clinic-services-grid__card\"><span class=\"tb-med-clinic-services-grid__card__icon\">{{icon}}</span><h3 class=\"tb-med-clinic-services-grid__card__title\">{{title}}</h3><p class=\"tb-med-clinic-services-grid__card__text\">{{text}}</p></article>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "icon": "✚",
+          "title": "Primary care",
+          "text": "Routine visits and coordinated care."
+        },
+        {
+          "icon": "♡",
+          "title": "Cardiology",
+          "text": "Heart health assessment and follow-up."
+        },
+        {
+          "icon": "◉",
+          "title": "Diagnostics",
+          "text": "Modern testing and clear results."
+        },
+        {
+          "icon": "✦",
+          "title": "Specialists",
+          "text": "Connected expertise when you need it."
+        }
+      ],
+      "min": 1,
+      "max": 12
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

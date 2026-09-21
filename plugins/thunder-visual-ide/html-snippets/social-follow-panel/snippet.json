@@ -1,0 +1,17 @@
+{
+  "id": "social-follow-panel",
+  "name": "Social Follow Panel",
+  "description": "A branded social follow section with platform descriptions, audience counts, and clear actions.",
+  "category": "Socials",
+  "order": 3270,
+  "tags": [
+    "social",
+    "follow",
+    "links",
+    "community"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

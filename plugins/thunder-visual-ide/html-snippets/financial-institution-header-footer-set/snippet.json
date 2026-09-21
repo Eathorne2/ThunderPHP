@@ -1,0 +1,18 @@
+{
+  "id": "financial-institution-header-footer-set",
+  "name": "Financial Institution Header and Footer Set",
+  "description": "A trustworthy financial-services shell with utility navigation, secure-account action and detailed footer.",
+  "category": "Header and Footer Sets",
+  "order": 3430,
+  "tags": [
+    "header",
+    "footer",
+    "finance",
+    "banking",
+    "corporate"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

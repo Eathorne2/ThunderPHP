@@ -1,0 +1,38 @@
+{
+  "type": "authorization.all_permissions",
+  "label": "All Permissions",
+  "category": "Authorization",
+  "kind": "architecture",
+  "icon": "PERM",
+  "color": "#7c3aed",
+  "description": "Defines the complete permission catalog written into the generated plugin config.json.",
+  "allowed_graphs": [
+    "architecture"
+  ],
+  "singleton": true,
+  "defaults": {
+    "title": "Plugin Permissions",
+    "permissions_json": "[]"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "permissions_json",
+      "label": "Permission catalog",
+      "type": "permission_list",
+      "help": "These definitions are written to config.json and populate Has Permission dropdowns."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Authorization\\AllPermissionsCompiler",
+    "file": "Compiler.php"
+  }
+}

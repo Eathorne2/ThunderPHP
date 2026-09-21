@@ -1,0 +1,18 @@
+{
+  "id": "wedding-thank-you-gallery-cta",
+  "name": "Wedding Thank You Gallery CTA",
+  "description": "A post-wedding thank-you section with gallery access, message sharing and keepsake actions.",
+  "category": "Wedding",
+  "order": 4700,
+  "tags": [
+    "wedding",
+    "thank you",
+    "gallery",
+    "photos",
+    "post wedding"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "minimal-architecture-gallery",
+  "name": "Minimal Architecture Gallery",
+  "description": "A spacious architectural image grid with project captions.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 8032,
+  "tags": [
+    "gallery",
+    "architecture",
+    "minimal",
+    "projects"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

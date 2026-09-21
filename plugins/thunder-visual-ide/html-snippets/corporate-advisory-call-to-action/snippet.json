@@ -1,0 +1,17 @@
+{
+  "id": "corporate-advisory-call-to-action",
+  "name": "Corporate Advisory Call to Action",
+  "description": "A board-level advisory CTA with contrasting decision cards.",
+  "category": "Business & Law",
+  "order": 5290,
+  "tags": [
+    "business",
+    "consulting",
+    "cta",
+    "advisory"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,62 @@
+{
+  "type": "migration.drop_column",
+  "label": "Drop Column",
+  "category": "Migrations",
+  "kind": "migration",
+  "icon": "DRO",
+  "color": "#8b5cf6",
+  "description": "Drops a column from an existing table and restores it during rollback.",
+  "allowed_graphs": [
+    "migration"
+  ],
+  "defaults": {
+    "title": "Drop Column",
+    "table": "users",
+    "column": "obsolete",
+    "restore_definition": "obsolete VARCHAR(255) NULL"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "table",
+      "label": "Table",
+      "type": "text"
+    },
+    {
+      "name": "column",
+      "label": "Column",
+      "type": "text"
+    },
+    {
+      "name": "restore_definition",
+      "label": "Definition used on rollback",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Previous",
+        "type": "exec",
+        "direction": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "exec",
+        "label": "Next",
+        "type": "exec",
+        "direction": "out"
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Migrations\\DropColumnCompiler",
+    "file": "Compiler.php"
+  }
+}

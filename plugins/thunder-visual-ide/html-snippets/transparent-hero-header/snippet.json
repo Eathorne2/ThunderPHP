@@ -1,0 +1,20 @@
+{
+  "id": "transparent-hero-header",
+  "name": "Transparent Hero Header",
+  "description": "A dark transparent header designed to sit over hero imagery.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Headers",
+  "order": 2620,
+  "tags": [
+    "header",
+    "menu",
+    "hero",
+    "transparent"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

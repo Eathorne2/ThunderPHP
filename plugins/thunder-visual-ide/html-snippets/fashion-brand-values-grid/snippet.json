@@ -1,0 +1,17 @@
+{
+  "id": "fashion-brand-values-grid",
+  "name": "Fashion Brand Values Grid",
+  "description": "A professional values section for materials, production, repair and sourcing.",
+  "category": "Fashion & Beauty",
+  "order": 4070,
+  "tags": [
+    "beauty",
+    "services",
+    "salon",
+    "booking"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,250 @@
+{
+  "slug": "medicine-psychologist-profile",
+  "name": "Psychologist Profile",
+  "category": "Medicine & Science",
+  "description": "Warm therapist profile with credentials",
+  "keywords": [
+    "psychology",
+    "therapist",
+    "profile"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-med-psychologist-profile\"><div class=\"tb-med-psychologist-profile__image-wrap\">{{elements:image}}</div><div class=\"tb-med-psychologist-profile__copy\">{{elements:eyebrow}}{{elements:title}}{{elements:text}}<div class=\"tb-med-psychologist-profile__meta\">{{elements:credential}}</div>{{elements:cta}}</div></section>",
+  "css": ".tb-med-psychologist-profile{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,6vw,70px);align-items:center;padding:clamp(42px,7vw,90px);background:var(--tb-color-surface)}.tb-med-psychologist-profile__image{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:38% 38% 18px 18px}.tb-med-psychologist-profile__eyebrow{color:var(--tb-color-primary);font-weight:900;text-transform:uppercase;letter-spacing:.13em;font-size:12px}.tb-med-psychologist-profile__title{font-size:clamp(38px,5vw,62px);margin:10px 0 16px;color:var(--tb-color-secondary)}.tb-med-psychologist-profile__text{font-size:17px;line-height:1.8;color:var(--tb-color-muted)}.tb-med-psychologist-profile__meta{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.tb-med-psychologist-profile__credential{padding:8px 11px;border-radius:999px;background:var(--tb-color-background);border:1px solid var(--tb-color-border);font-size:13px;font-weight:800}.tb-med-psychologist-profile__cta{display:inline-block;padding:13px 18px;background:var(--tb-color-primary);color:var(--tb-color-surface);text-decoration:none;border-radius:999px;font-weight:900}@media(max-width:760px){.tb-med-psychologist-profile{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "image",
+      "label": "Portrait",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&q=82",
+        "alt": "Psychologist portrait"
+      },
+      "schema": [
+        {
+          "key": "url",
+          "label": "Image",
+          "type": "image",
+          "selector": ".tb-med-psychologist-profile__image"
+        },
+        {
+          "key": "alt",
+          "label": "Alt text",
+          "type": "text"
+        }
+      ],
+      "template": "<img class=\"tb-med-psychologist-profile__image\" src=\"{{url}}\" alt=\"{{alt}}\">",
+      "appearance": {
+        "color": true,
+        "background_color": false,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Meet your therapist"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-med-psychologist-profile__eyebrow\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "title",
+      "label": "Name / heading",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Dr. Elena Brooks"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-med-psychologist-profile__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "text",
+      "label": "Biography",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Create a personal introduction that communicates therapeutic approach, experience and the kind of support clients can expect."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-med-psychologist-profile__text\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    },
+    {
+      "key": "credential",
+      "label": "Credentials",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "text": "Clinical psychology"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-med-psychologist-profile__credential\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "default_items": [
+        {
+          "text": "Clinical psychology"
+        },
+        {
+          "text": "CBT"
+        },
+        {
+          "text": "12+ years"
+        }
+      ],
+      "min": 0,
+      "max": 20
+    },
+    {
+      "key": "cta",
+      "label": "Action",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Request a session",
+        "url": "#"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Label",
+          "type": "text",
+          "selector": ":scope"
+        },
+        {
+          "key": "url",
+          "label": "URL",
+          "type": "url"
+        }
+      ],
+      "template": "<a class=\"tb-med-psychologist-profile__cta\" href=\"{{url}}\">{{text}}</a>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 1
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

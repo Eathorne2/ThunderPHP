@@ -1,0 +1,19 @@
+{
+  "id": "heritage-law-firm-header-footer",
+  "name": "Heritage Law Firm Header and Footer",
+  "description": "Established counsel for businesses, institutions and private clients.",
+  "category": "Business & Law",
+  "order": 5400,
+  "tags": [
+    "header",
+    "footer",
+    "business",
+    "law",
+    "navigation",
+    "heritage law firm"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

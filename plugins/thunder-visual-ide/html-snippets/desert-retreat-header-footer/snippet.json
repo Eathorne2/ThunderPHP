@@ -1,0 +1,18 @@
+{
+  "id": "desert-retreat-header-footer",
+  "name": "Desert Retreat Header and Footer",
+  "description": "A minimalist desert retreat shell with wellness, architecture and private-stay navigation.",
+  "category": "Travel & Hotels",
+  "order": 5050,
+  "tags": [
+    "travel",
+    "hotel",
+    "header",
+    "footer",
+    "desert retreat"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

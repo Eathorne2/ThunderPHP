@@ -1,0 +1,193 @@
+{
+  "slug": "arch-commercial-projects",
+  "name": "Commercial Architecture Grid",
+  "category": "Architecture & Building",
+  "description": "Responsive architecture/building card section",
+  "keywords": [
+    "commercial",
+    "architecture",
+    "grid",
+    "cards"
+  ],
+  "version": "1.0.0",
+  "html": "<section class=\"tb-block tb-arch-commercial-projects\"><div class=\"tb-arch-commercial-projects__head\">{{elements:kicker}}{{elements:title}}{{elements:intro}}</div><div class=\"tb-arch-commercial-projects__grid\">{{elements:cards}}</div></section>",
+  "css": ".tb-arch-commercial-projects{padding:clamp(40px,7vw,86px);background:var(--tb-color-background)}.tb-arch-commercial-projects__head{max-width:760px;margin-bottom:36px}.tb-arch-commercial-projects__kicker{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--tb-color-primary)}.tb-arch-commercial-projects__title{font-size:clamp(38px,5vw,64px);line-height:1;margin:12px 0;color:var(--tb-color-secondary)}.tb-arch-commercial-projects__intro{font-size:17px;line-height:1.7;color:var(--tb-color-muted)}.tb-arch-commercial-projects__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.tb-arch-commercial-projects__card{padding:28px;border-top:3px solid var(--tb-color-primary);background:var(--tb-color-surface)}.tb-arch-commercial-projects__index{display:block;color:var(--tb-color-primary);font-size:12px;font-weight:900;letter-spacing:.12em;margin-bottom:32px}.tb-arch-commercial-projects__card-title{font-size:23px;margin:0 0 10px;color:var(--tb-color-secondary)}.tb-arch-commercial-projects__card-text{margin:0;color:var(--tb-color-muted);line-height:1.65}@media(max-width:860px){.tb-arch-commercial-projects__grid{grid-template-columns:1fr 1fr}}@media(max-width:580px){.tb-arch-commercial-projects__grid{grid-template-columns:1fr}}",
+  "js": "",
+  "settings": {
+    "defaults": {},
+    "schema": []
+  },
+  "elements": [
+    {
+      "key": "kicker",
+      "label": "Kicker",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Commercial portfolio"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "text",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<span class=\"tb-arch-commercial-projects__kicker\">{{text}}</span>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "title",
+      "label": "Heading",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Buildings for work, retail and culture"
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<h2 class=\"tb-arch-commercial-projects__title\">{{text}}</h2>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "intro",
+      "label": "Introduction",
+      "repeatable": false,
+      "controls": {
+        "duplicate": false,
+        "delete": false,
+        "move": false,
+        "clone": false
+      },
+      "defaults": {
+        "text": "Present a cross-section of commercial architecture and public-facing spaces."
+      },
+      "schema": [
+        {
+          "key": "text",
+          "label": "Text",
+          "type": "textarea",
+          "selector": ":scope",
+          "rows": 3
+        }
+      ],
+      "template": "<p class=\"tb-arch-commercial-projects__intro\">{{text}}</p>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 8
+    },
+    {
+      "key": "cards",
+      "label": "Cards",
+      "repeatable": true,
+      "controls": {
+        "duplicate": true,
+        "delete": true,
+        "move": true,
+        "clone": true
+      },
+      "defaults": {
+        "number": "01",
+        "title": "Workplace",
+        "text": "Flexible offices with strong circulation and daylight."
+      },
+      "schema": [
+        {
+          "key": "number",
+          "label": "Number / label",
+          "type": "text",
+          "selector": ".tb-arch-commercial-projects__index"
+        },
+        {
+          "key": "title",
+          "label": "Title",
+          "type": "text",
+          "selector": ".tb-arch-commercial-projects__card-title"
+        },
+        {
+          "key": "text",
+          "label": "Description",
+          "type": "textarea",
+          "selector": ".tb-arch-commercial-projects__card-text",
+          "rows": 3
+        }
+      ],
+      "template": "<article class=\"tb-arch-commercial-projects__card\"><span class=\"tb-arch-commercial-projects__index\">{{number}}</span><h3 class=\"tb-arch-commercial-projects__card-title\">{{title}}</h3><p class=\"tb-arch-commercial-projects__card-text\">{{text}}</p></article>",
+      "appearance": {
+        "color": true,
+        "background_color": true,
+        "defaults": {
+          "color": "",
+          "background_color": ""
+        }
+      },
+      "min": 1,
+      "max": 12,
+      "default_items": [
+        {
+          "number": "01",
+          "title": "Workplace",
+          "text": "Flexible offices with strong circulation and daylight."
+        },
+        {
+          "number": "02",
+          "title": "Retail",
+          "text": "Customer-focused spaces with clear identity and flow."
+        },
+        {
+          "number": "03",
+          "title": "Civic",
+          "text": "Public architecture designed for access and durability."
+        }
+      ]
+    }
+  ],
+  "contexts": [
+    "post",
+    "page"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "island-villas-header-footer",
+  "name": "Island Villas Header and Footer",
+  "description": "A vibrant island-villa shell with private stays, boat arrivals and tropical experience links.",
+  "category": "Travel & Hotels",
+  "order": 5060,
+  "tags": [
+    "travel",
+    "hotel",
+    "header",
+    "footer",
+    "private island villas"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

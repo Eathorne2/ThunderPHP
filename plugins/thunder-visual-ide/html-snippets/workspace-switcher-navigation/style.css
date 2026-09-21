@@ -1,0 +1,204 @@
+.wsn-nav {
+    box-sizing: border-box;
+    color: var(--thv-theme-text);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.wsn-nav *, .wsn-nav *::before, .wsn-nav *::after {
+    box-sizing: border-box;
+}
+
+.wsn-nav button, .wsn-nav input, .wsn-nav select, .wsn-nav textarea {
+    font: inherit;
+}
+
+.wsn-nav a {
+    color: inherit;
+}
+
+.wsn-nav {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    gap: 0.55rem;
+    max-width: 68rem;
+    padding: 0.65rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface);
+}
+
+.wsn-nav > button[data-step] {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.6rem;
+    flex: 1;
+    align-items: center;
+    text-align: left;
+    padding: 0.75rem;
+    border: 0;
+    border-radius: 0.75rem;
+    background: transparent;
+    color: var(--thv-theme-text);
+    cursor: pointer;
+}
+
+.wsn-nav > button[data-step] > span {
+    display: grid;
+    place-items: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 50%;
+    font-weight: 850;
+}
+
+.wsn-nav > button[data-step] strong, .wsn-nav > button[data-step] small {
+    display: block;
+}
+
+.wsn-nav > button[data-step] small {
+    color: var(--thv-theme-muted);
+    font-size: 0.68rem;
+}
+
+.wsn-nav > button[data-step].is-active {
+    background: var(--thv-theme-surface-alt);
+}
+
+.wsn-nav > button[data-step].is-active > span {
+    border-color: var(--thv-theme-primary);
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+}
+
+.wsn-nav > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.65rem 0.8rem;
+    border-radius: 999px;
+    color: var(--thv-theme-muted);
+    font-size: 0.8rem;
+    font-weight: 750;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.wsn-nav > a span {
+    display: grid;
+    place-items: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background: var(--thv-theme-surface-alt);
+}
+
+.wsn-nav > a.is-active {
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+}
+
+.wsn-nav__workspace {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.65rem;
+    align-items: center;
+    min-width: 15rem;
+    text-align: left;
+    padding: 0.65rem;
+    border: 0;
+    border-radius: 0.75rem;
+    background: var(--thv-theme-surface-alt);
+    color: var(--thv-theme-text);
+    cursor: pointer;
+}
+
+.wsn-nav__workspace > span {
+    display: grid;
+    place-items: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 0.7rem;
+    background: var(--thv-theme-primary);
+    color: var(--thv-theme-on-primary);
+    font-weight: 850;
+}
+
+.wsn-nav__workspace strong, .wsn-nav__workspace small {
+    display: block;
+}
+
+.wsn-nav__workspace small {
+    color: var(--thv-theme-muted);
+}
+
+.wsn-nav__workspace i {
+    font-style: normal;
+}
+
+.wsn-nav__workspace-menu {
+    position: absolute;
+    left: 0.65rem;
+    top: calc(100% + 0.4rem);
+    z-index: 10;
+    display: none;
+    width: 15rem;
+    padding: 0.5rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 0.8rem;
+    background: var(--thv-theme-surface);
+    box-shadow: 0 1rem 2rem color-mix(in srgb, var(--thv-theme-text) 12%, transparent);
+}
+
+.wsn-nav__workspace-menu.is-open {
+    display: grid;
+}
+
+.wsn-nav__workspace-menu button {
+    text-align: left;
+    padding: 0.65rem;
+    border: 0;
+    border-radius: 0.55rem;
+    background: transparent;
+    color: var(--thv-theme-text);
+    cursor: pointer;
+}
+
+.wsn-nav__workspace-menu button:hover {
+    background: var(--thv-theme-surface-alt);
+}
+
+.wsn-nav nav {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-left: auto;
+}
+
+.wsn-nav nav a {
+    padding: 0.65rem 0.8rem;
+    border-radius: 0.6rem;
+    color: var(--thv-theme-muted);
+    text-decoration: none;
+}
+
+.wsn-nav nav a:hover {
+    background: var(--thv-theme-surface-alt);
+    color: var(--thv-theme-primary);
+}
+
+@media (max-width: 760px) {
+    .wsn-nav {
+        overflow-x: auto;
+    }
+
+    .wsn-nav > button[data-step] div {
+        display: none;
+    }
+
+    .wsn-nav nav {
+        display: none;
+    }
+
+}

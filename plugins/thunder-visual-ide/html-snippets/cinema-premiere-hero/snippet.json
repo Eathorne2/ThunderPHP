@@ -1,0 +1,18 @@
+{
+  "id": "cinema-premiere-hero",
+  "name": "Cinema Premiere Hero",
+  "description": "A cinematic film-premiere hero with release details, trailer action and editorial credits.",
+  "category": "Music & Entertainment",
+  "order": 4310,
+  "tags": [
+    "cinema",
+    "film",
+    "premiere",
+    "hero",
+    "trailer"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

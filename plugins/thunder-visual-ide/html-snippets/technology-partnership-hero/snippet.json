@@ -1,0 +1,18 @@
+{
+  "id": "technology-partnership-hero",
+  "name": "Technology Partnership Hero",
+  "description": "A modern enterprise technology hero with a dark dashboard mockup and compact client proof.",
+  "category": "Hero Sections",
+  "order": 3410,
+  "tags": [
+    "corporate",
+    "technology",
+    "enterprise",
+    "hero",
+    "software"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

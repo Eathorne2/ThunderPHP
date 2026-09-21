@@ -1,0 +1,167 @@
+.profile-dashboard {
+    overflow: hidden;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: 1.35rem;
+    background: var(--thv-theme-surface, #ffffff);
+    color: var(--thv-theme-text, #0f172a);
+    box-shadow: 0 22px 60px rgba(15, 23, 42, .1);
+}
+
+.profile-dashboard__cover {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: radial-gradient(circle at 85% 10%, rgba(255, 255, 255, .24), transparent 28%), linear-gradient(135deg,
+        var(--thv-theme-text, #0f172a), var(--thv-theme-primary, #4338ca));
+}
+
+.profile-dashboard__identity {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-dashboard__avatar {
+    display: grid;
+    place-items: center;
+    width: 5rem;
+    height: 5rem;
+    border: 4px solid rgba(255, 255, 255, .5);
+    border-radius: 1.35rem;
+    color: var(--thv-theme-primary, #312e81);
+    background: color-mix(in srgb, var(--thv-theme-primary, #4f46e5) 16%, var(--thv-theme-surface, #ffffff));
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.profile-dashboard__identity span {
+    color: color-mix(in srgb, var(--thv-theme-primary, #4f46e5) 25%, var(--thv-theme-surface, #ffffff));
+    font-size: .72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.profile-dashboard__identity h2 {
+    margin: .2rem 0;
+}
+
+.profile-dashboard__identity p {
+    margin: 0;
+    color: var(--thv-theme-border, #cbd5e1);
+}
+
+.profile-dashboard__cover > button {
+    padding: .7rem 1rem;
+    border: 1px solid rgba(255, 255, 255, .45);
+    border-radius: .75rem;
+    color: var(--thv-theme-on-primary, #ffffff);
+    background: rgba(255, 255, 255, .12);
+    font-weight: 700;
+}
+
+.profile-dashboard__stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--thv-theme-border, #e2e8f0);
+}
+
+.profile-dashboard__stats div {
+    padding: 1rem;
+    text-align: center;
+}
+
+.profile-dashboard__stats div + div {
+    border-left: 1px solid var(--thv-theme-border, #e2e8f0);
+}
+
+.profile-dashboard__stats strong, .profile-dashboard__stats span {
+    display: block;
+}
+
+.profile-dashboard__stats strong {
+    font-size: 1.25rem;
+}
+
+.profile-dashboard__stats span {
+    margin-top: .2rem;
+    color: var(--thv-theme-muted, #64748b);
+    font-size: .76rem;
+}
+
+.profile-dashboard__tabs {
+    display: flex;
+    gap: .25rem;
+    padding: .7rem 1rem 0;
+    border-bottom: 1px solid var(--thv-theme-border, #e2e8f0);
+}
+
+.profile-dashboard__tabs button {
+    padding: .7rem .9rem;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    color: var(--thv-theme-muted, #64748b);
+    background: transparent;
+    font-weight: 700;
+}
+
+.profile-dashboard__tabs button.is-active {
+    border-color: var(--thv-theme-primary, #4f46e5);
+    color: var(--thv-theme-primary, #4338ca);
+}
+
+.profile-dashboard__panel {
+    padding: 1.4rem;
+}
+
+.profile-dashboard__panel h3 {
+    margin-top: 0;
+}
+
+.profile-dashboard__panel p, .profile-dashboard__panel li {
+    color: var(--thv-theme-muted, #475569);
+    line-height: 1.65;
+}
+
+.profile-dashboard dl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 0;
+}
+
+.profile-dashboard dt {
+    color: var(--thv-theme-muted, #94a3b8);
+    font-size: .72rem;
+    text-transform: uppercase;
+}
+
+.profile-dashboard dd {
+    margin: .25rem 0 0;
+    font-weight: 700;
+}
+
+.project-chip {
+    display: inline-flex;
+    margin: .25rem;
+    padding: .55rem .75rem;
+    border-radius: .65rem;
+    color: var(--thv-theme-primary, #4338ca);
+    background: color-mix(in srgb, var(--thv-theme-primary, #4f46e5) 9%, var(--thv-theme-surface, #ffffff));
+    font-weight: 700;
+}
+
+@media (max-width: 680px) {
+    .profile-dashboard__cover {
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .profile-dashboard__stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .profile-dashboard dl {
+        grid-template-columns: 1fr;
+    }
+}

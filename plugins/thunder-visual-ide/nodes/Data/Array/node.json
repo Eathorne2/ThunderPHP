@@ -1,0 +1,62 @@
+{
+  "type": "data.array",
+  "label": "Array",
+  "category": "Data",
+  "kind": "expression",
+  "icon": "[]",
+  "color": "#0891b2",
+  "description": "Builds an indexed or associative PHP array from connected values.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "dynamic_ports": "array",
+  "defaults": {
+    "title": "Array",
+    "mode": "associative",
+    "item_count": 2,
+    "keys": "email,password"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "mode",
+      "label": "Array mode",
+      "type": "select",
+      "options": [
+        "associative",
+        "indexed"
+      ]
+    },
+    {
+      "name": "item_count",
+      "label": "Item count",
+      "type": "number"
+    },
+    {
+      "name": "keys",
+      "label": "Keys",
+      "type": "text",
+      "help": "Comma-separated keys for associative mode."
+    }
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "Array",
+        "type": "array",
+        "direction": "out",
+        "multiple": false
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Data\\ArrayCompiler",
+    "file": "Compiler.php"
+  }
+}

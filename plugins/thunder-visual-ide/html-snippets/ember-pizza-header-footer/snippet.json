@@ -1,0 +1,18 @@
+{
+  "id": "ember-pizza-header-footer",
+  "name": "Ember Pizza Header and Footer",
+  "description": "A bold pizzeria shell with a lively menu bar, order action and a matching red-and-cream footer.",
+  "category": "Food & Restaurant",
+  "order": 3850,
+  "tags": [
+    "header footer",
+    "pizza",
+    "pizzeria",
+    "delivery",
+    "menu"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

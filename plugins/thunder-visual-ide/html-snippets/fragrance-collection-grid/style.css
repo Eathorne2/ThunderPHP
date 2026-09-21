@@ -1,0 +1,118 @@
+.fcg-scents {
+    color:var(--thv-theme-text, #211b1e);
+    background:var(--thv-theme-background, #fbf7f4);
+}
+.fcg-scents a {
+    color:inherit;
+}
+.fcg-scents img {
+    display:block;
+    max-width:100%;
+}
+.fcg-scents__eyebrow {
+    color:var(--thv-theme-primary, #92536a);
+    font-size:.68rem;
+    font-weight:900;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+}
+.fcg-scents__muted {
+    color:var(--thv-theme-muted, #71656a);
+}
+.fcg-scents {
+    padding:clamp(1.25rem, 4vw, 3.5rem)
+}
+.fcg-scents>header {
+    display:flex;
+    justify-content:space-between;
+    gap:2rem;
+    align-items:end;
+    margin-bottom:1.5rem
+}
+.fcg-scents h2 {
+    margin:.5rem 0 0;
+    font-family:Georgia, serif;
+    font-size:clamp(3rem, 6vw, 5.8rem);
+    font-weight:500;
+    letter-spacing:-.07em;
+    line-height:.9
+}
+.fcg-scents>header>a {
+    font-size:.72rem;
+    font-weight:900;
+    text-transform:uppercase
+}
+.fcg-scents__grid {
+    display:grid;
+    grid-template-columns:1.2fr .8fr .8fr;
+    gap:.8rem
+}
+.fcg-scents__card {
+    position:relative;
+    min-height:22rem;
+    overflow:hidden;
+    color:#fff;
+    text-decoration:none
+}
+.fcg-scents__card--wide {
+    grid-row:span 2;
+    min-height:45rem
+}
+.fcg-scents__card:after {
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, .75))
+}
+.fcg-scents__card img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .45s ease
+}
+.fcg-scents__card:hover img {
+    transform:scale(1.03)
+}
+.fcg-scents__card span, .fcg-scents__card strong, .fcg-scents__card small {
+    position:absolute;
+    z-index:1;
+    right:1rem;
+    left:1rem
+}
+.fcg-scents__card span {
+    top:1rem;
+    font-size:.65rem;
+    font-weight:900
+}
+.fcg-scents__card strong {
+    bottom:2.4rem;
+    font-family:Georgia, serif;
+    font-size:2rem;
+    font-weight:500
+}
+.fcg-scents__card small {
+    bottom:1rem;
+    opacity:.75
+}
+@media(max-width:760px) {
+    .fcg-scents__grid {
+        grid-template-columns:1fr 1fr
+    }
+    .fcg-scents__card--wide {
+        grid-column:span 2;
+        grid-row:auto;
+        min-height:30rem
+    }
+}
+@media(max-width:520px) {
+    .fcg-scents>header {
+        align-items:start;
+        flex-direction:column
+    }
+    .fcg-scents__grid {
+        grid-template-columns:1fr
+    }
+    .fcg-scents__card--wide {
+        grid-column:auto
+    }
+}

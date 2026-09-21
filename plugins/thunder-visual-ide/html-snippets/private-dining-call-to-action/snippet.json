@@ -1,0 +1,18 @@
+{
+  "id": "private-dining-call-to-action",
+  "name": "Private Dining Call to Action",
+  "description": "A dramatic restaurant call-to-action for private dining, celebrations and chef-led events.",
+  "category": "Food & Restaurant",
+  "order": 3770,
+  "tags": [
+    "private dining",
+    "call to action",
+    "events",
+    "restaurant",
+    "booking"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "multi-column-footer",
+  "name": "Multi-column Footer",
+  "description": "A complete company footer with newsletter, grouped links, social buttons and legal row.",
+  "category": "Footers",
+  "order": 1160,
+  "tags": [
+    "footer",
+    "links",
+    "newsletter",
+    "company"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

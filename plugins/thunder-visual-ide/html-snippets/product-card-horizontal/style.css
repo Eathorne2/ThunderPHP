@@ -1,0 +1,100 @@
+.product-horizontal {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr) auto;
+    gap: 1.1rem;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: 1rem;
+    background: var(--thv-theme-surface, #fff);
+    color: var(--thv-theme-text, #0f172a)
+}
+
+.product-horizontal__image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: .75rem;
+    background: var(--thv-theme-surface-alt, #f8fafc)
+}
+
+.product-horizontal__stock {
+    color: var(--thv-theme-success, #16a34a);
+    font-size: .72rem;
+    font-weight: 850;
+    text-transform: uppercase
+}
+
+.product-horizontal h3 {
+    margin: .25rem 0;
+    font-size: 1.15rem
+}
+
+.product-horizontal p {
+    margin: .4rem 0;
+    color: var(--thv-theme-muted, #64748b);
+    line-height: 1.5
+}
+
+.product-horizontal__meta {
+    display: flex;
+    gap: .8rem;
+    align-items: center
+}
+
+.product-horizontal__meta strong {
+    font-size: 1.25rem
+}
+
+.product-horizontal__meta span {
+    color: var(--thv-theme-primary, #2563eb);
+    font-size: .78rem;
+    font-weight: 750
+}
+
+.product-horizontal__actions {
+    display: grid;
+    gap: .65rem;
+    min-width: 8.5rem
+}
+
+.product-horizontal__qty {
+    display: grid;
+    grid-template-columns: 2rem 1fr 2rem;
+    overflow: hidden;
+    border: 1px solid var(--thv-theme-border, #dbe4ef);
+    border-radius: .55rem
+}
+
+.product-horizontal__qty button, .product-horizontal__qty output {
+    display: grid;
+    place-items: center;
+    min-height: 2.2rem;
+    border: 0;
+    background: var(--thv-theme-surface-alt, #f8fafc);
+    color: var(--thv-theme-text, #0f172a)
+}
+
+.product-horizontal__qty output {
+    background: var(--thv-theme-surface, #fff);
+    font-weight: 800
+}
+
+.product-horizontal__cart {
+    padding: .7rem;
+    border: 0;
+    border-radius: .6rem;
+    background: var(--thv-theme-primary, #2563eb);
+    color: var(--thv-theme-on-primary, #fff);
+    font-weight: 800
+}
+
+@media(max-width:700px) {
+    .product-horizontal {
+        grid-template-columns: 6rem minmax(0, 1fr)
+    }
+    .product-horizontal__actions {
+        grid-column: 1/-1;
+        grid-template-columns: 8rem 1fr
+    }
+}

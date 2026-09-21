@@ -1,0 +1,20 @@
+{
+  "id": "editorial-mosaic-gallery",
+  "name": "Editorial Mosaic Gallery",
+  "description": "An asymmetric editorial photo mosaic with category labels and an accessible lightbox.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Image Galleries",
+  "order": 9001,
+  "tags": [
+    "gallery",
+    "editorial",
+    "mosaic",
+    "lightbox"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

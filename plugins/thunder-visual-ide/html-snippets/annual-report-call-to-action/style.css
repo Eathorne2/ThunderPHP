@@ -1,0 +1,173 @@
+.arcta-section {
+    display: grid;
+    grid-template-columns: minmax(12rem, .58fr) minmax(0, 1.12fr) minmax(12rem, .55fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: stretch;
+    padding: clamp(1.5rem, 5vw, 4rem);
+    border-radius: 1.4rem;
+    color: #ffffff;
+    background: #101d2d;
+}
+
+.arcta-section__cover {
+    display: flex;
+    min-height: 25rem;
+    flex-direction: column;
+    padding: 1.5rem;
+    color: #142033;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, .9), rgba(224, 233, 242, .88)),
+        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80') center / cover;
+    box-shadow: 0 24px 65px rgba(0, 0, 0, .3);
+    transform: rotate(-2deg);
+}
+
+.arcta-section__cover span {
+    font-size: .72rem;
+    font-weight: 850;
+    letter-spacing: .13em;
+}
+
+.arcta-section__cover strong {
+    margin-top: auto;
+    font-family: Georgia, serif;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    font-weight: 500;
+    line-height: .92;
+}
+
+.arcta-section__cover small {
+    margin-top: .9rem;
+    color: #59677a;
+}
+
+.arcta-section__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.arcta-section__content > span,
+.arcta-section aside > span {
+    color: #8fa6c2;
+    font-size: .68rem;
+    font-weight: 850;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.arcta-section h2 {
+    margin: .75rem 0 1rem;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 500;
+    line-height: 1.02;
+}
+
+.arcta-section__content > p {
+    margin: 0;
+    color: #aebbc9;
+    line-height: 1.7;
+}
+
+.arcta-section dl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1.2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, .13);
+    border-bottom: 1px solid rgba(255, 255, 255, .13);
+}
+
+.arcta-section dl div {
+    display: grid;
+    gap: .2rem;
+}
+
+.arcta-section dt {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 850;
+}
+
+.arcta-section dd {
+    margin: 0;
+    color: #8291a5;
+    font-size: .65rem;
+}
+
+.arcta-section__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+}
+
+.arcta-section__actions a {
+    padding: .8rem .95rem;
+    border: 1px solid rgba(255, 255, 255, .2);
+    color: #ffffff;
+    font-size: .72rem;
+    font-weight: 850;
+    text-decoration: none;
+}
+
+.arcta-section__actions a:first-child {
+    border-color: var(--thv-theme-primary, #4b7bb7);
+    background: var(--thv-theme-primary, #4b7bb7);
+}
+
+.arcta-section aside {
+    display: grid;
+    align-content: center;
+    gap: .4rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid rgba(255, 255, 255, .13);
+}
+
+.arcta-section aside > span {
+    margin-bottom: .5rem;
+}
+
+.arcta-section aside a {
+    display: flex;
+    justify-content: space-between;
+    gap: .8rem;
+    padding: .85rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .11);
+    color: #dbe5ef;
+    font-size: .7rem;
+    text-decoration: none;
+}
+
+.arcta-section aside b {
+    color: #8091a6;
+    font-size: .6rem;
+}
+
+@media (max-width: 900px) {
+    .arcta-section {
+        grid-template-columns: .65fr 1.35fr;
+    }
+
+    .arcta-section aside {
+        grid-column: 1 / -1;
+        padding: 1.5rem 0 0;
+        border-top: 1px solid rgba(255, 255, 255, .13);
+        border-left: 0;
+    }
+}
+
+@media (max-width: 620px) {
+    .arcta-section {
+        grid-template-columns: 1fr;
+    }
+
+    .arcta-section__cover {
+        min-height: 20rem;
+    }
+
+    .arcta-section dl {
+        grid-template-columns: 1fr;
+    }
+}

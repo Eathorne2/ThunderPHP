@@ -1,0 +1,18 @@
+{
+  "id": "seasonal-menu-tabs",
+  "name": "Seasonal Menu Tabs",
+  "description": "A polished restaurant menu with category tabs, editorial dish descriptions and clearly aligned prices.",
+  "category": "Food & Restaurant",
+  "order": 3620,
+  "tags": [
+    "menu",
+    "restaurant",
+    "tabs",
+    "seasonal",
+    "dishes"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

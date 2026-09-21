@@ -1,0 +1,59 @@
+.blpa-section {
+    padding: clamp(1.5rem, 5vw, 4.5rem);
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.4rem;
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-surface);
+    box-shadow: 0 1.5rem 4rem color-mix(in srgb, var(--thv-theme-text) 10%, transparent);
+}
+.blpa-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    color: var(--thv-theme-primary);
+    font-size: .72rem;
+    font-weight: 850;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+.blpa-eyebrow::before {
+    width: 2rem;
+    height: 2px;
+    content: "";
+    background: var(--thv-theme-primary);
+}
+.blpa-section h2 {
+    margin: .65rem 0 0;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 5vw, 4.3rem);
+    font-weight: 500;
+    line-height: 1.02;
+}
+.blpa-section p {
+    color: var(--thv-theme-muted);
+    line-height: 1.75;
+}
+.blpa-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .85rem 1.1rem;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: .55rem;
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+    .blpa-section > header { display:grid; grid-template-columns:1.1fr .9fr; gap:2rem; align-items:end; margin-bottom:2rem; }
+    .blpa-section > header > p { max-width:52ch; margin:0; }
+    .blpa-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+    .blpa-grid article { display:flex; min-height:18rem; flex-direction:column; padding:1.5rem; border:1px solid var(--thv-theme-border); border-radius:.85rem; background:var(--thv-theme-surface-alt); transition:transform .2s ease,border-color .2s ease; }
+    .blpa-grid article:hover { transform:translateY(-4px); border-color:var(--thv-theme-primary); }
+    .blpa-grid article > span { color:var(--thv-theme-primary); font-size:.72rem; font-weight:850; }
+    .blpa-grid h3 { margin:2rem 0 .7rem; font-family:Georgia,serif; font-size:1.55rem; font-weight:500; }
+    .blpa-grid p { margin:0; font-size:.9rem; }
+    .blpa-grid a { margin-top:auto; padding-top:1.3rem; color:var(--thv-theme-text); font-weight:850; text-decoration:none; }
+    @media(max-width:850px){ .blpa-grid{grid-template-columns:repeat(2,1fr);} }
+    @media(max-width:620px){ .blpa-section>header{grid-template-columns:1fr;} .blpa-grid{grid-template-columns:1fr;} }

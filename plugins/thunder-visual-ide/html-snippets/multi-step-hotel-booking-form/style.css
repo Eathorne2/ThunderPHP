@@ -1,0 +1,203 @@
+.mshbf {
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-background);
+}
+
+.mshbf *, .mshbf *::before, .mshbf *::after {
+    box-sizing: border-box;
+}
+
+.mshbf a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.mshbf button, .mshbf input, .mshbf select, .mshbf textarea {
+    font: inherit;
+}
+
+.mshbf {
+    display: grid;
+    grid-template-columns: minmax(18rem, .7fr) minmax(0, 1.3fr);
+    overflow: hidden;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: 1.6rem;
+    background: var(--thv-theme-surface);
+}
+
+.mshbf aside {
+    padding: clamp(2rem, 5vw, 4rem);
+    color: var(--thv-theme-on-primary);
+    background: linear-gradient(color-mix(in srgb, var(--thv-theme-primary) 82%, transparent), color-mix(in srgb, var(--thv-theme-primary) 82%, transparent)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=85') center / cover;
+}
+
+.mshbf aside > p {
+    margin: 0;
+    font-size: .68rem;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.mshbf aside h2 {
+    margin: .8rem 0 2rem;
+    font-family: Georgia, serif;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: 1;
+}
+
+.mshbf aside ol {
+    display: grid;
+    gap: .85rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mshbf aside li {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    color: color-mix(in srgb, var(--thv-theme-on-primary) 68%, transparent);
+}
+
+.mshbf aside li span {
+    display: grid;
+    width: 2rem;
+    height: 2rem;
+    place-items: center;
+    border: 1px solid color-mix(in srgb, var(--thv-theme-on-primary) 35%, transparent);
+    border-radius: 50%;
+}
+
+.mshbf aside li.is-active {
+    color: var(--thv-theme-on-primary);
+    font-weight: 900;
+}
+
+.mshbf aside li.is-active span {
+    color: var(--thv-theme-primary);
+    background: var(--thv-theme-on-primary);
+}
+
+.mshbf aside small {
+    display: block;
+    margin-top: 2rem;
+    color: color-mix(in srgb, var(--thv-theme-on-primary) 74%, transparent);
+    line-height: 1.6;
+}
+
+.mshbf form {
+    display: flex;
+    min-height: 36rem;
+    flex-direction: column;
+    padding: clamp(2rem, 5vw, 4rem);
+}
+
+.mshbf__step h3 {
+    margin: 0 0 1.5rem;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400;
+}
+
+.mshbf__fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.mshbf label {
+    display: grid;
+    gap: .4rem;
+}
+
+.mshbf label > span, .mshbf__message > span {
+    color: var(--thv-theme-muted);
+    font-size: .68rem;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.mshbf input, .mshbf select, .mshbf textarea {
+    width: 100%;
+    padding: .85rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: .8rem;
+    color: var(--thv-theme-text);
+    background: var(--thv-theme-background);
+}
+
+.mshbf__rooms {
+    display: grid;
+    gap: .75rem;
+}
+
+.mshbf__rooms label {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--thv-theme-border);
+    border-radius: .9rem;
+    background: var(--thv-theme-background);
+    cursor: pointer;
+}
+
+.mshbf__rooms label:has(input:checked) {
+    border-color: var(--thv-theme-primary);
+    background: color-mix(in srgb, var(--thv-theme-primary) 8%, var(--thv-theme-background));
+}
+
+.mshbf__rooms span {
+    display: grid;
+    gap: .25rem;
+}
+
+.mshbf__rooms small {
+    color: var(--thv-theme-muted);
+}
+
+.mshbf__message {
+    margin-top: 1rem;
+}
+
+.mshbf form footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: .7rem;
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+.mshbf form footer button {
+    padding: .82rem 1.2rem;
+    border: 1px solid var(--thv-theme-primary);
+    border-radius: .8rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.mshbf__back {
+    color: var(--thv-theme-primary);
+    background: transparent;
+}
+
+.mshbf__next {
+    color: var(--thv-theme-on-primary);
+    background: var(--thv-theme-primary);
+}
+
+@media (max-width: 760px) {
+    .mshbf {
+        grid-template-columns: 1fr;
+    }
+
+    .mshbf__fields {
+        grid-template-columns: 1fr;
+    }
+
+}

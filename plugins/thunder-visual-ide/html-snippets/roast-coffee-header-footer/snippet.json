@@ -1,0 +1,18 @@
+{
+  "id": "roast-coffee-header-footer",
+  "name": "Roast Coffee Header and Footer",
+  "description": "A dark specialty-coffee header with shop navigation and a coordinated roastery footer with subscription signup.",
+  "category": "Food & Restaurant",
+  "order": 3870,
+  "tags": [
+    "header footer",
+    "coffee",
+    "roastery",
+    "cafe",
+    "subscription"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}

@@ -1,0 +1,52 @@
+{
+  "type": "javascript.form_data",
+  "label": "Form Data",
+  "category": "JavaScript AJAX",
+  "kind": "expression",
+  "icon": "FORM",
+  "color": "#0f766e",
+  "description": "Creates a FormData object from a connected form element or selector.",
+  "allowed_graphs": [
+    "javascript"
+  ],
+  "defaults": {
+    "title": "Form Data",
+    "form_selector": "form"
+  },
+  "properties": [
+    {
+      "name": "title",
+      "label": "Node title",
+      "type": "text"
+    },
+    {
+      "name": "form_selector",
+      "label": "Fallback form selector",
+      "type": "text"
+    }
+  ],
+  "ports": {
+    "inputs": [
+      {
+        "id": "form",
+        "label": "Form element",
+        "type": "js-element",
+        "direction": "in",
+        "multiple": false
+      }
+    ],
+    "outputs": [
+      {
+        "id": "value",
+        "label": "FormData",
+        "type": "js-form-data",
+        "direction": "out",
+        "multiple": true
+      }
+    ]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\JavaScript\\FormDataCompiler",
+    "file": "Compiler.php"
+  }
+}

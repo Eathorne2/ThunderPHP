@@ -1,0 +1,23 @@
+{
+  "type": "authorization.has_permission",
+  "label": "Has Permission",
+  "category": "Authorization",
+  "kind": "expression",
+  "icon": "CAN",
+  "color": "#9333ea",
+  "description": "Returns a boolean from ThunderPHP user_can().",
+  "allowed_graphs": ["flow"],
+  "defaults": {"title": "Has Permission", "permission": ""},
+  "properties": [
+    {"name": "title", "label": "Node title", "type": "text"},
+    {"name": "permission", "label": "Permission", "type": "permission_ref", "help": "Values come from the All Permissions node. Manual values are also accepted."}
+  ],
+  "ports": {
+    "inputs": [],
+    "outputs": [{"id": "value", "label": "Allowed?", "type": "boolean", "direction": "out", "multiple": true}]
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Authorization\\HasPermissionCompiler",
+    "file": "Compiler.php"
+  }
+}

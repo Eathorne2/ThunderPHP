@@ -1,0 +1,34 @@
+{
+  "type": "flow.filter_return",
+  "label": "Return Filter Data",
+  "category": "Flow",
+  "kind": "flow",
+  "icon": "↩$",
+  "color": "#7c3aed",
+  "description": "Mandatory terminal node for filter Controller Hooks. Returns the callback data argument using the controller's configured variable name.",
+  "allowed_graphs": [
+    "flow"
+  ],
+  "internal": true,
+  "singleton": true,
+  "defaults": {
+    "title": "Return Filter Data"
+  },
+  "properties": [],
+  "ports": {
+    "inputs": [
+      {
+        "id": "exec_in",
+        "label": "Return",
+        "type": "exec",
+        "direction": "in",
+        "multiple": true
+      }
+    ],
+    "outputs": []
+  },
+  "compiler": {
+    "class": "ThunderVisualIde\\Nodes\\Flow\\FilterReturnCompiler",
+    "file": "Compiler.php"
+  }
+}

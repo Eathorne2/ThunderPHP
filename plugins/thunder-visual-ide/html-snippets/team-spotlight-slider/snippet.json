@@ -1,0 +1,20 @@
+{
+  "id": "team-spotlight-slider",
+  "name": "Team Spotlight Slider",
+  "description": "A team profile slider with roles, biographies and navigation.",
+  "version": "1.0.0",
+  "author": "Eathorne Choongo",
+  "license": "Commercial-friendly bundled preset",
+  "category": "Sliders",
+  "order": 8065,
+  "tags": [
+    "slider",
+    "team",
+    "profiles",
+    "people"
+  ],
+  "html": "snippet.html",
+  "css": "style.css",
+  "js": "script.js",
+  "preview": "preview.svg"
+}
