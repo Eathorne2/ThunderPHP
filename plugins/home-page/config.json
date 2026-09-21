@@ -6,7 +6,7 @@
     "core_requires": "^1.0.0",
     "author website": "www.freephptutorials.com",
     "thumbnail": "thumbnail.jpg",
-    "active": false,
+    "active": true,
     "index": 1,
     "routes": {
         "on": [
